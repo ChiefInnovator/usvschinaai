@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US vs CHINA AI | Global Leaderboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .neon-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        .neon-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        .sort-icon { transition: transform 0.2s; }
+        .sort-asc .sort-icon { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="p-4 md:p-12 min-h-screen flex flex-col">
+    <div class="max-w-6xl mx-auto w-full flex-grow">
+        <!-- Navigation -->
+        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group">
+                <span class="group-hover:text-blue-400 transition">US</span> <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span> <span class="group-hover:text-red-400 transition">CHINA</span><span class="winner-gradient px-2 py-1">AI</span>
+            </a>
+            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-white border-b-2 border-blue-500 pb-1">Leaderboard</a>
+                <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
+            </div>
+        </nav>
+
+        <header class="text-center mb-16">
+            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-4" id="page-title">
+                <!-- Title loaded from JSON -->
+            </h1>
+            <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4 break-words" id="page-subtitle"><!-- Subtitle loaded from JSON --></p>
+        </header>
+
+        <!-- National Scoreboard -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <!-- Team USA -->
+            <div class="glass p-8 rounded-3xl border-2 border-blue-500/30 hover:border-blue-500/60 neon-blue relative group transition-all duration-300" id="team-usa-card">
+                <div class="flex justify-between items-start relative z-10">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-400 flex items-center gap-2" id="team-usa-name">
+                            <!-- Name loaded from JSON -->
+                        </h2>
+                        <p class="text-slate-400 text-sm" id="team-usa-desc"><!-- Desc loaded from JSON --></p>
+                    </div>
+                    <span class="bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-xs font-bold" id="team-usa-badge"><!-- Badge loaded from JSON --></span>
+                </div>
+                
+                <div class="flex justify-between items-end mt-6 relative z-10">
+                    <span class="text-slate-400 text-sm uppercase tracking-wider">Total Score</span>
+                    <div class="text-5xl md:text-6xl font-black text-blue-400" id="score-usa">0.0</div>
+                </div>
+                
+                <div class="h-px bg-white/10 my-4 relative z-10"></div>
+
+                <div class="space-y-2 relative z-10">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Avg IQ Index</span>
+                        <span class="font-bold font-mono text-white" id="avg-iq-usa">0.0</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Avg Value Index</span>
+                        <span class="font-bold font-mono text-white" id="avg-value-usa">0.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team China -->
+            <div class="glass p-8 rounded-3xl border-2 border-red-500/30 hover:border-red-500/60 neon-red relative group transition-all duration-300" id="team-china-card">
+                <div class="flex justify-between items-start relative z-10">
+                    <div>
+                        <h2 class="text-2xl font-bold text-red-400 flex items-center gap-2" id="team-china-name">
+                            <!-- Name loaded from JSON -->
+                        </h2>
+                        <p class="text-slate-400 text-sm" id="team-china-desc"><!-- Desc loaded from JSON --></p>
+                    </div>
+                    <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-xs font-bold italic flex items-center gap-1" id="team-china-badge">
+                        <!-- Badge loaded from JSON -->
+                    </span>
+                </div>
+
+                <div class="flex justify-between items-end mt-6 relative z-10">
+                    <span class="text-slate-400 text-sm uppercase tracking-wider">Total Score</span>
+                    <div class="text-5xl md:text-6xl font-black text-red-400" id="score-china">0.0</div>
+                </div>
+                
+                <div class="h-px bg-white/10 my-4 relative z-10"></div>
+
+                <div class="space-y-2 relative z-10">
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Avg IQ Index</span>
+                        <span class="font-bold font-mono text-white" id="avg-iq-china">0.0</span>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <span class="text-slate-400">Avg Value Index</span>
+                        <span class="font-bold font-mono text-white" id="avg-value-china">0.0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Table -->
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12">
+            <!-- Toolbar -->
+            <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                <h3 class="text-xl font-bold flex items-center gap-2">
+                    <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
+                </h3>
+                
+                <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                    <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
+                        <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
+                    </button>
+                    <button onclick="setFilter('all')" id="filter-all" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                        <i data-lucide="globe" class="w-3 h-3"></i> All
+                    </button>
+                    <button onclick="setFilter('US')" id="filter-us" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                        <span>🇺🇸</span> USA
+                    </button>
+                    <button onclick="setFilter('CN')" id="filter-cn" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                        <span>🇨🇳</span> China
+                    </button>
+                </div>
+            </div>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-slate-900/80 text-slate-500 text-xs uppercase tracking-tighter" id="table-header">
+                        <!-- Headers loaded from JSON -->
+                    </thead>
+                    <tbody class="divide-y divide-white/5" id="models-table-body">
+                        <!-- Rows will be populated by JS -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Benchmarks Included -->
+            <div class="p-6 border-t border-white/5">
+                <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                    <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
+                </h3>
+                <div id="benchmarks-container" class="flex flex-wrap gap-2">
+                    <!-- Loaded from JSON -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Intelligence vs Value Matrix -->
+        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+            <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                <i data-lucide="scatter-chart" class="text-purple-400"></i> Intelligence vs. Value Matrix
+            </h3>
+            <p class="text-slate-400 text-sm mb-6">Visualizing the trade-off between raw capability (IQ Index) and cost-efficiency (Value Index). The ideal model sits in the top-right quadrant.</p>
+            
+            <div class="relative w-full h-[500px]">
+                <canvas id="matrixChart"></canvas>
+            </div>
+            
+            <!-- Legend & Quadrant Guide -->
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mt-6">
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 rounded-full bg-blue-500"></span>
+                        <span class="text-slate-300 text-sm">USA Models</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-4 h-4 rounded-full bg-red-500"></span>
+                        <span class="text-slate-300 text-sm">China Models</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span class="text-slate-500 text-sm">•</span>
+                        <span class="text-slate-400 text-sm">Size = Unified Score</span>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 text-center">
+                    <div class="flex items-center justify-center gap-2 text-yellow-400 font-bold mb-1">
+                        <span>🏆</span> High IQ, High Value
+                    </div>
+                    <p class="text-slate-400 text-xs">The sweet spot: Smart AND affordable</p>
+                </div>
+                <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 text-center">
+                    <div class="flex items-center justify-center gap-2 text-blue-400 font-bold mb-1">
+                        <span>💎</span> High IQ, Low Value
+                    </div>
+                    <p class="text-slate-400 text-xs">Premium frontier models</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Methodology Section -->
+        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                <i data-lucide="book-open" class="text-slate-400"></i> Scoring Methodology
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-400">
+                <div>
+                    <h4 class="text-white font-bold mb-2 text-lg">Unified Power Score (Max 200)</h4>
+                    <p class="mb-2">The ultimate metric using <strong class="text-purple-400">Intelligence-Gated Value</strong> — where intelligence is the foundation and value acts as a multiplier.</p>
+                    <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
+                        Unified = IQ × (1 + Value / 100)
+                    </div>
+                    <p class="mb-4 text-xs text-slate-500 italic">A model with zero intelligence scores zero — no matter how cheap. Value without intelligence is meaningless.</p>
+                    
+                    <h4 class="text-white font-bold mb-2 text-lg">Intelligence Index ($I$)</h4>
+                    <p class="mb-2">Unweighted average (Max 100) of 11 frontier benchmarks:</p>
+                    <ul class="list-disc list-inside space-y-1 ml-2">
+                        <li><strong class="text-slate-300">AIME 2025</strong>: Math Olympiad (No-tool)</li>
+                        <li><strong class="text-slate-300">HMMT 2025</strong>: Harvard-MIT Math Tournament</li>
+                        <li><strong class="text-slate-300">GPQA Diamond</strong>: PhD-level science reasoning</li>
+                        <li><strong class="text-slate-300">ARC-AGI</strong>: Abstraction & Reasoning Corpus</li>
+                        <li><strong class="text-slate-300">BrowseComp</strong>: Web agent capabilities</li>
+                        <li><strong class="text-slate-300">ARC-AGI v2</strong>: Advanced general intelligence</li>
+                        <li><strong class="text-slate-300">HLE</strong>: Humanity's Last Exam</li>
+                        <li><strong class="text-slate-300">MMLU-Pro</strong>: Robust multi-task understanding</li>
+                        <li><strong class="text-slate-300">LiveCodeBench</strong>: Live coding challenges</li>
+                        <li><strong class="text-slate-300">SWE-Bench Verified</strong>: Real-world software engineering</li>
+                        <li><strong class="text-slate-300">CodeForces</strong>: Competitive programming</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-2 text-lg">Value Index ($V$)</h4>
+                    <p class="mb-4">Log-normalized efficiency score (Max 100) based on <strong>Blended Cost per 1M tokens</strong>.</p>
+                    <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
+                        V = 100 × (1 - log(Cost / 0.25) / log(60.00 / 0.25))
+                    </div>
+                    <p>
+                        <span class="block mb-1"><strong class="text-green-400">Floor ($0.25)</strong>: DeepSeek-V3.2 (Max Score)</span>
+                        <span class="block"><strong class="text-red-400">Ceiling ($60.00)</strong>: Legacy Models (Min Score)</span>
+                    </p>
+                    
+                    <h4 class="text-white font-bold mb-2 text-lg mt-6">National Score Calculation</h4>
+                    <p class="mb-4">
+                        The National Score for Team USA and Team China is the <strong>sum of the Unified Power Scores</strong> for all models belonging to that nation that appear in the <strong>Global Top 10</strong>.
+                    </p>
+                    <p class="text-xs text-slate-500 italic">
+                        * Only models ranked in the top 10 globally contribute to the national total. This rewards both peak performance and depth of dominance.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
+        <div>
+            <p id="footer-text"><!-- Footer loaded from JSON --></p>
+        </div>
+        <div class="flex gap-4 items-center">
+            <button onclick="copyLink()" class="flex items-center gap-2 bg-white/5 hover:bg-white/10 px-4 py-2 rounded-full transition text-slate-300 hover:text-white">
+                <i data-lucide="share-2" class="w-4 h-4"></i>
+                <span id="share-text">Share Leaderboard</span>
+            </button>
+        </div>
+    </footer>
+
+    <script>
+        // Data Source
+        let appData = {};
+        let models = [];
+        let currentSort = { key: 'unified', direction: 'desc' };
+        let currentFilter = 'top10';
+
+        async function fetchModels() {
+            try {
+                const response = await fetch('models.json');
+                appData = await response.json();
+                models = appData.models;
+                
+                populateStaticContent();
+                calculateTotals();
+                renderTable();
+                renderMatrix();
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Error fetching models:', error);
+            }
+        }
+
+        function populateStaticContent() {
+            // Metadata
+            document.title = `${appData.metadata.title} | Global Leaderboard`;
+            
+            // Title with gradient
+            const titleEl = document.getElementById('page-title');
+            // Updated for usvschina.ai branding
+            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 py-1">AI</span>`; 
+            
+            document.getElementById('page-subtitle').textContent = appData.metadata.subtitle;
+            document.getElementById('footer-text').textContent = appData.metadata.footerText;
+
+            // Teams
+            const usa = appData.teams.usa;
+            document.getElementById('team-usa-name').innerHTML = `${usa.name} ${usa.flag}`;
+            document.getElementById('team-usa-desc').textContent = usa.description;
+            document.getElementById('team-usa-badge').textContent = usa.badge;
+
+            const china = appData.teams.china;
+            document.getElementById('team-china-name').innerHTML = `${china.name} ${china.flag}`;
+            document.getElementById('team-china-desc').textContent = china.description;
+            // China badge has an icon in HTML, let's preserve it
+            const chinaBadgeEl = document.getElementById('team-china-badge');
+            chinaBadgeEl.textContent = china.badge;
+
+            // Table Headers
+            const thead = document.getElementById('table-header');
+            let headerRow = '<tr>';
+            appData.columns.forEach(col => {
+                let alignClass = 'text-left';
+                if (col.key === 'iq' || col.key === 'value') alignClass = 'text-center';
+                if (col.key === 'unified') alignClass = 'text-right';
+
+                headerRow += `
+                    <th class="p-6 cursor-pointer hover:text-white transition group ${alignClass}" onclick="sortTable('${col.key}')">
+                        <div class="flex items-center ${alignClass === 'text-right' ? 'justify-end' : (alignClass === 'text-center' ? 'justify-center' : '')} gap-1">
+                            ${col.label} <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                        </div>
+                    </th>
+                `;
+            });
+            headerRow += '</tr>';
+            thead.innerHTML = headerRow;
+            
+            // Benchmarks
+            const benchmarksContainer = document.getElementById('benchmarks-container');
+            if (appData.benchmarks && benchmarksContainer) {
+                benchmarksContainer.innerHTML = appData.benchmarks.map(b => `
+                    <span class="bg-slate-800 border border-white/5 px-3 py-1.5 rounded-lg text-xs text-slate-300 font-mono">
+                        ${b}
+                    </span>
+                `).join('');
+            }
+        }
+
+        // Calculate National Totals
+        function calculateTotals() {
+            // Sort all models by unified score desc to get global top 10
+            const allSorted = [...models].sort((a, b) => b.unified - a.unified);
+            const top10 = allSorted.slice(0, 10);
+
+            // Filter the Top 10 by origin
+            const usInTop10 = top10.filter(m => m.origin === 'US');
+            const cnInTop10 = top10.filter(m => m.origin === 'CN');
+
+            // Sum scores for models present in the Top 10
+            const usTotal = usInTop10.reduce((sum, m) => sum + m.unified, 0);
+            const cnTotal = cnInTop10.reduce((sum, m) => sum + m.unified, 0);
+
+            // Averages (based on the models contributing to the score)
+            const usAvgIq = usInTop10.length ? usInTop10.reduce((sum, m) => sum + m.iq, 0) / usInTop10.length : 0;
+            const usAvgVal = usInTop10.length ? usInTop10.reduce((sum, m) => sum + m.value, 0) / usInTop10.length : 0;
+            
+            const cnAvgIq = cnInTop10.length ? cnInTop10.reduce((sum, m) => sum + m.iq, 0) / cnInTop10.length : 0;
+            const cnAvgVal = cnInTop10.length ? cnInTop10.reduce((sum, m) => sum + m.value, 0) / cnInTop10.length : 0;
+
+            // Update DOM
+            document.getElementById('score-usa').textContent = usTotal.toFixed(1);
+            document.getElementById('avg-iq-usa').textContent = usAvgIq.toFixed(1);
+            document.getElementById('avg-value-usa').textContent = usAvgVal.toFixed(1);
+
+            document.getElementById('score-china').textContent = cnTotal.toFixed(1);
+            document.getElementById('avg-iq-china').textContent = cnAvgIq.toFixed(1);
+            document.getElementById('avg-value-china').textContent = cnAvgVal.toFixed(1);
+
+            // Determine Leader
+            const usaCard = document.getElementById('team-usa-card');
+            const chinaCard = document.getElementById('team-china-card');
+            
+            // Cleanup
+            document.querySelectorAll('.leading-badge').forEach(el => el.remove());
+            usaCard.classList.remove('ring-2', 'ring-blue-400', 'ring-offset-2', 'ring-offset-slate-900');
+            chinaCard.classList.remove('ring-2', 'ring-red-400', 'ring-offset-2', 'ring-offset-slate-900');
+
+            let leaderCard = null;
+            let badgeColor = '';
+            let ringColor = '';
+
+            if (usTotal > cnTotal) {
+                leaderCard = usaCard;
+                badgeColor = 'bg-blue-500';
+                ringColor = 'ring-blue-400';
+            } else if (cnTotal > usTotal) {
+                leaderCard = chinaCard;
+                badgeColor = 'bg-red-500';
+                ringColor = 'ring-red-400';
+            }
+
+            if (leaderCard) {
+                const badge = document.createElement('div');
+                badge.className = `leading-badge absolute -top-4 right-8 ${badgeColor} text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-2 z-20 transform transition-all duration-500 ease-out`;
+                badge.innerHTML = `<i data-lucide="trophy" class="w-3 h-3"></i> Leading`;
+                leaderCard.appendChild(badge);
+                
+                leaderCard.classList.add('ring-2', ringColor, 'ring-offset-2', 'ring-offset-slate-900');
+                lucide.createIcons();
+            }
+        }
+
+        // Render Table
+        function renderTable() {
+            const tbody = document.getElementById('models-table-body');
+            tbody.innerHTML = '';
+
+            let displayModels = [];
+
+            if (currentFilter === 'top10') {
+                // Show Global Top 10
+                displayModels = [...models].sort((a, b) => b.unified - a.unified).slice(0, 10);
+            } else if (currentFilter === 'all') {
+                // Show all models
+                displayModels = [...models];
+            } else {
+                // Show all models for the selected country
+                displayModels = models.filter(m => m.origin === currentFilter);
+            }
+
+            // Sort data (if user clicked a column header, re-sort the display list)
+            displayModels.sort((a, b) => {
+                let valA = a[currentSort.key];
+                let valB = b[currentSort.key];
+                
+                if (currentSort.direction === 'asc') {
+                    return valA > valB ? 1 : -1;
+                } else {
+                    return valA < valB ? 1 : -1;
+                }
+            });
+
+            displayModels.forEach((model, index) => {
+                const tr = document.createElement('tr');
+                tr.className = 'hover:bg-white/5 transition group relative';
+                
+                // Rank Styling
+                let rankDisplay = `<span class="text-slate-400 font-mono">#${model.rank}</span>`;
+                if (model.rank === 1) rankDisplay = `<span class="text-yellow-500 font-bold text-lg">01 🥇</span>`;
+                if (model.rank === 2) rankDisplay = `<span class="text-slate-300 font-bold text-lg">02 🥈</span>`;
+                if (model.rank === 3) rankDisplay = `<span class="text-orange-400 font-bold text-lg">03 🥉</span>`;
+
+                // Origin Flag
+                const flag = model.origin === 'US' ? '🇺🇸' : '🇨🇳';
+                const originClass = model.origin === 'US' ? 'text-blue-400' : 'text-red-400';
+                
+                // Bars
+                const iqWidth = model.iq; // Max is 100
+                const valueWidth = model.value; // Max is 100
+                
+                // Description tooltip
+                const description = model.description || '';
+
+                tr.innerHTML = `
+                    <td class="p-6">${rankDisplay}</td>
+                    <td class="p-6">
+                        <div class="flex flex-col">
+                            <a href="${model.link}" target="_blank" class="font-bold text-lg hover:text-white hover:underline decoration-blue-500/50 underline-offset-4 transition flex items-center gap-2 peer">
+                                ${model.name}
+                                <span class="text-xs ${originClass} bg-white/5 px-2 py-0.5 rounded-full no-underline">${flag} ${model.origin}</span>
+                                <i data-lucide="external-link" class="w-3 h-3 opacity-0 group-hover:opacity-50 transition"></i>
+                            </a>
+                            <div class="flex items-center gap-2 mt-1">
+                                <a href="${model.companyLink}" target="_blank" class="text-xs text-slate-400 hover:text-blue-400 transition flex items-center gap-1">
+                                    <i data-lucide="building-2" class="w-3 h-3"></i> ${model.company}
+                                </a>
+                                <span class="text-xs text-slate-600">•</span>
+                                <span class="text-xs text-slate-500">Released: ${model.createdDate}</span>
+                            </div>
+                            ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${description}</p>` : ''}
+                        </div>
+                    </td>
+                    <td class="p-6">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                <span>${model.iq.toFixed(1)}</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-blue-500 h-full rounded-full" style="width: ${iqWidth}%"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="p-6">
+                        <div class="flex flex-col gap-1">
+                            <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                <span>${model.value.toFixed(1)}</span>
+                            </div>
+                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                                <div class="bg-green-500 h-full rounded-full" style="width: ${valueWidth}%"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="p-6 text-right">
+                        <span class="font-black text-2xl ${model.rank === 1 ? 'text-green-400' : 'text-white'}">${model.unified.toFixed(1)}</span>
+                    </td>
+                `;
+                tbody.appendChild(tr);
+            });
+            
+            // Re-initialize icons for new elements
+            lucide.createIcons();
+        }
+
+        // Sorting Handler
+        function sortTable(key) {
+            if (currentSort.key === key) {
+                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSort.key = key;
+                currentSort.direction = 'desc';
+            }
+            renderTable();
+        }
+
+        // Filter Handler
+        function setFilter(filter) {
+            currentFilter = filter;
+            renderTable();
+            renderMatrix();
+            updateFilterUI();
+        }
+
+        function updateFilterUI() {
+            const buttons = {
+                'top10': document.getElementById('filter-top10'),
+                'all': document.getElementById('filter-all'),
+                'US': document.getElementById('filter-us'),
+                'CN': document.getElementById('filter-cn')
+            };
+            
+            // Reset all
+            Object.values(buttons).forEach(btn => {
+                btn.className = 'px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5';
+            });
+
+            // Set active
+            const activeBtn = buttons[currentFilter];
+            if (currentFilter === 'top10') {
+                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20';
+            } else if (currentFilter === 'all') {
+                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-purple-500/20 text-purple-400 border border-purple-500/50';
+            } else if (currentFilter === 'US') {
+                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500/20 text-blue-400 border border-blue-500/50';
+            } else if (currentFilter === 'CN') {
+                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-red-500/20 text-red-400 border border-red-500/50';
+            }
+        }
+
+        // Share Button
+        function copyLink() {
+            const btnText = document.getElementById('share-text');
+            const originalText = btnText.textContent;
+            
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                btnText.textContent = "Copied!";
+                setTimeout(() => {
+                    btnText.textContent = originalText;
+                }, 2000);
+            });
+        }
+
+        // Matrix Chart
+        let matrixChart = null;
+        
+        function renderMatrix() {
+            const ctx = document.getElementById('matrixChart').getContext('2d');
+            
+            // Calculate medians for quadrant dividers
+            const allIq = models.map(m => m.iq);
+            const allValue = models.map(m => m.value);
+            const medianIq = allIq.sort((a, b) => a - b)[Math.floor(allIq.length / 2)];
+            const medianValue = allValue.sort((a, b) => a - b)[Math.floor(allValue.length / 2)];
+            
+            // Calculate point sizes based on unified score (scale 4-16)
+            const minUnified = Math.min(...models.map(m => m.unified));
+            const maxUnified = Math.max(...models.map(m => m.unified));
+            const scaleRadius = (unified) => 6 + ((unified - minUnified) / (maxUnified - minUnified)) * 14;
+            
+            // Prepare datasets
+            const usData = models.filter(m => m.origin === 'US').map(m => ({
+                x: m.value,
+                y: m.iq,
+                name: m.name,
+                unified: m.unified,
+                r: scaleRadius(m.unified)
+            }));
+            
+            const cnData = models.filter(m => m.origin === 'CN').map(m => ({
+                x: m.value,
+                y: m.iq,
+                name: m.name,
+                unified: m.unified,
+                r: scaleRadius(m.unified)
+            }));
+
+            // Destroy existing chart if present
+            if (matrixChart) {
+                matrixChart.destroy();
+            }
+
+            matrixChart = new Chart(ctx, {
+                type: 'bubble',
+                data: {
+                    datasets: [
+                        {
+                            label: 'Team USA',
+                            data: usData,
+                            backgroundColor: currentFilter === 'CN' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(59, 130, 246, 0.8)',
+                            borderColor: '#3b82f6',
+                            borderWidth: 2,
+                            hoverBackgroundColor: '#3b82f6'
+                        },
+                        {
+                            label: 'Team China',
+                            data: cnData,
+                            backgroundColor: currentFilter === 'US' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(239, 68, 68, 0.8)',
+                            borderColor: '#ef4444',
+                            borderWidth: 2,
+                            hoverBackgroundColor: '#ef4444'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: { 
+                                display: true, 
+                                text: 'Value Index (Cost Efficiency)', 
+                                color: '#94a3b8',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            grid: { 
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                drawBorder: false
+                            },
+                            ticks: { color: '#64748b', font: { size: 11 } },
+                            min: 0,
+                            max: 100
+                        },
+                        y: {
+                            title: { 
+                                display: true, 
+                                text: 'IQ Index (Intelligence)', 
+                                color: '#94a3b8',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            grid: { 
+                                color: 'rgba(255, 255, 255, 0.05)',
+                                drawBorder: false
+                            },
+                            ticks: { color: '#64748b', font: { size: 11 } },
+                            min: 60,
+                            max: 100
+                        }
+                    },
+                    plugins: {
+                        legend: { 
+                            display: false 
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                            titleColor: '#f8fafc',
+                            bodyColor: '#cbd5e1',
+                            borderColor: 'rgba(255, 255, 255, 0.1)',
+                            borderWidth: 1,
+                            padding: 12,
+                            displayColors: false,
+                            callbacks: {
+                                title: function(context) {
+                                    const p = context[0].raw;
+                                    const flag = context[0].datasetIndex === 0 ? '🇺🇸' : '🇨🇳';
+                                    return `${flag} ${p.name}`;
+                                },
+                                label: function(context) {
+                                    const p = context.raw;
+                                    return [
+                                        `IQ Index: ${p.y.toFixed(1)}`,
+                                        `Value Index: ${p.x.toFixed(1)}`,
+                                        `Unified: ${p.unified.toFixed(1)}`
+                                    ];
+                                }
+                            }
+                        },
+                        annotation: {
+                            annotations: {
+                                verticalLine: {
+                                    type: 'line',
+                                    xMin: 75,
+                                    xMax: 75,
+                                    borderColor: 'rgba(255, 255, 255, 0.15)',
+                                    borderWidth: 2,
+                                    borderDash: [6, 6]
+                                },
+                                horizontalLine: {
+                                    type: 'line',
+                                    yMin: 87,
+                                    yMax: 87,
+                                    borderColor: 'rgba(255, 255, 255, 0.15)',
+                                    borderWidth: 2,
+                                    borderDash: [6, 6]
+                                }
+                            }
+                        }
+                    }
+                },
+                plugins: [{
+                    id: 'quadrantLines',
+                    beforeDraw: (chart) => {
+                        const ctx = chart.ctx;
+                        const xAxis = chart.scales.x;
+                        const yAxis = chart.scales.y;
+                        
+                        // Draw vertical line at x=75
+                        const xPos = xAxis.getPixelForValue(75);
+                        ctx.save();
+                        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+                        ctx.lineWidth = 2;
+                        ctx.setLineDash([6, 6]);
+                        ctx.beginPath();
+                        ctx.moveTo(xPos, yAxis.top);
+                        ctx.lineTo(xPos, yAxis.bottom);
+                        ctx.stroke();
+                        
+                        // Draw horizontal line at y=87
+                        const yPos = yAxis.getPixelForValue(87);
+                        ctx.beginPath();
+                        ctx.moveTo(xAxis.left, yPos);
+                        ctx.lineTo(xAxis.right, yPos);
+                        ctx.stroke();
+                        ctx.restore();
+                    }
+                }]
+            });
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchModels();
+        });
+    </script>
+</body>
+</html>

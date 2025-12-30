@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US vs CHINA AI | Historical Archives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .neon-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+        .neon-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="p-4 md:p-12 min-h-screen flex flex-col">
+    <div class="max-w-6xl mx-auto w-full flex-grow">
+        <!-- Navigation -->
+        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group">
+                <span class="group-hover:text-blue-400 transition">US</span> <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span> <span class="group-hover:text-red-400 transition">CHINA</span><span class="winner-gradient px-2 py-1">AI</span>
+            </a>
+            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-slate-500 hover:text-white transition">Leaderboard</a>
+                <a href="history.html" class="text-white border-b-2 border-blue-500 pb-1">Archives</a>
+            </div>
+        </nav>
+
+        <header class="text-center mb-16">
+            <h1 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-4">
+                Historical <span class="text-slate-600">Archives</span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4">
+                Tracking the balance of power over time
+            </p>
+        </header>
+
+        <!-- Filter Toolbar Removed -->
+        
+        <div id="history-container" class="space-y-12">
+            <div class="text-center text-slate-500 py-12 flex flex-col items-center gap-2">
+                <i data-lucide="loader-2" class="w-6 h-6 animate-spin"></i> Loading archives...
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
+        <div>
+            <p>&copy; 2025 US vs CHINA AI. All rights reserved.</p>
+        </div>
+        <div class="flex gap-4">
+            <a href="index.html" class="hover:text-white transition">Leaderboard</a>
+            <a href="history.html" class="hover:text-white transition">Archives</a>
+        </div>
+    </footer>
+
+    <script>
+        let historyData = [];
+        let entryFilters = {}; // Key: index, Value: 'top10' | 'all' | 'US' | 'CN'
+        let entrySorts = {}; // Key: index, Value: { key: 'unified', direction: 'desc' }
+
+        async function fetchHistory() {
+            const container = document.getElementById('history-container');
+            try {
+                const response = await fetch('history.json');
+                const data = await response.json();
+                historyData = data.history;
+                renderHistory();
+                lucide.createIcons();
+            } catch (error) {
+                console.error('Error:', error);
+                container.innerHTML = '<div class="text-center text-red-400 py-12">Failed to load history data. Please ensure you are running on a local server.</div>';
+            }
+        }
+
+        function setEntryFilter(index, filter) {
+            entryFilters[index] = filter;
+            renderHistory();
+            lucide.createIcons();
+        }
+
+        function sortEntry(index, key) {
+            if (!entrySorts[index]) {
+                entrySorts[index] = { key: 'unified', direction: 'desc' };
+            }
+
+            if (entrySorts[index].key === key) {
+                entrySorts[index].direction = entrySorts[index].direction === 'asc' ? 'desc' : 'asc';
+            } else {
+                entrySorts[index].key = key;
+                entrySorts[index].direction = 'desc';
+            }
+            renderHistory();
+            lucide.createIcons();
+        }
+
+        function renderHistory() {
+            const container = document.getElementById('history-container');
+            if (!historyData || historyData.length === 0) {
+                container.innerHTML = '<div class="text-center text-slate-500 py-12">No historical records found.</div>';
+                return;
+            }
+
+            // Sort history by date desc
+            const sortedHistory = [...historyData].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+
+            let html = '';
+            sortedHistory.forEach((entry, index) => {
+                const date = new Date(entry.timestamp).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                const isUsaLeader = entry.leader === 'usa';
+                const leaderColor = isUsaLeader ? 'text-blue-400' : 'text-red-400';
+                const leaderName = isUsaLeader ? 'Team USA' : 'Team China';
+                const leaderFlag = isUsaLeader ? '🇺🇸' : '🇨🇳';
+                
+                // Get filter for this entry
+                const currentFilter = entryFilters[index] || 'top10';
+                
+                // Get sort for this entry
+                const currentSort = entrySorts[index] || { key: 'unified', direction: 'desc' };
+
+                // Filter models
+                let displayModels = [];
+                if (currentFilter === 'top10') {
+                    // Show Global Top 10
+                    displayModels = [...entry.models].sort((a, b) => b.unified - a.unified).slice(0, 10);
+                } else if (currentFilter === 'all') {
+                    // Show all models
+                    displayModels = [...entry.models];
+                } else {
+                    // Show all models for the selected country
+                    displayModels = entry.models.filter(m => m.origin === currentFilter);
+                }
+
+                // Sort models
+                displayModels.sort((a, b) => {
+                    let valA = a[currentSort.key];
+                    let valB = b[currentSort.key];
+                    
+                    if (currentSort.direction === 'asc') {
+                        return valA > valB ? 1 : -1;
+                    } else {
+                        return valA < valB ? 1 : -1;
+                    }
+                });
+
+                // Button styles helper
+                const getBtnClass = (type) => {
+                    const base = "px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2";
+                    if (currentFilter === type) {
+                        if (type === 'top10') return `${base} bg-blue-500 text-white shadow-lg shadow-blue-500/20`;
+                        if (type === 'all') return `${base} bg-purple-500/20 text-purple-400 border border-purple-500/50`;
+                        if (type === 'US') return `${base} bg-blue-500/20 text-blue-400 border border-blue-500/50`;
+                        if (type === 'CN') return `${base} bg-red-500/20 text-red-400 border border-red-500/50`;
+                    }
+                    return `${base} text-slate-400 hover:text-white hover:bg-white/5`;
+                };
+
+                html += `
+                    <div class="glass rounded-3xl overflow-hidden border border-white/10">
+                        <!-- Header -->
+                        <div class="p-8 border-b border-white/10 bg-slate-900/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                            <div>
+                                <div class="text-sm text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-2">
+                                    <i data-lucide="calendar" class="w-4 h-4"></i> ${date}
+                                </div>
+                                <h2 class="text-3xl font-bold flex items-center gap-3">
+                                    Leader: <span class="${leaderColor} flex items-center gap-2">${leaderName} ${leaderFlag}</span>
+                                </h2>
+                            </div>
+                            
+                            <!-- Mini Scoreboard -->
+                            <div class="flex gap-8 bg-black/20 p-4 rounded-2xl border border-white/5">
+                                <div class="text-right">
+                                    <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">USA Score</div>
+                                    <div class="font-mono font-black text-2xl text-blue-400">${entry.scores.usa.total.toFixed(1)}</div>
+                                    <div class="text-[10px] text-slate-500">IQ: ${entry.scores.usa.avgIq.toFixed(1)} | Val: ${entry.scores.usa.avgValue.toFixed(1)}</div>
+                                </div>
+                                <div class="w-px bg-white/10"></div>
+                                <div class="text-right">
+                                    <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">China Score</div>
+                                    <div class="font-mono font-black text-2xl text-red-400">${entry.scores.china.total.toFixed(1)}</div>
+                                    <div class="text-[10px] text-slate-500">IQ: ${entry.scores.china.avgIq.toFixed(1)} | Val: ${entry.scores.china.avgValue.toFixed(1)}</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-8">
+                            <div class="mb-8">
+                                <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 -mx-8 -mt-8 mb-8 bg-slate-900/20">
+                                    <h3 class="text-xl font-bold flex items-center gap-2">
+                                        <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
+                                    </h3>
+                                    <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                                        <button onclick="setEntryFilter(${index}, 'top10')" class="${getBtnClass('top10')}">
+                                            <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
+                                        </button>
+                                        <button onclick="setEntryFilter(${index}, 'all')" class="${getBtnClass('all')}">
+                                            <i data-lucide="globe" class="w-3 h-3"></i> All
+                                        </button>
+                                        <button onclick="setEntryFilter(${index}, 'US')" class="${getBtnClass('US')}">
+                                            <span>🇺🇸</span> USA
+                                        </button>
+                                        <button onclick="setEntryFilter(${index}, 'CN')" class="${getBtnClass('CN')}">
+                                            <span>🇨🇳</span> China
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left border-collapse">
+                                        <thead class="bg-slate-900/80 text-slate-500 text-xs uppercase tracking-tighter">
+                                            <tr>
+                                                <th class="p-6 cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'rank')">
+                                                    <div class="flex items-center gap-1">
+                                                        Rank <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                                                    </div>
+                                                </th>
+                                                <th class="p-6 cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'name')">
+                                                    <div class="flex items-center gap-1">
+                                                        Model Name <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                                                    </div>
+                                                </th>
+                                                <th class="p-6 text-center cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'iq')">
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        IQ Index <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                                                    </div>
+                                                </th>
+                                                <th class="p-6 text-center cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'value')">
+                                                    <div class="flex items-center justify-center gap-1">
+                                                        Value Index <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                                                    </div>
+                                                </th>
+                                                <th class="p-6 text-right cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'unified')">
+                                                    <div class="flex items-center justify-end gap-1">
+                                                        Unified Power Score <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
+                                                    </div>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-white/5 text-sm">
+                                            ${displayModels.map((m, idx) => {
+                                                const flag = m.origin === 'US' ? '🇺🇸' : '🇨🇳';
+                                                const originClass = m.origin === 'US' ? 'text-blue-400' : 'text-red-400';
+                                                
+                                                let rankDisplay = `<span class="text-slate-400 font-mono">#${m.rank || idx + 1}</span>`;
+                                                if (m.rank === 1) rankDisplay = `<span class="text-yellow-500 font-bold text-lg">01 🥇</span>`;
+                                                if (m.rank === 2) rankDisplay = `<span class="text-slate-300 font-bold text-lg">02 🥈</span>`;
+                                                if (m.rank === 3) rankDisplay = `<span class="text-orange-400 font-bold text-lg">03 🥉</span>`;
+
+                                                // Bars
+                                                const iqWidth = m.iq; 
+                                                const valueWidth = m.value;
+
+                                                return `
+                                                <tr class="hover:bg-white/5 transition group">
+                                                    <td class="p-6">${rankDisplay}</td>
+                                                    <td class="p-6">
+                                                        <div class="flex flex-col">
+                                                            <div class="font-bold text-lg text-white flex items-center gap-2">
+                                                                ${m.name}
+                                                                <span class="text-xs ${originClass} bg-white/5 px-2 py-0.5 rounded-full">${flag} ${m.origin}</span>
+                                                            </div>
+                                                            <div class="flex items-center gap-2 mt-1">
+                                                                ${m.company ? `<div class="text-xs text-slate-400 flex items-center gap-1"><i data-lucide="building-2" class="w-3 h-3"></i> ${m.company}</div>` : ''}
+                                                                ${m.createdDate ? `<span class="text-xs text-slate-600">•</span><span class="text-xs text-slate-500">Released: ${m.createdDate}</span>` : ''}
+                                                            </div>
+                                                            ${m.description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${m.description}</p>` : ''}
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <div class="flex flex-col gap-1">
+                                                            <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                                                <span>${m.iq.toFixed(1)}</span>
+                                                            </div>
+                                                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                                                                <div class="bg-blue-500 h-full rounded-full" style="width: ${iqWidth}%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <div class="flex flex-col gap-1">
+                                                            <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                                                <span>${m.value.toFixed(1)}</span>
+                                                            </div>
+                                                            <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
+                                                                <div class="bg-green-500 h-full rounded-full" style="width: ${valueWidth}%"></div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6 text-right">
+                                                        <span class="font-black text-2xl ${m.rank === 1 ? 'text-green-400' : 'text-white'}">${m.unified.toFixed(1)}</span>
+                                                    </td>
+                                                </tr>
+                                                `;
+                                            }).join('')}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                                    <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    ${entry.benchmarks.map(b => `
+                                        <span class="bg-slate-800 border border-white/5 px-3 py-1.5 rounded-lg text-xs text-slate-300 font-mono">
+                                            ${b}
+                                        </span>
+                                    `).join('')}
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+            lucide.createIcons();
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchHistory);
+    </script>
+</body>
+</html>
