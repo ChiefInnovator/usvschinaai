@@ -1,11 +1,14 @@
 # robots.txt for usvschina.ai
-# Allow all search engines to crawl all pages
+# Allow all search engines and AI crawlers
 
 User-agent: *
 Allow: /
 
 # Sitemap location
 Sitemap: https://usvschina.ai/sitemap.xml
+
+# LLM-specific knowledge map (for AI crawlers)
+# See: https://usvschina.ai/llms.txt
 
 # Crawl-delay (optional, be polite to servers)
 Crawl-delay: 1

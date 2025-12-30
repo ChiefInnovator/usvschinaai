@@ -1,0 +1,16 @@
+/* TEAM */
+Site: US vs CHINA AI
+URL: https://usvschina.ai/
+Description: AI Model Leaderboard comparing US and China frontier models
+
+/* SITE */
+Last update: 2025/12/30
+Language: English
+Standards: HTML5, CSS3, JavaScript ES6+
+Framework: Tailwind CSS
+Components: Lucide Icons, Chart.js
+Data Format: JSON
+
+/* THANKS */
+Data Sources: Public AI benchmark results
+Inspiration: The global AI race and need for transparent model comparison
