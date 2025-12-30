@@ -3,7 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>US vs CHINA AI | About</title>
+    <title>US vs CHINA AI | About - Methodology & Scoring Explained</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Learn how US vs CHINA AI ranks AI models. Understand the Unified Power Score formula, the 11 benchmarks used for intelligence scoring, and the value index calculation.">
+    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Power Score, AI model evaluation">
+    <meta name="author" content="US vs CHINA AI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://usvschina.ai/about.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://usvschina.ai/about.html">
+    <meta property="og:title" content="US vs CHINA AI | About - Methodology & Scoring Explained">
+    <meta property="og:description" content="Learn how US vs CHINA AI ranks AI models. Understand the scoring methodology and benchmarks.">
+    <meta property="og:image" content="https://usvschina.ai/og-image.png">
+    <meta property="og:site_name" content="US vs CHINA AI">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://usvschina.ai/about.html">
+    <meta name="twitter:title" content="US vs CHINA AI | About - Methodology & Scoring Explained">
+    <meta name="twitter:description" content="Learn how US vs CHINA AI ranks AI models. Understand the scoring methodology and benchmarks.">
+    <meta name="twitter:image" content="https://usvschina.ai/og-image.png">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About US vs CHINA AI",
+        "description": "Methodology and scoring explanation for the AI model leaderboard",
+        "url": "https://usvschina.ai/about.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "US vs CHINA AI",
+            "url": "https://usvschina.ai/"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is the Unified Power Score?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Unified Power Score (max 200) ranks AI models using the formula: Intelligence × (1 + Value/100). Intelligence is the unweighted average of 11 frontier benchmarks (max 100). Value is a log-normalized cost efficiency score (max 100)."
+            }
+        },{
+            "@type": "Question",
+            "name": "What benchmarks are used to measure AI intelligence?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "11 frontier benchmarks: AIME 2025 (Math Olympiad), HMMT 2025 (Math Tournament), GPQA Diamond (PhD Science), ARC-AGI (Reasoning), BrowseComp (Web Agents), ARC-AGI v2 (Advanced Reasoning), HLE (Humanity's Last Exam), MMLU-Pro (Knowledge), LiveCodeBench (Coding), SWE-Bench Verified (Software Engineering), and CodeForces (Competitive Programming)."
+            }
+        },{
+            "@type": "Question",
+            "name": "How is the Value Index calculated?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Value Index is a log-normalized efficiency score based on blended cost per 1M tokens. The formula uses $0.25 as the floor (best value = 100) and $60.00 as the ceiling (worst value = 0)."
+            }
+        },{
+            "@type": "Question",
+            "name": "How is the National Score calculated?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The National Score is the sum of Unified Power Scores for all models from that nation that appear in the Global Top 10. Only top 10 models contribute to a nation's score."
+            }
+        }]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Compare AI Models",
+        "description": "Use the US vs CHINA AI leaderboard to compare AI models by intelligence and cost efficiency",
+        "step": [{
+            "@type": "HowToStep",
+            "name": "View the Leaderboard",
+            "text": "Visit the main page to see all AI models ranked by Unified Power Score"
+        },{
+            "@type": "HowToStep",
+            "name": "Filter by Country",
+            "text": "Use the filter buttons to view Top 10, All models, USA only, or China only"
+        },{
+            "@type": "HowToStep",
+            "name": "Compare Metrics",
+            "text": "Click column headers to sort by Rank, IQ Index, Value Index, or Unified Score"
+        },{
+            "@type": "HowToStep",
+            "name": "Check Historical Data",
+            "text": "Visit the Archives page to see how rankings have changed over time"
+        }]
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -202,7 +301,7 @@
                 </h2>
                 <div class="text-slate-300 leading-relaxed space-y-3">
                     <p>
-                        Scores and pricing are sourced from each model’s linked reference pages (primarily llm-stats.com, plus occasional primary sources).
+                        Scores and pricing are sourced from each model's linked reference pages.
                         Vendor pricing can change quickly; this is why the dashboard is presented as an audit at a point in time.
                     </p>
                     <p class="text-slate-500 text-sm">

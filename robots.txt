@@ -1,0 +1,36 @@
+# robots.txt for usvschina.ai
+# Allow all search engines to crawl all pages
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://usvschina.ai/sitemap.xml
+
+# Crawl-delay (optional, be polite to servers)
+Crawl-delay: 1
+
+# Specific bot rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
