@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US vs CHINA AI | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+    </style>
+</head>
+<body class="p-4 md:p-12 min-h-screen flex flex-col">
+    <div class="max-w-6xl mx-auto w-full flex-grow">
+        <!-- Navigation -->
+        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
+                <span class="group-hover:text-blue-400 transition">US</span>
+                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
+                <span class="group-hover:text-red-400 transition">CHINA</span>
+                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
+            </a>
+            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-slate-500 hover:text-white transition">Leaderboard</a>
+                <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
+                <a href="about.html" class="text-white border-b-2 border-blue-500 pb-1">About</a>
+            </div>
+        </nav>
+
+        <header class="text-center mb-12">
+            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-3">
+                About <span class="winner-gradient">This Project</span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4">
+                Why we built it, what we assume, and how scoring works
+            </p>
+        </header>
+
+        <div class="space-y-8">
+            <div class="glass rounded-3xl p-8 border border-blue-500/20 bg-blue-500/5">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="text-blue-300"></i>
+                    <span>What this site is</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        A leaderboard that ranks the world's best AI models by both <strong class="text-white">intelligence</strong> and <strong class="text-white">cost efficiency</strong>—then shows you which country is winning.
+                    </p>
+                    <p class="text-slate-400">
+                        <strong class="text-slate-200">Use it to:</strong> Compare models side-by-side, find the best value for your use case, and see how the US-China AI race is unfolding in real time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-red-500/20 bg-red-500/5">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="target" class="text-red-300"></i>
+                    <span>Why we built it</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        AI is a race—one that increasingly looks like a two-front contest between the United States and China.
+                        In a fast-moving landscape, debates tend to collapse into benchmark cherry-picking or price-only arguments.
+                        We wanted a simple, repeatable way to answer: “How strong is a model?” and “How much leverage do you get per dollar?”
+                    </p>
+                    <p>
+                        This site turns that race into something you can track: who has the most capable models, who has the best economics,
+                        and who can place more models into the global Top 10.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-slate-900/40 border border-blue-500/20 rounded-2xl p-4">
+                            <div class="flex items-center gap-2 font-bold text-blue-300 mb-1">
+                                <span>🇺🇸</span> USA
+                            </div>
+                            <p class="text-slate-400 text-sm">Frontier capability, research leadership, and premium performance.</p>
+                        </div>
+                        <div class="bg-slate-900/40 border border-red-500/20 rounded-2xl p-4">
+                            <div class="flex items-center gap-2 font-bold text-red-300 mb-1">
+                                <span>🇨🇳</span> China
+                            </div>
+                            <p class="text-slate-400 text-sm">Scaling, iteration speed, and cost-efficient deployment at volume.</p>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-sm">
+                        The dashboard stays explicit about assumptions. If you disagree, you can still use the raw IQ and Value components directly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="sigma" class="text-purple-300"></i>
+                    <span>Scoring model</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-white font-bold mb-2 text-lg">Unified Power Score (Max 200)</h3>
+                        <p class="text-slate-400 mb-4">
+                            We use <strong class="text-purple-400">Intelligence-Gated Value</strong>: intelligence is the foundation,
+                            and value is a multiplier.
+                        </p>
+                        <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-3 border border-purple-500/20">
+                            Unified = IQ × (1 + Value / 100)
+                        </div>
+                        <p class="text-xs text-slate-500 italic">
+                            A model with zero intelligence scores zero—no matter how cheap.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-white font-bold mb-2 text-lg">National score (USA vs China)</h3>
+                        <p class="text-slate-400 mb-3">
+                            National totals are computed from the <strong>Global Top 10</strong> only (by Unified score).
+                            This rewards both peak performance and depth of top-tier presence.
+                        </p>
+                        <div class="bg-slate-900/50 p-4 rounded-xl text-xs text-slate-300 border border-yellow-500/20">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i data-lucide="trophy" class="w-4 h-4 text-yellow-500"></i>
+                                <span class="font-bold">Eligibility rule</span>
+                            </div>
+                            Only models that appear in the global Top 10 contribute to a country’s national total.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i data-lucide="sliders-horizontal" class="text-slate-300"></i>
+                    <span>Key assumptions</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-3 text-slate-300">
+                        <div>
+                            <div class="font-bold text-white mb-1">1) Intelligence is non-negotiable</div>
+                            <p class="text-slate-400">Cheap output is not “value” if the model cannot solve hard problems.</p>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white mb-1">2) Value is a multiplier, not a substitute</div>
+                            <p class="text-slate-400">A strong model becomes more powerful when it’s also affordable to deploy at scale.</p>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white mb-1">3) Benchmarks are averaged unweighted</div>
+                            <p class="text-slate-400">We don’t hand-tune weights. This keeps the IQ index simple and auditable.</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-slate-300">
+                        <div>
+                            <div class="font-bold text-white mb-1">4) Pricing is log-normalized</div>
+                            <p class="text-slate-400">Costs vary by orders of magnitude, so value uses a log scale to avoid extreme distortion.</p>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white mb-1">5) “All” views are for context</div>
+                            <p class="text-slate-400">The headline national scores are based on the Top 10 filter, by design.</p>
+                        </div>
+                        <div>
+                            <div class="font-bold text-white mb-1">6) This is a snapshot, not a truth oracle</div>
+                            <p class="text-slate-400">Benchmarks and pricing shift. Treat rankings as a periodic audit, not a permanent leaderboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="flask-conical" class="text-blue-300"></i>
+                    <span>Benchmarks included</span>
+                </h2>
+                <p class="text-slate-400 mb-4">
+                    The IQ index is an unweighted average across 11 frontier benchmarks:
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME 2025</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">HMMT 2025</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA Diamond</span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">ARC-AGI</span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">BrowseComp</span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">ARC-AGI v2</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">HLE</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">MMLU-Pro</span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">LiveCodeBench</span>
+                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">SWE-Bench Verified</span>
+                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">CodeForces</span>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="database" class="text-slate-300"></i>
+                    <span>Data notes</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        Scores and pricing are sourced from each model’s linked reference pages (primarily llm-stats.com, plus occasional primary sources).
+                        Vendor pricing can change quickly; this is why the dashboard is presented as an audit at a point in time.
+                    </p>
+                    <p class="text-slate-500 text-sm">
+                        Not affiliated with any model provider. No guarantees are made about correctness, completeness, or fitness for any purpose.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
+        <div>
+            <p>&copy; 2025 US vs CHINA AI. All rights reserved.</p>
+        </div>
+        <div class="flex gap-4">
+            <a href="index.html" class="hover:text-white transition">Leaderboard</a>
+            <a href="history.html" class="hover:text-white transition">Archives</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

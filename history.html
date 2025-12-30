@@ -24,18 +24,22 @@
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
         <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
-            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group">
-                <span class="group-hover:text-blue-400 transition">US</span> <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span> <span class="group-hover:text-red-400 transition">CHINA</span><span class="winner-gradient px-2 py-1">AI</span>
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
+                <span class="group-hover:text-blue-400 transition">US</span>
+                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
+                <span class="group-hover:text-red-400 transition">CHINA</span>
+                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
             </a>
             <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
                 <a href="index.html" class="text-slate-500 hover:text-white transition">Leaderboard</a>
                 <a href="history.html" class="text-white border-b-2 border-blue-500 pb-1">Archives</a>
+                <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
             </div>
         </nav>
 
         <header class="text-center mb-16">
-            <h1 class="text-5xl md:text-7xl font-black italic tracking-tighter mb-4">
-                Historical <span class="text-slate-600">Archives</span>
+            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-4">
+                Historical <span class="winner-gradient">Archives</span>
             </h1>
             <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4">
                 Tracking the balance of power over time
@@ -59,6 +63,7 @@
         <div class="flex gap-4">
             <a href="index.html" class="hover:text-white transition">Leaderboard</a>
             <a href="history.html" class="hover:text-white transition">Archives</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
         </div>
     </footer>
 
@@ -67,14 +72,46 @@
         let entryFilters = {}; // Key: index, Value: 'top10' | 'all' | 'US' | 'CN'
         let entrySorts = {}; // Key: index, Value: { key: 'unified', direction: 'desc' }
 
+        // Benchmark color mapping (matches About page)
+        function getBenchmarkColor(name) {
+            const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
+            const redGroup = ['ARC-AGI', 'BrowseComp', 'ARC-AGI v2'];
+            const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench'];
+            const yellowGroup = ['SWE-Bench Verified', 'CodeForces'];
+            
+            if (blueGroup.includes(name)) return 'bg-blue-500/10 border border-blue-500/20';
+            if (redGroup.includes(name)) return 'bg-red-500/10 border border-red-500/20';
+            if (purpleGroup.includes(name)) return 'bg-purple-500/10 border border-purple-500/20';
+            if (yellowGroup.includes(name)) return 'bg-yellow-500/10 border border-yellow-500/20';
+            return 'bg-slate-800 border border-white/5';
+        }
+
         async function fetchHistory() {
             const container = document.getElementById('history-container');
             try {
-                const response = await fetch('history.json');
+                const response = await fetch('models.json');
                 const data = await response.json();
-                historyData = data.history;
+                if (data && Array.isArray(data.history) && data.history.length) {
+                    historyData = data.history;
+                } else if (data && Array.isArray(data.models) && data.models.length) {
+                    // Back-compat: older schema had only a current snapshot.
+                    historyData = [{
+                        timestamp: (data.metadata && data.metadata.timestamp) ? data.metadata.timestamp : new Date().toISOString(),
+                        leader: null,
+                        scores: {
+                            usa: { total: 0, avgIq: 0, avgValue: 0 },
+                            china: { total: 0, avgIq: 0, avgValue: 0 }
+                        },
+                        benchmarks: data.benchmarks || null,
+                        models: data.models
+                    }];
+                } else {
+                    historyData = [];
+                }
                 renderHistory();
-                lucide.createIcons();
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
             } catch (error) {
                 console.error('Error:', error);
                 container.innerHTML = '<div class="text-center text-red-400 py-12">Failed to load history data. Please ensure you are running on a local server.</div>';
@@ -84,7 +121,9 @@
         function setEntryFilter(index, filter) {
             entryFilters[index] = filter;
             renderHistory();
-            lucide.createIcons();
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
         }
 
         function sortEntry(index, key) {
@@ -99,7 +138,9 @@
                 entrySorts[index].direction = 'desc';
             }
             renderHistory();
-            lucide.createIcons();
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
         }
 
         function renderHistory() {
@@ -126,17 +167,24 @@
                 // Get sort for this entry
                 const currentSort = entrySorts[index] || { key: 'unified', direction: 'desc' };
 
+                const entryModels = (entry && Array.isArray(entry.models)) ? entry.models : [];
+                const scores = (entry && entry.scores) ? entry.scores : {
+                    usa: { total: 0, avgIq: 0, avgValue: 0 },
+                    china: { total: 0, avgIq: 0, avgValue: 0 }
+                };
+                const entryBenchmarks = (entry && Array.isArray(entry.benchmarks)) ? entry.benchmarks : [];
+
                 // Filter models
                 let displayModels = [];
                 if (currentFilter === 'top10') {
                     // Show Global Top 10
-                    displayModels = [...entry.models].sort((a, b) => b.unified - a.unified).slice(0, 10);
+                    displayModels = entryModels.slice().sort((a, b) => b.unified - a.unified).slice(0, 10);
                 } else if (currentFilter === 'all') {
                     // Show all models
-                    displayModels = [...entry.models];
+                    displayModels = entryModels.slice();
                 } else {
                     // Show all models for the selected country
-                    displayModels = entry.models.filter(m => m.origin === currentFilter);
+                    displayModels = entryModels.filter(m => m.origin === currentFilter);
                 }
 
                 // Sort models
@@ -180,14 +228,14 @@
                             <div class="flex gap-8 bg-black/20 p-4 rounded-2xl border border-white/5">
                                 <div class="text-right">
                                     <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">USA Score</div>
-                                    <div class="font-mono font-black text-2xl text-blue-400">${entry.scores.usa.total.toFixed(1)}</div>
-                                    <div class="text-[10px] text-slate-500">IQ: ${entry.scores.usa.avgIq.toFixed(1)} | Val: ${entry.scores.usa.avgValue.toFixed(1)}</div>
+                                    <div class="font-mono font-black text-2xl text-blue-400">${scores.usa.total.toFixed(1)}</div>
+                                    <div class="text-[10px] text-slate-500">IQ: ${scores.usa.avgIq.toFixed(1)} | Val: ${scores.usa.avgValue.toFixed(1)}</div>
                                 </div>
                                 <div class="w-px bg-white/10"></div>
                                 <div class="text-right">
                                     <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">China Score</div>
-                                    <div class="font-mono font-black text-2xl text-red-400">${entry.scores.china.total.toFixed(1)}</div>
-                                    <div class="text-[10px] text-slate-500">IQ: ${entry.scores.china.avgIq.toFixed(1)} | Val: ${entry.scores.china.avgValue.toFixed(1)}</div>
+                                    <div class="font-mono font-black text-2xl text-red-400">${scores.china.total.toFixed(1)}</div>
+                                    <div class="text-[10px] text-slate-500">IQ: ${scores.china.avgIq.toFixed(1)} | Val: ${scores.china.avgValue.toFixed(1)}</div>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +264,7 @@
                                 </div>
                                 <div class="overflow-x-auto">
                                     <table class="w-full text-left border-collapse">
-                                        <thead class="bg-slate-900/80 text-slate-500 text-xs uppercase tracking-tighter">
+                                        <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter">
                                             <tr>
                                                 <th class="p-6 cursor-pointer hover:text-white transition group" onclick="sortEntry(${index}, 'rank')">
                                                     <div class="flex items-center gap-1">
@@ -311,11 +359,10 @@
                                     <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
                                 </h3>
                                 <div class="flex flex-wrap gap-2">
-                                    ${entry.benchmarks.map(b => `
-                                        <span class="bg-slate-800 border border-white/5 px-3 py-1.5 rounded-lg text-xs text-slate-300 font-mono">
-                                            ${b}
-                                        </span>
-                                    `).join('')}
+                                    ${entryBenchmarks.map(b => {
+                                        const colorClass = getBenchmarkColor(b);
+                                        return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
+                                    }).join('')}
 
 
 
@@ -327,7 +374,9 @@
             });
             
             container.innerHTML = html;
-            lucide.createIcons();
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
         }
 
         document.addEventListener('DOMContentLoaded', fetchHistory);

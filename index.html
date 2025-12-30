@@ -28,12 +28,16 @@
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
         <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
-            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group">
-                <span class="group-hover:text-blue-400 transition">US</span> <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span> <span class="group-hover:text-red-400 transition">CHINA</span><span class="winner-gradient px-2 py-1">AI</span>
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
+                <span class="group-hover:text-blue-400 transition">US</span>
+                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
+                <span class="group-hover:text-red-400 transition">CHINA</span>
+                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
             </a>
             <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
                 <a href="index.html" class="text-white border-b-2 border-blue-500 pb-1">Leaderboard</a>
                 <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
+                <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
             </div>
         </nav>
 
@@ -137,7 +141,7 @@
 
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
-                    <thead class="bg-slate-900/80 text-slate-500 text-xs uppercase tracking-tighter" id="table-header">
+                    <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter" id="table-header">
                         <!-- Headers loaded from JSON -->
                     </thead>
                     <tbody class="divide-y divide-white/5" id="models-table-body">
@@ -271,20 +275,45 @@
         // Data Source
         let appData = {};
         let models = [];
+        let currentEntry = null;
         let currentSort = { key: 'unified', direction: 'desc' };
         let currentFilter = 'top10';
+
+        // Benchmark color mapping (matches About page)
+        function getBenchmarkColor(name) {
+            const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
+            const redGroup = ['ARC-AGI', 'BrowseComp', 'ARC-AGI v2'];
+            const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench'];
+            const yellowGroup = ['SWE-Bench Verified', 'CodeForces'];
+            
+            if (blueGroup.includes(name)) return 'bg-blue-500/10 border border-blue-500/20';
+            if (redGroup.includes(name)) return 'bg-red-500/10 border border-red-500/20';
+            if (purpleGroup.includes(name)) return 'bg-purple-500/10 border border-purple-500/20';
+            if (yellowGroup.includes(name)) return 'bg-yellow-500/10 border border-yellow-500/20';
+            return 'bg-slate-800 border border-white/5';
+        }
 
         async function fetchModels() {
             try {
                 const response = await fetch('models.json');
                 appData = await response.json();
-                models = appData.models;
+
+                const history = Array.isArray(appData.history) ? appData.history : [];
+                if (history.length) {
+                    currentEntry = history.slice().sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];
+                    models = (currentEntry && Array.isArray(currentEntry.models)) ? currentEntry.models : [];
+                } else {
+                    currentEntry = null;
+                    models = Array.isArray(appData.models) ? appData.models : [];
+                }
                 
                 populateStaticContent();
                 calculateTotals();
                 renderTable();
                 renderMatrix();
-                lucide.createIcons();
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
             } catch (error) {
                 console.error('Error fetching models:', error);
             }
@@ -292,33 +321,38 @@
 
         function populateStaticContent() {
             // Metadata
-            document.title = `${appData.metadata.title} | Global Leaderboard`;
+            const metaTitle = appData && appData.metadata && appData.metadata.title ? appData.metadata.title : 'US vs CHINA AI';
+            document.title = `${metaTitle} | Global Leaderboard`;
             
             // Title with gradient
             const titleEl = document.getElementById('page-title');
             // Updated for usvschina.ai branding
-            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 py-1">AI</span>`; 
+            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`; 
             
-            document.getElementById('page-subtitle').textContent = appData.metadata.subtitle;
-            document.getElementById('footer-text').textContent = appData.metadata.footerText;
+            if (appData && appData.metadata) {
+                document.getElementById('page-subtitle').textContent = appData.metadata.subtitle || '';
+                document.getElementById('footer-text').textContent = appData.metadata.footerText || '';
+            }
 
             // Teams
-            const usa = appData.teams.usa;
-            document.getElementById('team-usa-name').innerHTML = `${usa.name} ${usa.flag}`;
-            document.getElementById('team-usa-desc').textContent = usa.description;
-            document.getElementById('team-usa-badge').textContent = usa.badge;
+            if (appData && appData.teams && appData.teams.usa && appData.teams.china) {
+                const usa = appData.teams.usa;
+                document.getElementById('team-usa-name').innerHTML = `${usa.name} ${usa.flag}`;
+                document.getElementById('team-usa-desc').textContent = usa.description;
+                document.getElementById('team-usa-badge').textContent = usa.badge;
 
-            const china = appData.teams.china;
-            document.getElementById('team-china-name').innerHTML = `${china.name} ${china.flag}`;
-            document.getElementById('team-china-desc').textContent = china.description;
-            // China badge has an icon in HTML, let's preserve it
-            const chinaBadgeEl = document.getElementById('team-china-badge');
-            chinaBadgeEl.textContent = china.badge;
+                const china = appData.teams.china;
+                document.getElementById('team-china-name').innerHTML = `${china.name} ${china.flag}`;
+                document.getElementById('team-china-desc').textContent = china.description;
+                const chinaBadgeEl = document.getElementById('team-china-badge');
+                chinaBadgeEl.textContent = china.badge;
+            }
 
             // Table Headers
             const thead = document.getElementById('table-header');
             let headerRow = '<tr>';
-            appData.columns.forEach(col => {
+            const cols = (appData && Array.isArray(appData.columns)) ? appData.columns : [];
+            cols.forEach(col => {
                 let alignClass = 'text-left';
                 if (col.key === 'iq' || col.key === 'value') alignClass = 'text-center';
                 if (col.key === 'unified') alignClass = 'text-right';
@@ -337,11 +371,10 @@
             // Benchmarks
             const benchmarksContainer = document.getElementById('benchmarks-container');
             if (appData.benchmarks && benchmarksContainer) {
-                benchmarksContainer.innerHTML = appData.benchmarks.map(b => `
-                    <span class="bg-slate-800 border border-white/5 px-3 py-1.5 rounded-lg text-xs text-slate-300 font-mono">
-                        ${b}
-                    </span>
-                `).join('');
+                benchmarksContainer.innerHTML = appData.benchmarks.map(b => {
+                    const colorClass = getBenchmarkColor(b);
+                    return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
+                }).join('');
             }
         }
 
@@ -405,7 +438,9 @@
                 leaderCard.appendChild(badge);
                 
                 leaderCard.classList.add('ring-2', ringColor, 'ring-offset-2', 'ring-offset-slate-900');
-                lucide.createIcons();
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
             }
         }
 
@@ -456,8 +491,6 @@
                 // Bars
                 const iqWidth = model.iq; // Max is 100
                 const valueWidth = model.value; // Max is 100
-                
-                // Description tooltip
                 const description = model.description || '';
 
                 tr.innerHTML = `
@@ -507,7 +540,9 @@
             });
             
             // Re-initialize icons for new elements
-            lucide.createIcons();
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
         }
 
         // Sorting Handler
@@ -572,7 +607,12 @@
         let matrixChart = null;
         
         function renderMatrix() {
-            const ctx = document.getElementById('matrixChart').getContext('2d');
+            const canvas = document.getElementById('matrixChart');
+            if (!canvas || typeof canvas.getContext !== 'function') return;
+            if (!window.Chart) return;
+            if (!models || models.length === 0) return;
+
+            const ctx = canvas.getContext('2d');
             
             // Calculate medians for quadrant dividers
             const allIq = models.map(m => m.iq);
@@ -583,7 +623,8 @@
             // Calculate point sizes based on unified score (scale 4-16)
             const minUnified = Math.min(...models.map(m => m.unified));
             const maxUnified = Math.max(...models.map(m => m.unified));
-            const scaleRadius = (unified) => 6 + ((unified - minUnified) / (maxUnified - minUnified)) * 14;
+            const denom = (maxUnified - minUnified);
+            const scaleRadius = (unified) => denom === 0 ? 10 : 6 + ((unified - minUnified) / denom) * 14;
             
             // Prepare datasets
             const usData = models.filter(m => m.origin === 'US').map(m => ({
