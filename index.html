@@ -82,6 +82,98 @@
 
         .sort-icon { transition: transform 0.2s; }
         .sort-asc .sort-icon { transform: rotate(180deg); }
+
+        /* 3D Flip Animation */
+        .flip-container {
+            perspective: 1000px;
+        }
+
+        .flip-container.flipped .flip-front {
+            transform: rotateY(180deg);
+            pointer-events: none;
+            opacity: 0;
+        }
+
+        .flip-container.flipped .flip-back {
+            transform: rotateY(0deg);
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .flip-front, .flip-back {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            transition: transform 0.6s, opacity 0.6s;
+        }
+
+        .flip-front {
+            transform: rotateY(0deg);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .flip-back {
+            transform: rotateY(180deg);
+            opacity: 0;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .flip-toggle-btn {
+            background: rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(59, 130, 246, 0.5);
+            color: #3b82f6;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .flip-toggle-btn:hover {
+            background: rgba(59, 130, 246, 0.3);
+            border-color: rgba(59, 130, 246, 0.8);
+        }
+
+        .benchmark-details-table {
+            font-size: 0.875rem;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .benchmark-details-table th {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            z-index: 10;
+        }
+
+        .benchmark-details-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .benchmark-details-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .cost-badge {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: #22c55e;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
@@ -199,48 +291,93 @@
             </div>
         </div>
 
-        <!-- Main Table -->
-        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12">
-            <!-- Toolbar -->
-            <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-                <h3 class="text-xl font-bold flex items-center gap-2">
-                    <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
-                </h3>
+        <!-- Main Table with Flip Animation -->
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12 flip-container relative" id="leaderboardFlipContainer">
+            <!-- Flip Toggle Button -->
+            <button onclick="toggleLeaderboardFlip()" class="absolute top-6 right-6 flip-toggle-btn z-20">
+                <i data-lucide="flip-horizontal" class="w-4 h-4"></i>
+                <span id="leaderboardFlipBtnText">View Details</span>
+            </button>
+
+            <!-- Front Side: Leaderboard Table -->
+            <div class="flip-front">
+                <!-- Toolbar -->
+                <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
+                    </h3>
+                    
+                    <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                        <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
+                            <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
+                        </button>
+                        <button onclick="setFilter('all')" id="filter-all" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <i data-lucide="globe" class="w-3 h-3"></i> All
+                        </button>
+                        <button onclick="setFilter('US')" id="filter-us" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <span>🇺🇸</span> USA
+                        </button>
+                        <button onclick="setFilter('CN')" id="filter-cn" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <span>🇨🇳</span> China
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter" id="table-header">
+                            <!-- Headers loaded from JSON -->
+                        </thead>
+                        <tbody class="divide-y divide-white/5" id="models-table-body">
+                            <!-- Rows will be populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
                 
-                <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
-                    <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
-                        <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
-                    </button>
-                    <button onclick="setFilter('all')" id="filter-all" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
-                        <i data-lucide="globe" class="w-3 h-3"></i> All
-                    </button>
-                    <button onclick="setFilter('US')" id="filter-us" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
-                        <span>🇺🇸</span> USA
-                    </button>
-                    <button onclick="setFilter('CN')" id="filter-cn" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
-                        <span>🇨🇳</span> China
-                    </button>
+                <!-- Benchmarks Included -->
+                <div class="p-6 border-t border-white/5">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                        <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
+                    </h3>
+                    <div id="benchmarks-container" class="flex flex-wrap gap-2">
+                        <!-- Loaded from JSON -->
+                    </div>
                 </div>
             </div>
 
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter" id="table-header">
-                        <!-- Headers loaded from JSON -->
-                    </thead>
-                    <tbody class="divide-y divide-white/5" id="models-table-body">
-                        <!-- Rows will be populated by JS -->
-                    </tbody>
-                </table>
-            </div>
-            
-            <!-- Benchmarks Included -->
-            <div class="p-6 border-t border-white/5">
-                <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                    <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
+            <!-- Back Side: Detailed Benchmark Table -->
+            <div class="flip-back p-6">
+                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="table" class="text-blue-400"></i> Detailed Benchmark Scores & Costs
                 </h3>
-                <div id="benchmarks-container" class="flex flex-wrap gap-2">
-                    <!-- Loaded from JSON -->
+                <div class="benchmark-details-table overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead class="bg-slate-900/80 text-slate-400 text-xs uppercase tracking-tighter sticky top-0">
+                            <tr>
+                                <th class="p-3">Rank</th>
+                                <th class="p-3">Model</th>
+                                <th class="p-3">Origin</th>
+                                <th class="p-3">IQ</th>
+                                <th class="p-3">Value</th>
+                                <th class="p-3">Unified</th>
+                                <th class="p-3">Input Cost</th>
+                                <th class="p-3">Output Cost</th>
+                                <th class="p-3 whitespace-nowrap">AIME 2025</th>
+                                <th class="p-3 whitespace-nowrap">HMMT 2025</th>
+                                <th class="p-3 whitespace-nowrap">GPQA</th>
+                                <th class="p-3 whitespace-nowrap">BrowseComp</th>
+                                <th class="p-3 whitespace-nowrap">ARC-AGI</th>
+                                <th class="p-3 whitespace-nowrap">HLE</th>
+                                <th class="p-3 whitespace-nowrap">MMLU-Pro</th>
+                                <th class="p-3 whitespace-nowrap">LiveCode</th>
+                                <th class="p-3 whitespace-nowrap">SWE-Bench</th>
+                                <th class="p-3 whitespace-nowrap">CodeForces</th>
+                            </tr>
+                        </thead>
+                        <tbody id="benchmark-details-tbody" class="divide-y divide-white/5">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -367,6 +504,87 @@
         let currentEntry = null;
         let currentSort = { key: 'unified', direction: 'desc' };
         let currentFilter = 'top10';
+        let leaderboardIsFlipped = false;
+
+        // Toggle Leaderboard Flip
+        function toggleLeaderboardFlip() {
+            const container = document.getElementById('leaderboardFlipContainer');
+            const btn = document.getElementById('leaderboardFlipBtnText');
+            
+            leaderboardIsFlipped = !leaderboardIsFlipped;
+            
+            if (leaderboardIsFlipped) {
+                container.classList.add('flipped');
+                btn.textContent = 'View Leaderboard';
+                populateBenchmarkDetailsTable();
+            } else {
+                container.classList.remove('flipped');
+                btn.textContent = 'View Details';
+            }
+        }
+
+        // Populate Benchmark Details Table
+        function populateBenchmarkDetailsTable() {
+            const tbody = document.getElementById('benchmark-details-tbody');
+            if (!tbody || !models || models.length === 0) return;
+
+            // Sort by unified score
+            const sorted = [...models].sort((a, b) => b.unified - a.unified);
+
+            tbody.innerHTML = sorted.map(model => {
+                const flag = model.origin === 'US' ? '🇺🇸' : '🇨🇳';
+                const originClass = model.origin === 'US' ? 'text-blue-400' : 'text-red-400';
+                
+                // Extract benchmark scores
+                const benchmarks = model.benchmarks || {};
+                const benchmarkNames = [
+                    'AIME 2025',
+                    'HMMT 2025',
+                    'GPQA Diamond',
+                    'BrowseComp',
+                    'ARC-AGI v2',
+                    'HLE',
+                    'MMLU-Pro',
+                    'LiveCodeBench',
+                    'SWE-Bench Verified',
+                    'CodeForces'
+                ];
+
+                let benchmarkCells = benchmarkNames.map(name => {
+                    const score = benchmarks[name];
+                    if (score === undefined || score === null) {
+                        return `<td class="p-3 text-center text-slate-600">—</td>`;
+                    }
+                    return `<td class="p-3 text-center text-green-400 font-semibold">${score.toFixed(1)}</td>`;
+                }).join('');
+
+                const rankDisplay = model.rank === 1 ? '🥇' : (model.rank === 2 ? '🥈' : (model.rank === 3 ? '🥉' : `#${model.rank}`));
+                
+                return `
+                    <tr class="hover:bg-white/5 transition">
+                        <td class="p-3 font-bold">${rankDisplay}</td>
+                        <td class="p-3">
+                            <a href="${model.link || '#'}" target="_blank" class="font-semibold hover:text-blue-400 transition">
+                                ${model.name}
+                            </a>
+                        </td>
+                        <td class="p-3">
+                            <span class="${originClass} font-semibold">${flag} ${model.origin}</span>
+                        </td>
+                        <td class="p-3 text-center font-semibold">${model.iq.toFixed(1)}</td>
+                        <td class="p-3 text-center font-semibold">${model.value.toFixed(1)}</td>
+                        <td class="p-3 text-center font-bold text-yellow-400">${model.unified.toFixed(1)}</td>
+                        <td class="p-3 text-center">
+                            <span class="cost-badge">$${model.costInputPer1M.toFixed(2)}</span>
+                        </td>
+                        <td class="p-3 text-center">
+                            <span class="cost-badge">$${model.costOutputPer1M.toFixed(2)}</span>
+                        </td>
+                        ${benchmarkCells}
+                    </tr>
+                `;
+            }).join('');
+        }
 
         // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
