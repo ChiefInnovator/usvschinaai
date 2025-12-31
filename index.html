@@ -487,8 +487,9 @@
             // Updated for usvschina.ai branding
             titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`; 
             
-            if (appData && appData.metadata) {
-                document.getElementById('page-subtitle').textContent = appData.metadata.subtitle || '';
+            if (appData && appData.history && appData.history.length > 0) {
+                const latestEntry = appData.history[0];
+                document.getElementById('page-subtitle').textContent = latestEntry.subtitle || '';
             }
 
             // Teams
