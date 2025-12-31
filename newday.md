@@ -103,10 +103,31 @@ This new entry will be **prepended to the existing history array** in models.jso
 ## Quality Requirements
 
 1. All benchmark scores must be realistic and internally consistent (higher-ranked models score higher overall)
-2. Cost data must be current and realistic for Dec 2025
+2. Cost data must be current and realistic for TODAY'S DATE
 3. Model descriptions should mention key differentiators (reasoning, speed, cost, parameter count, etc.)
 4. Ensure ~50% US, ~50% China representation in top 20
 5. Make the competition competitive - no team should dominate by >20% on Unified Power Score
 6. Unified scores should range from ~120 (top) to ~80 (10th place)
 7. **All 20 models must have ranks 1-20** (one for each position, no duplicates)
 8. **Team USA and China team totals** should be roughly competitive (within 10-15% of each other)
+
+## Verification Checklist
+
+After generating the new day's data and before integration, verify:
+
+- [ ] **JSON Syntax Valid**: The generated object parses as valid JSON
+- [ ] **All Fields Present**: Each model has rank, name, company, companyLink, origin, description, unified, iq, value, createdDate, costInputPer1M, costOutputPer1M, and benchmarks object
+- [ ] **Benchmark Coverage**: All 11 benchmark scores present for each of 20 models
+- [ ] **Ranks Unique**: Models ranked 1-20 with no duplicates or gaps
+- [ ] **Score Calculations**: 
+  - IQ Index = average of 11 benchmarks ✓
+  - Value Index = cost-adjusted (higher value for lower cost) ✓
+  - Unified Score = (IQ × 0.6) + (Value × 0.4) ✓
+- [ ] **Team Scores**: 
+  - USA total = sum of 10 US model unified scores ✓
+  - China total = sum of 10 CN model unified scores ✓
+  - avgIq = average of 10 respective model IQ indices ✓
+  - avgValue = average of 10 respective model Value indices ✓
+- [ ] **Date Consistency**: auditDate and subtitle formatted correctly from timestamp
+- [ ] **Leader Accuracy**: "leader" field matches team with higher total score
+- [ ] **Data Competitiveness**: No team dominates by >20%, score ranges realistic (120-80)
