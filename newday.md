@@ -117,6 +117,11 @@ After generating the new day's data and before integration, verify:
 
 - [ ] **JSON Syntax Valid**: The generated object parses as valid JSON
 - [ ] **All Fields Present**: Each model has rank, name, company, companyLink, origin, description, unified, iq, value, createdDate, costInputPer1M, costOutputPer1M, and benchmarks object
+- [ ] **Model & Company Existence**: 
+  - All 20 model names are real, current, and exist as of TODAY'S DATE ✓
+  - All 20 companies are real and currently operational ✓
+  - companyLink URLs are valid and point to official company websites ✓
+  - Models are verified on llm-stats (https://llm-stats.com) or similar AI model tracking sites ✓
 - [ ] **Benchmark Coverage**: All 11 benchmark scores present for each of 20 models
 - [ ] **Ranks Unique**: Models ranked 1-20 with no duplicates or gaps
 - [ ] **Score Calculations**: 
