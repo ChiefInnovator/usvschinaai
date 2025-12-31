@@ -322,6 +322,18 @@
             </div>
         </div>
 
+        <!-- Company Leaderboard -->
+        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+            <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
+                <i data-lucide="building-2" class="text-green-400"></i> Company Leaderboard
+            </h3>
+            <p class="text-slate-400 text-sm mb-6">Which companies are leading based on their models in the Global Top 10? Scores are summed from each company's models that made the cut.</p>
+            
+            <div id="company-leaderboard" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+
         <!-- Methodology Section -->
         <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
@@ -498,6 +510,7 @@
                 calculateTotals();
                 renderTable();
                 renderMatrix();
+                renderCompanyLeaderboard();
                 if (window.lucide && typeof lucide.createIcons === 'function') {
                     lucide.createIcons();
                 }
@@ -1071,6 +1084,72 @@
                     }
                 }]
             });
+        }
+
+        // Company Leaderboard
+        function renderCompanyLeaderboard() {
+            if (!models || models.length === 0) return;
+            
+            const container = document.getElementById('company-leaderboard');
+            if (!container) return;
+            
+            // Get top 10 models
+            const top10 = models.slice().sort((a, b) => b.unified - a.unified).slice(0, 10);
+            
+            // Aggregate by company
+            const companyScores = {};
+            top10.forEach(m => {
+                const company = m.company || 'Unknown';
+                if (!companyScores[company]) {
+                    companyScores[company] = {
+                        name: company,
+                        totalScore: 0,
+                        modelCount: 0,
+                        models: [],
+                        origin: m.origin
+                    };
+                }
+                companyScores[company].totalScore += m.unified;
+                companyScores[company].modelCount++;
+                companyScores[company].models.push(m.name);
+            });
+            
+            // Sort by total score descending
+            const sortedCompanies = Object.values(companyScores).sort((a, b) => b.totalScore - a.totalScore);
+            
+            // Render
+            container.innerHTML = sortedCompanies.map((c, idx) => {
+                const flag = c.origin === 'US' ? '🇺🇸' : '🇨🇳';
+                const borderColor = c.origin === 'US' ? 'border-blue-500/30 hover:border-blue-500/60' : 'border-red-500/30 hover:border-red-500/60';
+                const textColor = c.origin === 'US' ? 'text-blue-400' : 'text-red-400';
+                const bgColor = c.origin === 'US' ? 'bg-blue-500/10' : 'bg-red-500/10';
+                
+                let rankIcon = '';
+                if (idx === 0) rankIcon = '🥇';
+                else if (idx === 1) rankIcon = '🥈';
+                else if (idx === 2) rankIcon = '🥉';
+                
+                return `
+                    <div class="glass p-6 rounded-2xl border ${borderColor} transition-all duration-300">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <div class="text-lg font-bold ${textColor} flex items-center gap-2">
+                                    ${rankIcon} ${c.name} ${flag}
+                                </div>
+                                <div class="text-xs text-slate-500">${c.modelCount} model${c.modelCount > 1 ? 's' : ''} in Top 10</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-2xl font-black text-white">${c.totalScore.toFixed(1)}</div>
+                                <div class="text-xs text-slate-500">Total Score</div>
+                            </div>
+                        </div>
+                        <div class="${bgColor} rounded-lg p-3">
+                            <div class="text-xs text-slate-400 mb-1">Models:</div>
+                            <div class="text-sm text-slate-300">${c.models.join(', ')}</div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
         }
 
         // Initialize
