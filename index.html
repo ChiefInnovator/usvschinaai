@@ -123,26 +123,18 @@
             height: 100%;
         }
 
-        .flip-toggle-btn {
-            background: rgba(139, 92, 246, 0.2);
-            border: 1px solid rgba(139, 92, 246, 0.5);
-            color: #a78bfa;
-            padding: 0.5rem 0.75rem;
-            border-radius: 0.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
+        .flip-icon-btn {
+            position: absolute;
+            bottom-right: 1.5rem;
             cursor: pointer;
             transition: all 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.375rem;
-            white-space: nowrap;
+            opacity: 0.5;
+            color: #a78bfa;
         }
 
-        .flip-toggle-btn:hover {
-            background: rgba(139, 92, 246, 0.3);
-            border-color: rgba(139, 92, 246, 0.8);
-            color: #c4b5fd;
+        .flip-icon-btn:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         .benchmark-details-table {
@@ -294,35 +286,34 @@
         </div>
 
         <!-- Main Table with Flip Animation -->
-        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12 flip-container" id="leaderboardFlipContainer">
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12 flip-container relative" id="leaderboardFlipContainer">
             <!-- Front Side: Leaderboard Table -->
             <div class="flip-front">
                 <!-- Toolbar -->
-                <div class="p-6 border-b border-white/5">
-                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
-                        <h3 class="text-xl font-bold flex items-center gap-2">
-                            <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
-                        </h3>
-                        <button onclick="toggleLeaderboardFlip()" class="flip-toggle-btn">
-                            <i data-lucide="flip-horizontal" class="w-4 h-4"></i>
-                            <span id="leaderboardFlipBtnText">View Details</span>
-                        </button>
-                    </div>
+                <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <h3 class="text-xl font-bold flex items-center gap-2">
+                        <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
+                    </h3>
                     
-                    <div class="flex flex-wrap items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5 w-fit">
-                        <button onclick="setFilter('top10')" id="filter-top10" class="px-3 py-1.5 rounded-md text-xs sm:text-sm font-bold transition flex items-center gap-1 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
-                            <i data-lucide="trophy" class="w-3 h-3"></i> <span class="hidden sm:inline">Top 10</span><span class="sm:hidden">Top</span>
+                    <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
+                        <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
+                            <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
                         </button>
-                        <button onclick="setFilter('all')" id="filter-all" class="px-3 py-1.5 rounded-md text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-1 hover:bg-white/5">
-                            <i data-lucide="globe" class="w-3 h-3"></i> <span class="hidden sm:inline">All</span>
+                        <button onclick="setFilter('all')" id="filter-all" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <i data-lucide="globe" class="w-3 h-3"></i> All
                         </button>
-                        <button onclick="setFilter('US')" id="filter-us" class="px-3 py-1.5 rounded-md text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-1 hover:bg-white/5">
-                            <span>🇺🇸</span> <span class="hidden sm:inline">USA</span>
+                        <button onclick="setFilter('US')" id="filter-us" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <span>🇺🇸</span> USA
                         </button>
-                        <button onclick="setFilter('CN')" id="filter-cn" class="px-3 py-1.5 rounded-md text-xs sm:text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-1 hover:bg-white/5">
-                            <span>🇨🇳</span> <span class="hidden sm:inline">China</span>
+                        <button onclick="setFilter('CN')" id="filter-cn" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
+                            <span>🇨🇳</span> China
                         </button>
                     </div>
+                </div>
+                
+                <!-- Flip Icon Indicator -->
+                <div class="absolute bottom-6 right-6 flip-icon-btn" onclick="toggleLeaderboardFlip()" title="Click to view benchmark details">
+                    <i data-lucide="flip-horizontal" class="w-5 h-5"></i>
                 </div>
 
                 <div class="overflow-x-auto">
@@ -348,7 +339,7 @@
             </div>
 
             <!-- Back Side: Detailed Benchmark Table -->
-            <div class="flip-back p-6">
+            <div class="flip-back p-6 relative">
                 <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
                     <i data-lucide="table" class="text-blue-400"></i> Detailed Benchmark Scores & Costs
                 </h3>
@@ -380,6 +371,11 @@
                             <!-- Populated by JS -->
                         </tbody>
                     </table>
+                </div>
+                
+                <!-- Flip Icon Indicator -->
+                <div class="absolute bottom-6 right-6 flip-icon-btn" onclick="toggleLeaderboardFlip()" title="Click to view leaderboard">
+                    <i data-lucide="flip-horizontal" class="w-5 h-5"></i>
                 </div>
             </div>
         </div>
@@ -511,17 +507,14 @@
         // Toggle Leaderboard Flip
         function toggleLeaderboardFlip() {
             const container = document.getElementById('leaderboardFlipContainer');
-            const btn = document.getElementById('leaderboardFlipBtnText');
             
             leaderboardIsFlipped = !leaderboardIsFlipped;
             
             if (leaderboardIsFlipped) {
                 container.classList.add('flipped');
-                btn.textContent = 'View Leaderboard';
                 populateBenchmarkDetailsTable();
             } else {
                 container.classList.remove('flipped');
-                btn.textContent = 'View Details';
             }
         }
 
