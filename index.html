@@ -42,92 +42,20 @@
     <meta name="theme-color" content="#020617">
     <meta name="format-detection" content="telephone=no">
     
-    <!-- JSON-LD Structured Data for SEO/GEO/AEO -->
-    <script type="application/ld+json">
+    <!-- JSON-LD Structured Data - Dynamically injected from models.json -->
+    <script id="seo-website" type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "US vs CHINA AI",
         "url": "https://usvschina.ai/",
         "description": "Compare the world's best AI models ranked by intelligence and cost efficiency. Track the US-China AI race.",
-        "publisher": {
-            "@type": "Organization",
-            "name": "US vs CHINA AI"
-        }
+        "publisher": {"@type": "Organization", "name": "US vs CHINA AI"}
     }
     </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [{
-            "@type": "Question",
-            "name": "What is the best AI model in 2025?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As of December 2025, DeepSeek-V3.2 from China leads with a Unified Power Score of 184.8, combining top-tier intelligence (92.4) with excellent cost efficiency (100). Gemini 3 Pro from the US ranks highest in raw intelligence at 96.2."
-            }
-        },{
-            "@type": "Question",
-            "name": "Is the US or China winning the AI race?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "As of December 2025, China leads with a national score of 1009.6 vs USA's 662.5. Both nations have 5 models in the global Top 10, but China's models offer better cost efficiency."
-            }
-        },{
-            "@type": "Question",
-            "name": "How are AI models ranked on this leaderboard?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Models are ranked by Unified Power Score (max 200), calculated as Intelligence × (1 + Value/100). Intelligence is the average of 11 frontier benchmarks. Value is a log-normalized cost efficiency score."
-            }
-        }]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Top 10 AI Models December 2025",
-        "description": "Global ranking of frontier AI models by Unified Power Score",
-        "numberOfItems": 10,
-        "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "DeepSeek-V3.2", "description": "Score: 184.8 | Origin: China"},
-            {"@type": "ListItem", "position": 2, "name": "DeepSeek-V3.2-Speciale", "description": "Score: 176.1 | Origin: China"},
-            {"@type": "ListItem", "position": 3, "name": "Gemini 3 Pro", "description": "Score: 171.7 | Origin: USA"},
-            {"@type": "ListItem", "position": 4, "name": "Gemini 3 Flash", "description": "Score: 170.0 | Origin: USA"},
-            {"@type": "ListItem", "position": 5, "name": "DeepSeek-V3.2-Exp", "description": "Score: 168.1 | Origin: China"},
-            {"@type": "ListItem", "position": 6, "name": "Qwen 3 Max", "description": "Score: 165.2 | Origin: China"},
-            {"@type": "ListItem", "position": 7, "name": "Qwen3-235B-Thinking", "description": "Score: 161.0 | Origin: China"},
-            {"@type": "ListItem", "position": 8, "name": "Grok Code Fast 1", "description": "Score: 161.7 | Origin: USA"},
-            {"@type": "ListItem", "position": 9, "name": "GPT-5 mini", "description": "Score: 159.1 | Origin: USA"},
-            {"@type": "ListItem", "position": 10, "name": "GPT-5.1", "description": "Score: 153.5 | Origin: USA"}
-        ]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Dataset",
-        "name": "US vs China AI Model Rankings",
-        "description": "Comprehensive dataset ranking frontier AI models from the United States and China by Unified Power Score, combining intelligence benchmarks and cost efficiency metrics.",
-        "url": "https://usvschina.ai/",
-        "license": "https://creativecommons.org/licenses/by/4.0/",
-        "isAccessibleForFree": true,
-        "creator": {
-            "@type": "Organization",
-            "name": "US vs CHINA AI"
-        },
-        "distribution": {
-            "@type": "DataDownload",
-            "encodingFormat": "application/json",
-            "contentUrl": "https://usvschina.ai/models.json"
-        },
-        "temporalCoverage": "2025-12",
-        "spatialCoverage": ["United States", "China"],
-        "keywords": ["AI models", "artificial intelligence", "machine learning", "benchmarks", "GPT", "DeepSeek", "Gemini", "Claude", "Qwen"]
-    }
-    </script>
+    <script id="seo-faq" type="application/ld+json"></script>
+    <script id="seo-itemlist" type="application/ld+json"></script>
+    <script id="seo-dataset" type="application/ld+json"></script>
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -346,17 +274,17 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 text-center">
-                    <div class="flex items-center justify-center gap-2 text-yellow-400 font-bold mb-1">
-                        <span>🏆</span> High IQ, High Value
-                    </div>
-                    <p class="text-slate-400 text-xs">The sweet spot: Smart AND affordable</p>
-                </div>
                 <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 text-center">
                     <div class="flex items-center justify-center gap-2 text-blue-400 font-bold mb-1">
                         <span>💎</span> High IQ, Low Value
                     </div>
                     <p class="text-slate-400 text-xs">Premium frontier models</p>
+                </div>
+                <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 text-center">
+                    <div class="flex items-center justify-center gap-2 text-yellow-400 font-bold mb-1">
+                        <span>🏆</span> High IQ, High Value
+                    </div>
+                    <p class="text-slate-400 text-xs">The sweet spot: Smart AND affordable</p>
                 </div>
             </div>
         </div>
@@ -376,14 +304,13 @@
                     <p class="mb-4 text-xs text-slate-500 italic">A model with zero intelligence scores zero — no matter how cheap. Value without intelligence is meaningless.</p>
                     
                     <h4 class="text-white font-bold mb-2 text-lg">Intelligence Index ($I$)</h4>
-                    <p class="mb-2">Unweighted average (Max 100) of 11 frontier benchmarks:</p>
+                    <p class="mb-2">Unweighted average (Max 100) of 10 frontier benchmarks:</p>
                     <ul class="list-disc list-inside space-y-1 ml-2">
                         <li><strong class="text-slate-300">AIME 2025</strong>: Math Olympiad (No-tool)</li>
                         <li><strong class="text-slate-300">HMMT 2025</strong>: Harvard-MIT Math Tournament</li>
                         <li><strong class="text-slate-300">GPQA Diamond</strong>: PhD-level science reasoning</li>
-                        <li><strong class="text-slate-300">ARC-AGI</strong>: Abstraction & Reasoning Corpus</li>
-                        <li><strong class="text-slate-300">BrowseComp</strong>: Web agent capabilities</li>
                         <li><strong class="text-slate-300">ARC-AGI v2</strong>: Advanced general intelligence</li>
+                        <li><strong class="text-slate-300">BrowseComp</strong>: Web agent capabilities</li>
                         <li><strong class="text-slate-300">HLE</strong>: Humanity's Last Exam</li>
                         <li><strong class="text-slate-300">MMLU-Pro</strong>: Robust multi-task understanding</li>
                         <li><strong class="text-slate-300">LiveCodeBench</strong>: Live coding challenges</li>
@@ -393,13 +320,17 @@
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Value Index ($V$)</h4>
-                    <p class="mb-4">Log-normalized efficiency score (Max 100) based on <strong>Blended Cost per 1M tokens</strong>.</p>
+                    <p class="mb-4">Log-normalized efficiency score (Max 100) based on <strong>Blended Cost per 1M tokens</strong> (3:1 input:output ratio).</p>
                     <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
+                        Blended Cost = (3 × Input + 1 × Output) / 4<br>
                         V = 100 × (1 - log(Cost / 0.25) / log(60.00 / 0.25))
                     </div>
-                    <p>
-                        <span class="block mb-1"><strong class="text-green-400">Floor ($0.25)</strong>: DeepSeek-V3.2 (Max Score)</span>
-                        <span class="block"><strong class="text-red-400">Ceiling ($60.00)</strong>: Legacy Models (Min Score)</span>
+                    <p class="mb-2">
+                        <span class="block mb-1"><strong class="text-green-400">Floor ($0.25)</strong>: Models at or below this cost receive V = 100</span>
+                        <span class="block"><strong class="text-red-400">Ceiling ($60.00)</strong>: Models at or above this cost receive V = 0</span>
+                    </p>
+                    <p class="text-xs text-slate-400">
+                        The logarithmic scale ensures cost differences matter more at the low end—the gap between $0.25 and $1.00 has greater impact than $50 vs $60.
                     </p>
                     
                     <h4 class="text-white font-bold mb-2 text-lg mt-6">National Score Calculation</h4>
@@ -528,12 +459,102 @@
             
             // Benchmarks
             const benchmarksContainer = document.getElementById('benchmarks-container');
-            if (appData.benchmarks && benchmarksContainer) {
-                benchmarksContainer.innerHTML = appData.benchmarks.map(b => {
+            if (currentEntry && currentEntry.benchmarks && benchmarksContainer) {
+                benchmarksContainer.innerHTML = currentEntry.benchmarks.map(b => {
                     const colorClass = getBenchmarkColor(b);
                     return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
                 }).join('');
             }
+            
+            // Inject dynamic SEO structured data
+            injectStructuredData();
+        }
+
+        // Dynamically inject SEO structured data from models.json
+        function injectStructuredData() {
+            if (!models || !models.length || !currentEntry) return;
+            
+            const sorted = [...models].sort((a, b) => b.unified - a.unified);
+            const top10 = sorted.slice(0, 10);
+            const top1 = sorted[0];
+            
+            // Top 10 method: only count models in the global Top 10
+            const usInTop10 = top10.filter(m => m.origin === 'US');
+            const cnInTop10 = top10.filter(m => m.origin === 'CN');
+            const usTotal = usInTop10.reduce((s, m) => s + m.unified, 0).toFixed(1);
+            const cnTotal = cnInTop10.reduce((s, m) => s + m.unified, 0).toFixed(1);
+            const leader = parseFloat(cnTotal) > parseFloat(usTotal) ? 'China' : 'USA';
+            const loser = leader === 'China' ? 'USA' : 'China';
+            
+            const auditDate = currentEntry.auditDate || 'December 2025';
+            const topUsModel = sorted.find(m => m.origin === 'US');
+            const topUsRank = topUsModel ? sorted.indexOf(topUsModel) + 1 : 'N/A';
+            
+            // FAQ Schema
+            const faqData = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [{
+                    "@type": "Question",
+                    "name": "What is the best AI model in 2025?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": `As of ${auditDate}, ${top1.name} from ${top1.origin === 'CN' ? 'China' : 'USA'} leads with a Unified Power Score of ${top1.unified}, combining IQ ${top1.iq} with Value ${top1.value}. ${topUsModel ? topUsModel.name : 'N/A'} from the US ranks #${topUsRank} with IQ ${topUsModel ? topUsModel.iq : 'N/A'}.`
+                    }
+                },{
+                    "@type": "Question",
+                    "name": "Is the US or China winning the AI race?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": `As of ${auditDate}, ${leader} leads with a national score of ${leader === 'China' ? cnTotal : usTotal} vs ${loser}'s ${leader === 'China' ? usTotal : cnTotal}.`
+                    }
+                },{
+                    "@type": "Question",
+                    "name": "How are AI models ranked on this leaderboard?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Models are ranked by Unified Power Score, calculated as IQ × (1 + Value/100). Intelligence (0-100) gates the score, while Value (50-100) acts as a 1.5× to 2.0× multiplier. A low-intelligence model cannot score high, regardless of cost efficiency."
+                    }
+                }]
+            };
+            document.getElementById('seo-faq').textContent = JSON.stringify(faqData);
+            
+            // ItemList Schema (Top 10)
+            const itemListData = {
+                "@context": "https://schema.org",
+                "@type": "ItemList",
+                "name": `Top 10 AI Models ${auditDate}`,
+                "description": "Global ranking of frontier AI models by Unified Power Score",
+                "numberOfItems": 10,
+                "itemListElement": top10.map((m, i) => ({
+                    "@type": "ListItem",
+                    "position": i + 1,
+                    "name": m.name,
+                    "description": `Score: ${m.unified} | Origin: ${m.origin === 'CN' ? 'China' : 'USA'}`
+                }))
+            };
+            document.getElementById('seo-itemlist').textContent = JSON.stringify(itemListData);
+            
+            // Dataset Schema
+            const datasetData = {
+                "@context": "https://schema.org",
+                "@type": "Dataset",
+                "name": "US vs China AI Model Rankings",
+                "description": "Comprehensive dataset ranking frontier AI models from the United States and China by Unified Power Score, combining intelligence benchmarks and cost efficiency metrics.",
+                "url": "https://usvschina.ai/",
+                "license": "https://creativecommons.org/licenses/by/4.0/",
+                "isAccessibleForFree": true,
+                "creator": {"@type": "Organization", "name": "US vs CHINA AI"},
+                "distribution": {
+                    "@type": "DataDownload",
+                    "encodingFormat": "application/json",
+                    "contentUrl": "https://usvschina.ai/models.json"
+                },
+                "temporalCoverage": auditDate,
+                "spatialCoverage": ["United States", "China"],
+                "keywords": ["AI models", "artificial intelligence", "machine learning", "benchmarks", "GPT", "DeepSeek", "Gemini", "Claude", "Qwen"]
+            };
+            document.getElementById('seo-dataset').textContent = JSON.stringify(datasetData);
         }
 
         // Calculate National Totals
@@ -666,6 +687,12 @@
                                 </a>
                                 <span class="text-xs text-slate-600">•</span>
                                 <span class="text-xs text-slate-500">Released: ${model.createdDate}</span>
+                                ${(() => {
+                                    const today = new Date('2025-12-31');
+                                    const releaseDate = new Date(model.createdDate);
+                                    const daysDiff = Math.floor((today - releaseDate) / (1000 * 60 * 60 * 24));
+                                    return daysDiff <= 7 ? '<span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full ml-1 font-semibold animate-pulse">NEW</span>' : '';
+                                })()}
                             </div>
                             ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${description}</p>` : ''}
                         </div>
@@ -860,7 +887,7 @@
                         x: {
                             title: { 
                                 display: true, 
-                                text: 'Value Index (Cost Efficiency)', 
+                                text: 'Value Index (0-100)', 
                                 color: '#94a3b8',
                                 font: { size: 14, weight: 'bold' }
                             },
@@ -869,7 +896,7 @@
                                 drawBorder: false
                             },
                             ticks: { color: '#64748b', font: { size: 11 } },
-                            min: 0,
+                            min: 40,
                             max: 100
                         },
                         y: {
@@ -884,7 +911,7 @@
                                 drawBorder: false
                             },
                             ticks: { color: '#64748b', font: { size: 11 } },
-                            min: 60,
+                            min: 40,
                             max: 100
                         }
                     },
@@ -915,26 +942,6 @@
                                     ];
                                 }
                             }
-                        },
-                        annotation: {
-                            annotations: {
-                                verticalLine: {
-                                    type: 'line',
-                                    xMin: 75,
-                                    xMax: 75,
-                                    borderColor: 'rgba(255, 255, 255, 0.15)',
-                                    borderWidth: 2,
-                                    borderDash: [6, 6]
-                                },
-                                horizontalLine: {
-                                    type: 'line',
-                                    yMin: 87,
-                                    yMax: 87,
-                                    borderColor: 'rgba(255, 255, 255, 0.15)',
-                                    borderWidth: 2,
-                                    borderDash: [6, 6]
-                                }
-                            }
                         }
                     }
                 },
@@ -945,8 +952,8 @@
                         const xAxis = chart.scales.x;
                         const yAxis = chart.scales.y;
                         
-                        // Draw vertical line at x=75
-                        const xPos = xAxis.getPixelForValue(75);
+                        // Draw vertical line at x=80
+                        const xPos = xAxis.getPixelForValue(80);
                         ctx.save();
                         ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
                         ctx.lineWidth = 2;
@@ -956,8 +963,8 @@
                         ctx.lineTo(xPos, yAxis.bottom);
                         ctx.stroke();
                         
-                        // Draw horizontal line at y=87
-                        const yPos = yAxis.getPixelForValue(87);
+                        // Draw horizontal line at y=80
+                        const yPos = yAxis.getPixelForValue(80);
                         ctx.beginPath();
                         ctx.moveTo(xAxis.left, yPos);
                         ctx.lineTo(xAxis.right, yPos);

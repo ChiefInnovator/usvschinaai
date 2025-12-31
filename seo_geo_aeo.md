@@ -38,7 +38,7 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 ## Scoring Methodology
 
 - Unified Power Score (Max 200): IQ × (1 + Value / 100)
-- Intelligence Index: Average of 11 benchmark scores
+- Intelligence Index: Average of 10 benchmark scores
 - Value Index: Log-normalized cost efficiency score
 
 ## Current Rankings

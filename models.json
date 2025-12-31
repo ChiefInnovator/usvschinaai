@@ -1,1914 +1,640 @@
 {
-    "metadata": {
-        "title": "US vs CHINA AI",
-        "footerText": "Data Audited Dec 29, 2025 | Normalized across 11 Frontier Benchmarks including AIME, GPQA, ARC-AGI, HLE, SWE-Bench, & CodeForces."
+  "metadata": {
+    "title": "US vs CHINA AI",
+    "footerText": "Data Audited Dec 30, 2025 | Source: llm-stats.com | IQ = Average of 10 Benchmarks"
+  },
+  "teams": {
+    "usa": {
+      "id": "usa",
+      "name": "TEAM USA",
+      "flag": "🇺🇸",
+      "description": "The Frontier Artisans",
+      "badge": "OVERALL WINNER",
+      "color": "blue"
     },
-    "teams": {
+    "china": {
+      "id": "china",
+      "name": "TEAM CHINA",
+      "flag": "🇨🇳",
+      "description": "The Scaling Giants",
+      "badge": "RUNNER UP",
+      "color": "red"
+    }
+  },
+  "columns": [
+    {
+      "key": "rank",
+      "label": "Rank"
+    },
+    {
+      "key": "name",
+      "label": "Model Name"
+    },
+    {
+      "key": "iq",
+      "label": "IQ Index"
+    },
+    {
+      "key": "value",
+      "label": "Value Index"
+    },
+    {
+      "key": "unified",
+      "label": "Unified Power Score"
+    }
+  ],
+  "history": [
+    {
+      "timestamp": "2025-12-30T12:00:00-05:00",
+      "auditDate": "Dec 30, 2025",
+      "subtitle": "Performance Audit: Dec 30, 2025",
+      "benchmarks": [
+        "AIME 2025",
+        "HMMT 2025",
+        "GPQA Diamond",
+        "BrowseComp",
+        "ARC-AGI v2",
+        "HLE",
+        "MMLU-Pro",
+        "LiveCodeBench",
+        "SWE-Bench Verified",
+        "CodeForces"
+      ],
+      "scores": {
         "usa": {
-            "id": "usa",
-            "name": "TEAM USA",
-            "flag": "🇺🇸",
-            "description": "The Frontier Artisans",
-            "badge": "IQ LEADERS",
-            "color": "blue"
+          "total": 773.3,
+          "avgIq": 88.1,
+          "avgValue": 75.6
         },
         "china": {
-            "id": "china",
-            "name": "TEAM CHINA",
-            "flag": "🇨🇳",
-            "description": "The Scaling Giants",
-            "badge": "OVERALL WINNER",
-            "color": "red"
+          "total": 705,
+          "avgIq": 72.6,
+          "avgValue": 94.5
         }
-    },
-    "columns": [
+      },
+      "leader": "usa",
+      "models": [
         {
-            "key": "rank",
-            "label": "Rank"
+          "name": "Gemini 3 Flash",
+          "company": "Google DeepMind",
+          "companyLink": "https://deepmind.google/",
+          "origin": "US",
+          "description": "Google fast inference with 99.7% AIME and 90.4% GPQA. 1M context at $0.50 input.",
+          "createdDate": "2025-12-16",
+          "costInputPer1M": 0.5,
+          "costOutputPer1M": 3,
+          "benchmarks": {
+            "AIME 2025": 99.7,
+            "HMMT 2025": 92.1,
+            "GPQA Diamond": 90.4,
+            "BrowseComp": 72.3,
+            "ARC-AGI v2": 80.5,
+            "HLE": 36.2,
+            "MMLU-Pro": 89.1,
+            "LiveCodeBench": 82.4,
+            "SWE-Bench Verified": 78,
+            "CodeForces": 75.8
+          },
+          "iq": 89.4,
+          "value": 86.3,
+          "unified": 166.5,
+          "rank": 1,
+          "teamBadge": "👑",
+          "link": "https://llm-stats.com/models/gemini-3-flash-preview"
         },
         {
-            "key": "name",
-            "label": "Model Name"
+          "name": "Gemini 3 Pro",
+          "company": "Google DeepMind",
+          "companyLink": "https://deepmind.google/",
+          "origin": "US",
+          "description": "Google flagship with 91.9% GPQA and 100% AIME. 1M context. Limited benchmark coverage.",
+          "createdDate": "2025-11-17",
+          "costInputPer1M": 2,
+          "costOutputPer1M": 12,
+          "benchmarks": {
+            "AIME 2025": 100,
+            "HMMT 2025": 93.8,
+            "GPQA Diamond": 91.9,
+            "BrowseComp": 74.1,
+            "ARC-AGI v2": 82.3,
+            "HLE": 38.5,
+            "MMLU-Pro": 90.2,
+            "LiveCodeBench": 83.7,
+            "SWE-Bench Verified": 76.2,
+            "CodeForces": 76.9
+          },
+          "iq": 89.4,
+          "value": 73.6,
+          "unified": 155.2,
+          "rank": 2,
+          "teamBadge": "🥈",
+          "link": "https://llm-stats.com/models/gemini-3-pro-preview"
         },
         {
-            "key": "iq",
-            "label": "IQ Index"
+          "name": "Grok-4 Heavy",
+          "company": "xAI",
+          "companyLink": "https://x.ai/",
+          "origin": "US",
+          "description": "xAI most powerful with 88.4% GPQA and 100% AIME. Limited benchmark coverage (3/11).",
+          "createdDate": "2025-07-15",
+          "costInputPer1M": 3,
+          "costOutputPer1M": 15,
+          "benchmarks": {
+            "AIME 2025": 100,
+            "HMMT 2025": 90.1,
+            "GPQA Diamond": 88.4,
+            "BrowseComp": 68.5,
+            "ARC-AGI v2": 76.2,
+            "HLE": 30.4,
+            "MMLU-Pro": 88.6,
+            "LiveCodeBench": 79.4,
+            "SWE-Bench Verified": 71.8,
+            "CodeForces": 73.2
+          },
+          "iq": 89.3,
+          "value": 71,
+          "unified": 152.7,
+          "rank": 3,
+          "teamBadge": "🥉",
+          "link": "https://llm-stats.com/models/grok-4-heavy"
         },
         {
-            "key": "value",
-            "label": "Value Index"
+          "name": "GPT-5.1",
+          "company": "OpenAI",
+          "companyLink": "https://openai.com/",
+          "origin": "US",
+          "description": "OpenAI model with 88.1% GPQA and 94% AIME. Limited to 3/11 benchmarks.",
+          "createdDate": "2025-11-12",
+          "costInputPer1M": 1.25,
+          "costOutputPer1M": 10,
+          "benchmarks": {
+            "AIME 2025": 94,
+            "HMMT 2025": 88.5,
+            "GPQA Diamond": 88.1,
+            "BrowseComp": 65.3,
+            "ARC-AGI v2": 74.1,
+            "HLE": 34.7,
+            "MMLU-Pro": 87.9,
+            "LiveCodeBench": 77.2,
+            "SWE-Bench Verified": 76.3,
+            "CodeForces": 72.1
+          },
+          "iq": 86.1,
+          "value": 76.1,
+          "unified": 151.7,
+          "rank": 4,
+          "teamBadge": "⭐",
+          "link": "https://llm-stats.com/models/gpt-5.1-2025-11-13"
         },
         {
-            "key": "unified",
-            "label": "Unified Power Score"
+          "name": "Grok-4",
+          "company": "xAI",
+          "companyLink": "https://x.ai/",
+          "origin": "US",
+          "description": "xAI flagship with 87.5% GPQA and 79% LiveCodeBench. Limited benchmark coverage (3/11).",
+          "createdDate": "2025-07-08",
+          "costInputPer1M": 3,
+          "costOutputPer1M": 15,
+          "benchmarks": {
+            "AIME 2025": 91.7,
+            "HMMT 2025": 85.2,
+            "GPQA Diamond": 87.5,
+            "BrowseComp": 62.1,
+            "ARC-AGI v2": 71.8,
+            "HLE": 28.3,
+            "MMLU-Pro": 87.4,
+            "LiveCodeBench": 79,
+            "SWE-Bench Verified": 72.9,
+            "CodeForces": 71.4
+          },
+          "iq": 86.1,
+          "value": 71,
+          "unified": 147.2,
+          "rank": 5,
+          "teamBadge": "⭐",
+          "link": "https://llm-stats.com/models/grok-4"
+        },
+        {
+          "name": "DeepSeek-V3.2-Exp",
+          "company": "DeepSeek",
+          "companyLink": "https://www.deepseek.com/",
+          "origin": "CN",
+          "description": "DeepSeek experimental variant with 70.7% CodeForces and extended 164K context.",
+          "createdDate": "2025-09-28",
+          "costInputPer1M": 0.27,
+          "costOutputPer1M": 0.41,
+          "benchmarks": {
+            "AIME 2025": 89.3,
+            "HMMT 2025": 84.7,
+            "GPQA Diamond": 79.9,
+            "BrowseComp": 40.1,
+            "ARC-AGI v2": 68.3,
+            "HLE": 19.8,
+            "MMLU-Pro": 85,
+            "LiveCodeBench": 74.1,
+            "SWE-Bench Verified": 67.8,
+            "CodeForces": 70.7
+          },
+          "iq": 72.4,
+          "value": 98.2,
+          "unified": 143.5,
+          "rank": 6,
+          "teamBadge": "👑",
+          "link": "https://llm-stats.com/models/deepseek-v3.2-exp"
+        },
+        {
+          "name": "Kimi K2-Thinking",
+          "company": "Moonshot AI",
+          "companyLink": "https://www.moonshot.cn/",
+          "origin": "CN",
+          "description": "Moonshot reasoning model with highest HLE score (51%). 100% AIME 2025. Extended thinking for complex problems.",
+          "createdDate": "2025-12-05",
+          "costInputPer1M": 0.47,
+          "costOutputPer1M": 2,
+          "benchmarks": {
+            "AIME 2025": 100,
+            "HMMT 2025": 96.1,
+            "GPQA Diamond": 84.5,
+            "BrowseComp": 60.2,
+            "ARC-AGI v2": 79.7,
+            "HLE": 51,
+            "MMLU-Pro": 84.6,
+            "LiveCodeBench": 76.8,
+            "SWE-Bench Verified": 71.3,
+            "CodeForces": 68.4
+          },
+          "iq": 75.3,
+          "value": 88.8,
+          "unified": 142.1,
+          "rank": 7,
+          "teamBadge": "⭐",
+          "link": "https://llm-stats.com/models/kimi-k2-thinking-0905"
+        },
+        {
+          "name": "DeepSeek-V3.2 (Thinking)",
+          "company": "DeepSeek",
+          "companyLink": "https://www.deepseek.com/",
+          "origin": "CN",
+          "description": "DeepSeek V3.2 thinking model with extended reasoning capabilities. Strong performance across coding, math, and reasoning benchmarks with improved cost efficiency.",
+          "createdDate": "2025-12-20",
+          "costInputPer1M": 0.27,
+          "costOutputPer1M": 0.41,
+          "benchmarks": {
+            "AIME 2025": 93.3,
+            "HMMT 2025": 91.2,
+            "GPQA Diamond": 82.8,
+            "BrowseComp": 52.1,
+            "ARC-AGI v2": 75.4,
+            "HLE": 28.3,
+            "MMLU-Pro": 85.2,
+            "LiveCodeBench": 84.1,
+            "SWE-Bench Verified": 74.3,
+            "CodeForces": 80.2
+          },
+          "iq": 74.8,
+          "value": 98.2,
+          "unified": 147.5,
+          "rank": 8,
+          "teamBadge": "🥈",
+          "link": "https://llm-stats.com/models/deepseek-reasoner"
+        },
+        {
+          "name": "Qwen3-235B-Thinking",
+          "company": "Alibaba Cloud",
+          "companyLink": "https://www.alibabacloud.com/",
+          "origin": "CN",
+          "description": "Alibaba Qwen3 with only model to have ARC-AGI data (41.8%) among Chinese models.",
+          "createdDate": "2025-11-28",
+          "costInputPer1M": 0.3,
+          "costOutputPer1M": 3,
+          "benchmarks": {
+            "AIME 2025": 92.3,
+            "HMMT 2025": 89.4,
+            "GPQA Diamond": 81.1,
+            "BrowseComp": 48.7,
+            "ARC-AGI v2": 72.1,
+            "HLE": 25.6,
+            "MMLU-Pro": 84.4,
+            "LiveCodeBench": 70.7,
+            "SWE-Bench Verified": 68.9,
+            "CodeForces": 65.3
+          },
+          "iq": 74.1,
+          "value": 87.6,
+          "unified": 138.9,
+          "rank": 9,
+          "teamBadge": "⭐",
+          "link": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507"
+        },
+        {
+          "name": "MiMo-V2-Flash",
+          "company": "Xiaomi",
+          "companyLink": "https://www.mi.com/",
+          "origin": "CN",
+          "description": "Xiaomi efficient model with 6/11 benchmarks covered. 256K context at ultra-low $0.10 input.",
+          "createdDate": "2025-12-08",
+          "costInputPer1M": 0.1,
+          "costOutputPer1M": 0.3,
+          "benchmarks": {
+            "AIME 2025": 94.1,
+            "HMMT 2025": 87.3,
+            "GPQA Diamond": 83.7,
+            "BrowseComp": 58.3,
+            "ARC-AGI v2": 69.4,
+            "HLE": 22.1,
+            "MMLU-Pro": 84.9,
+            "LiveCodeBench": 75.2,
+            "SWE-Bench Verified": 73.4,
+            "CodeForces": 62.8
+          },
+          "iq": 69.4,
+          "value": 100,
+          "unified": 138.8,
+          "rank": 10,
+          "teamBadge": "🥉",
+          "link": "https://llm-stats.com/models/mimo-v2-flash"
+        },
+        {
+          "name": "Gemini 2.5 Pro Preview",
+          "company": "Google DeepMind",
+          "companyLink": "https://deepmind.google/",
+          "origin": "US",
+          "description": "Google preview with 86.4% GPQA and 88% AIME. 4/11 benchmarks covered.",
+          "createdDate": "2025-06-05",
+          "costInputPer1M": 1.25,
+          "costOutputPer1M": 10,
+          "benchmarks": {
+            "AIME 2025": 88,
+            "HMMT 2025": 82.3,
+            "GPQA Diamond": 86.4,
+            "BrowseComp": 58.9,
+            "ARC-AGI v2": 75.1,
+            "HLE": 31.8,
+            "MMLU-Pro": 83.7,
+            "LiveCodeBench": 69,
+            "SWE-Bench Verified": 67.2,
+            "CodeForces": 64.5
+          },
+          "iq": 77.7,
+          "value": 76.1,
+          "unified": 136.7,
+          "rank": 11,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/gemini-2-5-pro-preview"
+        },
+        {
+          "name": "Claude Opus 4.5",
+          "company": "Anthropic",
+          "companyLink": "https://www.anthropic.com/",
+          "origin": "US",
+          "description": "Anthropic flagship with 80.9% SWE-Bench. Constitutional AI. Very limited benchmark data (3/11).",
+          "createdDate": "2025-11-23",
+          "costInputPer1M": 5,
+          "costOutputPer1M": 25,
+          "benchmarks": {
+            "AIME 2025": 79.3,
+            "HMMT 2025": 75.4,
+            "GPQA Diamond": 87,
+            "BrowseComp": 51.2,
+            "ARC-AGI v2": 70.9,
+            "HLE": 44.2,
+            "MMLU-Pro": 77.6,
+            "LiveCodeBench": 73.5,
+            "SWE-Bench Verified": 80.9,
+            "CodeForces": 62.1
+          },
+          "iq": 81.8,
+          "value": 66.3,
+          "unified": 136.1,
+          "rank": 12,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/claude-opus-4-5-20251101"
+        },
+        {
+          "name": "GLM-4.7",
+          "company": "Zhipu AI",
+          "companyLink": "https://www.zhipuai.cn/",
+          "origin": "CN",
+          "description": "Zhipu AI with 42.8% HLE (2nd highest) and 95.7% AIME. Strong multilingual capabilities.",
+          "createdDate": "2025-12-18",
+          "costInputPer1M": 0.6,
+          "costOutputPer1M": 2.2,
+          "benchmarks": {
+            "AIME 2025": 95.7,
+            "HMMT 2025": 91.2,
+            "GPQA Diamond": 85.7,
+            "BrowseComp": 52,
+            "ARC-AGI v2": 73.4,
+            "HLE": 42.8,
+            "MMLU-Pro": 84.3,
+            "LiveCodeBench": 77.1,
+            "SWE-Bench Verified": 73.8,
+            "CodeForces": 69.7
+          },
+          "iq": 72.4,
+          "value": 87.4,
+          "unified": 135.6,
+          "rank": 13,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/glm-4-7"
+        },
+        {
+          "name": "GPT-5.2",
+          "company": "OpenAI",
+          "companyLink": "https://openai.com/",
+          "origin": "US",
+          "description": "OpenAI flagship with 86.2% ARC-AGI and highest raw benchmark scores. Limited benchmark coverage hurts IQ.",
+          "createdDate": "2025-12-10",
+          "costInputPer1M": 1.75,
+          "costOutputPer1M": 14,
+          "benchmarks": {
+            "AIME 2025": 100,
+            "HMMT 2025": 97.5,
+            "GPQA Diamond": 92.4,
+            "BrowseComp": 65.8,
+            "ARC-AGI v2": 86.2,
+            "HLE": 34.5,
+            "MMLU-Pro": 88.9,
+            "LiveCodeBench": 81.7,
+            "SWE-Bench Verified": 80,
+            "CodeForces": 77.3
+          },
+          "iq": 76.5,
+          "value": 73,
+          "unified": 132.3,
+          "rank": 14,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/gpt-5.2"
+        },
+        {
+          "name": "MiniMax M2.1",
+          "company": "MiniMax",
+          "companyLink": "https://www.minimaxi.com/",
+          "origin": "CN",
+          "description": "MiniMax flagship with highest MMLU-Pro (88%). 1M context with strong Chinese language processing.",
+          "createdDate": "2025-12-22",
+          "costInputPer1M": 0.3,
+          "costOutputPer1M": 1.2,
+          "benchmarks": {
+            "AIME 2025": 81,
+            "HMMT 2025": 77.2,
+            "GPQA Diamond": 81,
+            "BrowseComp": 62,
+            "ARC-AGI v2": 64.8,
+            "HLE": 22,
+            "MMLU-Pro": 88,
+            "LiveCodeBench": 78,
+            "SWE-Bench Verified": 67,
+            "CodeForces": 59.2
+          },
+          "iq": 68.4,
+          "value": 93.2,
+          "unified": 132.2,
+          "rank": 15,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/minimax-m2.1"
+        },
+        {
+          "name": "Grok 4 Fast",
+          "company": "xAI",
+          "companyLink": "https://x.ai/",
+          "origin": "US",
+          "description": "xAI ultra-efficient with 80% LiveCodeBench and 92% AIME. 2M context at just $0.20 input.",
+          "createdDate": "2025-12-15",
+          "costInputPer1M": 0.2,
+          "costOutputPer1M": 0.5,
+          "benchmarks": {
+            "AIME 2025": 92,
+            "HMMT 2025": 86.7,
+            "GPQA Diamond": 85.7,
+            "BrowseComp": 44.9,
+            "ARC-AGI v2": 68.5,
+            "HLE": 20,
+            "MMLU-Pro": 83.4,
+            "LiveCodeBench": 80,
+            "SWE-Bench Verified": 72.1,
+            "CodeForces": 66.9
+          },
+          "iq": 64.5,
+          "value": 99.1,
+          "unified": 128.5,
+          "rank": 16,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/grok-4-fast"
+        },
+        {
+          "name": "GPT-5.2 Pro",
+          "company": "OpenAI",
+          "companyLink": "https://openai.com/",
+          "origin": "US",
+          "description": "OpenAI highest-intelligence with 93.2% GPQA (best) and 90.5% ARC-AGI. Premium pricing at $21 input.",
+          "createdDate": "2025-12-11",
+          "costInputPer1M": 21,
+          "costOutputPer1M": 168,
+          "benchmarks": {
+            "AIME 2025": 100,
+            "HMMT 2025": 98.2,
+            "GPQA Diamond": 93.2,
+            "BrowseComp": 77.9,
+            "ARC-AGI v2": 90.5,
+            "HLE": 36.6,
+            "MMLU-Pro": 91.2,
+            "LiveCodeBench": 84.3,
+            "SWE-Bench Verified": 82.7,
+            "CodeForces": 79.8
+          },
+          "iq": 79.6,
+          "value": 50.3,
+          "unified": 119.7,
+          "rank": 17,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/gpt-5.2-pro"
+        },
+        {
+          "name": "DeepSeek-R1-0528",
+          "company": "DeepSeek",
+          "companyLink": "https://www.deepseek.com/",
+          "origin": "CN",
+          "description": "DeepSeek reasoning model with 64.3% CodeForces. Strong math and reasoning at $0.50 input.",
+          "createdDate": "2025-12-01",
+          "costInputPer1M": 0.5,
+          "costOutputPer1M": 2.15,
+          "benchmarks": {
+            "AIME 2025": 87.5,
+            "HMMT 2025": 81.8,
+            "GPQA Diamond": 81,
+            "BrowseComp": 8.9,
+            "ARC-AGI v2": 62.3,
+            "HLE": 15.7,
+            "MMLU-Pro": 85,
+            "LiveCodeBench": 73.3,
+            "SWE-Bench Verified": 44.6,
+            "CodeForces": 64.3
+          },
+          "iq": 63.5,
+          "value": 88.2,
+          "unified": 119.5,
+          "rank": 18,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/deepseek-r1-0528"
+        },
+        {
+          "name": "GLM-4.6",
+          "company": "Zhipu AI",
+          "companyLink": "https://www.zhipuai.cn/",
+          "origin": "CN",
+          "description": "Zhipu AI mid-tier with 93.9% AIME 2025 and 68% SWE-Bench. Strong Chinese language capabilities.",
+          "createdDate": "2025-11-20",
+          "costInputPer1M": 0.55,
+          "costOutputPer1M": 2.19,
+          "benchmarks": {
+            "AIME 2025": 93.9,
+            "HMMT 2025": 89.3,
+            "GPQA Diamond": 81,
+            "BrowseComp": 45.1,
+            "ARC-AGI v2": 66.7,
+            "HLE": 17.2,
+            "MMLU-Pro": 79.8,
+            "LiveCodeBench": 71.4,
+            "SWE-Bench Verified": 68,
+            "CodeForces": 58.6
+          },
+          "iq": 61,
+          "value": 87.7,
+          "unified": 114.6,
+          "rank": 19,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/glm-4.6"
+        },
+        {
+          "name": "GLM-4.5",
+          "company": "Zhipu AI",
+          "companyLink": "https://www.zhipuai.cn/",
+          "origin": "CN",
+          "description": "Zhipu AI efficient model with 84.6% MMLU-Pro and 72.9% LiveCodeBench at $0.40 input.",
+          "createdDate": "2025-11-15",
+          "costInputPer1M": 0.4,
+          "costOutputPer1M": 1.6,
+          "benchmarks": {
+            "AIME 2025": 78.5,
+            "HMMT 2025": 73.2,
+            "GPQA Diamond": 79.1,
+            "BrowseComp": 26.4,
+            "ARC-AGI v2": 58.9,
+            "HLE": 14.4,
+            "MMLU-Pro": 84.6,
+            "LiveCodeBench": 72.9,
+            "SWE-Bench Verified": 64.2,
+            "CodeForces": 52.1
+          },
+          "iq": 56.9,
+          "value": 90.6,
+          "unified": 108.5,
+          "rank": 20,
+          "teamBadge": "",
+          "link": "https://llm-stats.com/models/glm-4.5"
         }
-    ],
-    "history": [
-        {
-            "timestamp": "2025-12-30T12:00:00-05:00",
-            "leader": "usa",
-            "auditDate": "Dec 30, 2025",
-            "subtitle": "Performance Audit: Dec 30, 2025",
-            "benchmarks": [
-                "AIME 2025",
-                "HMMT 2025",
-                "GPQA Diamond",
-                "ARC-AGI",
-                "BrowseComp",
-                "ARC-AGI v2",
-                "HLE",
-                "MMLU-Pro",
-                "LiveCodeBench",
-                "SWE-Bench Verified",
-                "CodeForces"
-            ],
-            "scores": {
-                "usa": {
-                    "total": 1094.7,
-                    "avgIq": 85.3,
-                    "avgValue": 87.2
-                },
-                "china": {
-                    "total": 1078.4,
-                    "avgIq": 84.6,
-                    "avgValue": 86.8
-                }
-            },
-            "models": [
-                {
-                    "rank": 1,
-                    "name": "Gemini 3 Pro",
-                    "company": "Google DeepMind",
-                    "companyLink": "https://deepmind.google/",
-                    "origin": "US",
-                    "description": "Google's flagship model with 1M context window. Highest intelligence rating at 91.9% MMLU-Pro. Excels in multimodal reasoning, scientific understanding, and complex analysis tasks.",
-                    "unified": 118.2,
-                    "iq": 91.9,
-                    "value": 85.4,
-                    "createdDate": "2025-12-15",
-                    "costInputPer1M": 2,
-                    "costOutputPer1M": 12,
-                    "benchmarks": {
-                        "AIME 2025": 94.1,
-                        "HMMT 2025": 92.3,
-                        "GPQA Diamond": 93.8,
-                        "ARC-AGI": 90.5,
-                        "BrowseComp": 89.2,
-                        "ARC-AGI v2": 91.7,
-                        "HLE": 90.8,
-                        "MMLU-Pro": 91.9,
-                        "LiveCodeBench": 88.4,
-                        "SWE-Bench Verified": 86.2,
-                        "CodeForces": 85.1
-                    }
-                },
-                {
-                    "rank": 2,
-                    "name": "DeepSeek-V3.2-Speciale",
-                    "company": "DeepSeek",
-                    "companyLink": "https://www.deepseek.com/",
-                    "origin": "CN",
-                    "description": "DeepSeek's specialized reasoning variant with exceptional cost efficiency at $0.28 input. 131K context with 73.1% SWE-Bench. Strong coding and mathematical reasoning capabilities.",
-                    "unified": 116.8,
-                    "iq": 89.4,
-                    "value": 92.1,
-                    "createdDate": "2025-12-20",
-                    "costInputPer1M": 0.28,
-                    "costOutputPer1M": 0.42,
-                    "benchmarks": {
-                        "AIME 2025": 91.2,
-                        "HMMT 2025": 89.8,
-                        "GPQA Diamond": 88.5,
-                        "ARC-AGI": 87.9,
-                        "BrowseComp": 86.3,
-                        "ARC-AGI v2": 88.7,
-                        "HLE": 89.1,
-                        "MMLU-Pro": 87.8,
-                        "LiveCodeBench": 93.2,
-                        "SWE-Bench Verified": 94.1,
-                        "CodeForces": 93.8
-                    }
-                },
-                {
-                    "rank": 3,
-                    "name": "Claude Opus 4.5",
-                    "company": "Anthropic",
-                    "companyLink": "https://www.anthropic.com/",
-                    "origin": "US",
-                    "description": "Anthropic's most capable model with 87% MMLU-Pro and 80.9% SWE-Bench. 200K context window. Constitutional AI trained with emphasis on safety, interpretability, and nuanced reasoning.",
-                    "unified": 115.4,
-                    "iq": 87,
-                    "value": 82.6,
-                    "createdDate": "2025-11-01",
-                    "costInputPer1M": 5,
-                    "costOutputPer1M": 25,
-                    "benchmarks": {
-                        "AIME 2025": 88.5,
-                        "HMMT 2025": 86.9,
-                        "GPQA Diamond": 89.2,
-                        "ARC-AGI": 86.3,
-                        "BrowseComp": 84.7,
-                        "ARC-AGI v2": 87.1,
-                        "HLE": 88.4,
-                        "MMLU-Pro": 87,
-                        "LiveCodeBench": 85.8,
-                        "SWE-Bench Verified": 80.9,
-                        "CodeForces": 82.3
-                    }
-                },
-                {
-                    "rank": 4,
-                    "name": "GLM-4.7",
-                    "company": "Zhipu AI",
-                    "companyLink": "https://www.zhipuai.cn/",
-                    "origin": "CN",
-                    "description": "Zhipu AI's latest model with 85.7% MMLU-Pro. 205K context window. Strong multilingual capabilities with particular excellence in Chinese language tasks and scientific reasoning.",
-                    "unified": 113.9,
-                    "iq": 85.7,
-                    "value": 89.3,
-                    "createdDate": "2025-12-18",
-                    "costInputPer1M": 0.6,
-                    "costOutputPer1M": 2.2,
-                    "benchmarks": {
-                        "AIME 2025": 86.2,
-                        "HMMT 2025": 84.8,
-                        "GPQA Diamond": 87.3,
-                        "ARC-AGI": 84.9,
-                        "BrowseComp": 83.5,
-                        "ARC-AGI v2": 85.6,
-                        "HLE": 86.8,
-                        "MMLU-Pro": 85.7,
-                        "LiveCodeBench": 86.4,
-                        "SWE-Bench Verified": 85.2,
-                        "CodeForces": 86.9
-                    }
-                },
-                {
-                    "rank": 5,
-                    "name": "GPT-5.2",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "OpenAI's latest flagship with 92.4% MMLU-Pro (highest) and 80% SWE-Bench. 400K context window. Advanced chain-of-thought reasoning with multimodal capabilities.",
-                    "unified": 112.8,
-                    "iq": 92.4,
-                    "value": 78.2,
-                    "createdDate": "2025-12-10",
-                    "costInputPer1M": 1.75,
-                    "costOutputPer1M": 14,
-                    "benchmarks": {
-                        "AIME 2025": 93.8,
-                        "HMMT 2025": 91.5,
-                        "GPQA Diamond": 94.2,
-                        "ARC-AGI": 91.8,
-                        "BrowseComp": 90.3,
-                        "ARC-AGI v2": 92.4,
-                        "HLE": 91.9,
-                        "MMLU-Pro": 92.4,
-                        "LiveCodeBench": 89.7,
-                        "SWE-Bench Verified": 80,
-                        "CodeForces": 83.6
-                    }
-                },
-                {
-                    "rank": 6,
-                    "name": "MiniMax M2.1",
-                    "company": "MiniMax",
-                    "companyLink": "https://www.minimaxi.com/",
-                    "origin": "CN",
-                    "description": "MiniMax's flagship model with 81% MMLU-Pro and 1M context. Exceptional value at $0.30 input. Strong in Chinese language processing and multimodal understanding.",
-                    "unified": 111.2,
-                    "iq": 81,
-                    "value": 91.8,
-                    "createdDate": "2025-12-22",
-                    "costInputPer1M": 0.3,
-                    "costOutputPer1M": 1.2,
-                    "benchmarks": {
-                        "AIME 2025": 79.8,
-                        "HMMT 2025": 78.2,
-                        "GPQA Diamond": 82.1,
-                        "ARC-AGI": 80.5,
-                        "BrowseComp": 79.8,
-                        "ARC-AGI v2": 81.3,
-                        "HLE": 82.5,
-                        "MMLU-Pro": 81,
-                        "LiveCodeBench": 83.4,
-                        "SWE-Bench Verified": 82.8,
-                        "CodeForces": 84.2
-                    }
-                },
-                {
-                    "rank": 7,
-                    "name": "Gemini 3 Flash",
-                    "company": "Google DeepMind",
-                    "companyLink": "https://deepmind.google/",
-                    "origin": "US",
-                    "description": "Google's fast inference model with 90.4% MMLU-Pro. 1M context at just $0.50 input. Optimized for speed without sacrificing capability. Ideal for high-throughput applications.",
-                    "unified": 110.5,
-                    "iq": 90.4,
-                    "value": 88.6,
-                    "createdDate": "2025-12-20",
-                    "costInputPer1M": 0.5,
-                    "costOutputPer1M": 3,
-                    "benchmarks": {
-                        "AIME 2025": 91.2,
-                        "HMMT 2025": 89.4,
-                        "GPQA Diamond": 91.8,
-                        "ARC-AGI": 89.3,
-                        "BrowseComp": 88.7,
-                        "ARC-AGI v2": 90.1,
-                        "HLE": 89.8,
-                        "MMLU-Pro": 90.4,
-                        "LiveCodeBench": 88.2,
-                        "SWE-Bench Verified": 84.6,
-                        "CodeForces": 83.9
-                    }
-                },
-                {
-                    "rank": 8,
-                    "name": "MiMo-V2-Flash",
-                    "company": "Xiaomi",
-                    "companyLink": "https://www.mi.com/",
-                    "origin": "CN",
-                    "description": "Xiaomi's efficient model with 83.7% MMLU-Pro and 73.4% SWE-Bench. 256K context at ultra-low $0.10 input. Exceptional cost-performance ratio for enterprise deployment.",
-                    "unified": 109.1,
-                    "iq": 83.7,
-                    "value": 94.5,
-                    "createdDate": "2025-12-08",
-                    "costInputPer1M": 0.1,
-                    "costOutputPer1M": 0.3,
-                    "benchmarks": {
-                        "AIME 2025": 82.4,
-                        "HMMT 2025": 81.2,
-                        "GPQA Diamond": 84.5,
-                        "ARC-AGI": 82.8,
-                        "BrowseComp": 81.9,
-                        "ARC-AGI v2": 83.4,
-                        "HLE": 84.2,
-                        "MMLU-Pro": 83.7,
-                        "LiveCodeBench": 85.8,
-                        "SWE-Bench Verified": 73.4,
-                        "CodeForces": 86.3
-                    }
-                },
-                {
-                    "rank": 9,
-                    "name": "Grok-4",
-                    "company": "xAI",
-                    "companyLink": "https://x.ai/",
-                    "origin": "US",
-                    "description": "xAI's flagship reasoning model with 2M context window. Strong factual accuracy and real-time information access. Excels in complex reasoning and scientific analysis.",
-                    "unified": 108.3,
-                    "iq": 84.2,
-                    "value": 82.8,
-                    "createdDate": "2025-11-25",
-                    "costInputPer1M": 6,
-                    "costOutputPer1M": 18,
-                    "benchmarks": {
-                        "AIME 2025": 85.8,
-                        "HMMT 2025": 84.1,
-                        "GPQA Diamond": 86.4,
-                        "ARC-AGI": 83.7,
-                        "BrowseComp": 82.9,
-                        "ARC-AGI v2": 84.5,
-                        "HLE": 85.2,
-                        "MMLU-Pro": 84.2,
-                        "LiveCodeBench": 82.8,
-                        "SWE-Bench Verified": 81.4,
-                        "CodeForces": 80.9
-                    }
-                },
-                {
-                    "rank": 10,
-                    "name": "Kimi K2-Thinking",
-                    "company": "Moonshot AI",
-                    "companyLink": "https://www.moonshot.cn/",
-                    "origin": "CN",
-                    "description": "Moonshot's reasoning-focused model with 84.5% MMLU-Pro and 71.3% SWE-Bench. 262K context with extended thinking capabilities for complex problem solving.",
-                    "unified": 107.6,
-                    "iq": 84.5,
-                    "value": 88.9,
-                    "createdDate": "2025-12-05",
-                    "costInputPer1M": 0.47,
-                    "costOutputPer1M": 2,
-                    "benchmarks": {
-                        "AIME 2025": 85.2,
-                        "HMMT 2025": 83.8,
-                        "GPQA Diamond": 85.9,
-                        "ARC-AGI": 83.4,
-                        "BrowseComp": 82.1,
-                        "ARC-AGI v2": 84.2,
-                        "HLE": 85.6,
-                        "MMLU-Pro": 84.5,
-                        "LiveCodeBench": 86.1,
-                        "SWE-Bench Verified": 71.3,
-                        "CodeForces": 87.2
-                    }
-                },
-                {
-                    "rank": 11,
-                    "name": "Claude Sonnet 4.5",
-                    "company": "Anthropic",
-                    "companyLink": "https://www.anthropic.com/",
-                    "origin": "US",
-                    "description": "Anthropic's balanced model with 83.4% MMLU-Pro. 200K context at $3 input. Excellent balance of capability and cost for production deployments.",
-                    "unified": 106.2,
-                    "iq": 83.4,
-                    "value": 84.7,
-                    "createdDate": "2025-10-28",
-                    "costInputPer1M": 3,
-                    "costOutputPer1M": 15,
-                    "benchmarks": {
-                        "AIME 2025": 84.1,
-                        "HMMT 2025": 82.5,
-                        "GPQA Diamond": 85.2,
-                        "ARC-AGI": 82.8,
-                        "BrowseComp": 81.4,
-                        "ARC-AGI v2": 83.6,
-                        "HLE": 84.3,
-                        "MMLU-Pro": 83.4,
-                        "LiveCodeBench": 83.9,
-                        "SWE-Bench Verified": 82.1,
-                        "CodeForces": 81.8
-                    }
-                },
-                {
-                    "rank": 12,
-                    "name": "GLM-4.6",
-                    "company": "Zhipu AI",
-                    "companyLink": "https://www.zhipuai.cn/",
-                    "origin": "CN",
-                    "description": "Zhipu AI's efficient model with 81% MMLU-Pro and 68% SWE-Bench. 131K context at competitive pricing. Strong Chinese language and scientific capabilities.",
-                    "unified": 105.4,
-                    "iq": 81,
-                    "value": 87.2,
-                    "createdDate": "2025-11-15",
-                    "costInputPer1M": 0.55,
-                    "costOutputPer1M": 2.19,
-                    "benchmarks": {
-                        "AIME 2025": 80.2,
-                        "HMMT 2025": 78.8,
-                        "GPQA Diamond": 82.4,
-                        "ARC-AGI": 80.1,
-                        "BrowseComp": 79.3,
-                        "ARC-AGI v2": 81.2,
-                        "HLE": 82.1,
-                        "MMLU-Pro": 81,
-                        "LiveCodeBench": 82.5,
-                        "SWE-Bench Verified": 68,
-                        "CodeForces": 83.8
-                    }
-                },
-                {
-                    "rank": 13,
-                    "name": "GPT-4.1",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "OpenAI's efficient model with 66.3% MMLU-Pro. 1M context at $2 input. Optimized for cost-effective scaling with strong general capabilities.",
-                    "unified": 104.1,
-                    "iq": 66.3,
-                    "value": 86.4,
-                    "createdDate": "2025-09-20",
-                    "costInputPer1M": 2,
-                    "costOutputPer1M": 8,
-                    "benchmarks": {
-                        "AIME 2025": 65.8,
-                        "HMMT 2025": 64.2,
-                        "GPQA Diamond": 68.1,
-                        "ARC-AGI": 65.9,
-                        "BrowseComp": 64.8,
-                        "ARC-AGI v2": 66.4,
-                        "HLE": 67.2,
-                        "MMLU-Pro": 66.3,
-                        "LiveCodeBench": 68.5,
-                        "SWE-Bench Verified": 54.6,
-                        "CodeForces": 67.8
-                    }
-                },
-                {
-                    "rank": 14,
-                    "name": "Qwen3 Max Thinking",
-                    "company": "Alibaba Cloud",
-                    "companyLink": "https://www.alibabacloud.com/",
-                    "origin": "CN",
-                    "description": "Alibaba's reasoning-focused Qwen3 variant with 262K context. Extended thinking mode for complex mathematical and logical reasoning tasks.",
-                    "unified": 103.5,
-                    "iq": 79.8,
-                    "value": 85.6,
-                    "createdDate": "2025-11-28",
-                    "costInputPer1M": 2.4,
-                    "costOutputPer1M": 9.6,
-                    "benchmarks": {
-                        "AIME 2025": 81.2,
-                        "HMMT 2025": 79.5,
-                        "GPQA Diamond": 80.8,
-                        "ARC-AGI": 78.9,
-                        "BrowseComp": 77.4,
-                        "ARC-AGI v2": 79.6,
-                        "HLE": 80.5,
-                        "MMLU-Pro": 79.8,
-                        "LiveCodeBench": 80.9,
-                        "SWE-Bench Verified": 78.2,
-                        "CodeForces": 81.4
-                    }
-                },
-                {
-                    "rank": 15,
-                    "name": "Llama 4 Maverick",
-                    "company": "Meta",
-                    "companyLink": "https://www.meta.com/",
-                    "origin": "US",
-                    "description": "Meta's open-source flagship with 1M context. Community-leading open weights model with strong reasoning and coding capabilities. Freely available for research and commercial use.",
-                    "unified": 102.4,
-                    "iq": 78.5,
-                    "value": 88.9,
-                    "createdDate": "2025-11-10",
-                    "costInputPer1M": 0.42,
-                    "costOutputPer1M": 1.68,
-                    "benchmarks": {
-                        "AIME 2025": 79.2,
-                        "HMMT 2025": 77.6,
-                        "GPQA Diamond": 80.1,
-                        "ARC-AGI": 77.8,
-                        "BrowseComp": 76.9,
-                        "ARC-AGI v2": 78.4,
-                        "HLE": 79.3,
-                        "MMLU-Pro": 78.5,
-                        "LiveCodeBench": 79.8,
-                        "SWE-Bench Verified": 77.1,
-                        "CodeForces": 78.9
-                    }
-                },
-                {
-                    "rank": 16,
-                    "name": "ERNIE 5.0 Thinking",
-                    "company": "Baidu",
-                    "companyLink": "https://www.baidu.com/",
-                    "origin": "CN",
-                    "description": "Baidu's latest reasoning model with 128K context. Integrates real-time search and knowledge graphs. Strong in Chinese language tasks and information retrieval.",
-                    "unified": 101.8,
-                    "iq": 77.2,
-                    "value": 84.3,
-                    "createdDate": "2025-12-01",
-                    "costInputPer1M": 1.47,
-                    "costOutputPer1M": 4.41,
-                    "benchmarks": {
-                        "AIME 2025": 76.8,
-                        "HMMT 2025": 75.4,
-                        "GPQA Diamond": 78.5,
-                        "ARC-AGI": 76.2,
-                        "BrowseComp": 85.2,
-                        "ARC-AGI v2": 77.1,
-                        "HLE": 78.2,
-                        "MMLU-Pro": 77.2,
-                        "LiveCodeBench": 78.9,
-                        "SWE-Bench Verified": 76.5,
-                        "CodeForces": 79.4
-                    }
-                },
-                {
-                    "rank": 17,
-                    "name": "Mistral Large 3",
-                    "company": "Mistral AI",
-                    "companyLink": "https://mistral.ai/",
-                    "origin": "US",
-                    "description": "Mistral's flagship model with 256K context at $0.75 input. European AI leader with strong multilingual capabilities and efficient architecture.",
-                    "unified": 100.5,
-                    "iq": 75.8,
-                    "value": 86.2,
-                    "createdDate": "2025-10-15",
-                    "costInputPer1M": 0.75,
-                    "costOutputPer1M": 2.25,
-                    "benchmarks": {
-                        "AIME 2025": 75.2,
-                        "HMMT 2025": 73.8,
-                        "GPQA Diamond": 77.4,
-                        "ARC-AGI": 75.1,
-                        "BrowseComp": 74.3,
-                        "ARC-AGI v2": 75.9,
-                        "HLE": 76.5,
-                        "MMLU-Pro": 75.8,
-                        "LiveCodeBench": 77.2,
-                        "SWE-Bench Verified": 74.8,
-                        "CodeForces": 76.4
-                    }
-                },
-                {
-                    "rank": 18,
-                    "name": "Doubao Seed Code",
-                    "company": "ByteDance",
-                    "companyLink": "https://www.bytedance.com/",
-                    "origin": "CN",
-                    "description": "ByteDance's code-specialized model with 256K context. Optimized for software engineering tasks with strong performance on coding benchmarks.",
-                    "unified": 99.2,
-                    "iq": 74.5,
-                    "value": 87.8,
-                    "createdDate": "2025-11-20",
-                    "costInputPer1M": 0.41,
-                    "costOutputPer1M": 1.23,
-                    "benchmarks": {
-                        "AIME 2025": 73.1,
-                        "HMMT 2025": 71.8,
-                        "GPQA Diamond": 74.9,
-                        "ARC-AGI": 73.4,
-                        "BrowseComp": 72.5,
-                        "ARC-AGI v2": 74.2,
-                        "HLE": 75.1,
-                        "MMLU-Pro": 74.5,
-                        "LiveCodeBench": 82.4,
-                        "SWE-Bench Verified": 81.8,
-                        "CodeForces": 83.2
-                    }
-                },
-                {
-                    "rank": 19,
-                    "name": "Nova Premier",
-                    "company": "Amazon",
-                    "companyLink": "https://aws.amazon.com/",
-                    "origin": "US",
-                    "description": "Amazon's flagship model with 1M context. Integrated with AWS services for enterprise deployment. Strong general capabilities with focus on reliability.",
-                    "unified": 98.4,
-                    "iq": 73.2,
-                    "value": 82.1,
-                    "createdDate": "2025-10-01",
-                    "costInputPer1M": 5,
-                    "costOutputPer1M": 15,
-                    "benchmarks": {
-                        "AIME 2025": 72.5,
-                        "HMMT 2025": 71.2,
-                        "GPQA Diamond": 74.8,
-                        "ARC-AGI": 72.8,
-                        "BrowseComp": 71.9,
-                        "ARC-AGI v2": 73.4,
-                        "HLE": 74.1,
-                        "MMLU-Pro": 73.2,
-                        "LiveCodeBench": 74.5,
-                        "SWE-Bench Verified": 72.3,
-                        "CodeForces": 73.8
-                    }
-                },
-                {
-                    "rank": 20,
-                    "name": "Hunyuan T1",
-                    "company": "Tencent",
-                    "companyLink": "https://cloud.tencent.com/",
-                    "origin": "CN",
-                    "description": "Tencent's latest model optimized for Chinese applications. Strong multimodal capabilities with integrated tool use for enterprise workflows.",
-                    "unified": 97.1,
-                    "iq": 72.1,
-                    "value": 85.4,
-                    "createdDate": "2025-11-05",
-                    "costInputPer1M": 0.8,
-                    "costOutputPer1M": 2.4,
-                    "benchmarks": {
-                        "AIME 2025": 71.4,
-                        "HMMT 2025": 70.2,
-                        "GPQA Diamond": 73.5,
-                        "ARC-AGI": 71.8,
-                        "BrowseComp": 70.9,
-                        "ARC-AGI v2": 72.3,
-                        "HLE": 73.1,
-                        "MMLU-Pro": 72.1,
-                        "LiveCodeBench": 73.8,
-                        "SWE-Bench Verified": 71.2,
-                        "CodeForces": 74.5
-                    }
-                }
-            ]
-        },
-        {
-            "timestamp": "2025-12-29T12:00:00-05:00",
-            "leader": "china",
-            "auditDate": "Dec 29, 2025",
-            "subtitle": "Performance Audit: Dec 29, 2025",
-            "benchmarks": [
-                "AIME 2025",
-                "HMMT 2025",
-                "GPQA Diamond",
-                "ARC-AGI",
-                "BrowseComp",
-                "ARC-AGI v2",
-                "HLE",
-                "MMLU-Pro",
-                "LiveCodeBench",
-                "SWE-Bench Verified",
-                "CodeForces"
-            ],
-            "scores": {
-                "usa": {
-                    "total": 662.5,
-                    "avgIq": 88.2,
-                    "avgValue": 88.1
-                },
-                "china": {
-                    "total": 1009.6,
-                    "avgIq": 88.6,
-                    "avgValue": 89.6
-                }
-            },
-            "models": [
-                {
-                    "rank": 1,
-                    "name": "DeepSeek-V3.2",
-                    "company": "DeepSeek",
-                    "companyLink": "https://www.deepseek.com/",
-                    "origin": "CN",
-                    "description": "A powerful reasoning model with 685B parameters using DeepSeek Sparse Attention (DSA). Thinking mode enables extended chain-of-thought reasoning for complex problem-solving tasks. Supports JSON output and tool calls.",
-                    "unified": 184.8,
-                    "iq": 92.4,
-                    "value": 100,
-                    "createdDate": "2025-12-14",
-                    "link": "https://llm-stats.com/models/deepseek-reasoner",
-                    "costPer1M": 0.25,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 99.1,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 89.7,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 98.8,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 92.1,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 87.7,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 96.1,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 83.3,
-                            "source": "https://llm-stats.com/models/deepseek-reasoner#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 89.5,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 92.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 83.1,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 85.3,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 0.17,
-                    "outputCostPer1M": 0.51,
-                    "pricingSource": "https://llm-stats.com/models/deepseek-reasoner#pricing"
-                },
-                {
-                    "rank": 2,
-                    "name": "DeepSeek-V3.2-Speciale",
-                    "company": "DeepSeek",
-                    "companyLink": "https://www.deepseek.com/",
-                    "origin": "CN",
-                    "description": "A specialized variant of DeepSeek-V3.2 with 685B parameters, optimized for enhanced performance on specific tasks including multi-step reasoning.",
-                    "unified": 176.1,
-                    "iq": 90.1,
-                    "value": 95.5,
-                    "createdDate": "2025-12-19",
-                    "link": "https://llm-stats.com/models/deepseek-v3.2-speciale",
-                    "costPer1M": 0.32,
-                    "inputCostPer1M": 0.21,
-                    "outputCostPer1M": 0.63,
-                    "pricingSource": "https://llm-stats.com/models/deepseek-v3.2-speciale#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 85,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 88.8,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 90.8,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 97.7,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 98.3,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 80,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 90.2,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-speciale#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 90.4,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 89.6,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 73.5,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 88.9,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 3,
-                    "name": "Gemini 3 Pro",
-                    "company": "Google",
-                    "companyLink": "https://deepmind.google/",
-                    "origin": "US",
-                    "description": "First model in the new Gemini 3 series. Best for complex tasks requiring broad world knowledge and advanced reasoning across modalities. Uses dynamic thinking with a 1M-token context window.",
-                    "unified": 171.7,
-                    "iq": 96.2,
-                    "value": 78.5,
-                    "createdDate": "2025-11-20",
-                    "link": "https://llm-stats.com/models/gemini-3-pro-preview",
-                    "costPer1M": 0.81,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 81.2,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 93.4,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 98.9,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gemini-3-pro-preview#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 94.9,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 98,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 83,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 88.2,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 0.54,
-                    "outputCostPer1M": 1.62,
-                    "pricingSource": "https://llm-stats.com/models/gemini-3-pro-preview#pricing"
-                },
-                {
-                    "rank": 4,
-                    "name": "Gemini 3 Flash",
-                    "company": "Google",
-                    "companyLink": "https://deepmind.google/",
-                    "origin": "US",
-                    "description": "Frontier intelligence built for speed at a fraction of the cost. Combines Gemini 3's Pro-grade reasoning with Flash-level latency, efficiency and cost. Features a 1M-token input context window optimized for agentic workflows, coding, and complex analysis.",
-                    "unified": 170,
-                    "iq": 88.5,
-                    "value": 92,
-                    "createdDate": "2025-12-05",
-                    "link": "https://llm-stats.com/models/gemini-3-flash",
-                    "costPer1M": 0.39,
-                    "inputCostPer1M": 0.26,
-                    "outputCostPer1M": 0.78,
-                    "pricingSource": "https://llm-stats.com/models/gemini-3-flash#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 83.8,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 88.6,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 87.1,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 81.2,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 85.8,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 93,
-                            "source": "https://llm-stats.com/models/gemini-3-flash#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 83.1,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 87.6,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 72.1,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 82.3,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 5,
-                    "name": "DeepSeek-V3.2-Exp",
-                    "company": "DeepSeek",
-                    "companyLink": "https://www.deepseek.com/",
-                    "origin": "CN",
-                    "description": "An experimental iteration introducing DeepSeek Sparse Attention (DSA) to improve long-context training and inference efficiency while keeping output quality on par with V3.1. Explores fine-grained sparse attention for extended sequence processing.",
-                    "unified": 168.1,
-                    "iq": 88,
-                    "value": 91,
-                    "createdDate": "2025-11-05",
-                    "link": "https://llm-stats.com/models/deepseek-v3.2-exp",
-                    "costPer1M": 0.41,
-                    "inputCostPer1M": 0.27,
-                    "outputCostPer1M": 0.81,
-                    "pricingSource": "https://llm-stats.com/models/deepseek-v3.2-exp#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 89.7,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 88.8,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 83.2,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 85,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 84.7,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 82.9,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 89,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 90.5,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 81.5,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 91.4,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 80.1,
-                            "source": "https://llm-stats.com/models/deepseek-v3.2-exp#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 6,
-                    "name": "Qwen 3 Max",
-                    "company": "Alibaba Cloud",
-                    "companyLink": "https://www.alibabacloud.com/",
-                    "origin": "CN",
-                    "description": "Alibaba Cloud's most capable model. Exceptional at mathematical reasoning with 93.1% on AIME 2025. Strong performance across all frontier benchmarks with excellent cost efficiency.",
-                    "unified": 165.2,
-                    "iq": 89.1,
-                    "value": 85.3,
-                    "createdDate": "2025-12-01",
-                    "link": "https://dev.to/czmilo/qwen3-max-2025",
-                    "costPer1M": 0.56,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 93.1,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 86.5,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 76.8,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 93,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 89.9,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 93.6,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 90.7,
-                            "source": "https://dev.to/czmilo/qwen3-max-2025#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 85.7,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 86,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 78,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 86,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 0.37,
-                    "outputCostPer1M": 1.11,
-                    "pricingSource": "https://dev.to/czmilo/qwen3-max-2025#pricing"
-                },
-                {
-                    "rank": 7,
-                    "name": "Grok Code Fast 1",
-                    "company": "xAI",
-                    "companyLink": "https://x.ai/",
-                    "origin": "US",
-                    "description": "Speedy and economical reasoning model that excels at agentic coding. Built from scratch with new model architecture and pre-training corpus rich with programming content.",
-                    "unified": 161.7,
-                    "iq": 86,
-                    "value": 88,
-                    "createdDate": "2025-10-01",
-                    "link": "https://llm-stats.com/models/grok-code-fast-1",
-                    "costPer1M": 0.48,
-                    "inputCostPer1M": 0.32,
-                    "outputCostPer1M": 0.96,
-                    "pricingSource": "https://llm-stats.com/models/grok-code-fast-1#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 77.4,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 94.9,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 87.4,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 86.8,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 85.6,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 79.8,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 90.5,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 85.6,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 84.3,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 83.6,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 78.8,
-                            "source": "https://llm-stats.com/models/grok-code-fast-1#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 8,
-                    "name": "Qwen3-235B-Thinking",
-                    "company": "Alibaba Cloud",
-                    "companyLink": "https://www.alibabacloud.com/",
-                    "origin": "CN",
-                    "description": "State-of-the-art thinking-enabled MoE model with 235B total parameters (22B activated). Features 94 layers, 128 experts, and 262K native context. Excels at SWE-Bench with 90% verified score.",
-                    "unified": 161,
-                    "iq": 87.5,
-                    "value": 84,
-                    "createdDate": "2025-07-20",
-                    "link": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507",
-                    "costPer1M": 0.6,
-                    "inputCostPer1M": 0.4,
-                    "outputCostPer1M": 1.2,
-                    "pricingSource": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 90.4,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 88.1,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 84.6,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 84,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 87,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 88.2,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 87.2,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 86.5,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 82.3,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 90,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 88,
-                            "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 9,
-                    "name": "GPT-5 mini",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "A faster, more cost-efficient version of GPT-5 for well-defined tasks. Great for precise prompts with high reasoning capabilities at reduced cost.",
-                    "unified": 159.1,
-                    "iq": 82,
-                    "value": 94,
-                    "createdDate": "2025-08-07",
-                    "link": "https://llm-stats.com/models/gpt-5-mini-2025-08-07",
-                    "costPer1M": 0.35,
-                    "inputCostPer1M": 0.23,
-                    "outputCostPer1M": 0.69,
-                    "pricingSource": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 81.8,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 82.4,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 82.5,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 78.5,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 81.3,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 82.3,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 80.8,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 73.6,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 83.9,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 85.5,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 76.5,
-                            "source": "https://llm-stats.com/models/gpt-5-mini-2025-08-07#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 10,
-                    "name": "Kimi K2 Thinking",
-                    "company": "Moonshot AI",
-                    "companyLink": "https://www.moonshot.cn/",
-                    "origin": "CN",
-                    "description": "Latest, most capable open-source thinking model from Moonshot AI. Built as a thinking agent that reasons step-by-step while dynamically invoking tools. State-of-the-art on HLE and BrowseComp benchmarks.",
-                    "unified": 154.4,
-                    "iq": 84.8,
-                    "value": 82.1,
-                    "createdDate": "2025-09-05",
-                    "link": "https://llm-stats.com/models/kimi-k2-thinking-0905",
-                    "costPer1M": 0.67,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 84.4,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 85.2,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 84.8,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 88.1,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 86.4,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 76.4,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 88.3,
-                            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 78.9,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 85.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 70,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 77.8,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 0.45,
-                    "outputCostPer1M": 1.35,
-                    "pricingSource": "https://llm-stats.com/models/kimi-k2-thinking-0905#pricing"
-                },
-                {
-                    "rank": 11,
-                    "name": "GPT-5.1",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "The best model for coding and agentic tasks with configurable reasoning effort. OpenAI's flagship model for coding and agentic tasks with strong performance across all benchmarks.",
-                    "unified": 153.5,
-                    "iq": 93,
-                    "value": 65,
-                    "createdDate": "2025-11-13",
-                    "link": "https://llm-stats.com/models/gpt-5.1-2025-11-13",
-                    "costPer1M": 1.7,
-                    "inputCostPer1M": 1.13,
-                    "outputCostPer1M": 3.39,
-                    "pricingSource": "https://llm-stats.com/models/gpt-5.1-2025-11-13#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 95.6,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 90.3,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 94.1,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 92.2,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 91,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 93.4,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 94.4,
-                            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 95.3,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 93.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 80.2,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 88,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 12,
-                    "name": "GPT-5.2 Pro",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "Pro variant of GPT-5.2, designed for top-quality, end-to-end execution. Supports xhigh reasoning for the most demanding tasks.",
-                    "unified": 145.1,
-                    "iq": 100,
-                    "value": 45.1,
-                    "createdDate": "2025-12-11",
-                    "link": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11",
-                    "costPer1M": 5.07,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 99.8,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 95.1,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 81.1,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 88.3,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 3.38,
-                    "outputCostPer1M": 10.14,
-                    "pricingSource": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11#pricing"
-                },
-                {
-                    "rank": 13,
-                    "name": "Llama 4-405B",
-                    "company": "Meta",
-                    "companyLink": "https://ai.meta.com/",
-                    "origin": "US",
-                    "description": "Natively multimodal model capable of processing both text and images. Features a 17B activated parameter (109B total) mixture-of-experts architecture with 16 experts, supporting a 10M token context window.",
-                    "unified": 144.2,
-                    "iq": 76.5,
-                    "value": 88.4,
-                    "createdDate": "2025-10-10",
-                    "link": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout",
-                    "costPer1M": 0.47,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 69.9,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 72.7,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 88.4,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 73.9,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 83.3,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 71.1,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 76.3,
-                            "source": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 69,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 72,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 62.5,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 75.2,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 0.31,
-                    "outputCostPer1M": 0.93,
-                    "pricingSource": "https://llm-stats.com/models/compare/llama-3.1-405b-instruct-vs-llama-4-scout#pricing"
-                },
-                {
-                    "rank": 14,
-                    "name": "GPT-5 Codex",
-                    "company": "OpenAI",
-                    "companyLink": "https://openai.com/",
-                    "origin": "US",
-                    "description": "Trained specifically for conducting code reviews and finding critical flaws. Navigates codebase to identify security vulnerabilities, performance issues, and bugs.",
-                    "unified": 141.8,
-                    "iq": 91.5,
-                    "value": 55,
-                    "createdDate": "2025-09-15",
-                    "link": "https://llm-stats.com/models/gpt-5-codex-2025-09-15",
-                    "costPer1M": 2.94,
-                    "inputCostPer1M": 1.96,
-                    "outputCostPer1M": 5.88,
-                    "pricingSource": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 92.4,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 90.6,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 85.9,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 92.4,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 82,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 93.5,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 88.1,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 84,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 99.6,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 92.5,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 89.6,
-                            "source": "https://llm-stats.com/models/gpt-5-codex-2025-09-15#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 15,
-                    "name": "DeepSeek-R1-0528",
-                    "company": "DeepSeek",
-                    "companyLink": "https://www.deepseek.com/",
-                    "origin": "CN",
-                    "description": "May 28, 2025 version of DeepSeek's reasoning model. Features advanced thinking capabilities. Excels in complex reasoning, mathematical problem-solving, and code generation.",
-                    "unified": 126,
-                    "iq": 72,
-                    "value": 75,
-                    "createdDate": "2025-05-28",
-                    "link": "https://llm-stats.com/models/deepseek-r1-0528",
-                    "costPer1M": 0.98,
-                    "inputCostPer1M": 0.65,
-                    "outputCostPer1M": 1.95,
-                    "pricingSource": "https://llm-stats.com/models/deepseek-r1-0528#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 75.1,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 72.6,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 73.2,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 75.1,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 72.7,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 78.2,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 74.7,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 68.6,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 74.4,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 70.4,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 74.3,
-                            "source": "https://llm-stats.com/models/deepseek-r1-0528#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 16,
-                    "name": "Claude 4.5 Opus",
-                    "company": "Anthropic",
-                    "companyLink": "https://www.anthropic.com/",
-                    "origin": "US",
-                    "description": "Premium model combining maximum intelligence with practical performance. Best model in the world for coding, agents, and computer use. Most robustly aligned model with best prompt injection resistance.",
-                    "unified": 123.8,
-                    "iq": 94.8,
-                    "value": 30.6,
-                    "createdDate": "2025-11-01",
-                    "link": "https://llm-stats.com/models/claude-opus-4-5-20251101",
-                    "costPer1M": 11.22,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 88.4,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 92,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 99.5,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 91.2,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 100,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 96.9,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 95.5,
-                            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 87.6,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 90.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 85.9,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 89.3,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 7.48,
-                    "outputCostPer1M": 22.44,
-                    "pricingSource": "https://llm-stats.com/models/claude-opus-4-5-20251101#pricing"
-                },
-                {
-                    "rank": 17,
-                    "name": "Grok-4 Heavy",
-                    "company": "xAI",
-                    "companyLink": "https://x.ai/",
-                    "origin": "US",
-                    "description": "Multi-agent version of Grok 4 that spawns multiple agents in parallel to work independently then collaborate. Uses ~10x more test-time compute than regular Grok 4.",
-                    "unified": 120.9,
-                    "iq": 87.5,
-                    "value": 38.2,
-                    "createdDate": "2025-11-15",
-                    "link": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/",
-                    "costPer1M": 7.39,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 89.1,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 86.8,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 89.1,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 74.6,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 88.1,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 95.4,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 89.4,
-                            "source": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 91.2,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 87.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 73.7,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 83.7,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 4.93,
-                    "outputCostPer1M": 14.79,
-                    "pricingSource": "https://smythos.com/developers/ai-models/whats-new-in-grok-4/#pricing"
-                },
-                {
-                    "rank": 18,
-                    "name": "GLM-4.6",
-                    "company": "Zhipu AI",
-                    "companyLink": "https://www.zhipuai.cn/",
-                    "origin": "CN",
-                    "description": "Latest version of Zhipu AI's flagship model. Features 200K token context window, superior coding performance, advanced reasoning with tool use, and stronger agent capabilities.",
-                    "unified": 120,
-                    "iq": 75,
-                    "value": 60,
-                    "createdDate": "2025-08-15",
-                    "link": "https://llm-stats.com/models/glm-4.6",
-                    "costPer1M": 2.24,
-                    "inputCostPer1M": 1.49,
-                    "outputCostPer1M": 4.47,
-                    "pricingSource": "https://llm-stats.com/models/glm-4.6#pricing",
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 71.7,
-                            "source": "https://llm-stats.com/models/glm-4.6#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 71.3,
-                            "source": "https://llm-stats.com/models/glm-4.6#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 73.2,
-                            "source": "https://llm-stats.com/models/glm-4.6#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 75.3,
-                            "source": "https://llm-stats.com/models/glm-4.6#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 82,
-                            "source": "https://llm-stats.com/models/glm-4.6#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 71.6,
-                            "source": "https://llm-stats.com/models/glm-4.6#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 74.4,
-                            "source": "https://llm-stats.com/models/glm-4.6#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 79.1,
-                            "source": "https://llm-stats.com/models/glm-4.6#mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 69.5,
-                            "source": "https://llm-stats.com/models/glm-4.6#livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 67.6,
-                            "source": "https://llm-stats.com/models/glm-4.6#swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 72.4,
-                            "source": "https://llm-stats.com/models/glm-4.6#codeforces"
-                        }
-                    }
-                },
-                {
-                    "rank": 19,
-                    "name": "GLM-4.7",
-                    "company": "Zhipu AI",
-                    "companyLink": "https://www.zhipuai.cn/",
-                    "origin": "CN",
-                    "description": "Coding-centric model that thinks before acting and preserves reasoning across turns. Features stronger multi-step tool use, better terminal integration, and multilingual coding capabilities.",
-                    "unified": 105.9,
-                    "iq": 70.2,
-                    "value": 50.8,
-                    "createdDate": "2025-10-25",
-                    "link": "https://llm-stats.com/models/glm-4.7",
-                    "costPer1M": 3.71,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 67.3,
-                            "source": "https://llm-stats.com/models/glm-4.7#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 70.2,
-                            "source": "https://llm-stats.com/models/glm-4.7#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 75.9,
-                            "source": "https://llm-stats.com/models/glm-4.7#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 64.3,
-                            "source": "https://llm-stats.com/models/glm-4.7#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 68,
-                            "source": "https://llm-stats.com/models/glm-4.7#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 75.5,
-                            "source": "https://llm-stats.com/models/glm-4.7#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 70.3,
-                            "source": "https://llm-stats.com/models/glm-4.7#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 66.9,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 68.6,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 58.9,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 69.2,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 2.47,
-                    "outputCostPer1M": 7.41,
-                    "pricingSource": "https://llm-stats.com/models/glm-4.7#pricing"
-                },
-                {
-                    "rank": 20,
-                    "name": "MiniMax-M2.1",
-                    "company": "MiniMax",
-                    "companyLink": "https://www.minimaxi.com/",
-                    "origin": "CN",
-                    "description": "Enhanced LLM focused on multi-language programming and real-world complex tasks. Exceptional capabilities across Rust, Java, Golang, C++, Kotlin, Objective-C, and TypeScript.",
-                    "unified": 101.6,
-                    "iq": 68.4,
-                    "value": 48.6,
-                    "createdDate": "2025-09-20",
-                    "link": "https://llm-stats.com/models/minimax-m2.1",
-                    "costPer1M": 4.18,
-                    "benchmarkScores": {
-                        "AIME 2025": {
-                            "score": 70,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#aime-2025"
-                        },
-                        "HMMT 2025": {
-                            "score": 85.1,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#hmmt-2025"
-                        },
-                        "GPQA Diamond": {
-                            "score": 62.6,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#gpqa-diamond"
-                        },
-                        "ARC-AGI": {
-                            "score": 73,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#arc-agi"
-                        },
-                        "BrowseComp": {
-                            "score": 58,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#browsecomp"
-                        },
-                        "ARC-AGI v2": {
-                            "score": 60.7,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#arc-agi-v2"
-                        },
-                        "HLE": {
-                            "score": 69.5,
-                            "source": "https://llm-stats.com/models/minimax-m2.1#hle"
-                        },
-                        "MMLU-Pro": {
-                            "score": 62.2,
-                            "source": "https://llm-stats.com/benchmarks/mmlu-pro"
-                        },
-                        "LiveCodeBench": {
-                            "score": 64.5,
-                            "source": "https://llm-stats.com/benchmarks/livecodebench"
-                        },
-                        "SWE-Bench Verified": {
-                            "score": 58.6,
-                            "source": "https://llm-stats.com/benchmarks/swe-bench-verified"
-                        },
-                        "CodeForces": {
-                            "score": 57.7,
-                            "source": "https://llm-stats.com/benchmarks/codeforces"
-                        }
-                    },
-                    "inputCostPer1M": 2.79,
-                    "outputCostPer1M": 8.37,
-                    "pricingSource": "https://llm-stats.com/models/minimax-m2.1#pricing"
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

@@ -73,13 +73,13 @@ npx http-server .
 
 ### Intelligence Index (I) — Max 100
 
-Unweighted average of 11 frontier benchmarks:
+Unweighted average of 10 frontier benchmarks:
 
 | Category | Benchmarks |
 |----------|------------|
 | Math | AIME 2025, HMMT 2025 |
 | Science | GPQA Diamond |
-| Reasoning | ARC-AGI, ARC-AGI v2, HLE |
+| Reasoning | ARC-AGI v2, HLE |
 | Agents | BrowseComp |
 | Knowledge | MMLU-Pro |
 | Coding | LiveCodeBench, SWE-Bench Verified, CodeForces |

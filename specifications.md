@@ -8,6 +8,7 @@
 | **Domain** | usvschina.ai |
 | **Date** | December 30, 2025 |
 | **Purpose** | Rank frontier AI models by intelligence and cost efficiency, tracking the US-China AI competition |
+| **Benchmarks** | 10 Frontier Benchmarks |
 
 ## 2. Technical Stack
 
@@ -98,40 +99,61 @@
 
 ## 5. Scoring Methodology
 
-### Unified Power Score (Max 200)
+### Unified Power Score (Max ~180)
 
-$$\text{Unified} = I \times \left(1 + \frac{V}{100}\right)$$
+$$\text{Unified} = I \times \left(1 + \frac{V_{\text{norm}}}{100}\right)$$
 
-*Intelligence gates everything. A model with zero intelligence scores zero, no matter how cheap.*
+**Intelligence gates everything.** A model with low intelligence cannot score high, regardless of how cheap it is. Value acts as a multiplier boost, not an equal component.
 
-### Intelligence Index (I) — Max 100
+| Component | Range | Role |
+|-----------|-------|------|
+| Intelligence (I) | 0–100 | Gates the score (multiplicative) |
+| Value (V_norm) | 50–100 | Boosts the score (1.5× to 2.0× multiplier) |
 
-Unweighted average of 11 frontier benchmarks:
+**Examples:**
+- IQ 80, Value 75 (avg cost) → Unified = 80 × 1.75 = **140**
+- IQ 60, Value 100 (free) → Unified = 60 × 2.0 = **120** (can't overcome low IQ)
+- IQ 40, Value 100 (free) → Unified = 40 × 2.0 = **80** (low IQ ceiling)
+
+### Intelligence Index — Raw Score (0–100)
+
+**Raw IQ:** Unweighted average of available benchmark scores (only benchmarks with data count).
+
+$$I = \frac{\sum_{i=1}^{n} \text{Benchmark}_i}{n} \quad \text{where } n = \text{benchmarks with data}$$
+
+#### 10 Frontier Benchmarks
 
 | # | Benchmark | Category | Source |
 |---|-----------|----------|--------|
 | 1 | AIME 2025 | Math Olympiad | [llm-stats](https://llm-stats.com/benchmarks/aime-2025) |
 | 2 | HMMT 2025 | Math Tournament | [llm-stats](https://llm-stats.com/benchmarks/hmmt) |
 | 3 | GPQA Diamond | PhD Science | [llm-stats](https://llm-stats.com/benchmarks/gpqa) |
-| 4 | ARC-AGI | Reasoning | [arcprize.org](https://arcprize.org/) |
-| 5 | BrowseComp | Web Agents | [llm-stats](https://llm-stats.com/benchmarks/browsecomp) |
-| 6 | ARC-AGI v2 | Advanced Reasoning | [arcprize.org](https://arcprize.org/) |
-| 7 | HLE | Multidisciplinary | [llm-stats](https://llm-stats.com/benchmarks/hle) |
-| 8 | MMLU-Pro | Knowledge | [llm-stats](https://llm-stats.com/benchmarks/mmlu-pro) |
-| 9 | LiveCodeBench | Coding | [llm-stats](https://llm-stats.com/benchmarks/livecodebench) |
-| 10 | SWE-Bench Verified | Software Engineering | [llm-stats](https://llm-stats.com/benchmarks/swe-bench-verified) |
-| 11 | CodeForces | Competitive Programming | [llm-stats](https://llm-stats.com/benchmarks/codeforces) |
+| 4 | BrowseComp | Web Agents | [llm-stats](https://llm-stats.com/benchmarks/browsecomp) |
+| 5 | ARC-AGI v2 | Advanced Reasoning | [arcprize.org](https://arcprize.org/) |
+| 6 | HLE | Multidisciplinary | [llm-stats](https://llm-stats.com/benchmarks/hle) |
+| 7 | MMLU-Pro | Knowledge | [llm-stats](https://llm-stats.com/benchmarks/mmlu-pro) |
+| 8 | LiveCodeBench | Coding | [llm-stats](https://llm-stats.com/benchmarks/livecodebench) |
+| 9 | SWE-Bench Verified | Software Engineering | [llm-stats](https://llm-stats.com/benchmarks/swe-bench-verified) |
+| 10 | CodeForces | Competitive Programming | [llm-stats](https://llm-stats.com/benchmarks/codeforces) |
 
-### Value Index (V) — Max 100
+### Value Index — Normalized to 50–100
 
-Log-normalized efficiency based on blended cost per 1M tokens:
+**Raw Value:** Log-normalized efficiency based on blended cost per 1M tokens:
 
-$$V = 100 \times \left(1 - \frac{\log(C / 0.25)}{\log(60.00 / 0.25)}\right)$$
+$$V_{\text{raw}} = 100 \times \left(1 - \frac{\log(C / 0.25)}{\log(60.00 / 0.25)}\right)$$
 
-| Threshold | Cost | Value |
-|-----------|------|-------|
-| Floor (Best) | $0.25 | 100 |
-| Ceiling (Worst) | $60.00 | 0 |
+**Blended Cost:**
+
+$$C = \frac{3 \times \text{Input} + 1 \times \text{Output}}{4}$$
+
+**Normalized Value:** (ensures minimum 50 even for expensive models)
+
+$$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
+
+| Threshold | Cost | Raw Value | Normalized |
+|-----------|------|-----------|------------|
+| Floor (Best) | $0.25 | 100 | 100 |
+| Ceiling (Worst) | $60.00 | 0 | 50 |
 
 ### National Score
 
@@ -168,31 +190,31 @@ $$V = 100 \times \left(1 - \frac{\log(C / 0.25)}{\log(60.00 / 0.25)}\right)$$
 | Purple | HLE, MMLU-Pro, LiveCodeBench |
 | Yellow | SWE-Bench Verified, CodeForces |
 
-## 7. Current Rankings (Dec 30, 2025)
+## 7. Current Rankings (Dec 31, 2025)
 
-| Rank | Model | Origin | Unified | IQ | Value |
-|------|-------|--------|---------|-----|-------|
-| 1 | DeepSeek-V3.2 | 🇨🇳 | 184.8 | 92.4 | 100.0 |
-| 2 | DeepSeek-V3.2-Speciale | 🇨🇳 | 176.1 | 90.1 | 95.5 |
-| 3 | Gemini 3 Pro | 🇺🇸 | 171.7 | 96.2 | 78.5 |
-| 4 | Gemini 3 Flash | 🇺🇸 | 170.0 | 88.5 | 92.0 |
-| 5 | DeepSeek-V3.2-Exp | 🇨🇳 | 168.1 | 88.0 | 91.0 |
-| 6 | Qwen 3 Max | 🇨🇳 | 165.2 | 89.1 | 85.3 |
-| 7 | Qwen3-235B-Thinking | 🇨🇳 | 161.0 | 87.5 | 84.0 |
-| 8 | Grok Code Fast 1 | 🇺🇸 | 161.7 | 86.0 | 88.0 |
-| 9 | GPT-5 mini | 🇺🇸 | 159.1 | 82.0 | 94.0 |
-| 10 | GPT-5.1 | 🇺🇸 | 153.5 | 93.0 | 65.0 |
+| Rank | Model | Origin | Unified | IQ (0-100) | Value (50-100) |
+|------|-------|--------|---------|-----------|----------------|
+| 1 | Gemini 3 Flash | 🇺🇸 | 166.5 | 89.4 | 86.3 |
+| 2 | Gemini 3 Pro | 🇺🇸 | 155.2 | 89.4 | 73.6 |
+| 3 | Grok-4 Heavy | 🇺🇸 | 152.7 | 89.3 | 71.0 |
+| 4 | GPT-5.1 | 🇺🇸 | 151.7 | 86.1 | 76.1 |
+| 5 | Grok-4 | 🇺🇸 | 147.2 | 86.1 | 71.0 |
+| 6 | DeepSeek-V3.2-Exp | 🇨🇳 | 143.5 | 72.4 | 98.2 |
+| 7 | Kimi K2-Thinking | 🇨🇳 | 142.1 | 75.3 | 88.8 |
+| 8 | DeepSeek-V3.2 | 🇨🇳 | 141.7 | 71.6 | 97.9 |
+| 9 | Qwen3-235B-Thinking | 🇨🇳 | 138.9 | 74.1 | 87.6 |
+| 10 | MiMo-V2-Flash | 🇨🇳 | 138.8 | 69.4 | 100.0 |
 
-### National Totals
+### National Totals (Top 10 Method)
 
 | Team | Score | Models in Top 10 |
 |------|-------|------------------|
-| 🇨🇳 China | 1009.6 | 5 |
-| 🇺🇸 USA | 662.5 | 5 |
+| 🇺🇸 USA | 773.3 | 5 |
+| 🇨🇳 China | 705.0 | 5 |
 
-**Leader:** Team China 🇨🇳
+**Leader:** Team USA 🇺🇸 by 68.3 points
 
 ---
 
-*Last Updated: December 30, 2025*
+*Last Updated: December 31, 2025*
 

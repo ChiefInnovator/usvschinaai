@@ -25,7 +25,7 @@ US vs CHINA AI is an independent leaderboard that ranks frontier AI models from 
 ### Unified Power Score (Max 200)
 Formula: `Unified = IQ × (1 + Value / 100)`
 
-- **Intelligence Index (IQ)**: Average of 11 benchmark scores (Max 100)
+- **Intelligence Index (IQ)**: Average of 10 benchmark scores (Max 100)
 - **Value Index**: Log-normalized cost efficiency score (Max 100)
 
 ### National Score
