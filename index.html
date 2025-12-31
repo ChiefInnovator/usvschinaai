@@ -84,66 +84,6 @@
         .sort-asc .sort-icon { transform: rotate(180deg); }
 
         /* 3D Flip Animation */
-        .flip-container {
-            perspective: 1000px;
-            position: relative;
-        }
-
-        .flip-container .flip-front,
-        .flip-container .flip-back {
-            width: 100%;
-        }
-
-        .flip-container.flipped .flip-front {
-            transform: rotateY(180deg);
-            pointer-events: none;
-            opacity: 0;
-        }
-
-        .flip-container.flipped .flip-back {
-            transform: rotateY(0deg);
-            pointer-events: auto;
-            opacity: 1;
-        }
-
-        .flip-front, .flip-back {
-            backface-visibility: hidden;
-            -webkit-backface-visibility: hidden;
-            transition: transform 0.6s, opacity 0.6s;
-        }
-
-        .flip-front {
-            transform: rotateY(0deg);
-            opacity: 1;
-            pointer-events: auto;
-        }
-
-        .flip-back {
-            transform: rotateY(180deg);
-            opacity: 0;
-            pointer-events: none;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            max-height: 600px;
-        }
-
-        .flip-icon-btn {
-            position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            opacity: 0.5;
-            color: #a78bfa;
-        }
-
-        .flip-icon-btn:hover {
-            opacity: 1;
-            transform: scale(1.1);
-        }
-
         .benchmark-details-table {
             font-size: 0.875rem;
             max-height: 600px;
@@ -158,7 +98,7 @@
         }
 
         .benchmark-details-table td {
-            padding: 0.5rem 0.75rem;
+            padding: 0.75rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
@@ -292,10 +232,8 @@
             </div>
         </div>
 
-        <!-- Main Table with Flip Animation -->
-        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12 flip-container relative" id="leaderboardFlipContainer">
-            <!-- Front Side: Leaderboard Table -->
-            <div class="flip-front">
+        <!-- Main Table -->
+        <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12" id="leaderboardFlipContainer">
                 <!-- Toolbar -->
                 <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <h3 class="text-xl font-bold flex items-center gap-2">
@@ -318,11 +256,6 @@
                     </div>
                 </div>
                 
-                <!-- Flip Icon Indicator -->
-                <div class="absolute top-6 right-6 flip-icon-btn" onclick="toggleLeaderboardFlip()" title="Click to view benchmark details">
-                    <i data-lucide="flip-horizontal" class="w-5 h-5"></i>
-                </div>
-
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
                         <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter" id="table-header">
@@ -335,56 +268,14 @@
                 </div>
                 
                 <!-- Benchmarks Included -->
-                <div class="px-6 py-3 border-t border-white/5">
-                    <h3 class="text-sm font-bold text-white mb-2 flex items-center gap-2">
+                <div class="p-6">
+                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
                         <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
                     </h3>
                     <div id="benchmarks-container" class="flex flex-wrap gap-2">
                         <!-- Loaded from JSON -->
                     </div>
                 </div>
-            </div>
-
-            <!-- Back Side: Detailed Benchmark Table -->
-            <div class="flip-back p-6 relative">
-                <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
-                    <i data-lucide="table" class="text-blue-400"></i> Detailed Benchmark Scores & Costs
-                </h3>
-                <div class="benchmark-details-table overflow-x-auto">
-                    <table class="w-full text-left">
-                        <thead class="bg-slate-900/80 text-slate-400 text-xs uppercase tracking-tighter sticky top-0">
-                            <tr>
-                                <th class="p-3">Rank</th>
-                                <th class="p-3">Model</th>
-                                <th class="p-3">Origin</th>
-                                <th class="p-3">IQ</th>
-                                <th class="p-3">Value</th>
-                                <th class="p-3">Unified</th>
-                                <th class="p-3">Input Cost</th>
-                                <th class="p-3">Output Cost</th>
-                                <th class="p-3 whitespace-nowrap">AIME 2025</th>
-                                <th class="p-3 whitespace-nowrap">HMMT 2025</th>
-                                <th class="p-3 whitespace-nowrap">GPQA</th>
-                                <th class="p-3 whitespace-nowrap">BrowseComp</th>
-                                <th class="p-3 whitespace-nowrap">ARC-AGI</th>
-                                <th class="p-3 whitespace-nowrap">HLE</th>
-                                <th class="p-3 whitespace-nowrap">MMLU-Pro</th>
-                                <th class="p-3 whitespace-nowrap">LiveCode</th>
-                                <th class="p-3 whitespace-nowrap">SWE-Bench</th>
-                                <th class="p-3 whitespace-nowrap">CodeForces</th>
-                            </tr>
-                        </thead>
-                        <tbody id="benchmark-details-tbody" class="divide-y divide-white/5">
-                            <!-- Populated by JS -->
-                        </tbody>
-                    </table>
-                </div>
-                
-                <!-- Flip Icon Indicator -->
-                <div class="absolute top-6 right-6 flip-icon-btn" onclick="toggleLeaderboardFlip()" title="Click to view leaderboard">
-                    <i data-lucide="flip-horizontal" class="w-5 h-5"></i>
-                </div>
-            </div>
         </div>
 
         <!-- Intelligence vs Value Matrix -->
@@ -512,19 +403,6 @@
         let leaderboardIsFlipped = false;
 
         // Toggle Leaderboard Flip
-        function toggleLeaderboardFlip() {
-            const container = document.getElementById('leaderboardFlipContainer');
-            
-            leaderboardIsFlipped = !leaderboardIsFlipped;
-            
-            if (leaderboardIsFlipped) {
-                container.classList.add('flipped');
-                populateBenchmarkDetailsTable();
-            } else {
-                container.classList.remove('flipped');
-            }
-        }
-
         // Populate Benchmark Details Table
         function populateBenchmarkDetailsTable() {
             const tbody = document.getElementById('benchmark-details-tbody');

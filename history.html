@@ -124,6 +124,7 @@
         let historyData = [];
         let entryFilters = {}; // Key: index, Value: 'top10' | 'all' | 'US' | 'CN'
         let entrySorts = {}; // Key: index, Value: { key: 'unified', direction: 'desc' }
+        let expandedEntries = {}; // Key: index, Value: true/false
 
         // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
@@ -190,6 +191,14 @@
                 entrySorts[index].key = key;
                 entrySorts[index].direction = 'desc';
             }
+            renderHistory();
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                lucide.createIcons();
+            }
+        }
+
+        function toggleEntry(index) {
+            expandedEntries[index] = !expandedEntries[index];
             renderHistory();
             if (window.lucide && typeof lucide.createIcons === 'function') {
                 lucide.createIcons();
@@ -266,34 +275,40 @@
 
                 html += `
                     <div class="glass rounded-3xl overflow-hidden border border-white/10">
-                        <!-- Header -->
-                        <div class="p-8 border-b border-white/10 bg-slate-900/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                            <div>
-                                <div class="text-sm text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-2">
-                                    <i data-lucide="calendar" class="w-4 h-4"></i> ${date}
+                        <!-- Header - Clickable to expand/collapse -->
+                        <div class="p-6 md:p-8 border-b border-white/10 bg-slate-900/50 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 cursor-pointer hover:bg-slate-900/70 transition" onclick="toggleEntry(${index})">
+                            <div class="flex items-center gap-4">
+                                <div class="text-slate-400 transition-transform ${expandedEntries[index] ? 'rotate-90' : ''}">
+                                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
                                 </div>
-                                <h2 class="text-3xl font-bold flex items-center gap-3">
-                                    Leader: <span class="${leaderColor} flex items-center gap-2">${leaderName} ${leaderFlag}</span>
-                                </h2>
+                                <div>
+                                    <div class="text-sm text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-2">
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> ${date}
+                                    </div>
+                                    <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3">
+                                        Leader: <span class="${leaderColor} flex items-center gap-2">${leaderName} ${leaderFlag}</span>
+                                    </h2>
+                                </div>
                             </div>
                             
                             <!-- Mini Scoreboard -->
-                            <div class="flex gap-8 bg-black/20 p-4 rounded-2xl border border-white/5">
+                            <div class="flex gap-6 md:gap-8 bg-black/20 p-3 md:p-4 rounded-2xl border border-white/5">
                                 <div class="text-right">
                                     <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">USA Score</div>
-                                    <div class="font-mono font-black text-2xl text-blue-400">${scores.usa.total.toFixed(1)}</div>
+                                    <div class="font-mono font-black text-xl md:text-2xl text-blue-400">${scores.usa.total.toFixed(1)}</div>
                                     <div class="text-[10px] text-slate-500">IQ: ${scores.usa.avgIq.toFixed(1)} | Val: ${scores.usa.avgValue.toFixed(1)}</div>
                                 </div>
                                 <div class="w-px bg-white/10"></div>
                                 <div class="text-right">
                                     <div class="text-slate-500 text-xs uppercase tracking-wider mb-1">China Score</div>
-                                    <div class="font-mono font-black text-2xl text-red-400">${scores.china.total.toFixed(1)}</div>
+                                    <div class="font-mono font-black text-xl md:text-2xl text-red-400">${scores.china.total.toFixed(1)}</div>
                                     <div class="text-[10px] text-slate-500">IQ: ${scores.china.avgIq.toFixed(1)} | Val: ${scores.china.avgValue.toFixed(1)}</div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Content -->
+                        <!-- Collapsible Content -->
+                        <div class="${expandedEntries[index] ? '' : 'hidden'}">
                         <div class="p-8">
                             <div class="mb-8">
                                 <div class="p-6 border-b border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 -mx-8 -mt-8 mb-8 bg-slate-900/20">
@@ -421,6 +436,7 @@
 
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 `;
