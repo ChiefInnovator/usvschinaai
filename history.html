@@ -395,6 +395,11 @@
                     }
                 });
 
+                // Recalculate ranks based on current sort/filter order
+                displayModels.forEach((m, idx) => {
+                    m.rank = idx + 1;
+                });
+
                 // Button styles helper
                 const getBtnClass = (type) => {
                     const base = "px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2";
