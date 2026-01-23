@@ -217,7 +217,9 @@
 
             let html = '';
             sortedHistory.forEach((entry, index) => {
-                const date = new Date(entry.timestamp).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                const d = new Date(entry.timestamp);
+                const date = d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+                const time = d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: true });
                 
                 // Get filter for this entry
                 const currentFilter = entryFilters[index] || 'top10';
@@ -340,7 +342,7 @@
                                 </div>
                                 <div>
                                     <div class="text-sm text-slate-500 uppercase tracking-wider mb-1 flex items-center gap-2">
-                                        <i data-lucide="calendar" class="w-4 h-4"></i> ${date}
+                                        <i data-lucide="calendar" class="w-4 h-4"></i> ${date} <span class="text-xs text-slate-600">at</span> ${time}
                                     </div>
                                     <h2 class="text-2xl md:text-3xl font-bold flex items-center gap-3">
                                         Leader: <span class="${leaderColor} flex items-center gap-2">${leaderName} ${leaderFlag}</span>
