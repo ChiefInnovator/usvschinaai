@@ -1,4 +1,28 @@
-# OS generated files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+
+# Scraper outputs and artifacts
+stage*.csv
+stage*_*.csv
+stage*_*.json
+stage2_combined.json
+stage2_country_aggregates.csv
+stage2_summary.json
+scraper_output.log
+
+# Backups
+models.backup-*.json
+
+# Root-level debug/validation helpers
+debug_*.py
+verify_*.py
+review_*score.py
+inspect_html.py
+test_multimodal.py
+show_participation_weights.py# OS generated files
 .DS_Store
 .DS_Store?
 ._*
