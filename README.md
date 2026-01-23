@@ -2,13 +2,13 @@
 
 A leaderboard that ranks the world's best AI models by both **intelligence** and **cost efficiency**—then shows you which country is winning.
 
-**Use it to:** Compare models side-by-side, find the best value for your use case, and see how the US-China AI race is unfolding in real time.
+Use it to compare models side-by-side, find the best value for your use case, and see how the US–China AI race is unfolding in near real time.
 
 ## Features
 
-- **Unified Power Score**: Ranks models by Intelligence × Value (max 200)
-- **National Scoreboard**: Real-time aggregation for Team USA 🇺🇸 vs Team China 🇨🇳
-- **Interactive Filters**: View Top 10, All models, or filter by country
+- **Unified Score (0–1000)**: 70% capability + 30% value, cohort-normalized
+- **National Scoreboard**: Aggregation for Team USA 🇺🇸 vs Team China 🇨🇳
+- **Auto-Sorted**: Rankings sorted by Unified descending
 - **Historical Archives**: Track how the balance of power shifts over time
 - **About Page**: Full methodology, assumptions, and benchmark explanations
 
@@ -22,7 +22,7 @@ A leaderboard that ranks the world's best AI models by both **intelligence** and
 
 ## Data Structure
 
-All data lives in a single `models.json` file:
+All site data lives in a single `models.json` file:
 
 ```json
 {
@@ -42,7 +42,7 @@ All data lives in a single `models.json` file:
 }
 ```
 
-The main page displays the **latest** history entry. The archives page displays **all** entries sorted by date.
+The main page displays the latest history entry. The archives page displays all entries sorted by date.
 
 ## Setup & Usage
 
@@ -67,52 +67,58 @@ Then open `http://localhost:8000`
 npx http-server .
 ```
 
-## Scoring Methodology
+## Scoring Methodology (Current)
 
-**Unified Power Score** (Max 200) = Intelligence × (1 + Value/100)
+- **Per-benchmark normalization (0–100):** For each benchmark with ≥2 participating models, scores are min–max normalized across the cohort. Benchmarks with a single participant are excluded from scoring.
+- **Participation weighting:** Each benchmark is weighted by its participation fraction (models reporting that benchmark ÷ max participation across benchmarks).
+- **AvgIQ:** Weighted average of the per-benchmark normalized scores.
+- **Value:** `AvgIQ / (Input $/M + Output $/M)`.
+- **Cohort normalization:** Both AvgIQ and Value are min–max normalized to 0–100 across the cohort.
+- **Unified (0–1000):** `10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))`.
+- **Sorting:** Leaderboards are sorted by Unified (descending).
 
-### Intelligence Index (I) — Max 100
-
-Unweighted average of 10 frontier benchmarks:
-
-| Category | Benchmarks |
-|----------|------------|
-| Math | AIME 2025, HMMT 2025 |
-| Science | GPQA Diamond |
-| Reasoning | ARC-AGI v2, HLE |
-| Agents | BrowseComp |
-| Knowledge | MMLU-Pro |
-| Coding | LiveCodeBench, SWE-Bench Verified, CodeForces |
-
-### Value Index (V) — Max 100
-
-Log-normalized cost efficiency based on blended cost per 1M tokens.
-
-- **Floor:** $0.25 (best value = 100)
-- **Ceiling:** $60.00 (worst value = 0)
-
-### National Score
-
-Sum of Unified Scores for models in the **Global Top 10** belonging to each nation.
+Notes:
+- Multimodal parsing is detected from table icons (green check = Yes; grey X = No).
+- Benchmarks are auto-detected from the source table; the exact set may change over time.
 
 ## Tech Stack
 
 - **Core**: HTML5, Vanilla JavaScript
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/) (CDN)
-- **Icons**: [Lucide](https://lucide.dev/) (CDN)
-- **Charts**: [Chart.js](https://www.chartjs.org/) (CDN)
+- **Styling**: Tailwind CSS (CDN)
+- **Icons**: Lucide (CDN)
+- **Charts**: Chart.js (CDN)
 
 ## File Structure
 
 ```
-├── index.html        # Main leaderboard
-├── history.html      # Historical archives
-├── about.html        # Methodology & assumptions
-├── models.json       # All data (current + history)
-├── specifications.md # Detailed project spec
-└── README.md         # This file
+├── index.html             # Main leaderboard
+├── history.html           # Historical archives
+├── about.html             # Methodology & assumptions
+├── models.json            # All data (current + history)
+├── scripts/
+│   └── scrape_models.py   # Scraper (Stage 1–3)
+├── docs/
+│   └── SCRAPER_SPECIFICATION.md
+└── README.md              # This file
+```
+
+## Scraper Quickstart
+
+Requires Python 3.11+ and Playwright.
+
+```
+python -m venv .venv && source .venv/bin/activate
+pip install -r scripts/requirements.txt
+python -m playwright install
+
+# Stage 2: Full leaderboard (prints table; writes CSV/JSON summaries)
+python scripts/scrape_models.py --leaderboard-full
+
+# Stage 1 (basic) / Stage 3 (metadata)
+python scripts/scrape_models.py --leaderboard-basic
+python scripts/scrape_models.py
 ```
 
 ---
 
-*Data Audited: December 30, 2025*
+Last updated: January 2026

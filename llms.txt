@@ -1,17 +1,17 @@
 # US vs CHINA AI - AI Knowledge Map
 
-> Primary Focus: Tracking the AI race between the United States and China through comprehensive model rankings and benchmarks.
-> Website: https://usvschina.ai/
-> Updated: December 2025
+Primary Focus: Tracking the AI race between the United States and China through comprehensive model rankings and benchmarks.
+Website: https://usvschina.ai/
+Updated: January 2026
 
 ## What This Site Is
 
 US vs CHINA AI is an independent leaderboard that ranks frontier AI models from the United States and China. It provides:
 
-1. **Unified Power Score Rankings** - A composite metric (max 200) combining intelligence and cost efficiency
-2. **National Score Tracking** - Aggregate scores showing which country leads the AI race
-3. **Benchmark Analysis** - Performance across 11 frontier benchmarks including AIME, GPQA, ARC-AGI, and SWE-Bench
-4. **Historical Archives** - Track how the AI race has evolved over time
+1. **Unified Score Rankings** — Composite metric (0–1000) combining capability and value
+2. **National Score Tracking** — Aggregates showing which country leads
+3. **Benchmark Analysis** — Performance across auto-detected frontier benchmarks (AIME, GPQA, ARC‑AGI, SWE‑Bench, etc.)
+4. **Historical Archives** — Track how the AI race evolves over time
 
 ## Core Entities
 
@@ -22,14 +22,14 @@ US vs CHINA AI is an independent leaderboard that ranks frontier AI models from 
 
 ## Scoring Methodology
 
-### Unified Power Score (Max 200)
-Formula: `Unified = IQ × (1 + Value / 100)`
+### Unified Score (0–1000)
+`Unified = 10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))`
 
-- **Intelligence Index (IQ)**: Average of 10 benchmark scores (Max 100)
-- **Value Index**: Log-normalized cost efficiency score (Max 100)
+- **AvgIQ**: Participation‑weighted average of per‑benchmark normalized scores (0–100). Each benchmark is min–max normalized across the cohort; benchmarks with a single participant are excluded.
+- **Value**: `AvgIQ / (Input $/M + Output $/M)`; higher is better. Both AvgIQ and Value are cohort‑normalized to 0–100 before blending.
 
 ### National Score
-Sum of Unified Power Scores for all models from a nation appearing in the Global Top 10.
+Sum of Unified Scores for models from each nation in the Global Top 10.
 
 ## Key Resources
 
@@ -38,58 +38,23 @@ Sum of Unified Power Scores for all models from a nation appearing in the Global
 - /about.html: Detailed methodology explanation
 - /models.json: Raw data in JSON format
 
-## Current Rankings (December 2025)
+## Current Rankings
+See the live site or latest generated CSV/JSON for current values. Scores update as benchmarks and prices change.
 
-### Top 10 AI Models by Unified Power Score:
-1. DeepSeek-V3.2 (China) - 184.8
-2. DeepSeek-V3.2-Speciale (China) - 176.1
-3. Gemini 3 Pro (USA) - 171.7
-4. Gemini 3 Flash (USA) - 170.0
-5. DeepSeek-V3.2-Exp (China) - 168.1
-6. Qwen 3 Max (China) - 165.2
-7. Qwen3-235B-Thinking (China) - 161.0
-8. Grok Code Fast 1 (USA) - 161.7
-9. GPT-5 mini (USA) - 159.1
-10. GPT-5.1 (USA) - 153.5
-
-### National Scores:
-- China: 1009.6
-- USA: 662.5
-
-## Benchmarks Included
-
-### Mathematics & Reasoning
-- AIME 2025 (Math Olympiad)
-- HMMT 2025 (Harvard-MIT Math Tournament)
-- GPQA Diamond (PhD-level science)
-
-### General Intelligence
-- ARC-AGI (Abstraction & Reasoning)
-- ARC-AGI v2 (Advanced general intelligence)
-- HLE (Humanity's Last Exam)
-- MMLU-Pro (Multi-task understanding)
-
-### Coding & Engineering
-- LiveCodeBench (Live coding challenges)
-- SWE-Bench Verified (Software engineering)
-- CodeForces (Competitive programming)
-
-### Web & Agent
-- BrowseComp (Web agent capabilities)
+### Benchmarks Included
+Benchmarks are auto‑detected from the source leaderboard and may change over time. Common categories include:
+- Mathematics & Reasoning: AIME, HMMT, GPQA Diamond
+- General Intelligence: ARC‑AGI (v1/v2), HLE, MMLU‑Pro
+- Coding & Engineering: LiveCodeBench, SWE‑Bench Verified, CodeForces
+- Web & Agent: BrowseComp
 
 ## Frequently Asked Questions
 
-**Q: What is the best AI model in 2025?**
-A: DeepSeek-V3.2 from China leads with a Unified Power Score of 184.8, combining top-tier intelligence with excellent cost efficiency.
-
-**Q: Is the US or China winning the AI race?**
-A: As of December 2025, China leads with a national score of 1009.6 vs USA's 662.5. Both nations have 5 models in the Top 10.
-
 **Q: How are AI models ranked?**
-A: By Unified Power Score = Intelligence × (1 + Value/100). Intelligence averages 11 benchmarks. Value measures cost efficiency.
+A: By Unified Score = `10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))`. AvgIQ is a participation‑weighted average of per‑benchmark normalized scores; Value is `AvgIQ / (Input + Output)`.
 
 **Q: How often is the data updated?**
-A: Rankings are updated as new benchmark results become available, typically monthly but can be weekly or daily.
+A: As new benchmark results and prices are available; cadence may vary from daily to monthly.
 
 ## Citation
 

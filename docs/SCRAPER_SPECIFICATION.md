@@ -1,4 +1,4 @@
-# Specification: Automated Models.json Update Scraper
+# Specification: Automated Leaderboard Scraper and Scoring
 
 **Project**: aiolympics  
 **Feature**: Python-based automation for updating AI model leaderboard rankings  
@@ -8,7 +8,7 @@
 
 ## 1. Overview
 
-Automate daily data collection and aggregation for the US vs China AI leaderboard by scraping model rankings, benchmark scores, and pricing from [llm-stats.com/leaderboards/llm-leaderboard](https://llm-stats.com/leaderboards/llm-leaderboard), calculating competitive metrics (total, avgIq, value, unified scores), and prepending new history entries to `models.json`. The scraper uses a **staged architecture** with table-based debugging output at each stage.
+Automate data collection and aggregation for the US vs China AI leaderboard by scraping model rankings, benchmark scores, and pricing from [llm-stats.com/leaderboards/llm-leaderboard](https://llm-stats.com/leaderboards/llm-leaderboard), calculating competitive metrics (AvgIQ, Value, Unified), and optionally enriching/writing `models.json`. The scraper uses a staged architecture with clear console tables and file outputs.
 
 ---
 
@@ -23,15 +23,15 @@ The scraper operates in three distinct stages, each building upon the previous:
 - **JSON Write**: Optional via `--write-json` flag
 
 ### Stage 2: Full Leaderboard Extraction (`--leaderboard-full`)
-- **Purpose**: Capture all visible table columns from llm-stats leaderboard
-- **Output**: Console tables (China/US) with all columns + derived scores at end
-- **Data Captured**: 
-  - Auto-detected headers in original column order
-  - All cell values as raw strings (including "-", "n/a", empty strings)
-  - Rank (1-10 per country, after filtering)
-  - Name, URL, and every leaderboard column verbatim
-  - Derived scores (total, avgIq, value, unified) appended at end
-- **JSON Write**: Optional via `--write-json` flag
+- Purpose: Capture all visible table columns from the leaderboard and compute derived scores
+- Console output: Combined Top 20 table sorted by Unified (descending)
+- Files written:
+  - `stage2_combined.csv` — All rows/columns + derived scores
+  - `stage2_combined.json` — Same ordering/fields as CSV
+  - `stage2_country_aggregates.csv` — Per-country totals and averages (Unified)
+  - `stage2_summary.json` — Aggregates + top-3 models per country by Unified
+- Benchmarks: Auto-detected from table headers; column order preserved
+- Notes: The Model column is widened in the table for readability
 
 ### Stage 3: Model Page Metadata Enrichment
 - **Purpose**: Navigate to each model detail page for additional metadata
@@ -46,7 +46,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 - **No inference**: Never substitute missing data with defaults or computed values
 - **Null handling**: Empty cells stored as empty string; "-" stored as "-"; "n/a" stored as "n/a"
 - **Column order**: Preserve original table column order from llm-stats
-- **Derived scores only**: Computed fields (total, avgIq, value, unified) calculated from raw strings at display/persist time
+- **Derived scores**: Computed fields (avgIq, value, unified) calculated from raw strings at display/persist time
 
 ### Per-Model Object (20 total: 10 US + 10 CN)
 ```json
@@ -62,7 +62,6 @@ The scraper operates in three distinct stages, each building upon the previous:
   "costOut": "string (raw from table)",
   "costInputPer1M": "string (raw from table)",
   "costOutputPer1M": "string (raw from table)",
-  "total": number,
   "avgIq": number,
   "value": number,
   "unified": number,
@@ -90,69 +89,43 @@ The scraper operates in three distinct stages, each building upon the previous:
 }
 ```
 
-**Note**: All benchmark columns auto-detected; the 10 benchmarks listed above are current as of Jan 2026 but may change based on llm-stats table updates "HLE": number or 0,
-   5. Derived Score Calculations
+**Note**: All benchmark columns are auto-detected; the concrete set may change based on llm-stats table updates.
 
-All derived scores are computed from raw string values at display/persist time. Non-numeric values (empty, "-", "n/a", etc.) are treated as **0** for calculation purposes.
+## 5. Derived Score Calculations (Current)
 
-**Total** (Sum of All Benchmarks):
-```
-total = Score_1 + Score_2 + ... + Score_N
-```
-- Non-numeric benchmark values = 0
-- Captures breadth across all auto-detected benchmarks
+All derived scores are computed from raw strings at display/persist time.
 
-**Average IQ** (Mean Benchmark Performance):
-```
-avgIq = total / number_of_benchmarks
-```
-- Non-numeric benchmarks counted as 0 in sum
-- Denominator = total number of benchmark columns detected
+1) Per-benchmark normalization (0–100):
+- For each benchmark with participation ≥ 2, compute min/max across the cohort and normalize: `(score − min) / (max − min) × 100`.
+- Benchmarks with a single participant are excluded from scoring.
 
-**Value** (Cost-Adjusted Performance):
-```
-value = avgIq / costIn (if costIn > 0)
-value = 0 (if costIn is 0, non-numeric, or missing)
-```
-- Measures performance per unit of input cost
-- Non-numeric costIn treated as 0 → value = 0
+2) Participation weighting:
+- Weight for a benchmark b: `w_b = participation[b] / max_participation`.
 
-**Unified Score** (Combined Metric):
-```
-unified = avgIq × 0.7 + value × 0.3
-```
-- Weighted blend: 70% capability, 30% cost efficiency
-- Non-numeric inputs propagate through as 0
+3) AvgIQ (capability):
+- `avgIq = sum(norm_b × w_b) / sum(w_b)` over benchmarks with valid scores.
+
+4) Value (cost efficiency):
+- `value = avgIq / (Input $/M + Output $/M)` (0 if total cost ≤ 0).
+
+5) Cohort normalization (0–100):
+- Compute min/max of `avgIq` and `value` across the cohort, then min–max normalize both to 0–100.
+
+6) Unified (0–1000):
+- `unified = 10 × (0.7 × norm(avgIq) + 0.3 × norm(value))`.
+
+Sorting: All leaderboards are ordered by Unified (descending).
 ---
 
-## 4. Calculations
+## 6. Outputs
 
-**IQ Index** (Reward Breadth Across All Benchmarks):
-```
-IQ = (Score_1 + Score_2 + ... + Score_10) / 10
-```
-- Missing benchmarks = 0 (penalized)
-- Range: 0–100
+Stage 2 writes the following files in the repository root:
+- `stage2_combined.csv` — All columns and derived scores, in Unified‑desc order
+- `stage2_combined.json` — Same rows/ordering as CSV
+- `stage2_country_aggregates.csv` — Per‑country totals/averages of Unified
+- `stage2_summary.json` — Aggregates + top‑3 models per country by Unified
 
-**Value Index** (Cost-Adjusted Performance):
-```
-BlendedCost = (3 × Input + 1 × Output) / 4
-Value = 100 × (1 - log(BlendedCost / 0.25) / log(60.00 / 0.25))
-```
-- Floor: $0.25/1M tokens = Value 100
-- Ceiling: $60.00/1M tokens = Value 0
-- Range: 0–100
-
-**Unified Power Score** (Overall Competitiveness):
-```
-Unified = IQ × (1 + Value/100)
-```
-- Captures both raw capability (IQ) and cost efficiency (Value)
-
-**Team Aggregates** (per team):
-- **Total**: Sum of 10 model Unified scores
-- **avgIq**: Mean of 10 model IQ values
-- **avgValue**: Mean of 10 model Value values
+Console table reads more comfortably via a slightly wider Model column.
 
 ---
 
@@ -194,25 +167,20 @@ Run post-calculation before committing to models.json:
 
 ## 7. Dependencies
 
-**Python 3.8+**  
+**Python 3.11+**  
 **scripts/requirements.txt**:
 ```
-playwright==1.40.0
-requests==2.31.0
-python-dateutil==2.8.2
+playwright>=1.40.0
 ```
 
 
-**Stage Flags**:
+**CLI**:
 ```bash
 # Stage 1: Basic leaderboard (rank, name, country, URL) - table output only
 python scripts/scrape_models.py --leaderboard-basic
 
-# Stage 2: Full leaderboard (all columns) - table output only
+# Stage 2: Full leaderboard (all columns + derived scores; writes CSV/JSON)
 python scripts/scrape_models.py --leaderboard-full
-
-# Stage 2 with JSON write
-python scripts/scrape_models.py --leaderboard-full --write-json
 
 # Stage 3: Full scrape with metadata (default, always writes JSON)
 python scripts/scrape_models.py
@@ -222,46 +190,17 @@ python scripts/scrape_models.py --leaderboard-full --max-col-width 50
 ```
 
 **Output Behavior**:
-- **Default**: Console tables showing China and US data with derived scores at end
-- **--write-json**: Creates timestamped backup, prepends history entry to models.json
-- **Table Format**: Max column width (default 36 chars), ellipsis for truncation, preserves column order
+- Default: Console table (Unified‑desc) + CSV/JSON summaries in repo root
+- Table: Max column width (default 36), with +5 width for Model column in Stage 2
 
 **Manual Steps**:
-1. Run stage with desired flag
-2. Review console table output
-3. Optionally add --write-json to persist
-4. Review updated models.json (git diff)
-5 ✅ Valid: Prepends new entry to models.json; prints "SUCCESS: New entry prepended"
-- ❌ Invalid: Rolls back changes; prints error with details; exits code 1
+1. Run with desired stage flag
+2. Review console output and CSV/JSON summaries
+3. If using Stage 3, review the `models.json` update before committing
 
-**Manual Steps**:
-1. Backup `models.json` → `models.backup-YYYY-MM-DDTHHMMSS.json`
-2. Run scraper
-3. Review updated models.json (git diff)
-4. Commit + push to GitHub
-
-### B. GitHub Actions Scheduled
-**.github/workflows/update-models.yml**:
-- **Trigger**: Twice daily at 12:00 UTC (noon) and 00:00 UTC (midnight)
-  - Cron 1: `0 12 * * *` (12:00 UTC)
-  - Cron 2: `0 0 * * *` (00:00 UTC)
-- **Runtime**: ~5–10 minutes per execution
-- **Step 1**: Check out main branch
-- **Step 2**: Set up Python 3.11
-- **Step 3**: Install dependencies
-- **Step 4**: Backup `models.json` → `models.backup-YYYY-MM-DDTHHMMSS.json` (UTC)
-- **Step 5**: Run scraper with validation
-- **Step 6**: Commit + push if successful
-
-**On Success**:
-- Auto-commits: `[Auto] Update models.json: Jan 21, 2026`
-- Pushes to main
-- Triggers Azure Static Web Apps deploy
-
-**On Failure**:
-- Logs error details to Actions output
-- No commit
-- Silent (no Slack/email/GitHub notifications)
+### B. GitHub Actions (Optional)
+- Triggers and cadence configurable per repository
+- Set up Python, install deps, run Stage 2/3, and commit on success
 
 ---
 
@@ -270,7 +209,7 @@ python scripts/scrape_models.py --leaderboard-full --max-col-width 50
 | Scenario | Behavior |
 |----------|----------|
 | **Playwright timeout** | Retry 2× with exponential backoff; fail after 3 attempts |
-| **Missing benchmark data** | Fill with 0; log warning |
+| **Missing benchmark data** | Skip in AvgIQ if no valid score; log warning |
 | **Invalid JSON generated** | Roll back; log parse error; exit 1 |
 | **Validation failure** | Log rule name + details; exit 1; no commit |
 | **Network error (llm-stats.com down)** | Retry 3×; fail after 3 attempts; notify operator |
@@ -284,7 +223,7 @@ All open questions have been resolved:
 
 | Decision | Selection | Status |
 |----------|-----------|---------|
-| **Benchmark Count** | 10 benchmarks (no 11th benchmark addition) | ✅ FINAL |
+| **Benchmark Handling** | Auto-detected; per-benchmark min–max normalization; skip single-participation | ✅ FINAL |
 | **Cron Schedule** | Twice daily: 12:00 UTC (noon) AND 00:00 UTC (midnight) | ✅ FINAL |
 | **Failure Notifications** | Silent—no Slack/email/GitHub alerts; errors logged to Actions output only | ✅ FINAL |
 
@@ -293,8 +232,8 @@ All open questions have been resolved:
 ## 11. Success Criteria
 
 - ✅ Scraper runs autonomously daily without manual intervention
-- ✅ models.json updated with new 20-model entry prepended to history
-- ✅ All calculations verified before commit
+- ✅ Stage 2 CSV/JSON summaries generated and sorted by Unified
+- ✅ All calculations verified during run
 - ✅ Historical audit trail preserved (all previous entries intact)
 - ✅ Azure Static Web Apps auto-deploys updated site within 2 minutes of push
 - ✅ Local execution works for testing: `python scripts/scrape_models.py`
