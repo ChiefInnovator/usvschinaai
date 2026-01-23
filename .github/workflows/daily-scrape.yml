@@ -44,6 +44,8 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       
       - name: Check for changes
         id: changes
@@ -60,7 +62,7 @@ jobs:
           git add models.json
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
-          git push origin main
+          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'
