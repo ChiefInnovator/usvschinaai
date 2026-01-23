@@ -127,6 +127,11 @@
         let expandedEntries = {}; // Key: index, Value: true/false
 
         // Benchmark name normalization map (raw key → display name)
+        const BASE_EXCLUDE_KEYS = new Set([
+            'model', 'name', 'company', 'company_link', 'link', 'origin', 'description', 'created', 'total', 'avgIq', 'value', 'unified',
+            'Model', 'Country', 'License', 'Context', 'Input$/M', 'Input $/M', 'Output$/M', 'Output $/M', 'Speed', 'Parameters(B)', 'KnowledgeCutoff', 'Multimodal', 'Released', 'Organization', '', 'rank'
+        ]);
+
         const BENCHMARK_NAME_MAP = {
             'AIME2025': 'AIME 2025',
             'ARC-AGI': 'ARC-AGI v2',
@@ -149,6 +154,40 @@
             'Toolathlon': 'Toolathlon'
         };
 
+        // Parse numeric value from string
+        function parseNumeric(raw) {
+            if (typeof raw === 'number') return raw;
+            if (typeof raw !== 'string') return null;
+            const num = parseFloat(raw.replace(/[^\d.-]/g, ''));
+            return isNaN(num) ? null : num;
+        }
+
+        // Extract only benchmarks (not metadata columns)
+        function extractBenchmarks(row) {
+            const benchmarks = [];
+            Object.entries(row || {}).forEach(([key, raw]) => {
+                if (BASE_EXCLUDE_KEYS.has(key)) return;
+                if (key.toLowerCase().includes('input') || key.toLowerCase().includes('output')) return;
+                const score = parseNumeric(raw);
+                const isKnownBenchmark = Boolean(BENCHMARK_NAME_MAP[key]);
+                const hasPercent = typeof raw === 'string' && raw.includes('%');
+                if (!isKnownBenchmark && !hasPercent) return;
+                if (score === null) return;
+                benchmarks.push({
+                    key,
+                    name: normalizeBenchmarkName(key),
+                    score
+                });
+            });
+            return benchmarks;
+        }
+
+        // Normalize benchmark name using map
+        function normalizeBenchmarkName(key) {
+            if (BENCHMARK_NAME_MAP[key]) return BENCHMARK_NAME_MAP[key];
+            return key.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/(\d+)/g, ' $1').trim();
+        }
+
         // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
             const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
@@ -161,11 +200,6 @@
             if (purpleGroup.includes(name)) return 'bg-purple-500/10 border border-purple-500/20';
             if (yellowGroup.includes(name)) return 'bg-yellow-500/10 border border-yellow-500/20';
             return 'bg-slate-800 border border-white/5';
-        }
-
-        // Normalize benchmark name using map
-        function normalizeBenchmarkName(rawKey) {
-            return BENCHMARK_NAME_MAP[rawKey] || rawKey;
         }
 
         async function fetchHistory() {
@@ -326,18 +360,14 @@
                 let entryBenchmarks = (entry && Array.isArray(entry.benchmarks)) ? entry.benchmarks : [];
                 if (!entryBenchmarks.length && entryModels.length) {
                     const benchmarkSet = new Set();
-                    const EXCLUDE = new Set(['model', 'name', 'iq', 'value', 'unified', 'origin', 'company', 'createdDate', 'rank', 'organization', 'link', 'description']);
                     entryModels.forEach(m => {
-                        Object.keys(m).forEach(key => {
-                            if (!EXCLUDE.has(key) && m[key] && m[key] !== '-') {
-                                benchmarkSet.add(key);
-                            }
+                        const benchmarks = extractBenchmarks(m);
+                        benchmarks.forEach(b => {
+                            benchmarkSet.add(b.name);
                         });
                     });
-                    // Normalize benchmark names and sort
-                    entryBenchmarks = Array.from(benchmarkSet)
-                        .map(key => normalizeBenchmarkName(key))
-                        .sort();
+                    // Sort benchmark names
+                    entryBenchmarks = Array.from(benchmarkSet).sort();
                 }
 
                 // Filter models
