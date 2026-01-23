@@ -376,24 +376,26 @@
                     // Show Global Top 10
                     displayModels = entryModels.slice().sort((a, b) => b.unified - a.unified).slice(0, 10);
                 } else if (currentFilter === 'all') {
-                    // Show all models
-                    displayModels = entryModels.slice();
+                    // Show all models, sorted by unified score descending by default
+                    displayModels = entryModels.slice().sort((a, b) => b.unified - a.unified);
                 } else {
-                    // Show all models for the selected country
-                    displayModels = entryModels.filter(m => m.origin === currentFilter);
+                    // Show all models for the selected country, sorted by unified descending
+                    displayModels = entryModels.filter(m => m.origin === currentFilter).sort((a, b) => b.unified - a.unified);
                 }
 
-                // Sort models
-                displayModels.sort((a, b) => {
-                    let valA = a[currentSort.key];
-                    let valB = b[currentSort.key];
-                    
-                    if (currentSort.direction === 'asc') {
-                        return valA > valB ? 1 : -1;
-                    } else {
-                        return valA < valB ? 1 : -1;
-                    }
-                });
+                // If sorting by a different key, resort the already-filtered models
+                if (currentSort.key !== 'unified' || currentSort.direction !== 'desc') {
+                    displayModels.sort((a, b) => {
+                        let valA = a[currentSort.key];
+                        let valB = b[currentSort.key];
+                        
+                        if (currentSort.direction === 'asc') {
+                            return valA > valB ? 1 : -1;
+                        } else {
+                            return valA < valB ? 1 : -1;
+                        }
+                    });
+                }
 
                 // Recalculate ranks based on current sort/filter order
                 displayModels.forEach((m, idx) => {
