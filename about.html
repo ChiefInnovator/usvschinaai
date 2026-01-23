@@ -6,8 +6,8 @@
     <title>US vs CHINA AI | About - Methodology & Scoring Explained</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Learn how US vs CHINA AI ranks AI models. Understand the Unified Power Score formula, the 11 benchmarks used for intelligence scoring, and the value index calculation.">
-    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Power Score, AI model evaluation, AIME benchmark, GPQA Diamond, ARC-AGI">
+    <meta name="description" content="Learn how US vs CHINA AI ranks AI models with a normalized Unified Score (0–1000), participation-weighted benchmarks, and value based on total cost (input + output).">
+    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Score, AI model evaluation, AIME benchmark, GPQA Diamond, ARC-AGI">
     <meta name="author" content="US vs CHINA AI">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://usvschina.ai/about.html">
@@ -62,31 +62,31 @@
         "@type": "FAQPage",
         "mainEntity": [{
             "@type": "Question",
-            "name": "What is the Unified Power Score?",
+            "name": "What is the Unified Score?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Unified Power Score (max 200) ranks AI models using the formula: Intelligence × (1 + Value/100). Intelligence is the unweighted average of 10 frontier benchmarks (max 100). Value is a log-normalized cost efficiency score (max 100)."
+                "text": "The Unified Score (0–1000) blends capability and value: 10 × (0.7 × normalized AvgIQ + 0.3 × normalized Value). AvgIQ is a participation-weighted average of per-benchmark normalized scores. Value is AvgIQ divided by total cost (Input $/M + Output $/M)."
             }
         },{
             "@type": "Question",
             "name": "What benchmarks are used to measure AI intelligence?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "10 frontier benchmarks: AIME 2025 (Math Olympiad), HMMT 2025 (Math Tournament), GPQA Diamond (PhD Science), ARC-AGI v2 (Advanced Reasoning), BrowseComp (Web Agents), HLE (Humanity's Last Exam), MMLU-Pro (Knowledge), LiveCodeBench (Coding), SWE-Bench Verified (Software Engineering), and CodeForces (Competitive Programming)."
+                "text": "Benchmarks are auto-detected from the source table (e.g., AIME, HMMT, GPQA Diamond, ARC-AGI, BrowseComp, HLE, MMLU-Pro, LiveCodeBench, SWE-Bench Verified, CodeForces). Only benchmarks with at least two participating models contribute to scoring; single-participation benchmarks are skipped."
             }
         },{
             "@type": "Question",
             "name": "How is the Value Index calculated?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Value Index is a log-normalized efficiency score based on blended cost per 1M tokens. The formula uses $0.25 as the floor (best value = 100) and $60.00 as the ceiling (worst value = 0)."
+                "text": "Value = AvgIQ / (Input $/M + Output $/M). Both AvgIQ and Value are min–max normalized across the cohort before computing Unified."
             }
         },{
             "@type": "Question",
             "name": "How is the National Score calculated?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The National Score is the sum of Unified Power Scores for all models from that nation that appear in the Global Top 10. Only top 10 models contribute to a nation's score."
+                "text": "National scores sum the Unified Scores for models from each nation in the combined leaderboard (Unified-desc)."
             }
         }]
     }
@@ -216,24 +216,25 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-white font-bold mb-2 text-lg">Unified Power Score (Max 200)</h3>
+                        <h3 class="text-white font-bold mb-2 text-lg">Unified Score (0–1000)</h3>
                         <p class="text-slate-400 mb-4">
-                            We use <strong class="text-purple-400">Intelligence-Gated Value</strong>: intelligence is the foundation,
-                            and value is a multiplier.
+                            Capability-first, value-aware: participation-weighted, benchmark-normalized capability blended with cost efficiency, then scaled ×10.
                         </p>
                         <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-3 border border-purple-500/20">
-                            Unified = IQ × (1 + Value / 100)
+                            Unified = 10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))
                         </div>
-                        <p class="text-xs text-slate-500 italic">
-                            A model with zero intelligence scores zero—no matter how cheap.
-                        </p>
+                        <ul class="text-slate-300 text-sm space-y-2">
+                            <li><span class="text-purple-200 font-semibold">Per-benchmark normalization:</span> Each benchmark is min–max normalized (0–100) across the cohort; benchmarks with only one participant are skipped.</li>
+                            <li><span class="text-purple-200 font-semibold">Participation weighting:</span> Benchmarks are weighted by participation fraction (bench count ÷ max bench count).</li>
+                            <li><span class="text-purple-200 font-semibold">Value:</span> AvgIQ / (Input $/M + Output $/M); both AvgIQ and Value are cohort-normalized to 0–100 before blending.</li>
+                        </ul>
                     </div>
 
                     <div>
                         <h3 class="text-white font-bold mb-2 text-lg">National score (USA vs China)</h3>
                         <p class="text-slate-400 mb-3">
-                            National totals are computed from the <strong>Global Top 10</strong> only (by Unified score).
-                            This rewards both peak performance and depth of top-tier presence.
+                            National totals sum the Unified Scores for models from each nation in the combined leaderboard (sorted by Unified).
+                            This rewards both peak performance and depth of high-performing models.
                         </p>
                         <div class="bg-slate-900/50 p-4 rounded-xl text-xs text-slate-300 border border-yellow-500/20">
                             <div class="flex items-center gap-2 mb-2">
@@ -263,15 +264,15 @@
                             <p class="text-slate-400">A strong model becomes more powerful when it’s also affordable to deploy at scale.</p>
                         </div>
                         <div>
-                            <div class="font-bold text-white mb-1">3) Benchmarks are averaged unweighted</div>
-                            <p class="text-slate-400">We don’t hand-tune weights. This keeps the IQ index simple and auditable.</p>
+                            <div class="font-bold text-white mb-1">3) Benchmarks are normalized and participation-weighted</div>
+                            <p class="text-slate-400">Each benchmark is min–max normalized; single-participation benchmarks are skipped; weights follow participation fraction.</p>
                         </div>
                     </div>
 
                     <div class="space-y-3 text-slate-300">
                         <div>
-                            <div class="font-bold text-white mb-1">4) Pricing is log-normalized</div>
-                            <p class="text-slate-400">Costs vary by orders of magnitude, so value uses a log scale to avoid extreme distortion.</p>
+                            <div class="font-bold text-white mb-1">4) Pricing uses total cost</div>
+                            <p class="text-slate-400">Value uses total cost (Input + Output) with linear normalization inside the Unified blend.</p>
                         </div>
                         <div>
                             <div class="font-bold text-white mb-1">5) “All” views are for context</div>
@@ -291,13 +292,13 @@
                     <span>Benchmarks included</span>
                 </h2>
                 <p class="text-slate-400 mb-4">
-                    The IQ index is an unweighted average across 10 frontier benchmarks:
+                    Benchmarks are auto-detected from the source leaderboard and may change over time. Examples include:
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME 2025</span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">HMMT 2025</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">HMMT</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA Diamond</span>
-                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">ARC-AGI v2</span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">ARC-AGI</span>
                     <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">BrowseComp</span>
                     <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">HLE</span>
                     <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">MMLU-Pro</span>
