@@ -65,14 +65,14 @@
             "name": "What is the Unified Score?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Unified Score (0–1000) blends capability and value: 10 × (0.7 × normalized AvgIQ + 0.3 × normalized Value). AvgIQ is a participation-weighted average of per-benchmark normalized scores. Value is AvgIQ divided by total cost (Input $/M + Output $/M)."
+                "text": "The Unified Score (0–1000) emphasizes capability over cost efficiency: 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ is a participation-weighted average of per-benchmark normalized scores. Value is AvgIQ divided by total cost (Input $/M + Output $/M)."
             }
         },{
             "@type": "Question",
             "name": "What benchmarks are used to measure AI intelligence?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Benchmarks are auto-detected from the source table (e.g., AIME, HMMT, GPQA Diamond, ARC-AGI, BrowseComp, HLE, MMLU-Pro, LiveCodeBench, SWE-Bench Verified, CodeForces). Only benchmarks with at least two participating models contribute to scoring; single-participation benchmarks are skipped."
+                "text": "Only benchmarks with at least 2 participating models contribute to scoring. Current active benchmarks (by participation): CodeArena (20), GPQA (17), AIME 2025 (16), SWE-Bench Verified (16), TerminalBench (10), HLE (9), MMLU (8), BrowseComp (8), ARC-AGI v2 (6), and others. Single-participation benchmarks are excluded."
             }
         },{
             "@type": "Question",
@@ -218,10 +218,10 @@
                     <div>
                         <h3 class="text-white font-bold mb-2 text-lg">Unified Score (0–1000)</h3>
                         <p class="text-slate-400 mb-4">
-                            Capability-first, value-aware: participation-weighted, benchmark-normalized capability blended with cost efficiency, then scaled ×10.
+                            Capability-focused (90%) with value efficiency (10%): participation-weighted, benchmark-normalized capability blended with cost efficiency, then scaled ×10.
                         </p>
                         <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-3 border border-purple-500/20">
-                            Unified = 10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))
+                            Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                         </div>
                         <ul class="text-slate-300 text-sm space-y-2">
                             <li><span class="text-purple-200 font-semibold">Per-benchmark normalization:</span> Each benchmark is min–max normalized (0–100) across the cohort; benchmarks with only one participant are skipped.</li>
@@ -292,19 +292,19 @@
                     <span>Benchmarks included</span>
                 </h2>
                 <p class="text-slate-400 mb-4">
-                    Benchmarks are auto-detected from the source leaderboard and may change over time. Examples include:
+                    Only benchmarks with 2+ model participation are included. Current benchmarks (count of participating models):
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME</span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">HMMT</span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA Diamond</span>
-                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">ARC-AGI</span>
-                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">BrowseComp</span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">HLE</span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">MMLU-Pro</span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">LiveCodeBench</span>
-                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">SWE-Bench Verified</span>
-                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">CodeForces</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">CodeArena <span class="text-blue-300 font-semibold">(20)</span></span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA <span class="text-blue-300 font-semibold">(17)</span></span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME 2025 <span class="text-blue-300 font-semibold">(16)</span></span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">SWE-Bench Verified <span class="text-red-300 font-semibold">(16)</span></span>
+                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">TerminalBench <span class="text-red-300 font-semibold">(10)</span></span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">HLE <span class="text-purple-300 font-semibold">(9)</span></span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">MMLU <span class="text-purple-300 font-semibold">(8)</span></span>
+                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">BrowseComp <span class="text-purple-300 font-semibold">(8)</span></span>
+                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">ARC-AGI v2 <span class="text-yellow-300 font-semibold">(6)</span></span>
+                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">+8 more (2-5 models each)</span>
                 </div>
             </div>
 

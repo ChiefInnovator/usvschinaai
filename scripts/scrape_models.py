@@ -117,13 +117,12 @@ def calculate_derived_scores(
     else:
         norm_value = value
     
-    # Unified (70% normalized capability, 30% normalized cost efficiency)
-    unified = norm_avg_iq * 0.7 + norm_value * 0.3
+    # Unified (90% normalized capability, 10% normalized cost efficiency)
+    unified = norm_avg_iq * 0.9 + norm_value * 0.1
     # Scale final Unified by 10 as requested
     unified *= 10
     
     return {
-        "total": round(total_weighted, 2),
         "avgIq": round(avg_iq, 2),
         "value": round(value, 2),
         "unified": round(unified, 2)
@@ -503,7 +502,12 @@ def build_history_entry(
     all_headers: List[str],
     benchmark_headers: List[str],
     participation: Optional[Dict[str, int]] = None,
-    max_participation: Optional[int] = None
+    max_participation: Optional[int] = None,
+    min_avg_iq: Optional[float] = None,
+    max_avg_iq: Optional[float] = None,
+    min_value: Optional[float] = None,
+    max_value: Optional[float] = None,
+    benchmark_min_max: Optional[Dict[str, tuple]] = None,
 ) -> Dict[str, Any]:
     """Build models.json history entry from scraped data."""
     # Get timezone-aware timestamp
@@ -518,16 +522,25 @@ def build_history_entry(
     
     def entry_to_row(entry: LeaderboardEntry) -> Dict[str, Any]:
         """Convert LeaderboardEntry to models.json row format."""
-        scores = calculate_derived_scores(entry, benchmark_headers, participation, max_participation)
+        scores = calculate_derived_scores(
+            entry,
+            benchmark_headers,
+            participation,
+            max_participation,
+            min_avg_iq,
+            max_avg_iq,
+            min_value,
+            max_value,
+            benchmark_min_max=benchmark_min_max,
+        )
         
         row = {
             "model": entry.name,
-            "company": entry.company,
+            "organization": entry.company,
             "link": entry.url,
             "origin": entry.country,
             "description": entry.description,
             "created": entry.created,
-            "total": scores["total"],
             "avgIq": scores["avgIq"],
             "value": scores["value"],
             "unified": scores["unified"]
@@ -535,6 +548,8 @@ def build_history_entry(
         
         # Add all raw column values
         for header, value in entry.columns.items():
+            if not header.strip():
+                continue
             key = header.replace(" ", "")
             if key not in row:
                 row[key] = value
@@ -863,6 +878,40 @@ def run_scraper(args):
             else:  # metadata stage
                 us_entries = enrich_with_metadata(page, us_entries)
                 cn_entries = enrich_with_metadata(page, cn_entries)
+
+                combined_entries = us_entries + cn_entries
+
+                # Calculate per-benchmark min/max for normalization (exclude single-participant benchmarks)
+                benchmark_min_max = {}
+                for b in benchmark_headers:
+                    if participation_counts.get(b, 0) <= 1:
+                        continue
+                    values = []
+                    for e in combined_entries:
+                        raw_val = e.columns.get(b, "")
+                        if raw_val and raw_val not in ["", "-", "n/a", "N/A", "null", "None"]:
+                            values.append(parse_to_number(raw_val))
+                    if values:
+                        benchmark_min_max[b] = (min(values), max(values))
+
+                # Compute min/max for AvgIQ and Value using normalized benchmark scores
+                avg_iq_values = []
+                value_values = []
+                for e in combined_entries:
+                    scores = calculate_derived_scores(
+                        e,
+                        benchmark_headers,
+                        participation_counts,
+                        max_participation,
+                        benchmark_min_max=benchmark_min_max,
+                    )
+                    avg_iq_values.append(scores["avgIq"])
+                    value_values.append(scores["value"])
+
+                min_avg_iq = min(avg_iq_values) if avg_iq_values else 0
+                max_avg_iq = max(avg_iq_values) if avg_iq_values else 1
+                min_value = min(value_values) if value_values else 0
+                max_value = max(value_values) if value_values else 1
                 
                 print(format_table(
                     us_entries,
@@ -872,7 +921,12 @@ def run_scraper(args):
                     include_derived=True,
                     benchmark_headers=benchmark_headers,
                     participation=participation_counts,
-                    max_participation=max_participation
+                    max_participation=max_participation,
+                    min_avg_iq=min_avg_iq,
+                    max_avg_iq=max_avg_iq,
+                    min_value=min_value,
+                    max_value=max_value,
+                    benchmark_min_max=benchmark_min_max,
                 ))
                 
                 print(format_table(
@@ -883,18 +937,61 @@ def run_scraper(args):
                     include_derived=True,
                     benchmark_headers=benchmark_headers,
                     participation=participation_counts,
-                    max_participation=max_participation
+                    max_participation=max_participation,
+                    min_avg_iq=min_avg_iq,
+                    max_avg_iq=max_avg_iq,
+                    min_value=min_value,
+                    max_value=max_value,
+                    benchmark_min_max=benchmark_min_max,
                 ))
                 
                 print("\nWriting CSV files...")
-                write_csv(us_entries, workspace_dir / f"stage{stage_num}_us.csv", all_headers, include_derived=True, benchmark_headers=benchmark_headers, participation=participation_counts, max_participation=max_participation)
-                write_csv(cn_entries, workspace_dir / f"stage{stage_num}_cn.csv", all_headers, include_derived=True, benchmark_headers=benchmark_headers, participation=participation_counts, max_participation=max_participation)
+                write_csv(
+                    us_entries,
+                    workspace_dir / f"stage{stage_num}_us.csv",
+                    all_headers,
+                    include_derived=True,
+                    benchmark_headers=benchmark_headers,
+                    participation=participation_counts,
+                    max_participation=max_participation,
+                    min_avg_iq=min_avg_iq,
+                    max_avg_iq=max_avg_iq,
+                    min_value=min_value,
+                    max_value=max_value,
+                    benchmark_min_max=benchmark_min_max,
+                )
+                write_csv(
+                    cn_entries,
+                    workspace_dir / f"stage{stage_num}_cn.csv",
+                    all_headers,
+                    include_derived=True,
+                    benchmark_headers=benchmark_headers,
+                    participation=participation_counts,
+                    max_participation=max_participation,
+                    min_avg_iq=min_avg_iq,
+                    max_avg_iq=max_avg_iq,
+                    min_value=min_value,
+                    max_value=max_value,
+                    benchmark_min_max=benchmark_min_max,
+                )
             
             # Write JSON if requested (or always for metadata stage)
             if args.write_json or stage == "metadata":
                 print("\nWriting JSON...")
                 backup_models_json(models_path)
-                new_entry = build_history_entry(us_entries, cn_entries, all_headers, benchmark_headers, participation_counts, max_participation)
+                new_entry = build_history_entry(
+                    us_entries,
+                    cn_entries,
+                    all_headers,
+                    benchmark_headers,
+                    participation_counts,
+                    max_participation,
+                    min_avg_iq,
+                    max_avg_iq,
+                    min_value,
+                    max_value,
+                    benchmark_min_max=benchmark_min_max,
+                )
                 prepend_history(models_path, new_entry)
                 
                 print(f"\nTimestamp: {new_entry['timestamp']}")
