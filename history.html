@@ -293,7 +293,21 @@
                 const leaderColor = isUsaLeader ? 'text-blue-400' : 'text-red-400';
                 const leaderName = isUsaLeader ? 'Team USA' : 'Team China';
                 const leaderFlag = isUsaLeader ? '🇺🇸' : '🇨🇳';
-                const entryBenchmarks = (entry && Array.isArray(entry.benchmarks)) ? entry.benchmarks : [];
+
+                // Extract benchmarks from models if not provided in entry
+                let entryBenchmarks = (entry && Array.isArray(entry.benchmarks)) ? entry.benchmarks : [];
+                if (!entryBenchmarks.length && entryModels.length) {
+                    const benchmarkSet = new Set();
+                    const EXCLUDE = {'model', 'name', 'iq', 'value', 'unified', 'origin', 'company', 'createdDate', 'rank', 'organization', 'link', 'description'};
+                    entryModels.forEach(m => {
+                        Object.keys(m).forEach(key => {
+                            if (!EXCLUDE.has(key) && m[key] && m[key] !== '-') {
+                                benchmarkSet.add(key);
+                            }
+                        });
+                    });
+                    entryBenchmarks = Array.from(benchmarkSet).sort();
+                }
 
                 // Filter models
                 let displayModels = [];
