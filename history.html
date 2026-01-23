@@ -507,7 +507,7 @@
                                                 const flag = m.origin === 'US' ? '🇺🇸' : '🇨🇳';
                                                 const originClass = m.origin === 'US' ? 'text-blue-400' : 'text-red-400';
                                                 
-                                                let rankDisplay = `<span class="text-slate-400 font-mono">#${m.rank || idx + 1}</span>`;
+                                                let rankDisplay = `<span class="text-slate-400 font-mono">#${String(m.rank || idx + 1).padStart(2, '0')}</span>`;
                                                 if (m.rank === 1) rankDisplay = `<span class="text-yellow-500 font-bold text-lg">01 🥇</span>`;
                                                 if (m.rank === 2) rankDisplay = `<span class="text-slate-300 font-bold text-lg">02 🥈</span>`;
                                                 if (m.rank === 3) rankDisplay = `<span class="text-orange-400 font-bold text-lg">03 🥉</span>`;
