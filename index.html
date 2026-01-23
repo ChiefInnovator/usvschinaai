@@ -342,50 +342,25 @@
             </h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-400">
                 <div>
-                    <h4 class="text-white font-bold mb-2 text-lg">Unified Power Score (Max 200)</h4>
-                    <p class="mb-2">The ultimate metric using <strong class="text-purple-400">Intelligence-Gated Value</strong> — where intelligence is the foundation and value acts as a multiplier.</p>
+                    <h4 class="text-white font-bold mb-2 text-lg">Unified Power Score (0–1000)</h4>
+                    <p class="mb-2">Weighted blend emphasizing capability (90%) over cost efficiency (10%).</p>
                     <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
-                        Unified = IQ × (1 + Value / 100)
+                        Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                     </div>
-                    <p class="mb-4 text-xs text-slate-500 italic">A model with zero intelligence scores zero — no matter how cheap. Value without intelligence is meaningless.</p>
+                    <p class="mb-4 text-xs text-slate-500 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
                     
-                    <h4 class="text-white font-bold mb-2 text-lg">Intelligence Index ($I$)</h4>
-                    <p class="mb-2">Unweighted average (Max 100) of 10 frontier benchmarks:</p>
-                    <ul class="list-disc list-inside space-y-1 ml-2">
-                        <li><strong class="text-slate-300">AIME 2025</strong>: Math Olympiad (No-tool)</li>
-                        <li><strong class="text-slate-300">HMMT 2025</strong>: Harvard-MIT Math Tournament</li>
-                        <li><strong class="text-slate-300">GPQA Diamond</strong>: PhD-level science reasoning</li>
-                        <li><strong class="text-slate-300">ARC-AGI v2</strong>: Advanced general intelligence</li>
-                        <li><strong class="text-slate-300">BrowseComp</strong>: Web agent capabilities</li>
-                        <li><strong class="text-slate-300">HLE</strong>: Humanity's Last Exam</li>
-                        <li><strong class="text-slate-300">MMLU-Pro</strong>: Robust multi-task understanding</li>
-                        <li><strong class="text-slate-300">LiveCodeBench</strong>: Live coding challenges</li>
-                        <li><strong class="text-slate-300">SWE-Bench Verified</strong>: Real-world software engineering</li>
-                        <li><strong class="text-slate-300">CodeForces</strong>: Competitive programming</li>
-                    </ul>
+                    <h4 class="text-white font-bold mb-2 text-lg">AvgIQ (capability)</h4>
+                    <p class="mb-2">Participation-weighted average of benchmark scores. Each benchmark is min–max normalized across the cohort, and benchmarks with only one participant are excluded from scoring.</p>
+                    <p class="text-xs text-slate-500">This rewards models that perform well on widely reported tests while avoiding single-entry spikes.</p>
                 </div>
                 <div>
-                    <h4 class="text-white font-bold mb-2 text-lg">Value Index ($V$)</h4>
-                    <p class="mb-4">Log-normalized efficiency score (Max 100) based on <strong>Blended Cost per 1M tokens</strong> (3:1 input:output ratio).</p>
-                    <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
-                        Blended Cost = (3 × Input + 1 × Output) / 4<br>
-                        V = 100 × (1 - log(Cost / 0.25) / log(60.00 / 0.25))
-                    </div>
-                    <p class="mb-2">
-                        <span class="block mb-1"><strong class="text-green-400">Floor ($0.25)</strong>: Models at or below this cost receive V = 100</span>
-                        <span class="block"><strong class="text-red-400">Ceiling ($60.00)</strong>: Models at or above this cost receive V = 0</span>
-                    </p>
-                    <p class="text-xs text-slate-400">
-                        The logarithmic scale ensures cost differences matter more at the low end—the gap between $0.25 and $1.00 has greater impact than $50 vs $60.
-                    </p>
+                    <h4 class="text-white font-bold mb-2 text-lg">Value (efficiency)</h4>
+                    <p class="mb-4">Value = AvgIQ ÷ (Input $/M + Output $/M). Lower cost with higher capability increases Value.</p>
+                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified.</p>
                     
-                    <h4 class="text-white font-bold mb-2 text-lg mt-6">National Score Calculation</h4>
-                    <p class="mb-4">
-                        The National Score for Team USA and Team China is the <strong>sum of the Unified Power Scores</strong> for all models belonging to that nation that appear in the <strong>Global Top 10</strong>.
-                    </p>
-                    <p class="text-xs text-slate-500 italic">
-                        * Only models ranked in the top 10 globally contribute to the national total. This rewards both peak performance and depth of dominance.
-                    </p>
+                    <h4 class="text-white font-bold mb-2 text-lg">National Score</h4>
+                    <p class="mb-4">For USA and China, we sum the Unified scores of that nation’s models inside the global Top 10.</p>
+                    <p class="text-xs text-slate-500 italic">This rewards both peak performance and depth in the top of the table.</p>
                     <p class="text-xs text-slate-500 mt-4 border-t border-white/5 pt-4">
                         Not affiliated with any model provider. No guarantees are made about correctness, completeness, or fitness for any purpose.
                     </p>
@@ -407,85 +382,152 @@
     </footer>
 
     <script>
-        // Data Source
+        const BASE_EXCLUDE_KEYS = new Set([
+            'model', 'name', 'company', 'company_link', 'link', 'origin', 'description', 'created', 'total', 'avgIq', 'value', 'unified',
+            'Model', 'Country', 'License', 'Context', 'Input$/M', 'Input $/M', 'Output$/M', 'Output $/M', 'Speed', 'Parameters(B)', 'KnowledgeCutoff', 'Multimodal', 'Released', 'Organization', '', 'rank'
+        ]);
+        const BENCHMARK_NAME_MAP = {
+            'AIME2025': 'AIME 2025',
+            'HMMT2025': 'HMMT 2025',
+            'GPQA': 'GPQA Diamond',
+            'GPQADiamond': 'GPQA Diamond',
+            'BrowseComp': 'BrowseComp',
+            'ARC-AGIv2': 'ARC-AGI v2',
+            'HLE': 'HLE',
+            'MMMLU': 'MMLU-Pro',
+            'MMLU-Pro': 'MMLU-Pro',
+            'LiveCodeBench': 'LiveCodeBench',
+            'SWE-benchVerified': 'SWE-Bench Verified',
+            'CodeForces': 'CodeForces',
+            'CharXiv-R': 'CharXiv-R',
+            'MMMU': 'MMMU',
+            'MMMU-Pro': 'MMMU-Pro',
+            'ScreenSpotPro': 'ScreenSpot Pro',
+            'MCPAtlas': 'MCP Atlas',
+            'SimpleQA': 'SimpleQA',
+            'OSWorld': 'OSWorld',
+            'Toolathlon': 'Toolathlon',
+            'TerminalBench': 'Terminal Bench',
+            'TAU2Retail': 'TAU2 Retail',
+            'FrontierMath': 'FrontierMath'
+        };
+
         let appData = {};
         let models = [];
+        let benchmarkList = [];
         let currentEntry = null;
         let currentSort = { key: 'unified', direction: 'desc' };
         let currentFilter = 'top10';
-        let leaderboardIsFlipped = false;
 
-        // Toggle Leaderboard Flip
-        // Populate Benchmark Details Table
+        const formatNumber = (num, decimals = 1) => Number(num || 0).toFixed(decimals);
+        const formatUnified = (num) => Number(num || 0).toFixed(2);
+        const parseNumeric = (value) => {
+            if (value === null || value === undefined) return null;
+            const cleaned = String(value).replace(/[%$,]/g, '').trim();
+            if (cleaned === '' || cleaned === '-' || cleaned.toLowerCase() === 'n/a') return null;
+            const n = parseFloat(cleaned);
+            return Number.isFinite(n) ? n : null;
+        };
+
+        const normalizeBenchmarkName = (key) => {
+            if (BENCHMARK_NAME_MAP[key]) return BENCHMARK_NAME_MAP[key];
+            return key.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/(\d+)/g, ' $1').trim();
+        };
+
+        function extractBenchmarks(row) {
+            const benchmarks = [];
+            Object.entries(row || {}).forEach(([key, raw]) => {
+                if (BASE_EXCLUDE_KEYS.has(key)) return;
+                if (key.toLowerCase().includes('input') || key.toLowerCase().includes('output')) return;
+                const score = parseNumeric(raw);
+                const isKnownBenchmark = Boolean(BENCHMARK_NAME_MAP[key]);
+                const hasPercent = typeof raw === 'string' && raw.includes('%');
+                if (!isKnownBenchmark && !hasPercent) return;
+                if (score === null) return;
+                benchmarks.push({
+                    key,
+                    name: normalizeBenchmarkName(key),
+                    score
+                });
+            });
+            return benchmarks;
+        }
+
+        function normalizeModelsFromEntry(entry) {
+            const combined = [...(entry?.teams?.US || []), ...(entry?.teams?.CN || [])];
+            const normalized = combined.map((row) => {
+                const benchmarks = extractBenchmarks(row);
+                const benchmarkMap = {};
+                benchmarks.forEach(b => { benchmarkMap[b.name] = b.score; });
+                const costIn = parseNumeric(row['Input$/M'] ?? row['Input $/M']) ?? 0;
+                const costOut = parseNumeric(row['Output$/M'] ?? row['Output $/M']) ?? 0;
+                return {
+                    name: row.model || row.name || 'Unknown Model',
+                    origin: row.origin || 'US',
+                    link: row.link || '#',
+                    organization: row.organization || row.Organization || 'Unknown',
+                    companyLink: row.link || '#',
+                    createdDate: row.Released || row.created || '',
+                    description: row.description || '',
+                    iq: Number(row.avgIq) || 0,
+                    value: Number(row.value) || 0,
+                    unified: Number(row.unified) || 0,
+                    benchmarks,
+                    benchmarkMap,
+                    costIn,
+                    costOut
+                };
+            });
+
+            normalized.sort((a, b) => b.unified - a.unified);
+            normalized.forEach((m, idx) => { m.rank = idx + 1; });
+            benchmarkList = Array.from(new Set(normalized.flatMap(m => m.benchmarks.map(b => b.name)))).sort();
+            return normalized;
+        }
+
+        // Populate Benchmark Details Table (if present)
         function populateBenchmarkDetailsTable() {
             const tbody = document.getElementById('benchmark-details-tbody');
-            if (!tbody || !models || models.length === 0) return;
+            if (!tbody || !models.length || !benchmarkList.length) return;
 
-            // Sort by unified score
             const sorted = [...models].sort((a, b) => b.unified - a.unified);
-
             tbody.innerHTML = sorted.map(model => {
                 const flag = model.origin === 'US' ? '🇺🇸' : '🇨🇳';
                 const originClass = model.origin === 'US' ? 'text-blue-400' : 'text-red-400';
-                
-                // Extract benchmark scores
-                const benchmarks = model.benchmarks || {};
-                const benchmarkNames = [
-                    'AIME 2025',
-                    'HMMT 2025',
-                    'GPQA Diamond',
-                    'BrowseComp',
-                    'ARC-AGI v2',
-                    'HLE',
-                    'MMLU-Pro',
-                    'LiveCodeBench',
-                    'SWE-Bench Verified',
-                    'CodeForces'
-                ];
-
-                let benchmarkCells = benchmarkNames.map(name => {
-                    const score = benchmarks[name];
+                const benchmarkCells = benchmarkList.map(name => {
+                    const score = model.benchmarkMap[name];
                     if (score === undefined || score === null) {
-                        return `<td class="p-3 text-center text-slate-600">—</td>`;
+                        return '<td class="p-3 text-center text-slate-600">—</td>';
                     }
-                    return `<td class="p-3 text-center text-green-400 font-semibold">${score.toFixed(1)}</td>`;
+                    return `<td class="p-3 text-center text-green-400 font-semibold">${formatNumber(score)}</td>`;
                 }).join('');
 
                 const rankDisplay = model.rank === 1 ? '🥇' : (model.rank === 2 ? '🥈' : (model.rank === 3 ? '🥉' : `#${model.rank}`));
-                
                 return `
                     <tr class="hover:bg-white/5 transition">
                         <td class="p-3 font-bold">${rankDisplay}</td>
                         <td class="p-3">
-                            <a href="${model.link || '#'}" target="_blank" class="font-semibold hover:text-blue-400 transition">
+                            <a href="${model.link}" target="_blank" class="font-semibold hover:text-blue-400 transition">
                                 ${model.name}
                             </a>
                         </td>
                         <td class="p-3">
                             <span class="${originClass} font-semibold">${flag} ${model.origin}</span>
                         </td>
-                        <td class="p-3 text-center font-semibold">${model.iq.toFixed(1)}</td>
-                        <td class="p-3 text-center font-semibold">${model.value.toFixed(1)}</td>
-                        <td class="p-3 text-center font-bold text-yellow-400">${model.unified.toFixed(1)}</td>
-                        <td class="p-3 text-center">
-                            <span class="cost-badge">$${model.costInputPer1M.toFixed(2)}</span>
-                        </td>
-                        <td class="p-3 text-center">
-                            <span class="cost-badge">$${model.costOutputPer1M.toFixed(2)}</span>
-                        </td>
+                        <td class="p-3 text-center font-semibold">${formatNumber(model.iq)}</td>
+                        <td class="p-3 text-center font-semibold">${formatNumber(model.value)}</td>
+                        <td class="p-3 text-center font-bold text-yellow-400">${formatUnified(model.unified)}</td>
                         ${benchmarkCells}
                     </tr>
                 `;
             }).join('');
         }
 
-        // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
             const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
-            const redGroup = ['ARC-AGI', 'BrowseComp', 'ARC-AGI v2'];
-            const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench'];
+            const redGroup = ['ARC-AGI', 'ARC-AGI v2', 'BrowseComp'];
+            const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench', 'MMMU'];
             const yellowGroup = ['SWE-Bench Verified', 'CodeForces'];
-            
             if (blueGroup.includes(name)) return 'bg-blue-500/10 border border-blue-500/20';
             if (redGroup.includes(name)) return 'bg-red-500/10 border border-red-500/20';
             if (purpleGroup.includes(name)) return 'bg-purple-500/10 border border-purple-500/20';
@@ -497,21 +539,17 @@
             try {
                 const response = await fetch('models.json');
                 appData = await response.json();
-
                 const history = Array.isArray(appData.history) ? appData.history : [];
-                if (history.length) {
-                    currentEntry = history.slice().sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp))[0];
-                    models = (currentEntry && Array.isArray(currentEntry.models)) ? currentEntry.models : [];
-                } else {
-                    currentEntry = null;
-                    models = Array.isArray(appData.models) ? appData.models : [];
-                }
-                
+                if (!history.length) throw new Error('No history entries in models.json');
+                currentEntry = history[0];
+                models = normalizeModelsFromEntry(currentEntry);
                 populateStaticContent();
                 calculateTotals();
                 renderTable();
                 renderMatrix();
                 renderCompanyLeaderboard();
+                populateBenchmarkDetailsTable();
+                updateFilterUI();
                 if (window.lucide && typeof lucide.createIcons === 'function') {
                     lucide.createIcons();
                 }
@@ -521,22 +559,16 @@
         }
 
         function populateStaticContent() {
-            // Metadata
-            const metaTitle = appData && appData.metadata && appData.metadata.title ? appData.metadata.title : 'US vs CHINA AI';
+            const metaTitle = appData?.metadata?.title || 'US vs CHINA AI';
             document.title = `${metaTitle} | Global Leaderboard`;
-            
-            // Title with gradient
-            const titleEl = document.getElementById('page-title');
-            // Updated for usvschina.ai branding
-            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`; 
-            
-            if (appData && appData.history && appData.history.length > 0) {
-                const latestEntry = appData.history[0];
-                document.getElementById('page-subtitle').textContent = latestEntry.subtitle || '';
-            }
 
-            // Teams
-            if (appData && appData.teams && appData.teams.usa && appData.teams.china) {
+            const titleEl = document.getElementById('page-title');
+            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`;
+
+            const subtitle = currentEntry?.timestamp ? `Updated ${currentEntry.timestamp}` : '';
+            document.getElementById('page-subtitle').textContent = subtitle;
+
+            if (appData?.teams?.usa && appData?.teams?.china) {
                 const usa = appData.teams.usa;
                 document.getElementById('team-usa-name').innerHTML = `${usa.name} ${usa.flag}`;
                 document.getElementById('team-usa-desc').textContent = usa.description;
@@ -545,19 +577,22 @@
                 const china = appData.teams.china;
                 document.getElementById('team-china-name').innerHTML = `${china.name} ${china.flag}`;
                 document.getElementById('team-china-desc').textContent = china.description;
-                const chinaBadgeEl = document.getElementById('team-china-badge');
-                chinaBadgeEl.textContent = china.badge;
+                document.getElementById('team-china-badge').textContent = china.badge;
             }
 
-            // Table Headers
             const thead = document.getElementById('table-header');
+            const cols = [
+                { key: 'rank', label: 'Rank' },
+                { key: 'name', label: 'Model' },
+                { key: 'iq', label: 'AvgIQ (normalized)' },
+                { key: 'value', label: 'Value (AvgIQ / Cost)' },
+                { key: 'unified', label: 'Unified (0-1000)' }
+            ];
             let headerRow = '<tr>';
-            const cols = (appData && Array.isArray(appData.columns)) ? appData.columns : [];
             cols.forEach(col => {
                 let alignClass = 'text-left';
                 if (col.key === 'iq' || col.key === 'value') alignClass = 'text-center';
                 if (col.key === 'unified') alignClass = 'text-right';
-
                 headerRow += `
                     <th class="p-6 cursor-pointer hover:text-white transition group ${alignClass}" onclick="sortTable('${col.key}')">
                         <div class="flex items-center ${alignClass === 'text-right' ? 'justify-end' : (alignClass === 'text-center' ? 'justify-center' : '')} gap-1">
@@ -568,91 +603,81 @@
             });
             headerRow += '</tr>';
             thead.innerHTML = headerRow;
-            
-            // Benchmarks
+
             const benchmarksContainer = document.getElementById('benchmarks-container');
-            if (currentEntry && currentEntry.benchmarks && benchmarksContainer) {
-                benchmarksContainer.innerHTML = currentEntry.benchmarks.map(b => {
+            if (benchmarksContainer) {
+                benchmarksContainer.innerHTML = benchmarkList.map(b => {
                     const colorClass = getBenchmarkColor(b);
                     return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
                 }).join('');
             }
-            
-            // Inject dynamic SEO structured data
+
             injectStructuredData();
         }
 
-        // Dynamically inject SEO structured data from models.json
         function injectStructuredData() {
-            if (!models || !models.length || !currentEntry) return;
-            
+            if (!models.length || !currentEntry) return;
             const sorted = [...models].sort((a, b) => b.unified - a.unified);
             const top10 = sorted.slice(0, 10);
             const top1 = sorted[0];
-            
-            // Top 10 method: only count models in the global Top 10
             const usInTop10 = top10.filter(m => m.origin === 'US');
             const cnInTop10 = top10.filter(m => m.origin === 'CN');
-            const usTotal = usInTop10.reduce((s, m) => s + m.unified, 0).toFixed(1);
-            const cnTotal = cnInTop10.reduce((s, m) => s + m.unified, 0).toFixed(1);
+            const usTotal = usInTop10.reduce((s, m) => s + m.unified, 0).toFixed(2);
+            const cnTotal = cnInTop10.reduce((s, m) => s + m.unified, 0).toFixed(2);
             const leader = parseFloat(cnTotal) > parseFloat(usTotal) ? 'China' : 'USA';
             const loser = leader === 'China' ? 'USA' : 'China';
-            
-            const auditDate = currentEntry.auditDate || 'December 2025';
+            const auditDate = currentEntry.timestamp || 'Latest run';
             const topUsModel = sorted.find(m => m.origin === 'US');
             const topUsRank = topUsModel ? sorted.indexOf(topUsModel) + 1 : 'N/A';
-            
-            // FAQ Schema
+
             const faqData = {
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
                 "mainEntity": [{
                     "@type": "Question",
-                    "name": "What is the best AI model in 2025?",
+                    "name": "What is the top AI model right now?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": `As of ${auditDate}, ${top1.name} from ${top1.origin === 'CN' ? 'China' : 'USA'} leads with a Unified Power Score of ${top1.unified}, combining IQ ${top1.iq} with Value ${top1.value}. ${topUsModel ? topUsModel.name : 'N/A'} from the US ranks #${topUsRank} with IQ ${topUsModel ? topUsModel.iq : 'N/A'}.`
+                        "text": `${top1.name} leads with Unified ${formatUnified(top1.unified)} (AvgIQ ${formatNumber(top1.iq)}, Value ${formatNumber(top1.value)}). US leader ${topUsModel ? topUsModel.name : 'N/A'} sits at #${topUsRank}.`
                     }
                 },{
                     "@type": "Question",
                     "name": "Is the US or China winning the AI race?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": `As of ${auditDate}, ${leader} leads with a national score of ${leader === 'China' ? cnTotal : usTotal} vs ${loser}'s ${leader === 'China' ? usTotal : cnTotal}.`
+                        "text": `As of ${auditDate}, ${leader} leads with ${leader === 'China' ? cnTotal : usTotal} vs ${loser}'s ${leader === 'China' ? usTotal : cnTotal} (Top 10 sum of Unified scores).`
                     }
                 },{
                     "@type": "Question",
                     "name": "How are AI models ranked on this leaderboard?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Models are ranked by Unified Power Score, calculated as IQ × (1 + Value/100). Intelligence (0-100) gates the score, while Value (50-100) acts as a 1.5× to 2.0× multiplier. A low-intelligence model cannot score high, regardless of cost efficiency."
+                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ is participation-weighted across benchmarks; Value = AvgIQ ÷ (Input + Output cost)."
                     }
                 }]
             };
             document.getElementById('seo-faq').textContent = JSON.stringify(faqData);
-            
-            // ItemList Schema (Top 10)
+
             const itemListData = {
                 "@context": "https://schema.org",
                 "@type": "ItemList",
                 "name": `Top 10 AI Models ${auditDate}`,
-                "description": "Global ranking of frontier AI models by Unified Power Score",
+                "description": "Global ranking of frontier AI models by Unified score (capability × efficiency)",
                 "numberOfItems": 10,
                 "itemListElement": top10.map((m, i) => ({
                     "@type": "ListItem",
                     "position": i + 1,
                     "name": m.name,
-                    "description": `Score: ${m.unified} | Origin: ${m.origin === 'CN' ? 'China' : 'USA'}`
+                    "description": `Unified ${formatUnified(m.unified)} | Origin: ${m.origin === 'CN' ? 'China' : 'USA'}`
                 }))
             };
             document.getElementById('seo-itemlist').textContent = JSON.stringify(itemListData);
-            
-            // Dataset Schema
+
             const datasetData = {
                 "@context": "https://schema.org",
                 "@type": "Dataset",
                 "name": "US vs China AI Model Rankings",
-                "description": "Comprehensive dataset ranking frontier AI models from the United States and China by Unified Power Score, combining intelligence benchmarks and cost efficiency metrics.",
+                "description": "Ranking frontier AI models from the United States and China by Unified score (0–1000), combining normalized capability and cost efficiency.",
                 "url": "https://usvschina.ai/",
                 "license": "https://creativecommons.org/licenses/by/4.0/",
                 "isAccessibleForFree": true,
@@ -664,46 +689,32 @@
                 },
                 "temporalCoverage": auditDate,
                 "spatialCoverage": ["United States", "China"],
-                "keywords": ["AI models", "artificial intelligence", "machine learning", "benchmarks", "GPT", "DeepSeek", "Gemini", "Claude", "Qwen"]
+                "keywords": ["AI models", "frontier models", "benchmarks", "GPT", "DeepSeek", "Gemini", "Claude", "Qwen"]
             };
             document.getElementById('seo-dataset').textContent = JSON.stringify(datasetData);
         }
 
-        // Calculate National Totals
         function calculateTotals() {
-            // Sort all models by unified score desc to get global top 10
             const allSorted = [...models].sort((a, b) => b.unified - a.unified);
             const top10 = allSorted.slice(0, 10);
-
-            // Filter the Top 10 by origin
             const usInTop10 = top10.filter(m => m.origin === 'US');
             const cnInTop10 = top10.filter(m => m.origin === 'CN');
-
-            // Sum scores for models present in the Top 10
             const usTotal = usInTop10.reduce((sum, m) => sum + m.unified, 0);
             const cnTotal = cnInTop10.reduce((sum, m) => sum + m.unified, 0);
-
-            // Averages (based on the models contributing to the score)
             const usAvgIq = usInTop10.length ? usInTop10.reduce((sum, m) => sum + m.iq, 0) / usInTop10.length : 0;
             const usAvgVal = usInTop10.length ? usInTop10.reduce((sum, m) => sum + m.value, 0) / usInTop10.length : 0;
-            
             const cnAvgIq = cnInTop10.length ? cnInTop10.reduce((sum, m) => sum + m.iq, 0) / cnInTop10.length : 0;
             const cnAvgVal = cnInTop10.length ? cnInTop10.reduce((sum, m) => sum + m.value, 0) / cnInTop10.length : 0;
 
-            // Update DOM
-            document.getElementById('score-usa').textContent = usTotal.toFixed(1);
-            document.getElementById('avg-iq-usa').textContent = usAvgIq.toFixed(1);
-            document.getElementById('avg-value-usa').textContent = usAvgVal.toFixed(1);
+            document.getElementById('score-usa').textContent = formatUnified(usTotal);
+            document.getElementById('avg-iq-usa').textContent = formatNumber(usAvgIq);
+            document.getElementById('avg-value-usa').textContent = formatNumber(usAvgVal);
+            document.getElementById('score-china').textContent = formatUnified(cnTotal);
+            document.getElementById('avg-iq-china').textContent = formatNumber(cnAvgIq);
+            document.getElementById('avg-value-china').textContent = formatNumber(cnAvgVal);
 
-            document.getElementById('score-china').textContent = cnTotal.toFixed(1);
-            document.getElementById('avg-iq-china').textContent = cnAvgIq.toFixed(1);
-            document.getElementById('avg-value-china').textContent = cnAvgVal.toFixed(1);
-
-            // Determine Leader
             const usaCard = document.getElementById('team-usa-card');
             const chinaCard = document.getElementById('team-china-card');
-            
-            // Cleanup
             document.querySelectorAll('.leading-badge').forEach(el => el.remove());
             usaCard.classList.remove('ring-2', 'ring-blue-400', 'ring-offset-2', 'ring-offset-slate-900');
             chinaCard.classList.remove('ring-2', 'ring-red-400', 'ring-offset-2', 'ring-offset-slate-900');
@@ -711,23 +722,14 @@
             let leaderCard = null;
             let badgeColor = '';
             let ringColor = '';
-
-            if (usTotal > cnTotal) {
-                leaderCard = usaCard;
-                badgeColor = 'bg-blue-500';
-                ringColor = 'ring-blue-400';
-            } else if (cnTotal > usTotal) {
-                leaderCard = chinaCard;
-                badgeColor = 'bg-red-500';
-                ringColor = 'ring-red-400';
-            }
+            if (usTotal > cnTotal) { leaderCard = usaCard; badgeColor = 'bg-blue-500'; ringColor = 'ring-blue-400'; }
+            else if (cnTotal > usTotal) { leaderCard = chinaCard; badgeColor = 'bg-red-500'; ringColor = 'ring-red-400'; }
 
             if (leaderCard) {
                 const badge = document.createElement('div');
                 badge.className = `leading-badge absolute -top-4 right-8 ${badgeColor} text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg flex items-center gap-2 z-20 transform transition-all duration-500 ease-out`;
                 badge.innerHTML = `<i data-lucide="trophy" class="w-3 h-3"></i> Leading`;
                 leaderCard.appendChild(badge);
-                
                 leaderCard.classList.add('ring-2', ringColor, 'ring-offset-2', 'ring-offset-slate-900');
                 if (window.lucide && typeof lucide.createIcons === 'function') {
                     lucide.createIcons();
@@ -735,53 +737,42 @@
             }
         }
 
-        // Render Table
         function renderTable() {
             const tbody = document.getElementById('models-table-body');
             tbody.innerHTML = '';
 
             let displayModels = [];
-
             if (currentFilter === 'top10') {
-                // Show Global Top 10
                 displayModels = [...models].sort((a, b) => b.unified - a.unified).slice(0, 10);
             } else if (currentFilter === 'all') {
-                // Show all models
                 displayModels = [...models];
             } else {
-                // Show all models for the selected country
                 displayModels = models.filter(m => m.origin === currentFilter);
             }
 
-            // Sort data (if user clicked a column header, re-sort the display list)
             displayModels.sort((a, b) => {
-                let valA = a[currentSort.key];
-                let valB = b[currentSort.key];
-                
-                if (currentSort.direction === 'asc') {
-                    return valA > valB ? 1 : -1;
-                } else {
-                    return valA < valB ? 1 : -1;
-                }
+                const valA = a[currentSort.key];
+                const valB = b[currentSort.key];
+                if (currentSort.direction === 'asc') return valA > valB ? 1 : -1;
+                return valA < valB ? 1 : -1;
             });
 
-            displayModels.forEach((model, index) => {
+            const maxIq = Math.max(...models.map(m => m.iq), 1);
+            const maxValue = Math.max(...models.map(m => m.value), 1);
+
+            displayModels.forEach(model => {
                 const tr = document.createElement('tr');
                 tr.className = 'hover:bg-white/5 transition group relative';
-                
-                // Rank Styling
-                let rankDisplay = `<span class="text-slate-400 font-mono">#${model.rank}</span>`;
+
+                let rankDisplay = `<span class="text-slate-400 font-mono">#${String(model.rank).padStart(2, '0')}</span>`;
                 if (model.rank === 1) rankDisplay = `<span class="text-yellow-500 font-bold text-lg">01 🥇</span>`;
                 if (model.rank === 2) rankDisplay = `<span class="text-slate-300 font-bold text-lg">02 🥈</span>`;
                 if (model.rank === 3) rankDisplay = `<span class="text-orange-400 font-bold text-lg">03 🥉</span>`;
 
-                // Origin Flag
                 const flag = model.origin === 'US' ? '🇺🇸' : '🇨🇳';
                 const originClass = model.origin === 'US' ? 'text-blue-400' : 'text-red-400';
-                
-                // Bars
-                const iqWidth = model.iq; // Max is 100
-                const valueWidth = model.value; // Max is 100
+                const iqWidth = Math.min(100, (model.iq / maxIq) * 100);
+                const valueWidth = Math.min(100, (model.value / maxValue) * 100);
                 const description = model.description || '';
 
                 tr.innerHTML = `
@@ -795,16 +786,10 @@
                             </a>
                             <div class="flex items-center gap-2 mt-1">
                                 <a href="${model.companyLink}" target="_blank" class="text-xs text-slate-400 hover:text-blue-400 transition flex items-center gap-1">
-                                    <i data-lucide="building-2" class="w-3 h-3"></i> ${model.company}
+                                    <i data-lucide="building-2" class="w-3 h-3"></i> ${model.organization}
                                 </a>
                                 <span class="text-xs text-slate-600">•</span>
-                                <span class="text-xs text-slate-500">Released: ${model.createdDate}</span>
-                                ${(() => {
-                                    const today = new Date('2025-12-31');
-                                    const releaseDate = new Date(model.createdDate);
-                                    const daysDiff = Math.floor((today - releaseDate) / (1000 * 60 * 60 * 24));
-                                    return daysDiff <= 7 ? '<span class="text-xs bg-green-500/20 text-green-400 px-2 py-0.5 rounded-full ml-1 font-semibold animate-pulse">NEW</span>' : '';
-                                })()}
+                                <span class="text-xs text-slate-500">Released: ${model.createdDate || '—'}</span>
                             </div>
                             ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${description}</p>` : ''}
                         </div>
@@ -812,7 +797,7 @@
                     <td class="p-6">
                         <div class="flex flex-col gap-1">
                             <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>${model.iq.toFixed(1)}</span>
+                                <span>${formatNumber(model.iq)}</span>
                             </div>
                             <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
                                 <div class="bg-blue-500 h-full rounded-full" style="width: ${iqWidth}%"></div>
@@ -822,7 +807,7 @@
                     <td class="p-6">
                         <div class="flex flex-col gap-1">
                             <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>${model.value.toFixed(1)}</span>
+                                <span>${formatNumber(model.value)}</span>
                             </div>
                             <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
                                 <div class="bg-green-500 h-full rounded-full" style="width: ${valueWidth}%"></div>
@@ -830,19 +815,17 @@
                         </div>
                     </td>
                     <td class="p-6 text-right">
-                        <span class="font-black text-2xl ${model.rank === 1 ? 'text-green-400' : 'text-white'}">${model.unified.toFixed(1)}</span>
+                        <span class="font-black text-2xl ${model.rank === 1 ? 'text-green-400' : 'text-white'}">${formatUnified(model.unified)}</span>
                     </td>
                 `;
                 tbody.appendChild(tr);
             });
-            
-            // Re-initialize icons for new elements
+
             if (window.lucide && typeof lucide.createIcons === 'function') {
                 lucide.createIcons();
             }
         }
 
-        // Sorting Handler
         function sortTable(key) {
             if (currentSort.key === key) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
@@ -853,7 +836,6 @@
             renderTable();
         }
 
-        // Filter Handler
         function setFilter(filter) {
             currentFilter = filter;
             renderTable();
@@ -868,13 +850,9 @@
                 'US': document.getElementById('filter-us'),
                 'CN': document.getElementById('filter-cn')
             };
-            
-            // Reset all
             Object.values(buttons).forEach(btn => {
                 btn.className = 'px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5';
             });
-
-            // Set active
             const activeBtn = buttons[currentFilter];
             if (currentFilter === 'top10') {
                 activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20';
@@ -887,7 +865,6 @@
             }
         }
 
-        // Share Functions
         const shareUrl = 'https://usvschina.ai/';
         const shareTitle = 'US vs CHINA AI - Compare Top AI Models';
         const shareText = 'Check out this AI model leaderboard comparing USA and China\'s best AI models. See which country is winning the AI race!';
@@ -910,12 +887,9 @@
         function copyLink() {
             const btnText = document.getElementById('copy-link-text');
             const originalText = btnText.textContent;
-            
             navigator.clipboard.writeText(shareUrl).then(() => {
-                btnText.textContent = "Copied!";
-                setTimeout(() => {
-                    btnText.textContent = originalText;
-                }, 2000);
+                btnText.textContent = 'Copied!';
+                setTimeout(() => { btnText.textContent = originalText; }, 2000);
             });
         }
 
@@ -925,71 +899,40 @@
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
         }
 
-        // Matrix Chart
         let matrixChart = null;
-        
         function renderMatrix() {
             const canvas = document.getElementById('matrixChart');
             if (!canvas || typeof canvas.getContext !== 'function') return;
-            if (!window.Chart) return;
-            if (!models || models.length === 0) return;
+            if (!window.Chart || !models.length) return;
 
             const ctx = canvas.getContext('2d');
-            
-            // Calculate medians for quadrant dividers
             const allIq = models.map(m => m.iq);
             const allValue = models.map(m => m.value);
-            const medianIq = allIq.sort((a, b) => a - b)[Math.floor(allIq.length / 2)];
-            const medianValue = allValue.sort((a, b) => a - b)[Math.floor(allValue.length / 2)];
-            
-            // Calculate point sizes based on unified score (scale 4-16)
+            const medianIq = [...allIq].sort((a, b) => a - b)[Math.floor(allIq.length / 2)];
+            const medianValue = [...allValue].sort((a, b) => a - b)[Math.floor(allValue.length / 2)];
             const minUnified = Math.min(...models.map(m => m.unified));
             const maxUnified = Math.max(...models.map(m => m.unified));
-            const denom = (maxUnified - minUnified);
-            const scaleRadius = (unified) => denom === 0 ? 10 : 6 + ((unified - minUnified) / denom) * 14;
-            
-            // Prepare datasets
-            const usData = models.filter(m => m.origin === 'US').map(m => ({
-                x: m.value,
-                y: m.iq,
-                name: m.name,
-                unified: m.unified,
-                r: scaleRadius(m.unified)
-            }));
-            
-            const cnData = models.filter(m => m.origin === 'CN').map(m => ({
-                x: m.value,
-                y: m.iq,
-                name: m.name,
-                unified: m.unified,
-                r: scaleRadius(m.unified)
-            }));
+            const denom = (maxUnified - minUnified) || 1;
+            const scaleRadius = (unified) => 6 + ((unified - minUnified) / denom) * 14;
 
-            // Destroy existing chart if present
-            if (matrixChart) {
-                matrixChart.destroy();
-            }
+            const valueMin = Math.min(...allValue);
+            const valueMax = Math.max(...allValue);
+            const iqMin = Math.min(...allIq);
+            const iqMax = Math.max(...allIq);
+            const padX = Math.max(1, (valueMax - valueMin) * 0.1);
+            const padY = Math.max(1, (iqMax - iqMin) * 0.1);
+
+            const usData = models.filter(m => m.origin === 'US').map(m => ({ x: m.value, y: m.iq, name: m.name, unified: m.unified, r: scaleRadius(m.unified) }));
+            const cnData = models.filter(m => m.origin === 'CN').map(m => ({ x: m.value, y: m.iq, name: m.name, unified: m.unified, r: scaleRadius(m.unified) }));
+
+            if (matrixChart) matrixChart.destroy();
 
             matrixChart = new Chart(ctx, {
                 type: 'bubble',
                 data: {
                     datasets: [
-                        {
-                            label: 'Team USA',
-                            data: usData,
-                            backgroundColor: currentFilter === 'CN' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(59, 130, 246, 0.8)',
-                            borderColor: '#3b82f6',
-                            borderWidth: 2,
-                            hoverBackgroundColor: '#3b82f6'
-                        },
-                        {
-                            label: 'Team China',
-                            data: cnData,
-                            backgroundColor: currentFilter === 'US' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(239, 68, 68, 0.8)',
-                            borderColor: '#ef4444',
-                            borderWidth: 2,
-                            hoverBackgroundColor: '#ef4444'
-                        }
+                        { label: 'Team USA', data: usData, backgroundColor: currentFilter === 'CN' ? 'rgba(59, 130, 246, 0.3)' : 'rgba(59, 130, 246, 0.8)', borderColor: '#3b82f6', borderWidth: 2, hoverBackgroundColor: '#3b82f6' },
+                        { label: 'Team China', data: cnData, backgroundColor: currentFilter === 'US' ? 'rgba(239, 68, 68, 0.3)' : 'rgba(239, 68, 68, 0.8)', borderColor: '#ef4444', borderWidth: 2, hoverBackgroundColor: '#ef4444' }
                     ]
                 },
                 options: {
@@ -997,40 +940,22 @@
                     maintainAspectRatio: false,
                     scales: {
                         x: {
-                            title: { 
-                                display: true, 
-                                text: 'Value Index (0-100)', 
-                                color: '#94a3b8',
-                                font: { size: 14, weight: 'bold' }
-                            },
-                            grid: { 
-                                color: 'rgba(255, 255, 255, 0.05)',
-                                drawBorder: false
-                            },
+                            title: { display: true, text: 'Value (AvgIQ ÷ Cost)', color: '#94a3b8', font: { size: 14, weight: 'bold' } },
+                            grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
                             ticks: { color: '#64748b', font: { size: 11 } },
-                            min: 40,
-                            max: 100
+                            min: Math.max(0, valueMin - padX),
+                            max: valueMax + padX
                         },
                         y: {
-                            title: { 
-                                display: true, 
-                                text: 'IQ Index (Intelligence)', 
-                                color: '#94a3b8',
-                                font: { size: 14, weight: 'bold' }
-                            },
-                            grid: { 
-                                color: 'rgba(255, 255, 255, 0.05)',
-                                drawBorder: false
-                            },
+                            title: { display: true, text: 'AvgIQ (normalized)', color: '#94a3b8', font: { size: 14, weight: 'bold' } },
+                            grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
                             ticks: { color: '#64748b', font: { size: 11 } },
-                            min: 40,
-                            max: 100
+                            min: Math.max(0, iqMin - padY),
+                            max: iqMax + padY
                         }
                     },
                     plugins: {
-                        legend: { 
-                            display: false 
-                        },
+                        legend: { display: false },
                         tooltip: {
                             backgroundColor: 'rgba(15, 23, 42, 0.95)',
                             titleColor: '#f8fafc',
@@ -1040,17 +965,16 @@
                             padding: 12,
                             displayColors: false,
                             callbacks: {
-                                title: function(context) {
-                                    const p = context[0].raw;
+                                title: (context) => {
                                     const flag = context[0].datasetIndex === 0 ? '🇺🇸' : '🇨🇳';
-                                    return `${flag} ${p.name}`;
+                                    return `${flag} ${context[0].raw.name}`;
                                 },
-                                label: function(context) {
+                                label: (context) => {
                                     const p = context.raw;
                                     return [
-                                        `IQ Index: ${p.y.toFixed(1)}`,
-                                        `Value Index: ${p.x.toFixed(1)}`,
-                                        `Unified: ${p.unified.toFixed(1)}`
+                                        `AvgIQ: ${formatNumber(p.y)}`,
+                                        `Value: ${formatNumber(p.x)}`,
+                                        `Unified: ${formatUnified(p.unified)}`
                                     ];
                                 }
                             }
@@ -1063,9 +987,8 @@
                         const ctx = chart.ctx;
                         const xAxis = chart.scales.x;
                         const yAxis = chart.scales.y;
-                        
-                        // Draw vertical line at x=80
-                        const xPos = xAxis.getPixelForValue(80);
+                        const xPos = xAxis.getPixelForValue(medianValue);
+                        const yPos = yAxis.getPixelForValue(medianIq);
                         ctx.save();
                         ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
                         ctx.lineWidth = 2;
@@ -1074,9 +997,6 @@
                         ctx.moveTo(xPos, yAxis.top);
                         ctx.lineTo(xPos, yAxis.bottom);
                         ctx.stroke();
-                        
-                        // Draw horizontal line at y=80
-                        const yPos = yAxis.getPixelForValue(80);
                         ctx.beginPath();
                         ctx.moveTo(xAxis.left, yPos);
                         ctx.lineTo(xAxis.right, yPos);
@@ -1087,49 +1007,28 @@
             });
         }
 
-        // Company Leaderboard
         function renderCompanyLeaderboard() {
-            if (!models || models.length === 0) return;
-            
+            if (!models.length) return;
             const container = document.getElementById('company-leaderboard');
             if (!container) return;
-            
-            // Get top 10 models
             const top10 = models.slice().sort((a, b) => b.unified - a.unified).slice(0, 10);
-            
-            // Aggregate by company
-            const companyScores = {};
+            const orgScores = {};
             top10.forEach(m => {
-                const company = m.company || 'Unknown';
-                if (!companyScores[company]) {
-                    companyScores[company] = {
-                        name: company,
-                        totalScore: 0,
-                        modelCount: 0,
-                        models: [],
-                        origin: m.origin
-                    };
+                const org = m.organization || 'Unknown';
+                if (!orgScores[org]) {
+                    orgScores[org] = { name: org, totalScore: 0, modelCount: 0, models: [], origin: m.origin };
                 }
-                companyScores[company].totalScore += m.unified;
-                companyScores[company].modelCount++;
-                companyScores[company].models.push(m.name);
+                orgScores[org].totalScore += m.unified;
+                orgScores[org].modelCount++;
+                orgScores[org].models.push(m.name);
             });
-            
-            // Sort by total score descending
-            const sortedCompanies = Object.values(companyScores).sort((a, b) => b.totalScore - a.totalScore);
-            
-            // Render
+            const sortedCompanies = Object.values(orgScores).sort((a, b) => b.totalScore - a.totalScore);
             container.innerHTML = sortedCompanies.map((c, idx) => {
                 const flag = c.origin === 'US' ? '🇺🇸' : '🇨🇳';
                 const borderColor = c.origin === 'US' ? 'border-blue-500/30 hover:border-blue-500/60' : 'border-red-500/30 hover:border-red-500/60';
                 const textColor = c.origin === 'US' ? 'text-blue-400' : 'text-red-400';
                 const bgColor = c.origin === 'US' ? 'bg-blue-500/10' : 'bg-red-500/10';
-                
-                let rankIcon = '';
-                if (idx === 0) rankIcon = '🥇';
-                else if (idx === 1) rankIcon = '🥈';
-                else if (idx === 2) rankIcon = '🥉';
-                
+                const rankIcon = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : '';
                 return `
                     <div class="glass p-6 rounded-2xl border ${borderColor} transition-all duration-300">
                         <div class="flex justify-between items-start mb-4">
@@ -1140,7 +1039,7 @@
                                 <div class="text-xs text-slate-500">${c.modelCount} model${c.modelCount > 1 ? 's' : ''} in Top 10</div>
                             </div>
                             <div class="text-right">
-                                <div class="text-2xl font-black text-white">${c.totalScore.toFixed(1)}</div>
+                                <div class="text-2xl font-black text-white">${formatUnified(c.totalScore)}</div>
                                 <div class="text-xs text-slate-500">Total Score</div>
                             </div>
                         </div>
@@ -1153,7 +1052,6 @@
             }).join('');
         }
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             fetchModels();
         });

@@ -218,10 +218,6 @@
             let html = '';
             sortedHistory.forEach((entry, index) => {
                 const date = new Date(entry.timestamp).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
-                const isUsaLeader = entry.leader === 'usa';
-                const leaderColor = isUsaLeader ? 'text-blue-400' : 'text-red-400';
-                const leaderName = isUsaLeader ? 'Team USA' : 'Team China';
-                const leaderFlag = isUsaLeader ? '🇺🇸' : '🇨🇳';
                 
                 // Get filter for this entry
                 const currentFilter = entryFilters[index] || 'top10';
@@ -229,11 +225,72 @@
                 // Get sort for this entry
                 const currentSort = entrySorts[index] || { key: 'unified', direction: 'desc' };
 
-                const entryModels = (entry && Array.isArray(entry.models)) ? entry.models : [];
-                const scores = (entry && entry.scores) ? entry.scores : {
+                let entryModels = (entry && Array.isArray(entry.models)) ? entry.models : [];
+                // If entry has teams structure instead of flat models array, flatten it and normalize fields.
+                if ((!Array.isArray(entry.models) || entry.models.length === 0) && entry.teams) {
+                    entryModels = [
+                        ...(Array.isArray(entry.teams.US) ? entry.teams.US : []),
+                        ...(Array.isArray(entry.teams.CN) ? entry.teams.CN : [])
+                    ];
+                }
+
+                // Normalize model field names so the renderer has consistent keys.
+                entryModels = entryModels.map((m, i) => {
+                    const countryField = (typeof m.Country === 'string') ? m.Country : (typeof m.country === 'string' ? m.country : '');
+                    const countryFromFlag = countryField.includes('🇨🇳') ? 'CN' : (countryField.includes('🇺🇸') ? 'US' : countryField);
+                    const origin = m.origin || countryFromFlag || 'US';
+                    return {
+                        ...m,
+                        name: m.name || m.model || m.Model || 'Unknown',
+                        iq: m.iq ?? m.avgIq ?? m.AvgIQ ?? 0,
+                        value: m.value ?? m.Value ?? 0,
+                        unified: m.unified ?? m.Unified ?? 0,
+                        origin,
+                        company: m.organization || m.Organization || m.company || '',
+                        createdDate: m.released || m.Released || m.created || m.Created || '',
+                        rank: m.rank || i + 1
+                    };
+                });
+
+                // Derive scores if not provided.
+                let derivedScores = {
                     usa: { total: 0, avgIq: 0, avgValue: 0 },
                     china: { total: 0, avgIq: 0, avgValue: 0 }
                 };
+                if ((!entry || !entry.scores) && entryModels.length) {
+                    const top10 = entryModels.slice().sort((a, b) => b.unified - a.unified).slice(0, 10);
+                    const agg = {
+                        usa: { total: 0, iq: 0, value: 0, count: 0 },
+                        china: { total: 0, iq: 0, value: 0, count: 0 }
+                    };
+                    top10.forEach(m => {
+                        const key = (m.origin && m.origin.toUpperCase() === 'CN') ? 'china' : 'usa';
+                        agg[key].total += m.unified || 0;
+                        agg[key].iq += m.iq || 0;
+                        agg[key].value += m.value || 0;
+                        agg[key].count += 1;
+                    });
+                    derivedScores = {
+                        usa: {
+                            total: agg.usa.total,
+                            avgIq: agg.usa.count ? agg.usa.iq / agg.usa.count : 0,
+                            avgValue: agg.usa.count ? agg.usa.value / agg.usa.count : 0
+                        },
+                        china: {
+                            total: agg.china.total,
+                            avgIq: agg.china.count ? agg.china.iq / agg.china.count : 0,
+                            avgValue: agg.china.count ? agg.china.value / agg.china.count : 0
+                        }
+                    };
+                }
+                const scores = (entry && entry.scores) ? entry.scores : derivedScores;
+
+                // Determine leader after scores are known.
+                const leaderKey = entry.leader || ((scores.usa.total >= scores.china.total) ? 'usa' : 'china');
+                const isUsaLeader = leaderKey === 'usa';
+                const leaderColor = isUsaLeader ? 'text-blue-400' : 'text-red-400';
+                const leaderName = isUsaLeader ? 'Team USA' : 'Team China';
+                const leaderFlag = isUsaLeader ? '🇺🇸' : '🇨🇳';
                 const entryBenchmarks = (entry && Array.isArray(entry.benchmarks)) ? entry.benchmarks : [];
 
                 // Filter models
