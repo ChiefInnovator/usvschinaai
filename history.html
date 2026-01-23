@@ -126,6 +126,29 @@
         let entrySorts = {}; // Key: index, Value: { key: 'unified', direction: 'desc' }
         let expandedEntries = {}; // Key: index, Value: true/false
 
+        // Benchmark name normalization map (raw key → display name)
+        const BENCHMARK_NAME_MAP = {
+            'AIME2025': 'AIME 2025',
+            'ARC-AGI': 'ARC-AGI v2',
+            'ARC-AGIv2': 'ARC-AGI v2',
+            'BrowseComp': 'BrowseComp',
+            'CharXiv-R': 'CharXiv-R',
+            'FrontierMath': 'FrontierMath',
+            'GPQADiamond': 'GPQA Diamond',
+            'HLE': 'HLE',
+            'MCPAtlas': 'MCP Atlas',
+            'MMLU-Pro': 'MMLU-Pro',
+            'MMMU': 'MMMU',
+            'MMMU-Pro': 'MMMU-Pro',
+            'OSWorld': 'OSWorld',
+            'SWE-benchVerified': 'SWE-Bench Verified',
+            'ScreenSpotPro': 'ScreenSpot Pro',
+            'SimpleQA': 'SimpleQA',
+            'TAU2Retail': 'TAU2 Retail',
+            'TerminalBench': 'Terminal Bench',
+            'Toolathlon': 'Toolathlon'
+        };
+
         // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
             const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
@@ -138,6 +161,11 @@
             if (purpleGroup.includes(name)) return 'bg-purple-500/10 border border-purple-500/20';
             if (yellowGroup.includes(name)) return 'bg-yellow-500/10 border border-yellow-500/20';
             return 'bg-slate-800 border border-white/5';
+        }
+
+        // Normalize benchmark name using map
+        function normalizeBenchmarkName(rawKey) {
+            return BENCHMARK_NAME_MAP[rawKey] || rawKey;
         }
 
         async function fetchHistory() {
@@ -306,7 +334,10 @@
                             }
                         });
                     });
-                    entryBenchmarks = Array.from(benchmarkSet).sort();
+                    // Normalize benchmark names and sort
+                    entryBenchmarks = Array.from(benchmarkSet)
+                        .map(key => normalizeBenchmarkName(key))
+                        .sort();
                 }
 
                 // Filter models
