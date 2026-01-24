@@ -24,12 +24,6 @@ class LeaderboardEntry:
     country: str
     url: str
     columns: Dict[str, str] = field(default_factory=dict)  # Header -> raw value
-    
-    # Stage 3 metadata (populated later)
-    company: str = ""
-    company_link: str = ""
-    description: str = ""
-    created: str = ""
 
 
 def parse_to_number(value: str) -> float:
@@ -101,8 +95,9 @@ def calculate_derived_scores(
     avg_iq = total_weighted / weight_sum if weight_sum > 0 else 0.0
     
     # Value (avgIq / total cost: input + output)
-    cost_in = parse_to_number(entry.columns.get("Input $/M", "0"))
-    cost_out = parse_to_number(entry.columns.get("Output $/M", "0"))
+    # Try both formats for backwards compatibility
+    cost_in = parse_to_number(entry.columns.get("Input$/M") or entry.columns.get("Input $/M", "0"))
+    cost_out = parse_to_number(entry.columns.get("Output$/M") or entry.columns.get("Output $/M", "0"))
     total_cost = cost_in + cost_out
     value = avg_iq / total_cost if total_cost > 0 else 0.0
     
@@ -147,24 +142,40 @@ def write_csv(
     """Write entries to CSV file."""
     # Remove empty headers to avoid blank columns (llm-stats sometimes emits an empty col)
     cleaned_headers = [h for h in headers if h.strip()]
-    csv_headers = [rank_column_name, "Model", "Country"] + cleaned_headers
+    # Don't duplicate Model/Country if they're already in headers
+    base_headers = [rank_column_name]
+    if "Model" not in cleaned_headers:
+        base_headers.append("Model")
+    if "Country" not in cleaned_headers:
+        base_headers.append("Country")
+    csv_headers = base_headers + cleaned_headers
     if include_derived and benchmark_headers:
         csv_headers.extend(["AvgIQ", "Value", "Unified"])
     
     with open(filepath, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(csv_headers)
-        
+
         for entry in entries:
-            row = [entry.rank, entry.name, entry.country]
-            
+            row = [entry.rank]
+
+            # Add Model and Country if not in headers
+            if "Model" not in cleaned_headers:
+                row.append(entry.name)
+            if "Country" not in cleaned_headers:
+                row.append(entry.country)
+
             # Add column values
             for header in cleaned_headers:
                 if header == "URL":
                     row.append(entry.url)
+                elif header == "Model":
+                    row.append(entry.name)
+                elif header == "Country":
+                    row.append(entry.country)
                 else:
                     row.append(entry.columns.get(header, ""))
-            
+
             # Add derived scores with normalization
             if include_derived and benchmark_headers:
                 scores = calculate_derived_scores(entry, benchmark_headers, participation, max_participation, min_avg_iq, max_avg_iq, min_value, max_value, benchmark_min_max=benchmark_min_max)
@@ -173,7 +184,7 @@ def write_csv(
                     scores["value"],
                     scores["unified"]
                 ])
-            
+
             writer.writerow(row)
     
     print(f"  Written to: {filepath.name}")
@@ -350,10 +361,13 @@ def scrape_country_leaderboard(
     all_headers = [h.inner_text().strip() for h in header_elements]
     print(f"  Found {len(all_headers)} columns")
     
-    # Identify benchmark columns
+    # Identify benchmark columns (exclude metadata/non-benchmark columns)
     metadata_columns = {
         "Rank", "Model", "Country", "License", "Context", "Input", "Output",
-        "Speed", "Organization", "Created", "Description", "Input $/M", "Output $/M"
+        "Speed", "Organization", "Created", "Description",
+        "Input $/M", "Output $/M", "Input$/M", "Output$/M",
+        "Parameters (B)", "Parameters(B)", "Knowledge Cutoff", "KnowledgeCutoff",
+        "Multimodal", "Released"
     }
     
     benchmark_headers = [h for h in all_headers if h not in metadata_columns and h]
@@ -443,44 +457,32 @@ def scrape_global_leaderboard(page) -> Dict[str, int]:
 
 
 def enrich_with_metadata(page, entries: List[LeaderboardEntry]) -> List[LeaderboardEntry]:
-    """Navigate to each model page and extract company, description, etc."""
-    print(f"\nEnriching {len(entries)} models with metadata from detail pages...")
-    
+    """Extract metadata from model detail pages (description only)."""
+    print(f"\nEnriching {len(entries)} models with descriptions from detail pages...")
+
     for i, entry in enumerate(entries):
         print(f"  [{i+1}/{len(entries)}] {entry.name}")
-        
+
         try:
             page.goto(entry.url, timeout=60000)
             page.wait_for_load_state("domcontentloaded")
             time.sleep(1)
-            
-            # Try to extract company/organization from the page
-            try:
-                company_elem = page.query_selector("text=/Organization|Company/i")
-                if company_elem:
-                    parent = company_elem.evaluate_handle("el => el.parentElement")
-                    company_text = parent.as_element().inner_text() if parent else ""
-                    entry.company = company_text.replace("Organization", "").replace("Company", "").strip()[:100]
-            except:
-                pass
-            
-            # Try meta description
+
+            # Extract meta description
             try:
                 desc_elem = page.query_selector("meta[name='description']")
                 if desc_elem:
                     desc = desc_elem.get_attribute("content")
                     if desc:
-                        entry.description = desc[:200]
+                        # Store in columns dict for consistency
+                        entry.columns["description"] = desc[:200]
             except:
                 pass
-            
-            # Company link
-            entry.company_link = entry.url
-            
+
         except Exception as e:
             print(f"    Warning: Failed to fetch metadata - {e}")
             continue
-    
+
     return entries
 
 
@@ -533,27 +535,36 @@ def build_history_entry(
             max_value,
             benchmark_min_max=benchmark_min_max,
         )
-        
+
+        # Get organization from table column, description from metadata enrichment
+        organization = entry.columns.get("Organization", "")
+        description = entry.columns.get("description", "")
+        released = entry.columns.get("Released", "")
+
         row = {
             "model": entry.name,
-            "organization": entry.company,
+            "organization": organization,
             "link": entry.url,
             "origin": entry.country,
-            "description": entry.description,
-            "created": entry.created,
+            "description": description,
+            "created": released,
             "avgIq": scores["avgIq"],
             "value": scores["value"],
             "unified": scores["unified"]
         }
-        
-        # Add all raw column values
+
+        # Add all raw column values (preserve original keys without modification)
         for header, value in entry.columns.items():
             if not header.strip():
                 continue
+            # Don't duplicate fields we already added
+            if header in ["Organization", "description", "Released"]:
+                continue
+            # Keep original header format for all other columns
             key = header.replace(" ", "")
             if key not in row:
                 row[key] = value
-        
+
         return row
     
     us_rows = [entry_to_row(e) for e in us_entries]
