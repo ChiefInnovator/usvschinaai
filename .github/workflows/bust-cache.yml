@@ -23,7 +23,7 @@ jobs:
         run: |
           if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
             TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
-            PAGES="/ index.html history.html about.html privacy.html terms.html"
+            PAGES="/ index.html history.html about.html privacy.html terms.html og-image.png"
             for DOMAIN in "https://usvschina.ai" "https://chiefinnovator.github.io/usvschinaai"; do
             for PAGE in $PAGES; do
               if [ "$PAGE" = "/" ]; then
