@@ -87,13 +87,9 @@ jobs:
           git diff --quiet models.json || CHANGES=true
           git diff --quiet news.json 2>/dev/null || CHANGES=true
           git diff --quiet sitemap.xml 2>/dev/null || CHANGES=true
-          git diff --quiet index.html 2>/dev/null || CHANGES=true
-          git diff --quiet history.html 2>/dev/null || CHANGES=true
-          git diff --quiet about.html 2>/dev/null || CHANGES=true
-          git diff --quiet privacy.html 2>/dev/null || CHANGES=true
-          git diff --quiet terms.html 2>/dev/null || CHANGES=true
+          git diff --quiet og-image.png 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q news.json && CHANGES=true
-          git ls-files --others --exclude-standard | grep -q 'og-image-' && CHANGES=true
+          git ls-files --others --exclude-standard | grep -q og-image.png && CHANGES=true
           echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
       
       - name: Commit and push changes
@@ -101,35 +97,12 @@ jobs:
         run: |
           git add models.json
           git add news.json 2>/dev/null || true
-          # Remove old timestamped OG images from git, then stage the new one + legacy copy
-          git ls-files 'og-image-[0-9]*.png' | xargs -r git rm -f 2>/dev/null || true
-          git add og-image-[0-9]*.png 2>/dev/null || true
           git add og-image.png 2>/dev/null || true
           git add sitemap.xml 2>/dev/null || true
-          git add index.html history.html about.html privacy.html terms.html
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
       
-      - name: Bust Facebook OG cache
-        if: steps.changes.outputs.has_changes == 'true'
-        continue-on-error: true
-        env:
-          FB_APP_ID: ${{ secrets.FB_APP_ID }}
-          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
-        run: |
-          if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
-            TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
-            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html" "https://usvschina.ai/privacy.html" "https://usvschina.ai/terms.html"; do
-              echo "Scraping Facebook cache for $URL"
-              curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
-              echo ""
-            done
-            echo "Facebook OG cache refreshed"
-          else
-            echo "Skipping Facebook cache bust — FB_APP_ID/FB_APP_SECRET not configured"
-          fi
-
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'
         run: |

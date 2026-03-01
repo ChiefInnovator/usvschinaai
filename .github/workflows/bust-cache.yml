@@ -1,0 +1,34 @@
+name: Bust Social Media Cache
+
+on:
+  workflow_run:
+    workflows:
+      - "Azure Static Web Apps CI/CD"
+    types:
+      - completed
+
+jobs:
+  bust-cache:
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wait for deployment to propagate
+        run: sleep 30
+
+      - name: Bust Facebook OG cache
+        continue-on-error: true
+        env:
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+        run: |
+          if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
+            TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
+            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html" "https://usvschina.ai/privacy.html" "https://usvschina.ai/terms.html"; do
+              echo "Scraping Facebook cache for $URL"
+              curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
+              echo ""
+            done
+            echo "Facebook OG cache refreshed"
+          else
+            echo "Skipping — FB_APP_ID/FB_APP_SECRET not configured"
+          fi

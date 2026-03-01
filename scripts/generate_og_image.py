@@ -1,14 +1,10 @@
 #!/usr/bin/env python3
 """
-Generate og-image-{timestamp}.png from models.json data using Playwright.
+Generate og-image.png from models.json data using Playwright.
 Renders a self-contained HTML template at 1200x630 and screenshots it.
-Updates og:image meta tags in HTML files to point to the new filename.
 """
-import glob as globmod
 import json
-import re
 import sys
-import time
 from pathlib import Path
 
 from dateutil.parser import parse as parse_date
@@ -181,44 +177,12 @@ def screenshot_html(html, output_path):
     print(f"Saved OG image: {output_path}")
 
 
-def remove_old_og_images(workspace, keep=None):
-    """Delete previous og-image-{timestamp}.png files, optionally keeping one."""
-    for old in workspace.glob("og-image-*.png"):
-        # Only match timestamped files (digits after dash), skip og-image-original.png etc.
-        stem = old.stem  # e.g. "og-image-1772372524"
-        suffix = stem.replace("og-image-", "", 1)
-        if not suffix.isdigit():
-            continue
-        if keep and old.name == keep:
-            continue
-        old.unlink()
-        print(f"Removed old OG image: {old.name}")
-
-
-def update_html_meta_tags(workspace, new_filename):
-    """Update og:image and twitter:image meta tags in all HTML files."""
-    pattern = re.compile(r'og-image[^"]*\.png(?:\?v=\d+)?')
-    for html_file in ["index.html", "history.html", "about.html", "privacy.html", "terms.html"]:
-        path = workspace / html_file
-        if not path.exists():
-            continue
-        content = path.read_text(encoding="utf-8")
-        updated = pattern.sub(new_filename, content)
-        if updated != content:
-            path.write_text(updated, encoding="utf-8")
-            print(f"Updated {html_file} → {new_filename}")
-
-
 def main():
     workspace = Path(__file__).resolve().parent.parent
     models_path = workspace / "models.json"
     news_path = workspace / "news.json"
     template_path = workspace / "scripts" / "og-template.html"
-
-    # Generate timestamped filename
-    ts = int(time.time())
-    filename = f"og-image-{ts}.png"
-    output_path = workspace / filename
+    output_path = workspace / "og-image.png"
 
     if not models_path.exists():
         print("ERROR: models.json not found")
@@ -239,18 +203,6 @@ def main():
 
         html = build_html(scores, news_items, template_path)
         screenshot_html(html, output_path)
-
-        # Remove old og-image-*.png files, keep the new one
-        remove_old_og_images(workspace, keep=filename)
-
-        # Copy to og-image.png for legacy social media references
-        import shutil
-        legacy_path = workspace / "og-image.png"
-        shutil.copy2(output_path, legacy_path)
-        print(f"Copied to legacy path: og-image.png")
-
-        # Update meta tags in HTML files to point to new image
-        update_html_meta_tags(workspace, filename)
 
         print("OG image generation complete.")
     except Exception as e:
