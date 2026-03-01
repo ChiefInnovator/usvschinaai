@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-01T13:03:18.435915+00:00",
+  "lastUpdated": "2026-03-01T15:25:57.561993+00:00",
   "items": [
     {
       "id": "ddd0c9076992ac3e",
@@ -36,6 +36,15 @@
       "country": "US",
       "publishedAt": "2026-02-28 16:16:46",
       "relevanceScore": 0.23
+    },
+    {
+      "id": "7a32031d0d129a69",
+      "headline": "5 big takeaways from Sam Altman's Saturday night AMA on OpenAI's Pentagon deal",
+      "url": "https://www.businessinsider.com/takeaways-sam-altman-openai-pentagon-deal-ask-me-anything-2026-3",
+      "source": "Business Insider",
+      "country": "US",
+      "publishedAt": "2026-03-01 01:40:02",
+      "relevanceScore": 0.15
     },
     {
       "id": "9250896e07bae80f",
