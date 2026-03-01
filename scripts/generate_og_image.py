@@ -198,7 +198,7 @@ def remove_old_og_images(workspace, keep=None):
 def update_html_meta_tags(workspace, new_filename):
     """Update og:image and twitter:image meta tags in all HTML files."""
     pattern = re.compile(r'og-image[^"]*\.png(?:\?v=\d+)?')
-    for html_file in ["index.html", "history.html", "about.html"]:
+    for html_file in ["index.html", "history.html", "about.html", "privacy.html", "terms.html"]:
         path = workspace / html_file
         if not path.exists():
             continue
@@ -242,6 +242,12 @@ def main():
 
         # Remove old og-image-*.png files, keep the new one
         remove_old_og_images(workspace, keep=filename)
+
+        # Copy to og-image.png for legacy social media references
+        import shutil
+        legacy_path = workspace / "og-image.png"
+        shutil.copy2(output_path, legacy_path)
+        print(f"Copied to legacy path: og-image.png")
 
         # Update meta tags in HTML files to point to new image
         update_html_meta_tags(workspace, filename)

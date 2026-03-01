@@ -90,6 +90,8 @@ jobs:
           git diff --quiet index.html 2>/dev/null || CHANGES=true
           git diff --quiet history.html 2>/dev/null || CHANGES=true
           git diff --quiet about.html 2>/dev/null || CHANGES=true
+          git diff --quiet privacy.html 2>/dev/null || CHANGES=true
+          git diff --quiet terms.html 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q news.json && CHANGES=true
           git ls-files --others --exclude-standard | grep -q 'og-image-' && CHANGES=true
           echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
@@ -99,12 +101,12 @@ jobs:
         run: |
           git add models.json
           git add news.json 2>/dev/null || true
-          # Remove old OG images from git, then stage the new one
-          git ls-files og-image.png | xargs -r git rm -f 2>/dev/null || true
+          # Remove old timestamped OG images from git, then stage the new one + legacy copy
           git ls-files 'og-image-[0-9]*.png' | xargs -r git rm -f 2>/dev/null || true
           git add og-image-[0-9]*.png 2>/dev/null || true
+          git add og-image.png 2>/dev/null || true
           git add sitemap.xml 2>/dev/null || true
-          git add index.html history.html about.html
+          git add index.html history.html about.html privacy.html terms.html
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
@@ -118,7 +120,7 @@ jobs:
         run: |
           if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
             TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
-            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html"; do
+            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html" "https://usvschina.ai/privacy.html" "https://usvschina.ai/terms.html"; do
               echo "Scraping Facebook cache for $URL"
               curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
               echo ""

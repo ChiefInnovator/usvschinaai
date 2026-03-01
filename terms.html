@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US vs CHINA AI | Terms of Service</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terms of Service for US vs CHINA AI. Understand the limitations of derived benchmark data and disclaimers regarding accuracy.">
+    <meta name="keywords" content="terms of service, US vs CHINA AI terms, disclaimer, data accuracy, derived data">
+    <meta name="author" content="US vs CHINA AI">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://usvschina.ai/terms.html">
+
+    <!-- LLM/AI Crawler Directive -->
+    <link rel="alternate" type="text/plain" href="https://usvschina.ai/llms.txt" title="LLM Knowledge Map">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://usvschina.ai/terms.html">
+    <meta property="og:title" content="US vs CHINA AI | Terms of Service">
+    <meta property="og:description" content="Terms of Service for US vs CHINA AI. Derived data disclaimers and limitations.">
+    <meta property="og:image" content="https://usvschina.ai/og-image-1772378757.png">
+    <meta property="og:site_name" content="US vs CHINA AI">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://usvschina.ai/terms.html">
+    <meta name="twitter:title" content="US vs CHINA AI | Terms of Service">
+    <meta name="twitter:description" content="Terms of Service for US vs CHINA AI. Derived data disclaimers and limitations.">
+    <meta name="twitter:image" content="https://usvschina.ai/og-image-1772378757.png">
+
+    <!-- Additional SEO/AEO Meta -->
+    <meta name="theme-color" content="#020617">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Terms of Service",
+        "description": "Terms of Service for US vs CHINA AI",
+        "url": "https://usvschina.ai/terms.html",
+        "isPartOf": {
+            "@type": "WebSite",
+            "name": "US vs CHINA AI",
+            "url": "https://usvschina.ai/"
+        }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* News Marquee */
+        .news-marquee-bar {
+            background: linear-gradient(90deg, rgba(30, 58, 138, 0.7), rgba(127, 29, 29, 0.7));
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+        .news-marquee-track {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            will-change: transform;
+        }
+        .news-marquee-track.scrolling {
+            animation: newsScroll var(--scroll-duration, 60s) linear infinite;
+        }
+        .news-marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes newsScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .news-marquee-track.scrolling {
+                animation: none;
+                overflow-x: auto;
+            }
+        }
+        .news-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1.5rem;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        .news-item:hover { color: #ffffff; }
+        .news-item .news-source {
+            color: rgba(255, 255, 255, 0.4);
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+        }
+        .news-item .news-time {
+            color: rgba(255, 255, 255, 0.3);
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+        }
+        .news-separator {
+            color: rgba(255, 255, 255, 0.2);
+            margin: 0 0.5rem;
+            font-size: 0.75rem;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12 min-h-screen flex flex-col">
+    <!-- News Marquee (loaded from news.json) -->
+    <div id="newsMarquee" class="hidden -mx-4 md:-mx-12 -mt-4 md:-mt-12 mb-4 md:mb-8" role="marquee" aria-label="Latest AI news headlines"></div>
+
+    <div class="max-w-6xl mx-auto w-full flex-grow">
+        <!-- Navigation -->
+        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
+            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
+                <span class="group-hover:text-blue-400 transition">US</span>
+                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
+                <span class="group-hover:text-red-400 transition">CHINA</span>
+                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
+            </a>
+            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
+                <a href="index.html" class="text-slate-500 hover:text-white transition">Leaderboard</a>
+                <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
+                <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
+            </div>
+        </nav>
+
+        <header class="text-center mb-12">
+            <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-3">
+                Terms of <span class="winner-gradient">Service</span>
+            </h1>
+            <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4">
+                Last updated: March 1, 2026
+            </p>
+        </header>
+
+        <div class="space-y-8">
+            <div class="glass rounded-3xl p-8 border border-blue-500/20 bg-blue-500/5">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="scroll-text" class="text-blue-300"></i>
+                    <span>Agreement to terms</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        By accessing and using US vs CHINA AI (<a href="https://usvschina.ai" class="text-blue-400 hover:text-blue-300 underline">usvschina.ai</a>), you agree to be bound by these Terms of Service.
+                        If you do not agree to these terms, please do not use this site.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-yellow-500/20 bg-yellow-500/5">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="alert-triangle" class="text-yellow-300"></i>
+                    <span>Derived data disclaimer</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-white">All data displayed on this site is derived and computed data.</strong>
+                        We do not present raw or original benchmark results directly. Instead, we collect publicly available benchmark scores and pricing information from third-party sources and apply our own computational methodology (normalization, weighting, and aggregation) to produce the rankings, scores, and comparisons shown on screen.
+                    </p>
+                    <div class="bg-slate-900/50 p-4 rounded-xl text-sm border border-yellow-500/20 space-y-2">
+                        <p class="font-bold text-yellow-200">Key points about our data:</p>
+                        <ul class="space-y-1 text-slate-400">
+                            <li>&bull; <strong class="text-slate-200">Source data is third-party</strong> — benchmark scores, model specifications, and pricing are obtained from external, publicly available sources that we do not control</li>
+                            <li>&bull; <strong class="text-slate-200">Output is computed</strong> — the Unified Scores, IQ Indices, Value Indices, national totals, and rankings displayed on this site are the result of our proprietary calculations applied to that source data</li>
+                            <li>&bull; <strong class="text-slate-200">No original data is republished</strong> — we do not reproduce raw benchmark datasets; all displayed values are transformations of the underlying data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-red-500/20 bg-red-500/5">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="shield-off" class="text-red-300"></i>
+                    <span>No guarantee of accuracy</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        <strong class="text-white">This site is provided on an "as is" and "as available" basis without warranties of any kind</strong>, whether express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, accuracy, or non-infringement.
+                    </p>
+                    <p>
+                        Specifically, we make no representations or guarantees regarding:
+                    </p>
+                    <ul class="space-y-2 ml-4">
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-1 flex-shrink-0">&times;</span>
+                            <span>The accuracy, completeness, or timeliness of any data, scores, rankings, or comparisons displayed</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-1 flex-shrink-0">&times;</span>
+                            <span>The accuracy or currency of third-party source data on which our computations are based</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-1 flex-shrink-0">&times;</span>
+                            <span>The suitability of the information for any particular decision, including procurement, investment, or business decisions</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-red-400 mt-1 flex-shrink-0">&times;</span>
+                            <span>Uninterrupted or error-free operation of the site</span>
+                        </li>
+                    </ul>
+                    <p class="text-slate-400">
+                        Benchmark scores and pricing can change rapidly. All data on this site represents a point-in-time snapshot and should be treated as a periodic audit, not a definitive or permanent ranking.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="scale" class="text-purple-300"></i>
+                    <span>Limitation of liability</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        To the fullest extent permitted by applicable law, US vs CHINA AI, its operators, contributors, and affiliates shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising from:
+                    </p>
+                    <ul class="space-y-2 ml-4">
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-500 mt-1 flex-shrink-0">&mdash;</span>
+                            <span>Your use of, or inability to use, the site or its content</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-500 mt-1 flex-shrink-0">&mdash;</span>
+                            <span>Any errors, inaccuracies, or omissions in the data or computed results</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-500 mt-1 flex-shrink-0">&mdash;</span>
+                            <span>Decisions made or actions taken based on information provided on this site</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-slate-500 mt-1 flex-shrink-0">&mdash;</span>
+                            <span>Changes to third-party source data that have not yet been reflected on this site</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="brain" class="text-slate-300"></i>
+                    <span>Intellectual property</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        The computational methodology, scoring formulas, presentation, and original commentary on this site are the intellectual property of US vs CHINA AI.
+                    </p>
+                    <p>
+                        Third-party benchmark names, model names, and company names referenced on this site are trademarks of their respective owners. Their use on this site is for informational and comparative purposes only and does not imply endorsement or affiliation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="info" class="text-slate-300"></i>
+                    <span>Informational purpose</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        This site is intended for <strong class="text-white">general informational purposes only</strong>. The content does not constitute professional, financial, technical, or legal advice. You should not rely solely on the information presented here for making critical decisions.
+                    </p>
+                    <p class="text-slate-400">
+                        We encourage users to consult original benchmark publications and model provider documentation for authoritative data before making decisions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="external-link" class="text-slate-300"></i>
+                    <span>Third-party content and links</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        This site contains links to third-party websites and references third-party data. We do not control, endorse, or assume responsibility for the content, privacy policies, or practices of any third-party sites or services.
+                    </p>
+                    <p class="text-slate-400">
+                        The inclusion of third-party links or data references does not imply endorsement or verification of that content by US vs CHINA AI.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="refresh-cw" class="text-slate-300"></i>
+                    <span>Changes to these terms</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed space-y-3">
+                    <p>
+                        We reserve the right to modify these Terms of Service at any time. Changes will be reflected by updating the "Last updated" date at the top of this page. Continued use of the site after modifications constitutes acceptance of the updated terms.
+                    </p>
+                </div>
+            </div>
+
+            <div class="glass rounded-3xl p-8 border border-white/10 bg-slate-900/20">
+                <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
+                    <i data-lucide="mail" class="text-slate-300"></i>
+                    <span>Contact</span>
+                </h2>
+                <div class="text-slate-300 leading-relaxed">
+                    <p>
+                        If you have questions about these terms, please open an issue on our
+                        <a href="https://github.com/ChiefInnovator/usvschinaai" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline">GitHub repository</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
+        <div>
+            <p>&copy; 2025 US vs CHINA AI. All rights reserved.</p>
+        </div>
+        <div class="flex gap-4">
+            <a href="index.html" class="hover:text-white transition">Leaderboard</a>
+            <a href="history.html" class="hover:text-white transition">Archives</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
+            <a href="privacy.html" class="hover:text-white transition">Privacy</a>
+            <a href="terms.html" class="hover:text-white transition">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <!-- News Marquee Script -->
+    <script>
+    (function() {
+        function timeAgo(dateStr) {
+            if (!dateStr) return '';
+            try {
+                var date = new Date(dateStr);
+                var now = new Date();
+                var diffMs = now - date;
+                var diffMin = Math.floor(diffMs / 60000);
+                if (diffMin < 1) return 'just now';
+                if (diffMin < 60) return diffMin + 'm ago';
+                var diffHr = Math.floor(diffMin / 60);
+                if (diffHr < 24) return diffHr + 'h ago';
+                var diffDay = Math.floor(diffHr / 24);
+                if (diffDay < 7) return diffDay + 'd ago';
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            } catch (e) {
+                return '';
+            }
+        }
+
+        function getCountryFlag(country) {
+            if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
+            if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
+            return '\u{1F30D}';
+        }
+
+        function escapeHtml(str) {
+            var div = document.createElement('div');
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+
+        async function loadNewsMarquee() {
+            var container = document.getElementById('newsMarquee');
+            if (!container) return;
+
+            try {
+                var response = await fetch('news.json');
+                if (!response.ok) return;
+                var data = await response.json();
+                var items = data && Array.isArray(data.items) ? data.items : [];
+                if (items.length === 0) return;
+
+                var newsLabel = '<span class="inline-flex items-center px-3 py-1 text-xs font-bold uppercase tracking-wider text-white/80 flex-shrink-0">' +
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>' +
+                    'LATEST</span>';
+
+                items.sort(function(a, b) { return (b.relevanceScore || 0) - (a.relevanceScore || 0); });
+
+                var itemsHtml = items.map(function(item) {
+                    var flag = getCountryFlag(item.country);
+                    var time = timeAgo(item.publishedAt);
+                    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer" class="news-item">' +
+                        '<span class="mr-2 text-base">' + flag + '</span>' +
+                        '<span class="font-medium">' + escapeHtml(item.headline) + '</span>' +
+                        '<span class="news-source">(' + escapeHtml(item.source) + ')</span>' +
+                        (time ? '<span class="news-time">' + time + '</span>' : '') +
+                        '</a>' +
+                        '<span class="news-separator">\u2022</span>';
+                }).join('');
+
+                var trackContent = itemsHtml + itemsHtml;
+
+                var baseChars = items.reduce(function(sum, item) {
+                    return sum + (item.headline || '').length + (item.source || '').length + 20;
+                }, 0);
+                var duration = Math.max(30, Math.min(120, baseChars * 0.15));
+
+                container.innerHTML =
+                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 2.75rem;">' +
+                        '<div class="flex items-center h-full">' +
+                            newsLabel +
+                            '<div class="overflow-hidden flex-1 h-full flex items-center">' +
+                                '<div class="news-marquee-track scrolling" style="--scroll-duration: ' + duration + 's;" aria-live="off">' +
+                                    trackContent +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+
+                container.classList.remove('hidden');
+            } catch (e) {
+                console.log('News marquee: could not load news.json', e);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadNewsMarquee);
+        } else {
+            loadNewsMarquee();
+        }
+    })();
+    </script>
+</body>
+</html>
