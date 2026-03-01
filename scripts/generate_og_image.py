@@ -120,6 +120,7 @@ def build_top10_html(top10):
             f'<span class="model-rank">{i}.</span>'
             f'<span class="model-flag">{flag}</span>'
             f'<span class="model-name">{m["name"]}</span>'
+            f'<span class="model-dots"></span>'
             f'<span class="model-score">{m["unified"]:.2f}</span>'
             f'</div>'
         )
