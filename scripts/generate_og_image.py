@@ -4,7 +4,9 @@ Generate og-image.png from models.json data using Playwright.
 Renders a self-contained HTML template at 1200x630 and screenshots it.
 """
 import json
+import re
 import sys
+import time
 from pathlib import Path
 
 from dateutil.parser import parse as parse_date
@@ -177,6 +179,29 @@ def screenshot_html(html, output_path):
     print(f"Saved OG image: {output_path}")
 
 
+def update_og_image_version(workspace):
+    """Update og:image and twitter:image URLs in all HTML files with a cache-busting version."""
+    version = int(time.time())
+    html_files = list(workspace.glob("*.html"))
+    og_pattern = re.compile(
+        r'(<meta\s+property="og:image"\s+content="https://usvschina\.ai/og-image\.png)(\?v=\d+)?(")'
+    )
+    tw_pattern = re.compile(
+        r'(<meta\s+name="twitter:image"\s+content="https://usvschina\.ai/og-image\.png)(\?v=\d+)?(")'
+    )
+    updated = []
+    for html_file in html_files:
+        content = html_file.read_text(encoding="utf-8")
+        new_content = og_pattern.sub(rf"\g<1>?v={version}\3", content)
+        new_content = tw_pattern.sub(rf"\g<1>?v={version}\3", new_content)
+        if new_content != content:
+            html_file.write_text(new_content, encoding="utf-8")
+            updated.append(html_file.name)
+    if updated:
+        print(f"Updated og:image version to ?v={version} in: {', '.join(updated)}")
+    return updated
+
+
 def main():
     workspace = Path(__file__).resolve().parent.parent
     models_path = workspace / "models.json"
@@ -203,6 +228,8 @@ def main():
 
         html = build_html(scores, news_items, template_path)
         screenshot_html(html, output_path)
+
+        update_og_image_version(workspace)
 
         print("OG image generation complete.")
     except Exception as e:
