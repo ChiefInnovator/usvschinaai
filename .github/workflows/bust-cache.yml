@@ -23,10 +23,18 @@ jobs:
         run: |
           if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
             TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
-            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html" "https://usvschina.ai/privacy.html" "https://usvschina.ai/terms.html"; do
+            PAGES="/ index.html history.html about.html privacy.html terms.html"
+            for DOMAIN in "https://usvschina.ai" "https://chiefinnovator.github.io/usvschinaai"; do
+            for PAGE in $PAGES; do
+              if [ "$PAGE" = "/" ]; then
+                URL="${DOMAIN}/"
+              else
+                URL="${DOMAIN}/${PAGE}"
+              fi
               echo "Scraping Facebook cache for $URL"
               curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
               echo ""
+            done
             done
             echo "Facebook OG cache refreshed"
           else
