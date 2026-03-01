@@ -40,7 +40,39 @@ jobs:
       - name: Run scraper
         run: |
           python scripts/scrape_models.py
-      
+
+      - name: Run news scraper
+        continue-on-error: true
+        env:
+          NEWSDATA_API_KEY: ${{ secrets.NEWSDATA_API_KEY }}
+        run: |
+          python scripts/scrape_news.py
+
+      - name: Generate OG image
+        continue-on-error: true
+        run: |
+          python scripts/generate_og_image.py
+
+      - name: Update sitemap lastmod dates
+        run: |
+          TODAY=$(date -u +'%Y-%m-%d')
+          sed -i "s|<loc>https://usvschina.ai/</loc>\n\s*<lastmod>[^<]*</lastmod>|<loc>https://usvschina.ai/</loc>\n        <lastmod>${TODAY}</lastmod>|" sitemap.xml || true
+          python3 -c "
+          import re, sys
+          today = '${TODAY}'
+          with open('sitemap.xml', 'r') as f:
+              content = f.read()
+          # Update lastmod for dynamic pages
+          dynamic = ['https://usvschina.ai/', 'https://usvschina.ai/index.html',
+                     'https://usvschina.ai/history.html', 'https://usvschina.ai/models.json']
+          for url in dynamic:
+              pattern = f'(<loc>{re.escape(url)}</loc>\\s*<lastmod>)[^<]*(</lastmod>)'
+              content = re.sub(pattern, f'\\g<1>{today}\\g<2>', content)
+          with open('sitemap.xml', 'w') as f:
+              f.write(content)
+          print(f'Updated sitemap lastmod to {today}')
+          "
+
       - name: Configure git
         run: |
           git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
@@ -51,20 +83,51 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          if git diff --quiet models.json; then
-            echo "has_changes=false" >> $GITHUB_OUTPUT
-          else
-            echo "has_changes=true" >> $GITHUB_OUTPUT
-          fi
+          CHANGES=false
+          git diff --quiet models.json || CHANGES=true
+          git diff --quiet news.json 2>/dev/null || CHANGES=true
+          git diff --quiet sitemap.xml 2>/dev/null || CHANGES=true
+          git diff --quiet index.html 2>/dev/null || CHANGES=true
+          git diff --quiet history.html 2>/dev/null || CHANGES=true
+          git diff --quiet about.html 2>/dev/null || CHANGES=true
+          git ls-files --others --exclude-standard | grep -q news.json && CHANGES=true
+          git ls-files --others --exclude-standard | grep -q 'og-image-' && CHANGES=true
+          echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
       
       - name: Commit and push changes
         if: steps.changes.outputs.has_changes == 'true'
         run: |
           git add models.json
+          git add news.json 2>/dev/null || true
+          # Remove old OG images from git, then stage the new one
+          git ls-files og-image.png | xargs -r git rm -f 2>/dev/null || true
+          git ls-files 'og-image-[0-9]*.png' | xargs -r git rm -f 2>/dev/null || true
+          git add og-image-[0-9]*.png 2>/dev/null || true
+          git add sitemap.xml 2>/dev/null || true
+          git add index.html history.html about.html
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
       
+      - name: Bust Facebook OG cache
+        if: steps.changes.outputs.has_changes == 'true'
+        continue-on-error: true
+        env:
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+        run: |
+          if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
+            TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
+            for URL in "https://usvschina.ai/" "https://usvschina.ai/index.html" "https://usvschina.ai/history.html" "https://usvschina.ai/about.html"; do
+              echo "Scraping Facebook cache for $URL"
+              curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
+              echo ""
+            done
+            echo "Facebook OG cache refreshed"
+          else
+            echo "Skipping Facebook cache bust — FB_APP_ID/FB_APP_SECRET not configured"
+          fi
+
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'
         run: |

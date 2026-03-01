@@ -27,7 +27,7 @@
     <meta property="og:url" content="https://usvschina.ai/about.html">
     <meta property="og:title" content="US vs CHINA AI | About - Methodology & Scoring Explained">
     <meta property="og:description" content="Learn how US vs CHINA AI ranks AI models. Understand the scoring methodology and benchmarks.">
-    <meta property="og:image" content="https://usvschina.ai/og-image.png">
+    <meta property="og:image" content="https://usvschina.ai/og-image-1772372524.png">
     <meta property="og:site_name" content="US vs CHINA AI">
     <meta property="og:locale" content="en_US">
     
@@ -36,7 +36,7 @@
     <meta name="twitter:url" content="https://usvschina.ai/about.html">
     <meta name="twitter:title" content="US vs CHINA AI | About - Methodology & Scoring Explained">
     <meta name="twitter:description" content="Learn how US vs CHINA AI ranks AI models. Understand the scoring methodology and benchmarks.">
-    <meta name="twitter:image" content="https://usvschina.ai/og-image.png">
+    <meta name="twitter:image" content="https://usvschina.ai/og-image-1772372524.png">
     
     <!-- Additional SEO/AEO Meta -->
     <meta name="theme-color" content="#020617">
@@ -129,9 +129,67 @@
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+        /* News Marquee */
+        .news-marquee-bar {
+            background: linear-gradient(90deg, rgba(30, 58, 138, 0.7), rgba(127, 29, 29, 0.7));
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+        }
+        .news-marquee-track {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            will-change: transform;
+        }
+        .news-marquee-track.scrolling {
+            animation: newsScroll var(--scroll-duration, 60s) linear infinite;
+        }
+        .news-marquee-track:hover {
+            animation-play-state: paused;
+        }
+        @keyframes newsScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .news-marquee-track.scrolling {
+                animation: none;
+                overflow-x: auto;
+            }
+        }
+        .news-item {
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1.5rem;
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.2s;
+        }
+        .news-item:hover { color: #ffffff; }
+        .news-item .news-source {
+            color: rgba(255, 255, 255, 0.4);
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+        }
+        .news-item .news-time {
+            color: rgba(255, 255, 255, 0.3);
+            margin-left: 0.5rem;
+            font-size: 0.75rem;
+        }
+        .news-separator {
+            color: rgba(255, 255, 255, 0.2);
+            margin: 0 0.5rem;
+            font-size: 0.75rem;
+        }
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
+    <!-- News Marquee (loaded from news.json) -->
+    <div id="newsMarquee" class="hidden -mx-4 md:-mx-12 -mt-4 md:-mt-12 mb-4 md:mb-8" role="marquee" aria-label="Latest AI news headlines"></div>
+
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
         <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
@@ -348,6 +406,102 @@
 
     <script>
         lucide.createIcons();
+    </script>
+
+    <!-- News Marquee Script -->
+    <script>
+    (function() {
+        function timeAgo(dateStr) {
+            if (!dateStr) return '';
+            try {
+                var date = new Date(dateStr);
+                var now = new Date();
+                var diffMs = now - date;
+                var diffMin = Math.floor(diffMs / 60000);
+                if (diffMin < 1) return 'just now';
+                if (diffMin < 60) return diffMin + 'm ago';
+                var diffHr = Math.floor(diffMin / 60);
+                if (diffHr < 24) return diffHr + 'h ago';
+                var diffDay = Math.floor(diffHr / 24);
+                if (diffDay < 7) return diffDay + 'd ago';
+                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+            } catch (e) {
+                return '';
+            }
+        }
+
+        function getCountryFlag(country) {
+            if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
+            if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
+            return '\u{1F30D}';
+        }
+
+        function escapeHtml(str) {
+            var div = document.createElement('div');
+            div.appendChild(document.createTextNode(str));
+            return div.innerHTML;
+        }
+
+        async function loadNewsMarquee() {
+            var container = document.getElementById('newsMarquee');
+            if (!container) return;
+
+            try {
+                var response = await fetch('news.json');
+                if (!response.ok) return;
+                var data = await response.json();
+                var items = data && Array.isArray(data.items) ? data.items : [];
+                if (items.length === 0) return;
+
+                var newsLabel = '<span class="inline-flex items-center px-3 py-1 text-xs font-bold uppercase tracking-wider text-white/80 flex-shrink-0">' +
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>' +
+                    'LATEST</span>';
+
+                items.sort(function(a, b) { return (b.relevanceScore || 0) - (a.relevanceScore || 0); });
+
+                var itemsHtml = items.map(function(item) {
+                    var flag = getCountryFlag(item.country);
+                    var time = timeAgo(item.publishedAt);
+                    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer" class="news-item">' +
+                        '<span class="mr-2 text-base">' + flag + '</span>' +
+                        '<span class="font-medium">' + escapeHtml(item.headline) + '</span>' +
+                        '<span class="news-source">(' + escapeHtml(item.source) + ')</span>' +
+                        (time ? '<span class="news-time">' + time + '</span>' : '') +
+                        '</a>' +
+                        '<span class="news-separator">\u2022</span>';
+                }).join('');
+
+                var trackContent = itemsHtml + itemsHtml;
+
+                var baseChars = items.reduce(function(sum, item) {
+                    return sum + (item.headline || '').length + (item.source || '').length + 20;
+                }, 0);
+                var duration = Math.max(30, Math.min(120, baseChars * 0.15));
+
+                container.innerHTML =
+                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 2.75rem;">' +
+                        '<div class="flex items-center h-full">' +
+                            newsLabel +
+                            '<div class="overflow-hidden flex-1 h-full flex items-center">' +
+                                '<div class="news-marquee-track scrolling" style="--scroll-duration: ' + duration + 's;" aria-live="off">' +
+                                    trackContent +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    '</div>';
+
+                container.classList.remove('hidden');
+            } catch (e) {
+                console.log('News marquee: could not load news.json', e);
+            }
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadNewsMarquee);
+        } else {
+            loadNewsMarquee();
+        }
+    })();
     </script>
 </body>
 </html>

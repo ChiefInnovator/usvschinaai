@@ -1,0 +1,68 @@
+{
+  "lastUpdated": "2026-03-01T13:03:18.435915+00:00",
+  "items": [
+    {
+      "id": "ddd0c9076992ac3e",
+      "headline": "The trap Anthropic built for itself",
+      "url": "https://techcrunch.com/2026/02/28/the-trap-anthropic-built-for-itself/",
+      "source": "Tech Crunch",
+      "country": "US",
+      "publishedAt": "2026-03-01 00:08:58",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "ace4432bf6ba461f",
+      "headline": "How Researchers Measure, Detect and Benchmark AI Manipulation",
+      "url": "https://hackernoon.com/how-researchers-measure-detect-and-benchmark-ai-manipulation",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-02-28 16:15:26",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "88f9d15597c4d1e4",
+      "headline": "Trump Cuts Federal Ties With $15 Billion AI Firm Anthropic In Military Showdown",
+      "url": "https://www.worthynews.com/112588-trump-cuts-federal-ties-with-15-billion-ai-firm-anthropic-in-military-showdown",
+      "source": "Worthy Christian News",
+      "country": "US",
+      "publishedAt": "2026-02-28 14:42:24",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "03c230eed31f6c0b",
+      "headline": "NVIDIA’s GTC 2026 Reveal: AI Processor Featuring Groq Technology for OpenAI",
+      "url": "https://www.analyticsinsight.net/news/nvidias-gtc-2026-reveal-ai-processor-featuring-groq-technology-for-openai",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-02-28 16:16:46",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "9250896e07bae80f",
+      "headline": "BMW brings humanoid robots to European production lines for the first time",
+      "url": "https://www.gizmochina.com/2026/02/27/bmw-begins-testing-humanoid-robots-in-europe/",
+      "source": "Gizmochina",
+      "country": "CN",
+      "publishedAt": "2026-02-27 20:05:28",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "649a821ed4dedef3",
+      "headline": "Trust Your Journey: HIKMICRO Leads the Way with Dependability and Innovation at IWA 2026",
+      "url": "https://en.prnasia.com/story/523483-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "CN",
+      "publishedAt": "2026-02-28 09:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "e01fef1dfa8a1182",
+      "headline": "Everything announced at MWC 2026: The new Leica Leitzphone by Xiaomi, Honor's ultra-thin MagicPad 4 and more",
+      "url": "https://www.engadget.com/mobile/everything-announced-at-mwc-2026-the-new-leica-leitzphone-by-xiaomi-honors-ultra-thin-magicpad-4-and-more-172442426.html",
+      "source": "Engadget",
+      "country": "CN",
+      "publishedAt": "2026-02-28 17:24:42",
+      "relevanceScore": 0.08
+    }
+  ]
+}

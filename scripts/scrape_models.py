@@ -588,10 +588,25 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
         data['history'] = []
     
     data['history'].insert(0, new_entry)
-    
+
+    # Update footerText with the latest timestamp
+    ts = new_entry.get("timestamp", "")
+    if ts and "metadata" in data:
+        try:
+            from dateutil.parser import parse as parse_date
+            dt = parse_date(ts)
+            date_label = dt.strftime("%b %d, %Y").replace(" 0", " ")
+        except Exception:
+            date_label = ts[:10]
+        data["metadata"]["footerText"] = (
+            f"Data Audited {date_label} | Source: llm-stats.com | "
+            "IQ = participation-weighted average of normalized benchmarks "
+            "(single-participant tests excluded)"
+        )
+
     with open(models_path, 'w') as f:
         json.dump(data, f, indent=2)
-    
+
     print(f"\n✅ Successfully prepended entry to models.json")
 
 

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 630px;
+    background: #020617;
+    color: #f8fafc;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+  }
+
+  /* Title */
+  .title {
+    font-size: 72px;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -0.05em;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .title .vs {
+    color: #475569;
+    font-size: 48px;
+    margin: 0 12px;
+    vertical-align: middle;
+  }
+  .title .ai {
+    background: linear-gradient(90deg, #3b82f6, #ef4444);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    padding-left: 12px;
+    padding-right: 8px;
+  }
+
+  /* Date subtitle */
+  .subtitle {
+    color: #94a3b8;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  /* Cards container */
+  .cards {
+    display: flex;
+    gap: 32px;
+    width: 100%;
+  }
+
+  /* Individual card */
+  .card {
+    flex: 1;
+    background: rgba(30, 41, 59, 0.4);
+    border-radius: 24px;
+    padding: 28px 32px 24px;
+    position: relative;
+  }
+  .card-usa {
+    border: {{US_RING}};
+    box-shadow: {{US_SHADOW}};
+  }
+  .card-china {
+    border: {{CN_RING}};
+    box-shadow: {{CN_SHADOW}};
+  }
+
+  /* Leading badge */
+  .leading-badge {
+    position: absolute;
+    top: -14px;
+    right: 32px;
+    padding: 4px 16px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: white;
+    align-items: center;
+    gap: 6px;
+    z-index: 10;
+  }
+  .leading-usa {
+    background: #3b82f6;
+    display: {{US_LEADING_DISPLAY}};
+  }
+  .leading-china {
+    background: #ef4444;
+    display: {{CN_LEADING_DISPLAY}};
+  }
+
+  /* Team name */
+  .team-name {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .team-name-usa { color: #60a5fa; }
+  .team-name-china { color: #f87171; }
+
+  /* Team description */
+  .team-desc {
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: 2px;
+  }
+
+  /* Score row */
+  .score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+  .score-label {
+    color: #94a3b8;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+  }
+  .score-value {
+    font-size: 52px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  /* Divider */
+  .divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 16px 0;
+  }
+
+  /* Stat rows */
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    padding: 4px 0;
+  }
+  .stat-label { color: #94a3b8; }
+  .stat-value { font-weight: 700; font-family: 'Courier New', monospace; color: #f8fafc; }
+
+  /* News marquee — matches website ticker */
+  .news-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(90deg, rgba(30, 58, 138, 0.7), rgba(127, 29, 29, 0.7));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: {{NEWS_DISPLAY}};
+    align-items: center;
+    overflow: hidden;
+  }
+  .news-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.8);
+    flex-shrink: 0;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .news-track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: newsScroll 40s linear infinite;
+  }
+  @keyframes newsScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .news-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  .news-flag {
+    margin-right: 6px;
+    font-size: 14px;
+  }
+  .news-headline {
+    color: #e2e8f0;
+    font-weight: 500;
+  }
+  .news-source {
+    color: rgba(255, 255, 255, 0.4);
+    margin-left: 6px;
+    font-size: 11px;
+  }
+  .news-sep {
+    color: rgba(255, 255, 255, 0.25);
+    padding: 0 4px;
+    font-size: 10px;
+  }
+  .news-track-wrap {
+    overflow: hidden;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 24px;
+    color: #475569;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+  <!-- News Marquee -->
+  <div class="news-bar">
+    <span class="news-label">&#x1F4E1; Latest</span>
+    <div class="news-track-wrap">
+      <div class="news-track">{{NEWS_TRACK}}</div>
+    </div>
+  </div>
+
+  <!-- Title -->
+  <div class="title">
+    US <span class="vs">vs</span> CHINA<span class="ai">AI</span>
+  </div>
+
+  <!-- Date -->
+  <div class="subtitle">Performance Audit: {{DATE_STR}}</div>
+
+  <!-- Scorecards -->
+  <div class="cards">
+    <!-- TEAM USA -->
+    <div class="card card-usa">
+      <div class="leading-badge leading-usa">&#x1F3C6; Leading</div>
+      <div class="team-name team-name-usa">TEAM USA &#x1F1FA;&#x1F1F8;</div>
+      <div class="team-desc">The Frontier Artisans</div>
+      <div class="score-row">
+        <span class="score-label">Total Score</span>
+        <span class="score-value" style="color: {{US_SCORE_COLOR}}">{{US_TOTAL}}</span>
+      </div>
+      <div class="divider"></div>
+      <div class="stat-row">
+        <span class="stat-label">Avg IQ Index</span>
+        <span class="stat-value">{{US_AVG_IQ}}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Avg Value Index</span>
+        <span class="stat-value">{{US_AVG_VAL}}</span>
+      </div>
+    </div>
+
+    <!-- TEAM CHINA -->
+    <div class="card card-china">
+      <div class="leading-badge leading-china">&#x1F3C6; Leading</div>
+      <div class="team-name team-name-china">TEAM CHINA &#x1F1E8;&#x1F1F3;</div>
+      <div class="team-desc">The Scaling Giants</div>
+      <div class="score-row">
+        <span class="score-label">Total Score</span>
+        <span class="score-value" style="color: {{CN_SCORE_COLOR}}">{{CN_TOTAL}}</span>
+      </div>
+      <div class="divider"></div>
+      <div class="stat-row">
+        <span class="stat-label">Avg IQ Index</span>
+        <span class="stat-value">{{CN_AVG_IQ}}</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-label">Avg Value Index</span>
+        <span class="stat-value">{{CN_AVG_VAL}}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">usvschina.ai &mdash; Top 10 models by Unified Power Score</div>
+</body>
+</html>
