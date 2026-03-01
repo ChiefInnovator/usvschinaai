@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-Generate og-image.png from models.json data using Playwright.
-Renders a self-contained HTML template at 1200x630 and screenshots it.
+Generate og-image.png and ig-image.png from models.json data using Playwright.
+OG image: 1200x630 landscape for social sharing.
+IG image: 1080x1920 portrait for Instagram with top-10 leaderboard.
+Both images are compressed via Pillow to minimize file size.
 """
 import json
 import re
@@ -10,6 +12,7 @@ import time
 from pathlib import Path
 
 from dateutil.parser import parse as parse_date
+from PIL import Image
 from playwright.sync_api import sync_playwright
 
 
@@ -88,6 +91,41 @@ def load_scores(models_path):
     }
 
 
+def load_top10_models(models_path):
+    """Return the top 10 models with name, origin, and unified score."""
+    with open(models_path) as f:
+        data = json.load(f)
+
+    entry = data["history"][0]
+    all_models = []
+    for team_key in ["US", "CN"]:
+        for m in entry["teams"][team_key]:
+            all_models.append({
+                "name": m["model"],
+                "origin": team_key,
+                "unified": float(m.get("unified", 0)),
+            })
+    all_models.sort(key=lambda m: m["unified"], reverse=True)
+    return all_models[:10]
+
+
+def build_top10_html(top10):
+    """Build HTML rows for the top 10 leaderboard in the IG template."""
+    rows = []
+    for i, m in enumerate(top10, 1):
+        flag = "\U0001F1FA\U0001F1F8" if m["origin"] == "US" else "\U0001F1E8\U0001F1F3"
+        color_class = "row-us" if m["origin"] == "US" else "row-cn"
+        rows.append(
+            f'<div class="model-row {color_class}">'
+            f'<span class="model-rank">{i}.</span>'
+            f'<span class="model-flag">{flag}</span>'
+            f'<span class="model-name">{m["name"]}</span>'
+            f'<span class="model-score">{m["unified"]:.2f}</span>'
+            f'</div>'
+        )
+    return "\n".join(rows)
+
+
 def load_news_items(news_path):
     """Read news.json and return all items sorted by relevance for the marquee."""
     try:
@@ -134,7 +172,7 @@ def build_news_html(news_items):
 
 
 def build_html(scores, news_items, template_path):
-    """Load the HTML template and replace placeholders with computed scores."""
+    """Load the OG HTML template and replace placeholders with computed scores."""
     template = template_path.read_text(encoding="utf-8")
 
     news_display = "flex" if news_items else "none"
@@ -166,17 +204,66 @@ def build_html(scores, news_items, template_path):
     return html
 
 
-def screenshot_html(html, output_path):
-    """Use Playwright to render HTML at 1200x630 and save a screenshot."""
+def build_ig_html(scores, top10, template_path):
+    """Load the IG HTML template and replace placeholders with scores and leaderboard."""
+    template = template_path.read_text(encoding="utf-8")
+
+    us_count = sum(1 for m in top10 if m["origin"] == "US")
+    cn_count = sum(1 for m in top10 if m["origin"] == "CN")
+    total = us_count + cn_count
+    us_bar_pct = round(us_count / total * 100) if total else 50
+    cn_bar_pct = 100 - us_bar_pct
+
+    replacements = {
+        "{{DATE_STR}}": scores["date_str"],
+        "{{US_TOTAL}}": scores["us_total"],
+        "{{CN_TOTAL}}": scores["cn_total"],
+        "{{US_AVG_IQ}}": scores["us_avg_iq"],
+        "{{US_AVG_VAL}}": scores["us_avg_val"],
+        "{{CN_AVG_IQ}}": scores["cn_avg_iq"],
+        "{{CN_AVG_VAL}}": scores["cn_avg_val"],
+        "{{US_SCORE_COLOR}}": scores["us_score_color"],
+        "{{CN_SCORE_COLOR}}": scores["cn_score_color"],
+        "{{US_LEADING_DISPLAY}}": scores["us_leading_display"],
+        "{{CN_LEADING_DISPLAY}}": scores["cn_leading_display"],
+        "{{US_RING}}": scores["us_ring"],
+        "{{CN_RING}}": scores["cn_ring"],
+        "{{US_SHADOW}}": scores["us_shadow"],
+        "{{CN_SHADOW}}": scores["cn_shadow"],
+        "{{TOP10_ROWS}}": build_top10_html(top10),
+        "{{US_MODEL_COUNT}}": str(us_count),
+        "{{CN_MODEL_COUNT}}": str(cn_count),
+        "{{US_BAR_PCT}}": str(us_bar_pct),
+        "{{CN_BAR_PCT}}": str(cn_bar_pct),
+    }
+
+    html = template
+    for placeholder, value in replacements.items():
+        html = html.replace(placeholder, value)
+    return html
+
+
+def screenshot_html(html, output_path, width, height):
+    """Use Playwright to render HTML at given dimensions and save a screenshot."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         try:
-            page = browser.new_page(viewport={"width": 1200, "height": 630})
+            page = browser.new_page(viewport={"width": width, "height": height})
             page.set_content(html, wait_until="networkidle")
             page.screenshot(path=str(output_path), type="png")
         finally:
             browser.close()
-    print(f"Saved OG image: {output_path}")
+
+
+def compress_png(path):
+    """Compress a PNG file in-place using Pillow for smaller file size."""
+    original_size = path.stat().st_size
+    img = Image.open(path)
+    img.save(path, format="PNG", optimize=True)
+    compressed_size = path.stat().st_size
+    saved = original_size - compressed_size
+    pct = (saved / original_size * 100) if original_size > 0 else 0
+    print(f"Compressed {path.name}: {original_size:,} → {compressed_size:,} bytes ({pct:.1f}% smaller)")
 
 
 def update_og_image_version(workspace):
@@ -206,13 +293,15 @@ def main():
     workspace = Path(__file__).resolve().parent.parent
     models_path = workspace / "models.json"
     news_path = workspace / "news.json"
-    template_path = workspace / "scripts" / "og-template.html"
-    output_path = workspace / "og-image.png"
+    og_template_path = workspace / "scripts" / "og-template.html"
+    ig_template_path = workspace / "scripts" / "ig-template.html"
+    og_output_path = workspace / "og-image.png"
+    ig_output_path = workspace / "ig-image.png"
 
     if not models_path.exists():
         print("ERROR: models.json not found")
         sys.exit(1)
-    if not template_path.exists():
+    if not og_template_path.exists():
         print("ERROR: og-template.html not found")
         sys.exit(1)
 
@@ -220,20 +309,33 @@ def main():
         scores = load_scores(models_path)
         print(f"Scores: US {scores['us_total']} | CN {scores['cn_total']}")
 
+        # --- OG image (1200x630) ---
         news_items = load_news_items(news_path)
         if news_items:
             print(f"News: {len(news_items)} items loaded")
         else:
             print("No news items available — marquee hidden")
 
-        html = build_html(scores, news_items, template_path)
-        screenshot_html(html, output_path)
+        og_html = build_html(scores, news_items, og_template_path)
+        screenshot_html(og_html, og_output_path, 1200, 630)
+        compress_png(og_output_path)
+        print(f"Saved OG image: {og_output_path}")
+
+        # --- IG image (1080x1920) ---
+        if ig_template_path.exists():
+            top10 = load_top10_models(models_path)
+            ig_html = build_ig_html(scores, top10, ig_template_path)
+            screenshot_html(ig_html, ig_output_path, 1080, 1920)
+            compress_png(ig_output_path)
+            print(f"Saved IG image: {ig_output_path}")
+        else:
+            print("Skipping IG image — ig-template.html not found")
 
         update_og_image_version(workspace)
 
-        print("OG image generation complete.")
+        print("Image generation complete.")
     except Exception as e:
-        print(f"ERROR generating OG image: {e}")
+        print(f"ERROR generating images: {e}")
         sys.exit(1)
 
 

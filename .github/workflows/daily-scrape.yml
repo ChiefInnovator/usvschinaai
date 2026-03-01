@@ -48,7 +48,7 @@ jobs:
         run: |
           python scripts/scrape_news.py
 
-      - name: Generate OG image
+      - name: Generate OG and IG images
         continue-on-error: true
         run: |
           python scripts/generate_og_image.py
@@ -88,9 +88,11 @@ jobs:
           git diff --quiet news.json 2>/dev/null || CHANGES=true
           git diff --quiet sitemap.xml 2>/dev/null || CHANGES=true
           git diff --quiet og-image.png 2>/dev/null || CHANGES=true
+          git diff --quiet ig-image.png 2>/dev/null || CHANGES=true
           git diff --quiet -- '*.html' 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q news.json && CHANGES=true
           git ls-files --others --exclude-standard | grep -q og-image.png && CHANGES=true
+          git ls-files --others --exclude-standard | grep -q ig-image.png && CHANGES=true
           echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
       
       - name: Commit and push changes
@@ -99,6 +101,7 @@ jobs:
           git add models.json
           git add news.json 2>/dev/null || true
           git add og-image.png 2>/dev/null || true
+          git add ig-image.png 2>/dev/null || true
           git add sitemap.xml 2>/dev/null || true
           git add *.html 2>/dev/null || true
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
