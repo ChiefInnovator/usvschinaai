@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-03-01T17:59:09.414075+00:00",
+  "lastUpdated": "2026-03-02T04:01:22.525997+00:00",
   "items": [
+    {
+      "id": "f4a7bb4c1e15d762",
+      "headline": "Consumer Tech News (Feb 23-27): US–Taiwan Trade Tensions Escalates, Amazon Invests $12B In US & More",
+      "url": "https://www.benzinga.com/markets/market-summary/26/03/50954241/consumer-tech-news-feb-23-27-us-taiwan-trade-tensions-escalates-amazon-invests-12b-in-us-m",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-03-01 13:00:54",
+      "relevanceScore": 1.0
+    },
     {
       "id": "ddd0c9076992ac3e",
       "headline": "The trap Anthropic built for itself",
@@ -18,6 +27,15 @@
       "country": "Both",
       "publishedAt": "2026-02-28 16:15:26",
       "relevanceScore": 0.38
+    },
+    {
+      "id": "98a9196cfc65a96b",
+      "headline": "Google AI Workers Call for Restrictions on Military Use Following Pentagon-Anthropic Dispute",
+      "url": "https://www.breitbart.com/tech/2026/03/01/google-ai-workers-call-for-restrictions-on-military-use-following-pentagon-anthropic-dispute/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-03-01 15:52:49",
+      "relevanceScore": 0.3
     },
     {
       "id": "88f9d15597c4d1e4",
@@ -47,6 +65,15 @@
       "relevanceScore": 0.15
     },
     {
+      "id": "e35a1ddcc94cdaa0",
+      "headline": "I didn’t expect this foldable phone to embarrass Samsung and Google — but here we are",
+      "url": "https://www.tomsguide.com/phones/android-phones/honor-magic-v6-hands-on-review",
+      "source": "Tom's Guide",
+      "country": "US",
+      "publishedAt": "2026-03-01 13:00:00",
+      "relevanceScore": 0.15
+    },
+    {
       "id": "9250896e07bae80f",
       "headline": "BMW brings humanoid robots to European production lines for the first time",
       "url": "https://www.gizmochina.com/2026/02/27/bmw-begins-testing-humanoid-robots-in-europe/",
@@ -71,6 +98,15 @@
       "source": "Engadget",
       "country": "CN",
       "publishedAt": "2026-02-28 17:24:42",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d73f8f4d3d0256c4",
+      "headline": "Nvidia bid to 'open source' 6G may rattle Ericsson and Nokia",
+      "url": "https://www.lightreading.com/6g/nvidia-bid-to-open-source-6g-may-rattle-ericsson-and-nokia",
+      "source": "Lightreading",
+      "country": "US",
+      "publishedAt": "2026-03-01 07:05:00",
       "relevanceScore": 0.08
     }
   ]
