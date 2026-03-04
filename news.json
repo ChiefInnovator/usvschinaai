@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-04T03:59:39.412669+00:00",
+  "lastUpdated": "2026-03-04T15:28:55.261919+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -110,6 +110,15 @@
       "relevanceScore": 0.23
     },
     {
+      "id": "e3003cce346bcf40",
+      "headline": "U.S. considers caps on Nvidia chips for China",
+      "url": "https://www.latimes.com/business/story/2026-03-03/u-s-considers-caps-on-nvidia-chips-for-china",
+      "source": "Los Angeles Times",
+      "country": "Both",
+      "publishedAt": "2026-03-03 17:28:34",
+      "relevanceScore": 0.16
+    },
+    {
       "id": "7a32031d0d129a69",
       "headline": "5 big takeaways from Sam Altman's Saturday night AMA on OpenAI's Pentagon deal",
       "url": "https://www.businessinsider.com/takeaways-sam-altman-openai-pentagon-deal-ask-me-anything-2026-3",
@@ -170,15 +179,6 @@
       "source": "Gizmochina",
       "country": "CN",
       "publishedAt": "2026-02-27 20:05:28",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "649a821ed4dedef3",
-      "headline": "Trust Your Journey: HIKMICRO Leads the Way with Dependability and Innovation at IWA 2026",
-      "url": "https://en.prnasia.com/story/523483-0.shtml",
-      "source": "Pr Newswire Apac",
-      "country": "CN",
-      "publishedAt": "2026-02-28 09:00:00",
       "relevanceScore": 0.08
     }
   ]
