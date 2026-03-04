@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-03T15:34:01.404832+00:00",
+  "lastUpdated": "2026-03-04T03:59:39.412669+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -9,6 +9,15 @@
       "country": "Both",
       "publishedAt": "2026-03-01 13:00:54",
       "relevanceScore": 1.0
+    },
+    {
+      "id": "f9e308c49d8b9fbb",
+      "headline": "The one question everyone should be asking after OpenAI’s deal with the Pentagon",
+      "url": "https://www.vox.com/future-perfect/481322/pentagon-anthropic-openai-surveillance-china",
+      "source": "Vox",
+      "country": "Both",
+      "publishedAt": "2026-03-03 15:16:24",
+      "relevanceScore": 0.6
     },
     {
       "id": "208650f436d308e9",
@@ -54,6 +63,15 @@
       "country": "Both",
       "publishedAt": "2026-03-02 11:15:01",
       "relevanceScore": 0.3
+    },
+    {
+      "id": "4bf5dbec706a7c11",
+      "headline": "Global Times: The power of efficiency: Why have Chinese factories become 'training grounds' for executives from...",
+      "url": "https://en.prnasia.com/story/523796-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "Both",
+      "publishedAt": "2026-03-03 07:15:00",
+      "relevanceScore": 0.24
     },
     {
       "id": "88f9d15597c4d1e4",
@@ -137,6 +155,15 @@
       "relevanceScore": 0.15
     },
     {
+      "id": "8e24eceaf6b1357e",
+      "headline": "With developer verification, Google's Apple envy threatens to dismantle Android's open legacy",
+      "url": "https://arstechnica.com/gadgets/2026/03/with-developer-verification-googles-apple-envy-threatens-to-dismantle-androids-open-legacy/",
+      "source": "Ars Technica",
+      "country": "US",
+      "publishedAt": "2026-03-03 12:00:30",
+      "relevanceScore": 0.15
+    },
+    {
       "id": "9250896e07bae80f",
       "headline": "BMW brings humanoid robots to European production lines for the first time",
       "url": "https://www.gizmochina.com/2026/02/27/bmw-begins-testing-humanoid-robots-in-europe/",
@@ -152,33 +179,6 @@
       "source": "Pr Newswire Apac",
       "country": "CN",
       "publishedAt": "2026-02-28 09:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "e01fef1dfa8a1182",
-      "headline": "Everything announced at MWC 2026: The new Leica Leitzphone by Xiaomi, Honor's ultra-thin MagicPad 4 and more",
-      "url": "https://www.engadget.com/mobile/everything-announced-at-mwc-2026-the-new-leica-leitzphone-by-xiaomi-honors-ultra-thin-magicpad-4-and-more-172442426.html",
-      "source": "Engadget",
-      "country": "CN",
-      "publishedAt": "2026-02-28 17:24:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "d73f8f4d3d0256c4",
-      "headline": "Nvidia bid to 'open source' 6G may rattle Ericsson and Nokia",
-      "url": "https://www.lightreading.com/6g/nvidia-bid-to-open-source-6g-may-rattle-ericsson-and-nokia",
-      "source": "Lightreading",
-      "country": "US",
-      "publishedAt": "2026-03-01 07:05:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "1a7273c47ecde0fa",
-      "headline": "Nvidia Vera Rubin AI system 2026: 10x performance per watt, 1.3M components and $4M rack price",
-      "url": "https://baltimorechronicle.com/finances/2026/03/01/nvidia-vera-rubin-ai-system-2026-10x-performance-per-watt-1-3m-components-and-4m-rack-price/",
-      "source": "Baltimore Chronicle",
-      "country": "US",
-      "publishedAt": "2026-03-01 18:13:00",
       "relevanceScore": 0.08
     }
   ]
