@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-04T15:28:55.261919+00:00",
+  "lastUpdated": "2026-03-05T04:00:22.368731+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -62,6 +62,15 @@
       "source": "Business Insider",
       "country": "Both",
       "publishedAt": "2026-03-02 11:15:01",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "e2a5f50e2a05e1ef",
+      "headline": "Rokid Smart Glasses Now Support Gemini and ChatGPT",
+      "url": "https://www.androidheadlines.com/2026/03/rokid-smart-glasses-now-support-gemini-and-chatgpt.html",
+      "source": "Androidheadlines",
+      "country": "US",
+      "publishedAt": "2026-03-04 13:55:12",
       "relevanceScore": 0.3
     },
     {
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-03-03 12:00:30",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "9250896e07bae80f",
-      "headline": "BMW brings humanoid robots to European production lines for the first time",
-      "url": "https://www.gizmochina.com/2026/02/27/bmw-begins-testing-humanoid-robots-in-europe/",
-      "source": "Gizmochina",
-      "country": "CN",
-      "publishedAt": "2026-02-27 20:05:28",
-      "relevanceScore": 0.08
     }
   ]
 }
