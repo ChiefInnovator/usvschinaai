@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-06T03:59:39.832158+00:00",
+  "lastUpdated": "2026-03-06T15:28:13.304837+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -101,6 +101,15 @@
       "relevanceScore": 0.3
     },
     {
+      "id": "70bfc07debc5ae3a",
+      "headline": "AI Wars: Anthropic CEO Dario Amodei Lashes Out at 'Straight Up Lies' from OpenAI Boss Sam Altman",
+      "url": "https://www.breitbart.com/tech/2026/03/05/anthropic-ceo-accuses-openai-of-dishonesty-over-department-of-defense-partnership/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-03-05 16:50:13",
+      "relevanceScore": 0.3
+    },
+    {
       "id": "4bf5dbec706a7c11",
       "headline": "Global Times: The power of efficiency: Why have Chinese factories become 'training grounds' for executives from...",
       "url": "https://en.prnasia.com/story/523796-0.shtml",
@@ -170,15 +179,6 @@
       "source": "Business Insider",
       "country": "US",
       "publishedAt": "2026-03-01 01:40:02",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "e35a1ddcc94cdaa0",
-      "headline": "I didn’t expect this foldable phone to embarrass Samsung and Google — but here we are",
-      "url": "https://www.tomsguide.com/phones/android-phones/honor-magic-v6-hands-on-review",
-      "source": "Tom's Guide",
-      "country": "US",
-      "publishedAt": "2026-03-01 13:00:00",
       "relevanceScore": 0.15
     }
   ]
