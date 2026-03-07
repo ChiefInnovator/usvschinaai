@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-07T03:58:15.500418+00:00",
+  "lastUpdated": "2026-03-07T15:25:49.388459+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -164,22 +164,22 @@
       "relevanceScore": 0.23
     },
     {
-      "id": "e3003cce346bcf40",
-      "headline": "U.S. considers caps on Nvidia chips for China",
-      "url": "https://www.latimes.com/business/story/2026-03-03/u-s-considers-caps-on-nvidia-chips-for-china",
-      "source": "Los Angeles Times",
-      "country": "Both",
-      "publishedAt": "2026-03-03 17:28:34",
-      "relevanceScore": 0.16
+      "id": "dd2b9155ffafa142",
+      "headline": "AI technology debate: Pentagon and Anthropic at odds over weapon use",
+      "url": "https://apnews.com/article/ai-anthropic-pentagon-golden-dome-autonomous-weapons-6f3c45ff46172c1bf8658dea0098f3fe",
+      "source": "Apnews",
+      "country": "US",
+      "publishedAt": "2026-03-07 00:14:23",
+      "relevanceScore": 0.23
     },
     {
-      "id": "7a32031d0d129a69",
-      "headline": "5 big takeaways from Sam Altman's Saturday night AMA on OpenAI's Pentagon deal",
-      "url": "https://www.businessinsider.com/takeaways-sam-altman-openai-pentagon-deal-ask-me-anything-2026-3",
-      "source": "Business Insider",
+      "id": "ef8edabeb16f5f32",
+      "headline": "Pentagon's chief tech officer says he clashed with AI company Anthropic over autonomous warfare",
+      "url": "https://www.clickondetroit.com/news/politics/2026/03/07/pentagons-chief-tech-officer-says-he-clashed-with-ai-company-anthropic-over-autonomous-warfare/",
+      "source": "Clickondetroit",
       "country": "US",
-      "publishedAt": "2026-03-01 01:40:02",
-      "relevanceScore": 0.15
+      "publishedAt": "2026-03-07 00:14:23",
+      "relevanceScore": 0.23
     }
   ]
 }
