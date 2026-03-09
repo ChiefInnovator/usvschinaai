@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T04:03:27.399562+00:00",
+  "lastUpdated": "2026-03-09T15:37:16.239252+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -128,6 +128,15 @@
       "relevanceScore": 0.24
     },
     {
+      "id": "055ac1cdf86e3d30",
+      "headline": "Nvidia halts China-bound H200 production, shifts TSMC capacity to Vera Rubin",
+      "url": "https://www.digitimes.com/news/a20260309VL202/nvidia-rubin-chips-production-capacity-china.html",
+      "source": "Digitimes",
+      "country": "CN",
+      "publishedAt": "2026-03-09 02:39:32",
+      "relevanceScore": 0.24
+    },
+    {
       "id": "88f9d15597c4d1e4",
       "headline": "Trump Cuts Federal Ties With $15 Billion AI Firm Anthropic In Military Showdown",
       "url": "https://www.worthynews.com/112588-trump-cuts-federal-ties-with-15-billion-ai-firm-anthropic-in-military-showdown",
@@ -170,15 +179,6 @@
       "source": "Wired",
       "country": "US",
       "publishedAt": "2026-03-04 22:00:03",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "dd2b9155ffafa142",
-      "headline": "AI technology debate: Pentagon and Anthropic at odds over weapon use",
-      "url": "https://apnews.com/article/ai-anthropic-pentagon-golden-dome-autonomous-weapons-6f3c45ff46172c1bf8658dea0098f3fe",
-      "source": "Apnews",
-      "country": "US",
-      "publishedAt": "2026-03-07 00:14:23",
       "relevanceScore": 0.23
     }
   ]
