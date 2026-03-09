@@ -61,6 +61,7 @@ For inquiries, you can reach out to the creator:
 ### Related Links
 - [Microsoft MVP](https://mvp.microsoft.com/en-US/MVP/profile/10ce0bc0-7536-43f6-b28c-e9601a4a0d0d): Rich has been a Microsoft Most Valued Professional for several years in AI, Azure, Dev, DevOps, and more.
 - [Inventing Fire with AI](https://inventingfirewith.ai): The website for Inventing Fire with AI podcast.
+- [MILL5](https://www.mill5.com): An AI innovation company.
 
 ---
 
