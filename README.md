@@ -2,16 +2,16 @@
 *Track the AI race in real-time between the US 🇺🇸 and China 🇨🇳*  
 
 ## ✨ Features
-- **Unified Score (0–1000)**: A comprehensive metric combining 90% capability and 10% value, normalized across the cohort.
-- **National Scoreboard**: Compare Team USA 🇺🇸 and Team China 🇨🇳 in an engaging scoreboard format.
-- **Auto-Sorted Rankings**: Effortlessly view AI models sorted by their Unified Scores in descending order.
-- **Historical Archives**: Explore how the competitive landscape evolves over time with easy access to expandable historical entries.
-- **Informative About Page**: Understand the scoring methodology, assumptions, and benchmark explanations.
-- **Automated Daily Updates**: Enjoy fresh data every day at 00:00 UTC via automated processes.
+- **Unified Score (0–1000)**: A comprehensive metric that evaluates AI models based on both capability and value.
+- **National Scoreboard**: An engaging scoreboard format to compare the AI prowess of Team USA 🇺🇸 and Team China 🇨🇳.
+- **Auto-Sorted Rankings**: Instantly see AI models ranked by their Unified Scores with a simple descending order display.
+- **Historical Archives**: Access expandable historical data to explore how the AI competition has evolved over time.
+- **Informative About Page**: Gain insights into the scoring methodology and benchmarks used for evaluation.
+- **Automated Daily Updates**: Receive fresh data daily at 00:00 UTC, ensuring you have the latest information.
 
 ## 🚀 Quick Start
 Experience the AI leaderboard live by visiting our deployed application: [US vs CHINA AI Dashboard](https://usvschina.ai).  
-For additional details, you can also check our GitHub Pages site: [GitHub Pages](https://chiefinnovator.github.io/usvschinaai/).
+For detailed information, check our GitHub Pages site: [GitHub Pages](https://chiefinnovator.github.io/usvschinaai/).
 
 ### Getting Started Locally
 To run the project locally, you will need a local web server. Here are some easy methods to set it up:
