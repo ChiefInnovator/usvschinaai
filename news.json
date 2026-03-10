@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T15:37:16.239252+00:00",
+  "lastUpdated": "2026-03-10T03:59:40.198702+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -119,6 +119,15 @@
       "relevanceScore": 0.3
     },
     {
+      "id": "4b666f15b4d45d22",
+      "headline": "Logitech CEO Hanneke Faber on why AI makes hardware ‘sexy’ again",
+      "url": "https://www.fastcompany.com/91504597/logitech-ceo-hanneke-faber-on-why-ai-makes-hardware-sexy-again?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-03-09 12:00:00",
+      "relevanceScore": 0.3
+    },
+    {
       "id": "4bf5dbec706a7c11",
       "headline": "Global Times: The power of efficiency: Why have Chinese factories become 'training grounds' for executives from...",
       "url": "https://en.prnasia.com/story/523796-0.shtml",
@@ -170,15 +179,6 @@
       "source": "Engadget",
       "country": "Both",
       "publishedAt": "2026-03-02 02:50:15",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "b9582c179176dc85",
-      "headline": "What AI Models for War Actually Look Like",
-      "url": "https://www.wired.com/story/ai-model-military-use-smack-technologies/",
-      "source": "Wired",
-      "country": "US",
-      "publishedAt": "2026-03-04 22:00:03",
       "relevanceScore": 0.23
     }
   ]
