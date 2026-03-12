@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-11T15:32:58.062081+00:00",
+  "lastUpdated": "2026-03-12T04:02:11.701119+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -80,6 +80,15 @@
       "source": "Hackernoon",
       "country": "Both",
       "publishedAt": "2026-02-28 16:15:26",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "1ce0a6bf302017ab",
+      "headline": "Deepseek Blocks US Chipmakers From Early Model Access Arabian Post",
+      "url": "https://menafn.com/1110845731/Deepseek-Blocks-US-Chipmakers-From-Early-Model-Access-Arabian-Post",
+      "source": "Menafn",
+      "country": "CN",
+      "publishedAt": "2026-03-11 04:09:37",
       "relevanceScore": 0.38
     },
     {
@@ -170,15 +179,6 @@
       "source": "Worthy Christian News",
       "country": "US",
       "publishedAt": "2026-02-28 14:42:24",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "03c230eed31f6c0b",
-      "headline": "NVIDIA’s GTC 2026 Reveal: AI Processor Featuring Groq Technology for OpenAI",
-      "url": "https://www.analyticsinsight.net/news/nvidias-gtc-2026-reveal-ai-processor-featuring-groq-technology-for-openai",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-02-28 16:16:46",
       "relevanceScore": 0.23
     }
   ]
