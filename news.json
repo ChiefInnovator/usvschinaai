@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-12T15:37:33.369117+00:00",
+  "lastUpdated": "2026-03-13T04:00:37.550976+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -71,6 +71,15 @@
       "source": "Digitimes",
       "country": "Both",
       "publishedAt": "2026-03-05 03:22:32",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "317311ca07c598a1",
+      "headline": "Microsoft backs AI firm Anthropic in legal battle against Pentagon",
+      "url": "https://www.theguardian.com/technology/2026/mar/12/microsoft-amicus-brief-anthropic-pentagon",
+      "source": "The Guardian",
+      "country": "US",
+      "publishedAt": "2026-03-12 14:56:13",
       "relevanceScore": 0.45
     },
     {
@@ -146,6 +155,15 @@
       "relevanceScore": 0.3
     },
     {
+      "id": "794d0ebf5c6cd774",
+      "headline": "Anthropic just sued the Pentagon. The outcome could reshape the AI race with China",
+      "url": "https://fortune.com/2026/03/12/anthropic-pentagon-lawsuit-supply-chain-risk-china-ai-race/",
+      "source": "Fortune",
+      "country": "Both",
+      "publishedAt": "2026-03-12 13:10:00",
+      "relevanceScore": 0.3
+    },
+    {
       "id": "4bf5dbec706a7c11",
       "headline": "Global Times: The power of efficiency: Why have Chinese factories become 'training grounds' for executives from...",
       "url": "https://en.prnasia.com/story/523796-0.shtml",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-03-09 02:39:32",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "6cd2a80d1cf62402",
-      "headline": "Nvidia halts H200 production as China backs Huawei AI chips",
-      "url": "https://asiatimes.com/2026/03/nvidia-halts-h200-production-as-china-backs-huawei-ai-chips/",
-      "source": "Asia Times",
-      "country": "Both",
-      "publishedAt": "2026-03-09 22:57:42",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "88f9d15597c4d1e4",
-      "headline": "Trump Cuts Federal Ties With $15 Billion AI Firm Anthropic In Military Showdown",
-      "url": "https://www.worthynews.com/112588-trump-cuts-federal-ties-with-15-billion-ai-firm-anthropic-in-military-showdown",
-      "source": "Worthy Christian News",
-      "country": "US",
-      "publishedAt": "2026-02-28 14:42:24",
-      "relevanceScore": 0.23
     }
   ]
 }
