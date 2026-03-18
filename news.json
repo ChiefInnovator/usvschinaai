@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-18T04:09:16.132437+00:00",
+  "lastUpdated": "2026-03-18T15:44:28.456534+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -45,6 +45,15 @@
       "country": "US",
       "publishedAt": "2026-03-10 14:36:54",
       "relevanceScore": 0.6
+    },
+    {
+      "id": "2bb8b0c4dae70637",
+      "headline": "China approves Nvidia H200 AI chip sales as licences granted to multiple firms",
+      "url": "https://investinglive.com/stocks/china-approves-nvidia-h200-ai-chip-sales-as-licences-granted-to-multiple-firms-20260318/",
+      "source": "Forexlive",
+      "country": "Both",
+      "publishedAt": "2026-03-18 02:00:23",
+      "relevanceScore": 0.48
     },
     {
       "id": "208650f436d308e9",
@@ -119,6 +128,15 @@
       "relevanceScore": 0.32
     },
     {
+      "id": "76ace6b594a8aa15",
+      "headline": "'CODE RED' Author: AI Isn't Just a Tool, It's Political Power",
+      "url": "https://www.breitbart.com/tech/2026/03/17/code-red-author-ai-isnt-just-a-tool-its-political-power/",
+      "source": "Brietbart",
+      "country": "Both",
+      "publishedAt": "2026-03-17 18:57:15",
+      "relevanceScore": 0.31
+    },
+    {
       "id": "98a9196cfc65a96b",
       "headline": "Google AI Workers Call for Restrictions on Military Use Following Pentagon-Anthropic Dispute",
       "url": "https://www.breitbart.com/tech/2026/03/01/google-ai-workers-call-for-restrictions-on-military-use-following-pentagon-anthropic-dispute/",
@@ -161,24 +179,6 @@
       "source": "The Mercury News",
       "country": "US",
       "publishedAt": "2026-03-08 11:30:40",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "4b666f15b4d45d22",
-      "headline": "Logitech CEO Hanneke Faber on why AI makes hardware ‘sexy’ again",
-      "url": "https://www.fastcompany.com/91504597/logitech-ceo-hanneke-faber-on-why-ai-makes-hardware-sexy-again?partner=rss",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-03-09 12:00:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "794d0ebf5c6cd774",
-      "headline": "Anthropic just sued the Pentagon. The outcome could reshape the AI race with China",
-      "url": "https://fortune.com/2026/03/12/anthropic-pentagon-lawsuit-supply-chain-risk-china-ai-race/",
-      "source": "Fortune",
-      "country": "Both",
-      "publishedAt": "2026-03-12 13:10:00",
       "relevanceScore": 0.3
     }
   ]
