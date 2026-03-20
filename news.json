@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-19T15:35:46.511853+00:00",
+  "lastUpdated": "2026-03-20T04:01:43.573413+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -45,6 +45,15 @@
       "country": "US",
       "publishedAt": "2026-03-10 14:36:54",
       "relevanceScore": 0.6
+    },
+    {
+      "id": "a28df1cc86f9fe86",
+      "headline": "Trump's kiss of death should have been this company's end. Its fight back could be his",
+      "url": "https://www.rawstory.com/trump-anthropic-2676364671/",
+      "source": "Raw Story",
+      "country": "Both",
+      "publishedAt": "2026-03-19 15:23:52",
+      "relevanceScore": 0.53
     },
     {
       "id": "2bb8b0c4dae70637",
@@ -170,15 +179,6 @@
       "source": "Brietbart",
       "country": "US",
       "publishedAt": "2026-03-05 16:50:13",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "643b6f64aeeb5056",
-      "headline": "Explosive Silicon Valley dispute raises questions over AI giants’ willingness to help track Americans and fuel robot...",
-      "url": "https://www.mercurynews.com/2026/03/08/explosive-dispute-questions-silicon-valleys-track-americans-robot-warfare/",
-      "source": "The Mercury News",
-      "country": "US",
-      "publishedAt": "2026-03-08 11:30:40",
       "relevanceScore": 0.3
     }
   ]
