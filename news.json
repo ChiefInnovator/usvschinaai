@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-27T15:34:22.954122+00:00",
+  "lastUpdated": "2026-03-28T04:05:27.117412+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -110,6 +110,15 @@
       "relevanceScore": 0.4
     },
     {
+      "id": "ea1c0e3b31461707",
+      "headline": "How GM is shaping the future of car design, one Corvette at a time",
+      "url": "https://www.fastcompany.com/91516047/how-gm-is-shaping-the-future-of-car-design-one-corvette-at-a-time",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-03-27 10:30:00",
+      "relevanceScore": 0.39
+    },
+    {
       "id": "ace4432bf6ba461f",
       "headline": "How Researchers Measure, Detect and Benchmark AI Manipulation",
       "url": "https://hackernoon.com/how-researchers-measure-detect-and-benchmark-ai-manipulation",
@@ -170,15 +179,6 @@
       "source": "Business Insider",
       "country": "Both",
       "publishedAt": "2026-03-02 11:15:01",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "e2a5f50e2a05e1ef",
-      "headline": "Rokid Smart Glasses Now Support Gemini and ChatGPT",
-      "url": "https://www.androidheadlines.com/2026/03/rokid-smart-glasses-now-support-gemini-and-chatgpt.html",
-      "source": "Androidheadlines",
-      "country": "US",
-      "publishedAt": "2026-03-04 13:55:12",
       "relevanceScore": 0.3
     }
   ]
