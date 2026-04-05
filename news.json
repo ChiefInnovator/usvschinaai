@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T15:27:04.683240+00:00",
+  "lastUpdated": "2026-04-05T04:14:24.960401+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -18,6 +18,15 @@
       "country": "Both",
       "publishedAt": "2026-03-05 11:00:00",
       "relevanceScore": 1.0
+    },
+    {
+      "id": "d06d37d9d35e981b",
+      "headline": "The Machines That Won’t Die: Inside the Alarming Discovery That AI Systems Fight to Stay Alive",
+      "url": "https://www.webpronews.com/the-machines-that-wont-die-inside-the-alarming-discovery-that-ai-systems-fight-to-stay-alive/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-04-04 15:20:06",
+      "relevanceScore": 0.68
     },
     {
       "id": "3278ddc24f5f86be",
@@ -170,15 +179,6 @@
       "source": "Brietbart",
       "country": "Both",
       "publishedAt": "2026-03-17 18:57:15",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "64a1c98e01d41dae",
-      "headline": "New Study Could Show How TikTok’s Algorithm Affects Youth Mental Health",
-      "url": "http://news.gatech.edu/news/2026/02/24/new-study-could-show-how-tiktoks-algorithm-affects-youth-mental-health",
-      "source": "Georgia Institute Of Technology",
-      "country": "Both",
-      "publishedAt": "2026-03-20 12:53:58",
       "relevanceScore": 0.31
     }
   ]
