@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-06T15:33:22.346399+00:00",
+  "lastUpdated": "2026-04-07T15:47:47.292833+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -128,6 +128,15 @@
       "relevanceScore": 0.45
     },
     {
+      "id": "0dfcb907e811c175",
+      "headline": "US vs. China: The AI arms race",
+      "url": "https://nypost.com/video/us-vs-china-the-ai-arms-race/",
+      "source": "New York Post",
+      "country": "Both",
+      "publishedAt": "2026-04-06 13:56:12",
+      "relevanceScore": 0.45
+    },
+    {
       "id": "15a99617048a79c3",
       "headline": "Nvidia chip curbs turn Singapore into AI hub for China",
       "url": "https://asiatimes.com/2026/03/nvidia-chip-curbs-turn-singapore-into-ai-hub-for-china/",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-03-13 15:55:53",
       "relevanceScore": 0.32
-    },
-    {
-      "id": "76ace6b594a8aa15",
-      "headline": "'CODE RED' Author: AI Isn't Just a Tool, It's Political Power",
-      "url": "https://www.breitbart.com/tech/2026/03/17/code-red-author-ai-isnt-just-a-tool-its-political-power/",
-      "source": "Brietbart",
-      "country": "Both",
-      "publishedAt": "2026-03-17 18:57:15",
-      "relevanceScore": 0.31
     }
   ]
 }
