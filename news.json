@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-10T04:19:10.230551+00:00",
+  "lastUpdated": "2026-04-10T15:34:22.280218+00:00",
   "items": [
     {
       "id": "f4a7bb4c1e15d762",
@@ -56,6 +56,15 @@
       "relevanceScore": 0.6
     },
     {
+      "id": "4c7863ddc99f5087",
+      "headline": "Anthropic's unreleased Mythos AI model stirs debate in US intelligence community over cyber risks",
+      "url": "https://completeaitraining.com/news/anthropics-unreleased-mythos-ai-model-stirs-debate-in-us/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-04-10 03:10:48",
+      "relevanceScore": 0.54
+    },
+    {
       "id": "a28df1cc86f9fe86",
       "headline": "Trump's kiss of death should have been this company's end. Its fight back could be his",
       "url": "https://www.rawstory.com/trump-anthropic-2676364671/",
@@ -80,6 +89,15 @@
       "source": "Analytics And Insight",
       "country": "US",
       "publishedAt": "2026-04-07 14:00:00",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "6f172476f83762cb",
+      "headline": "Anthropic Unveils ‘Project Glasswing’ as Claude Mythos Targets Software Vulnerabilities",
+      "url": "https://www.hpcwire.com/off-the-wire/anthropic-unveils-project-glasswing-as-claude-mythos-targets-software-vulnerabilities/",
+      "source": "Hpcwire",
+      "country": "US",
+      "publishedAt": "2026-04-09 19:23:57",
       "relevanceScore": 0.53
     },
     {
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-03-27 10:30:00",
       "relevanceScore": 0.39
-    },
-    {
-      "id": "ace4432bf6ba461f",
-      "headline": "How Researchers Measure, Detect and Benchmark AI Manipulation",
-      "url": "https://hackernoon.com/how-researchers-measure-detect-and-benchmark-ai-manipulation",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-02-28 16:15:26",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "1ce0a6bf302017ab",
-      "headline": "Deepseek Blocks US Chipmakers From Early Model Access Arabian Post",
-      "url": "https://menafn.com/1110845731/Deepseek-Blocks-US-Chipmakers-From-Early-Model-Access-Arabian-Post",
-      "source": "Menafn",
-      "country": "CN",
-      "publishedAt": "2026-03-11 04:09:37",
-      "relevanceScore": 0.38
     }
   ]
 }
