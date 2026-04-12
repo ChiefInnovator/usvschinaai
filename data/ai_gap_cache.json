@@ -1,0 +1,180 @@
+{
+  "Claude Opus 4.5": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Anthropic reports Claude Opus 4.5 AIME 2025 at 92.77% without tools; the same section notes possible contamination.",
+      "score": "92.77%",
+      "source_type": "paper",
+      "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Anthropic’s system card table reports Claude Opus 4.5 HLE (no tools) at 30.8%.",
+      "score": "30.8%",
+      "source_type": "paper",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Anthropic’s system card table reports Claude Opus 4.5 MMMU-Pro (no tools) at 70.6%.",
+      "score": "70.6%",
+      "source_type": "paper",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
+    }
+  },
+  "Claude Sonnet 4.6": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Anthropic’s Claude Sonnet 4.6 system card reports 95.6% without tools, averaged over 10 trials.",
+      "score": "95.6%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/78073f739564e986ff3e28522761a7a0b4484f84.pdf"
+    }
+  },
+  "GPT-5 High": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-04-12T17:57:23.771952+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported by OpenAI for GPT-5(high) with no-tools evaluation.",
+      "score": "24.8%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-12T17:57:23.771952+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported by OpenAI as the average across standard and vision sets.",
+      "score": "78.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-04-12T17:57:23.771952+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported by OpenAI for GPT-5(high) with their stated evaluation setup.",
+      "score": "74.9%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/"
+    }
+  },
+  "GPT-5.2": {
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Public leaderboard entry for GPT-5.2 via the Terminus 2 agent on Terminal-Bench 2.0.",
+      "score": "54.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.tbench.ai/leaderboard/terminal-bench/2.0?agents=Terminus+2"
+    }
+  },
+  "Gemini 3 Pro": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Official Google DeepMind table lists this under “Gemini 3 Pro Thinking (High)”, so the score is variant-specific.",
+      "score": "85.9%",
+      "source_type": "vendor_blog",
+      "source_url": "https://deepmind.google/models/gemini/"
+    },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Official Google DeepMind table lists this under “Gemini 3 Pro Thinking (High)”, so the score is variant-specific.",
+      "score": "69.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://deepmind.google/models/gemini/"
+    }
+  },
+  "Kimi K2 0905": {
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported as ACC on the official Kimi K2-Instruct-0905 model card.",
+      "score": "69.2%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905/blob/refs%2Fpr%2F10/README.md"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported as ACC on the official Kimi K2-Instruct-0905 model card; the page labels it Terminal-Bench.",
+      "score": "44.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct-0905/blob/refs%2Fpr%2F10/README.md"
+    }
+  },
+  "Kimi K2-Thinking-0905": {
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Official MoonshotAI/Hugging Face model card reports Terminal-Bench w/ simulated tools (JSON) = 47.1, which matches the Terminal Bench entry on llm-stats.",
+      "score": "47.1%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/f1cdb45f7732d9c930151f3f4174a5dd78a1f7ec/README.md"
+    }
+  },
+  "Kimi K2.5": {
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Reported as MCP-Atlas (Public Set) in MoonshotAI's Kimi K2.5 benchmark table.",
+      "score": "63.8%",
+      "source_type": "model_card",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K2.5"
+    }
+  },
+  "Qwen3.5-397B-A17B": {
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Official Qwen3.6 benchmark table includes a Qwen3.5-397B-A17B column and lists MCP-Atlas as a public set score.",
+      "score": "74.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://qwen.ai/blog?id=qwen3.6"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-12T18:02:01.952104+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4-mini",
+      "notes": "Official Qwen benchmark table for Qwen3.5-397B-A17B.",
+      "score": "79.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://qwen.ai/blog?id=qwen3.5"
+    }
+  }
+}

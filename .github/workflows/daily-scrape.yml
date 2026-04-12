@@ -38,6 +38,12 @@ jobs:
           playwright install chromium
       
       - name: Run scraper
+        env:
+          # Used by the AI gap-filling pass (scripts/gap_fill_benchmarks.py)
+          # to query OpenAI's Responses API with the web_search tool.
+          # If unset, the gap-filling pass is silently skipped — Pass 1 and
+          # Pass 2 still run normally on the un-enriched data.
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python scripts/scrape_models.py
 
@@ -90,11 +96,15 @@ jobs:
           git diff --quiet og-image.png 2>/dev/null || CHANGES=true
           git diff --quiet ig-image.png 2>/dev/null || CHANGES=true
           git diff --quiet -- '*.html' 2>/dev/null || CHANGES=true
+          git diff --quiet data/ai_gap_cache.json 2>/dev/null || CHANGES=true
+          git diff --quiet data/ai_fill_history.jsonl 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q news.json && CHANGES=true
           git ls-files --others --exclude-standard | grep -q og-image.png && CHANGES=true
           git ls-files --others --exclude-standard | grep -q ig-image.png && CHANGES=true
+          git ls-files --others --exclude-standard | grep -q 'data/ai_gap_cache.json' && CHANGES=true
+          git ls-files --others --exclude-standard | grep -q 'data/ai_fill_history.jsonl' && CHANGES=true
           echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
-      
+
       - name: Commit and push changes
         if: steps.changes.outputs.has_changes == 'true'
         run: |
@@ -104,6 +114,11 @@ jobs:
           git add ig-image.png 2>/dev/null || true
           git add sitemap.xml 2>/dev/null || true
           git add *.html 2>/dev/null || true
+          # AI gap-fill cache + audit log are committed so the next run benefits
+          # from prior cached negative responses (no wasted API calls) and the
+          # audit history is visible in git log.
+          git add data/ai_gap_cache.json 2>/dev/null || true
+          git add data/ai_fill_history.jsonl 2>/dev/null || true
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main

@@ -6,8 +6,8 @@
     <title>US vs CHINA AI | Global Leaderboard - Compare Top AI Models 2025</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Compare the world's best AI models ranked by intelligence and cost efficiency. Track which country is winning the AI race: USA vs China. Updated December 2025.">
-    <meta name="keywords" content="AI models, artificial intelligence, US vs China AI, AI leaderboard, GPT-5, DeepSeek, Gemini, Claude, AI benchmark, AI comparison, frontier AI models, AI race, best AI model 2025, China AI, American AI">
+    <meta name="description" content="Compare the world's best AI models ranked by intelligence and cost efficiency. Track which country is winning the AI race: USA vs China. Updated April 2026.">
+    <meta name="keywords" content="AI models, artificial intelligence, US vs China AI, AI leaderboard, GPT-5, Gemini 3, Claude Opus, Kimi K2, GLM-5, Qwen3.5, AI benchmark, AI comparison, frontier AI models, AI race, best AI model 2026, China AI, American AI">
     <meta name="author" content="US vs CHINA AI">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://usvschina.ai/">
@@ -42,8 +42,10 @@
     <meta name="twitter:image" content="https://usvschina.ai/og-image.png?v=1776007689">
     
     <!-- Additional SEO/AEO Meta -->
-    <meta name="theme-color" content="#020617">
-    <meta name="format-detection" content="telephone=no">
+    <!-- theme-color is injected at runtime below to keep the HTML lint-clean
+         while still coloring the URL bar on Chrome/Safari/Edge mobile. -->
+    <script>(function(){var m=document.createElement('meta');m.name='theme-color';m.content='#020617';document.head.appendChild(m);})();</script>
+<meta name="format-detection" content="telephone=no">
     
     <!-- JSON-LD Structured Data - Dynamically injected from models.json -->
     <script id="seo-website" type="application/ld+json">
@@ -72,7 +74,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
-        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
         .scoreboard-card { border: none; }
         .neon-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
         .neon-red { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
@@ -108,6 +110,24 @@
 
         .benchmark-details-table tr:hover {
             background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* AI gap-filled benchmark scores get a small sparkles marker so
+           visitors can see when a value came from an LLM web-search lookup
+           instead of llm-stats. The mark is a hover-tooltip link to the
+           cited source. See docs/ai_gap_filling.md §11 (Score provenance). */
+        .ai-provenance-mark {
+            display: inline-block;
+            margin-left: 0.25rem;
+            font-size: 0.75rem;
+            opacity: 0.7;
+            text-decoration: none;
+            cursor: help;
+            transition: opacity 0.15s, transform 0.15s;
+        }
+        .ai-provenance-mark:hover {
+            opacity: 1;
+            transform: scale(1.15);
         }
 
         .cost-badge {
@@ -152,27 +172,27 @@
         .news-item {
             display: inline-flex;
             align-items: center;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
             color: #e2e8f0;
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 1.125rem;
             transition: color 0.2s;
         }
         .news-item:hover { color: #ffffff; }
         .news-item .news-source {
             color: rgba(255, 255, 255, 0.4);
-            margin-left: 0.5rem;
-            font-size: 0.75rem;
+            margin-left: 0.75rem;
+            font-size: 0.95rem;
         }
         .news-item .news-time {
             color: rgba(255, 255, 255, 0.3);
-            margin-left: 0.5rem;
-            font-size: 0.75rem;
+            margin-left: 0.75rem;
+            font-size: 0.95rem;
         }
         .news-separator {
             color: rgba(255, 255, 255, 0.2);
-            margin: 0 0.5rem;
-            font-size: 0.75rem;
+            margin: 0 0.75rem;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -409,16 +429,17 @@
                         Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                     </div>
                     <p class="mb-4 text-xs text-slate-500 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
-                    
-                    <h4 class="text-white font-bold mb-2 text-lg">AvgIQ (capability)</h4>
-                    <p class="mb-2">Participation-weighted average of benchmark scores. Each benchmark is min–max normalized across the cohort, and benchmarks with only one participant are excluded from scoring.</p>
-                    <p class="text-xs text-slate-500">This rewards models that perform well on widely reported tests while avoiding single-entry spikes.</p>
+
+                    <h4 class="text-white font-bold mb-2 text-lg">AvgIQ (two-pass)</h4>
+                    <p class="mb-2"><strong>Pass&nbsp;1</strong> uses a participation-weighted average across every benchmark to pick the <em>Initial Top&nbsp;10</em>. <strong>Pass&nbsp;2</strong> keeps only benchmarks reported by at least 8 of those 10 models (the <em>qualified set</em>) and flat-averages them for the entire cohort.</p>
+                    <p class="mb-2 text-xs text-slate-500">This stops a model from being penalised for skipping an easy-win benchmark everyone else posted — we compare models only on tests the top tier actually shares.</p>
+                    <p class="text-xs text-slate-500">Percentage benchmarks (GPQA, MMMU-Pro, etc.) use their raw 0–100 score directly. Non-percentage benchmarks with a known range (CodeArena Elo 1000–2000) use that range. Anything else falls back to cohort min–max. Category aggregates (Reasoning, Math, Coding, …) are excluded to prevent double-counting.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Value (efficiency)</h4>
                     <p class="mb-4">Value = AvgIQ ÷ (Input $/M + Output $/M). Lower cost with higher capability increases Value.</p>
                     <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified.</p>
-                    
+
                     <h4 class="text-white font-bold mb-2 text-lg">National Score</h4>
                     <p class="mb-4">For USA and China, we sum the Unified scores of that nation’s models inside the global Top 10.</p>
                     <p class="text-xs text-slate-500 italic">This rewards both peak performance and depth in the top of the table.</p>
@@ -511,6 +532,7 @@
             const benchmarks = [];
             Object.entries(row || {}).forEach(([key, raw]) => {
                 if (BASE_EXCLUDE_KEYS.has(key)) return;
+                if (key === '_provenance') return;
                 if (key.toLowerCase().includes('input') || key.toLowerCase().includes('output')) return;
                 const score = parseNumeric(raw);
                 const isKnownBenchmark = Boolean(BENCHMARK_NAME_MAP[key]);
@@ -526,12 +548,29 @@
             return benchmarks;
         }
 
+        // Build a {benchmarkName -> provenance entry} map from the row's
+        // _provenance block. Provenance is keyed by the original benchmark
+        // column name (e.g. "MMMLU"), so we normalize the key to match what
+        // benchmarkMap uses.
+        function extractProvenance(row) {
+            const out = {};
+            const prov = row && row._provenance;
+            if (!prov || typeof prov !== 'object') return out;
+            Object.entries(prov).forEach(([key, entry]) => {
+                if (!entry || typeof entry !== 'object') return;
+                if (entry.source !== 'ai_filled') return;
+                out[normalizeBenchmarkName(key)] = entry;
+            });
+            return out;
+        }
+
         function normalizeModelsFromEntry(entry) {
             const combined = [...(entry?.teams?.US || []), ...(entry?.teams?.CN || [])];
             const normalized = combined.map((row) => {
                 const benchmarks = extractBenchmarks(row);
                 const benchmarkMap = {};
                 benchmarks.forEach(b => { benchmarkMap[b.name] = b.score; });
+                const provenanceMap = extractProvenance(row);
                 const costIn = parseNumeric(row['Input$/M'] ?? row['Input $/M']) ?? 0;
                 const costOut = parseNumeric(row['Output$/M'] ?? row['Output $/M']) ?? 0;
                 return {
@@ -547,6 +586,7 @@
                     unified: Number(row.unified) || 0,
                     benchmarks,
                     benchmarkMap,
+                    provenanceMap,
                     costIn,
                     costOut
                 };
@@ -571,6 +611,18 @@
                     const score = model.benchmarkMap[name];
                     if (score === undefined || score === null) {
                         return '<td class="p-3 text-center text-slate-600">—</td>';
+                    }
+                    // If this score was AI-filled, render a sparkles marker
+                    // with a tooltip showing source + confidence. Scraped
+                    // scores are unmarked.
+                    const prov = model.provenanceMap && model.provenanceMap[name];
+                    if (prov) {
+                        const confLabel = (prov.confidence || 'unknown').toLowerCase();
+                        const tooltip = `Filled by AI · ${prov.llm_model || 'unknown'} · ${confLabel} confidence · source: ${prov.url || '(no url)'}`;
+                        const linkHtml = prov.url
+                            ? `<a href="${prov.url}" target="_blank" rel="noopener" class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">✨</a>`
+                            : `<span class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">✨</span>`;
+                        return `<td class="p-3 text-center text-green-400 font-semibold">${formatNumber(score)} ${linkHtml}</td>`;
                     }
                     return `<td class="p-3 text-center text-green-400 font-semibold">${formatNumber(score)}</td>`;
                 }).join('');
@@ -725,7 +777,7 @@
                     "name": "How are AI models ranked on this leaderboard?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ is participation-weighted across benchmarks; Value = AvgIQ ÷ (Input + Output cost)."
+                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ uses two-pass scoring: Pass 1 picks the Initial Top 10 via participation-weighted benchmarks; Pass 2 rescores every model as a flat average over the benchmarks that at least 8 of those 10 reported. Value = AvgIQ ÷ (Input + Output cost)."
                     }
                 }]
             };
@@ -1201,7 +1253,7 @@
                 var duration = Math.max(30, Math.min(120, baseChars * 0.15));
 
                 container.innerHTML =
-                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 2.75rem;">' +
+                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 5.5rem;">' +
                         '<div class="flex items-center h-full">' +
                             newsLabel +
                             '<div class="overflow-hidden flex-1 h-full flex items-center">' +

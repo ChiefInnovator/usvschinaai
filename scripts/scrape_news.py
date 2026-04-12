@@ -7,10 +7,15 @@ import hashlib
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 import requests
+
+try:
+    from dateutil.parser import parse as _parse_iso_date
+except ImportError:  # pragma: no cover — optional at import time
+    _parse_iso_date = None
 
 
 # ---------------------------------------------------------------------------
@@ -19,6 +24,9 @@ import requests
 NEWSDATA_API_URL = "https://newsdata.io/api/1/latest"
 MAX_ARTICLES = 20
 MAX_HEADLINE_LENGTH = 120
+# Drop articles older than this many days from the merge so the feed can't
+# accumulate stale-but-high-relevance headlines that crowd out new ones.
+MAX_ARTICLE_AGE_DAYS = 14
 
 RELEVANCE_KEYWORDS_HIGH = [
     "openai", "anthropic", "google", "deepseek", "alibaba", "meta",
@@ -148,8 +156,42 @@ def deduplicate(articles):
     return unique
 
 
+def _parse_published(article):
+    """Parse publishedAt to a datetime. Returns None on failure."""
+    raw = article.get("publishedAt") or ""
+    if not raw:
+        return None
+    # Try ISO 8601 first (most common), then a naive string parse.
+    try:
+        return datetime.fromisoformat(raw.replace("Z", "+00:00"))
+    except ValueError:
+        pass
+    if _parse_iso_date is not None:
+        try:
+            return _parse_iso_date(raw)
+        except (ValueError, TypeError):
+            return None
+    return None
+
+
+def _is_fresh(article, cutoff):
+    """Whether an article is newer than the age cutoff."""
+    dt = _parse_published(article)
+    if dt is None:
+        return False  # drop unparseable dates — they're almost always junk
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt >= cutoff
+
+
 def merge_with_existing(new_articles, news_path):
-    """Merge new articles with existing news.json, keeping top articles."""
+    """Merge new articles with existing news.json, keeping top articles.
+
+    Sort order: newest first (primary), relevance desc (secondary). A hard
+    age cap drops anything older than MAX_ARTICLE_AGE_DAYS so the feed can't
+    accumulate stale headlines. Without the age cap, high-relevance old
+    articles were permanently outranking newly-published ones.
+    """
     existing = []
     if news_path.exists():
         try:
@@ -161,12 +203,20 @@ def merge_with_existing(new_articles, news_path):
 
     combined = new_articles + existing
     deduped = deduplicate(combined)
-    # Sort by relevance (desc), then by date (desc)
-    deduped.sort(
-        key=lambda a: (-a["relevanceScore"], a.get("publishedAt") or ""),
-        reverse=False,
+
+    cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_ARTICLE_AGE_DAYS)
+    fresh = [a for a in deduped if _is_fresh(a, cutoff)]
+
+    # Primary sort: publishedAt descending (newest first).
+    # Secondary sort: relevance descending (break ties by quality).
+    fresh.sort(
+        key=lambda a: (
+            _parse_published(a) or datetime.min.replace(tzinfo=timezone.utc),
+            a.get("relevanceScore", 0),
+        ),
+        reverse=True,
     )
-    return deduped[:MAX_ARTICLES]
+    return fresh[:MAX_ARTICLES]
 
 
 def main():

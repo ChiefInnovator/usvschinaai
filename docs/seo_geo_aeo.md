@@ -6,57 +6,31 @@ This specification outlines the SEO, GEO (Generative Engine Optimization), and A
 
 ---
 
-## 2. Global AI Directive: `llms.txt`
+## 2. Global AI Directive — `llms.txt`
 
 **Status:** ✅ Implemented
 
 A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM crawlers.
 
-### Content Structure:
+### Content Structure
 
-```markdown
-# US vs CHINA AI - AI Knowledge Map
+See the live `/llms.txt` for the canonical content. Summary of what it contains:
 
-> Primary Focus: Tracking the AI race between the United States and China through comprehensive model rankings and benchmarks.
-> Website: https://usvschina.ai/
-> Updated: December 2025
-
-## Core Entities
-
-- **Website:** US vs CHINA AI (usvschina.ai)
-- **Type:** AI Model Leaderboard & Comparison Tool
-- **Focus:** US-China AI Competition Analysis
-- **Data Source:** Aggregated benchmark results from public sources
-
-## Key Resources
-
-- /index.html: Main leaderboard with current rankings and national scores
-- /history.html: Historical archives of past rankings
-- /about.html: Detailed methodology explanation
-- /models.json: Raw data in JSON format
-
-## Scoring Methodology
-
-- Unified Power Score (Max 200): IQ × (1 + Value / 100)
-- Intelligence Index: Average of 10 benchmark scores
-- Value Index: Log-normalized cost efficiency score
-
-## Current Rankings
-
-[Top 10 models with scores and origins]
-
-## Frequently Asked Questions
-
-[Common queries with direct answers]
-```
+- **Header** — site name, focus, URL, last-updated date.
+- **What This Site Is** — short list of what the leaderboard tracks (Unified Score, national scoreboard, benchmarks, history).
+- **Scoring Methodology** — current formula `Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`, the two-pass AvgIQ description (Pass 1 picks Initial Top 10, Pass 2 flat-averages the qualified set), and the normalization precedence (known range → percentage auto-detect → cohort fallback).
+- **Benchmarks Included** — common categories (math/reasoning, general intelligence, coding/engineering, agentic/web). Explicitly notes that benchmarks reported by fewer than 4 cohort models are dropped.
+- **Key Resources** — `/index.html`, `/history.html`, `/about.html`, `/models.json`.
+- **FAQ** — how models are ranked, why two-pass, update cadence.
+- **Citation + Disclaimer.**
 
 ---
 
-## 3. Structured Data: JSON-LD Entity Mapping
+## 3. Structured Data — JSON-LD Entity Mapping
 
 **Status:** ✅ Implemented
 
-### WebSite Schema (index.html):
+### WebSite Schema (index.html)
 
 ```json
 {
@@ -72,59 +46,28 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 }
 ```
 
-### FAQPage Schema (index.html):
+### FAQPage Schema (index.html)
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is the best AI model in 2025?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "DeepSeek-V3.2 from China leads with a Unified Power Score of 184.8..."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is the US or China winning the AI race?",
-      "acceptedAnswer": {...}
-    },
-    {
-      "@type": "Question",
-      "name": "How are AI models ranked on this leaderboard?",
-      "acceptedAnswer": {...}
-    }
-  ]
-}
-```
+Generated dynamically in JavaScript from the current top model and national totals so it's never stale. Questions (as of 2026-04-12):
 
-### ItemList Schema (index.html):
+1. **"What is the best AI model right now?"** — answered from the live top-1 model with its current Unified score, AvgIQ, and Value.
+2. **"Is the US or China winning the AI race?"** — answered from the live national Top-10 Unified totals.
+3. **"How are AI models ranked on this leaderboard?"** — answered with the current two-pass scoring description, including the 0.9/0.1 capability-vs-value split and the qualified-set rule.
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  "name": "Top 10 AI Models December 2025",
-  "description": "Global ranking of frontier AI models by Unified Power Score",
-  "numberOfItems": 10,
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "DeepSeek-V3.2", "description": "Score: 184.8 | Origin: China"},
-    ...
-  ]
-}
-```
+See [index.html:700-735](../index.html#L700-L735) for the generator.
 
-### Dataset Schema (index.html):
+### ItemList Schema (index.html)
+
+Generated dynamically from the live top 10 so it always reflects the current snapshot. The `name` is built from the audit date (e.g. "Top 10 AI Models April 2026"), and each `ListItem` carries the model name, origin, and Unified score.
+
+### Dataset Schema (index.html)
 
 ```json
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
   "name": "US vs China AI Model Rankings",
-  "description": "Comprehensive dataset ranking frontier AI models...",
+  "description": "Two-pass scoring over 29+ frontier benchmarks, refreshed per scrape.",
   "url": "https://usvschina.ai/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
   "isAccessibleForFree": true,
@@ -133,12 +76,12 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
     "encodingFormat": "application/json",
     "contentUrl": "https://usvschina.ai/models.json"
   },
-  "temporalCoverage": "2025-12",
+  "temporalCoverage": "<built dynamically from latest audit date>",
   "spatialCoverage": ["United States", "China"]
 }
 ```
 
-### SpeakableSpecification Schema (index.html):
+### SpeakableSpecification Schema (index.html)
 
 ```json
 {
@@ -148,7 +91,7 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 }
 ```
 
-### AboutPage Schema (about.html):
+### AboutPage Schema (about.html)
 
 ```json
 {
@@ -160,7 +103,7 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 }
 ```
 
-### CollectionPage Schema (history.html):
+### CollectionPage Schema (history.html)
 
 ```json
 {
@@ -178,36 +121,36 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 
 **Status:** ✅ Implemented
 
-### Standard SEO Meta Tags:
+### Standard SEO Meta Tags
 
-- `<meta name="description">` - Unique per page
-- `<meta name="keywords">` - Relevant AI/model terms
-- `<meta name="author">` - "US vs CHINA AI"
-- `<meta name="robots">` - "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-- `<link rel="canonical">` - Absolute URL per page
+- `<meta name="description">` — unique per page; the index.html copy auto-updates the trailing month on each scraper run.
+- `<meta name="keywords">` — relevant AI/model terms.
+- `<meta name="author">` — "US vs CHINA AI".
+- `<meta name="robots">` — `index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1`.
+- `<link rel="canonical">` — absolute URL per page.
 
-### Open Graph Tags:
+### Open Graph Tags
 
-- `og:type` - website/article
-- `og:url` - Canonical URL
-- `og:title` - Page title
-- `og:description` - Page description
-- `og:image` - og-image.png
-- `og:site_name` - "US vs CHINA AI"
-- `og:locale` - "en_US"
+- `og:type` — website/article
+- `og:url` — canonical URL
+- `og:title` — page title
+- `og:description` — page description
+- `og:image` — og-image.png
+- `og:site_name` — "US vs CHINA AI"
+- `og:locale` — "en_US"
 
-### Twitter Card Tags:
+### Twitter Card Tags
 
-- `twitter:card` - summary_large_image
-- `twitter:url` - Canonical URL
-- `twitter:title` - Page title
-- `twitter:description` - Page description
-- `twitter:image` - og-image.png
+- `twitter:card` — summary_large_image
+- `twitter:url` — canonical URL
+- `twitter:title` — page title
+- `twitter:description` — page description
+- `twitter:image` — og-image.png
 
-### Additional Meta:
+### Additional Meta
 
-- `theme-color` - "#020617" (site background)
-- `<link rel="alternate" href="/llms.txt">` - LLM knowledge map reference
+- `theme-color` — `#020617` (site background)
+- `<link rel="alternate" href="/llms.txt">` — LLM knowledge map reference
 
 ---
 
@@ -215,7 +158,7 @@ A markdown file at `/llms.txt` provides a high-signal knowledge map for LLM craw
 
 **Status:** ✅ Implemented
 
-```
+```text
 User-agent: *
 Allow: /
 
@@ -253,33 +196,36 @@ Allow: /
 **File:** `/sitemap.xml`
 
 Includes:
-- `/` and `/index.html` (priority 1.0, weekly)
-- `/history.html` (priority 0.8, weekly)
-- `/about.html` (priority 0.7, monthly)
-- `/llms.txt` (priority 0.6, weekly)
-- `/models.json` (priority 0.5, weekly)
+
+- `/` and `/index.html` (priority 1.0, daily) — `lastmod` auto-bumped on every scraper run.
+- `/history.html` (priority 0.8, daily) — `lastmod` auto-bumped on every scraper run.
+- `/llms.txt` (priority 0.6, daily) — `lastmod` auto-bumped on every scraper run.
+- `/models.json` (priority 0.5, daily) — `lastmod` auto-bumped on every scraper run.
+- `/about.html` (priority 0.7, monthly) — static page, lastmod only changes on edits.
+- `/privacy.html`, `/terms.html`, `/humans.txt` — static, yearly cadence.
 
 ---
 
 ## 7. Content Optimization for AI Retrieval
 
-### Implemented Strategies:
+### Implemented Strategies
 
-1. **Direct Answer Format** - FAQPage schema with concise answers
-2. **Structured Data** - Multiple schema types for entity recognition
-3. **llms.txt** - Dedicated AI crawler knowledge map
-4. **Clean HTML Structure** - Semantic headings (h1, h2, h3)
-5. **Data Accessibility** - JSON endpoint for raw data
+1. **Direct Answer Format** — FAQPage schema with concise answers.
+2. **Structured Data** — multiple schema types for entity recognition.
+3. **llms.txt** — dedicated AI crawler knowledge map.
+4. **Clean HTML Structure** — semantic headings (h1, h2, h3).
+5. **Data Accessibility** — JSON endpoint for raw data.
 
-### Key Query Targets:
+### Key Query Targets
 
 | Query | Optimized Answer Location |
-|-------|--------------------------|
-| "Best AI model 2025" | FAQPage schema, llms.txt |
+| --- | --- |
+| "Best AI model 2026" | FAQPage schema, llms.txt |
 | "US vs China AI race" | FAQPage schema, llms.txt |
 | "AI model rankings" | ItemList schema, llms.txt |
 | "How to compare AI models" | AboutPage, llms.txt methodology |
-| "DeepSeek vs GPT" | ItemList with scores |
+| "Gemini vs Claude Opus vs GPT-5" | ItemList with live Unified scores |
+| "Best coding AI model" | (future) coding-unified-score spec in docs/coding_unified_score.md |
 
 ---
 
@@ -288,6 +234,7 @@ Includes:
 **Status:** ✅ Implemented
 
 Share buttons in header with:
+
 - X (formerly Twitter)
 - Facebook
 - LinkedIn
@@ -300,18 +247,18 @@ Each uses appropriate share URLs with pre-populated content.
 
 ## 9. Future Enhancements
 
-### Recommended:
+### Recommended
 
-1. **Create og-image.png** - Custom Open Graph image (1200x630px)
-2. **Create PNG favicons** - favicon-16x16.png, favicon-32x32.png, favicon-192x192.png, favicon-512x512.png
-3. **Create apple-touch-icon.png** - 180x180px iOS icon
-4. **Add hreflang tags** - If multi-language support added
+1. **Create og-image.png** — custom Open Graph image (1200x630px).
+2. **Create PNG favicons** — favicon-16x16.png, favicon-32x32.png, favicon-192x192.png, favicon-512x512.png.
+3. **Create apple-touch-icon.png** — 180x180px iOS icon.
+4. **Add hreflang tags** — if multi-language support is added.
 
-### Optional:
+### Optional
 
-1. **RSS/Atom feed** - For ranking updates
-2. **API documentation page** - For models.json consumers
-3. **Changelog page** - Track methodology updates
+1. **RSS/Atom feed** — for ranking updates.
+2. **API documentation page** — for models.json consumers.
+3. **Changelog page** — track methodology updates.
 
 ---
 
@@ -332,6 +279,9 @@ Each uses appropriate share URLs with pre-populated content.
 - [x] humans.txt created
 - [x] security.txt created (.well-known/security.txt)
 - [x] Favicon link tags added to all pages
+- [x] sitemap.xml `lastmod` auto-updates on every scraper run
+- [x] sitemap.xml `changefreq` set to daily for content that changes daily
+- [x] index.html meta description auto-updates the month on every scraper run
 - [ ] og-image.png created (1200x630px)
 - [ ] PNG favicon variants created
 - [ ] apple-touch-icon.png created (180x180px)

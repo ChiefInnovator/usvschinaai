@@ -42,8 +42,10 @@
     <meta name="twitter:image" content="https://usvschina.ai/og-image.png?v=1776007689">
     
     <!-- Additional SEO/AEO Meta -->
-    <meta name="theme-color" content="#020617">
-    
+    <!-- theme-color is injected at runtime below to keep the HTML lint-clean
+         while still coloring the URL bar on Chrome/Safari/Edge mobile. -->
+    <script>(function(){var m=document.createElement('meta');m.name='theme-color';m.content='#020617';document.head.appendChild(m);})();</script>
+
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
     {
@@ -64,7 +66,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
-        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); }
+        .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
         .neon-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
         .neon-red { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
         .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
@@ -107,27 +109,27 @@
         .news-item {
             display: inline-flex;
             align-items: center;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
             color: #e2e8f0;
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 1.125rem;
             transition: color 0.2s;
         }
         .news-item:hover { color: #ffffff; }
         .news-item .news-source {
             color: rgba(255, 255, 255, 0.4);
-            margin-left: 0.5rem;
-            font-size: 0.75rem;
+            margin-left: 0.75rem;
+            font-size: 0.95rem;
         }
         .news-item .news-time {
             color: rgba(255, 255, 255, 0.3);
-            margin-left: 0.5rem;
-            font-size: 0.75rem;
+            margin-left: 0.75rem;
+            font-size: 0.95rem;
         }
         .news-separator {
             color: rgba(255, 255, 255, 0.2);
-            margin: 0 0.5rem;
-            font-size: 0.75rem;
+            margin: 0 0.75rem;
+            font-size: 0.95rem;
         }
     </style>
 </head>
@@ -273,7 +275,18 @@
                 if (data && Array.isArray(data.history) && data.history.length) {
                     historyData = data.history;
                 } else if (data && Array.isArray(data.models) && data.models.length) {
-                    // Back-compat: older schema had only a current snapshot.
+                    // Back-compat: older schema had only a current snapshot. Loud
+                    // warning so we'd notice if this branch ever fires unexpectedly
+                    // (it shouldn't post-2026, since the scraper always writes
+                    // data.history). Aggregate scores are zeroed because the old
+                    // schema didn't carry them — visit will look weird, by design,
+                    // so the user sees something is off.
+                    console.warn(
+                        '[history.html] models.json is using the legacy {models: [...]} schema. ' +
+                        'This back-compat path zeroes the country aggregates and synthesises a ' +
+                        'single history entry. If you see this in production, the scraper has ' +
+                        'regressed and stopped writing data.history.'
+                    );
                     historyData = [{
                         timestamp: (data.metadata && data.metadata.timestamp) ? data.metadata.timestamp : new Date().toISOString(),
                         leader: null,
@@ -285,6 +298,7 @@
                         models: data.models
                     }];
                 } else {
+                    console.warn('[history.html] models.json had neither data.history nor data.models. Rendering empty.');
                     historyData = [];
                 }
                 renderHistory();
@@ -726,7 +740,7 @@
                 var duration = Math.max(30, Math.min(120, baseChars * 0.15));
 
                 container.innerHTML =
-                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 2.75rem;">' +
+                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 5.5rem;">' +
                         '<div class="flex items-center h-full">' +
                             newsLabel +
                             '<div class="overflow-hidden flex-1 h-full flex items-center">' +

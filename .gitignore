@@ -58,6 +58,9 @@ __pycache__/
 .env.local
 .env.*.local
 
+# Claude Code per-project state (local settings + scheduled task lock)
+.claude/
+
 # Logs
 logs/
 *.log

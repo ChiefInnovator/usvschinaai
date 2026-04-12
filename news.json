@@ -1,60 +1,6 @@
 {
-  "lastUpdated": "2026-04-12T15:28:06.917216+00:00",
+  "lastUpdated": "2026-04-12T18:19:55.060528+00:00",
   "items": [
-    {
-      "id": "f4a7bb4c1e15d762",
-      "headline": "Consumer Tech News (Feb 23-27): US–Taiwan Trade Tensions Escalates, Amazon Invests $12B In US & More",
-      "url": "https://www.benzinga.com/markets/market-summary/26/03/50954241/consumer-tech-news-feb-23-27-us-taiwan-trade-tensions-escalates-amazon-invests-12b-in-us-m",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-03-01 13:00:54",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "f477614ce6f38f7a",
-      "headline": "‘We just have to experiment faster’: AI’s changed design forever. Now what?",
-      "url": "https://www.fastcompany.com/91501353/ai-changed-design-forever-now-what",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-03-05 11:00:00",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "d06d37d9d35e981b",
-      "headline": "The Machines That Won’t Die: Inside the Alarming Discovery That AI Systems Fight to Stay Alive",
-      "url": "https://www.webpronews.com/the-machines-that-wont-die-inside-the-alarming-discovery-that-ai-systems-fight-to-stay-alive/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-04-04 15:20:06",
-      "relevanceScore": 0.68
-    },
-    {
-      "id": "3278ddc24f5f86be",
-      "headline": "AI in education requires national strategy",
-      "url": "https://www.fastcompany.com/91502548/ai-in-education-requires-national-strategy",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-03-05 13:01:00",
-      "relevanceScore": 0.61
-    },
-    {
-      "id": "f9e308c49d8b9fbb",
-      "headline": "The one question everyone should be asking after OpenAI’s deal with the Pentagon",
-      "url": "https://www.vox.com/future-perfect/481322/pentagon-anthropic-openai-surveillance-china",
-      "source": "Vox",
-      "country": "Both",
-      "publishedAt": "2026-03-03 15:16:24",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "767e703331a74154",
-      "headline": "Anthropic is suing the US government for blacklisting it and it's calling in support from Google and OpenAI",
-      "url": "https://www.pcgamer.com/software/ai/anthropic-is-suing-the-us-government-for-blacklisting-it-and-its-calling-in-support-from-google-and-openai/",
-      "source": "Pc Gamer",
-      "country": "US",
-      "publishedAt": "2026-03-10 14:36:54",
-      "relevanceScore": 0.6
-    },
     {
       "id": "4c7863ddc99f5087",
       "headline": "Anthropic's unreleased Mythos AI model stirs debate in US intelligence community over cyber risks",
@@ -65,21 +11,12 @@
       "relevanceScore": 0.54
     },
     {
-      "id": "a28df1cc86f9fe86",
-      "headline": "Trump's kiss of death should have been this company's end. Its fight back could be his",
-      "url": "https://www.rawstory.com/trump-anthropic-2676364671/",
-      "source": "Raw Story",
-      "country": "Both",
-      "publishedAt": "2026-03-19 15:23:52",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "6d8a4b369dc84d52",
-      "headline": "Xiaomi MiMo v2 Pro Review: The AI Model So Good It Was Mistaken for DeepSeek V4 – Decrypt",
-      "url": "https://platodata.ai/w3ai/4935004/artificial-intelligence/xiaomi-mimo-v2-pro-review-the-ai-model-so-good-it-was-mistaken-for-deepseek-v4-decrypt/",
-      "source": "Plato Data Intelligence",
-      "country": "Both",
-      "publishedAt": "2026-03-29 13:00:07",
+      "id": "6f172476f83762cb",
+      "headline": "Anthropic Unveils ‘Project Glasswing’ as Claude Mythos Targets Software Vulnerabilities",
+      "url": "https://www.hpcwire.com/off-the-wire/anthropic-unveils-project-glasswing-as-claude-mythos-targets-software-vulnerabilities/",
+      "source": "Hpcwire",
+      "country": "US",
+      "publishedAt": "2026-04-09 19:23:57",
       "relevanceScore": 0.53
     },
     {
@@ -92,69 +29,6 @@
       "relevanceScore": 0.53
     },
     {
-      "id": "6f172476f83762cb",
-      "headline": "Anthropic Unveils ‘Project Glasswing’ as Claude Mythos Targets Software Vulnerabilities",
-      "url": "https://www.hpcwire.com/off-the-wire/anthropic-unveils-project-glasswing-as-claude-mythos-targets-software-vulnerabilities/",
-      "source": "Hpcwire",
-      "country": "US",
-      "publishedAt": "2026-04-09 19:23:57",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "2bb8b0c4dae70637",
-      "headline": "China approves Nvidia H200 AI chip sales as licences granted to multiple firms",
-      "url": "https://investinglive.com/stocks/china-approves-nvidia-h200-ai-chip-sales-as-licences-granted-to-multiple-firms-20260318/",
-      "source": "Forexlive",
-      "country": "Both",
-      "publishedAt": "2026-03-18 02:00:23",
-      "relevanceScore": 0.48
-    },
-    {
-      "id": "208650f436d308e9",
-      "headline": "China’s cheap AI designed to hook the world on its tech",
-      "url": "https://asiatimes.com/2026/03/chinas-cheap-ai-designed-to-hook-the-world-on-its-tech/",
-      "source": "Asia Times",
-      "country": "Both",
-      "publishedAt": "2026-03-02 07:17:00",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "ddd0c9076992ac3e",
-      "headline": "The trap Anthropic built for itself",
-      "url": "https://techcrunch.com/2026/02/28/the-trap-anthropic-built-for-itself/",
-      "source": "Tech Crunch",
-      "country": "US",
-      "publishedAt": "2026-03-01 00:08:58",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "a487b98c673b4d18",
-      "headline": "AI's power problem: US tech giants seek grid solutions while China builds energy edge",
-      "url": "https://www.digitimes.com/news/a20260305PD224/electricity-infrastructure-demand-ai-china-usa.html",
-      "source": "Digitimes",
-      "country": "Both",
-      "publishedAt": "2026-03-05 03:22:32",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "317311ca07c598a1",
-      "headline": "Microsoft backs AI firm Anthropic in legal battle against Pentagon",
-      "url": "https://www.theguardian.com/technology/2026/mar/12/microsoft-amicus-brief-anthropic-pentagon",
-      "source": "The Guardian",
-      "country": "US",
-      "publishedAt": "2026-03-12 14:56:13",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "7785ca8d835dbe29",
-      "headline": "20VC x SaaStr: Anthropic’s 10-Trillion-Parameter Leak, OpenAI Kills Sora, Masa’s $40B Bridge Loan, and Why the...",
-      "url": "https://platodata.ai/w3ai/4951614/saas/20vc-x-saastr-anthropics-10-trillion-parameter-leak-openai-kills-sora-masas-40b-bridge-loan-and-why-the-cybersecurity-panic-is-backwards/",
-      "source": "Plato Data Intelligence",
-      "country": "US",
-      "publishedAt": "2026-04-02 16:27:15",
-      "relevanceScore": 0.45
-    },
-    {
       "id": "0dfcb907e811c175",
       "headline": "US vs. China: The AI arms race",
       "url": "https://nypost.com/video/us-vs-china-the-ai-arms-race/",
@@ -164,22 +38,22 @@
       "relevanceScore": 0.45
     },
     {
-      "id": "15a99617048a79c3",
-      "headline": "Nvidia chip curbs turn Singapore into AI hub for China",
-      "url": "https://asiatimes.com/2026/03/nvidia-chip-curbs-turn-singapore-into-ai-hub-for-china/",
-      "source": "Asia Times",
-      "country": "Both",
-      "publishedAt": "2026-03-16 23:00:55",
-      "relevanceScore": 0.4
+      "id": "d06d37d9d35e981b",
+      "headline": "The Machines That Won’t Die: Inside the Alarming Discovery That AI Systems Fight to Stay Alive",
+      "url": "https://www.webpronews.com/the-machines-that-wont-die-inside-the-alarming-discovery-that-ai-systems-fight-to-stay-alive/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-04-04 15:20:06",
+      "relevanceScore": 0.68
     },
     {
-      "id": "ea1c0e3b31461707",
-      "headline": "How GM is shaping the future of car design, one Corvette at a time",
-      "url": "https://www.fastcompany.com/91516047/how-gm-is-shaping-the-future-of-car-design-one-corvette-at-a-time",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-03-27 10:30:00",
-      "relevanceScore": 0.39
+      "id": "7785ca8d835dbe29",
+      "headline": "20VC x SaaStr: Anthropic’s 10-Trillion-Parameter Leak, OpenAI Kills Sora, Masa’s $40B Bridge Loan, and Why the...",
+      "url": "https://platodata.ai/w3ai/4951614/saas/20vc-x-saastr-anthropics-10-trillion-parameter-leak-openai-kills-sora-masas-40b-bridge-loan-and-why-the-cybersecurity-panic-is-backwards/",
+      "source": "Plato Data Intelligence",
+      "country": "US",
+      "publishedAt": "2026-04-02 16:27:15",
+      "relevanceScore": 0.45
     }
   ]
 }

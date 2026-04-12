@@ -2,7 +2,7 @@
 
 Primary Focus: Tracking the AI race between the United States and China through comprehensive model rankings and benchmarks.
 Website: https://usvschina.ai/
-Updated: January 2026
+Updated: April 2026
 
 ## What This Site Is
 
@@ -10,7 +10,7 @@ US vs CHINA AI is an independent leaderboard that ranks frontier AI models from 
 
 1. **Unified Score Rankings** — Composite metric (0–1000) combining capability and value
 2. **National Score Tracking** — Aggregates showing which country leads
-3. **Benchmark Analysis** — Performance across auto-detected frontier benchmarks (AIME, GPQA, ARC‑AGI, SWE‑Bench, etc.)
+3. **Benchmark Analysis** — Performance across frontier benchmarks (CodeArena, GPQA, MMMU-Pro, HLE, SWE-bench, Terminal-Bench, etc.)
 4. **Historical Archives** — Track how the AI race evolves over time
 
 ## Core Entities
@@ -18,15 +18,22 @@ US vs CHINA AI is an independent leaderboard that ranks frontier AI models from 
 - **Website:** US vs CHINA AI (usvschina.ai)
 - **Type:** AI Model Leaderboard & Comparison Tool
 - **Focus:** US-China AI Competition Analysis
-- **Data Source:** Aggregated benchmark results from public sources
+- **Data Source:** llm-stats.com leaderboard + per-model detail pages
 
-## Scoring Methodology
+## Scoring Methodology (two-pass)
 
 ### Unified Score (0–1000)
-`Unified = 10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))`
+`Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`
 
-- **AvgIQ**: Participation‑weighted average of per‑benchmark normalized scores (0–100). Each benchmark is min–max normalized across the cohort; benchmarks with a single participant are excluded.
-- **Value**: `AvgIQ / (Input $/M + Output $/M)`; higher is better. Both AvgIQ and Value are cohort‑normalized to 0–100 before blending.
+- **AvgIQ** uses two-pass scoring:
+  - *Pass 1* computes a participation-weighted average of normalized benchmark scores across the full cohort and picks the top 10 (the *Initial Top 10*).
+  - *Pass 2* identifies the *qualified benchmark set* — benchmarks reported by at least 8 of those 10 models — and recomputes AvgIQ for every model as a **flat average** over the qualified set only. This stops models from being penalized for skipping benchmarks their peers chose to publish.
+- **Normalization precedence** (per benchmark):
+  1. Known absolute range (e.g. CodeArena Elo → 1000–2000).
+  2. Percentage auto-detect (`xx.x%` values stay raw on a 0–100 scale).
+  3. Cohort min–max fallback for unknown-scale benchmarks only.
+- **Value**: `AvgIQ / (Input $/M + Output $/M)`; higher is better. Both AvgIQ and Value are cohort-normalized to 0–100 before blending.
+- **Excluded from scoring**: category aggregates (Reasoning, Math, Coding, Search, Writing, Vision, Tools, Long Ctx, Finance, Legal, Health) to prevent double-counting, and any benchmark reported by fewer than 4 of the 20 cohort models.
 
 ### National Score
 Sum of Unified Scores for models from each nation in the Global Top 10.
@@ -39,22 +46,25 @@ Sum of Unified Scores for models from each nation in the Global Top 10.
 - /models.json: Raw data in JSON format
 
 ## Current Rankings
-See the live site or latest generated CSV/JSON for current values. Scores update as benchmarks and prices change.
+See the live site or `/models.json` for current values. Scores update with each scraper run as benchmarks and prices change.
 
 ### Benchmarks Included
-Benchmarks are auto‑detected from the source leaderboard and may change over time. Common categories include:
-- Mathematics & Reasoning: AIME, HMMT, GPQA Diamond
-- General Intelligence: ARC‑AGI (v1/v2), HLE, MMLU‑Pro
-- Coding & Engineering: LiveCodeBench, SWE‑Bench Verified, CodeForces
-- Web & Agent: BrowseComp
+Benchmarks are captured from llm-stats.com (leaderboard table + per-model detail pages). Sparse benchmarks reported by fewer than 4 of the 20 cohort models are dropped. Common categories:
+- Mathematics & Reasoning: AIME2025, HMMT2025, GPQA, FrontierMath
+- General Intelligence: ARC-AGI v2, HLE, MMLU-Pro, MMMLU
+- Coding & Engineering: CodeArena, SWE-bench Verified, SWE-bench Pro, LiveCodeBench v6, Terminal-Bench 2.0
+- Agentic & Web: BrowseComp, MCP Atlas, Toolathlon, OSWorld
 
 ## Frequently Asked Questions
 
 **Q: How are AI models ranked?**
-A: By Unified Score = `10 × (0.7 × norm(AvgIQ) + 0.3 × norm(Value))`. AvgIQ is a participation‑weighted average of per‑benchmark normalized scores; Value is `AvgIQ / (Input + Output)`.
+A: By Unified Score = `10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`. AvgIQ uses two-pass scoring: Pass 1 picks the Initial Top 10 via participation-weighted benchmarks; Pass 2 rescores every model as a flat average over the benchmarks that at least 8 of those 10 reported. Value is `AvgIQ / (Input + Output cost)`.
+
+**Q: Why two passes?**
+A: Models self-select which benchmarks they publish. A naive single-pass average penalizes models that didn't report a benchmark their peers did — even when the model is objectively stronger on every shared test. Two-pass scoring restricts the IQ calculation to a benchmark set where the top models actually compete apples-to-apples.
 
 **Q: How often is the data updated?**
-A: As new benchmark results and prices are available; cadence may vary from daily to monthly.
+A: Automatically on each scraper run. Cadence varies from daily to weekly depending on benchmark/pricing changes upstream.
 
 ## Citation
 
