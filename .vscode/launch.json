@@ -1,0 +1,155 @@
+{
+    // Run & Debug configurations for aiolympics.
+    //
+    // The first configuration in the list is what VS Code's Run & Debug
+    // sidebar selects by default, so "Web: serve site" is pinned to the top.
+    // F5 with this picked starts http://localhost:8000 at the workspace root.
+    //
+    // All Python configurations use the project's .venv interpreter and
+    // auto-load .env (via the python.envFile setting in .vscode/settings.json)
+    // so OPENAI_API_KEY is available to the gap-fill pass.
+    //
+    // Pick any named configuration from the Run & Debug sidebar (Cmd+Shift+D),
+    // or hit F5 with a Python file open for "Debug current file".
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Web: serve site on http://localhost:8000",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "http.server",
+            "args": ["8000"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Scraper: full run (stage 3, writes models.json)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: dry-run (no models.json write)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--dry-run"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: no gap-fill (skip OpenAI)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--no-gap-fill"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: gap-fill smoke test (2 calls, dry-run)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--gap-fill-max-calls", "2", "--dry-run"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: stage 1 basic leaderboard",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--leaderboard-basic"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: stage 2 full leaderboard",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--leaderboard-full"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Scraper: debug mode (visible browser)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_models.py",
+            "args": ["--debug", "--dry-run"],
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "News: scrape",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/scrape_news.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "OG image: generate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/generate_og_image.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Instagram: post",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/post_to_instagram.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Python: debug current file",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
