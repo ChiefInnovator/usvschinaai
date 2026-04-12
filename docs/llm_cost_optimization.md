@@ -26,15 +26,15 @@ This doc is the single source of truth for every token-saving trick we use in th
 
 **How.** `_SYSTEM_PROMPT` is a module-level constant. `build_prompt_batch()` returns `(_SYSTEM_PROMPT, per_call_user_message)` — never interpolates into the system side.
 
-## 3. Smaller model by default (right-sizing)
+## 3. Right-sized model chain with graceful fallback
 
-**What.** The `DEFAULT_MODEL_CHAIN` puts `gpt-5.4-mini` first, with `gpt-5.4` / `gpt-5.4-pro` / `gpt-5.2` as fallbacks. Reasoning-tier models like `gpt-5.4-pro` are only used if the mini variant isn't available on the account.
+**What.** The `DEFAULT_MODEL_CHAIN` tries `gpt-5.4` first, then `gpt-5.4-pro`, then `gpt-5.3` as a last-resort fallback. The discovery step picks the first model the account can actually call **and** that supports the `web_search` tool.
 
-**Why.** Frontier reasoning models cost 5–10× more per token than the mini variants, and the gap-filling task **doesn't need frontier reasoning**. The task is "read a vendor blog page, find a benchmark row, extract a number, emit JSON" — pure extraction. Mini models do this well and cost a fraction as much. Reasoning-tier models are overkill here and waste hidden reasoning tokens on a task that doesn't benefit from chain-of-thought.
+**Why.** `gpt-5.4` is the sweet spot for research-style benchmark lookups — strong enough reasoning to extract the right row from a vendor blog page, cheaper than `-pro`. We keep `gpt-5.4-pro` in the chain as a stronger fallback in case base 5.4 isn't available, and `gpt-5.3` as a compatibility floor for older accounts. The `reasoning.effort: "low"` setting (§4) keeps hidden-reasoning tokens minimal regardless of which model is picked.
 
-**Measured effect.** `gpt-5.4-mini` is roughly 70% cheaper per token than `gpt-5.4-pro`. Combined with the reasoning-effort drop below, it's close to 10× cheaper per call.
+**Why NOT `gpt-5.4-mini`.** Earlier versions of the chain defaulted to the mini tier, but the savings didn't justify the occasional quality slips on variant-matching (e.g. attributing a "GPT-5 High" score to "GPT-5"). For a research task where the *correctness* of the extraction is the whole point, a full reasoning model is worth the extra cents per call.
 
-**How.** `DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.4-mini", "gpt-5.4", "gpt-5.4-pro", "gpt-5.2"]`. Override with the `AI_GAP_FILL_MODEL` environment variable if needed.
+**How.** `DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.4", "gpt-5.4-pro", "gpt-5.3"]`. Override with the `AI_GAP_FILL_MODEL` environment variable if needed.
 
 ## 4. `reasoning.effort: "low"`
 

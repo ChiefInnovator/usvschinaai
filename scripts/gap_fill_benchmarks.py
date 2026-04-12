@@ -25,11 +25,11 @@ import requests
 # Constants from the spec
 # -----------------------------------------------------------------------------
 
-# Default model chain — mini tier first because research-style benchmark
-# lookups don't need frontier reasoning. Fall back to full `gpt-5.4` if the
-# mini variant isn't available on the account, then `gpt-5.4-pro` as a
-# last resort. Override at runtime with the AI_GAP_FILL_MODEL env var.
-DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.4-mini", "gpt-5.4", "gpt-5.4-pro", "gpt-5.2"]
+# Default model chain — `gpt-5.4` as the primary research model, `gpt-5.4-pro`
+# as the stronger fallback if full 5.4 isn't available, and `gpt-5.3` as the
+# last-resort fallback for older accounts. Override at runtime with the
+# AI_GAP_FILL_MODEL env var.
+DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.4", "gpt-5.4-pro", "gpt-5.3"]
 
 # Reasoning tier for the Responses API. Research tasks don't need deep
 # chain-of-thought, so "low" minimizes hidden reasoning tokens which are

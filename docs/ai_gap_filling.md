@@ -269,14 +269,14 @@ OpenAI's Responses API supports a first-class `web_search` tool that the model c
 
 ### Choosing the model
 
-A single config knob, `AI_GAP_FILL_MODEL`, defaults to `gpt-5.4-pro`. A small fallback chain handles the (rare) case where OpenAI deprecates the primary model between scrapes:
+A single config knob, `AI_GAP_FILL_MODEL`, defaults to `gpt-5.4`. A small fallback chain handles the (rare) case where OpenAI deprecates the primary model between scrapes:
 
 ```python
 # scripts/gap_fill_benchmarks.py
 DEFAULT_MODEL_CHAIN = [
-    "gpt-5.4-pro",   # primary — strongest reasoning, native web_search support
-    "gpt-5.4",       # same family, smaller; web_search still supported
-    "gpt-5.2",       # last-resort fallback
+    "gpt-5.4",       # primary — strong reasoning, native web_search support
+    "gpt-5.4-pro",   # stronger fallback if base 5.4 is unavailable
+    "gpt-5.3",       # last-resort fallback for older accounts
 ]
 ```
 

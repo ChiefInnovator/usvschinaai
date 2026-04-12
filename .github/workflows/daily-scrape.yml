@@ -2,9 +2,8 @@ name: Daily AI Model Scrape
 
 on:
   schedule:
-    # Run twice daily at off-peak times (3:17 AM and 3:17 PM UTC)
+    # Run once daily at an off-peak time (3:17 AM UTC).
     - cron: '17 3 * * *'
-    - cron: '17 15 * * *'
   # Allow manual triggering from Actions tab
   workflow_dispatch:
 
