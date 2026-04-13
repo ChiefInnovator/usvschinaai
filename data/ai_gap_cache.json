@@ -19,6 +19,16 @@
       "score": "14.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://labs.scale.com/leaderboard/humanitys_last_exam"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-13T04:26:01.517605+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Anthropic’s official system card reports Claude Opus 4.5 at 70.6% on MMMU-Pro (no tools).",
+      "score": "70.6%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
     }
   },
   "Claude Sonnet 4.6": {
@@ -80,6 +90,16 @@
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-5-for-developers/"
     },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-13T04:26:01.517605+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "The MCP-Atlas paper reports GPT-5 at 44.5% pass rate, but does not explicitly label the variant as \"High.\"",
+      "score": "44.5%",
+      "source_type": "paper",
+      "source_url": "https://static.scale.com/uploads/674f4cc7a74e35bcaae1c29a/MCP_Atlas.pdf"
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
@@ -99,6 +119,28 @@
       "score": "72.8%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/gpt-5-1-for-developers/"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-13T04:26:01.517605+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "The paper reports GPT-5 at 49.6% with Codex CLI; it does not explicitly label the variant as \"High,\" so provenance is slightly ambiguous.",
+      "score": "49.6%",
+      "source_type": "paper",
+      "source_url": "https://openreview.net/pdf/574281303882f822808ab57ac3a57a2bddfbc7a3.pdf"
+    }
+  },
+  "GPT-5.2": {
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-13T04:26:01.517605+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Terminal-Bench 2.0 reports agent-model pairs; the paper’s best result for GPT-5.2 is 62.9% with Codex CLI, while the same model scores 54.0% with Terminus 2.",
+      "score": "62.9%",
+      "source_type": "paper",
+      "source_url": "https://openreview.net/pdf/574281303882f822808ab57ac3a57a2bddfbc7a3.pdf"
     }
   },
   "Gemini 3 Pro": {

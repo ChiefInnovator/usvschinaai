@@ -1,6 +1,69 @@
 {
-  "lastUpdated": "2026-04-12T18:19:55.060528+00:00",
+  "lastUpdated": "2026-04-13T04:39:43.985107+00:00",
   "items": [
+    {
+      "id": "6a675064d0cac200",
+      "headline": "China Gave Its AI Away",
+      "url": "https://hackernoon.com/china-gave-its-ai-away",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-04-12 16:00:47",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "13c211de917e2724",
+      "headline": "Anthropic Seeks Guidance from Christian Leaders on AI Ethics and Morality",
+      "url": "https://www.breitbart.com/tech/2026/04/12/anthropic-seeks-guidance-from-christian-leaders-on-ai-ethics-and-morality/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-04-12 15:48:30",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "cc1ccfd7b318b249",
+      "headline": "China’s Chip Industry Depends on One Key Piece of Equipment from ASML, and the U.S. Is Now Moving to Ban It",
+      "url": "https://wccftech.com/chinas-chip-industry-depends-on-one-key-piece-of-equipment-from-asml-and-the-u-s-is-now-moving-to-ban-it/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-04-12 14:21:57",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c8adb797f3d40c9d",
+      "headline": "OpenAI Staffers Horrified When Senior Leadership Hatched “Insane” Plan to Pit World Governments Against Each Other",
+      "url": "https://futurism.com/artificial-intelligence/openai-staffers-horrified-insane-plan",
+      "source": "Futurism",
+      "country": "US",
+      "publishedAt": "2026-04-12 13:45:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "627418bc3e0f1b2f",
+      "headline": "Navigating the Emerging AI Regulation Bill Landscape in 2026",
+      "url": "https://techannouncer.com/navigating-the-emerging-ai-regulation-bill-landscape-in-2026/",
+      "source": "Techannouncer",
+      "country": "US",
+      "publishedAt": "2026-04-12 09:26:06",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f879c2099dae23b0",
+      "headline": "COMMENTARY: Exaggerated forecasts on artificial intelligence have proven genuinely dumb",
+      "url": "https://www.reviewjournal.com/opinion/commentary-exaggerated-forecasts-on-artificial-intelligence-have-proven-genuinely-dumb-3736949/",
+      "source": "Las-vegas Review Journal",
+      "country": "US",
+      "publishedAt": "2026-04-12 04:01:01",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "fd4e9e5a43900f82",
+      "headline": "AI's Second Wind Is Here — Weiss Ratings Plus Report Cites 303% Historical Average and 2026 Data Signals Pointing...",
+      "url": "https://www.benzinga.com/pressreleases/26/04/g51769892/ais-second-wind-is-here-weiss-ratings-plus-report-cites-303-historical-average-and-2026-data-signa",
+      "source": "Benzinga",
+      "country": "US",
+      "publishedAt": "2026-04-11 21:45:45",
+      "relevanceScore": 0.24
+    },
     {
       "id": "4c7863ddc99f5087",
       "headline": "Anthropic's unreleased Mythos AI model stirs debate in US intelligence community over cyber risks",
