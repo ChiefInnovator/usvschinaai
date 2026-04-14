@@ -143,6 +143,18 @@
       "source_url": "https://openreview.net/pdf/574281303882f822808ab57ac3a57a2bddfbc7a3.pdf"
     }
   },
+  "GPT-5.4": {
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-04-14T04:19:41.339418+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "OpenLM.ai lists GPT-5.4 at 79.2 on the SWE-bench Verified (100 turns) leaderboard using mini-SWE-agent.",
+      "score": "79.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://openlm.ai/swe-bench/"
+    }
+  },
   "Gemini 3 Pro": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
@@ -197,6 +209,18 @@
       "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
     }
   },
+  "Kimi K2.5": {
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-14T04:19:41.339418+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Z.ai’s official GLM-5 model card reports Kimi K2.5 at 63.8 on MCP-Atlas (Public Set); this is a third-party comparative table, not a Moonshot primary source.",
+      "score": "63.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/zai-org/GLM-5/blob/c35b39f62af17ae76fd6dc5e95a7824d8c01a207/README.md"
+    }
+  },
   "MiniMax M2.5": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -217,6 +241,18 @@
       "score": "19.4%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+    }
+  },
+  "MiniMax M2.7": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-04-14T04:19:41.339418+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "DataLearner lists HLE = 28 for MiniMax-M2.7 in thinking mode without tools; protocol/mode is somewhat ambiguous versus other HLE variants.",
+      "score": "28.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.datalearner.com/en/ai-models/pretrained-models/minimax-m2-7"
     }
   },
   "Qwen3.5-397B-A17B": {
