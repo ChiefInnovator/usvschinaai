@@ -80,6 +80,16 @@
     }
   },
   "GPT-5 High": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported as GPT-5 High on BrowseComp-en in Seed 1.8 Table 4, with the table marking non-Seed baseline results as sourced from technical reports.",
+      "score": "54.9%",
+      "source_type": "model_card",
+      "source_url": "https://lf3-static.bytednsdoc.com/obj/eden-cn/lapzild-tss/ljhwZthlaukjlkulzlp/research/Seed-1.8-Modelcard.pdf"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
@@ -153,6 +163,18 @@
       "score": "79.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://openlm.ai/swe-bench/"
+    }
+  },
+  "GPT-5.4 mini": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Official OpenAI localized launch page search snippet lists AIME 2025 (without tools) = 91.25% for GPT-5.4 mini.",
+      "score": "91.25%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/es-ES/index/introducing-gpt-5-4-mini-and-nano/"
     }
   },
   "Gemini 3 Pro": {
@@ -241,9 +263,29 @@
       "score": "19.4%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "MiniMax’s model card lists “Terminal Bench 2” at 51.7, which corresponds to Terminal-Bench 2.0.",
+      "score": "51.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blame/6ff285653e093c76a26a2254fd7c3533c15143cb/README.md"
     }
   },
   "MiniMax M2.7": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported as AIME25 in a third-party comparative model card, not in MiniMax's own materials.",
+      "score": "80.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/Lhedex/Trinity-Large-Thinking"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-04-14T04:19:41.339418+00:00",
@@ -253,6 +295,28 @@
       "score": "28.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.datalearner.com/en/ai-models/pretrained-models/minimax-m2-7"
+    },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported in a third-party comparative benchmark table as MCP-Atlas (Public Set), not in MiniMax's own materials.",
+      "score": "48.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.1-FP8/blob/main/README.md"
+    }
+  },
+  "Qwen3.5-122B-A10B": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-15T04:18:44.483120+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported as \"AIME25 (no tools)\" for Qwen3.5-122B-A10B in NVIDIA's Nemotron 3 Super technical report; this is a third-party comparison table rather than Qwen's own model card.",
+      "score": "90.4%",
+      "source_type": "paper",
+      "source_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf"
     }
   },
   "Qwen3.5-397B-A17B": {

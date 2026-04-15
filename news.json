@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-04-13T04:39:43.985107+00:00",
+  "lastUpdated": "2026-04-15T04:35:18.873487+00:00",
   "items": [
+    {
+      "id": "6140615641bde18b",
+      "headline": "Anthropic’s Claude Mythos and the New Arms Race: How AI Companies Became Cybersecurity’s Biggest Targets—and Its...",
+      "url": "https://www.webpronews.com/anthropics-claude-mythos-and-the-new-arms-race-how-ai-companies-became-cybersecuritys-biggest-targets-and-its-most-unlikely-defenders/",
+      "source": "Unknown",
+      "country": "US",
+      "publishedAt": "2026-04-14 15:00:06",
+      "relevanceScore": 0.6
+    },
+    {
+      "id": "a93caa6c75164b63",
+      "headline": "‘Mythos-Ready’ Security: CSA Urges CISOs to Prepare for Accelerated AI Threats",
+      "url": "https://www.securityweek.com/mythos-ready-security-csa-urges-cisos-to-prepare-for-accelerated-ai-threats/",
+      "source": "Unknown",
+      "country": "US",
+      "publishedAt": "2026-04-14 12:53:55",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ce81fe66a42b4502",
+      "headline": "German startup Synera lands $40M to automate engineering workflows with AI agents",
+      "url": "https://siliconangle.com/2026/04/14/german-startup-synera-lands-40-million-automate-engineering-workflows-ai-agents/",
+      "source": "Unknown",
+      "country": "US",
+      "publishedAt": "2026-04-14 12:00:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "6a675064d0cac200",
       "headline": "China Gave Its AI Away",
