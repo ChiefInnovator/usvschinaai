@@ -141,6 +141,58 @@
       "source_url": "https://openreview.net/pdf/574281303882f822808ab57ac3a57a2bddfbc7a3.pdf"
     }
   },
+  "GPT-5.1": {
+    "ARC-AGI v2": {
+      "benchmark": "ARC-AGI v2",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported by OpenAI as ARC-AGI-2 (Verified) for GPT-5.1 Thinking at high reasoning effort.",
+      "score": "17.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported by OpenAI in the GPT-5.2 appendix as the GPT-5.1 Thinking score; this is the closest official published score for API GPT-5.1.",
+      "score": "50.8%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Using the standard no-tools HLE line; OpenAI also reports 42.7% for HLE with search and Python, which is a different protocol.",
+      "score": "25.7%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported by OpenAI in the GPT-5.2 appendix as the GPT-5.1 Thinking score.",
+      "score": "44.5%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    },
+    "MMMLU": {
+      "benchmark": "MMMLU",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Reported by OpenAI in the GPT-5.2 appendix as the GPT-5.1 Thinking score.",
+      "score": "89.5%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    }
+  },
   "GPT-5.2": {
     "Terminal-Bench 2.0": {
       "benchmark": "Terminal-Bench 2.0",
@@ -229,6 +281,28 @@
       "score": "69.2%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Official Moonshot model card lists K2 0905 at 44.5 on Terminal-Bench with simulated tools (JSON) and says scores used the default agent framework, Terminus-2; I marked medium because the table labels it “Terminal-Bench” rather than explicitly “Terminal-Bench 2.0”.",
+      "score": "44.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/5b64d2a87e32f24d6231ef01ee676f65e54496a7/README.md"
+    }
+  },
+  "Kimi K2-Thinking-0905": {
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-16T04:23:23.324924+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Verified on the Hugging Face eval page for moonshotai/Kimi-K2-Thinking; confidence is medium because the requested llm-stats name appends '-0905' while Moonshot's official model name is 'Kimi-K2-Thinking'.",
+      "score": "35.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://huggingface.co/datasets/harborframework/terminal-bench-2.0?eval_result=moonshotai%2FKimi-K2-Thinking"
     }
   },
   "Kimi K2.5": {

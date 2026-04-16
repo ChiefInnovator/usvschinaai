@@ -1,6 +1,96 @@
 {
-  "lastUpdated": "2026-04-15T04:35:18.873487+00:00",
+  "lastUpdated": "2026-04-16T04:37:51.832691+00:00",
   "items": [
+    {
+      "id": "4fe83a384b25f746",
+      "headline": "Vivo X300 Ultra goes global with insane videography capabilities",
+      "url": "https://9to5google.com/2026/04/15/vivo-x300-ultra-goes-global-with-insane-videography-capabilities/",
+      "source": "9to5google",
+      "country": "CN",
+      "publishedAt": "2026-04-15 16:34:07",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "97687d2366c6b28d",
+      "headline": "How AI is helping businesses save time and money amid tariff chaos",
+      "url": "https://www.businessinsider.com/ai-helps-us-businesses-manage-supreme-court-tariff-impacts-2026-4",
+      "source": "Business Insider",
+      "country": "US",
+      "publishedAt": "2026-04-15 15:45:17",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "6c5a7d25ee7beb4d",
+      "headline": "AI Impact: Is AI Making Effort Irrelevant?",
+      "url": "https://www.newsweek.com/ai-impact-is-ai-making-effort-irrelevant-11833132",
+      "source": "Newsweek",
+      "country": "US",
+      "publishedAt": "2026-04-15 15:05:31",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "ad04e0b39c738352",
+      "headline": "Latest Research On Gyro Technology In The Dual-Axis Gyro-Stabilized Platforms Market By Marketsandmarketstm",
+      "url": "https://menafn.com/1110987750/Latest-Research-On-Gyro-Technology-In-The-Dual-Axis-Gyro-Stabilized-Platforms-Market-By-Marketsandmarketstm",
+      "source": "Menafn",
+      "country": "US",
+      "publishedAt": "2026-04-15 15:03:45",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "adc88c49bc381eda",
+      "headline": "Your next smartphone could literally tell you how to pose for social media",
+      "url": "https://www.androidauthority.com/huawei-pura-90-ai-posture-recommendation-3657761/",
+      "source": "Androidauthority",
+      "country": "CN",
+      "publishedAt": "2026-04-15 13:58:34",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "0f01e816024d0cf6",
+      "headline": "Jeff Raikes: AI is capturing cognition — and most companies are building a talent debt they don’t see yet",
+      "url": "https://fortune.com/2026/04/15/ai-literacy-talent-pipeline-entry-level-jobs-jeff-raikes-microsoft-gates-foundation/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-04-15 13:30:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "bdeec3d892346809",
+      "headline": "The Great AI Power Grab: How Tech Giants Are Quietly Rewriting the Rules of Energy Markets",
+      "url": "https://www.webpronews.com/the-great-ai-power-grab-how-tech-giants-are-quietly-rewriting-the-rules-of-energy-markets/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-04-15 12:10:06",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "06890db187e4d090",
+      "headline": "The Download: NASA’s nuclear spacecraft and unveiling our AI 10",
+      "url": "https://www.technologyreview.com/2026/04/15/1135904/the-download-nasa-nuclear-powered-spacecraft-10-things-that-matter-in-ai-right-now/",
+      "source": "Technologyreview",
+      "country": "US",
+      "publishedAt": "2026-04-15 12:10:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "2af1cc4e939e69b4",
+      "headline": "We're Hooked on Satellites. It Could Blow Up in Our Faces",
+      "url": "https://www.cnet.com/science/space/features/satellite-overcrowding-space-junk-low-earth-orbit-starlink/",
+      "source": "Cnet",
+      "country": "US",
+      "publishedAt": "2026-04-15 12:00:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "b4fd2d13b55e10e3",
+      "headline": "Silicon Valley has no monopoly on AI brain power. That’s why Demis Hassabis is very happy to stay in London",
+      "url": "https://fortune.com/2026/04/15/silicon-valley-monopoly-ai-brain-power-demis-hassabis-letter-from-london/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-04-15 11:39:48",
+      "relevanceScore": 0.0
+    },
     {
       "id": "6140615641bde18b",
       "headline": "Anthropic’s Claude Mythos and the New Arms Race: How AI Companies Became Cybersecurity’s Biggest Targets—and Its...",
@@ -90,60 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-11 21:45:45",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "4c7863ddc99f5087",
-      "headline": "Anthropic's unreleased Mythos AI model stirs debate in US intelligence community over cyber risks",
-      "url": "https://completeaitraining.com/news/anthropics-unreleased-mythos-ai-model-stirs-debate-in-us/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-04-10 03:10:48",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "6f172476f83762cb",
-      "headline": "Anthropic Unveils ‘Project Glasswing’ as Claude Mythos Targets Software Vulnerabilities",
-      "url": "https://www.hpcwire.com/off-the-wire/anthropic-unveils-project-glasswing-as-claude-mythos-targets-software-vulnerabilities/",
-      "source": "Hpcwire",
-      "country": "US",
-      "publishedAt": "2026-04-09 19:23:57",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "ec81582f95410b87",
-      "headline": "OpenAI, Google, Anthropic Unite to Counter AI Model Replication & Reshape Global Tech Race",
-      "url": "https://www.analyticsinsight.net/news/openai-google-anthropic-unite-to-counter-ai-model-replication-reshape-global-tech-race",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-04-07 14:00:00",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "0dfcb907e811c175",
-      "headline": "US vs. China: The AI arms race",
-      "url": "https://nypost.com/video/us-vs-china-the-ai-arms-race/",
-      "source": "New York Post",
-      "country": "Both",
-      "publishedAt": "2026-04-06 13:56:12",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "d06d37d9d35e981b",
-      "headline": "The Machines That Won’t Die: Inside the Alarming Discovery That AI Systems Fight to Stay Alive",
-      "url": "https://www.webpronews.com/the-machines-that-wont-die-inside-the-alarming-discovery-that-ai-systems-fight-to-stay-alive/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-04-04 15:20:06",
-      "relevanceScore": 0.68
-    },
-    {
-      "id": "7785ca8d835dbe29",
-      "headline": "20VC x SaaStr: Anthropic’s 10-Trillion-Parameter Leak, OpenAI Kills Sora, Masa’s $40B Bridge Loan, and Why the...",
-      "url": "https://platodata.ai/w3ai/4951614/saas/20vc-x-saastr-anthropics-10-trillion-parameter-leak-openai-kills-sora-masas-40b-bridge-loan-and-why-the-cybersecurity-panic-is-backwards/",
-      "source": "Plato Data Intelligence",
-      "country": "US",
-      "publishedAt": "2026-04-02 16:27:15",
-      "relevanceScore": 0.45
     }
   ]
 }
