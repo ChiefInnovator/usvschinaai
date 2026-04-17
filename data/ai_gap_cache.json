@@ -191,6 +191,26 @@
       "score": "89.5%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-5-2/"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-17T04:21:24.756624+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Google DeepMind's Gemini 3 comparison table reports GPT-5.1 at 76.0% on MMMU-Pro.",
+      "score": "76.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://deepmind.google/en/models/gemini/"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-17T04:21:24.756624+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Google DeepMind's Gemini 3 Pro comparison table reports GPT-5.1 at 47.6% on Terminal-Bench 2.0.",
+      "score": "47.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://deepmind.google/en/models/gemini/pro/"
     }
   },
   "GPT-5.2": {
@@ -227,6 +247,18 @@
       "score": "91.25%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/es-ES/index/introducing-gpt-5-4-mini-and-nano/"
+    }
+  },
+  "Gemini 3 Flash": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-04-17T04:21:24.756624+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Google DeepMind lists BrowseComp at 59.2% for Gemini 3 Flash, and Google AI docs identify the API model code as gemini-3-flash-preview.",
+      "score": "59.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://deepmind.google/models/gemini/"
     }
   },
   "Gemini 3 Pro": {
