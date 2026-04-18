@@ -10,6 +10,16 @@
       "source_type": "model_card",
       "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-04-18T04:12:54.425735+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Anthropic’s Claude Sonnet 4.6 system card includes a BrowseComp comparison chart showing Claude Opus 4.5 at 67.8% accuracy.",
+      "score": "67.8%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/bbd8ef16d70b7a1665f14f306ee88b53f686aa75.pdf"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
@@ -80,6 +90,16 @@
     }
   },
   "GPT-5 High": {
+    "ARC-AGI v2": {
+      "benchmark": "ARC-AGI v2",
+      "cached_at": "2026-04-18T04:12:54.425735+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "OpenLM Chatbot Arena + lists GPT-5-high with ARC-AGI 9.9; this is a third-party leaderboard entry, not an OpenAI primary-source report.",
+      "score": "9.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://openlm.ai/chatbot-arena/"
+    },
     "BrowseComp": {
       "benchmark": "BrowseComp",
       "cached_at": "2026-04-15T04:18:44.483120+00:00",
@@ -303,6 +323,16 @@
       "score": "7.4%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-04-18T04:12:54.425735+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Moonshot's Kimi-K2-Thinking model card reports K2 0905 at 21.7% on HLE with tools; it also separately lists 7.9% for text-only/no-tools.",
+      "score": "21.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/main/README.md"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",

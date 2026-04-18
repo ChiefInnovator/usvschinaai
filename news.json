@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-04-17T04:35:22.277432+00:00",
+  "lastUpdated": "2026-04-18T04:24:41.069831+00:00",
   "items": [
+    {
+      "id": "a877f89793fefce4",
+      "headline": "AI + quantum, Amazon vs. Starlink and the wide-open US-China internet battle",
+      "url": "https://siliconangle.com/2026/04/17/ai-quantum-amazon-vs-starlink-wide-open-us-china-internet-battle/",
+      "source": "Siliconangle",
+      "country": "Both",
+      "publishedAt": "2026-04-17 14:00:59",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "ff5c5f59f2feee2c",
+      "headline": "Transcript: Polestar Automotive Q4 2025 Earnings Conference Call",
+      "url": "https://www.benzinga.com/insights/news/26/04/51881135/transcript-polestar-automotive-q4-2025-earnings-conference-call",
+      "source": "Benzinga",
+      "country": "US",
+      "publishedAt": "2026-04-17 12:52:50",
+      "relevanceScore": 0.38
+    },
     {
       "id": "adbf43830b47c593",
       "headline": "Apple and Google Continue to Offer 'Nudify' Apps that Use AI to Generate Deepfake Porn",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-14 15:00:06",
       "relevanceScore": 0.6
-    },
-    {
-      "id": "a93caa6c75164b63",
-      "headline": "‘Mythos-Ready’ Security: CSA Urges CISOs to Prepare for Accelerated AI Threats",
-      "url": "https://www.securityweek.com/mythos-ready-security-csa-urges-cisos-to-prepare-for-accelerated-ai-threats/",
-      "source": "Unknown",
-      "country": "US",
-      "publishedAt": "2026-04-14 12:53:55",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "ce81fe66a42b4502",
-      "headline": "German startup Synera lands $40M to automate engineering workflows with AI agents",
-      "url": "https://siliconangle.com/2026/04/14/german-startup-synera-lands-40-million-automate-engineering-workflows-ai-agents/",
-      "source": "Unknown",
-      "country": "US",
-      "publishedAt": "2026-04-14 12:00:00",
-      "relevanceScore": 0.08
     }
   ]
 }
