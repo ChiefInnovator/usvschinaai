@@ -78,6 +78,16 @@
     }
   },
   "GLM-5": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-19T04:22:47.828462+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "MathArena lists GLM 5 at 96.67% on “AIME 2025 Final-Answer Comps.”",
+      "score": "96.67%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://matharena.ai/models/glm_glm_5"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-04-12T19:44:48.151542+00:00",

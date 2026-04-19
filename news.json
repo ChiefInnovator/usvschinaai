@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-04-18T04:24:41.069831+00:00",
+  "lastUpdated": "2026-04-19T04:32:27.996105+00:00",
   "items": [
+    {
+      "id": "d850a258d88ef1ee",
+      "headline": "Navigating the Evolving Landscape: A Deep Dive into US AI Regulation by 2025",
+      "url": "https://techannouncer.com/navigating-the-evolving-landscape-a-deep-dive-into-us-ai-regulation-by-2025/",
+      "source": "Techannouncer",
+      "country": "US",
+      "publishedAt": "2026-04-18 15:41:08",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "fc4f17b8e52dc532",
+      "headline": "Opposition to data centers turns violent as local concerns merge with hostility toward Big Tech",
+      "url": "https://freerepublic.com/focus/f-bloggers/4375443/posts",
+      "source": "Freerepublic",
+      "country": "US",
+      "publishedAt": "2026-04-18 15:11:02",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c56e3ab05feb3182",
+      "headline": "US bill would mandate operating system-level age verificationParents Decide Act shifts age checks from apps to OS...",
+      "url": "https://freerepublic.com/focus/f-bloggers/4375422/posts",
+      "source": "Freerepublic",
+      "country": "US",
+      "publishedAt": "2026-04-18 12:23:57",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "805ba010d8d5293b",
+      "headline": "ASML Sees Memory Chip Orders Explode Past Logic for the First Time as DRAM Makers Scramble for EUV Slots",
+      "url": "https://wccftech.com/asml-memory-chip-orders-explode-past-logic-first-time-as-dram-makers-scramble-for-euv-slots/",
+      "source": "Wccftech",
+      "country": "US",
+      "publishedAt": "2026-04-18 08:50:56",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "4d08c2d4286f7fe1",
+      "headline": "US Government Now Wants Anthropic's 'Mythos', Preparing for AI Cybersecurity Threats",
+      "url": "https://yro.slashdot.org/story/26/04/18/039221/us-government-now-wants-anthropics-mythos-preparing-for-ai-cybersecurity-threats",
+      "source": "Slashdot",
+      "country": "Both",
+      "publishedAt": "2026-04-18 00:00:00",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "7bccfb23f39126c5",
+      "headline": "Anthropic CEO Dario Amodei set to meet White House Chief of Staff Susie Wiles amid AI fight: reports",
+      "url": "https://nypost.com/2026/04/17/business/anthropic-ceo-dario-amodei-set-to-meet-white-house-chief-of-staff-susie-wiles-amid-ai-fight-reports/",
+      "source": "New York Post",
+      "country": "US",
+      "publishedAt": "2026-04-17 16:33:34",
+      "relevanceScore": 0.23
+    },
     {
       "id": "a877f89793fefce4",
       "headline": "AI + quantum, Amazon vs. Starlink and the wide-open US-China internet battle",
@@ -126,60 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-04-15 13:58:34",
       "relevanceScore": 0.0
-    },
-    {
-      "id": "0f01e816024d0cf6",
-      "headline": "Jeff Raikes: AI is capturing cognition — and most companies are building a talent debt they don’t see yet",
-      "url": "https://fortune.com/2026/04/15/ai-literacy-talent-pipeline-entry-level-jobs-jeff-raikes-microsoft-gates-foundation/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-04-15 13:30:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "bdeec3d892346809",
-      "headline": "The Great AI Power Grab: How Tech Giants Are Quietly Rewriting the Rules of Energy Markets",
-      "url": "https://www.webpronews.com/the-great-ai-power-grab-how-tech-giants-are-quietly-rewriting-the-rules-of-energy-markets/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-04-15 12:10:06",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "06890db187e4d090",
-      "headline": "The Download: NASA’s nuclear spacecraft and unveiling our AI 10",
-      "url": "https://www.technologyreview.com/2026/04/15/1135904/the-download-nasa-nuclear-powered-spacecraft-10-things-that-matter-in-ai-right-now/",
-      "source": "Technologyreview",
-      "country": "US",
-      "publishedAt": "2026-04-15 12:10:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "2af1cc4e939e69b4",
-      "headline": "We're Hooked on Satellites. It Could Blow Up in Our Faces",
-      "url": "https://www.cnet.com/science/space/features/satellite-overcrowding-space-junk-low-earth-orbit-starlink/",
-      "source": "Cnet",
-      "country": "US",
-      "publishedAt": "2026-04-15 12:00:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "b4fd2d13b55e10e3",
-      "headline": "Silicon Valley has no monopoly on AI brain power. That’s why Demis Hassabis is very happy to stay in London",
-      "url": "https://fortune.com/2026/04/15/silicon-valley-monopoly-ai-brain-power-demis-hassabis-letter-from-london/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-04-15 11:39:48",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "6140615641bde18b",
-      "headline": "Anthropic’s Claude Mythos and the New Arms Race: How AI Companies Became Cybersecurity’s Biggest Targets—and Its...",
-      "url": "https://www.webpronews.com/anthropics-claude-mythos-and-the-new-arms-race-how-ai-companies-became-cybersecuritys-biggest-targets-and-its-most-unlikely-defenders/",
-      "source": "Unknown",
-      "country": "US",
-      "publishedAt": "2026-04-14 15:00:06",
-      "relevanceScore": 0.6
     }
   ]
 }
