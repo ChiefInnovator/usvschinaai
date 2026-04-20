@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-04-19T04:32:27.996105+00:00",
+  "lastUpdated": "2026-04-20T04:36:08.637622+00:00",
   "items": [
+    {
+      "id": "0fd04778f34e5c4e",
+      "headline": "AI Reveals Explosive Growth of Floating Algae Across the World’s Oceans",
+      "url": "https://scitechdaily.com/ai-reveals-explosive-growth-of-floating-algae-across-the-worlds-oceans/",
+      "source": "Scitechdaily",
+      "country": "US",
+      "publishedAt": "2026-04-19 15:53:47",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "387b321e27cfe0e9",
+      "headline": "Utah Lawmaker Pushes AI Regulation Amidst Conservative Concerns",
+      "url": "https://us.headtopics.com/news/utah-lawmaker-pushes-ai-regulation-amidst-conservative-82411631",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-04-19 14:36:10",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "0d294c8d703d4205",
+      "headline": "Nvidia CEO Issues Stark Warning: Huawei-Powered AI Could Shake US Dominance",
+      "url": "https://www.gizmochina.com/2026/04/19/deepseek-v4-huawei-chips-nvidia-ceo-warning/",
+      "source": "Gizmochina",
+      "country": "Both",
+      "publishedAt": "2026-04-19 11:04:24",
+      "relevanceScore": 0.62
+    },
+    {
+      "id": "aec39dbf8a3fcd94",
+      "headline": "Commentary: Why China can’t quit ‘open’ AI",
+      "url": "https://www.channelnewsasia.com/commentary/china-ai-open-source-alibaba-qwen-deepseek-agentic-6063396",
+      "source": "Channel Newsasia",
+      "country": "CN",
+      "publishedAt": "2026-04-18 22:00:00",
+      "relevanceScore": 0.23
+    },
     {
       "id": "d850a258d88ef1ee",
       "headline": "Navigating the Evolving Landscape: A Deep Dive into US AI Regulation by 2025",
@@ -143,42 +179,6 @@
       "source": "9to5google",
       "country": "CN",
       "publishedAt": "2026-04-15 16:34:07",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "97687d2366c6b28d",
-      "headline": "How AI is helping businesses save time and money amid tariff chaos",
-      "url": "https://www.businessinsider.com/ai-helps-us-businesses-manage-supreme-court-tariff-impacts-2026-4",
-      "source": "Business Insider",
-      "country": "US",
-      "publishedAt": "2026-04-15 15:45:17",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "6c5a7d25ee7beb4d",
-      "headline": "AI Impact: Is AI Making Effort Irrelevant?",
-      "url": "https://www.newsweek.com/ai-impact-is-ai-making-effort-irrelevant-11833132",
-      "source": "Newsweek",
-      "country": "US",
-      "publishedAt": "2026-04-15 15:05:31",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "ad04e0b39c738352",
-      "headline": "Latest Research On Gyro Technology In The Dual-Axis Gyro-Stabilized Platforms Market By Marketsandmarketstm",
-      "url": "https://menafn.com/1110987750/Latest-Research-On-Gyro-Technology-In-The-Dual-Axis-Gyro-Stabilized-Platforms-Market-By-Marketsandmarketstm",
-      "source": "Menafn",
-      "country": "US",
-      "publishedAt": "2026-04-15 15:03:45",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "adc88c49bc381eda",
-      "headline": "Your next smartphone could literally tell you how to pose for social media",
-      "url": "https://www.androidauthority.com/huawei-pura-90-ai-posture-recommendation-3657761/",
-      "source": "Androidauthority",
-      "country": "CN",
-      "publishedAt": "2026-04-15 13:58:34",
       "relevanceScore": 0.0
     }
   ]

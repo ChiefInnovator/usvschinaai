@@ -97,6 +97,26 @@
       "score": "30.5%",
       "source_type": "paper",
       "source_url": "https://arxiv.org/abs/2602.15763"
+    },
+    "MMMLU": {
+      "benchmark": "MMMLU",
+      "cached_at": "2026-04-20T04:25:29.148744+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Listed in the GLM-5 row of the LLM Stats leaderboard under the MMMLU column; I did not find an official ZAI primary-source publication for this score.",
+      "score": "75.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/leaderboards/llm-leaderboard"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-04-20T04:25:29.148744+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Listed in the GLM-5 row of the LLM Stats leaderboard under the MMMU-Pro column; I did not find an official ZAI primary-source publication for this score.",
+      "score": "67.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/leaderboards/llm-leaderboard"
     }
   },
   "GPT-5 High": {
@@ -466,6 +486,16 @@
     }
   },
   "Qwen3.5-397B-A17B": {
+    "AIME 2025": {
+      "benchmark": "AIME 2025",
+      "cached_at": "2026-04-20T04:25:29.148744+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "Third-party Hugging Face model card reports the exact base model Qwen/Qwen3.5-397B-A17B at 92.92 on AIME 25 (0-shot), averaged over 8 seeds with lighteval and vLLM; not from Qwen's own official card.",
+      "score": "92.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/RedHatAI/Qwen3.5-397B-A17B-FP8-dynamic"
+    },
     "MCP Atlas": {
       "benchmark": "MCP Atlas",
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
