@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-04-20T04:36:08.637622+00:00",
+  "lastUpdated": "2026-04-21T04:30:41.357400+00:00",
   "items": [
+    {
+      "id": "e881a464c769fc9f",
+      "headline": "Investigation: Are RAM prices dropping, or is it all illusion?",
+      "url": "https://www.pcworld.com/article/3116546/investigation-are-ram-prices-dropping-or-is-it-all-illusion.html",
+      "source": "Pcworld",
+      "country": "Both",
+      "publishedAt": "2026-04-20 11:00:00",
+      "relevanceScore": 0.68
+    },
+    {
+      "id": "1400178ec2ed5852",
+      "headline": "RIP Cosmic Orange. You were too fun for this world",
+      "url": "https://www.macworld.com/article/3112645/rip-cosmic-orange-you-were-too-fun-for-this-world.html",
+      "source": "Macworld",
+      "country": "Both",
+      "publishedAt": "2026-04-20 10:30:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "03528ebbc941fdb0",
+      "headline": "Never mind S26 Ultra, this new Pro Max has the first 200MP camera of its kind",
+      "url": "https://www.androidauthority.com/huawei-pura-90-pro-max-3658873/",
+      "source": "Androidauthority",
+      "country": "CN",
+      "publishedAt": "2026-04-20 08:15:44",
+      "relevanceScore": 0.08
+    },
     {
       "id": "0fd04778f34e5c4e",
       "headline": "AI Reveals Explosive Growth of Floating Algae Across the World’s Oceans",
@@ -153,33 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-04-16 14:05:17",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "ab957ead4315d87c",
-      "headline": "Fragmented regulation complicates telco sovereignty agenda – Omdia",
-      "url": "https://www.lightreading.com/regulatory-politics/fragmented-regulation-complicates-telco-sovereignty-agenda---omdia",
-      "source": "Lightreading",
-      "country": "US",
-      "publishedAt": "2026-04-16 13:46:32",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "57c1c7cd435f52c8",
-      "headline": "Your AI Visibility Strategy Doesn’t Work Outside English",
-      "url": "https://www.searchenginejournal.com/your-ai-visibility-strategy-doesnt-work-outside-english/571742/",
-      "source": "Search Engine Journal",
-      "country": "US",
-      "publishedAt": "2026-04-16 13:30:36",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "4fe83a384b25f746",
-      "headline": "Vivo X300 Ultra goes global with insane videography capabilities",
-      "url": "https://9to5google.com/2026/04/15/vivo-x300-ultra-goes-global-with-insane-videography-capabilities/",
-      "source": "9to5google",
-      "country": "CN",
-      "publishedAt": "2026-04-15 16:34:07",
-      "relevanceScore": 0.0
     }
   ]
 }
