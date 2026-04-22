@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-04-21T04:30:41.357400+00:00",
+  "lastUpdated": "2026-04-22T04:28:57.889071+00:00",
   "items": [
+    {
+      "id": "37bd21a3c9e71b7d",
+      "headline": "\"This is not a sustainable business model\" – Why Google Cloud's Jack Buser thinks AI can save the games industry",
+      "url": "https://www.gamesindustry.biz/this-is-not-a-sustainable-business-model-why-google-clouds-jack-buser-thinks-ai-can-save-the-games-industry",
+      "source": "Gamesindustry Biz",
+      "country": "US",
+      "publishedAt": "2026-04-21 14:54:37",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "1d1f657f569f37e3",
+      "headline": "China's Chip Breakthroughs Cut AI Costs 40% but Spike Risks",
+      "url": "https://thjournal.com/articles/chinas-chip-breakthroughs-ai-risks",
+      "source": "The Journal",
+      "country": "CN",
+      "publishedAt": "2026-04-21 13:29:44",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "6b5bef253c627f2d",
+      "headline": "Apple’s Silicon Architect Ascends: Srouji’s Promotion Reshapes Hardware Empire as Ternus Prepares for CEO",
+      "url": "https://www.webpronews.com/apples-silicon-architect-ascends-sroujis-promotion-reshapes-hardware-empire-as-ternus-prepares-for-ceo/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-04-21 11:30:06",
+      "relevanceScore": 0.08
+    },
     {
       "id": "e881a464c769fc9f",
       "headline": "Investigation: Are RAM prices dropping, or is it all illusion?",
@@ -153,33 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-04-16 14:52:17",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "a66e6a0dcc8054b2",
-      "headline": "AMD may revive the Ryzen 7 5800X3D with an anniversary edition",
-      "url": "https://www.pcworld.com/article/3116293/amd-may-revive-the-ryzen-7-5800x3d-with-an-anniversary-edition.html",
-      "source": "Pcworld",
-      "country": "CN",
-      "publishedAt": "2026-04-16 14:52:17",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "e480b739b0de2c28",
-      "headline": "China turns on largest AI science hub in 2 months, using no US chips at all",
-      "url": "https://us.headtopics.com/news/china-turns-on-largest-ai-science-hub-in-2-months-using-no-82300435",
-      "source": "Headtopics",
-      "country": "CN",
-      "publishedAt": "2026-04-16 14:35:44",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "c666c4fcefc1e40e",
-      "headline": "China doubles AI computing capacity for scientific research in two months using only domestic chips",
-      "url": "https://completeaitraining.com/news/china-doubles-ai-computing-capacity-for-scientific-research/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-04-16 14:05:17",
-      "relevanceScore": 0.08
     }
   ]
 }

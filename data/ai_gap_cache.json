@@ -386,6 +386,16 @@
     }
   },
   "Kimi K2-Thinking-0905": {
+    "MMMLU": {
+      "benchmark": "MMMLU",
+      "cached_at": "2026-04-22T04:19:47.758722+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.4",
+      "notes": "NIST reports this for \"Kimi K2 Thinking\"; the naming does not explicitly include the 0905 suffix.",
+      "score": "83.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.nist.gov/news-events/news/2025/12/caisi-evaluation-kimi-k2-thinking"
+    },
     "Terminal-Bench 2.0": {
       "benchmark": "Terminal-Bench 2.0",
       "cached_at": "2026-04-16T04:23:23.324924+00:00",
@@ -407,6 +417,18 @@
       "score": "63.8%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/zai-org/GLM-5/blob/c35b39f62af17ae76fd6dc5e95a7824d8c01a207/README.md"
+    }
+  },
+  "MiniMax M2.1": {
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-22T04:19:47.758722+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Official Terminal-Bench 2.0 leaderboard entry for 'Terminus 2 MiniMax M2.1'; I did not use MiniMax's 47.9% claim because it was run with modified/internal settings.",
+      "score": "29.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
     }
   },
   "MiniMax M2.5": {
