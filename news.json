@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-04-22T04:28:57.889071+00:00",
+  "lastUpdated": "2026-04-23T04:30:49.546380+00:00",
   "items": [
+    {
+      "id": "49ef2f08cfcb9119",
+      "headline": "Vast Data raises $1B at $30B valuation as AI infrastructure demand accelerates",
+      "url": "https://siliconangle.com/2026/04/22/vast-data-raises-1b-30b-valuation-ai-infrastructure-demand-accelerates/",
+      "source": "Siliconangle",
+      "country": "US",
+      "publishedAt": "2026-04-22 15:00:32",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "cafa1bde482f4bef",
+      "headline": "Sarvam AI, Defence Ministry Explore Rs. 300 Cr AI CoE for Military Use",
+      "url": "https://industrywired.com/artificial-intelligence/sarvam-ai-defence-ministry-explore-rs-300-cr-ai-coe-for-military-use-11754885",
+      "source": "Industry Wired",
+      "country": "Both",
+      "publishedAt": "2026-04-22 13:13:22",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "754cbe772f37663b",
+      "headline": "UK to build ‘national cyber shield’ to protect against AI cyber threats",
+      "url": "https://www.computerweekly.com/news/366641790/UK-to-build-national-cyber-shield-to-protect-against-AI-cyber-threats",
+      "source": "Computerweekly News",
+      "country": "Both",
+      "publishedAt": "2026-04-22 10:45:00",
+      "relevanceScore": 0.46
+    },
     {
       "id": "37bd21a3c9e71b7d",
       "headline": "\"This is not a sustainable business model\" – Why Google Cloud's Jack Buser thinks AI can save the games industry",
@@ -152,33 +179,6 @@
       "source": "Siliconangle",
       "country": "Both",
       "publishedAt": "2026-04-17 14:00:59",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "ff5c5f59f2feee2c",
-      "headline": "Transcript: Polestar Automotive Q4 2025 Earnings Conference Call",
-      "url": "https://www.benzinga.com/insights/news/26/04/51881135/transcript-polestar-automotive-q4-2025-earnings-conference-call",
-      "source": "Benzinga",
-      "country": "US",
-      "publishedAt": "2026-04-17 12:52:50",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "adbf43830b47c593",
-      "headline": "Apple and Google Continue to Offer 'Nudify' Apps that Use AI to Generate Deepfake Porn",
-      "url": "https://www.breitbart.com/tech/2026/04/16/apple-and-google-continue-to-offer-nudify-apps-that-use-ai-to-generate-deepfake-porn/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-04-16 15:02:20",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "b6e33f7485e70de9",
-      "headline": "A Ryzen 5800X3D comeback would prove the PC upgrade cycle is broken",
-      "url": "https://www.pcworld.com/article/3116293/a-ryzen-5800x3d-comeback-would-prove-the-pc-upgrade-cycle-is-broken.html",
-      "source": "Pcworld",
-      "country": "CN",
-      "publishedAt": "2026-04-16 14:52:17",
       "relevanceScore": 0.16
     }
   ]
