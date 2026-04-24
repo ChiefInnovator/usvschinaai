@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-04-23T04:30:49.546380+00:00",
+  "lastUpdated": "2026-04-24T04:33:01.808761+00:00",
   "items": [
+    {
+      "id": "7a0ca8c895003d7b",
+      "headline": "White House Accuses China of Industrial-Scale Theft of AI Technology",
+      "url": "https://gvwire.com/2026/04/23/white-house-accuses-china-of-industrial-scale-theft-of-ai-technology/",
+      "source": "Gv Wire",
+      "country": "Both",
+      "publishedAt": "2026-04-23 16:21:32",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "005f316c0f6dedec",
+      "headline": "China is conducting industrial-scale espionage to steal US AI technology, White House says",
+      "url": "https://us.headtopics.com/news/china-is-conducting-industrial-scale-espionage-to-steal-us-82592216",
+      "source": "Headtopics",
+      "country": "Both",
+      "publishedAt": "2026-04-23 16:06:36",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "0ed4fca91aba6175",
+      "headline": "IT Security News Hourly Summary 2026-04-23 18h : 13 posts",
+      "url": "https://www.itsecuritynews.info/it-security-news-hourly-summary-2026-04-23-18h-13-posts/",
+      "source": "It Security News",
+      "country": "US",
+      "publishedAt": "2026-04-23 16:05:07",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "775bd51243e7d203",
+      "headline": "China builds largest AI computing cluster for science research without US chips in two months",
+      "url": "https://completeaitraining.com/news/china-builds-largest-ai-computing-cluster-for-science/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-04-23 14:22:59",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "3c95b1040f4dc4d2",
+      "headline": "White House accuses China of ‘industrial-scale’ theft of AI technology - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNd2NEazcwMGU5bE5yb29Da2lWdTZMaVYtVzhDQ1FxOFM2QkJEZWpQLUs3UlhpV0c2Y3FiN20wVWdOTkp3YVA3VTV3ajZhZEVEU1JjUzVPYUY0bC15Q2YySHpmWGNYbFVrdGJncTQyVWp6cGF1NllMa2ZhQkZ4Rlg0ZXhmblE?oc=5",
+      "source": "Google News",
+      "country": "Both",
+      "publishedAt": "2026-04-23 14:00:07",
+      "relevanceScore": 0.08
+    },
     {
       "id": "49ef2f08cfcb9119",
       "headline": "Vast Data raises $1B at $30B valuation as AI infrastructure demand accelerates",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-18 15:11:02",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "c56e3ab05feb3182",
-      "headline": "US bill would mandate operating system-level age verificationParents Decide Act shifts age checks from apps to OS...",
-      "url": "https://freerepublic.com/focus/f-bloggers/4375422/posts",
-      "source": "Freerepublic",
-      "country": "US",
-      "publishedAt": "2026-04-18 12:23:57",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "805ba010d8d5293b",
-      "headline": "ASML Sees Memory Chip Orders Explode Past Logic for the First Time as DRAM Makers Scramble for EUV Slots",
-      "url": "https://wccftech.com/asml-memory-chip-orders-explode-past-logic-first-time-as-dram-makers-scramble-for-euv-slots/",
-      "source": "Wccftech",
-      "country": "US",
-      "publishedAt": "2026-04-18 08:50:56",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "4d08c2d4286f7fe1",
-      "headline": "US Government Now Wants Anthropic's 'Mythos', Preparing for AI Cybersecurity Threats",
-      "url": "https://yro.slashdot.org/story/26/04/18/039221/us-government-now-wants-anthropics-mythos-preparing-for-ai-cybersecurity-threats",
-      "source": "Slashdot",
-      "country": "Both",
-      "publishedAt": "2026-04-18 00:00:00",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "7bccfb23f39126c5",
-      "headline": "Anthropic CEO Dario Amodei set to meet White House Chief of Staff Susie Wiles amid AI fight: reports",
-      "url": "https://nypost.com/2026/04/17/business/anthropic-ceo-dario-amodei-set-to-meet-white-house-chief-of-staff-susie-wiles-amid-ai-fight-reports/",
-      "source": "New York Post",
-      "country": "US",
-      "publishedAt": "2026-04-17 16:33:34",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "a877f89793fefce4",
-      "headline": "AI + quantum, Amazon vs. Starlink and the wide-open US-China internet battle",
-      "url": "https://siliconangle.com/2026/04/17/ai-quantum-amazon-vs-starlink-wide-open-us-china-internet-battle/",
-      "source": "Siliconangle",
-      "country": "Both",
-      "publishedAt": "2026-04-17 14:00:59",
-      "relevanceScore": 0.16
     }
   ]
 }
