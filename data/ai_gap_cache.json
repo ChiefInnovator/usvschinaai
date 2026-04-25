@@ -117,6 +117,16 @@
       "score": "67.8%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://llm-stats.com/leaderboards/llm-leaderboard"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-04-25T04:13:58.189906+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.4",
+      "notes": "Official Z.AI documentation reports 56.2 on Terminal-Bench 2.0; the Hugging Face model card also distinguishes a separate 60.7 score for a verified variant, so 56.2% is the standard benchmark figure.",
+      "score": "56.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://docs.z.ai/guides/llm/glm-5"
     }
   },
   "GPT-5 High": {

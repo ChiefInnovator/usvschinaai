@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-04-24T04:33:01.808761+00:00",
+  "lastUpdated": "2026-04-25T04:22:44.192028+00:00",
   "items": [
+    {
+      "id": "54c7a85c70b9c0ce",
+      "headline": "US Targets ‘AI Distillation’: What It Means for China and Big Tech",
+      "url": "https://www.investing.com/analysis/us-targets-ai-distillation-what-it-means-for-china-and-big-tech-200679129",
+      "source": "Investing Us",
+      "country": "Both",
+      "publishedAt": "2026-04-24 16:16:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "99f0fa61d507ba11",
+      "headline": "Amkor Technology: The Arizona AI Packaging Bet Is Real, But You're Already Paying For It",
+      "url": "https://www.benzinga.com/Opinion/26/04/52033089/amkor-technology-the-arizona-ai-packaging-bet-is-real-but-youre-already-paying-for-it",
+      "source": "Benzinga",
+      "country": "CN",
+      "publishedAt": "2026-04-24 14:42:29",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "9ecb63d5ca69de7e",
+      "headline": "Global LPDDR Memory Chips Market Poised to Grow from USD 7.24 Billion in 2024 to USD 11.09 Billion by 2031 at a CAGR...",
+      "url": "https://www.prnewswire.com/news-releases/global-lpddr-memory-chips-market-poised-to-grow-from-usd-7-24-billion-in-2024-to-usd-11-09-billion-by-2031-at-a-cagr-of-6-3--fueled-by-surging-smartphone-intelligence-automotive-electronics-expansion-and-next-generation-low-po-302752656.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-04-24 14:01:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ab5437dd5400aac5",
+      "headline": "At Next, Google aims to dominate the dawning age of agentic AI",
+      "url": "https://siliconangle.com/2026/04/24/next-google-aims-dominate-dawning-age-agentic-ai/",
+      "source": "Siliconangle",
+      "country": "US",
+      "publishedAt": "2026-04-24 13:30:17",
+      "relevanceScore": 0.23
+    },
     {
       "id": "7a0ca8c895003d7b",
       "headline": "White House Accuses China of Industrial-Scale Theft of AI Technology",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-19 14:36:10",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "0d294c8d703d4205",
-      "headline": "Nvidia CEO Issues Stark Warning: Huawei-Powered AI Could Shake US Dominance",
-      "url": "https://www.gizmochina.com/2026/04/19/deepseek-v4-huawei-chips-nvidia-ceo-warning/",
-      "source": "Gizmochina",
-      "country": "Both",
-      "publishedAt": "2026-04-19 11:04:24",
-      "relevanceScore": 0.62
-    },
-    {
-      "id": "aec39dbf8a3fcd94",
-      "headline": "Commentary: Why China can’t quit ‘open’ AI",
-      "url": "https://www.channelnewsasia.com/commentary/china-ai-open-source-alibaba-qwen-deepseek-agentic-6063396",
-      "source": "Channel Newsasia",
-      "country": "CN",
-      "publishedAt": "2026-04-18 22:00:00",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "d850a258d88ef1ee",
-      "headline": "Navigating the Evolving Landscape: A Deep Dive into US AI Regulation by 2025",
-      "url": "https://techannouncer.com/navigating-the-evolving-landscape-a-deep-dive-into-us-ai-regulation-by-2025/",
-      "source": "Techannouncer",
-      "country": "US",
-      "publishedAt": "2026-04-18 15:41:08",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "fc4f17b8e52dc532",
-      "headline": "Opposition to data centers turns violent as local concerns merge with hostility toward Big Tech",
-      "url": "https://freerepublic.com/focus/f-bloggers/4375443/posts",
-      "source": "Freerepublic",
-      "country": "US",
-      "publishedAt": "2026-04-18 15:11:02",
-      "relevanceScore": 0.08
     }
   ]
 }
