@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-04-27T04:54:59.023327+00:00",
+  "lastUpdated": "2026-04-28T04:56:26.262387+00:00",
   "items": [
+    {
+      "id": "798bb2d8ff3ab904",
+      "headline": "Startup News: China Blocks Meta’s $2B Acquisition of AI Startup Manus",
+      "url": "https://www.analyticsinsight.net/news/startup-news-china-blocks-metas-2b-acquisition-of-ai-startup-manus",
+      "source": "Analytics And Insight",
+      "country": "Both",
+      "publishedAt": "2026-04-27 13:05:43",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "a4ff712b1bdc6cd9",
+      "headline": "China Cancels Meta's $2B AI Acquisition",
+      "url": "https://www.newser.com/story/388033/china-cancels-metas-2b-ai-acquisition.html",
+      "source": "Newser",
+      "country": "Both",
+      "publishedAt": "2026-04-27 12:30:00",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "411be16ae82dda5d",
+      "headline": "The Download: DeepSeek’s latest AI breakthrough, and the race to build world models",
+      "url": "https://www.technologyreview.com/2026/04/27/1136438/the-download-deepseek-v4-ai-world-models/",
+      "source": "Technologyreview",
+      "country": "CN",
+      "publishedAt": "2026-04-27 12:10:00",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "686fa933842bd3f7",
+      "headline": "US Accuses China of ‘Industrial-Scale’ AI Theft Ahead of Trump’s Visit",
+      "url": "https://www.theepochtimes.com/china/us-accuses-china-of-industrial-scale-ai-theft-ahead-of-trumps-visit-6017466",
+      "source": "The Epoch Times",
+      "country": "CN",
+      "publishedAt": "2026-04-27 10:13:19",
+      "relevanceScore": 0.08
+    },
     {
       "id": "77801d6b75aeac0c",
       "headline": "DeepSeek V4 Deploys 1.6T Model on Huawei Chips Amid US IP Claims",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-04-23 14:22:59",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "3c95b1040f4dc4d2",
-      "headline": "White House accuses China of ‘industrial-scale’ theft of AI technology - Financial Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNd2NEazcwMGU5bE5yb29Da2lWdTZMaVYtVzhDQ1FxOFM2QkJEZWpQLUs3UlhpV0c2Y3FiN20wVWdOTkp3YVA3VTV3ajZhZEVEU1JjUzVPYUY0bC15Q2YySHpmWGNYbFVrdGJncTQyVWp6cGF1NllMa2ZhQkZ4Rlg0ZXhmblE?oc=5",
-      "source": "Google News",
-      "country": "Both",
-      "publishedAt": "2026-04-23 14:00:07",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "49ef2f08cfcb9119",
-      "headline": "Vast Data raises $1B at $30B valuation as AI infrastructure demand accelerates",
-      "url": "https://siliconangle.com/2026/04/22/vast-data-raises-1b-30b-valuation-ai-infrastructure-demand-accelerates/",
-      "source": "Siliconangle",
-      "country": "US",
-      "publishedAt": "2026-04-22 15:00:32",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "cafa1bde482f4bef",
-      "headline": "Sarvam AI, Defence Ministry Explore Rs. 300 Cr AI CoE for Military Use",
-      "url": "https://industrywired.com/artificial-intelligence/sarvam-ai-defence-ministry-explore-rs-300-cr-ai-coe-for-military-use-11754885",
-      "source": "Industry Wired",
-      "country": "Both",
-      "publishedAt": "2026-04-22 13:13:22",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "754cbe772f37663b",
-      "headline": "UK to build ‘national cyber shield’ to protect against AI cyber threats",
-      "url": "https://www.computerweekly.com/news/366641790/UK-to-build-national-cyber-shield-to-protect-against-AI-cyber-threats",
-      "source": "Computerweekly News",
-      "country": "Both",
-      "publishedAt": "2026-04-22 10:45:00",
-      "relevanceScore": 0.46
     }
   ]
 }
