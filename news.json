@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-04-28T04:56:26.262387+00:00",
+  "lastUpdated": "2026-04-29T04:54:43.392270+00:00",
   "items": [
+    {
+      "id": "775c3a19493f79ee",
+      "headline": "‘He wanted to be CEO’: Early OpenAI VC Vinod Khosla says Elon Musk’s bid for control led to the Sam Altman feud and...",
+      "url": "https://fortune.com/2026/04/28/vinod-khosla-says-elon-musk-wanted-to-be-openai-ceo-sam-altman-trial/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-04-28 16:11:25",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "6e1b865af7996cc9",
+      "headline": "Google launches Ask YouTube, a conversational AI search \"experiment\" that generates pages with videos and text...",
+      "url": "http://mediagazer.com/260428/p6",
+      "source": "Mediagazer",
+      "country": "US",
+      "publishedAt": "2026-04-28 12:10:01",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "b19dc1ac28297ea5",
+      "headline": "Liz Kendall talks up work with ‘middle power nations’ on sovereign tech",
+      "url": "https://www.computerweekly.com/news/366642532/Liz-Kendall-talks-up-work-with-middle-power-nations-on-sovereign-tech",
+      "source": "Computerweekly News",
+      "country": "CN",
+      "publishedAt": "2026-04-28 11:00:00",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "39d0ae4a309a1f8d",
+      "headline": "China blocks Meta’s $2.5 billion acquisition of Singapore-based AI start-up Manus",
+      "url": "https://sharecaster.com/china-blocks-metas-2-5-billion-acquisition-of-singapore-based-ai-start-up-manus/",
+      "source": "Share Caster",
+      "country": "Both",
+      "publishedAt": "2026-04-28 01:40:12",
+      "relevanceScore": 0.15
+    },
     {
       "id": "798bb2d8ff3ab904",
       "headline": "Startup News: China Blocks Meta’s $2B Acquisition of AI Startup Manus",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-24 13:30:17",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "7a0ca8c895003d7b",
-      "headline": "White House Accuses China of Industrial-Scale Theft of AI Technology",
-      "url": "https://gvwire.com/2026/04/23/white-house-accuses-china-of-industrial-scale-theft-of-ai-technology/",
-      "source": "Gv Wire",
-      "country": "Both",
-      "publishedAt": "2026-04-23 16:21:32",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "005f316c0f6dedec",
-      "headline": "China is conducting industrial-scale espionage to steal US AI technology, White House says",
-      "url": "https://us.headtopics.com/news/china-is-conducting-industrial-scale-espionage-to-steal-us-82592216",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-04-23 16:06:36",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0ed4fca91aba6175",
-      "headline": "IT Security News Hourly Summary 2026-04-23 18h : 13 posts",
-      "url": "https://www.itsecuritynews.info/it-security-news-hourly-summary-2026-04-23-18h-13-posts/",
-      "source": "It Security News",
-      "country": "US",
-      "publishedAt": "2026-04-23 16:05:07",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "775bd51243e7d203",
-      "headline": "China builds largest AI computing cluster for science research without US chips in two months",
-      "url": "https://completeaitraining.com/news/china-builds-largest-ai-computing-cluster-for-science/",
-      "source": "Complete Ai Training",
-      "country": "Both",
-      "publishedAt": "2026-04-23 14:22:59",
-      "relevanceScore": 0.24
     }
   ]
 }
