@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-04-29T04:54:43.392270+00:00",
+  "lastUpdated": "2026-04-30T04:38:14.721806+00:00",
   "items": [
+    {
+      "id": "ede98c51fbbf3c42",
+      "headline": "Larry’s risky business",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-04-29 13:57:16",
+      "relevanceScore": 0.3
+    },
     {
       "id": "775c3a19493f79ee",
       "headline": "‘He wanted to be CEO’: Early OpenAI VC Vinod Khosla says Elon Musk’s bid for control led to the Sam Altman feud and...",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-24 14:01:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "ab5437dd5400aac5",
-      "headline": "At Next, Google aims to dominate the dawning age of agentic AI",
-      "url": "https://siliconangle.com/2026/04/24/next-google-aims-dominate-dawning-age-agentic-ai/",
-      "source": "Siliconangle",
-      "country": "US",
-      "publishedAt": "2026-04-24 13:30:17",
-      "relevanceScore": 0.23
     }
   ]
 }
