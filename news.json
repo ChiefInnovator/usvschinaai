@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-04-30T04:38:14.721806+00:00",
+  "lastUpdated": "2026-05-01T05:05:09.547178+00:00",
   "items": [
+    {
+      "id": "d3bc18113bc62862",
+      "headline": "Anthropic's new Claude Security tool scans your codebase for flaws - and helps you decide what to fix first",
+      "url": "https://www.zdnet.com/article/anthropic-claude-security-ai-tool-scans-codebase-for-flaws/",
+      "source": "Zdnet",
+      "country": "US",
+      "publishedAt": "2026-04-30 17:00:08",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "c2c6fb27c7e2a2d9",
+      "headline": "'Speechless': Google AI Researcher 'Incredibly Ashamed' by Company's Deal with Pentagon",
+      "url": "https://www.breitbart.com/tech/2026/04/30/speechless-google-ai-researchers-incredibly-ashamed-by-companys-deal-with-pentagon/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-04-30 16:02:36",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "2bacd91dcaac7dcd",
+      "headline": "AI infrastructure spending is the largest non-war project in human history",
+      "url": "https://investinglive.com/news/ai-infrastructure-spending-is-the-largest-non-war-project-in-human-history-20260430/",
+      "source": "Forexlive",
+      "country": "Both",
+      "publishedAt": "2026-04-30 15:35:46",
+      "relevanceScore": 0.6
+    },
     {
       "id": "ede98c51fbbf3c42",
       "headline": "Larry’s risky business",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-04-24 22:32:00",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "54c7a85c70b9c0ce",
-      "headline": "US Targets ‘AI Distillation’: What It Means for China and Big Tech",
-      "url": "https://www.investing.com/analysis/us-targets-ai-distillation-what-it-means-for-china-and-big-tech-200679129",
-      "source": "Investing Us",
-      "country": "Both",
-      "publishedAt": "2026-04-24 16:16:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "99f0fa61d507ba11",
-      "headline": "Amkor Technology: The Arizona AI Packaging Bet Is Real, But You're Already Paying For It",
-      "url": "https://www.benzinga.com/Opinion/26/04/52033089/amkor-technology-the-arizona-ai-packaging-bet-is-real-but-youre-already-paying-for-it",
-      "source": "Benzinga",
-      "country": "CN",
-      "publishedAt": "2026-04-24 14:42:29",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "9ecb63d5ca69de7e",
-      "headline": "Global LPDDR Memory Chips Market Poised to Grow from USD 7.24 Billion in 2024 to USD 11.09 Billion by 2031 at a CAGR...",
-      "url": "https://www.prnewswire.com/news-releases/global-lpddr-memory-chips-market-poised-to-grow-from-usd-7-24-billion-in-2024-to-usd-11-09-billion-by-2031-at-a-cagr-of-6-3--fueled-by-surging-smartphone-intelligence-automotive-electronics-expansion-and-next-generation-low-po-302752656.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-04-24 14:01:00",
-      "relevanceScore": 0.08
     }
   ]
 }
