@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-01T05:05:09.547178+00:00",
+  "lastUpdated": "2026-05-02T04:51:16.163468+00:00",
   "items": [
+    {
+      "id": "68b3a3c4c8a6384d",
+      "headline": "AI Data Center Growth Is Now a Power Infrastructure Problem",
+      "url": "https://www.powermag.com/ai-data-center-growth-is-now-a-power-infrastructure-problem/",
+      "source": "Power Magazine",
+      "country": "US",
+      "publishedAt": "2026-05-01 13:46:48",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "01e66f0cdc24d66f",
+      "headline": "Huawei Is The Biggest Winner In China’s AI Market After NVIDIA Pullout, AI Share To Reach 60% This Year",
+      "url": "https://wccftech.com/huawei-biggest-winner-in-china-ai-market-after-nvidia-pullout-60-percent-ai-share-2026/",
+      "source": "Wccftech",
+      "country": "CN",
+      "publishedAt": "2026-05-01 12:40:17",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "2580a364f78ea1c2",
+      "headline": "Startup Funding Shift in 2026: Why Investors Prefer Deep Tech Over Apps",
+      "url": "https://industrywired.com/startups/startup-funding-shift-in-2026-why-investors-prefer-deep-tech-over-apps-11786507",
+      "source": "Industry Wired",
+      "country": "CN",
+      "publishedAt": "2026-05-01 12:30:37",
+      "relevanceScore": 0.16
+    },
     {
       "id": "d3bc18113bc62862",
       "headline": "Anthropic's new Claude Security tool scans your codebase for flaws - and helps you decide what to fix first",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-25 08:02:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "00ff22da32297018",
-      "headline": "China's DeepSeek Unveils V4 Built On Huawei Chips, Challenging Nvidia Dominance Amid US Tech Curbs",
-      "url": "https://www.benzinga.com/markets/tech/26/04/52050357/chinas-deepseek-unveils-v4-built-on-huawei-chips-challenging-nvidia-dominance-amid-us-tech-curbs",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-04-25 05:38:55",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "3da49cb41541d660",
-      "headline": "US chasing AGI myth while China builds the AI future",
-      "url": "https://asiatimes.com/2026/04/us-chasing-agi-myth-while-china-builds-the-ai-future/",
-      "source": "Asia Times",
-      "country": "Both",
-      "publishedAt": "2026-04-25 04:42:40",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "25564380617750cd",
-      "headline": "Exclusive: US State Dept orders global warning about alleged AI thefts by DeepSeek, other Chinese firms - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQbVRVY1RiN1lqaW50bmtBZUFoUmdqU3JaNUdaenlmd21LT0NXQnFySjJBMzl2QzVQTjBCRlNEMG1OMWhtQU1PUmhkdlJrUXU4ZXZZUlZHZWwxNlYwSmdWV2ltbHNCU1pqQmprdXhHMXJ4MmdZbkFqMkRjWUhtYWwxNkRRZnRWZThrN0M3Y0VQNFhTdnl3cURCNlpxUUd6bzJNY3N3Q1pvMjhmZGpURjdaR1RleGlwSjRlaE1tRWFhajVIRjg?oc=5",
-      "source": "Google News",
-      "country": "Both",
-      "publishedAt": "2026-04-24 22:32:00",
-      "relevanceScore": 0.38
     }
   ]
 }
