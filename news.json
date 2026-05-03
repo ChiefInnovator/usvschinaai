@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-02T04:51:16.163468+00:00",
+  "lastUpdated": "2026-05-03T05:00:06.520598+00:00",
   "items": [
+    {
+      "id": "3793204a9a1dee7e",
+      "headline": "Meta Terminates Contract with Kenya After Workers Shared Intimate Videos Recorded by Smart Glasses",
+      "url": "https://www.breitbart.com/tech/2026/05/02/meta-terminates-contract-with-kenya-after-workers-shared-intimate-videos-recorded-by-smart-glasses/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-05-02 15:59:19",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "27b6befb5db59822",
+      "headline": "Huawei AI chip sales rise as US export controls limit Nvidia's China presence",
+      "url": "https://completeaitraining.com/news/huawei-ai-chip-sales-rise-as-us-export-controls-limit/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-05-02 14:42:48",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "3c874927b5934ecb",
+      "headline": "China pushes ahead with embodied AI despite software gaps, labor risks and high costs",
+      "url": "https://completeaitraining.com/news/china-pushes-ahead-with-embodied-ai-despite-software-gaps/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-05-02 11:12:46",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "922c944d375b9585",
+      "headline": "Kevin O'Leary Slams Bernie Sanders' China-Linked Forum, Says US Cannot Let Beijing Shape The Future Of AI: 'He's Way...",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52236121/kevin-oleary-slams-bernie-sanders-china-linked-forum-says-us-cannot-let-beijing-shape-the-future-of-",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-05-02 07:33:26",
+      "relevanceScore": 0.08
+    },
     {
       "id": "68b3a3c4c8a6384d",
       "headline": "AI Data Center Growth Is Now a Power Infrastructure Problem",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-04-26 14:39:57",
       "relevanceScore": 0.46
-    },
-    {
-      "id": "d070cbf9e3198720",
-      "headline": "US still ahead of China in AI as DeepSeek fails to narrow gap amid intense race: Report",
-      "url": "https://us.headtopics.com/news/us-still-ahead-of-china-in-ai-as-deepseek-fails-to-narrow-82692955",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-04-26 12:06:26",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "e97fca3f2f6e26e2",
-      "headline": "US State Department orders diplomats worldwide to warn allies about alleged AI theft by DeepSeek and other Chinese firms",
-      "url": "https://completeaitraining.com/news/us-state-department-orders-diplomats-worldwide-to-warn/",
-      "source": "Complete Ai Training",
-      "country": "Both",
-      "publishedAt": "2026-04-25 15:04:06",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "82502c16beca33b4",
-      "headline": "Discord Sleuths Gained Unauthorized Access to Anthropic’s Mythos",
-      "url": "https://www.wired.com/story/security-news-this-week-discord-sleuths-gained-unauthorized-access-to-anthropics-mythos/",
-      "source": "Wired",
-      "country": "Both",
-      "publishedAt": "2026-04-25 10:30:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "5a3ffbad42129fb9",
-      "headline": "Utility giant Duke Energy plans to spend industry record $103 billion on growth as data centers and affordability...",
-      "url": "https://fortune.com/2026/04/25/utility-giant-duke-energy-spend-industry-record-103-billion-growth-data-centers-affordability/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-04-25 08:02:00",
-      "relevanceScore": 0.3
     }
   ]
 }
