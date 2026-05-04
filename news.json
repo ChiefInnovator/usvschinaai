@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-03T05:00:06.520598+00:00",
+  "lastUpdated": "2026-05-04T04:59:41.289818+00:00",
   "items": [
+    {
+      "id": "004e022f41f8bdb4",
+      "headline": "As AI Growth Brings Data Center Boom, Texas Legislators Rush to Protect Constituents",
+      "url": "https://www.dailysignal.com/2026/05/03/as-ai-growth-brings-data-center-boom-texas-legislators-rush-to-protect-constituents/",
+      "source": "The Daily Signal",
+      "country": "US",
+      "publishedAt": "2026-05-03 16:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c21d3153ffc2dca0",
+      "headline": "How Google made peace with war",
+      "url": "https://www.businessinsider.com/google-made-peace-war-protests-trump-defense-tech-2026-5",
+      "source": "Business Insider",
+      "country": "US",
+      "publishedAt": "2026-05-03 08:17:01",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "77ed5258b02328fb",
+      "headline": "CHERY Advances in Embodied Intelligence: Intelligent Police Robots Empower Urban Traffic Governance",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-3-chery-advances-in-embodied-intelligence-intelligent-police-robots-empower-urban-traffic-governance",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-05-03 05:11:12",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "69b3482fee56b3f0",
+      "headline": "Built for Global Families, CHERY's New \"For Family\" Value Proposition Officially Unveiled",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-3-built-for-global-families-cherys-new-for-family-value-proposition-officially-unveiled",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-05-03 05:10:41",
+      "relevanceScore": 0.08
+    },
     {
       "id": "3793204a9a1dee7e",
       "headline": "Meta Terminates Contract with Kenya After Workers Shared Intimate Videos Recorded by Smart Glasses",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-04-27 13:05:43",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "a4ff712b1bdc6cd9",
-      "headline": "China Cancels Meta's $2B AI Acquisition",
-      "url": "https://www.newser.com/story/388033/china-cancels-metas-2b-ai-acquisition.html",
-      "source": "Newser",
-      "country": "Both",
-      "publishedAt": "2026-04-27 12:30:00",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "411be16ae82dda5d",
-      "headline": "The Download: DeepSeek’s latest AI breakthrough, and the race to build world models",
-      "url": "https://www.technologyreview.com/2026/04/27/1136438/the-download-deepseek-v4-ai-world-models/",
-      "source": "Technologyreview",
-      "country": "CN",
-      "publishedAt": "2026-04-27 12:10:00",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "686fa933842bd3f7",
-      "headline": "US Accuses China of ‘Industrial-Scale’ AI Theft Ahead of Trump’s Visit",
-      "url": "https://www.theepochtimes.com/china/us-accuses-china-of-industrial-scale-ai-theft-ahead-of-trumps-visit-6017466",
-      "source": "The Epoch Times",
-      "country": "CN",
-      "publishedAt": "2026-04-27 10:13:19",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "77801d6b75aeac0c",
-      "headline": "DeepSeek V4 Deploys 1.6T Model on Huawei Chips Amid US IP Claims",
-      "url": "https://thjournal.com/articles/deepseek-v4-huawei-us-ai-theft",
-      "source": "The Journal",
-      "country": "CN",
-      "publishedAt": "2026-04-26 14:39:57",
-      "relevanceScore": 0.46
     }
   ]
 }
