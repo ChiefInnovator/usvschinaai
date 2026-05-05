@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-05-04T04:59:41.289818+00:00",
+  "lastUpdated": "2026-05-05T04:50:45.510806+00:00",
   "items": [
+    {
+      "id": "523f9269dcb8e9b0",
+      "headline": "Chinese humanoids are leaving American robots in the dust",
+      "url": "https://www.fastcompany.com/91534069/chinese-humanoids-are-leaving-american-robots-in-the-dust",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-05-04 16:00:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "f257d656bf477afd",
+      "headline": "China blocks Meta AI deal over security concerns",
+      "url": "https://www.foxnews.com/tech/china-blocks-meta-ai-deal-over-security-concerns",
+      "source": "Fox News",
+      "country": "Both",
+      "publishedAt": "2026-05-04 15:08:06",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "725cb241d3af18fd",
+      "headline": "Meta defies gravity, open web is moribund versus Q1 2026 benchmarks",
+      "url": "https://roastbrief.us/meta-defies-gravity-open-web-is-moribund-versus-q1-2026-benchmarks/",
+      "source": "Roastbrief Us",
+      "country": "US",
+      "publishedAt": "2026-05-04 14:48:22",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "d69e25c04d248d9e",
+      "headline": "AI is wiping out entry-level jobs. Here’s how to surf the wave and not get crushed by it",
+      "url": "https://www.fastcompany.com/91521334/ai-is-wiping-out-entry-level-jobs-7-tips-to-ride-the-wave-instead-of-getting-knocked-down-by-it-ai-technology-entry-level-jobs",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-05-04 10:43:00",
+      "relevanceScore": 0.83
+    },
+    {
+      "id": "cf2ce5a640b70671",
+      "headline": "WT 360: NextGov/FCW’s Edward Graham on the world’s AI and robotics leadership race",
+      "url": "https://washingtontechnology.com/podcasts/2026/05/wt-360-nextgovfcws-edward-graham-worlds-ai-and-robotics-leadership-race/413269/",
+      "source": "Washingtontechnology",
+      "country": "Both",
+      "publishedAt": "2026-05-04 10:00:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "004e022f41f8bdb4",
       "headline": "As AI Growth Brings Data Center Boom, Texas Legislators Rush to Protect Constituents",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-04-29 13:57:16",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "775c3a19493f79ee",
-      "headline": "‘He wanted to be CEO’: Early OpenAI VC Vinod Khosla says Elon Musk’s bid for control led to the Sam Altman feud and...",
-      "url": "https://fortune.com/2026/04/28/vinod-khosla-says-elon-musk-wanted-to-be-openai-ceo-sam-altman-trial/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-04-28 16:11:25",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "6e1b865af7996cc9",
-      "headline": "Google launches Ask YouTube, a conversational AI search \"experiment\" that generates pages with videos and text...",
-      "url": "http://mediagazer.com/260428/p6",
-      "source": "Mediagazer",
-      "country": "US",
-      "publishedAt": "2026-04-28 12:10:01",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "b19dc1ac28297ea5",
-      "headline": "Liz Kendall talks up work with ‘middle power nations’ on sovereign tech",
-      "url": "https://www.computerweekly.com/news/366642532/Liz-Kendall-talks-up-work-with-middle-power-nations-on-sovereign-tech",
-      "source": "Computerweekly News",
-      "country": "CN",
-      "publishedAt": "2026-04-28 11:00:00",
-      "relevanceScore": 0.32
-    },
-    {
-      "id": "39d0ae4a309a1f8d",
-      "headline": "China blocks Meta’s $2.5 billion acquisition of Singapore-based AI start-up Manus",
-      "url": "https://sharecaster.com/china-blocks-metas-2-5-billion-acquisition-of-singapore-based-ai-start-up-manus/",
-      "source": "Share Caster",
-      "country": "Both",
-      "publishedAt": "2026-04-28 01:40:12",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "798bb2d8ff3ab904",
-      "headline": "Startup News: China Blocks Meta’s $2B Acquisition of AI Startup Manus",
-      "url": "https://www.analyticsinsight.net/news/startup-news-china-blocks-metas-2b-acquisition-of-ai-startup-manus",
-      "source": "Analytics And Insight",
-      "country": "Both",
-      "publishedAt": "2026-04-27 13:05:43",
-      "relevanceScore": 0.15
     }
   ]
 }
