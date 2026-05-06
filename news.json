@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-05T04:50:45.510806+00:00",
+  "lastUpdated": "2026-05-06T04:55:52.288148+00:00",
   "items": [
+    {
+      "id": "c2b5d30784b58741",
+      "headline": "Apple reportedly seeks partnership with Intel and Samsung to build chips in the US",
+      "url": "https://www.neowin.net/news/apple-reportedly-seeks-partnership-with-intel-and-samsung-to-build-chips-in-the-us/",
+      "source": "Neowin Net",
+      "country": "US",
+      "publishedAt": "2026-05-05 16:16:01",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "3e32d9329c1c1e61",
+      "headline": "Microsoft, Google, xAI agree to share AI models with White House for security reviews",
+      "url": "https://nypost.com/2026/05/05/business/microsoft-google-xai-agree-to-share-ai-models-with-white-house-for-security-reviews/",
+      "source": "New York Post",
+      "country": "US",
+      "publishedAt": "2026-05-05 15:37:41",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "fa99bb5dbf0cc5c0",
+      "headline": "How Much Oversight of AI Does the Government Need to Ensure Our Safety?",
+      "url": "https://pjmedia.com/rick-moran/2026/05/05/how-much-oversight-of-ai-does-the-government-need-to-ensure-our-safety-n4952515",
+      "source": "Pjmedia.com",
+      "country": "US",
+      "publishedAt": "2026-05-05 13:31:00",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "ef62842eb7b17d4e",
+      "headline": "Tim Cook is leaving John Ternus with an AI imbroglio",
+      "url": "https://www.macworld.com/article/3131239/john-ternuss-first-challenge-navigating-the-ai-enthusiasm-gap.html",
+      "source": "Macworld",
+      "country": "Both",
+      "publishedAt": "2026-05-05 11:24:19",
+      "relevanceScore": 0.15
+    },
     {
       "id": "523f9269dcb8e9b0",
       "headline": "Chinese humanoids are leaving American robots in the dust",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-05-01 12:30:37",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "d3bc18113bc62862",
-      "headline": "Anthropic's new Claude Security tool scans your codebase for flaws - and helps you decide what to fix first",
-      "url": "https://www.zdnet.com/article/anthropic-claude-security-ai-tool-scans-codebase-for-flaws/",
-      "source": "Zdnet",
-      "country": "US",
-      "publishedAt": "2026-04-30 17:00:08",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "c2c6fb27c7e2a2d9",
-      "headline": "'Speechless': Google AI Researcher 'Incredibly Ashamed' by Company's Deal with Pentagon",
-      "url": "https://www.breitbart.com/tech/2026/04/30/speechless-google-ai-researchers-incredibly-ashamed-by-companys-deal-with-pentagon/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-04-30 16:02:36",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "2bacd91dcaac7dcd",
-      "headline": "AI infrastructure spending is the largest non-war project in human history",
-      "url": "https://investinglive.com/news/ai-infrastructure-spending-is-the-largest-non-war-project-in-human-history-20260430/",
-      "source": "Forexlive",
-      "country": "Both",
-      "publishedAt": "2026-04-30 15:35:46",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "ede98c51fbbf3c42",
-      "headline": "Larry’s risky business",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/920378/oracle-openai-datacenter-buildout",
-      "source": "The Verge",
-      "country": "US",
-      "publishedAt": "2026-04-29 13:57:16",
-      "relevanceScore": 0.3
     }
   ]
 }
