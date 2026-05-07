@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-06T04:55:52.288148+00:00",
+  "lastUpdated": "2026-05-07T04:56:14.781902+00:00",
   "items": [
+    {
+      "id": "bfcd7441a93fce3e",
+      "headline": "Why China’s feverish use of AI tools could shape how the tech is used globally",
+      "url": "https://www.fastcompany.com/91537564/why-chinas-feverish-ai-use-could-shape-how-tech-used-globally",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-05-06 16:13:01",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "8c4d1d78ef65ad6a",
+      "headline": "Japanese lawmakers urge U.S. to focus on AI, critical minerals pacts",
+      "url": "https://www.upi.com/Top_News/World-News/2026/05/06/japan-pacts-AI-critical-metals-trump/7311778016510/",
+      "source": "Upi",
+      "country": "US",
+      "publishedAt": "2026-05-06 13:47:33",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "0fd1953db78da911",
+      "headline": "Autonomous vehicles run into trouble in world's largest AV market",
+      "url": "https://www.thestreet.com/technology/china-pauses-av-licenses-after-mass-outages",
+      "source": "Thestreet",
+      "country": "CN",
+      "publishedAt": "2026-05-06 13:33:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "c2b5d30784b58741",
       "headline": "Apple reportedly seeks partnership with Intel and Samsung to build chips in the US",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-05-02 07:33:26",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "68b3a3c4c8a6384d",
-      "headline": "AI Data Center Growth Is Now a Power Infrastructure Problem",
-      "url": "https://www.powermag.com/ai-data-center-growth-is-now-a-power-infrastructure-problem/",
-      "source": "Power Magazine",
-      "country": "US",
-      "publishedAt": "2026-05-01 13:46:48",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "01e66f0cdc24d66f",
-      "headline": "Huawei Is The Biggest Winner In China’s AI Market After NVIDIA Pullout, AI Share To Reach 60% This Year",
-      "url": "https://wccftech.com/huawei-biggest-winner-in-china-ai-market-after-nvidia-pullout-60-percent-ai-share-2026/",
-      "source": "Wccftech",
-      "country": "CN",
-      "publishedAt": "2026-05-01 12:40:17",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "2580a364f78ea1c2",
-      "headline": "Startup Funding Shift in 2026: Why Investors Prefer Deep Tech Over Apps",
-      "url": "https://industrywired.com/startups/startup-funding-shift-in-2026-why-investors-prefer-deep-tech-over-apps-11786507",
-      "source": "Industry Wired",
-      "country": "CN",
-      "publishedAt": "2026-05-01 12:30:37",
-      "relevanceScore": 0.16
     }
   ]
 }
