@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-07T04:56:14.781902+00:00",
+  "lastUpdated": "2026-05-08T05:07:40.070923+00:00",
   "items": [
+    {
+      "id": "5a00e389feb30555",
+      "headline": "Anthropic’s SpaceX compute deal comes as AI data center backlash grows—fueled by both real grievances and conspiracy...",
+      "url": "https://fortune.com/2026/05/07/big-tech-will-spend-nearly-700-billion-on-ai-this-year-no-one-knows-where-the-buildout-ends/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-05-07 16:42:49",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "5df73286ab109f97",
+      "headline": "Administration Mulls AI Regulation Executive Orders, but Substance in Flux",
+      "url": "https://www.dailysignal.com/2026/05/07/trump-mulls-ai-regulation-orders/",
+      "source": "The Daily Signal",
+      "country": "US",
+      "publishedAt": "2026-05-07 14:54:14",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "b844851afd646bd3",
+      "headline": "Semiconductor Memory Market to Reach USD 232.9 Billion by 2031, Driven by AI and Edge Computing Demand | Valuates...",
+      "url": "https://www.prnewswire.com/news-releases/semiconductor-memory-market-to-reach-usd-232-9-billion-by-2031--driven-by-ai-and-edge-computing-demand--valuates-reports-302765619.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-05-07 14:16:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "3e6007c90a30c78e",
+      "headline": "New wave of smart tourism gains traction during May Day holiday",
+      "url": "http://beijingbulletin.com/news/279036633/new-wave-of-smart-tourism-gains-traction-during-may-day-holiday",
+      "source": "Beijingbulletin",
+      "country": "CN",
+      "publishedAt": "2026-05-07 13:15:42",
+      "relevanceScore": 0.08
+    },
     {
       "id": "bfcd7441a93fce3e",
       "headline": "Why China’s feverish use of AI tools could shape how the tech is used globally",
@@ -143,42 +179,6 @@
       "source": "Financialcontent",
       "country": "CN",
       "publishedAt": "2026-05-03 05:10:41",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "3793204a9a1dee7e",
-      "headline": "Meta Terminates Contract with Kenya After Workers Shared Intimate Videos Recorded by Smart Glasses",
-      "url": "https://www.breitbart.com/tech/2026/05/02/meta-terminates-contract-with-kenya-after-workers-shared-intimate-videos-recorded-by-smart-glasses/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-05-02 15:59:19",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "27b6befb5db59822",
-      "headline": "Huawei AI chip sales rise as US export controls limit Nvidia's China presence",
-      "url": "https://completeaitraining.com/news/huawei-ai-chip-sales-rise-as-us-export-controls-limit/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-05-02 14:42:48",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "3c874927b5934ecb",
-      "headline": "China pushes ahead with embodied AI despite software gaps, labor risks and high costs",
-      "url": "https://completeaitraining.com/news/china-pushes-ahead-with-embodied-ai-despite-software-gaps/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-05-02 11:12:46",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "922c944d375b9585",
-      "headline": "Kevin O'Leary Slams Bernie Sanders' China-Linked Forum, Says US Cannot Let Beijing Shape The Future Of AI: 'He's Way...",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52236121/kevin-oleary-slams-bernie-sanders-china-linked-forum-says-us-cannot-let-beijing-shape-the-future-of-",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-05-02 07:33:26",
       "relevanceScore": 0.08
     }
   ]
