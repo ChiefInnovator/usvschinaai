@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-08T05:07:40.070923+00:00",
+  "lastUpdated": "2026-05-09T05:10:43.495965+00:00",
   "items": [
+    {
+      "id": "d541b25268311b51",
+      "headline": "BigEndian Raises $6M to Build Secure AI Vision Chips, Boost India’s Edge AI Push",
+      "url": "https://www.analyticsinsight.net/news/bigendian-raises-6m-to-build-secure-ai-vision-chips-boost-indias-edge-ai-push",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-05-08 14:45:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "1bc7b3c03a91c9a8",
+      "headline": "Artificial Intelligence And The End Of Digital Security As We Know It",
+      "url": "https://www.forbes.com/councils/forbestechcouncil/2026/05/08/artificial-intelligence-and-the-end-of-digital-security-as-we-know-it/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-05-08 12:30:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5edece6f5506b7b8",
+      "headline": "Fox News AI Newsletter: How Disney fans will experience AI",
+      "url": "https://www.foxnews.com/tech/ai-newsletter-disney-fans-experience-ai",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-05-08 12:13:21",
+      "relevanceScore": 0.08
+    },
     {
       "id": "5a00e389feb30555",
       "headline": "Anthropic’s SpaceX compute deal comes as AI data center backlash grows—fueled by both real grievances and conspiracy...",
@@ -152,33 +179,6 @@
       "source": "The Daily Signal",
       "country": "US",
       "publishedAt": "2026-05-03 16:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c21d3153ffc2dca0",
-      "headline": "How Google made peace with war",
-      "url": "https://www.businessinsider.com/google-made-peace-war-protests-trump-defense-tech-2026-5",
-      "source": "Business Insider",
-      "country": "US",
-      "publishedAt": "2026-05-03 08:17:01",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "77ed5258b02328fb",
-      "headline": "CHERY Advances in Embodied Intelligence: Intelligent Police Robots Empower Urban Traffic Governance",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-3-chery-advances-in-embodied-intelligence-intelligent-police-robots-empower-urban-traffic-governance",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-05-03 05:11:12",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "69b3482fee56b3f0",
-      "headline": "Built for Global Families, CHERY's New \"For Family\" Value Proposition Officially Unveiled",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-3-built-for-global-families-cherys-new-for-family-value-proposition-officially-unveiled",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-05-03 05:10:41",
       "relevanceScore": 0.08
     }
   ]
