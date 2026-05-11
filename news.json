@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-05-10T05:20:21.136114+00:00",
+  "lastUpdated": "2026-05-11T05:27:09.113393+00:00",
   "items": [
+    {
+      "id": "ad231043595f6927",
+      "headline": "Trump White House reverses course on AI safety as powerful new model prompts calls for government vetting",
+      "url": "https://completeaitraining.com/news/trump-white-house-reverses-course-on-ai-safety-as-powerful/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-05-10 14:24:01",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "334b7389e2432c2a",
+      "headline": "EXEED Advances on Two Fronts at Auto China 2026: Energy Innovation and Robotics Breakthroughs",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-10-exeed-advances-on-two-fronts-at-auto-china-2026-energy-innovation-and-robotics-breakthroughs",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-05-10 14:01:03",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7618ae88620c14ed",
+      "headline": "Kimi AI Features & Capabilities: Full Review vs ChatGPT (2026)",
+      "url": "https://alltechmagazine.com/kimi-ai-features-capabilities-review/",
+      "source": "All Tech Magazine",
+      "country": "US",
+      "publishedAt": "2026-05-10 11:09:06",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "fadde29a45670921",
+      "headline": "New Breakthrough in Embodied Intelligence: X-Humanoid Wise KaiWu Agent Gives Robots Real Awareness and Real Capability",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-10-new-breakthrough-in-embodied-intelligence-x-humanoid-wise-kaiwu-agent-gives-robots-real-awareness-and-real-capability",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-05-10 03:41:43",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "36e096891a65116b",
+      "headline": "Retracted AI Education Study Exposes Cracks in Evidence for Classroom Chatbots",
+      "url": "https://www.webpronews.com/retracted-ai-education-study-exposes-cracks-in-evidence-for-classroom-chatbots/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-05-09 21:35:15",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "41a3dd13239cc4e5",
+      "headline": "Nvidia Faces New Competition from Cerebras in 2026 AI Chip Market",
+      "url": "https://pc-tablet.com/nvidia-faces-new-competition-from-cerebras-in-2026-ai-chip-market/191121/",
+      "source": "Pc-tablet",
+      "country": "US",
+      "publishedAt": "2026-05-09 17:33:04",
+      "relevanceScore": 0.08
+    },
     {
       "id": "46d964180d62e3da",
       "headline": "NVIDIA’s AI Chips Reached China’s Alibaba Through Thailand, As US Indicts Supermicro Execs In $2.5 Billion Smuggling...",
@@ -126,60 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-05 16:16:01",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "3e32d9329c1c1e61",
-      "headline": "Microsoft, Google, xAI agree to share AI models with White House for security reviews",
-      "url": "https://nypost.com/2026/05/05/business/microsoft-google-xai-agree-to-share-ai-models-with-white-house-for-security-reviews/",
-      "source": "New York Post",
-      "country": "US",
-      "publishedAt": "2026-05-05 15:37:41",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "fa99bb5dbf0cc5c0",
-      "headline": "How Much Oversight of AI Does the Government Need to Ensure Our Safety?",
-      "url": "https://pjmedia.com/rick-moran/2026/05/05/how-much-oversight-of-ai-does-the-government-need-to-ensure-our-safety-n4952515",
-      "source": "Pjmedia.com",
-      "country": "US",
-      "publishedAt": "2026-05-05 13:31:00",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "ef62842eb7b17d4e",
-      "headline": "Tim Cook is leaving John Ternus with an AI imbroglio",
-      "url": "https://www.macworld.com/article/3131239/john-ternuss-first-challenge-navigating-the-ai-enthusiasm-gap.html",
-      "source": "Macworld",
-      "country": "Both",
-      "publishedAt": "2026-05-05 11:24:19",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "523f9269dcb8e9b0",
-      "headline": "Chinese humanoids are leaving American robots in the dust",
-      "url": "https://www.fastcompany.com/91534069/chinese-humanoids-are-leaving-american-robots-in-the-dust",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-05-04 16:00:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "f257d656bf477afd",
-      "headline": "China blocks Meta AI deal over security concerns",
-      "url": "https://www.foxnews.com/tech/china-blocks-meta-ai-deal-over-security-concerns",
-      "source": "Fox News",
-      "country": "Both",
-      "publishedAt": "2026-05-04 15:08:06",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "725cb241d3af18fd",
-      "headline": "Meta defies gravity, open web is moribund versus Q1 2026 benchmarks",
-      "url": "https://roastbrief.us/meta-defies-gravity-open-web-is-moribund-versus-q1-2026-benchmarks/",
-      "source": "Roastbrief Us",
-      "country": "US",
-      "publishedAt": "2026-05-04 14:48:22",
-      "relevanceScore": 0.3
     }
   ]
 }
