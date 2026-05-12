@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-11T05:27:09.113393+00:00",
+  "lastUpdated": "2026-05-12T05:13:56.219916+00:00",
   "items": [
+    {
+      "id": "66d89fe0393f2781",
+      "headline": "The $50 Billion Dragon: Beijing’s State-Backed Takeover of DeepSeek",
+      "url": "https://www.abacusnews.com/the-50-billion-dragon-beijings-state-backed-takeover-of-deepseek/",
+      "source": "Abacus News",
+      "country": "CN",
+      "publishedAt": "2026-05-11 15:24:37",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "8eca6a3c7d33e0c7",
+      "headline": "‘It’s here’: Google issues dire warning after catching hackers using AI to break into computers",
+      "url": "https://fortune.com/2026/05/11/google-catches-hackers-cybersecurity-warning-ai-anthropic-mythos/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-05-11 14:50:56",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "f7d476fdaebbf402",
+      "headline": "Google disrupts hackers using AI to exploit an unknown weakness in a company's digital defense",
+      "url": "https://www.actionnewsjax.com/news/business/google-disrupts/X3WJKHR6IE6FFNCZVLVXJBYSLQ/",
+      "source": "Action News Jax",
+      "country": "US",
+      "publishedAt": "2026-05-11 13:42:39",
+      "relevanceScore": 0.23
+    },
     {
       "id": "ad231043595f6927",
       "headline": "Trump White House reverses course on AI safety as powerful new model prompts calls for government vetting",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-05-06 16:13:01",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "8c4d1d78ef65ad6a",
-      "headline": "Japanese lawmakers urge U.S. to focus on AI, critical minerals pacts",
-      "url": "https://www.upi.com/Top_News/World-News/2026/05/06/japan-pacts-AI-critical-metals-trump/7311778016510/",
-      "source": "Upi",
-      "country": "US",
-      "publishedAt": "2026-05-06 13:47:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0fd1953db78da911",
-      "headline": "Autonomous vehicles run into trouble in world's largest AV market",
-      "url": "https://www.thestreet.com/technology/china-pauses-av-licenses-after-mass-outages",
-      "source": "Thestreet",
-      "country": "CN",
-      "publishedAt": "2026-05-06 13:33:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c2b5d30784b58741",
-      "headline": "Apple reportedly seeks partnership with Intel and Samsung to build chips in the US",
-      "url": "https://www.neowin.net/news/apple-reportedly-seeks-partnership-with-intel-and-samsung-to-build-chips-in-the-us/",
-      "source": "Neowin Net",
-      "country": "US",
-      "publishedAt": "2026-05-05 16:16:01",
-      "relevanceScore": 0.08
     }
   ]
 }
