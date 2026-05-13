@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-12T05:13:56.219916+00:00",
+  "lastUpdated": "2026-05-13T05:19:00.308421+00:00",
   "items": [
+    {
+      "id": "623a52d6096c2700",
+      "headline": "Why Complex Projects Fail: Best Practices Are Not Enough, System Thinking Gives Your Team the Edge",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-5-12-why-complex-projects-fail-best-practices-are-not-enough-system-thinking-gives-your-team-the-edge",
+      "source": "Financialcontent",
+      "country": "US",
+      "publishedAt": "2026-05-12 17:17:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b9fbb1ed71917122",
+      "headline": "NVIDIA’s Vera CPU Locks In CoreWeave, Meta, Oracle and Alibaba as Early Buyers, Opening a Multi-Billion-Dollar Front...",
+      "url": "https://wccftech.com/nvidia-vera-cpu-locks-in-coreweave-meta-oracle-and-alibaba-as-early-buyers/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-05-12 14:45:42",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "c6b84b32507d0530",
+      "headline": "Does Xi Need Trump?",
+      "url": "https://reason.com/2026/05/12/does-xi-need-trump/",
+      "source": "Reason Magazine",
+      "country": "CN",
+      "publishedAt": "2026-05-12 13:30:42",
+      "relevanceScore": 0.08
+    },
     {
       "id": "66d89fe0393f2781",
       "headline": "The $50 Billion Dragon: Beijing’s State-Backed Takeover of DeepSeek",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-07 14:54:14",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "b844851afd646bd3",
-      "headline": "Semiconductor Memory Market to Reach USD 232.9 Billion by 2031, Driven by AI and Edge Computing Demand | Valuates...",
-      "url": "https://www.prnewswire.com/news-releases/semiconductor-memory-market-to-reach-usd-232-9-billion-by-2031--driven-by-ai-and-edge-computing-demand--valuates-reports-302765619.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-05-07 14:16:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "3e6007c90a30c78e",
-      "headline": "New wave of smart tourism gains traction during May Day holiday",
-      "url": "http://beijingbulletin.com/news/279036633/new-wave-of-smart-tourism-gains-traction-during-may-day-holiday",
-      "source": "Beijingbulletin",
-      "country": "CN",
-      "publishedAt": "2026-05-07 13:15:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "bfcd7441a93fce3e",
-      "headline": "Why China’s feverish use of AI tools could shape how the tech is used globally",
-      "url": "https://www.fastcompany.com/91537564/why-chinas-feverish-ai-use-could-shape-how-tech-used-globally",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-05-06 16:13:01",
-      "relevanceScore": 1.0
     }
   ]
 }
