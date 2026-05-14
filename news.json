@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-05-13T05:19:00.308421+00:00",
+  "lastUpdated": "2026-05-14T05:18:19.687998+00:00",
   "items": [
+    {
+      "id": "2fd591c6386c29dd",
+      "headline": "Chinese court awards compensation to sacked worker replaced by AI",
+      "url": "https://www.theguardian.com/world/2026/may/13/china-court-awards-compensation-sacked-worker-replaced-by-ai",
+      "source": "The Guardian",
+      "country": "CN",
+      "publishedAt": "2026-05-13 14:58:57",
+      "relevanceScore": 0.08
+    },
     {
       "id": "623a52d6096c2700",
       "headline": "Why Complex Projects Fail: Best Practices Are Not Enough, System Thinking Gives Your Team the Edge",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-07 16:42:49",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "5df73286ab109f97",
-      "headline": "Administration Mulls AI Regulation Executive Orders, but Substance in Flux",
-      "url": "https://www.dailysignal.com/2026/05/07/trump-mulls-ai-regulation-orders/",
-      "source": "The Daily Signal",
-      "country": "US",
-      "publishedAt": "2026-05-07 14:54:14",
-      "relevanceScore": 0.16
     }
   ]
 }
