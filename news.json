@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-14T05:18:19.687998+00:00",
+  "lastUpdated": "2026-05-15T05:22:27.650400+00:00",
   "items": [
+    {
+      "id": "52dde4b8197fe78c",
+      "headline": "Elon Musk’s Attempts at AI Are Falling Apart",
+      "url": "https://futurism.com/future-society/elon-musk-ai-falling-apart",
+      "source": "Futurism",
+      "country": "US",
+      "publishedAt": "2026-05-14 14:04:57",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "10e7c4522eee1969",
+      "headline": "Alibaba Is Morphing Into A Microsoft‐Amazon‐Nvidia Mashup As China's AI Wave Accelerates",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52562131/alibaba-is-morphing-into-a-microsoft%E2%80%91amazon%E2%80%91nvidia-mashup-as-chinas-ai-wave-accelerates",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-05-14 13:57:27",
+      "relevanceScore": 0.39
+    },
+    {
+      "id": "e39f4afb92612d3d",
+      "headline": "Yiren Digital Advances Transition to AI-Native, Multi-Industry Operating Model with Enterprise AI Architecture Rollout",
+      "url": "https://en.prnasia.com/story/533059-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "Both",
+      "publishedAt": "2026-05-14 13:00:00",
+      "relevanceScore": 0.24
+    },
     {
       "id": "2fd591c6386c29dd",
       "headline": "Chinese court awards compensation to sacked worker replaced by AI",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-08 14:45:00",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "1bc7b3c03a91c9a8",
-      "headline": "Artificial Intelligence And The End Of Digital Security As We Know It",
-      "url": "https://www.forbes.com/councils/forbestechcouncil/2026/05/08/artificial-intelligence-and-the-end-of-digital-security-as-we-know-it/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-05-08 12:30:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5edece6f5506b7b8",
-      "headline": "Fox News AI Newsletter: How Disney fans will experience AI",
-      "url": "https://www.foxnews.com/tech/ai-newsletter-disney-fans-experience-ai",
-      "source": "Fox News",
-      "country": "US",
-      "publishedAt": "2026-05-08 12:13:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5a00e389feb30555",
-      "headline": "Anthropic’s SpaceX compute deal comes as AI data center backlash grows—fueled by both real grievances and conspiracy...",
-      "url": "https://fortune.com/2026/05/07/big-tech-will-spend-nearly-700-billion-on-ai-this-year-no-one-knows-where-the-buildout-ends/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-05-07 16:42:49",
-      "relevanceScore": 0.15
     }
   ]
 }
