@@ -1,6 +1,69 @@
 {
-  "lastUpdated": "2026-05-15T05:22:27.650400+00:00",
+  "lastUpdated": "2026-05-16T05:11:54.030701+00:00",
   "items": [
+    {
+      "id": "b40601c0324171df",
+      "headline": "Despite Donald Trump and Jensen Huang flying out to the country, China has not yet approved the sale of Nvidia AI chips",
+      "url": "https://www.pcgamer.com/software/ai/despite-donald-trump-and-jensen-huang-flying-out-to-the-country-china-has-not-yet-approved-the-sale-of-nvidia-ai-chips/",
+      "source": "Pc Gamer",
+      "country": "CN",
+      "publishedAt": "2026-05-15 15:51:45",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "af68cc3e163138c6",
+      "headline": "I really hope you weren't considering a GPU upgrade this year, as Nvidia may raise the price of the already pricey...",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/i-really-hope-you-werent-considering-a-gpu-upgrade-this-year-as-nvidia-may-raise-the-price-of-the-already-pricey-rtx-5090-by-as-much-as-usd300/",
+      "source": "Pc Gamer",
+      "country": "US",
+      "publishedAt": "2026-05-15 15:49:54",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "604cbf618a795eb4",
+      "headline": "Japan's humanoid robot uses memory, vision for human-like dexterity",
+      "url": "https://us.headtopics.com/news/japan-s-humanoid-robot-uses-memory-vision-for-human-like-83394501",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-05-15 14:06:36",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b450f282dbc1f33c",
+      "headline": "Watch humanoid robot use vision and memory to sort objects in dexterity showcase",
+      "url": "https://interestingengineering.com/ai-robotics/new-model-robot-humanlike-dexterity",
+      "source": "Interesting Engineering",
+      "country": "US",
+      "publishedAt": "2026-05-15 13:19:26",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "a6735339dfb0576a",
+      "headline": "Apple's U.S. chip plan gains steam thanks to $20B TSMC investment",
+      "url": "https://appleinsider.com/articles/26/05/15/apples-us-chip-plan-gains-steam-thanks-to-20b-tsmc-investment",
+      "source": "Apple Insider",
+      "country": "US",
+      "publishedAt": "2026-05-15 12:53:56",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "be5f52eb86f5922b",
+      "headline": "Micron’s CEO Joins Trump-Xi Talks as $25 Billion AI Bet Hinges on Memory Supply",
+      "url": "https://www.newscase.com/microns-ceo-joins-trump-xi-talks-as-25-billion-ai-bet-hinges-on-memory-supply/",
+      "source": "Newscase",
+      "country": "CN",
+      "publishedAt": "2026-05-15 12:51:04",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7efb5721aa416451",
+      "headline": "Jaguar Land Rover profit slumps after cyber attack",
+      "url": "https://www.computerweekly.com/news/366643119/Jaguar-Land-Rover-profit-slumps-after-cyber-attack",
+      "source": "Computerweekly News",
+      "country": "CN",
+      "publishedAt": "2026-05-15 11:15:00",
+      "relevanceScore": 0.24
+    },
     {
       "id": "52dde4b8197fe78c",
       "headline": "Elon Musk’s Attempts at AI Are Falling Apart",
@@ -117,69 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-10 11:09:06",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "fadde29a45670921",
-      "headline": "New Breakthrough in Embodied Intelligence: X-Humanoid Wise KaiWu Agent Gives Robots Real Awareness and Real Capability",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-10-new-breakthrough-in-embodied-intelligence-x-humanoid-wise-kaiwu-agent-gives-robots-real-awareness-and-real-capability",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-05-10 03:41:43",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "36e096891a65116b",
-      "headline": "Retracted AI Education Study Exposes Cracks in Evidence for Classroom Chatbots",
-      "url": "https://www.webpronews.com/retracted-ai-education-study-exposes-cracks-in-evidence-for-classroom-chatbots/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-05-09 21:35:15",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "41a3dd13239cc4e5",
-      "headline": "Nvidia Faces New Competition from Cerebras in 2026 AI Chip Market",
-      "url": "https://pc-tablet.com/nvidia-faces-new-competition-from-cerebras-in-2026-ai-chip-market/191121/",
-      "source": "Pc-tablet",
-      "country": "US",
-      "publishedAt": "2026-05-09 17:33:04",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "46d964180d62e3da",
-      "headline": "NVIDIA’s AI Chips Reached China’s Alibaba Through Thailand, As US Indicts Supermicro Execs In $2.5 Billion Smuggling...",
-      "url": "https://wccftech.com/nvidia-ai-chips-reached-china-alibaba-through-thailand-smuggling-ring/",
-      "source": "Wccftech",
-      "country": "CN",
-      "publishedAt": "2026-05-09 15:35:22",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "2b1373f4d8bd19bf",
-      "headline": "US, EU and China profoundly split on AI intimacy",
-      "url": "https://asiatimes.com/2026/05/us-eu-and-china-profoundly-split-on-ai-intimacy/",
-      "source": "Asia Times",
-      "country": "Both",
-      "publishedAt": "2026-05-09 02:55:23",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "2155685ba655e9ee",
-      "headline": "Chinese AI Models Match ChatGPT in Flattery as Sycophancy Spreads Across Borders",
-      "url": "https://www.webpronews.com/chinese-ai-models-match-chatgpt-in-flattery-as-sycophancy-spreads-across-borders/",
-      "source": "Webpronews",
-      "country": "Both",
-      "publishedAt": "2026-05-08 21:20:09",
-      "relevanceScore": 0.83
-    },
-    {
-      "id": "d541b25268311b51",
-      "headline": "BigEndian Raises $6M to Build Secure AI Vision Chips, Boost India’s Edge AI Push",
-      "url": "https://www.analyticsinsight.net/news/bigendian-raises-6m-to-build-secure-ai-vision-chips-boost-indias-edge-ai-push",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-05-08 14:45:00",
-      "relevanceScore": 0.16
     }
   ]
 }
