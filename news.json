@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-16T05:11:54.030701+00:00",
+  "lastUpdated": "2026-05-17T05:25:05.961163+00:00",
   "items": [
+    {
+      "id": "b5a2364c3d913d34",
+      "headline": "“Strongest Embodied Brain” Crowned with Double Championships! X-Humanoid’s Pelican-Unify 1.0 Ranked World No. 1,...",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-16-strongest-embodied-brain-crowned-with-double-championships-x-humanoids-pelican-unify-10-ranked-world-no-1-entering-the-top-tier-of-embodied-intelligence",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-05-16 14:56:05",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "b9a5029f301274cf",
+      "headline": "We watched social media concentrate. The same thing is happening in AI, only at a deeper layer",
+      "url": "https://fortune.com/2026/05/16/ai-compute-concentration-decentralization-liberman-brothers/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-05-16 13:30:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "5808daf16550ed1b",
+      "headline": "Commentary: Surrendering biotech lead to china",
+      "url": "https://www.davisenterprise.com/forum/commentary-surrendering-biotech-lead-to-china/article_701e7783-7909-4e8e-b938-5ed863120962.html",
+      "source": "Davis Enterprise",
+      "country": "Both",
+      "publishedAt": "2026-05-16 13:05:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "8e9fa75d4306b877",
+      "headline": "The Vatican has said a lot about artificial intelligence. A primer ahead of the pope's encyclical",
+      "url": "https://www.clickorlando.com/news/world/2026/05/16/the-vatican-has-said-a-lot-about-artificial-intelligence-a-primer-ahead-of-the-popes-encyclical/",
+      "source": "Wkmg",
+      "country": "US",
+      "publishedAt": "2026-05-16 04:06:05",
+      "relevanceScore": 0.08
+    },
     {
       "id": "b40601c0324171df",
       "headline": "Despite Donald Trump and Jensen Huang flying out to the country, China has not yet approved the sale of Nvidia AI chips",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-11 14:50:56",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "f7d476fdaebbf402",
-      "headline": "Google disrupts hackers using AI to exploit an unknown weakness in a company's digital defense",
-      "url": "https://www.actionnewsjax.com/news/business/google-disrupts/X3WJKHR6IE6FFNCZVLVXJBYSLQ/",
-      "source": "Action News Jax",
-      "country": "US",
-      "publishedAt": "2026-05-11 13:42:39",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "ad231043595f6927",
-      "headline": "Trump White House reverses course on AI safety as powerful new model prompts calls for government vetting",
-      "url": "https://completeaitraining.com/news/trump-white-house-reverses-course-on-ai-safety-as-powerful/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-05-10 14:24:01",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "334b7389e2432c2a",
-      "headline": "EXEED Advances on Two Fronts at Auto China 2026: Energy Innovation and Robotics Breakthroughs",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-10-exeed-advances-on-two-fronts-at-auto-china-2026-energy-innovation-and-robotics-breakthroughs",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-05-10 14:01:03",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7618ae88620c14ed",
-      "headline": "Kimi AI Features & Capabilities: Full Review vs ChatGPT (2026)",
-      "url": "https://alltechmagazine.com/kimi-ai-features-capabilities-review/",
-      "source": "All Tech Magazine",
-      "country": "US",
-      "publishedAt": "2026-05-10 11:09:06",
-      "relevanceScore": 0.3
     }
   ]
 }
