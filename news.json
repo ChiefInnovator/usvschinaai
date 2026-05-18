@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-05-17T05:25:05.961163+00:00",
+  "lastUpdated": "2026-05-18T05:28:46.026307+00:00",
   "items": [
+    {
+      "id": "9cd05b4df1a9924a",
+      "headline": "Iran Aiming to Charge Tech Giants for Subsea Cable Usage",
+      "url": "https://us.headtopics.com/news/iran-aiming-to-charge-tech-giants-for-subsea-cable-usage-83448659",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-05-17 10:06:07",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "e5b1fea75158bede",
+      "headline": "AI Bubble Fears among US Investors",
+      "url": "https://us.headtopics.com/news/ai-bubble-fears-among-us-investors-83440757",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-05-17 02:35:49",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "329dedbcbdc6804c",
+      "headline": "Sen. David McCormick tours AI-powered biotech labs at Penn to promote AI and federal funding admit NSF turmoil",
+      "url": "https://whyy.org/articles/david-mccormick-pennsylvania-university-biotech-artificial-intelligence/",
+      "source": "Whyy",
+      "country": "US",
+      "publishedAt": "2026-05-16 21:05:05",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "106fe9c8c3d0e005",
+      "headline": "Artificial Intelligence – A deadly new arms race",
+      "url": "https://socialistworker.co.uk/in-depth/artificial-intelligence-a-deadly-new-arms-race/",
+      "source": "Socialist Worker",
+      "country": "CN",
+      "publishedAt": "2026-05-16 19:20:28",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "eae3923bdf41ab07",
+      "headline": "AI model could speed brain tumor diagnosis worldwide",
+      "url": "https://www.earth.com/news/ai-model-could-speed-brain-tumor-diagnosis-worldwide/",
+      "source": "Earth.com",
+      "country": "US",
+      "publishedAt": "2026-05-16 17:55:08",
+      "relevanceScore": 0.08
+    },
     {
       "id": "b5a2364c3d913d34",
       "headline": "“Strongest Embodied Brain” Crowned with Double Championships! X-Humanoid’s Pelican-Unify 1.0 Ranked World No. 1,...",
@@ -135,51 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-05-13 14:58:57",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "623a52d6096c2700",
-      "headline": "Why Complex Projects Fail: Best Practices Are Not Enough, System Thinking Gives Your Team the Edge",
-      "url": "https://www.financialcontent.com/article/bizwire-2026-5-12-why-complex-projects-fail-best-practices-are-not-enough-system-thinking-gives-your-team-the-edge",
-      "source": "Financialcontent",
-      "country": "US",
-      "publishedAt": "2026-05-12 17:17:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b9fbb1ed71917122",
-      "headline": "NVIDIA’s Vera CPU Locks In CoreWeave, Meta, Oracle and Alibaba as Early Buyers, Opening a Multi-Billion-Dollar Front...",
-      "url": "https://wccftech.com/nvidia-vera-cpu-locks-in-coreweave-meta-oracle-and-alibaba-as-early-buyers/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-05-12 14:45:42",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "c6b84b32507d0530",
-      "headline": "Does Xi Need Trump?",
-      "url": "https://reason.com/2026/05/12/does-xi-need-trump/",
-      "source": "Reason Magazine",
-      "country": "CN",
-      "publishedAt": "2026-05-12 13:30:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "66d89fe0393f2781",
-      "headline": "The $50 Billion Dragon: Beijing’s State-Backed Takeover of DeepSeek",
-      "url": "https://www.abacusnews.com/the-50-billion-dragon-beijings-state-backed-takeover-of-deepseek/",
-      "source": "Abacus News",
-      "country": "CN",
-      "publishedAt": "2026-05-11 15:24:37",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "8eca6a3c7d33e0c7",
-      "headline": "‘It’s here’: Google issues dire warning after catching hackers using AI to break into computers",
-      "url": "https://fortune.com/2026/05/11/google-catches-hackers-cybersecurity-warning-ai-anthropic-mythos/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-05-11 14:50:56",
-      "relevanceScore": 0.15
     }
   ]
 }
