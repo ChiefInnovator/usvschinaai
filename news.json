@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-05-18T05:28:46.026307+00:00",
+  "lastUpdated": "2026-05-19T05:24:14.184786+00:00",
   "items": [
+    {
+      "id": "a4e8a90450180c2f",
+      "headline": "Artificial Intelligence and Raw Materials - Articles",
+      "url": "https://www.americanthinker.com/articles/2026/05/artificial_intelligence_and_raw_materials.html",
+      "source": "Americanthinker",
+      "country": "US",
+      "publishedAt": "2026-05-18 04:00:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "be329a1283289fa2",
+      "headline": "US-China summit leaves AI chip talks unresolved but eases trade tensions",
+      "url": "https://www.digitimes.com/news/a20260518PD216/exports-technology-investment-competition-governance.html?chid=10",
+      "source": "Digitimes",
+      "country": "CN",
+      "publishedAt": "2026-05-18 01:50:50",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "7e5d3d9890bb98a1",
+      "headline": "Jensen Huang's Mother Taught Him English Even Though She Didn't Speak Any, Here's How It Helped Develop The Mindset...",
+      "url": "https://www.benzinga.com/markets/tech/26/05/52625244/jensen-huangs-mother-taught-him-english-even-though-she-didnt-speak-any-heres-how-it-helped-develop-",
+      "source": "Benzinga",
+      "country": "US",
+      "publishedAt": "2026-05-17 17:31:44",
+      "relevanceScore": 0.08
+    },
     {
       "id": "9cd05b4df1a9924a",
       "headline": "Iran Aiming to Charge Tech Giants for Subsea Cable Usage",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-14 14:04:57",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "10e7c4522eee1969",
-      "headline": "Alibaba Is Morphing Into A Microsoft‐Amazon‐Nvidia Mashup As China's AI Wave Accelerates",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52562131/alibaba-is-morphing-into-a-microsoft%E2%80%91amazon%E2%80%91nvidia-mashup-as-chinas-ai-wave-accelerates",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-05-14 13:57:27",
-      "relevanceScore": 0.39
-    },
-    {
-      "id": "e39f4afb92612d3d",
-      "headline": "Yiren Digital Advances Transition to AI-Native, Multi-Industry Operating Model with Enterprise AI Architecture Rollout",
-      "url": "https://en.prnasia.com/story/533059-0.shtml",
-      "source": "Pr Newswire Apac",
-      "country": "Both",
-      "publishedAt": "2026-05-14 13:00:00",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "2fd591c6386c29dd",
-      "headline": "Chinese court awards compensation to sacked worker replaced by AI",
-      "url": "https://www.theguardian.com/world/2026/may/13/china-court-awards-compensation-sacked-worker-replaced-by-ai",
-      "source": "The Guardian",
-      "country": "CN",
-      "publishedAt": "2026-05-13 14:58:57",
-      "relevanceScore": 0.08
     }
   ]
 }
