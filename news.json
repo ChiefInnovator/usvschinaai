@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-19T05:24:14.184786+00:00",
+  "lastUpdated": "2026-05-20T05:25:34.377065+00:00",
   "items": [
+    {
+      "id": "a754a1e39bd6c2ea",
+      "headline": "Nvidia Reports Earnings Wednesday—Here Are 5 Key Things Wall Street Analysts Will Be Watching",
+      "url": "https://www.investopedia.com/nvidia-reports-earnings-wednesday-5-key-things-wall-street-analysts-will-be-watching-nvda-11978014",
+      "source": "Investopedia",
+      "country": "US",
+      "publishedAt": "2026-05-19 15:16:16",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "fdfaf2211901de88",
+      "headline": "Intel is reportedly forcing PC builders to buy its latest, most expensive 18A CPUs and I'm wondering what that means...",
+      "url": "https://www.pcgamer.com/hardware/processors/intel-is-reportedly-forcing-pc-builders-to-buy-its-latest-most-expensive-18a-cpus-and-im-wondering-what-that-means-for-arrow-lake-desktop-chips/",
+      "source": "Pc Gamer",
+      "country": "US",
+      "publishedAt": "2026-05-19 15:11:43",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f8e894bd34c14204",
+      "headline": "Seekr CEO Pat Condo Pushes Trusted AI as National Security Priority",
+      "url": "https://www.executivebiz.com/articles/seekr-ceo-pat-condo-trusted-ai-natsec",
+      "source": "Executivebiz",
+      "country": "US",
+      "publishedAt": "2026-05-19 14:48:33",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "095feb7d55758034",
+      "headline": "China Slams the Door on NVIDIA’s RTX 5090 D v2, Refusing Import Permits for a GPU Built Exclusively for Its Own Market",
+      "url": "https://wccftech.com/china-slams-door-on-nvidia-rtx-5090-d-v2-refusing-import-permits-for-a-gpu-built-exclusively-for-its-own-market/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-05-19 14:10:18",
+      "relevanceScore": 0.08
+    },
     {
       "id": "a4e8a90450180c2f",
       "headline": "Artificial Intelligence and Raw Materials - Articles",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-15 13:19:26",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "a6735339dfb0576a",
-      "headline": "Apple's U.S. chip plan gains steam thanks to $20B TSMC investment",
-      "url": "https://appleinsider.com/articles/26/05/15/apples-us-chip-plan-gains-steam-thanks-to-20b-tsmc-investment",
-      "source": "Apple Insider",
-      "country": "US",
-      "publishedAt": "2026-05-15 12:53:56",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "be5f52eb86f5922b",
-      "headline": "Micron’s CEO Joins Trump-Xi Talks as $25 Billion AI Bet Hinges on Memory Supply",
-      "url": "https://www.newscase.com/microns-ceo-joins-trump-xi-talks-as-25-billion-ai-bet-hinges-on-memory-supply/",
-      "source": "Newscase",
-      "country": "CN",
-      "publishedAt": "2026-05-15 12:51:04",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7efb5721aa416451",
-      "headline": "Jaguar Land Rover profit slumps after cyber attack",
-      "url": "https://www.computerweekly.com/news/366643119/Jaguar-Land-Rover-profit-slumps-after-cyber-attack",
-      "source": "Computerweekly News",
-      "country": "CN",
-      "publishedAt": "2026-05-15 11:15:00",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "52dde4b8197fe78c",
-      "headline": "Elon Musk’s Attempts at AI Are Falling Apart",
-      "url": "https://futurism.com/future-society/elon-musk-ai-falling-apart",
-      "source": "Futurism",
-      "country": "US",
-      "publishedAt": "2026-05-14 14:04:57",
-      "relevanceScore": 0.3
     }
   ]
 }
