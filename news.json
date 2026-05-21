@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-05-20T05:25:34.377065+00:00",
+  "lastUpdated": "2026-05-21T05:31:43.543362+00:00",
   "items": [
+    {
+      "id": "b483ab7098572d4b",
+      "headline": "In the News: Manjeet Rege on Ethical AI Use",
+      "url": "https://news.stthomas.edu/in-the-news-manjeet-rege-on-ethical-ai-use/",
+      "source": "Newsroom | University Of St. Thomas",
+      "country": "US",
+      "publishedAt": "2026-05-20 17:20:55",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d578872384ccb171",
+      "headline": "Book on Truth in the Age of Artificial Intelligence Included Fake AI-Generated Quotes",
+      "url": "https://www.breitbart.com/tech/2026/05/20/book-on-truth-in-the-age-of-artificial-intelligence-included-fake-ai-generated-quotes/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-05-20 16:12:53",
+      "relevanceScore": 0.08
+    },
     {
       "id": "a754a1e39bd6c2ea",
       "headline": "Nvidia Reports Earnings Wednesday—Here Are 5 Key Things Wall Street Analysts Will Be Watching",
@@ -161,24 +179,6 @@
       "source": "Pc Gamer",
       "country": "US",
       "publishedAt": "2026-05-15 15:49:54",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "604cbf618a795eb4",
-      "headline": "Japan's humanoid robot uses memory, vision for human-like dexterity",
-      "url": "https://us.headtopics.com/news/japan-s-humanoid-robot-uses-memory-vision-for-human-like-83394501",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-05-15 14:06:36",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b450f282dbc1f33c",
-      "headline": "Watch humanoid robot use vision and memory to sort objects in dexterity showcase",
-      "url": "https://interestingengineering.com/ai-robotics/new-model-robot-humanlike-dexterity",
-      "source": "Interesting Engineering",
-      "country": "US",
-      "publishedAt": "2026-05-15 13:19:26",
       "relevanceScore": 0.08
     }
   ]
