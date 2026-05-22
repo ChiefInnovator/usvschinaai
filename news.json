@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-05-21T05:31:43.543362+00:00",
+  "lastUpdated": "2026-05-22T05:27:36.155480+00:00",
   "items": [
+    {
+      "id": "80f0ce7bf4732d32",
+      "headline": "Report: White House Postpones AI Executive Order Signing to Be Attended by Tech Titans",
+      "url": "https://www.breitbart.com/tech/2026/05/21/report-white-house-postpones-ai-executive-order-signing-to-be-attended-by-tech-titans/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-05-21 16:41:07",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7d967bea356a5626",
+      "headline": "White House postpones executive order on AI",
+      "url": "https://krdo.com/news/2026/05/21/trump-could-sign-ai-executive-order-as-soon-as-thursday/",
+      "source": "Krdo",
+      "country": "US",
+      "publishedAt": "2026-05-21 15:51:45",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "13d54596937484ff",
+      "headline": "Nvidia Just Did The Impossible: Wall Street Still Wants More",
+      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52715483/nvidia-q1-fy27-earnings-goldman-sachs-price-target-capex-sustainability",
+      "source": "Benzinga",
+      "country": "CN",
+      "publishedAt": "2026-05-21 13:06:20",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "6f9c71d0eb3654c0",
+      "headline": "Kazakhstan: Where data is set to be the real new oil",
+      "url": "https://www.computerweekly.com/feature/Kazakhstan-Where-data-is-set-to-be-the-real-new-oil",
+      "source": "Computerweekly News",
+      "country": "Both",
+      "publishedAt": "2026-05-21 11:50:00",
+      "relevanceScore": 0.92
+    },
+    {
+      "id": "0080841b0a23205e",
+      "headline": "The era of ‘good enough’ AI has arrived",
+      "url": "https://www.fastcompany.com/91545856/the-era-of-good-enough-ai-has-arrived?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-05-21 11:06:00",
+      "relevanceScore": 1.0
+    },
     {
       "id": "b483ab7098572d4b",
       "headline": "In the News: Manjeet Rege on Ethical AI Use",
@@ -135,51 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-05-16 14:56:05",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "b9a5029f301274cf",
-      "headline": "We watched social media concentrate. The same thing is happening in AI, only at a deeper layer",
-      "url": "https://fortune.com/2026/05/16/ai-compute-concentration-decentralization-liberman-brothers/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-05-16 13:30:00",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "5808daf16550ed1b",
-      "headline": "Commentary: Surrendering biotech lead to china",
-      "url": "https://www.davisenterprise.com/forum/commentary-surrendering-biotech-lead-to-china/article_701e7783-7909-4e8e-b938-5ed863120962.html",
-      "source": "Davis Enterprise",
-      "country": "Both",
-      "publishedAt": "2026-05-16 13:05:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "8e9fa75d4306b877",
-      "headline": "The Vatican has said a lot about artificial intelligence. A primer ahead of the pope's encyclical",
-      "url": "https://www.clickorlando.com/news/world/2026/05/16/the-vatican-has-said-a-lot-about-artificial-intelligence-a-primer-ahead-of-the-popes-encyclical/",
-      "source": "Wkmg",
-      "country": "US",
-      "publishedAt": "2026-05-16 04:06:05",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b40601c0324171df",
-      "headline": "Despite Donald Trump and Jensen Huang flying out to the country, China has not yet approved the sale of Nvidia AI chips",
-      "url": "https://www.pcgamer.com/software/ai/despite-donald-trump-and-jensen-huang-flying-out-to-the-country-china-has-not-yet-approved-the-sale-of-nvidia-ai-chips/",
-      "source": "Pc Gamer",
-      "country": "CN",
-      "publishedAt": "2026-05-15 15:51:45",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "af68cc3e163138c6",
-      "headline": "I really hope you weren't considering a GPU upgrade this year, as Nvidia may raise the price of the already pricey...",
-      "url": "https://www.pcgamer.com/hardware/graphics-cards/i-really-hope-you-werent-considering-a-gpu-upgrade-this-year-as-nvidia-may-raise-the-price-of-the-already-pricey-rtx-5090-by-as-much-as-usd300/",
-      "source": "Pc Gamer",
-      "country": "US",
-      "publishedAt": "2026-05-15 15:49:54",
-      "relevanceScore": 0.08
     }
   ]
 }
