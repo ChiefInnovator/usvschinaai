@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-05-22T05:27:36.155480+00:00",
+  "lastUpdated": "2026-05-23T05:14:45.717065+00:00",
   "items": [
+    {
+      "id": "979092ba91a8f6a1",
+      "headline": "Trump scrapped a major AI safety plan — here’s why that matters for ChatGPT users",
+      "url": "https://www.tomsguide.com/ai/trump-scrapped-a-major-ai-safety-plan-heres-why-that-matters-for-chatgpt-users",
+      "source": "Tom's Guide",
+      "country": "US",
+      "publishedAt": "2026-05-22 15:38:51",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "b7de564a4a1ba963",
+      "headline": "Key Trump Adviser Led Push to Derail AI Order",
+      "url": "https://www.newser.com/story/389633/key-trump-adviser-led-push-to-derail-ai-order.html",
+      "source": "Newser",
+      "country": "US",
+      "publishedAt": "2026-05-22 15:30:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "80f0ce7bf4732d32",
       "headline": "Report: White House Postpones AI Executive Order Signing to Be Attended by Tech Titans",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-05-16 19:20:28",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "eae3923bdf41ab07",
-      "headline": "AI model could speed brain tumor diagnosis worldwide",
-      "url": "https://www.earth.com/news/ai-model-could-speed-brain-tumor-diagnosis-worldwide/",
-      "source": "Earth.com",
-      "country": "US",
-      "publishedAt": "2026-05-16 17:55:08",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b5a2364c3d913d34",
-      "headline": "“Strongest Embodied Brain” Crowned with Double Championships! X-Humanoid’s Pelican-Unify 1.0 Ranked World No. 1,...",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-16-strongest-embodied-brain-crowned-with-double-championships-x-humanoids-pelican-unify-10-ranked-world-no-1-entering-the-top-tier-of-embodied-intelligence",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-05-16 14:56:05",
-      "relevanceScore": 0.23
     }
   ]
 }
