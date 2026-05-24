@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-05-23T05:14:45.717065+00:00",
+  "lastUpdated": "2026-05-24T05:28:58.625032+00:00",
   "items": [
+    {
+      "id": "f48c31f07c9330df",
+      "headline": "New AI body map reveals obesity’s hidden attack on facial nerves",
+      "url": "https://www.sciencedaily.com/releases/2026/05/260522023308.htm",
+      "source": "Science Daily",
+      "country": "US",
+      "publishedAt": "2026-05-23 12:34:45",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "1e9cfd222cf4ae11",
+      "headline": "Trump had ‘many’ concerns about AI draft policy order",
+      "url": "https://www.yahoo.com/news/politics/articles/trump-had-many-concerns-ai-213908932.html",
+      "source": "Yahoo! News",
+      "country": "US",
+      "publishedAt": "2026-05-22 21:39:08",
+      "relevanceScore": 0.08
+    },
     {
       "id": "979092ba91a8f6a1",
       "headline": "Trump scrapped a major AI safety plan — here’s why that matters for ChatGPT users",
@@ -161,24 +179,6 @@
       "source": "Headtopics",
       "country": "US",
       "publishedAt": "2026-05-17 02:35:49",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "329dedbcbdc6804c",
-      "headline": "Sen. David McCormick tours AI-powered biotech labs at Penn to promote AI and federal funding admit NSF turmoil",
-      "url": "https://whyy.org/articles/david-mccormick-pennsylvania-university-biotech-artificial-intelligence/",
-      "source": "Whyy",
-      "country": "US",
-      "publishedAt": "2026-05-16 21:05:05",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "106fe9c8c3d0e005",
-      "headline": "Artificial Intelligence – A deadly new arms race",
-      "url": "https://socialistworker.co.uk/in-depth/artificial-intelligence-a-deadly-new-arms-race/",
-      "source": "Socialist Worker",
-      "country": "CN",
-      "publishedAt": "2026-05-16 19:20:28",
       "relevanceScore": 0.08
     }
   ]
