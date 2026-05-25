@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-05-24T05:28:58.625032+00:00",
+  "lastUpdated": "2026-05-25T05:34:46.739265+00:00",
   "items": [
+    {
+      "id": "7538e052fdc82658",
+      "headline": "AI just hit its COVID shutdown moment",
+      "url": "https://www.businessinsider.com/spacex-nvidia-openai-anthropic-ai-covid-shutdown-moment-2026-5",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-05-24 08:21:01",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "3c8646b2493049fa",
+      "headline": "Do we need a new law for AI?",
+      "url": "https://www.uts.edu.au/news/2023/08/do-we-need-new-law-ai",
+      "source": "Uts",
+      "country": "US",
+      "publishedAt": "2026-05-24 05:41:18",
+      "relevanceScore": 0.08
+    },
     {
       "id": "f48c31f07c9330df",
       "headline": "New AI body map reveals obesity’s hidden attack on facial nerves",
@@ -161,24 +179,6 @@
       "source": "Benzinga",
       "country": "US",
       "publishedAt": "2026-05-17 17:31:44",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "9cd05b4df1a9924a",
-      "headline": "Iran Aiming to Charge Tech Giants for Subsea Cable Usage",
-      "url": "https://us.headtopics.com/news/iran-aiming-to-charge-tech-giants-for-subsea-cable-usage-83448659",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-05-17 10:06:07",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "e5b1fea75158bede",
-      "headline": "AI Bubble Fears among US Investors",
-      "url": "https://us.headtopics.com/news/ai-bubble-fears-among-us-investors-83440757",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-05-17 02:35:49",
       "relevanceScore": 0.08
     }
   ]
