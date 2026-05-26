@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-05-25T05:34:46.739265+00:00",
+  "lastUpdated": "2026-05-26T05:26:56.699740+00:00",
   "items": [
+    {
+      "id": "0cd826c3a50864a6",
+      "headline": "AP Technology SummaryBrief at 12:56 p.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-12-56-p-m-edt/article_b8577d42-e223-5373-9134-08780c7adb35.html",
+      "source": "Postregister",
+      "country": "US",
+      "publishedAt": "2026-05-25 16:56:03",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c5d21ee2fe32b26d",
+      "headline": "Top News Today: Huawei Chip Push, AI Hiring Shift, Crypto Crackdown & Privacy Concerns",
+      "url": "https://www.analyticsinsight.net/tech-news/top-news-today-huawei-chip-push-ai-hiring-shift-crypto-crackdown-privacy-concerns",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-05-25 11:18:40",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "aee9f8929137585e",
+      "headline": "Nvidia CEO Jensen Huang says CEOs who blame AI for job cuts are 'lazy'",
+      "url": "https://www.businessinsider.com/nvidia-ceo-jensen-huang-ai-job-cuts-losses-lazy-narrative-2026-5",
+      "source": "Business Insider",
+      "country": "US",
+      "publishedAt": "2026-05-25 09:57:31",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "3f8bd44153897396",
+      "headline": "Huawei reveals chip design breakthrough",
+      "url": "https://news.rthk.hk/rthk/en/component/k2/1855968-20260525.htm",
+      "source": "香港電台新聞網 - Rthk",
+      "country": "CN",
+      "publishedAt": "2026-05-25 09:00:25",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "98bc7f9a3a3d1117",
+      "headline": "Huawei Unveils Major Chip Design Breakthrough as China Pushes Past US Sanctions",
+      "url": "https://moderndiplomacy.eu/2026/05/25/huawei-unveils-major-chip-design-breakthrough-as-china-pushes-past-us-sanctions/",
+      "source": "Modern Diplomacy",
+      "country": "Both",
+      "publishedAt": "2026-05-25 08:38:50",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "6599e0c7b2d859a0",
+      "headline": "Chinas Huawei Reveals Chip Breakthrough amid US Sanctions",
+      "url": "https://www.gurutrade.com/news/china-s-huawei-reveals-chip-breakthrough-amid-us-sanctions-1779699295.html",
+      "source": "Gurutrade.com - Unique Platform For Traders",
+      "country": "Both",
+      "publishedAt": "2026-05-25 08:30:03",
+      "relevanceScore": 0.24
+    },
     {
       "id": "7538e052fdc82658",
       "headline": "AI just hit its COVID shutdown moment",
@@ -125,60 +179,6 @@
       "source": "Investopedia",
       "country": "US",
       "publishedAt": "2026-05-19 15:16:16",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "fdfaf2211901de88",
-      "headline": "Intel is reportedly forcing PC builders to buy its latest, most expensive 18A CPUs and I'm wondering what that means...",
-      "url": "https://www.pcgamer.com/hardware/processors/intel-is-reportedly-forcing-pc-builders-to-buy-its-latest-most-expensive-18a-cpus-and-im-wondering-what-that-means-for-arrow-lake-desktop-chips/",
-      "source": "Pc Gamer",
-      "country": "US",
-      "publishedAt": "2026-05-19 15:11:43",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f8e894bd34c14204",
-      "headline": "Seekr CEO Pat Condo Pushes Trusted AI as National Security Priority",
-      "url": "https://www.executivebiz.com/articles/seekr-ceo-pat-condo-trusted-ai-natsec",
-      "source": "Executivebiz",
-      "country": "US",
-      "publishedAt": "2026-05-19 14:48:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "095feb7d55758034",
-      "headline": "China Slams the Door on NVIDIA’s RTX 5090 D v2, Refusing Import Permits for a GPU Built Exclusively for Its Own Market",
-      "url": "https://wccftech.com/china-slams-door-on-nvidia-rtx-5090-d-v2-refusing-import-permits-for-a-gpu-built-exclusively-for-its-own-market/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-05-19 14:10:18",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "a4e8a90450180c2f",
-      "headline": "Artificial Intelligence and Raw Materials - Articles",
-      "url": "https://www.americanthinker.com/articles/2026/05/artificial_intelligence_and_raw_materials.html",
-      "source": "Americanthinker",
-      "country": "US",
-      "publishedAt": "2026-05-18 04:00:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "be329a1283289fa2",
-      "headline": "US-China summit leaves AI chip talks unresolved but eases trade tensions",
-      "url": "https://www.digitimes.com/news/a20260518PD216/exports-technology-investment-competition-governance.html?chid=10",
-      "source": "Digitimes",
-      "country": "CN",
-      "publishedAt": "2026-05-18 01:50:50",
-      "relevanceScore": 0.32
-    },
-    {
-      "id": "7e5d3d9890bb98a1",
-      "headline": "Jensen Huang's Mother Taught Him English Even Though She Didn't Speak Any, Here's How It Helped Develop The Mindset...",
-      "url": "https://www.benzinga.com/markets/tech/26/05/52625244/jensen-huangs-mother-taught-him-english-even-though-she-didnt-speak-any-heres-how-it-helped-develop-",
-      "source": "Benzinga",
-      "country": "US",
-      "publishedAt": "2026-05-17 17:31:44",
       "relevanceScore": 0.08
     }
   ]
