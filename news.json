@@ -1,6 +1,96 @@
 {
-  "lastUpdated": "2026-05-27T05:33:52.290536+00:00",
+  "lastUpdated": "2026-05-28T05:30:43.915200+00:00",
   "items": [
+    {
+      "id": "e07dfa9b536f5d03",
+      "headline": "​Why AI Delivery Can’t Wait For Tech Sovereignty ​",
+      "url": "https://www.forbes.com/councils/forbestechcouncil/2026/05/27/why-ai-delivery-cant-wait-for-tech-sovereignty-/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-05-27 16:00:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "5449bda7f70ee931",
+      "headline": "Former US Attorney General Pam Bondi is undergoing treatment for thyroid cancer",
+      "url": "https://www.kvue.com/article/news/nation-world/pam-bondi-thyroid-cancer-diagnosis/507-a791c419-d5ef-49ff-b82b-01c4f3423a3a",
+      "source": "Kvue",
+      "country": "US",
+      "publishedAt": "2026-05-27 15:02:39",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "faabea2822380562",
+      "headline": "Opinion: MIT president: Why so many optimistic scientists are losing heart",
+      "url": "https://www.statnews.com/2026/05/27/science-funding-derailed-breakthroughs/",
+      "source": "Stat",
+      "country": "US",
+      "publishedAt": "2026-05-27 14:55:06",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "015011cc360044a8",
+      "headline": "Chinese schools add emotional education classes to prepare children for AI-driven job market",
+      "url": "https://completeaitraining.com/news/chinese-schools-add-emotional-education-classes-to-prepare/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-05-27 14:22:49",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "0ca7526316c9505b",
+      "headline": "ASC26 Finals Conclude in China with Peking University and Tsinghua Leading Global HPC Field",
+      "url": "https://www.hpcwire.com/off-the-wire/asc26-finals-conclude-in-china-with-peking-university-and-tsinghua-leading-global-hpc-field/",
+      "source": "Hpcwire",
+      "country": "CN",
+      "publishedAt": "2026-05-27 14:17:21",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "b02970f583976074",
+      "headline": "Test and Measurement Equipment Market worth $76.38 billion by 2032 - Exclusive Report by MarketsandMarketsTM",
+      "url": "https://www.prnewswire.com/news-releases/test-and-measurement-equipment-market-worth-76-38-billion-by-2032---exclusive-report-by-marketsandmarkets-302782813.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-05-27 14:01:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "5c3863c031db7643",
+      "headline": "May 2026 Robotics Recap",
+      "url": "https://www.robotics247.com/podcast/may-2026-robotics-recap",
+      "source": "Robotics 24/7",
+      "country": "US",
+      "publishedAt": "2026-05-27 14:00:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "7cc1992eaeb7cfed",
+      "headline": "Debut and Natura Partner to Commercialize AI-Discovered Skin Longevity Ingredient for Latin America",
+      "url": "https://www.prnewswire.com/news-releases/debut-and-natura-partner-to-commercialize-ai-discovered-skin-longevity-ingredient-for-latin-america-302783149.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-05-27 14:00:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "cf6e0f76aabac93d",
+      "headline": "CMI pursues new Central Asia gateway to Hong Kong submarine cables",
+      "url": "https://www.lightreading.com/cable-technology/cmi-pursues-new-central-asia-gateway-to-hong-kong-submarine-cables",
+      "source": "Lightreading",
+      "country": "CN",
+      "publishedAt": "2026-05-27 13:51:39",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "ef4161414a8194e9",
+      "headline": "Asia Intel May 27: BOJ Hike Tension, Korea AI Wealth, China Shock 2.0, Singapore Revision - Rio Times",
+      "url": "https://menafn.com/1111175246/Asia-Intel-May-27-BOJ-Hike-Tension-Korea-AI-Wealth-China-Shock-20-Singapore-Revision-Rio-Times",
+      "source": "Menafn",
+      "country": "CN",
+      "publishedAt": "2026-05-27 13:30:54",
+      "relevanceScore": 0.0
+    },
     {
       "id": "a61d4960f441202e",
       "headline": "EuroTPC project launches to strengthen Europe's role in global scientific AI development",
@@ -90,96 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-05-25 08:38:50",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "6599e0c7b2d859a0",
-      "headline": "Chinas Huawei Reveals Chip Breakthrough amid US Sanctions",
-      "url": "https://www.gurutrade.com/news/china-s-huawei-reveals-chip-breakthrough-amid-us-sanctions-1779699295.html",
-      "source": "Gurutrade.com - Unique Platform For Traders",
-      "country": "Both",
-      "publishedAt": "2026-05-25 08:30:03",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "7538e052fdc82658",
-      "headline": "AI just hit its COVID shutdown moment",
-      "url": "https://www.businessinsider.com/spacex-nvidia-openai-anthropic-ai-covid-shutdown-moment-2026-5",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-05-24 08:21:01",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "3c8646b2493049fa",
-      "headline": "Do we need a new law for AI?",
-      "url": "https://www.uts.edu.au/news/2023/08/do-we-need-new-law-ai",
-      "source": "Uts",
-      "country": "US",
-      "publishedAt": "2026-05-24 05:41:18",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f48c31f07c9330df",
-      "headline": "New AI body map reveals obesity’s hidden attack on facial nerves",
-      "url": "https://www.sciencedaily.com/releases/2026/05/260522023308.htm",
-      "source": "Science Daily",
-      "country": "US",
-      "publishedAt": "2026-05-23 12:34:45",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "1e9cfd222cf4ae11",
-      "headline": "Trump had ‘many’ concerns about AI draft policy order",
-      "url": "https://www.yahoo.com/news/politics/articles/trump-had-many-concerns-ai-213908932.html",
-      "source": "Yahoo! News",
-      "country": "US",
-      "publishedAt": "2026-05-22 21:39:08",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "979092ba91a8f6a1",
-      "headline": "Trump scrapped a major AI safety plan — here’s why that matters for ChatGPT users",
-      "url": "https://www.tomsguide.com/ai/trump-scrapped-a-major-ai-safety-plan-heres-why-that-matters-for-chatgpt-users",
-      "source": "Tom's Guide",
-      "country": "US",
-      "publishedAt": "2026-05-22 15:38:51",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "b7de564a4a1ba963",
-      "headline": "Key Trump Adviser Led Push to Derail AI Order",
-      "url": "https://www.newser.com/story/389633/key-trump-adviser-led-push-to-derail-ai-order.html",
-      "source": "Newser",
-      "country": "US",
-      "publishedAt": "2026-05-22 15:30:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "80f0ce7bf4732d32",
-      "headline": "Report: White House Postpones AI Executive Order Signing to Be Attended by Tech Titans",
-      "url": "https://www.breitbart.com/tech/2026/05/21/report-white-house-postpones-ai-executive-order-signing-to-be-attended-by-tech-titans/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-05-21 16:41:07",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7d967bea356a5626",
-      "headline": "White House postpones executive order on AI",
-      "url": "https://krdo.com/news/2026/05/21/trump-could-sign-ai-executive-order-as-soon-as-thursday/",
-      "source": "Krdo",
-      "country": "US",
-      "publishedAt": "2026-05-21 15:51:45",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "13d54596937484ff",
-      "headline": "Nvidia Just Did The Impossible: Wall Street Still Wants More",
-      "url": "https://www.benzinga.com/analyst-stock-ratings/price-target/26/05/52715483/nvidia-q1-fy27-earnings-goldman-sachs-price-target-capex-sustainability",
-      "source": "Benzinga",
-      "country": "CN",
-      "publishedAt": "2026-05-21 13:06:20",
-      "relevanceScore": 0.16
     }
   ]
 }
