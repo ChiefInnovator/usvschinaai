@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-05-28T05:30:43.915200+00:00",
+  "lastUpdated": "2026-05-29T05:31:24.536886+00:00",
   "items": [
+    {
+      "id": "e8057b46255dcf52",
+      "headline": "King’s Researchers Secure Google Willow Access to Explore Quantum Systems and Brain Analogies",
+      "url": "https://www.hpcwire.com/off-the-wire/kings-researchers-secure-google-willow-access-to-explore-quantum-systems-and-brain-analogies/",
+      "source": "Hpcwire",
+      "country": "US",
+      "publishedAt": "2026-05-28 15:54:41",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "93a9bf6387f5d4a4",
+      "headline": "Self-driving trucks are about controlling the roads — not making them safer",
+      "url": "https://www.theblaze.com/align/self-driving-trucks-are-about-controlling-the-roads-not-making-them-safer",
+      "source": "Blaze Media",
+      "country": "Both",
+      "publishedAt": "2026-05-28 14:30:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "e07dfa9b536f5d03",
       "headline": "​Why AI Delivery Can’t Wait For Tech Sovereignty ​",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-25 09:57:31",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "3f8bd44153897396",
-      "headline": "Huawei reveals chip design breakthrough",
-      "url": "https://news.rthk.hk/rthk/en/component/k2/1855968-20260525.htm",
-      "source": "香港電台新聞網 - Rthk",
-      "country": "CN",
-      "publishedAt": "2026-05-25 09:00:25",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "98bc7f9a3a3d1117",
-      "headline": "Huawei Unveils Major Chip Design Breakthrough as China Pushes Past US Sanctions",
-      "url": "https://moderndiplomacy.eu/2026/05/25/huawei-unveils-major-chip-design-breakthrough-as-china-pushes-past-us-sanctions/",
-      "source": "Modern Diplomacy",
-      "country": "Both",
-      "publishedAt": "2026-05-25 08:38:50",
-      "relevanceScore": 0.24
     }
   ]
 }
