@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-30T05:21:55.950972+00:00",
+  "lastUpdated": "2026-05-31T05:34:16.794938+00:00",
   "items": [
+    {
+      "id": "50da592138ed88f1",
+      "headline": "I helped design the system that brought down ISIS financing. I’ve got an AI governance idea the Pope and Anthropic...",
+      "url": "https://fortune.com/2026/05/30/ai-governance-pope-leo-anthropic-fatf-framework-shlomit-wagman/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-05-30 09:05:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "b82a41d8b6fd7bcc",
+      "headline": "EU drafts new tech package to cut US and China ties",
+      "url": "https://headtopics.com/news/eu-drafts-new-tech-package-to-cut-us-and-china-ties-83935068",
+      "source": "Headtopics",
+      "country": "Both",
+      "publishedAt": "2026-05-30 07:35:56",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5f44742852cbaa62",
+      "headline": "5/29/26 National Security and Korean News and Commentary",
+      "url": "https://smallwarsjournal.com/2026/05/29/5-29-26-national-security-and-korean-news-and-commentary/",
+      "source": "Small Wars Journal",
+      "country": "US",
+      "publishedAt": "2026-05-29 20:04:32",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ba1252da92bda83b",
+      "headline": "Anthropic’s Guarded Mythos Model Is Headed For Wider Release",
+      "url": "https://www.forbes.com/sites/ronschmelzer/2026/05/29/anthropics-guarded-mythos-model-is-headed-for-wider-release/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-05-29 18:47:33",
+      "relevanceScore": 0.23
+    },
     {
       "id": "24abb4bed125dd95",
       "headline": "The #1 Generative Engine Optimization Provider for American Brands in 2026: Five-Point Differentiation",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-05-27 13:51:39",
       "relevanceScore": 0.0
-    },
-    {
-      "id": "ef4161414a8194e9",
-      "headline": "Asia Intel May 27: BOJ Hike Tension, Korea AI Wealth, China Shock 2.0, Singapore Revision - Rio Times",
-      "url": "https://menafn.com/1111175246/Asia-Intel-May-27-BOJ-Hike-Tension-Korea-AI-Wealth-China-Shock-20-Singapore-Revision-Rio-Times",
-      "source": "Menafn",
-      "country": "CN",
-      "publishedAt": "2026-05-27 13:30:54",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "a61d4960f441202e",
-      "headline": "EuroTPC project launches to strengthen Europe's role in global scientific AI development",
-      "url": "https://completeaitraining.com/news/eurotpc-project-launches-to-strengthen-europes-role-in/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-05-26 17:00:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c6a6799c6dafee6b",
-      "headline": "The First GPU Out of China Can’t Compete Against Nvidia... Yet",
-      "url": "https://gizmodo.com/first-gpu-out-of-china-cant-compete-against-nvidia-yet-2000763441",
-      "source": "Gizmodo",
-      "country": "CN",
-      "publishedAt": "2026-05-26 16:30:35",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "ce41985ca0d4088f",
-      "headline": "How to Make Sure AI Doesn't Spy on Us or Kill Innocent People",
-      "url": "https://reason.com/video/2026/05/26/how-to-make-sure-ai-doesnt-spy-on-us-or-kill-innocent-people/",
-      "source": "Reason Magazine",
-      "country": "US",
-      "publishedAt": "2026-05-26 16:05:32",
-      "relevanceScore": 0.15
     }
   ]
 }
