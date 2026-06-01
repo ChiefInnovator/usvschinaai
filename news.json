@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-05-31T05:34:16.794938+00:00",
+  "lastUpdated": "2026-06-01T05:39:57.184216+00:00",
   "items": [
+    {
+      "id": "c8434fd428753f03",
+      "headline": "Pentagon Battles To Deploy AI For Military Despite Clamor For Guardrails",
+      "url": "https://www.ibtimes.com/pentagon-battles-deploy-ai-military-despite-clamor-guardrails-3803550",
+      "source": "International Business Times",
+      "country": "US",
+      "publishedAt": "2026-05-31 16:14:09",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "35b52de2dc003855",
+      "headline": "AI: Digital to Physical | BEYOND Expo 2026 Leads Transformative Global Direction of Tech",
+      "url": "https://en.prnasia.com/story/535164-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "CN",
+      "publishedAt": "2026-05-31 06:32:00",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "b43ccbc6a9e5d3fd",
+      "headline": "Top Generative Engine Optimization Agencies for USA Brands in 2026: Concise Vendor Shortlist",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-31-top-generative-engine-optimization-agencies-for-usa-brands-in-2026-concise-vendor-shortlist",
+      "source": "Financialcontent",
+      "country": "Both",
+      "publishedAt": "2026-05-31 05:02:49",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "c2834a77213d5e29",
+      "headline": "13 Best Generative Engine Optimization (GEO) Agencies for USA Brands in 2026: Multi-Engine Coverage Edition",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-31-13-best-generative-engine-optimization-geo-agencies-for-usa-brands-in-2026-multi-engine-coverage-edition",
+      "source": "Financialcontent",
+      "country": "Both",
+      "publishedAt": "2026-05-31 04:51:54",
+      "relevanceScore": 1.0
+    },
     {
       "id": "50da592138ed88f1",
       "headline": "I helped design the system that brought down ISIS financing. I’ve got an AI governance idea the Pope and Anthropic...",
@@ -143,42 +179,6 @@
       "source": "Hpcwire",
       "country": "CN",
       "publishedAt": "2026-05-27 14:17:21",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "b02970f583976074",
-      "headline": "Test and Measurement Equipment Market worth $76.38 billion by 2032 - Exclusive Report by MarketsandMarketsTM",
-      "url": "https://www.prnewswire.com/news-releases/test-and-measurement-equipment-market-worth-76-38-billion-by-2032---exclusive-report-by-marketsandmarkets-302782813.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-05-27 14:01:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "5c3863c031db7643",
-      "headline": "May 2026 Robotics Recap",
-      "url": "https://www.robotics247.com/podcast/may-2026-robotics-recap",
-      "source": "Robotics 24/7",
-      "country": "US",
-      "publishedAt": "2026-05-27 14:00:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "7cc1992eaeb7cfed",
-      "headline": "Debut and Natura Partner to Commercialize AI-Discovered Skin Longevity Ingredient for Latin America",
-      "url": "https://www.prnewswire.com/news-releases/debut-and-natura-partner-to-commercialize-ai-discovered-skin-longevity-ingredient-for-latin-america-302783149.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-05-27 14:00:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "cf6e0f76aabac93d",
-      "headline": "CMI pursues new Central Asia gateway to Hong Kong submarine cables",
-      "url": "https://www.lightreading.com/cable-technology/cmi-pursues-new-central-asia-gateway-to-hong-kong-submarine-cables",
-      "source": "Lightreading",
-      "country": "CN",
-      "publishedAt": "2026-05-27 13:51:39",
       "relevanceScore": 0.0
     }
   ]
