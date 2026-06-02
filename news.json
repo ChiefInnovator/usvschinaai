@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-01T05:39:57.184216+00:00",
+  "lastUpdated": "2026-06-02T05:38:54.613210+00:00",
   "items": [
+    {
+      "id": "487923d791572f33",
+      "headline": "Bernie Sanders has launched a war against AI and robotics",
+      "url": "https://us.headtopics.com/news/bernie-sanders-has-launched-a-war-against-ai-and-robotics-84008553",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-06-01 16:06:06",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "10e286c86661b1e1",
+      "headline": "US moves to close potential AI chip sales loophole",
+      "url": "https://thehill.com/policy/technology/5903991-us-moves-to-close-potential-ai-chip-sales-loophole/",
+      "source": "The Hill",
+      "country": "Both",
+      "publishedAt": "2026-06-01 15:57:07",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "411202c9a99eefe7",
+      "headline": "Nvidia launches AI chip for personal computers as it enters consumer market",
+      "url": "https://completeaitraining.com/news/nvidia-launches-ai-chip-for-personal-computers-as-it-enters/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-06-01 11:39:32",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "e9d34700735ccf29",
+      "headline": "US Moves to Block Chinese Companies Accessing AI Chips Through Affiliates Outside China",
+      "url": "https://www.theepochtimes.com/tech/us-moves-to-block-chinese-companies-accessing-ai-chips-through-affiliates-outside-china-6041278",
+      "source": "The Epoch Times",
+      "country": "CN",
+      "publishedAt": "2026-06-01 11:01:36",
+      "relevanceScore": 0.16
+    },
     {
       "id": "c8434fd428753f03",
       "headline": "Pentagon Battles To Deploy AI For Military Despite Clamor For Guardrails",
@@ -143,42 +179,6 @@
       "source": "Forbes",
       "country": "US",
       "publishedAt": "2026-05-27 16:00:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "5449bda7f70ee931",
-      "headline": "Former US Attorney General Pam Bondi is undergoing treatment for thyroid cancer",
-      "url": "https://www.kvue.com/article/news/nation-world/pam-bondi-thyroid-cancer-diagnosis/507-a791c419-d5ef-49ff-b82b-01c4f3423a3a",
-      "source": "Kvue",
-      "country": "US",
-      "publishedAt": "2026-05-27 15:02:39",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "faabea2822380562",
-      "headline": "Opinion: MIT president: Why so many optimistic scientists are losing heart",
-      "url": "https://www.statnews.com/2026/05/27/science-funding-derailed-breakthroughs/",
-      "source": "Stat",
-      "country": "US",
-      "publishedAt": "2026-05-27 14:55:06",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "015011cc360044a8",
-      "headline": "Chinese schools add emotional education classes to prepare children for AI-driven job market",
-      "url": "https://completeaitraining.com/news/chinese-schools-add-emotional-education-classes-to-prepare/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-05-27 14:22:49",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "0ca7526316c9505b",
-      "headline": "ASC26 Finals Conclude in China with Peking University and Tsinghua Leading Global HPC Field",
-      "url": "https://www.hpcwire.com/off-the-wire/asc26-finals-conclude-in-china-with-peking-university-and-tsinghua-leading-global-hpc-field/",
-      "source": "Hpcwire",
-      "country": "CN",
-      "publishedAt": "2026-05-27 14:17:21",
       "relevanceScore": 0.0
     }
   ]
