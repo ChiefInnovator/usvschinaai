@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-02T05:38:54.613210+00:00",
+  "lastUpdated": "2026-06-03T05:49:45.063475+00:00",
   "items": [
+    {
+      "id": "076235949cfdee32",
+      "headline": "Trump signs order allowing AI companies to give government access to models before release",
+      "url": "https://www.france24.com/en/americas/20260602-trump-signs-order-allowing-ai-companies-to-give-government-access-to-models-before-release",
+      "source": "France 24",
+      "country": "US",
+      "publishedAt": "2026-06-02 17:26:25",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "a28c6ee0c64e89f9",
+      "headline": "Trump privately signs scaled-back AI executive order that cuts down a voluntary review period",
+      "url": "https://www.businessinsider.com/trump-signs-scaled-back-ai-executive-order-anthropic-mythos-2026-6",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-06-02 16:46:32",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "578cbba71ca44912",
+      "headline": "Center for AI Safety Names Former xAI Leader Devin Kim President and Establishes Frontier Security Institute in...",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-6-2-center-for-ai-safety-names-former-xai-leader-devin-kim-president-and-establishes-frontier-security-institute-in-major-expansion-of-leadership-and-reach",
+      "source": "Financialcontent",
+      "country": "US",
+      "publishedAt": "2026-06-02 15:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7a50fe44f4d8dbfe",
+      "headline": "Stacked & Tracked: A Data Center Primer (Video)",
+      "url": "https://beforeitsnews.com/u-s-politics/2026/06/stacked-tracked-a-data-center-primer-video-2629154.html",
+      "source": "Beforeitsnews",
+      "country": "US",
+      "publishedAt": "2026-06-02 14:50:21",
+      "relevanceScore": 0.08
+    },
     {
       "id": "487923d791572f33",
       "headline": "Bernie Sanders has launched a war against AI and robotics",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-05-29 14:46:55",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "15cde492a1c5a278",
-      "headline": "AI to Gen Z: Young Catholic Job Seekers and Employees Wrestle With the Future of Work",
-      "url": "https://www.ncregister.com/news/ai-to-gen-z",
-      "source": "National Catholic Register",
-      "country": "US",
-      "publishedAt": "2026-05-29 12:50:18",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "e8057b46255dcf52",
-      "headline": "King’s Researchers Secure Google Willow Access to Explore Quantum Systems and Brain Analogies",
-      "url": "https://www.hpcwire.com/off-the-wire/kings-researchers-secure-google-willow-access-to-explore-quantum-systems-and-brain-analogies/",
-      "source": "Hpcwire",
-      "country": "US",
-      "publishedAt": "2026-05-28 15:54:41",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "93a9bf6387f5d4a4",
-      "headline": "Self-driving trucks are about controlling the roads — not making them safer",
-      "url": "https://www.theblaze.com/align/self-driving-trucks-are-about-controlling-the-roads-not-making-them-safer",
-      "source": "Blaze Media",
-      "country": "Both",
-      "publishedAt": "2026-05-28 14:30:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "e07dfa9b536f5d03",
-      "headline": "​Why AI Delivery Can’t Wait For Tech Sovereignty ​",
-      "url": "https://www.forbes.com/councils/forbestechcouncil/2026/05/27/why-ai-delivery-cant-wait-for-tech-sovereignty-/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-05-27 16:00:00",
-      "relevanceScore": 0.0
     }
   ]
 }
