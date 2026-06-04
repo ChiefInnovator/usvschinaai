@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-03T05:49:45.063475+00:00",
+  "lastUpdated": "2026-06-04T05:41:33.389496+00:00",
   "items": [
+    {
+      "id": "f5769f25ceb30e73",
+      "headline": "Labour’s AI investment plan will trash environment",
+      "url": "https://socialistworker.co.uk/labour/labours-ai-investment-plan-will-trash-environment/",
+      "source": "Socialist Worker",
+      "country": "US",
+      "publishedAt": "2026-06-03 17:08:45",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "a74c8bc9e0c01c22",
+      "headline": "Rising emissions, depleting water and vanishing land: AI is threatening natural resources for billions, say scientists",
+      "url": "https://phys.org/news/2026-06-emissions-depleting-ai-threatening-natural.html",
+      "source": "Phys.org",
+      "country": "US",
+      "publishedAt": "2026-06-03 14:00:01",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "58c4214ece510975",
+      "headline": "AP Business SummaryBrief at 9:33 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-business-summarybrief-at-9-33-a-m-edt/article_c916ed0f-a5e5-5853-9a4c-443620b516c9.html",
+      "source": "Postregister",
+      "country": "US",
+      "publishedAt": "2026-06-03 13:33:42",
+      "relevanceScore": 0.08
+    },
     {
       "id": "076235949cfdee32",
       "headline": "Trump signs order allowing AI companies to give government access to models before release",
@@ -152,33 +179,6 @@
       "source": "Financialcontent",
       "country": "Both",
       "publishedAt": "2026-05-29 16:15:40",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "d12fe859f2937b98",
-      "headline": "Compute: AI Bubble or Bottleneck?",
-      "url": "https://cepa.org/article/compute-ai-bubble-or-bottleneck/",
-      "source": "Cepa",
-      "country": "CN",
-      "publishedAt": "2026-05-29 15:48:27",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "ecc6f181e8acca6a",
-      "headline": "Best Ecommerce Generative Engine Optimization Agencies 2026: Vertical Citation Buyer Guide",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-29-best-ecommerce-generative-engine-optimization-agencies-2026-vertical-citation-buyer-guide",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-05-29 14:47:49",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "e08d9f45f9fde591",
-      "headline": "Top 13 Generative Engine Optimization Agencies Driving AI Search Outcomes in 2026",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-29-top-13-generative-engine-optimization-agencies-driving-ai-search-outcomes-in-2026",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-05-29 14:46:55",
       "relevanceScore": 1.0
     }
   ]
