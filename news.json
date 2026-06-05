@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-06-04T05:41:33.389496+00:00",
+  "lastUpdated": "2026-06-05T05:32:49.984987+00:00",
   "items": [
+    {
+      "id": "f713b87b89d1aa13",
+      "headline": "Homeland Security Secretary Mullin defends CISA’s current work, while teasing more to come",
+      "url": "https://insidecybersecurity.com/daily-news/homeland-security-secretary-mullin-defends-cisa-s-current-work-while-teasing-more-come",
+      "source": "Insidecybersecurity",
+      "country": "CN",
+      "publishedAt": "2026-06-04 16:40:01",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "3e8c5a64cb0cf70f",
+      "headline": "US Firms Try DeepSeek as Silicon Valley AI Costs Rise",
+      "url": "https://www.techrepublic.com/article/news-us-firms-try-deepseek-ai-costs-rise/",
+      "source": "Techrepublic",
+      "country": "CN",
+      "publishedAt": "2026-06-04 15:37:23",
+      "relevanceScore": 0.3
+    },
     {
       "id": "f5769f25ceb30e73",
       "headline": "Labour’s AI investment plan will trash environment",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-05-29 20:04:32",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "ba1252da92bda83b",
-      "headline": "Anthropic’s Guarded Mythos Model Is Headed For Wider Release",
-      "url": "https://www.forbes.com/sites/ronschmelzer/2026/05/29/anthropics-guarded-mythos-model-is-headed-for-wider-release/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-05-29 18:47:33",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "24abb4bed125dd95",
-      "headline": "The #1 Generative Engine Optimization Provider for American Brands in 2026: Five-Point Differentiation",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-29-the-1-generative-engine-optimization-provider-for-american-brands-in-2026-five-point-differentiation",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-05-29 16:15:40",
-      "relevanceScore": 1.0
     }
   ]
 }
