@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-05T05:32:49.984987+00:00",
+  "lastUpdated": "2026-06-06T05:23:49.286661+00:00",
   "items": [
+    {
+      "id": "28c039343bc1fb2b",
+      "headline": "UN calls for AI regulation amidst expanding environmental footprint by daily use",
+      "url": "https://www.jurist.org/news/2026/06/un-calls-for-ai-regulation-amidst-expanding-environmental-footprint-by-daily-use/",
+      "source": "Jurist",
+      "country": "US",
+      "publishedAt": "2026-06-05 16:15:09",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "1631833eea2f8888",
+      "headline": "Wenzhou International Design Biennial Launches Global Call for Entries, Focusing on AI and Urban Innovation",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-5-wenzhou-international-design-biennial-launches-global-call-for-entries-focusing-on-ai-and-urban-innovation",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-06-05 15:53:10",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "01a367cdbd5ee2af",
+      "headline": "Xpeng’s AI chief explains why ‘language is poison’ for autonomous driving",
+      "url": "https://electrek.co/2026/06/05/xpeng-vla-interview-cvpr-language-poison-tesla-fsd/",
+      "source": "Electrek",
+      "country": "US",
+      "publishedAt": "2026-06-05 13:58:04",
+      "relevanceScore": 0.08
+    },
     {
       "id": "f713b87b89d1aa13",
       "headline": "Homeland Security Secretary Mullin defends CISA’s current work, while teasing more to come",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-05-31 04:51:54",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "50da592138ed88f1",
-      "headline": "I helped design the system that brought down ISIS financing. I’ve got an AI governance idea the Pope and Anthropic...",
-      "url": "https://fortune.com/2026/05/30/ai-governance-pope-leo-anthropic-fatf-framework-shlomit-wagman/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-05-30 09:05:00",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "b82a41d8b6fd7bcc",
-      "headline": "EU drafts new tech package to cut US and China ties",
-      "url": "https://headtopics.com/news/eu-drafts-new-tech-package-to-cut-us-and-china-ties-83935068",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-05-30 07:35:56",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5f44742852cbaa62",
-      "headline": "5/29/26 National Security and Korean News and Commentary",
-      "url": "https://smallwarsjournal.com/2026/05/29/5-29-26-national-security-and-korean-news-and-commentary/",
-      "source": "Small Wars Journal",
-      "country": "US",
-      "publishedAt": "2026-05-29 20:04:32",
-      "relevanceScore": 0.08
     }
   ]
 }
