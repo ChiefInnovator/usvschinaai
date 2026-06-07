@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-06-06T05:23:49.286661+00:00",
+  "lastUpdated": "2026-06-07T05:37:08.337361+00:00",
   "items": [
+    {
+      "id": "f69ad2cbae8d96b7",
+      "headline": "Anthropic is blacklisted by the Pentagon and being used by the NSA at the same time",
+      "url": "https://www.techspot.com/news/112677-nsa-using-anthropic-claude-mythos-offensive-cyber-ops.html",
+      "source": "Techspot",
+      "country": "US",
+      "publishedAt": "2026-06-06 17:04:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "ad1b4d1ac2d81675",
+      "headline": "Anthropic deploys engineers to help NSA use AI model for offensive cyber operations",
+      "url": "https://completeaitraining.com/news/anthropic-deploys-engineers-to-help-nsa-use-ai-model-for/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-06-06 11:54:53",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "8edc0441a0c7c01d",
+      "headline": "Nvidia CEO Jensen Huang Says AI Job Losses Are Complete Nonsense. He’s Betting on a Hiring Surge Instead.",
+      "url": "https://247wallst.com/investing/2026/06/06/nvidia-ceo-jensen-huang-says-ai-job-losses-are-complete-nonsense-hes-betting-on-a-hiring-surge-instead/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-06-06 11:04:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "42b70be650e392bb",
+      "headline": "GenOptima Leads 2026 Ranking of Chinese AI Search Visibility Providers for DeepSeek Kimi Doubao and Qwen",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-6-genoptima-leads-2026-ranking-of-chinese-ai-search-visibility-providers-for-deepseek-kimi-doubao-and-qwen",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-06-06 00:01:00",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "cb23dd6bce2ba4ab",
+      "headline": "GenOptima Separates DeepSeek Optimization from Broader China AI Visibility",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-6-genoptima-separates-deepseek-optimization-from-broader-china-ai-visibility",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-06-06 00:00:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "1d558ad6af494bbd",
+      "headline": "What smart people are saying about Anthropic suggesting a global AI pause",
+      "url": "https://www.businessinsider.com/anthropic-ai-pause-reactions-response-2026-6",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-06-05 21:54:31",
+      "relevanceScore": 0.15
+    },
     {
       "id": "28c039343bc1fb2b",
       "headline": "UN calls for AI regulation amidst expanding environmental footprint by daily use",
@@ -126,60 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-01 15:57:07",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "411202c9a99eefe7",
-      "headline": "Nvidia launches AI chip for personal computers as it enters consumer market",
-      "url": "https://completeaitraining.com/news/nvidia-launches-ai-chip-for-personal-computers-as-it-enters/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-06-01 11:39:32",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "e9d34700735ccf29",
-      "headline": "US Moves to Block Chinese Companies Accessing AI Chips Through Affiliates Outside China",
-      "url": "https://www.theepochtimes.com/tech/us-moves-to-block-chinese-companies-accessing-ai-chips-through-affiliates-outside-china-6041278",
-      "source": "The Epoch Times",
-      "country": "CN",
-      "publishedAt": "2026-06-01 11:01:36",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "c8434fd428753f03",
-      "headline": "Pentagon Battles To Deploy AI For Military Despite Clamor For Guardrails",
-      "url": "https://www.ibtimes.com/pentagon-battles-deploy-ai-military-despite-clamor-guardrails-3803550",
-      "source": "International Business Times",
-      "country": "US",
-      "publishedAt": "2026-05-31 16:14:09",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "35b52de2dc003855",
-      "headline": "AI: Digital to Physical | BEYOND Expo 2026 Leads Transformative Global Direction of Tech",
-      "url": "https://en.prnasia.com/story/535164-0.shtml",
-      "source": "Pr Newswire Apac",
-      "country": "CN",
-      "publishedAt": "2026-05-31 06:32:00",
-      "relevanceScore": 0.32
-    },
-    {
-      "id": "b43ccbc6a9e5d3fd",
-      "headline": "Top Generative Engine Optimization Agencies for USA Brands in 2026: Concise Vendor Shortlist",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-31-top-generative-engine-optimization-agencies-for-usa-brands-in-2026-concise-vendor-shortlist",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-05-31 05:02:49",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "c2834a77213d5e29",
-      "headline": "13 Best Generative Engine Optimization (GEO) Agencies for USA Brands in 2026: Multi-Engine Coverage Edition",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-5-31-13-best-generative-engine-optimization-geo-agencies-for-usa-brands-in-2026-multi-engine-coverage-edition",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-05-31 04:51:54",
-      "relevanceScore": 1.0
     }
   ]
 }
