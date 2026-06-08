@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-07T05:37:08.337361+00:00",
+  "lastUpdated": "2026-06-08T05:39:42.039195+00:00",
   "items": [
+    {
+      "id": "10a18e1030c3ce27",
+      "headline": "DeepSeek's Popular AI App Is Explicitly Sending US Data to China",
+      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/deepseeks-popular-ai-app-is-explicitly-sending-us-data-to-china-sn_5075411/",
+      "source": "Shotoe Nigeria",
+      "country": "CN",
+      "publishedAt": "2026-06-07 00:00:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "30313621b0652a30",
+      "headline": "DeepSeek AI app ▷ DeepSeek's Popular AI App Is Explicitly... ▷ Shotoe Nigeria",
+      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/",
+      "source": "Shotoe Nigeria",
+      "country": "CN",
+      "publishedAt": "2026-06-07 00:00:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "8ca804a1f0d65bc7",
+      "headline": "Guest Column: Wyoming Should Not Fear Artificial Intelligence Or Data Centers",
+      "url": "https://cowboystatedaily.com/2026/06/07/guest-column-wyoming-should-not-fear-artificial-intelligence-or-data-centers/",
+      "source": "Cowboy State Daily",
+      "country": "US",
+      "publishedAt": "2026-06-07 00:00:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "f69ad2cbae8d96b7",
       "headline": "Anthropic is blacklisted by the Pentagon and being used by the NSA at the same time",
@@ -152,33 +179,6 @@
       "source": "Financialcontent",
       "country": "US",
       "publishedAt": "2026-06-02 15:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7a50fe44f4d8dbfe",
-      "headline": "Stacked & Tracked: A Data Center Primer (Video)",
-      "url": "https://beforeitsnews.com/u-s-politics/2026/06/stacked-tracked-a-data-center-primer-video-2629154.html",
-      "source": "Beforeitsnews",
-      "country": "US",
-      "publishedAt": "2026-06-02 14:50:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "487923d791572f33",
-      "headline": "Bernie Sanders has launched a war against AI and robotics",
-      "url": "https://us.headtopics.com/news/bernie-sanders-has-launched-a-war-against-ai-and-robotics-84008553",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-06-01 16:06:06",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "10e286c86661b1e1",
-      "headline": "US moves to close potential AI chip sales loophole",
-      "url": "https://thehill.com/policy/technology/5903991-us-moves-to-close-potential-ai-chip-sales-loophole/",
-      "source": "The Hill",
-      "country": "Both",
-      "publishedAt": "2026-06-01 15:57:07",
       "relevanceScore": 0.08
     }
   ]
