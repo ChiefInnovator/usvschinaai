@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-08T05:39:42.039195+00:00",
+  "lastUpdated": "2026-06-09T05:27:36.270028+00:00",
   "items": [
+    {
+      "id": "e53b5c916bb53310",
+      "headline": "Anthropic calls for global pause on powerful AI development, citing risks of systems escaping human control",
+      "url": "https://completeaitraining.com/news/anthropic-calls-for-global-pause-on-powerful-ai-development/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-06-08 16:31:16",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "dcd375162af3baeb",
+      "headline": "What's Going On With NVIDIA Stock Monday?",
+      "url": "https://www.benzinga.com/markets/tech/26/06/53064064/whats-going-on-with-nvidia-stock-monday-5",
+      "source": "Benzinga",
+      "country": "US",
+      "publishedAt": "2026-06-08 15:48:49",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "9ecf4c3ad6938f4a",
+      "headline": "From Washington to Veldhoven: Leveraging AI chokepoints to Counter China",
+      "url": "https://cepa.org/event-summary/from-washington-to-veldhoven-leveraging-ai-chokepoints-to-counter-china/",
+      "source": "Cepa",
+      "country": "CN",
+      "publishedAt": "2026-06-08 13:56:21",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "6408bd0a8c9f1a3c",
+      "headline": "NVIDIA RTX Spark Mini PCs Arrive at Computex 2026 — Could They Replace Traditional Desktops?",
+      "url": "https://www.gizmochina.com/2026/06/08/nvidia-rtx-spark-mini-pcs-computex-2026/",
+      "source": "Gizmochina",
+      "country": "CN",
+      "publishedAt": "2026-06-08 13:02:05",
+      "relevanceScore": 0.08
+    },
     {
       "id": "10a18e1030c3ce27",
       "headline": "DeepSeek's Popular AI App Is Explicitly Sending US Data to China",
@@ -143,42 +179,6 @@
       "source": "Phys.org",
       "country": "US",
       "publishedAt": "2026-06-03 14:00:01",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "58c4214ece510975",
-      "headline": "AP Business SummaryBrief at 9:33 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-business-summarybrief-at-9-33-a-m-edt/article_c916ed0f-a5e5-5853-9a4c-443620b516c9.html",
-      "source": "Postregister",
-      "country": "US",
-      "publishedAt": "2026-06-03 13:33:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "076235949cfdee32",
-      "headline": "Trump signs order allowing AI companies to give government access to models before release",
-      "url": "https://www.france24.com/en/americas/20260602-trump-signs-order-allowing-ai-companies-to-give-government-access-to-models-before-release",
-      "source": "France 24",
-      "country": "US",
-      "publishedAt": "2026-06-02 17:26:25",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "a28c6ee0c64e89f9",
-      "headline": "Trump privately signs scaled-back AI executive order that cuts down a voluntary review period",
-      "url": "https://www.businessinsider.com/trump-signs-scaled-back-ai-executive-order-anthropic-mythos-2026-6",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-06-02 16:46:32",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "578cbba71ca44912",
-      "headline": "Center for AI Safety Names Former xAI Leader Devin Kim President and Establishes Frontier Security Institute in...",
-      "url": "https://www.financialcontent.com/article/bizwire-2026-6-2-center-for-ai-safety-names-former-xai-leader-devin-kim-president-and-establishes-frontier-security-institute-in-major-expansion-of-leadership-and-reach",
-      "source": "Financialcontent",
-      "country": "US",
-      "publishedAt": "2026-06-02 15:00:00",
       "relevanceScore": 0.08
     }
   ]
