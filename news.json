@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-06-09T05:27:36.270028+00:00",
+  "lastUpdated": "2026-06-10T05:33:41.215241+00:00",
   "items": [
+    {
+      "id": "9e70e271fcbafb33",
+      "headline": "Smart Mold presents new software at PLAST 2026",
+      "url": "https://www.recyclingtoday.com/smart-mold-present-new-software-aria-at-plast",
+      "source": "Recycling Today",
+      "country": "US",
+      "publishedAt": "2026-06-09 16:28:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f3e02b0914dc6504",
+      "headline": "With The SpaceX IPO Imminent, Nvidia And Tesla Accelerate The Race For Physical AI",
+      "url": "https://www.forbes.com/sites/drewbernstein/2026/06/09/with-the-spacex-ipo-imminent-nvidia-tesla-unitree-and-the-global-race-for-physical-ai/",
+      "source": "Forbes",
+      "country": "CN",
+      "publishedAt": "2026-06-09 14:11:24",
+      "relevanceScore": 0.08
+    },
     {
       "id": "e53b5c916bb53310",
       "headline": "Anthropic calls for global pause on powerful AI development, citing risks of systems escaping human control",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-04 15:37:23",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "f5769f25ceb30e73",
-      "headline": "Labour’s AI investment plan will trash environment",
-      "url": "https://socialistworker.co.uk/labour/labours-ai-investment-plan-will-trash-environment/",
-      "source": "Socialist Worker",
-      "country": "US",
-      "publishedAt": "2026-06-03 17:08:45",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "a74c8bc9e0c01c22",
-      "headline": "Rising emissions, depleting water and vanishing land: AI is threatening natural resources for billions, say scientists",
-      "url": "https://phys.org/news/2026-06-emissions-depleting-ai-threatening-natural.html",
-      "source": "Phys.org",
-      "country": "US",
-      "publishedAt": "2026-06-03 14:00:01",
-      "relevanceScore": 0.08
     }
   ]
 }
