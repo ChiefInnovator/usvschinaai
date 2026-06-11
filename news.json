@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-10T05:33:41.215241+00:00",
+  "lastUpdated": "2026-06-11T05:38:29.686490+00:00",
   "items": [
+    {
+      "id": "ec75bf634e610ce9",
+      "headline": "NEURA Robotics Announces Record Series C of up to $1.4 Billion to Accelerate the World’s Leading Physical AI...",
+      "url": "http://www.roboticstomorrow.com/news/2026/06/10/neura-robotics-announces-record-series-c-of-up-to-14-billion-to-accelerate-the-worlds-leading-physical-ai-platform/26697",
+      "source": "Roboticstomorrow",
+      "country": "US",
+      "publishedAt": "2026-06-10 16:58:21",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "29f5a2ff02dea004",
+      "headline": "The MacRumors Show: Siri AI, Apple Intelligence in Apps, and More at WWDC 2026",
+      "url": "https://www.macrumors.com/2026/06/10/the-macrumors-show-siri-ai-wwdc-2026/",
+      "source": "Mac Rumors",
+      "country": "Both",
+      "publishedAt": "2026-06-10 16:41:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "3395da1f611cbeec",
+      "headline": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
+      "url": "https://www.cnbc.com/2026/06/10/neura-robotics-funding-ai-humanoid-robots.html",
+      "source": "Cnbc",
+      "country": "US",
+      "publishedAt": "2026-06-10 15:56:49",
+      "relevanceScore": 0.08
+    },
     {
       "id": "9e70e271fcbafb33",
       "headline": "Smart Mold presents new software at PLAST 2026",
@@ -153,33 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-05 15:53:10",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "01a367cdbd5ee2af",
-      "headline": "Xpeng’s AI chief explains why ‘language is poison’ for autonomous driving",
-      "url": "https://electrek.co/2026/06/05/xpeng-vla-interview-cvpr-language-poison-tesla-fsd/",
-      "source": "Electrek",
-      "country": "US",
-      "publishedAt": "2026-06-05 13:58:04",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f713b87b89d1aa13",
-      "headline": "Homeland Security Secretary Mullin defends CISA’s current work, while teasing more to come",
-      "url": "https://insidecybersecurity.com/daily-news/homeland-security-secretary-mullin-defends-cisa-s-current-work-while-teasing-more-come",
-      "source": "Insidecybersecurity",
-      "country": "CN",
-      "publishedAt": "2026-06-04 16:40:01",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "3e8c5a64cb0cf70f",
-      "headline": "US Firms Try DeepSeek as Silicon Valley AI Costs Rise",
-      "url": "https://www.techrepublic.com/article/news-us-firms-try-deepseek-ai-costs-rise/",
-      "source": "Techrepublic",
-      "country": "CN",
-      "publishedAt": "2026-06-04 15:37:23",
-      "relevanceScore": 0.3
     }
   ]
 }
