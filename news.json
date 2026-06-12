@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-11T05:38:29.686490+00:00",
+  "lastUpdated": "2026-06-12T05:39:32.580508+00:00",
   "items": [
+    {
+      "id": "a9c5527196857765",
+      "headline": "Anthropic CEO Dario Amodei calls for stronger regulation of AI: Exclusive",
+      "url": "https://us.headtopics.com/news/anthropic-ceo-dario-amodei-calls-for-stronger-regulation-of-84392316",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-06-11 13:36:41",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "bbb53b5afe0f2e4d",
+      "headline": "OpenAI says China-linked accounts used ChatGPT to turn Americans against data centers",
+      "url": "https://www.techspot.com/news/112732-openai-china-linked-accounts-used-chatgpt-turn-americans.html",
+      "source": "Techspot",
+      "country": "Both",
+      "publishedAt": "2026-06-11 13:23:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "f8ea0903555810b4",
+      "headline": "Why Orbital Data Centers Are Harder Than Silicon Valley Thinks",
+      "url": "https://spectrum.ieee.org/orbital-data-centers-heat",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-06-11 13:00:02",
+      "relevanceScore": 0.62
+    },
+    {
+      "id": "bd32fbfee80ae12f",
+      "headline": "12 biggest Apple WWDC 2026 takeaways you need to know",
+      "url": "https://www.foxnews.com/tech/12-biggest-apple-wwdc-2026-takeaways-need-know",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-06-11 12:47:59",
+      "relevanceScore": 0.15
+    },
     {
       "id": "ec75bf634e610ce9",
       "headline": "NEURA Robotics Announces Record Series C of up to $1.4 Billion to Accelerate the World’s Leading Physical AI...",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-06 00:01:00",
       "relevanceScore": 0.45
-    },
-    {
-      "id": "cb23dd6bce2ba4ab",
-      "headline": "GenOptima Separates DeepSeek Optimization from Broader China AI Visibility",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-6-genoptima-separates-deepseek-optimization-from-broader-china-ai-visibility",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-06-06 00:00:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "1d558ad6af494bbd",
-      "headline": "What smart people are saying about Anthropic suggesting a global AI pause",
-      "url": "https://www.businessinsider.com/anthropic-ai-pause-reactions-response-2026-6",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-06-05 21:54:31",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "28c039343bc1fb2b",
-      "headline": "UN calls for AI regulation amidst expanding environmental footprint by daily use",
-      "url": "https://www.jurist.org/news/2026/06/un-calls-for-ai-regulation-amidst-expanding-environmental-footprint-by-daily-use/",
-      "source": "Jurist",
-      "country": "US",
-      "publishedAt": "2026-06-05 16:15:09",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "1631833eea2f8888",
-      "headline": "Wenzhou International Design Biennial Launches Global Call for Entries, Focusing on AI and Urban Innovation",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-5-wenzhou-international-design-biennial-launches-global-call-for-entries-focusing-on-ai-and-urban-innovation",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-06-05 15:53:10",
-      "relevanceScore": 0.16
     }
   ]
 }
