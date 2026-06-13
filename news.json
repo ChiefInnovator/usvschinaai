@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-12T05:39:32.580508+00:00",
+  "lastUpdated": "2026-06-13T05:34:20.944815+00:00",
   "items": [
+    {
+      "id": "f52ffbb9fd10958f",
+      "headline": "Claude Fable 5 secretly throttled AI researchers, and the internet went wild",
+      "url": "https://www.zdnet.com/article/claude-fable-5-secretly-throttled/",
+      "source": "Zdnet",
+      "country": "US",
+      "publishedAt": "2026-06-12 17:03:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "e3dfd66391c55816",
+      "headline": "Nvidia Is Telling Chinese Customers It Could Be Ready to Sell Them More Advanced AI Chips Soon",
+      "url": "https://www.investopedia.com/nvidia-is-telling-chinese-customers-it-could-be-ready-to-sell-them-more-advanced-ai-chips-soon-nvda-11996472",
+      "source": "Investopedia",
+      "country": "CN",
+      "publishedAt": "2026-06-12 15:18:27",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "4426bb24173467e6",
+      "headline": "AI can now detect whale calls with 96% accuracy",
+      "url": "https://www.earth.com/news/ai-can-now-detect-whale-calls-with-96-accuracy/",
+      "source": "Earth.com",
+      "country": "US",
+      "publishedAt": "2026-06-12 14:56:11",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ab916a3c746f2f21",
+      "headline": "Fox News AI Newsletter: Top 12 takeaways from Apple's new AI features",
+      "url": "https://www.foxnews.com/tech/ai-newsletter-top-12-takeaways-apple-new-ai-features",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-06-12 14:13:29",
+      "relevanceScore": 0.15
+    },
     {
       "id": "a9c5527196857765",
       "headline": "Anthropic CEO Dario Amodei calls for stronger regulation of AI: Exclusive",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-07 00:00:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "f69ad2cbae8d96b7",
-      "headline": "Anthropic is blacklisted by the Pentagon and being used by the NSA at the same time",
-      "url": "https://www.techspot.com/news/112677-nsa-using-anthropic-claude-mythos-offensive-cyber-ops.html",
-      "source": "Techspot",
-      "country": "US",
-      "publishedAt": "2026-06-06 17:04:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "ad1b4d1ac2d81675",
-      "headline": "Anthropic deploys engineers to help NSA use AI model for offensive cyber operations",
-      "url": "https://completeaitraining.com/news/anthropic-deploys-engineers-to-help-nsa-use-ai-model-for/",
-      "source": "Complete Ai Training",
-      "country": "Both",
-      "publishedAt": "2026-06-06 11:54:53",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "8edc0441a0c7c01d",
-      "headline": "Nvidia CEO Jensen Huang Says AI Job Losses Are Complete Nonsense. He’s Betting on a Hiring Surge Instead.",
-      "url": "https://247wallst.com/investing/2026/06/06/nvidia-ceo-jensen-huang-says-ai-job-losses-are-complete-nonsense-hes-betting-on-a-hiring-surge-instead/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-06-06 11:04:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "42b70be650e392bb",
-      "headline": "GenOptima Leads 2026 Ranking of Chinese AI Search Visibility Providers for DeepSeek Kimi Doubao and Qwen",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-6-genoptima-leads-2026-ranking-of-chinese-ai-search-visibility-providers-for-deepseek-kimi-doubao-and-qwen",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-06-06 00:01:00",
-      "relevanceScore": 0.45
     }
   ]
 }
