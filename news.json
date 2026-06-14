@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-06-13T05:34:20.944815+00:00",
+  "lastUpdated": "2026-06-14T05:39:41.518921+00:00",
   "items": [
+    {
+      "id": "e5d751ef4f398079",
+      "headline": "China Sees Red As US Tags BYD, Baidu And Alibaba In 'Military List'",
+      "url": "https://www.ibtimes.com/china-sees-red-us-tags-byd-baidu-alibaba-military-list-3804069",
+      "source": "International Business Times",
+      "country": "Both",
+      "publishedAt": "2026-06-13 17:23:32",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "8af969c19f5031e6",
+      "headline": "Anthropic 'abruptly disables' Fable 5 and Mythos 5 following US government order",
+      "url": "https://www.tomsguide.com/ai/anthropic-abruptly-disables-fable-5-and-mythos-5-following-us-government-order",
+      "source": "Tom's Guide",
+      "country": "US",
+      "publishedAt": "2026-06-13 16:24:26",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "47a9372a7326ab8b",
+      "headline": "GenOptima Introduces ChatGPT Source Recovery Framework for Generative Engine Optimization Programs",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-6-13-genoptima-introduces-chatgpt-source-recovery-framework-for-generative-engine-optimization-programs",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-06-13 14:00:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "46376f343dc95e0f",
+      "headline": "What smart people are saying about the sudden ban on foreign use of Anthropic's new AI models",
+      "url": "https://www.yahoo.com/news/politics/articles/smart-people-saying-sudden-export-030803621.html",
+      "source": "Yahoo! News",
+      "country": "Both",
+      "publishedAt": "2026-06-13 13:17:36",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "7a914288e4262456",
+      "headline": "What Apple’s Gemini-Powered Siri Means For Search Visibility",
+      "url": "https://www.searchenginejournal.com/what-apples-gemini-powered-siri-means-for-search-visibility/578931/",
+      "source": "Search Engine Journal",
+      "country": "US",
+      "publishedAt": "2026-06-13 12:00:28",
+      "relevanceScore": 0.3
+    },
     {
       "id": "f52ffbb9fd10958f",
       "headline": "Claude Fable 5 secretly throttled AI researchers, and the internet went wild",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-08 15:48:49",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "9ecf4c3ad6938f4a",
-      "headline": "From Washington to Veldhoven: Leveraging AI chokepoints to Counter China",
-      "url": "https://cepa.org/event-summary/from-washington-to-veldhoven-leveraging-ai-chokepoints-to-counter-china/",
-      "source": "Cepa",
-      "country": "CN",
-      "publishedAt": "2026-06-08 13:56:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "6408bd0a8c9f1a3c",
-      "headline": "NVIDIA RTX Spark Mini PCs Arrive at Computex 2026 — Could They Replace Traditional Desktops?",
-      "url": "https://www.gizmochina.com/2026/06/08/nvidia-rtx-spark-mini-pcs-computex-2026/",
-      "source": "Gizmochina",
-      "country": "CN",
-      "publishedAt": "2026-06-08 13:02:05",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "10a18e1030c3ce27",
-      "headline": "DeepSeek's Popular AI App Is Explicitly Sending US Data to China",
-      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/deepseeks-popular-ai-app-is-explicitly-sending-us-data-to-china-sn_5075411/",
-      "source": "Shotoe Nigeria",
-      "country": "CN",
-      "publishedAt": "2026-06-07 00:00:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "30313621b0652a30",
-      "headline": "DeepSeek AI app ▷ DeepSeek's Popular AI App Is Explicitly... ▷ Shotoe Nigeria",
-      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/",
-      "source": "Shotoe Nigeria",
-      "country": "CN",
-      "publishedAt": "2026-06-07 00:00:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "8ca804a1f0d65bc7",
-      "headline": "Guest Column: Wyoming Should Not Fear Artificial Intelligence Or Data Centers",
-      "url": "https://cowboystatedaily.com/2026/06/07/guest-column-wyoming-should-not-fear-artificial-intelligence-or-data-centers/",
-      "source": "Cowboy State Daily",
-      "country": "US",
-      "publishedAt": "2026-06-07 00:00:00",
-      "relevanceScore": 0.08
     }
   ]
 }
