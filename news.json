@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-06-14T05:39:41.518921+00:00",
+  "lastUpdated": "2026-06-15T05:40:42.191035+00:00",
   "items": [
+    {
+      "id": "a895a37ecffb547e",
+      "headline": "Trump's Ban On Foreign Access To New Anthropic Models Sparks Tech Backlash",
+      "url": "https://www.newsweek.com/trumps-ban-on-foreign-access-to-new-anthropic-models-sparks-tech-backlash-12070846",
+      "source": "Newsweek",
+      "country": "US",
+      "publishedAt": "2026-06-14 11:04:33",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "b5f283db0f402067",
+      "headline": "I got laid off from Meta at 24. It's making me see that I could live a different life.",
+      "url": "https://www.businessinsider.com/data-scientist-meta-layoff-rethinking-career-path-2026-6",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-06-14 09:45:01",
+      "relevanceScore": 0.15
+    },
     {
       "id": "e5d751ef4f398079",
       "headline": "China Sees Red As US Tags BYD, Baidu And Alibaba In 'Military List'",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-09 14:11:24",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "e53b5c916bb53310",
-      "headline": "Anthropic calls for global pause on powerful AI development, citing risks of systems escaping human control",
-      "url": "https://completeaitraining.com/news/anthropic-calls-for-global-pause-on-powerful-ai-development/",
-      "source": "Complete Ai Training",
-      "country": "Both",
-      "publishedAt": "2026-06-08 16:31:16",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "dcd375162af3baeb",
-      "headline": "What's Going On With NVIDIA Stock Monday?",
-      "url": "https://www.benzinga.com/markets/tech/26/06/53064064/whats-going-on-with-nvidia-stock-monday-5",
-      "source": "Benzinga",
-      "country": "US",
-      "publishedAt": "2026-06-08 15:48:49",
-      "relevanceScore": 0.24
     }
   ]
 }
