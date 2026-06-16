@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-15T05:40:42.191035+00:00",
+  "lastUpdated": "2026-06-16T05:40:16.359944+00:00",
   "items": [
+    {
+      "id": "9e3d05d82f411724",
+      "headline": "The Claude Fable ban highlights a practical AI lesson",
+      "url": "https://www.pcworld.com/article/3165989/the-claude-fable-ban-highlights-a-practical-ai-lesson.html",
+      "source": "Pcworld",
+      "country": "Both",
+      "publishedAt": "2026-06-15 16:26:57",
+      "relevanceScore": 0.83
+    },
+    {
+      "id": "3eff818c9d2b6601",
+      "headline": "Forget Buying Nvidia. This Overlooked ETF Beat the Nasdaq by Owning the AI Stocks You Can’t",
+      "url": "https://247wallst.com/investing/2026/06/15/forget-buying-nvidia-this-overlooked-etf-beat-the-nasdaq-by-owning-the-ai-stocks-you-cant/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-06-15 14:04:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "3642e026f53e9768",
+      "headline": "163 Blog Posts To Learn About Seo Tips",
+      "url": "https://hackernoon.com/163-blog-posts-to-learn-about-seo-tips",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-15 14:00:43",
+      "relevanceScore": 0.91
+    },
     {
       "id": "a895a37ecffb547e",
       "headline": "Trump's Ban On Foreign Access To New Anthropic Models Sparks Tech Backlash",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-10 16:41:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "3395da1f611cbeec",
-      "headline": "Humaniod robotics company raises up to $1.4 billion from Nvidia, Amazon and others",
-      "url": "https://www.cnbc.com/2026/06/10/neura-robotics-funding-ai-humanoid-robots.html",
-      "source": "Cnbc",
-      "country": "US",
-      "publishedAt": "2026-06-10 15:56:49",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "9e70e271fcbafb33",
-      "headline": "Smart Mold presents new software at PLAST 2026",
-      "url": "https://www.recyclingtoday.com/smart-mold-present-new-software-aria-at-plast",
-      "source": "Recycling Today",
-      "country": "US",
-      "publishedAt": "2026-06-09 16:28:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f3e02b0914dc6504",
-      "headline": "With The SpaceX IPO Imminent, Nvidia And Tesla Accelerate The Race For Physical AI",
-      "url": "https://www.forbes.com/sites/drewbernstein/2026/06/09/with-the-spacex-ipo-imminent-nvidia-tesla-unitree-and-the-global-race-for-physical-ai/",
-      "source": "Forbes",
-      "country": "CN",
-      "publishedAt": "2026-06-09 14:11:24",
-      "relevanceScore": 0.08
     }
   ]
 }
