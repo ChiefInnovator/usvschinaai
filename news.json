@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-06-16T05:40:16.359944+00:00",
+  "lastUpdated": "2026-06-18T05:38:15.478048+00:00",
   "items": [
+    {
+      "id": "17808cbbe3a38931",
+      "headline": "Alibaba unveils AI brains designed to power next generation of robots",
+      "url": "https://us.headtopics.com/news/alibaba-unveils-ai-brains-designed-to-power-next-generation-84617904",
+      "source": "Headtopics",
+      "country": "CN",
+      "publishedAt": "2026-06-17 16:07:06",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "948f7515ec38fa4b",
+      "headline": "Nvidia’s Twin Growth Engines: Edge AI and Sovereign Ambitions Collide with Physical Reality",
+      "url": "https://www.newscase.com/nvidias-twin-growth-engines-edge-ai-and-sovereign-ambitions-collide-with-physical-reality/",
+      "source": "Newscase",
+      "country": "US",
+      "publishedAt": "2026-06-17 15:51:04",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "df510713a927142e",
+      "headline": "China’s Alibaba unveils AI brains designed to power the next generation of robots",
+      "url": "https://interestingengineering.com/ai-robotics/china-alibaba-next-generation-of-robots",
+      "source": "Interesting Engineering",
+      "country": "CN",
+      "publishedAt": "2026-06-17 15:39:43",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "46c8caba6a909aaf",
+      "headline": "The Latest: Trump and G7 leaders discuss future of AI on last day of summit",
+      "url": "https://lufkindailynews.com/anpa/us/the-latest-trump-and-g7-leaders-discuss-future-of-ai-on-last-day-of-summit/article_f40d6b0c-4e61-5936-8ea1-cc7da259cf53.html",
+      "source": "Lufkindailynews",
+      "country": "US",
+      "publishedAt": "2026-06-17 14:38:30",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "9ad7819b2507a593",
+      "headline": "Man vs. Machine: 7th-Gen COFE+ Robotic Café Outperforms Elite Baristas in Historic Live Showdown",
+      "url": "https://www.prnewswire.com/news-releases/man-vs-machine-7th-gen-cofe-robotic-cafe-outperforms-elite-baristas-in-historic-live-showdown-302802817.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-06-17 13:30:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f14b3fc28bb4c974",
+      "headline": "The biggest winners and losers from US restrictions on Anthropic's AI",
+      "url": "https://www.businessinsider.com/anthropic-restrictions-mythos-fable-winners-losers-mistral-deepseek-openai-china-2026-6",
+      "source": "Business Insider",
+      "country": "Both",
+      "publishedAt": "2026-06-17 12:39:43",
+      "relevanceScore": 0.45
+    },
     {
       "id": "9e3d05d82f411724",
       "headline": "The Claude Fable ban highlights a practical AI lesson",
@@ -126,60 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-12 14:13:29",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "a9c5527196857765",
-      "headline": "Anthropic CEO Dario Amodei calls for stronger regulation of AI: Exclusive",
-      "url": "https://us.headtopics.com/news/anthropic-ceo-dario-amodei-calls-for-stronger-regulation-of-84392316",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-06-11 13:36:41",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "bbb53b5afe0f2e4d",
-      "headline": "OpenAI says China-linked accounts used ChatGPT to turn Americans against data centers",
-      "url": "https://www.techspot.com/news/112732-openai-china-linked-accounts-used-chatgpt-turn-americans.html",
-      "source": "Techspot",
-      "country": "Both",
-      "publishedAt": "2026-06-11 13:23:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "f8ea0903555810b4",
-      "headline": "Why Orbital Data Centers Are Harder Than Silicon Valley Thinks",
-      "url": "https://spectrum.ieee.org/orbital-data-centers-heat",
-      "source": "Ieee Spectrum - Robotics",
-      "country": "Both",
-      "publishedAt": "2026-06-11 13:00:02",
-      "relevanceScore": 0.62
-    },
-    {
-      "id": "bd32fbfee80ae12f",
-      "headline": "12 biggest Apple WWDC 2026 takeaways you need to know",
-      "url": "https://www.foxnews.com/tech/12-biggest-apple-wwdc-2026-takeaways-need-know",
-      "source": "Fox News",
-      "country": "US",
-      "publishedAt": "2026-06-11 12:47:59",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "ec75bf634e610ce9",
-      "headline": "NEURA Robotics Announces Record Series C of up to $1.4 Billion to Accelerate the World’s Leading Physical AI...",
-      "url": "http://www.roboticstomorrow.com/news/2026/06/10/neura-robotics-announces-record-series-c-of-up-to-14-billion-to-accelerate-the-worlds-leading-physical-ai-platform/26697",
-      "source": "Roboticstomorrow",
-      "country": "US",
-      "publishedAt": "2026-06-10 16:58:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "29f5a2ff02dea004",
-      "headline": "The MacRumors Show: Siri AI, Apple Intelligence in Apps, and More at WWDC 2026",
-      "url": "https://www.macrumors.com/2026/06/10/the-macrumors-show-siri-ai-wwdc-2026/",
-      "source": "Mac Rumors",
-      "country": "Both",
-      "publishedAt": "2026-06-10 16:41:00",
-      "relevanceScore": 0.3
     }
   ]
 }
