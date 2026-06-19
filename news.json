@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-18T05:38:15.478048+00:00",
+  "lastUpdated": "2026-06-19T05:40:06.689163+00:00",
   "items": [
+    {
+      "id": "da3cde343152f4e1",
+      "headline": "ThreatsDay Bulletin: Claude Chat Abuse, NastyC2 npm Packages, Device-Code Phishing + 25 More Stories",
+      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html",
+      "source": "The Hacker News",
+      "country": "US",
+      "publishedAt": "2026-06-18 15:27:54",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "19df678ec58a7781",
+      "headline": "Scammers Now Selling Fake NVIDIA RTX Graphics Cards With Glued-Down Plastic GPUs & Scrap Memory",
+      "url": "https://wccftech.com/scammers-selling-fake-nvidia-rtx-graphics-cards-glued-plastic-gpus-scrap-memory/",
+      "source": "Wccftech",
+      "country": "US",
+      "publishedAt": "2026-06-18 15:25:21",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "205632e79860b59c",
+      "headline": "500 Blog Posts To Learn About Startup",
+      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-startup",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-18 14:00:23",
+      "relevanceScore": 1.0
+    },
     {
       "id": "17808cbbe3a38931",
       "headline": "Alibaba unveils AI brains designed to power next generation of robots",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-12 17:03:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "e3dfd66391c55816",
-      "headline": "Nvidia Is Telling Chinese Customers It Could Be Ready to Sell Them More Advanced AI Chips Soon",
-      "url": "https://www.investopedia.com/nvidia-is-telling-chinese-customers-it-could-be-ready-to-sell-them-more-advanced-ai-chips-soon-nvda-11996472",
-      "source": "Investopedia",
-      "country": "CN",
-      "publishedAt": "2026-06-12 15:18:27",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "4426bb24173467e6",
-      "headline": "AI can now detect whale calls with 96% accuracy",
-      "url": "https://www.earth.com/news/ai-can-now-detect-whale-calls-with-96-accuracy/",
-      "source": "Earth.com",
-      "country": "US",
-      "publishedAt": "2026-06-12 14:56:11",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "ab916a3c746f2f21",
-      "headline": "Fox News AI Newsletter: Top 12 takeaways from Apple's new AI features",
-      "url": "https://www.foxnews.com/tech/ai-newsletter-top-12-takeaways-apple-new-ai-features",
-      "source": "Fox News",
-      "country": "US",
-      "publishedAt": "2026-06-12 14:13:29",
-      "relevanceScore": 0.15
     }
   ]
 }
