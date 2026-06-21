@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-06-20T05:29:21.014169+00:00",
+  "lastUpdated": "2026-06-21T05:39:59.064036+00:00",
   "items": [
+    {
+      "id": "d982d9530581653a",
+      "headline": "WMS Group LLC Takes $3.32 Million Position in Taiwan Semiconductor Manufacturing Company Ltd. $TSM",
+      "url": "https://www.thelincolnianonline.com/2026/06/20/wms-group-llc-takes-3-32-million-position-in-taiwan-semiconductor-manufacturing-company-ltd-tsm.html",
+      "source": "The Lincolnian Online",
+      "country": "US",
+      "publishedAt": "2026-06-20 14:18:48",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b46cb40b0197490a",
+      "headline": "Automakers and workers face existential fight over robots, future - Sat, 20 Jun 2026 PST",
+      "url": "http://www.spokesman.com/stories/2026/jun/20/automakers-and-workers-face-existential-fight-over/",
+      "source": "Spokesman",
+      "country": "US",
+      "publishedAt": "2026-06-20 07:15:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b5bd2538252845c8",
+      "headline": "Did China Get Hold of One of ASML's EUV Chip Machines?",
+      "url": "https://hotair.com/john-s-2/2026/06/19/did-china-get-hold-of-one-of-asmls-euv-chip-machines-n3816134",
+      "source": "Hotair",
+      "country": "CN",
+      "publishedAt": "2026-06-20 00:00:20",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ea06b7d2a42d3a3c",
+      "headline": "Encryption, spyware, and now Mythos: History shows why cyber export control doesn’t work",
+      "url": "https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/",
+      "source": "Tech Crunch",
+      "country": "US",
+      "publishedAt": "2026-06-19 22:40:14",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "af3b99127264d7fd",
+      "headline": "I Read Anthropic's 40-Page AI Pause Report. It's A",
+      "url": "https://www.bundle.app/en/technology/i-read-anthropics-40-page-ai-pause-report-its-a-F8F3C3E3-BB70-43AA-9B18-FBADCD06268D",
+      "source": "Bundle",
+      "country": "US",
+      "publishedAt": "2026-06-19 22:11:59",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "c7b8dc6334bbd641",
+      "headline": "Robo firefighters, holographic assistants and universal remotes: Inside the Augmented World Expo",
+      "url": "https://headtopics.com/news/robo-firefighters-holographic-assistants-and-universal-84709680",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-06-19 22:06:26",
+      "relevanceScore": 0.15
+    },
     {
       "id": "8be6964db5583a42",
       "headline": "The Trump administration suspects an ASML chipmaking machine made it into China. ASML says that's impossible.",
@@ -126,60 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-17 12:39:43",
       "relevanceScore": 0.45
-    },
-    {
-      "id": "9e3d05d82f411724",
-      "headline": "The Claude Fable ban highlights a practical AI lesson",
-      "url": "https://www.pcworld.com/article/3165989/the-claude-fable-ban-highlights-a-practical-ai-lesson.html",
-      "source": "Pcworld",
-      "country": "Both",
-      "publishedAt": "2026-06-15 16:26:57",
-      "relevanceScore": 0.83
-    },
-    {
-      "id": "3eff818c9d2b6601",
-      "headline": "Forget Buying Nvidia. This Overlooked ETF Beat the Nasdaq by Owning the AI Stocks You Can’t",
-      "url": "https://247wallst.com/investing/2026/06/15/forget-buying-nvidia-this-overlooked-etf-beat-the-nasdaq-by-owning-the-ai-stocks-you-cant/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-06-15 14:04:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "3642e026f53e9768",
-      "headline": "163 Blog Posts To Learn About Seo Tips",
-      "url": "https://hackernoon.com/163-blog-posts-to-learn-about-seo-tips",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-15 14:00:43",
-      "relevanceScore": 0.91
-    },
-    {
-      "id": "a895a37ecffb547e",
-      "headline": "Trump's Ban On Foreign Access To New Anthropic Models Sparks Tech Backlash",
-      "url": "https://www.newsweek.com/trumps-ban-on-foreign-access-to-new-anthropic-models-sparks-tech-backlash-12070846",
-      "source": "Newsweek",
-      "country": "US",
-      "publishedAt": "2026-06-14 11:04:33",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "b5f283db0f402067",
-      "headline": "I got laid off from Meta at 24. It's making me see that I could live a different life.",
-      "url": "https://www.businessinsider.com/data-scientist-meta-layoff-rethinking-career-path-2026-6",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-06-14 09:45:01",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "e5d751ef4f398079",
-      "headline": "China Sees Red As US Tags BYD, Baidu And Alibaba In 'Military List'",
-      "url": "https://www.ibtimes.com/china-sees-red-us-tags-byd-baidu-alibaba-military-list-3804069",
-      "source": "International Business Times",
-      "country": "Both",
-      "publishedAt": "2026-06-13 17:23:32",
-      "relevanceScore": 0.15
     }
   ]
 }
