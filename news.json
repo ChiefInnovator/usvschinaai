@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-06-21T05:39:59.064036+00:00",
+  "lastUpdated": "2026-06-22T05:40:18.614855+00:00",
   "items": [
+    {
+      "id": "b7f5f41cff13a027",
+      "headline": "AI regulation is a mess, and Anthropic is caught in the crosshairs",
+      "url": "https://www.cnn.com/2026/06/21/tech/anthropic-ai-regulation",
+      "source": "Cnn",
+      "country": "US",
+      "publishedAt": "2026-06-21 16:00:26",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "e9d4bab1bff58dec",
+      "headline": "Will All New AI Models Be Classified As Military Grade?",
+      "url": "https://www.forbes.com/sites/paulbaier/2026/06/21/will-all-new-ai-models-be-classified-as-military-grade/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-06-21 14:28:43",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "036f4aa63acd9411",
+      "headline": "Foldable iPhone Ultra, Galaxy Z Fold 8, Pixel 11 and Other Phones Launching in 2026",
+      "url": "https://www.cnet.com/tech/mobile/comparing-the-2026-phone-lineups-from-apple-samsung-google-and-everyone-else/",
+      "source": "Cnet",
+      "country": "US",
+      "publishedAt": "2026-06-21 13:00:40",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "80c0639deea7c8e8",
+      "headline": "Chinese AI models raise ‘sleeper agent’ fears after report finds more vulnerable code for US users",
+      "url": "https://www.foxnews.com/politics/chinese-ai-models-raise-sleeper-agent-fears-after-report-finds-more-vulnerable-code-us-users",
+      "source": "Fox News",
+      "country": "Both",
+      "publishedAt": "2026-06-21 10:00:17",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "8aa0432bbc3aec5c",
+      "headline": "US Bill Would Mandate AI Chip Location Tracking to Thwart China and Other Adversaries",
+      "url": "https://yro.slashdot.org/story/26/06/21/065246/us-bill-would-mandate-ai-chip-location-tracking-to-thwart-china-and-other-adversaries",
+      "source": "Slashdot",
+      "country": "Both",
+      "publishedAt": "2026-06-21 00:00:00",
+      "relevanceScore": 0.16
+    },
     {
       "id": "d982d9530581653a",
       "headline": "WMS Group LLC Takes $3.32 Million Position in Taiwan Semiconductor Manufacturing Company Ltd. $TSM",
@@ -135,51 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-17 16:07:06",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "948f7515ec38fa4b",
-      "headline": "Nvidia’s Twin Growth Engines: Edge AI and Sovereign Ambitions Collide with Physical Reality",
-      "url": "https://www.newscase.com/nvidias-twin-growth-engines-edge-ai-and-sovereign-ambitions-collide-with-physical-reality/",
-      "source": "Newscase",
-      "country": "US",
-      "publishedAt": "2026-06-17 15:51:04",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "df510713a927142e",
-      "headline": "China’s Alibaba unveils AI brains designed to power the next generation of robots",
-      "url": "https://interestingengineering.com/ai-robotics/china-alibaba-next-generation-of-robots",
-      "source": "Interesting Engineering",
-      "country": "CN",
-      "publishedAt": "2026-06-17 15:39:43",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "46c8caba6a909aaf",
-      "headline": "The Latest: Trump and G7 leaders discuss future of AI on last day of summit",
-      "url": "https://lufkindailynews.com/anpa/us/the-latest-trump-and-g7-leaders-discuss-future-of-ai-on-last-day-of-summit/article_f40d6b0c-4e61-5936-8ea1-cc7da259cf53.html",
-      "source": "Lufkindailynews",
-      "country": "US",
-      "publishedAt": "2026-06-17 14:38:30",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "9ad7819b2507a593",
-      "headline": "Man vs. Machine: 7th-Gen COFE+ Robotic Café Outperforms Elite Baristas in Historic Live Showdown",
-      "url": "https://www.prnewswire.com/news-releases/man-vs-machine-7th-gen-cofe-robotic-cafe-outperforms-elite-baristas-in-historic-live-showdown-302802817.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-06-17 13:30:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f14b3fc28bb4c974",
-      "headline": "The biggest winners and losers from US restrictions on Anthropic's AI",
-      "url": "https://www.businessinsider.com/anthropic-restrictions-mythos-fable-winners-losers-mistral-deepseek-openai-china-2026-6",
-      "source": "Business Insider",
-      "country": "Both",
-      "publishedAt": "2026-06-17 12:39:43",
-      "relevanceScore": 0.45
     }
   ]
 }
