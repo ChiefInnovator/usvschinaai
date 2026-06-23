@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-22T05:40:18.614855+00:00",
+  "lastUpdated": "2026-06-23T05:25:30.004078+00:00",
   "items": [
+    {
+      "id": "56b3bca8b6487337",
+      "headline": "AI-powered cyber attacks may be just months away, warn Five Eyes",
+      "url": "https://www.computerweekly.com/news/366644997/AI-powered-cyber-attacks-may-be-just-months-away-warn-Five-Eyes",
+      "source": "Computerweekly News",
+      "country": "Both",
+      "publishedAt": "2026-06-22 16:42:00",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "16d1587d05a03c17",
+      "headline": "Power for energy-guzzling AI data centers is getting fast-tracked thanks to federal regulators",
+      "url": "https://www.fastcompany.com/91562830/power-energy-guzzling-ai-data-centers-getting-fast-tracked-thanks-federal-regulators",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-06-22 16:39:38",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7f82c4660549c444",
+      "headline": "OpenAI’s new ‘super app’ boss hopes to persuade users and potential IPO investors that the company is about way more...",
+      "url": "https://fortune.com/2026/06/22/architectural-behind-openais-super-app-says/",
+      "source": "Fortune",
+      "country": "US",
+      "publishedAt": "2026-06-22 15:46:16",
+      "relevanceScore": 0.3
+    },
     {
       "id": "b7f5f41cff13a027",
       "headline": "AI regulation is a mess, and Anthropic is caught in the crosshairs",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-18 15:27:54",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "19df678ec58a7781",
-      "headline": "Scammers Now Selling Fake NVIDIA RTX Graphics Cards With Glued-Down Plastic GPUs & Scrap Memory",
-      "url": "https://wccftech.com/scammers-selling-fake-nvidia-rtx-graphics-cards-glued-plastic-gpus-scrap-memory/",
-      "source": "Wccftech",
-      "country": "US",
-      "publishedAt": "2026-06-18 15:25:21",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "205632e79860b59c",
-      "headline": "500 Blog Posts To Learn About Startup",
-      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-startup",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-18 14:00:23",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "17808cbbe3a38931",
-      "headline": "Alibaba unveils AI brains designed to power next generation of robots",
-      "url": "https://us.headtopics.com/news/alibaba-unveils-ai-brains-designed-to-power-next-generation-84617904",
-      "source": "Headtopics",
-      "country": "CN",
-      "publishedAt": "2026-06-17 16:07:06",
-      "relevanceScore": 0.3
     }
   ]
 }
