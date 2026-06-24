@@ -1,6 +1,69 @@
 {
-  "lastUpdated": "2026-06-23T05:25:30.004078+00:00",
+  "lastUpdated": "2026-06-24T05:28:03.175457+00:00",
   "items": [
+    {
+      "id": "85c3a03e00e60f27",
+      "headline": "TSMC and Intel Race to Replace Organic Substrates With Glass & Panel-Level Packaging, as a $650M Market Expected To...",
+      "url": "https://wccftech.com/tsmc-intel-race-to-replace-organic-substrates-with-glass-panel-level-packaging-8-billion-market-by-2030/",
+      "source": "Wccftech",
+      "country": "US",
+      "publishedAt": "2026-06-23 17:15:13",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "cf657d460b381d82",
+      "headline": "US government imposes export controls on Anthropic's AI coding model",
+      "url": "https://completeaitraining.com/news/us-government-imposes-export-controls-on-anthropics-ai/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-06-23 15:27:28",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "784bf86e5b6682e2",
+      "headline": "386 Blog Posts To Learn About Venture Capital",
+      "url": "https://hackernoon.com/386-blog-posts-to-learn-about-venture-capital",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-23 14:00:11",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "821db7b36e682c75",
+      "headline": "The Download: the future of chipmaking and Anthropic’s government clash",
+      "url": "https://www.technologyreview.com/2026/06/23/1139483/the-download-chipmaking-future-asml-ai-anthropic-government-clash/",
+      "source": "Technologyreview",
+      "country": "US",
+      "publishedAt": "2026-06-23 12:10:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "7892d2c94b3cf16f",
+      "headline": "AI Is Learning to Read the Room",
+      "url": "https://spectrum.ieee.org/emotion-ai-context",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-06-23 12:00:01",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "4a02362eebc927f1",
+      "headline": "Youlife Partners with Thingo Technology to Provide AI-powered Workforce Solutions Across China",
+      "url": "https://en.prnasia.com/story/538254-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "Both",
+      "publishedAt": "2026-06-23 12:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "38d0b3c9d89118f2",
+      "headline": "Physical AI to drive private 5G market",
+      "url": "https://www.computerweekly.com/news/366645042/Physical-AI-to-drive-private-5G-market",
+      "source": "Computerweekly News",
+      "country": "CN",
+      "publishedAt": "2026-06-23 12:00:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "56b3bca8b6487337",
       "headline": "AI-powered cyber attacks may be just months away, warn Five Eyes",
@@ -116,69 +179,6 @@
       "source": "Bundle",
       "country": "US",
       "publishedAt": "2026-06-19 22:11:59",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "c7b8dc6334bbd641",
-      "headline": "Robo firefighters, holographic assistants and universal remotes: Inside the Augmented World Expo",
-      "url": "https://headtopics.com/news/robo-firefighters-holographic-assistants-and-universal-84709680",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-06-19 22:06:26",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "8be6964db5583a42",
-      "headline": "The Trump administration suspects an ASML chipmaking machine made it into China. ASML says that's impossible.",
-      "url": "https://www.techspot.com/news/112828-trump-administration-suspects-asml-chipmaking-machine-made-china.html",
-      "source": "Techspot",
-      "country": "CN",
-      "publishedAt": "2026-06-19 17:15:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "8e2896da4ba339c9",
-      "headline": "China's brain chip breakthrough raises big questions",
-      "url": "https://www.foxnews.com/tech/chinas-brain-chip-breakthrough-raises-big-questions",
-      "source": "Fox News",
-      "country": "CN",
-      "publishedAt": "2026-06-19 16:30:26",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "fcc5993a129900f9",
-      "headline": "Anthropic’s most advanced AI models could be restored shortly following dramatic emergency freeze",
-      "url": "https://www.androidauthority.com/anthropic-fable-5-ai-models-optimistic-return-3679377/",
-      "source": "Androidauthority",
-      "country": "US",
-      "publishedAt": "2026-06-19 11:43:43",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "3c6749c8e4fdd349",
-      "headline": "The Real Reason Nvidia Has Abandoned PC Gamers",
-      "url": "https://www.techspot.com/article/3139-the-reason-nvidia-abandoned-gamers/",
-      "source": "Techspot",
-      "country": "US",
-      "publishedAt": "2026-06-19 11:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "02a5ec29ea695893",
-      "headline": "Apple and Intel will work together to manufacture chips in the US",
-      "url": "https://www.androidauthority.com/apple-intel-chip-manufacturing-us-3679258/",
-      "source": "Androidauthority",
-      "country": "US",
-      "publishedAt": "2026-06-19 09:34:11",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "da3cde343152f4e1",
-      "headline": "ThreatsDay Bulletin: Claude Chat Abuse, NastyC2 npm Packages, Device-Code Phishing + 25 More Stories",
-      "url": "https://thehackernews.com/2026/06/threatsday-bulletin-claude-chat-abuse.html",
-      "source": "The Hacker News",
-      "country": "US",
-      "publishedAt": "2026-06-18 15:27:54",
       "relevanceScore": 0.15
     }
   ]
