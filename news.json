@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-06-24T05:28:03.175457+00:00",
+  "lastUpdated": "2026-06-25T05:27:04.614963+00:00",
   "items": [
+    {
+      "id": "aeeb551f25f6155c",
+      "headline": "China just built the world's most powerful supercomputer – using Huawei chips and no GPUs",
+      "url": "https://www.techspot.com/news/112875-china-built-world-most-powerful-supercomputer-using-huawei.html",
+      "source": "Techspot",
+      "country": "CN",
+      "publishedAt": "2026-06-24 16:32:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "fcb122646a3e4827",
+      "headline": "Anthropic Co-Founder: 'The Most Powerful Technology Ever Built'",
+      "url": "https://reason.com/podcast/2026/06/24/anthropic-co-founder-the-most-powerful-technology-ever-built/",
+      "source": "Reason Magazine",
+      "country": "US",
+      "publishedAt": "2026-06-24 15:00:59",
+      "relevanceScore": 0.3
+    },
     {
       "id": "85c3a03e00e60f27",
       "headline": "TSMC and Intel Race to Replace Organic Substrates With Glass & Panel-Level Packaging, as a $650M Market Expected To...",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-20 00:00:20",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "ea06b7d2a42d3a3c",
-      "headline": "Encryption, spyware, and now Mythos: History shows why cyber export control doesn’t work",
-      "url": "https://techcrunch.com/2026/06/19/encryption-spyware-and-now-mythos-history-shows-why-cyber-export-control-doesnt-work/",
-      "source": "Tech Crunch",
-      "country": "US",
-      "publishedAt": "2026-06-19 22:40:14",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "af3b99127264d7fd",
-      "headline": "I Read Anthropic's 40-Page AI Pause Report. It's A",
-      "url": "https://www.bundle.app/en/technology/i-read-anthropics-40-page-ai-pause-report-its-a-F8F3C3E3-BB70-43AA-9B18-FBADCD06268D",
-      "source": "Bundle",
-      "country": "US",
-      "publishedAt": "2026-06-19 22:11:59",
-      "relevanceScore": 0.15
     }
   ]
 }
