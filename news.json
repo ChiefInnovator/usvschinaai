@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-06-25T05:27:04.614963+00:00",
+  "lastUpdated": "2026-06-26T05:29:22.920009+00:00",
   "items": [
+    {
+      "id": "826ce7f5ff36709a",
+      "headline": "500 Blog Posts To Learn About Cyber Security",
+      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-cyber-security",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-25 14:01:10",
+      "relevanceScore": 0.85
+    },
+    {
+      "id": "df8fa317ad8b5adc",
+      "headline": "Intelligent eyewear market sees opportunities",
+      "url": "https://www.computerweekly.com/news/366645176/Intelligent-eyewear-market-sees-opportunities",
+      "source": "Computerweekly News",
+      "country": "Both",
+      "publishedAt": "2026-06-25 12:22:00",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "32753205215192f0",
+      "headline": "Nvidia's banned Blackwell AI servers are selling for $1.1 million on China's black market",
+      "url": "https://www.techspot.com/news/112893-nvidia-banned-blackwell-ai-servers-selling-11-million.html",
+      "source": "Techspot",
+      "country": "CN",
+      "publishedAt": "2026-06-25 11:06:00",
+      "relevanceScore": 0.16
+    },
     {
       "id": "aeeb551f25f6155c",
       "headline": "China just built the world's most powerful supercomputer – using Huawei chips and no GPUs",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-21 00:00:00",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "d982d9530581653a",
-      "headline": "WMS Group LLC Takes $3.32 Million Position in Taiwan Semiconductor Manufacturing Company Ltd. $TSM",
-      "url": "https://www.thelincolnianonline.com/2026/06/20/wms-group-llc-takes-3-32-million-position-in-taiwan-semiconductor-manufacturing-company-ltd-tsm.html",
-      "source": "The Lincolnian Online",
-      "country": "US",
-      "publishedAt": "2026-06-20 14:18:48",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b46cb40b0197490a",
-      "headline": "Automakers and workers face existential fight over robots, future - Sat, 20 Jun 2026 PST",
-      "url": "http://www.spokesman.com/stories/2026/jun/20/automakers-and-workers-face-existential-fight-over/",
-      "source": "Spokesman",
-      "country": "US",
-      "publishedAt": "2026-06-20 07:15:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b5bd2538252845c8",
-      "headline": "Did China Get Hold of One of ASML's EUV Chip Machines?",
-      "url": "https://hotair.com/john-s-2/2026/06/19/did-china-get-hold-of-one-of-asmls-euv-chip-machines-n3816134",
-      "source": "Hotair",
-      "country": "CN",
-      "publishedAt": "2026-06-20 00:00:20",
-      "relevanceScore": 0.08
     }
   ]
 }
