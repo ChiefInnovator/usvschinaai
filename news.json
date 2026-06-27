@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-26T05:29:22.920009+00:00",
+  "lastUpdated": "2026-06-27T05:22:38.576259+00:00",
   "items": [
+    {
+      "id": "bd3fb3983decf562",
+      "headline": "OpenAI Has New AI Models. Hereâs Why You Canât Use Them",
+      "url": "https://www.bundle.app/en/technology/openai-has-new-ai-models-heres-why-you-cant-use-them-C48441B3-A3E7-4721-B05B-64FAC32D7900",
+      "source": "Bundle",
+      "country": "US",
+      "publishedAt": "2026-06-26 17:05:40",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "30a264830c17714a",
+      "headline": "Great News For Tesla, Polestar Banned From The US",
+      "url": "https://247wallst.com/investing/2026/06/26/great-news-for-tesla-polestar-banned-from-the-us/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-06-26 13:59:08",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d89344ad30693963",
+      "headline": "Qualcomm shares China-focused data center strategy that fully complies with US export regulations",
+      "url": "https://www.gizmochina.com/2026/06/26/qualcomm-shares-china-focused-data-center-strategy-that-fully-complies-with-us-export-regulations/",
+      "source": "Gizmochina",
+      "country": "CN",
+      "publishedAt": "2026-06-26 13:52:25",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "46e3651c33c2b35d",
+      "headline": "\"Pax Silica\" as new Atlantic tech Empire: how Europe gave up digital sovereignty",
+      "url": "https://infobrics.org/en/post/101378/",
+      "source": "Brics",
+      "country": "US",
+      "publishedAt": "2026-06-26 12:56:09",
+      "relevanceScore": 0.08
+    },
     {
       "id": "826ce7f5ff36709a",
       "headline": "500 Blog Posts To Learn About Cyber Security",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-21 16:00:26",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "e9d4bab1bff58dec",
-      "headline": "Will All New AI Models Be Classified As Military Grade?",
-      "url": "https://www.forbes.com/sites/paulbaier/2026/06/21/will-all-new-ai-models-be-classified-as-military-grade/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-06-21 14:28:43",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "036f4aa63acd9411",
-      "headline": "Foldable iPhone Ultra, Galaxy Z Fold 8, Pixel 11 and Other Phones Launching in 2026",
-      "url": "https://www.cnet.com/tech/mobile/comparing-the-2026-phone-lineups-from-apple-samsung-google-and-everyone-else/",
-      "source": "Cnet",
-      "country": "US",
-      "publishedAt": "2026-06-21 13:00:40",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "80c0639deea7c8e8",
-      "headline": "Chinese AI models raise ‘sleeper agent’ fears after report finds more vulnerable code for US users",
-      "url": "https://www.foxnews.com/politics/chinese-ai-models-raise-sleeper-agent-fears-after-report-finds-more-vulnerable-code-us-users",
-      "source": "Fox News",
-      "country": "Both",
-      "publishedAt": "2026-06-21 10:00:17",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "8aa0432bbc3aec5c",
-      "headline": "US Bill Would Mandate AI Chip Location Tracking to Thwart China and Other Adversaries",
-      "url": "https://yro.slashdot.org/story/26/06/21/065246/us-bill-would-mandate-ai-chip-location-tracking-to-thwart-china-and-other-adversaries",
-      "source": "Slashdot",
-      "country": "Both",
-      "publishedAt": "2026-06-21 00:00:00",
-      "relevanceScore": 0.16
     }
   ]
 }
