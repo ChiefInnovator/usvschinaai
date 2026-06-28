@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-27T05:22:38.576259+00:00",
+  "lastUpdated": "2026-06-28T05:33:46.046716+00:00",
   "items": [
+    {
+      "id": "706074b797ef2796",
+      "headline": "AI Security News Roundup: Anthropic, OpenAI, LastPass Breach and More",
+      "url": "https://us.headtopics.com/news/ai-security-news-roundup-anthropic-openai-lastpass-84982905",
+      "source": "Headtopics",
+      "country": "Both",
+      "publishedAt": "2026-06-27 11:36:09",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "afea98dd7b53653b",
+      "headline": "Diplomatic envoys explore high tech vitality in central China's Hubei",
+      "url": "http://www.shanghaisun.com/news/279151603/diplomatic-envoys-explore-high-tech-vitality-in-central-china-hubei",
+      "source": "Shanghai Sun",
+      "country": "CN",
+      "publishedAt": "2026-06-27 11:17:59",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "6078fd0ef384f780",
+      "headline": "OpenAI restricts ChatGPT rollout at Washingtons request",
+      "url": "http://www.shanghaisun.com/news/279151583/openai-restricts-chatgpt-rollout-at-washingtons-request",
+      "source": "Shanghai Sun",
+      "country": "US",
+      "publishedAt": "2026-06-27 10:56:42",
+      "relevanceScore": 0.61
+    },
+    {
+      "id": "c745b9390e8d18ef",
+      "headline": "The government wants to rein in powerful AI, but there are downsides",
+      "url": "https://www.fastcompany.com/91565868/the-government-wants-to-rein-in-powerful-ai-but-there-are-downsides?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-06-27 10:00:00",
+      "relevanceScore": 0.61
+    },
     {
       "id": "bd3fb3983decf562",
       "headline": "OpenAI Has New AI Models. Hereâs Why You Canât Use Them",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-06-23 12:00:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "56b3bca8b6487337",
-      "headline": "AI-powered cyber attacks may be just months away, warn Five Eyes",
-      "url": "https://www.computerweekly.com/news/366644997/AI-powered-cyber-attacks-may-be-just-months-away-warn-Five-Eyes",
-      "source": "Computerweekly News",
-      "country": "Both",
-      "publishedAt": "2026-06-22 16:42:00",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "16d1587d05a03c17",
-      "headline": "Power for energy-guzzling AI data centers is getting fast-tracked thanks to federal regulators",
-      "url": "https://www.fastcompany.com/91562830/power-energy-guzzling-ai-data-centers-getting-fast-tracked-thanks-federal-regulators",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-06-22 16:39:38",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7f82c4660549c444",
-      "headline": "OpenAI’s new ‘super app’ boss hopes to persuade users and potential IPO investors that the company is about way more...",
-      "url": "https://fortune.com/2026/06/22/architectural-behind-openais-super-app-says/",
-      "source": "Fortune",
-      "country": "US",
-      "publishedAt": "2026-06-22 15:46:16",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "b7f5f41cff13a027",
-      "headline": "AI regulation is a mess, and Anthropic is caught in the crosshairs",
-      "url": "https://www.cnn.com/2026/06/21/tech/anthropic-ai-regulation",
-      "source": "Cnn",
-      "country": "US",
-      "publishedAt": "2026-06-21 16:00:26",
-      "relevanceScore": 0.23
     }
   ]
 }
