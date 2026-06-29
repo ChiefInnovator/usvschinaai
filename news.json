@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-06-28T05:33:46.046716+00:00",
+  "lastUpdated": "2026-06-29T05:38:45.418852+00:00",
   "items": [
+    {
+      "id": "974a0a5cd9908472",
+      "headline": "331 Blog Posts To Learn About Hacking",
+      "url": "https://hackernoon.com/331-blog-posts-to-learn-about-hacking",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-28 14:00:53",
+      "relevanceScore": 0.69
+    },
+    {
+      "id": "a3e55fb287c565a6",
+      "headline": "China develops extremely 'powerful weapon' that has flipped the AI race on its head... amid concerns the US is...",
+      "url": "https://freerepublic.com/focus/f-news/4385780/posts",
+      "source": "Freerepublic",
+      "country": "Both",
+      "publishedAt": "2026-06-28 10:22:13",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "d9a024fccaab7234",
+      "headline": "399 Blog Posts To Learn About Growth Hacking",
+      "url": "https://hackernoon.com/399-blog-posts-to-learn-about-growth-hacking",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-06-28 02:01:04",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "1cbbdcae7be99d43",
+      "headline": "China's AI Matches Anthropic in Cybersecurity, Causing Worry Over US Restrictions",
+      "url": "https://slashdot.org/story/26/06/28/1922225/chinas-ai-matches-anthropic-in-cybersecurity-causing-worry-over-us-restrictions",
+      "source": "Slashdot",
+      "country": "Both",
+      "publishedAt": "2026-06-28 00:00:00",
+      "relevanceScore": 0.99
+    },
     {
       "id": "706074b797ef2796",
       "headline": "AI Security News Roundup: Anthropic, OpenAI, LastPass Breach and More",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-23 14:00:11",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "821db7b36e682c75",
-      "headline": "The Download: the future of chipmaking and Anthropic’s government clash",
-      "url": "https://www.technologyreview.com/2026/06/23/1139483/the-download-chipmaking-future-asml-ai-anthropic-government-clash/",
-      "source": "Technologyreview",
-      "country": "US",
-      "publishedAt": "2026-06-23 12:10:00",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "7892d2c94b3cf16f",
-      "headline": "AI Is Learning to Read the Room",
-      "url": "https://spectrum.ieee.org/emotion-ai-context",
-      "source": "Ieee Spectrum - Robotics",
-      "country": "Both",
-      "publishedAt": "2026-06-23 12:00:01",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "4a02362eebc927f1",
-      "headline": "Youlife Partners with Thingo Technology to Provide AI-powered Workforce Solutions Across China",
-      "url": "https://en.prnasia.com/story/538254-0.shtml",
-      "source": "Pr Newswire Apac",
-      "country": "Both",
-      "publishedAt": "2026-06-23 12:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "38d0b3c9d89118f2",
-      "headline": "Physical AI to drive private 5G market",
-      "url": "https://www.computerweekly.com/news/366645042/Physical-AI-to-drive-private-5G-market",
-      "source": "Computerweekly News",
-      "country": "CN",
-      "publishedAt": "2026-06-23 12:00:00",
-      "relevanceScore": 0.08
     }
   ]
 }
