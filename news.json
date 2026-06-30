@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-06-29T05:38:45.418852+00:00",
+  "lastUpdated": "2026-06-30T05:26:32.078733+00:00",
   "items": [
+    {
+      "id": "deb66b0bf0e44366",
+      "headline": "Chinese AI is now on par with Anthropic in terms of cybersecurity: report",
+      "url": "https://nypost.com/2026/06/29/business/chinese-ai-is-now-on-par-with-anthropic-in-terms-of-cybersecurity-report/",
+      "source": "New York Post",
+      "country": "Both",
+      "publishedAt": "2026-06-29 16:52:18",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "8868b46f923c838a",
+      "headline": "China May Have Just 'Reset' the AI Race",
+      "url": "https://www.newser.com/story/391854/china-makes-a-big-advance-in-global-ai-race.html",
+      "source": "Newser",
+      "country": "Both",
+      "publishedAt": "2026-06-29 13:55:00",
+      "relevanceScore": 0.23
+    },
     {
       "id": "974a0a5cd9908472",
       "headline": "331 Blog Posts To Learn About Hacking",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-23 17:15:13",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "cf657d460b381d82",
-      "headline": "US government imposes export controls on Anthropic's AI coding model",
-      "url": "https://completeaitraining.com/news/us-government-imposes-export-controls-on-anthropics-ai/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-06-23 15:27:28",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "784bf86e5b6682e2",
-      "headline": "386 Blog Posts To Learn About Venture Capital",
-      "url": "https://hackernoon.com/386-blog-posts-to-learn-about-venture-capital",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-23 14:00:11",
-      "relevanceScore": 1.0
     }
   ]
 }
