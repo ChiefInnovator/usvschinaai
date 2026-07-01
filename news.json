@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-06-30T05:26:32.078733+00:00",
+  "lastUpdated": "2026-07-01T05:35:50.053686+00:00",
   "items": [
+    {
+      "id": "7b30fff419c9c514",
+      "headline": "Top automaker brings back 'gray beard' engineers after AI replacement push — and the payoff could be huge",
+      "url": "https://www.theblaze.com/news/top-automaker-brings-back-gray-beard-engineers-after-ai-replacement-push-and-the-payoff-could-be-huge",
+      "source": "Blaze Media",
+      "country": "CN",
+      "publishedAt": "2026-06-30 16:45:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "7f3fbbc93675269f",
+      "headline": "Europe’s AI opportunity is not where everyone is looking",
+      "url": "https://www.fastcompany.com/91564272/europes-ai-opportunity-not-where-everyone-looking?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-06-30 15:54:57",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "ecf9ca72e814444a",
+      "headline": "Redmagic’s new Android gaming tablet launches July 17 with 9-inch OLED display, 8,300 mAh battery, more",
+      "url": "https://9to5google.com/2026/06/30/redmagic-astra-2-gaming-tablet-china-launch-specs-details/",
+      "source": "9to5google",
+      "country": "CN",
+      "publishedAt": "2026-06-30 15:40:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "8e94e7e9a8ca9389",
+      "headline": "A political philosopher at Google DeepMind shapes artificial intelligence ethics as commercial pressures mount",
+      "url": "https://completeaitraining.com/news/a-political-philosopher-at-google-deepmind-shapes/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-06-30 14:23:53",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "9d8eaca95766c91a",
+      "headline": "How fearmongering sets policy",
+      "url": "https://www.thegazette.com/opinion/how-fearmongering-sets-policy/article_66a4ef5f-0788-499b-b43b-283ea90ae126.html",
+      "source": "The Gazette",
+      "country": "US",
+      "publishedAt": "2026-06-30 13:55:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7f273548f6d7768d",
+      "headline": "Chinaâs Meituan says its new AI model was trained on domestic chips",
+      "url": "https://www.bundle.app/en/technology/chinas-meituan-says-its-new-ai-model-was-trained-on-domestic-chips-120EC57B-573F-4490-A6C2-77B6BE52A915",
+      "source": "Bundle",
+      "country": "CN",
+      "publishedAt": "2026-06-30 12:42:44",
+      "relevanceScore": 0.16
+    },
     {
       "id": "deb66b0bf0e44366",
       "headline": "Chinese AI is now on par with Anthropic in terms of cybersecurity: report",
@@ -125,60 +179,6 @@
       "source": "Brics",
       "country": "US",
       "publishedAt": "2026-06-26 12:56:09",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "826ce7f5ff36709a",
-      "headline": "500 Blog Posts To Learn About Cyber Security",
-      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-cyber-security",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-25 14:01:10",
-      "relevanceScore": 0.85
-    },
-    {
-      "id": "df8fa317ad8b5adc",
-      "headline": "Intelligent eyewear market sees opportunities",
-      "url": "https://www.computerweekly.com/news/366645176/Intelligent-eyewear-market-sees-opportunities",
-      "source": "Computerweekly News",
-      "country": "Both",
-      "publishedAt": "2026-06-25 12:22:00",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "32753205215192f0",
-      "headline": "Nvidia's banned Blackwell AI servers are selling for $1.1 million on China's black market",
-      "url": "https://www.techspot.com/news/112893-nvidia-banned-blackwell-ai-servers-selling-11-million.html",
-      "source": "Techspot",
-      "country": "CN",
-      "publishedAt": "2026-06-25 11:06:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "aeeb551f25f6155c",
-      "headline": "China just built the world's most powerful supercomputer – using Huawei chips and no GPUs",
-      "url": "https://www.techspot.com/news/112875-china-built-world-most-powerful-supercomputer-using-huawei.html",
-      "source": "Techspot",
-      "country": "CN",
-      "publishedAt": "2026-06-24 16:32:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "fcb122646a3e4827",
-      "headline": "Anthropic Co-Founder: 'The Most Powerful Technology Ever Built'",
-      "url": "https://reason.com/podcast/2026/06/24/anthropic-co-founder-the-most-powerful-technology-ever-built/",
-      "source": "Reason Magazine",
-      "country": "US",
-      "publishedAt": "2026-06-24 15:00:59",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "85c3a03e00e60f27",
-      "headline": "TSMC and Intel Race to Replace Organic Substrates With Glass & Panel-Level Packaging, as a $650M Market Expected To...",
-      "url": "https://wccftech.com/tsmc-intel-race-to-replace-organic-substrates-with-glass-panel-level-packaging-8-billion-market-by-2030/",
-      "source": "Wccftech",
-      "country": "US",
-      "publishedAt": "2026-06-23 17:15:13",
       "relevanceScore": 0.08
     }
   ]
