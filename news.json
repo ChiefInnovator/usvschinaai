@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-01T05:35:50.053686+00:00",
+  "lastUpdated": "2026-07-02T05:25:27.358737+00:00",
   "items": [
+    {
+      "id": "ae00d1d51a1bddf4",
+      "headline": "Trump Administration Lifts Export Controls on Anthropic's 'Fable' and 'Mythos' AI Models",
+      "url": "https://www.breitbart.com/tech/2026/07/01/trump-administration-lifts-export-controls-on-anthropics-fable-and-mythos-ai-models/",
+      "source": "Brietbart",
+      "country": "Both",
+      "publishedAt": "2026-07-01 16:09:30",
+      "relevanceScore": 0.54
+    },
+    {
+      "id": "b5b03e49397db51e",
+      "headline": "Anthropic Finally Restores Claude Fable 5 AI Model Access—but at a Price",
+      "url": "https://www.androidheadlines.com/2026/07/anthropic-claude-fable-5-return-government-ban-lifted.html",
+      "source": "Androidheadlines",
+      "country": "US",
+      "publishedAt": "2026-07-01 15:33:23",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "a6776b2da3985d33",
+      "headline": "UN report warns artificial intelligence may worsen global inequality and proposes shared framework",
+      "url": "https://completeaitraining.com/news/un-report-warns-artificial-intelligence-may-worsen-global/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-07-01 15:12:50",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b4281e51b0fa7983",
+      "headline": "AP Technology SummaryBrief at 10:49 a.m. EDT",
+      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-10-49-a-m-edt/article_64908fa0-0904-5ae0-8f25-d7897b051f3a.html",
+      "source": "Dailyrecordnews",
+      "country": "US",
+      "publishedAt": "2026-07-01 14:49:59",
+      "relevanceScore": 0.3
+    },
     {
       "id": "7b30fff419c9c514",
       "headline": "Top automaker brings back 'gray beard' engineers after AI replacement push — and the payoff could be huge",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-27 10:00:00",
       "relevanceScore": 0.61
-    },
-    {
-      "id": "bd3fb3983decf562",
-      "headline": "OpenAI Has New AI Models. Hereâs Why You Canât Use Them",
-      "url": "https://www.bundle.app/en/technology/openai-has-new-ai-models-heres-why-you-cant-use-them-C48441B3-A3E7-4721-B05B-64FAC32D7900",
-      "source": "Bundle",
-      "country": "US",
-      "publishedAt": "2026-06-26 17:05:40",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "30a264830c17714a",
-      "headline": "Great News For Tesla, Polestar Banned From The US",
-      "url": "https://247wallst.com/investing/2026/06/26/great-news-for-tesla-polestar-banned-from-the-us/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-06-26 13:59:08",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "d89344ad30693963",
-      "headline": "Qualcomm shares China-focused data center strategy that fully complies with US export regulations",
-      "url": "https://www.gizmochina.com/2026/06/26/qualcomm-shares-china-focused-data-center-strategy-that-fully-complies-with-us-export-regulations/",
-      "source": "Gizmochina",
-      "country": "CN",
-      "publishedAt": "2026-06-26 13:52:25",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "46e3651c33c2b35d",
-      "headline": "\"Pax Silica\" as new Atlantic tech Empire: how Europe gave up digital sovereignty",
-      "url": "https://infobrics.org/en/post/101378/",
-      "source": "Brics",
-      "country": "US",
-      "publishedAt": "2026-06-26 12:56:09",
-      "relevanceScore": 0.08
     }
   ]
 }
