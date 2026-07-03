@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-02T05:25:27.358737+00:00",
+  "lastUpdated": "2026-07-03T05:16:23.329008+00:00",
   "items": [
+    {
+      "id": "84909a4e776d80df",
+      "headline": "New York makes history with first-of-its-kind law regulating AI-powered commercials",
+      "url": "https://www.foxnews.com/media/new-york-makes-history-first-of-its-kind-law-regulating-ai-powered-commercials",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-07-02 16:21:20",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "0ffc7e8182a61ab6",
+      "headline": "Trump gets OpenAI to offer US 5% stake, far lower than Sanders’ target",
+      "url": "https://arstechnica.com/tech-policy/2026/07/openai-floats-giving-us-5-stake-to-win-over-ai-haters/",
+      "source": "Ars Technica",
+      "country": "US",
+      "publishedAt": "2026-07-02 15:12:25",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "ba137a7fb4ee5cde",
+      "headline": "Ogilvy unveils inaugural 2026 APAC Believability Index“The Power of Proof” study reveals hidden cost of lost belief",
+      "url": "https://roastbrief.us/ogilvy-unveils-inaugural-2026-apac-believability-indexthe-power-of-proof-study-reveals-hidden-cost-of-lost-belief/",
+      "source": "Roastbrief Us",
+      "country": "US",
+      "publishedAt": "2026-07-02 14:31:21",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "89b49d60b4ea9eb1",
+      "headline": "500 Blog Posts To Learn About Privacy",
+      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-privacy",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-07-02 14:00:14",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "d25fb9cef5890a24",
+      "headline": "Ambani-Trump Jr. investigation encountered a Google AI surprise",
+      "url": "https://asiatimes.com/2026/07/ambani-trump-jr-investigation-encountered-a-google-ai-surprise/",
+      "source": "Asia Times",
+      "country": "US",
+      "publishedAt": "2026-07-02 12:30:20",
+      "relevanceScore": 0.15
+    },
     {
       "id": "ae00d1d51a1bddf4",
       "headline": "Trump Administration Lifts Export Controls on Anthropic's 'Fable' and 'Mythos' AI Models",
@@ -135,51 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-28 02:01:04",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "1cbbdcae7be99d43",
-      "headline": "China's AI Matches Anthropic in Cybersecurity, Causing Worry Over US Restrictions",
-      "url": "https://slashdot.org/story/26/06/28/1922225/chinas-ai-matches-anthropic-in-cybersecurity-causing-worry-over-us-restrictions",
-      "source": "Slashdot",
-      "country": "Both",
-      "publishedAt": "2026-06-28 00:00:00",
-      "relevanceScore": 0.99
-    },
-    {
-      "id": "706074b797ef2796",
-      "headline": "AI Security News Roundup: Anthropic, OpenAI, LastPass Breach and More",
-      "url": "https://us.headtopics.com/news/ai-security-news-roundup-anthropic-openai-lastpass-84982905",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-06-27 11:36:09",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "afea98dd7b53653b",
-      "headline": "Diplomatic envoys explore high tech vitality in central China's Hubei",
-      "url": "http://www.shanghaisun.com/news/279151603/diplomatic-envoys-explore-high-tech-vitality-in-central-china-hubei",
-      "source": "Shanghai Sun",
-      "country": "CN",
-      "publishedAt": "2026-06-27 11:17:59",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "6078fd0ef384f780",
-      "headline": "OpenAI restricts ChatGPT rollout at Washingtons request",
-      "url": "http://www.shanghaisun.com/news/279151583/openai-restricts-chatgpt-rollout-at-washingtons-request",
-      "source": "Shanghai Sun",
-      "country": "US",
-      "publishedAt": "2026-06-27 10:56:42",
-      "relevanceScore": 0.61
-    },
-    {
-      "id": "c745b9390e8d18ef",
-      "headline": "The government wants to rein in powerful AI, but there are downsides",
-      "url": "https://www.fastcompany.com/91565868/the-government-wants-to-rein-in-powerful-ai-but-there-are-downsides?partner=rss",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-06-27 10:00:00",
-      "relevanceScore": 0.61
     }
   ]
 }
