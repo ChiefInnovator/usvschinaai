@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-07-03T05:16:23.329008+00:00",
+  "lastUpdated": "2026-07-04T05:12:46.956952+00:00",
   "items": [
+    {
+      "id": "59f439e08be03e55",
+      "headline": "Peter Thiel Accuses Pope Leo of Serving as Chinese Communist Agent on AI",
+      "url": "https://www.breitbart.com/tech/2026/07/03/peter-thiel-accuses-pope-leo-of-serving-as-chinese-communist-agent-on-ai/",
+      "source": "Brietbart",
+      "country": "CN",
+      "publishedAt": "2026-07-03 15:11:31",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "75782add916ab591",
+      "headline": "OpenAI offers feds a stake, Anthropic gets out of AI model jail and Meta wants to be a neocloud",
+      "url": "https://siliconangle.com/2026/07/03/openai-offers-feds-stake-anthropic-gets-ai-model-jail-meta-wants-neocloud/",
+      "source": "Siliconangle",
+      "country": "US",
+      "publishedAt": "2026-07-03 14:00:31",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "acca925333a4c532",
+      "headline": "Journalist Karen Hao on Sam Altman, OpenAI & the \"Quasi-Religious\" Push for Artificial Intelligence",
+      "url": "http://www.democracynow.org/2026/7/3/journalist_karen_hao_on_sam_altman",
+      "source": "Democracy Now!",
+      "country": "US",
+      "publishedAt": "2026-07-03 12:23:35",
+      "relevanceScore": 0.23
+    },
     {
       "id": "84909a4e776d80df",
       "headline": "New York makes history with first-of-its-kind law regulating AI-powered commercials",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-06-29 13:55:00",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "974a0a5cd9908472",
-      "headline": "331 Blog Posts To Learn About Hacking",
-      "url": "https://hackernoon.com/331-blog-posts-to-learn-about-hacking",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-28 14:00:53",
-      "relevanceScore": 0.69
-    },
-    {
-      "id": "a3e55fb287c565a6",
-      "headline": "China develops extremely 'powerful weapon' that has flipped the AI race on its head... amid concerns the US is...",
-      "url": "https://freerepublic.com/focus/f-news/4385780/posts",
-      "source": "Freerepublic",
-      "country": "Both",
-      "publishedAt": "2026-06-28 10:22:13",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "d9a024fccaab7234",
-      "headline": "399 Blog Posts To Learn About Growth Hacking",
-      "url": "https://hackernoon.com/399-blog-posts-to-learn-about-growth-hacking",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-06-28 02:01:04",
-      "relevanceScore": 1.0
     }
   ]
 }
