@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-07-04T05:12:46.956952+00:00",
+  "lastUpdated": "2026-07-05T05:25:17.011541+00:00",
   "items": [
+    {
+      "id": "88357fd8c6fc64b8",
+      "headline": "Chinese semiconductor firm expands with $1.15 billion chip packaging plant",
+      "url": "https://interestingengineering.com/innovation/chinese-semiconductor-firm-chip-packaging-plant",
+      "source": "Interesting Engineering",
+      "country": "CN",
+      "publishedAt": "2026-07-04 17:15:32",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "3bfb201891e579b2",
+      "headline": "62 Blog Posts To Learn About Social Engineering",
+      "url": "https://hackernoon.com/62-blog-posts-to-learn-about-social-engineering",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-07-04 02:00:44",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "3a647d526059171e",
+      "headline": "Journalist Karen Hao on Sam Altman, OpenAI & the âQuasi-Religiousâ Push for Artificial Intelligence",
+      "url": "https://www.bundle.app/en/breaking-news/journalist-karen-hao-on-sam-altman-openai-the-quasi-religious-push-for-artificial-intelligence-267424FA-A45C-4DFD-B6C4-C08EB6174365",
+      "source": "Bundle",
+      "country": "US",
+      "publishedAt": "2026-07-03 21:46:40",
+      "relevanceScore": 0.23
+    },
     {
       "id": "59f439e08be03e55",
       "headline": "Peter Thiel Accuses Pope Leo of Serving as Chinese Communist Agent on AI",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-06-30 13:55:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "7f273548f6d7768d",
-      "headline": "Chinaâs Meituan says its new AI model was trained on domestic chips",
-      "url": "https://www.bundle.app/en/technology/chinas-meituan-says-its-new-ai-model-was-trained-on-domestic-chips-120EC57B-573F-4490-A6C2-77B6BE52A915",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-06-30 12:42:44",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "deb66b0bf0e44366",
-      "headline": "Chinese AI is now on par with Anthropic in terms of cybersecurity: report",
-      "url": "https://nypost.com/2026/06/29/business/chinese-ai-is-now-on-par-with-anthropic-in-terms-of-cybersecurity-report/",
-      "source": "New York Post",
-      "country": "Both",
-      "publishedAt": "2026-06-29 16:52:18",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "8868b46f923c838a",
-      "headline": "China May Have Just 'Reset' the AI Race",
-      "url": "https://www.newser.com/story/391854/china-makes-a-big-advance-in-global-ai-race.html",
-      "source": "Newser",
-      "country": "Both",
-      "publishedAt": "2026-06-29 13:55:00",
-      "relevanceScore": 0.23
     }
   ]
 }
