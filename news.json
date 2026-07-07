@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-07-06T05:30:34.206779+00:00",
+  "lastUpdated": "2026-07-07T05:21:02.405517+00:00",
   "items": [
+    {
+      "id": "4f64cf9dc825c8b4",
+      "headline": "Secret Claude tracker shocks users after Anthropic’s anti-surveillance stance",
+      "url": "https://arstechnica.com/tech-policy/2026/07/anthropic-outed-for-claude-tracker-that-secretly-monitored-chinese-users/",
+      "source": "Ars Technica",
+      "country": "US",
+      "publishedAt": "2026-07-06 16:44:18",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "d76883587b126c84",
+      "headline": "Small-AI Models Gain Traction Around the World",
+      "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-07-06 16:06:23",
+      "relevanceScore": 0.92
+    },
+    {
+      "id": "1b83eadf5e781f57",
+      "headline": "Semiconductor Market to Nearly Triple by 2036, but Supply Chain Risks are Growing Too",
+      "url": "https://industrywired.com/tech/semiconductor-market-to-nearly-triple-by-2036-but-supply-chain-risks-are-growing-too-12139673",
+      "source": "Industry Wired",
+      "country": "CN",
+      "publishedAt": "2026-07-06 16:00:37",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "a03315c905c10569",
+      "headline": "Chinese AI chip startup bets on 3D stacking to sidestep US export controls",
+      "url": "https://interestingengineering.com/ai-robotics/chinese-ai-chip-startup-bets-on-3d-stacking-to-sidestep-us-export-controls",
+      "source": "Interesting Engineering",
+      "country": "CN",
+      "publishedAt": "2026-07-06 15:43:30",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b4c38182a9b01f11",
+      "headline": "China Becomes Biggest Enemy Of US AI",
+      "url": "https://247wallst.com/investing/2026/07/06/china-becomes-biggest-enemy-of-us-ai/",
+      "source": "24/7 Wall St",
+      "country": "Both",
+      "publishedAt": "2026-07-06 14:19:15",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "21ebe8174bdf429c",
+      "headline": "Anthropic Reportedly Eyes Samsung for Custom AI Chip",
+      "url": "https://www.techrepublic.com/article/news-anthropic-samsung-custom-ai-chip/",
+      "source": "Techrepublic",
+      "country": "US",
+      "publishedAt": "2026-07-06 13:37:39",
+      "relevanceScore": 0.23
+    },
     {
       "id": "5b03f2cf7bedcfc4",
       "headline": "I’ve tested almost every phone released this year — here are my 5 favorite models of 2026 so far, including a top...",
@@ -126,60 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-01 16:09:30",
       "relevanceScore": 0.54
-    },
-    {
-      "id": "b5b03e49397db51e",
-      "headline": "Anthropic Finally Restores Claude Fable 5 AI Model Access—but at a Price",
-      "url": "https://www.androidheadlines.com/2026/07/anthropic-claude-fable-5-return-government-ban-lifted.html",
-      "source": "Androidheadlines",
-      "country": "US",
-      "publishedAt": "2026-07-01 15:33:23",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "a6776b2da3985d33",
-      "headline": "UN report warns artificial intelligence may worsen global inequality and proposes shared framework",
-      "url": "https://completeaitraining.com/news/un-report-warns-artificial-intelligence-may-worsen-global/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-07-01 15:12:50",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b4281e51b0fa7983",
-      "headline": "AP Technology SummaryBrief at 10:49 a.m. EDT",
-      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-10-49-a-m-edt/article_64908fa0-0904-5ae0-8f25-d7897b051f3a.html",
-      "source": "Dailyrecordnews",
-      "country": "US",
-      "publishedAt": "2026-07-01 14:49:59",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "7b30fff419c9c514",
-      "headline": "Top automaker brings back 'gray beard' engineers after AI replacement push — and the payoff could be huge",
-      "url": "https://www.theblaze.com/news/top-automaker-brings-back-gray-beard-engineers-after-ai-replacement-push-and-the-payoff-could-be-huge",
-      "source": "Blaze Media",
-      "country": "CN",
-      "publishedAt": "2026-06-30 16:45:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "7f3fbbc93675269f",
-      "headline": "Europe’s AI opportunity is not where everyone is looking",
-      "url": "https://www.fastcompany.com/91564272/europes-ai-opportunity-not-where-everyone-looking?partner=rss",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-06-30 15:54:57",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "ecf9ca72e814444a",
-      "headline": "Redmagic’s new Android gaming tablet launches July 17 with 9-inch OLED display, 8,300 mAh battery, more",
-      "url": "https://9to5google.com/2026/06/30/redmagic-astra-2-gaming-tablet-china-launch-specs-details/",
-      "source": "9to5google",
-      "country": "CN",
-      "publishedAt": "2026-06-30 15:40:00",
-      "relevanceScore": 0.08
     }
   ]
 }
