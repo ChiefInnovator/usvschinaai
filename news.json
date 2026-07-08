@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-07T05:21:02.405517+00:00",
+  "lastUpdated": "2026-07-08T05:08:34.889805+00:00",
   "items": [
+    {
+      "id": "4d18bbb08cfd1cb5",
+      "headline": "Facing US export controls, China's DeepSeek plans to make its own chips",
+      "url": "https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/",
+      "source": "Ars Technica",
+      "country": "CN",
+      "publishedAt": "2026-07-07 16:14:53",
+      "relevanceScore": 0.54
+    },
+    {
+      "id": "43efc36186c415b7",
+      "headline": "US-China Chip War Reshapes Global Semiconductor Map as Regional Blocs Harden in 2026: Study",
+      "url": "https://industrywired.com/technology/us-china-chip-war-reshapes-global-semiconductor-map-as-regional-blocs-harden-in-2026-study-12143381",
+      "source": "Industry Wired",
+      "country": "Both",
+      "publishedAt": "2026-07-07 16:03:45",
+      "relevanceScore": 0.63
+    },
+    {
+      "id": "3a47769537d85431",
+      "headline": "Google Invests in $468-Million Funding Round for German Fusion Group",
+      "url": "https://www.powermag.com/google-invests-in-468-million-funding-round-for-german-fusion-group/",
+      "source": "Power Magazine",
+      "country": "US",
+      "publishedAt": "2026-07-07 15:42:34",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "266b94325e0d8292",
+      "headline": "Proof That China Is Stealing US AI",
+      "url": "https://247wallst.com/investing/2026/07/07/proof-that-china-is-stealing-us-ai/",
+      "source": "24/7 Wall St",
+      "country": "Both",
+      "publishedAt": "2026-07-07 15:28:14",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "187581b4a0df9e91",
+      "headline": "The U.S. Is Curbing Foreign Access To The Country's Top AI Models. Now China Is Reportedly Following Suit",
+      "url": "https://www.ibtimes.com/us-curbing-foreign-access-countrys-top-ai-models-now-china-reportedly-following-suit-3805011",
+      "source": "International Business Times",
+      "country": "Both",
+      "publishedAt": "2026-07-07 13:09:47",
+      "relevanceScore": 0.08
+    },
     {
       "id": "4f64cf9dc825c8b4",
       "headline": "Secret Claude tracker shocks users after Anthropic’s anti-surveillance stance",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-02 16:21:20",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "0ffc7e8182a61ab6",
-      "headline": "Trump gets OpenAI to offer US 5% stake, far lower than Sanders’ target",
-      "url": "https://arstechnica.com/tech-policy/2026/07/openai-floats-giving-us-5-stake-to-win-over-ai-haters/",
-      "source": "Ars Technica",
-      "country": "US",
-      "publishedAt": "2026-07-02 15:12:25",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "ba137a7fb4ee5cde",
-      "headline": "Ogilvy unveils inaugural 2026 APAC Believability Index“The Power of Proof” study reveals hidden cost of lost belief",
-      "url": "https://roastbrief.us/ogilvy-unveils-inaugural-2026-apac-believability-indexthe-power-of-proof-study-reveals-hidden-cost-of-lost-belief/",
-      "source": "Roastbrief Us",
-      "country": "US",
-      "publishedAt": "2026-07-02 14:31:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "89b49d60b4ea9eb1",
-      "headline": "500 Blog Posts To Learn About Privacy",
-      "url": "https://hackernoon.com/500-blog-posts-to-learn-about-privacy",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-07-02 14:00:14",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "d25fb9cef5890a24",
-      "headline": "Ambani-Trump Jr. investigation encountered a Google AI surprise",
-      "url": "https://asiatimes.com/2026/07/ambani-trump-jr-investigation-encountered-a-google-ai-surprise/",
-      "source": "Asia Times",
-      "country": "US",
-      "publishedAt": "2026-07-02 12:30:20",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "ae00d1d51a1bddf4",
-      "headline": "Trump Administration Lifts Export Controls on Anthropic's 'Fable' and 'Mythos' AI Models",
-      "url": "https://www.breitbart.com/tech/2026/07/01/trump-administration-lifts-export-controls-on-anthropics-fable-and-mythos-ai-models/",
-      "source": "Brietbart",
-      "country": "Both",
-      "publishedAt": "2026-07-01 16:09:30",
-      "relevanceScore": 0.54
     }
   ]
 }
