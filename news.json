@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-08T05:08:34.889805+00:00",
+  "lastUpdated": "2026-07-09T05:20:37.361399+00:00",
   "items": [
+    {
+      "id": "4bf537cc97fa86bb",
+      "headline": "DeepSeek takes control of its hardware: report",
+      "url": "https://biztoc.com/x/e0ffa211a9339380",
+      "source": "Biztoc",
+      "country": "Both",
+      "publishedAt": "2026-07-08 17:00:11",
+      "relevanceScore": 0.61
+    },
+    {
+      "id": "659fee0b212216a9",
+      "headline": "Chinese companies are ditching Nvidia’s advanced accelerators for domestic AI suppliers",
+      "url": "https://fortune.com/2026/07/08/chinese-companies-nvidia-ai-suppliers-budget-accelerators/",
+      "source": "Fortune",
+      "country": "CN",
+      "publishedAt": "2026-07-08 13:48:29",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "39a8a9424498bd3d",
+      "headline": "OpenAI's GPT-5.6 Is Dropping on Thursday: What's Different About Sol, Terra and Luna",
+      "url": "https://www.cnet.com/tech/services-and-software/openai-gpt-5-6-release-sol-terra-luna-government-review-news/",
+      "source": "Cnet",
+      "country": "US",
+      "publishedAt": "2026-07-08 13:44:24",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "b9c7b6c4c904cf1d",
+      "headline": "How AI Assistants are Transforming Modern Cars",
+      "url": "https://www.analyticsinsight.net/artificial-intelligence/how-ai-assistants-are-transforming-modern-cars",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-07-08 12:35:21",
+      "relevanceScore": 0.3
+    },
     {
       "id": "4d18bbb08cfd1cb5",
       "headline": "Facing US export controls, China's DeepSeek plans to make its own chips",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-03 21:46:40",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "59f439e08be03e55",
-      "headline": "Peter Thiel Accuses Pope Leo of Serving as Chinese Communist Agent on AI",
-      "url": "https://www.breitbart.com/tech/2026/07/03/peter-thiel-accuses-pope-leo-of-serving-as-chinese-communist-agent-on-ai/",
-      "source": "Brietbart",
-      "country": "CN",
-      "publishedAt": "2026-07-03 15:11:31",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "75782add916ab591",
-      "headline": "OpenAI offers feds a stake, Anthropic gets out of AI model jail and Meta wants to be a neocloud",
-      "url": "https://siliconangle.com/2026/07/03/openai-offers-feds-stake-anthropic-gets-ai-model-jail-meta-wants-neocloud/",
-      "source": "Siliconangle",
-      "country": "US",
-      "publishedAt": "2026-07-03 14:00:31",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "acca925333a4c532",
-      "headline": "Journalist Karen Hao on Sam Altman, OpenAI & the \"Quasi-Religious\" Push for Artificial Intelligence",
-      "url": "http://www.democracynow.org/2026/7/3/journalist_karen_hao_on_sam_altman",
-      "source": "Democracy Now!",
-      "country": "US",
-      "publishedAt": "2026-07-03 12:23:35",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "84909a4e776d80df",
-      "headline": "New York makes history with first-of-its-kind law regulating AI-powered commercials",
-      "url": "https://www.foxnews.com/media/new-york-makes-history-first-of-its-kind-law-regulating-ai-powered-commercials",
-      "source": "Fox News",
-      "country": "US",
-      "publishedAt": "2026-07-02 16:21:20",
-      "relevanceScore": 0.08
     }
   ]
 }
