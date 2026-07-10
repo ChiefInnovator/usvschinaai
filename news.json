@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-07-09T05:20:37.361399+00:00",
+  "lastUpdated": "2026-07-10T05:21:43.621817+00:00",
   "items": [
+    {
+      "id": "895c3e40eb8ec3f3",
+      "headline": "DeepSeek develops first in-house AI inference chip",
+      "url": "https://completeaitraining.com/news/deepseek-develops-first-in-house-ai-inference-chip/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-07-09 16:18:20",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "d207a006e44de7a2",
+      "headline": "Humanoid robots just helped perform live surgeries for the first time — here’s why it’s a medical breakthrough",
+      "url": "https://www.tomsguide.com/ai/humanoid-robots-just-helped-perform-live-surgeries-for-the-first-time-heres-why-its-a-medical-breakthrough",
+      "source": "Tom's Guide",
+      "country": "US",
+      "publishedAt": "2026-07-09 15:32:31",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "a00fa7508c9970c2",
+      "headline": "Peter Linneman On AI's Trajectory, Trump's Tariffs And Misleading Inflation Numbers",
+      "url": "https://www.bisnow.com/national/news/commercial-real-estate/peter-linneman-ai-trump-tariffs-misleading-inflation-figures-walker-webcast-studiob-135360",
+      "source": "Bisnow",
+      "country": "US",
+      "publishedAt": "2026-07-09 14:53:02",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c9697f5b3432449d",
+      "headline": "195 Blog Posts To Learn About Architecture",
+      "url": "https://hackernoon.com/195-blog-posts-to-learn-about-architecture",
+      "source": "Hackernoon",
+      "country": "Both",
+      "publishedAt": "2026-07-09 14:00:59",
+      "relevanceScore": 0.76
+    },
+    {
+      "id": "15c8574e6149f297",
+      "headline": "The Download: a nuclear landmark, and China eyes Nvidia chips",
+      "url": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
+      "source": "Technologyreview",
+      "country": "CN",
+      "publishedAt": "2026-07-09 12:10:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "c3ba7d671da9febf",
+      "headline": "Google turns old phones into cloud servers",
+      "url": "https://www.foxnews.com/tech/google-turns-old-phones-cloud-servers",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-07-09 11:19:48",
+      "relevanceScore": 0.15
+    },
     {
       "id": "4bf537cc97fa86bb",
       "headline": "DeepSeek takes control of its hardware: report",
@@ -126,60 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-06 14:19:15",
       "relevanceScore": 0.53
-    },
-    {
-      "id": "21ebe8174bdf429c",
-      "headline": "Anthropic Reportedly Eyes Samsung for Custom AI Chip",
-      "url": "https://www.techrepublic.com/article/news-anthropic-samsung-custom-ai-chip/",
-      "source": "Techrepublic",
-      "country": "US",
-      "publishedAt": "2026-07-06 13:37:39",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "5b03f2cf7bedcfc4",
-      "headline": "I’ve tested almost every phone released this year — here are my 5 favorite models of 2026 so far, including a top...",
-      "url": "https://www.techradar.com/phones/ive-tested-almost-every-phone-released-this-year-here-are-my-5-favorite-models-of-2026-so-far",
-      "source": "Tech Radar",
-      "country": "US",
-      "publishedAt": "2026-07-05 15:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "003d4d4d1ccbc831",
-      "headline": "I Benchmarked Chinese vs US AI Models: The Numbers Don't Lie",
-      "url": "https://www.bundle.app/en/technology/i-benchmarked-chinese-vs-us-ai-models-the-numbers-dont-lie-EE6143EF-F021-4A0D-BE1D-C41F9CA226DE",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-07-05 08:54:42",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "88357fd8c6fc64b8",
-      "headline": "Chinese semiconductor firm expands with $1.15 billion chip packaging plant",
-      "url": "https://interestingengineering.com/innovation/chinese-semiconductor-firm-chip-packaging-plant",
-      "source": "Interesting Engineering",
-      "country": "CN",
-      "publishedAt": "2026-07-04 17:15:32",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "3bfb201891e579b2",
-      "headline": "62 Blog Posts To Learn About Social Engineering",
-      "url": "https://hackernoon.com/62-blog-posts-to-learn-about-social-engineering",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-07-04 02:00:44",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "3a647d526059171e",
-      "headline": "Journalist Karen Hao on Sam Altman, OpenAI & the âQuasi-Religiousâ Push for Artificial Intelligence",
-      "url": "https://www.bundle.app/en/breaking-news/journalist-karen-hao-on-sam-altman-openai-the-quasi-religious-push-for-artificial-intelligence-267424FA-A45C-4DFD-B6C4-C08EB6174365",
-      "source": "Bundle",
-      "country": "US",
-      "publishedAt": "2026-07-03 21:46:40",
-      "relevanceScore": 0.23
     }
   ]
 }
