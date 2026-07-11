@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-10T05:21:43.621817+00:00",
+  "lastUpdated": "2026-07-11T05:06:56.156480+00:00",
   "items": [
+    {
+      "id": "339d42b633dfc15b",
+      "headline": "Meta targets September launch for in-house AI chip production",
+      "url": "http://www.sanfranciscostar.com/news/279177714/meta-targets-september-launch-for-in-house-ai-chip-production",
+      "source": "San Francisco Star",
+      "country": "US",
+      "publishedAt": "2026-07-10 15:04:55",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "d8a993add602dc62",
+      "headline": "The Download: Claude’s inner workings and OpenAI’s “super app”",
+      "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
+      "source": "Technologyreview",
+      "country": "US",
+      "publishedAt": "2026-07-10 12:10:00",
+      "relevanceScore": 0.45
+    },
+    {
+      "id": "d77cd0b6e5164a37",
+      "headline": "OpenAI and Google sell AI models to blacklisted China groups (Madhumita Murgia/Financial Times)",
+      "url": "https://www.memeorandum.com/260710/p13",
+      "source": "Memeorandum",
+      "country": "Both",
+      "publishedAt": "2026-07-10 12:00:05",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "dd1c616b07d0540f",
+      "headline": "The first commercial human-like robot is here. Are replicants next?",
+      "url": "https://www.fastcompany.com/91570086/ubtech-first-commercial-human-like-robot",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-07-10 10:00:00",
+      "relevanceScore": 0.16
+    },
     {
       "id": "895c3e40eb8ec3f3",
       "headline": "DeepSeek develops first in-house AI inference chip",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-06 16:44:18",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "d76883587b126c84",
-      "headline": "Small-AI Models Gain Traction Around the World",
-      "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals",
-      "source": "Ieee Spectrum - Robotics",
-      "country": "Both",
-      "publishedAt": "2026-07-06 16:06:23",
-      "relevanceScore": 0.92
-    },
-    {
-      "id": "1b83eadf5e781f57",
-      "headline": "Semiconductor Market to Nearly Triple by 2036, but Supply Chain Risks are Growing Too",
-      "url": "https://industrywired.com/tech/semiconductor-market-to-nearly-triple-by-2036-but-supply-chain-risks-are-growing-too-12139673",
-      "source": "Industry Wired",
-      "country": "CN",
-      "publishedAt": "2026-07-06 16:00:37",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "a03315c905c10569",
-      "headline": "Chinese AI chip startup bets on 3D stacking to sidestep US export controls",
-      "url": "https://interestingengineering.com/ai-robotics/chinese-ai-chip-startup-bets-on-3d-stacking-to-sidestep-us-export-controls",
-      "source": "Interesting Engineering",
-      "country": "CN",
-      "publishedAt": "2026-07-06 15:43:30",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b4c38182a9b01f11",
-      "headline": "China Becomes Biggest Enemy Of US AI",
-      "url": "https://247wallst.com/investing/2026/07/06/china-becomes-biggest-enemy-of-us-ai/",
-      "source": "24/7 Wall St",
-      "country": "Both",
-      "publishedAt": "2026-07-06 14:19:15",
-      "relevanceScore": 0.53
     }
   ]
 }
