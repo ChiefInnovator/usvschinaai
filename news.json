@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-11T05:06:56.156480+00:00",
+  "lastUpdated": "2026-07-12T05:10:50.827673+00:00",
   "items": [
+    {
+      "id": "8e48f3a8368e098e",
+      "headline": "AP Technology SummaryBrief at 12:33 p.m. EDT",
+      "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-12-33-p-m-edt/article_da35d2a1-f95a-5b5b-bc6f-e3bb3a526890.html",
+      "source": "Rutland Herald",
+      "country": "US",
+      "publishedAt": "2026-07-11 16:33:52",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "71942676a6b6804f",
+      "headline": "Stop Guessing: Real Data Comparing Chinese and US AI Models",
+      "url": "https://www.bundle.app/en/technology/stop-guessing-real-data-comparing-chinese-and-us-ai-models-6D515E51-3D05-4A7A-861E-0634F0FE590F",
+      "source": "Bundle",
+      "country": "CN",
+      "publishedAt": "2026-07-10 22:08:46",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d643bcaa9e4aaa3c",
+      "headline": "AP Technology SummaryBrief at 4:54 p.m. EDT",
+      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-4-54-p-m-edt/article_3ebd0f51-26d8-55b2-be6c-7923653e9990.html",
+      "source": "Dailyrecordnews",
+      "country": "US",
+      "publishedAt": "2026-07-10 20:54:01",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "f6ce39f900ad0136",
+      "headline": "The Download: Claudeâs inner workings and OpenAIâs âsuper appâ",
+      "url": "https://www.bundle.app/en/technology/the-download-claudes-inner-workings-and-openais-super-app-AE3A7B1F-1815-4739-BBFE-CF02B3D3C5C3",
+      "source": "Bundle",
+      "country": "US",
+      "publishedAt": "2026-07-10 20:51:45",
+      "relevanceScore": 0.3
+    },
     {
       "id": "339d42b633dfc15b",
       "headline": "Meta targets September launch for in-house AI chip production",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-07 16:03:45",
       "relevanceScore": 0.63
-    },
-    {
-      "id": "3a47769537d85431",
-      "headline": "Google Invests in $468-Million Funding Round for German Fusion Group",
-      "url": "https://www.powermag.com/google-invests-in-468-million-funding-round-for-german-fusion-group/",
-      "source": "Power Magazine",
-      "country": "US",
-      "publishedAt": "2026-07-07 15:42:34",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "266b94325e0d8292",
-      "headline": "Proof That China Is Stealing US AI",
-      "url": "https://247wallst.com/investing/2026/07/07/proof-that-china-is-stealing-us-ai/",
-      "source": "24/7 Wall St",
-      "country": "Both",
-      "publishedAt": "2026-07-07 15:28:14",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "187581b4a0df9e91",
-      "headline": "The U.S. Is Curbing Foreign Access To The Country's Top AI Models. Now China Is Reportedly Following Suit",
-      "url": "https://www.ibtimes.com/us-curbing-foreign-access-countrys-top-ai-models-now-china-reportedly-following-suit-3805011",
-      "source": "International Business Times",
-      "country": "Both",
-      "publishedAt": "2026-07-07 13:09:47",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "4f64cf9dc825c8b4",
-      "headline": "Secret Claude tracker shocks users after Anthropic’s anti-surveillance stance",
-      "url": "https://arstechnica.com/tech-policy/2026/07/anthropic-outed-for-claude-tracker-that-secretly-monitored-chinese-users/",
-      "source": "Ars Technica",
-      "country": "US",
-      "publishedAt": "2026-07-06 16:44:18",
-      "relevanceScore": 0.3
     }
   ]
 }
