@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-12T05:10:50.827673+00:00",
+  "lastUpdated": "2026-07-13T05:11:40.652353+00:00",
   "items": [
+    {
+      "id": "6b2f488dd41c4100",
+      "headline": "Top High-Growth US Tech Stocks to Watch in 2026",
+      "url": "https://www.analyticsinsight.net/stocks/top-high-growth-us-tech-stocks-to-watch-in-2026",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-07-12 09:30:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f38034f85ccfd28f",
+      "headline": "AP Technology SummaryBrief at 5:16 p.m. EDT",
+      "url": "https://www.hastingstribune.com/ap/business/ap-technology-summarybrief-at-5-16-p-m-edt/article_65a286ae-3ef4-5d44-ab6c-80ee8e39537d.html",
+      "source": "Hastingstribune",
+      "country": "US",
+      "publishedAt": "2026-07-11 21:16:32",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "1de8427d7aa62f25",
+      "headline": "Meta discontinues Instagram feature on new AI image generation tool after Hollywood backlash",
+      "url": "https://newspub.live/business/meta-discontinues-instagram-feature-on-new-ai-image-generation-tool-after-hollywood-backlash/",
+      "source": "News Pub",
+      "country": "US",
+      "publishedAt": "2026-07-11 20:53:07",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "8db5eb57126388c5",
+      "headline": "AP Technology SummaryBrief at 4:13 p.m. EDT",
+      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-4-13-p-m-edt/article_d3f60a06-f389-5bf9-a83a-7496686f8959.html",
+      "source": "Dailyrecordnews",
+      "country": "US",
+      "publishedAt": "2026-07-11 20:13:34",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "e41ebbc7c8de7d62",
+      "headline": "What Is sovereign AI — and why it will decide the winners and losers of the AI race",
+      "url": "https://siliconangle.com/2026/07/11/sovereign-ai-will-decide-winners-losers-ai-race/",
+      "source": "Siliconangle",
+      "country": "US",
+      "publishedAt": "2026-07-11 17:51:16",
+      "relevanceScore": 0.08
+    },
     {
       "id": "8e48f3a8368e098e",
       "headline": "AP Technology SummaryBrief at 12:33 p.m. EDT",
@@ -135,51 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-08 17:00:11",
       "relevanceScore": 0.61
-    },
-    {
-      "id": "659fee0b212216a9",
-      "headline": "Chinese companies are ditching Nvidia’s advanced accelerators for domestic AI suppliers",
-      "url": "https://fortune.com/2026/07/08/chinese-companies-nvidia-ai-suppliers-budget-accelerators/",
-      "source": "Fortune",
-      "country": "CN",
-      "publishedAt": "2026-07-08 13:48:29",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "39a8a9424498bd3d",
-      "headline": "OpenAI's GPT-5.6 Is Dropping on Thursday: What's Different About Sol, Terra and Luna",
-      "url": "https://www.cnet.com/tech/services-and-software/openai-gpt-5-6-release-sol-terra-luna-government-review-news/",
-      "source": "Cnet",
-      "country": "US",
-      "publishedAt": "2026-07-08 13:44:24",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "b9c7b6c4c904cf1d",
-      "headline": "How AI Assistants are Transforming Modern Cars",
-      "url": "https://www.analyticsinsight.net/artificial-intelligence/how-ai-assistants-are-transforming-modern-cars",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-07-08 12:35:21",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "4d18bbb08cfd1cb5",
-      "headline": "Facing US export controls, China's DeepSeek plans to make its own chips",
-      "url": "https://arstechnica.com/ai/2026/07/facing-us-export-controls-chinas-deepseek-plans-to-make-its-own-chips/",
-      "source": "Ars Technica",
-      "country": "CN",
-      "publishedAt": "2026-07-07 16:14:53",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "43efc36186c415b7",
-      "headline": "US-China Chip War Reshapes Global Semiconductor Map as Regional Blocs Harden in 2026: Study",
-      "url": "https://industrywired.com/technology/us-china-chip-war-reshapes-global-semiconductor-map-as-regional-blocs-harden-in-2026-study-12143381",
-      "source": "Industry Wired",
-      "country": "Both",
-      "publishedAt": "2026-07-07 16:03:45",
-      "relevanceScore": 0.63
     }
   ]
 }
