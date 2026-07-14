@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-07-13T05:11:40.652353+00:00",
+  "lastUpdated": "2026-07-14T05:02:19.045168+00:00",
   "items": [
+    {
+      "id": "ada446530dee83cf",
+      "headline": "Nvidia’s auto chief at the literal crossroads of automation",
+      "url": "https://us.headtopics.com/news/nvidia-s-auto-chief-at-the-literal-crossroads-of-automation-85536070",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-07-13 15:37:18",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c48c84a87c524e18",
+      "headline": "Even Nvidia’s head of automotive fights with Nvidia for compute",
+      "url": "https://www.theverge.com/podcast/964614/nvidia-auto-xinzhou-wu-ev-ai-hyperion-autonomy-cars-tesla",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-07-13 15:00:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "6b2f488dd41c4100",
       "headline": "Top High-Growth US Tech Stocks to Watch in 2026",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-07-09 12:10:00",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "c3ba7d671da9febf",
-      "headline": "Google turns old phones into cloud servers",
-      "url": "https://www.foxnews.com/tech/google-turns-old-phones-cloud-servers",
-      "source": "Fox News",
-      "country": "US",
-      "publishedAt": "2026-07-09 11:19:48",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "4bf537cc97fa86bb",
-      "headline": "DeepSeek takes control of its hardware: report",
-      "url": "https://biztoc.com/x/e0ffa211a9339380",
-      "source": "Biztoc",
-      "country": "Both",
-      "publishedAt": "2026-07-08 17:00:11",
-      "relevanceScore": 0.61
     }
   ]
 }
