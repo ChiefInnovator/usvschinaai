@@ -1,6 +1,78 @@
 {
-  "lastUpdated": "2026-07-14T05:02:19.045168+00:00",
+  "lastUpdated": "2026-07-15T05:02:51.032433+00:00",
   "items": [
+    {
+      "id": "15ac1aff02fb244d",
+      "headline": "U.S. Officials Reportedly Confirm First NVIDIA H200 AI GPU Shipments To China Two Months After Trump-Xi Meeting",
+      "url": "https://wccftech.com/u-s-officials-confirm-first-nvidia-h200-ai-gpu-shipments-to-china/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-07-14 16:50:01",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "340e2bcdfe93c000",
+      "headline": "Nvidia Vs. Apple: Nvidia Will Edge Out Apple in Market Cap To End July, but Apple is Growing Faster",
+      "url": "https://247wallst.com/investing/2026/07/14/nvidia-vs-apple-nvidia-will-edge-out-apple-in-market-cap-to-end-july-but-apple-is-growing-faster/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-07-14 16:21:07",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5b70e697e4af453d",
+      "headline": "Open source AI is just 4 months behind closed frontier models — and 10x cheaper",
+      "url": "https://thenewstack.io/open-weight-models-frontier-costs/",
+      "source": "The New Stack",
+      "country": "US",
+      "publishedAt": "2026-07-14 16:04:23",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d16348be017ee004",
+      "headline": "Small Amount of Nvidia AI Chips Shipped to China With US License",
+      "url": "https://www.bloomberg.com/news/articles/2026-07-14/small-amount-of-nvidia-ai-chips-shipped-to-china-with-us-license",
+      "source": "Bloomberg",
+      "country": "CN",
+      "publishedAt": "2026-07-14 15:29:15",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "72c5fb72b42959be",
+      "headline": "Google DeepMind CEO says the U.S. should lead a global framework for governing AI",
+      "url": "https://www.neowin.net/news/google-deepmind-ceo-says-the-us-should-lead-a-global-framework-for-governing-ai/",
+      "source": "Neowin Net",
+      "country": "US",
+      "publishedAt": "2026-07-14 15:18:02",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "a996bceb6c252fd6",
+      "headline": "Dr. Xiang Yanping of AICT: Building a New Paradigm of Artificial Intelligence with High-Precision Physical AI",
+      "url": "https://www.financialcontent.com/article/marketersmedia-2026-7-14-dr-xiang-yanping-of-aict-building-a-new-paradigm-of-artificial-intelligence-with-high-precision-physical-ai",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-07-14 14:55:45",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "8b9fa845b67915e9",
+      "headline": "Google Vs. Nvidia: The Hidden Silicon Advantage That Could Let Google Dethrone Nvidia",
+      "url": "https://247wallst.com/investing/2026/07/14/google-vs-nvidia-the-hidden-silicon-advantage-that-could-let-google-dethrone-nvidia/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-07-14 13:55:01",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "691b69500a33d86e",
+      "headline": "AI uncertainty is rising. So is investor conviction",
+      "url": "https://www.reuters.com/commentary/reuters-open-interest/ai-uncertainty-is-rising-so-is-investor-conviction-2026-07-14/",
+      "source": "Reuters",
+      "country": "US",
+      "publishedAt": "2026-07-14 13:34:31",
+      "relevanceScore": 0.08
+    },
     {
       "id": "ada446530dee83cf",
       "headline": "Nvidia’s auto chief at the literal crossroads of automation",
@@ -108,78 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-10 15:04:55",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "d8a993add602dc62",
-      "headline": "The Download: Claude’s inner workings and OpenAI’s “super app”",
-      "url": "https://www.technologyreview.com/2026/07/10/1140316/the-download-anthropic-claude-hidden-space-openai-super-app/",
-      "source": "Technologyreview",
-      "country": "US",
-      "publishedAt": "2026-07-10 12:10:00",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "d77cd0b6e5164a37",
-      "headline": "OpenAI and Google sell AI models to blacklisted China groups (Madhumita Murgia/Financial Times)",
-      "url": "https://www.memeorandum.com/260710/p13",
-      "source": "Memeorandum",
-      "country": "Both",
-      "publishedAt": "2026-07-10 12:00:05",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "dd1c616b07d0540f",
-      "headline": "The first commercial human-like robot is here. Are replicants next?",
-      "url": "https://www.fastcompany.com/91570086/ubtech-first-commercial-human-like-robot",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-07-10 10:00:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "895c3e40eb8ec3f3",
-      "headline": "DeepSeek develops first in-house AI inference chip",
-      "url": "https://completeaitraining.com/news/deepseek-develops-first-in-house-ai-inference-chip/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-07-09 16:18:20",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "d207a006e44de7a2",
-      "headline": "Humanoid robots just helped perform live surgeries for the first time — here’s why it’s a medical breakthrough",
-      "url": "https://www.tomsguide.com/ai/humanoid-robots-just-helped-perform-live-surgeries-for-the-first-time-heres-why-its-a-medical-breakthrough",
-      "source": "Tom's Guide",
-      "country": "US",
-      "publishedAt": "2026-07-09 15:32:31",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "a00fa7508c9970c2",
-      "headline": "Peter Linneman On AI's Trajectory, Trump's Tariffs And Misleading Inflation Numbers",
-      "url": "https://www.bisnow.com/national/news/commercial-real-estate/peter-linneman-ai-trump-tariffs-misleading-inflation-figures-walker-webcast-studiob-135360",
-      "source": "Bisnow",
-      "country": "US",
-      "publishedAt": "2026-07-09 14:53:02",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c9697f5b3432449d",
-      "headline": "195 Blog Posts To Learn About Architecture",
-      "url": "https://hackernoon.com/195-blog-posts-to-learn-about-architecture",
-      "source": "Hackernoon",
-      "country": "Both",
-      "publishedAt": "2026-07-09 14:00:59",
-      "relevanceScore": 0.76
-    },
-    {
-      "id": "15c8574e6149f297",
-      "headline": "The Download: a nuclear landmark, and China eyes Nvidia chips",
-      "url": "https://www.technologyreview.com/2026/07/09/1140283/the-download-nuclear-power-milestone-nvidia-china-ai-chips/",
-      "source": "Technologyreview",
-      "country": "CN",
-      "publishedAt": "2026-07-09 12:10:00",
-      "relevanceScore": 0.16
     }
   ]
 }
