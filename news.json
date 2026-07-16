@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-15T05:02:51.032433+00:00",
+  "lastUpdated": "2026-07-16T05:06:01.993754+00:00",
   "items": [
+    {
+      "id": "cc51c9b605e02b6c",
+      "headline": "NVIDIA cuts over half of Asian buyers from AI chip whitelist in China crackdown",
+      "url": "https://www.tweaktown.com/news/112613/nvidia-cuts-over-half-of-asian-buyers-from-ai-chip-whitelist-in-china-crackdown/index.html",
+      "source": "Tweak Town",
+      "country": "CN",
+      "publishedAt": "2026-07-15 15:52:08",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "fa7faee118040f2a",
+      "headline": "NVIDIA CEO Jensen Haung: Our Next Product Is on Pace for “Giant” Sales Volumes",
+      "url": "https://247wallst.com/investing/2026/07/15/nvidia-ceo-jensen-haung-our-next-product-is-on-pace-for-giant-sales-volumes/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-07-15 15:03:56",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b70db8fdebe111cb",
+      "headline": "AP Technology SummaryBrief at 10:23 a.m. EDT",
+      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-10-23-a-m-edt/article_46fc7d6c-34f4-5bc0-b1ad-aa6d83246dea.html",
+      "source": "Dailyrecordnews",
+      "country": "US",
+      "publishedAt": "2026-07-15 14:23:35",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "b6b52c632c7ae7ed",
+      "headline": "Apple Intelligence finally gets regulatory approval in China",
+      "url": "https://www.engadget.com/2215606/apple-intelligence-finally-gets-regulatory-approval-in-china/",
+      "source": "Engadget",
+      "country": "CN",
+      "publishedAt": "2026-07-15 14:22:30",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "fc5843e4eda9a0d9",
+      "headline": "How Google May ‘Understand’ Unique Content",
+      "url": "https://www.searchenginejournal.com/how-google-may-understand-unique-content/581959/",
+      "source": "Search Engine Journal",
+      "country": "US",
+      "publishedAt": "2026-07-15 13:30:00",
+      "relevanceScore": 0.15
+    },
     {
       "id": "15ac1aff02fb244d",
       "headline": "U.S. Officials Reportedly Confirm First NVIDIA H200 AI GPU Shipments To China Two Months After Trump-Xi Meeting",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-11 17:51:16",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "8e48f3a8368e098e",
-      "headline": "AP Technology SummaryBrief at 12:33 p.m. EDT",
-      "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-12-33-p-m-edt/article_da35d2a1-f95a-5b5b-bc6f-e3bb3a526890.html",
-      "source": "Rutland Herald",
-      "country": "US",
-      "publishedAt": "2026-07-11 16:33:52",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "71942676a6b6804f",
-      "headline": "Stop Guessing: Real Data Comparing Chinese and US AI Models",
-      "url": "https://www.bundle.app/en/technology/stop-guessing-real-data-comparing-chinese-and-us-ai-models-6D515E51-3D05-4A7A-861E-0634F0FE590F",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-07-10 22:08:46",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "d643bcaa9e4aaa3c",
-      "headline": "AP Technology SummaryBrief at 4:54 p.m. EDT",
-      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-4-54-p-m-edt/article_3ebd0f51-26d8-55b2-be6c-7923653e9990.html",
-      "source": "Dailyrecordnews",
-      "country": "US",
-      "publishedAt": "2026-07-10 20:54:01",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "f6ce39f900ad0136",
-      "headline": "The Download: Claudeâs inner workings and OpenAIâs âsuper appâ",
-      "url": "https://www.bundle.app/en/technology/the-download-claudes-inner-workings-and-openais-super-app-AE3A7B1F-1815-4739-BBFE-CF02B3D3C5C3",
-      "source": "Bundle",
-      "country": "US",
-      "publishedAt": "2026-07-10 20:51:45",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "339d42b633dfc15b",
-      "headline": "Meta targets September launch for in-house AI chip production",
-      "url": "http://www.sanfranciscostar.com/news/279177714/meta-targets-september-launch-for-in-house-ai-chip-production",
-      "source": "San Francisco Star",
-      "country": "US",
-      "publishedAt": "2026-07-10 15:04:55",
-      "relevanceScore": 0.23
     }
   ]
 }
