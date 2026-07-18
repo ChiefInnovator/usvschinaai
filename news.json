@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-07-17T05:05:23.034190+00:00",
+  "lastUpdated": "2026-07-18T05:01:17.823352+00:00",
   "items": [
+    {
+      "id": "cc90ba4d13ac264d",
+      "headline": "World leaders champion AI development for good purposes, shared benefits",
+      "url": "http://www.beijingbulletin.com/news/279194335/world-leaders-champion-ai-development-for-good-purposes-shared-benefits",
+      "source": "Beijingbulletin",
+      "country": "CN",
+      "publishedAt": "2026-07-17 16:15:33",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c8a335a45a3c2fb5",
+      "headline": "The next DeepSeek? A surprise AI breakthrough in China is rattling US market heavyweights.",
+      "url": "https://www.businessinsider.com/stock-market-today-chip-selloff-kimi-moonshot-ai-rotation-soxx-2026-7",
+      "source": "Insider",
+      "country": "CN",
+      "publishedAt": "2026-07-17 15:37:15",
+      "relevanceScore": 0.46
+    },
     {
       "id": "e543f30ef6077273",
       "headline": "Price Prediction: Nvidia, AMD & Broadcom-Our Bold Price Predictions for 2029",
@@ -161,24 +179,6 @@
       "source": "Reuters",
       "country": "US",
       "publishedAt": "2026-07-14 13:34:31",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "ada446530dee83cf",
-      "headline": "Nvidia’s auto chief at the literal crossroads of automation",
-      "url": "https://us.headtopics.com/news/nvidia-s-auto-chief-at-the-literal-crossroads-of-automation-85536070",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-07-13 15:37:18",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c48c84a87c524e18",
-      "headline": "Even Nvidia’s head of automotive fights with Nvidia for compute",
-      "url": "https://www.theverge.com/podcast/964614/nvidia-auto-xinzhou-wu-ev-ai-hyperion-autonomy-cars-tesla",
-      "source": "The Verge",
-      "country": "US",
-      "publishedAt": "2026-07-13 15:00:00",
       "relevanceScore": 0.08
     }
   ]
