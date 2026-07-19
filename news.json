@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-07-18T05:01:17.823352+00:00",
+  "lastUpdated": "2026-07-19T05:10:53.901557+00:00",
   "items": [
+    {
+      "id": "ed7eb27848a42201",
+      "headline": "AI-Powered Connectivity: APAC Charts a Path to a Smarter Digital Future",
+      "url": "https://en.prnasia.com/story/541138-0.shtml",
+      "source": "Pr Newswire Apac",
+      "country": "Both",
+      "publishedAt": "2026-07-18 16:45:00",
+      "relevanceScore": 0.39
+    },
+    {
+      "id": "7d08cb083aa4a5de",
+      "headline": "Meet Yang Zhilin, the CEO and founder behind China's buzzy new Kimi K3 AI model",
+      "url": "https://www.businessinsider.com/who-is-yang-zhilin-ceo-founder-moonshot-ai-kimi-k3-2026-7",
+      "source": "Business Insider",
+      "country": "CN",
+      "publishedAt": "2026-07-18 16:02:43",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "12955ed32a9d4fb1",
+      "headline": "Technology Stocks To Watch Today – July 17th",
+      "url": "https://www.thelincolnianonline.com/2026/07/18/technology-stocks-to-watch-today-july-17th.html",
+      "source": "The Lincolnian Online",
+      "country": "US",
+      "publishedAt": "2026-07-18 13:16:43",
+      "relevanceScore": 0.31
+    },
     {
       "id": "cc90ba4d13ac264d",
       "headline": "World leaders champion AI development for good purposes, shared benefits",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-14 15:18:02",
       "relevanceScore": 0.31
-    },
-    {
-      "id": "a996bceb6c252fd6",
-      "headline": "Dr. Xiang Yanping of AICT: Building a New Paradigm of Artificial Intelligence with High-Precision Physical AI",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-7-14-dr-xiang-yanping-of-aict-building-a-new-paradigm-of-artificial-intelligence-with-high-precision-physical-ai",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-07-14 14:55:45",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "8b9fa845b67915e9",
-      "headline": "Google Vs. Nvidia: The Hidden Silicon Advantage That Could Let Google Dethrone Nvidia",
-      "url": "https://247wallst.com/investing/2026/07/14/google-vs-nvidia-the-hidden-silicon-advantage-that-could-let-google-dethrone-nvidia/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-14 13:55:01",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "691b69500a33d86e",
-      "headline": "AI uncertainty is rising. So is investor conviction",
-      "url": "https://www.reuters.com/commentary/reuters-open-interest/ai-uncertainty-is-rising-so-is-investor-conviction-2026-07-14/",
-      "source": "Reuters",
-      "country": "US",
-      "publishedAt": "2026-07-14 13:34:31",
-      "relevanceScore": 0.08
     }
   ]
 }
