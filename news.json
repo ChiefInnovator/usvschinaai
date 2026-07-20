@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-07-19T05:10:53.901557+00:00",
+  "lastUpdated": "2026-07-20T05:13:00.637538+00:00",
   "items": [
+    {
+      "id": "0dabcb74b02b0e38",
+      "headline": "For humanity: China's AI philosophy wins broad international backing",
+      "url": "https://news.cgtn.com/news/2026-07-19/For-humanity-China-s-AI-philosophy-wins-broad-international-backing-1OTYDgUJJeg/p.html",
+      "source": "Cgtn",
+      "country": "CN",
+      "publishedAt": "2026-07-19 06:52:01",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "534fb3c454734065",
+      "headline": "'World's 1st mass-produced humanoid robot' motors to market in China",
+      "url": "https://newatlas.com/robotics/u1-worlds-first-mass-produced-humanoid-robot/",
+      "source": "New Atlas",
+      "country": "CN",
+      "publishedAt": "2026-07-19 06:03:00",
+      "relevanceScore": 0.16
+    },
     {
       "id": "ed7eb27848a42201",
       "headline": "AI-Powered Connectivity: APAC Charts a Path to a Smarter Digital Future",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-14 16:04:23",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "d16348be017ee004",
-      "headline": "Small Amount of Nvidia AI Chips Shipped to China With US License",
-      "url": "https://www.bloomberg.com/news/articles/2026-07-14/small-amount-of-nvidia-ai-chips-shipped-to-china-with-us-license",
-      "source": "Bloomberg",
-      "country": "CN",
-      "publishedAt": "2026-07-14 15:29:15",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "72c5fb72b42959be",
-      "headline": "Google DeepMind CEO says the U.S. should lead a global framework for governing AI",
-      "url": "https://www.neowin.net/news/google-deepmind-ceo-says-the-us-should-lead-a-global-framework-for-governing-ai/",
-      "source": "Neowin Net",
-      "country": "US",
-      "publishedAt": "2026-07-14 15:18:02",
-      "relevanceScore": 0.31
     }
   ]
 }
