@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-20T05:13:00.637538+00:00",
+  "lastUpdated": "2026-07-21T05:07:57.410785+00:00",
   "items": [
+    {
+      "id": "0ccae6550deb5768",
+      "headline": "AP Technology SummaryBrief at 11:56 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-11-56-a-m-edt/article_85b3921c-cb33-52d4-b44a-1143690dd298.html",
+      "source": "Postregister",
+      "country": "CN",
+      "publishedAt": "2026-07-20 15:56:28",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "31c1b0083584cb5c",
+      "headline": "China’s AI Labs Deliver a One-Two Punch: Kimi K3 Goes Open-Source, Alibaba Answers with Qwen 3.8",
+      "url": "https://thecherrycreeknews.com/chinas-ai-labs-deliver-a-one-two-punch-kimi-k3-goes-open-source-alibaba-answers-with-qwen-3-8/",
+      "source": "The Cherry Creek News",
+      "country": "CN",
+      "publishedAt": "2026-07-20 14:33:33",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "8bd492d50c10d39e",
+      "headline": "China unveils roadmap to make nuclear energy systems smarter",
+      "url": "https://us.headtopics.com/news/china-unveils-roadmap-to-make-nuclear-energy-systems-smarter-85764945",
+      "source": "Headtopics",
+      "country": "CN",
+      "publishedAt": "2026-07-20 14:07:47",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "398552635e000100",
+      "headline": "China goes bold, unveils roadmap to make nuclear energy systems more intelligent",
+      "url": "https://interestingengineering.com/energy/china-roadmap-ai-nuclear-energy-systems",
+      "source": "Interesting Engineering",
+      "country": "CN",
+      "publishedAt": "2026-07-20 13:45:40",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f83626588921e345",
+      "headline": "How AI is Transforming the Way China’s Microdramas Are Made",
+      "url": "https://www.today.com/video/how-ai-is-transforming-the-way-china-s-microdramas-are-made-266943045834",
+      "source": "Nbc News",
+      "country": "Both",
+      "publishedAt": "2026-07-20 13:39:42",
+      "relevanceScore": 0.08
+    },
     {
       "id": "0dabcb74b02b0e38",
       "headline": "For humanity: China's AI philosophy wins broad international backing",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-15 14:23:35",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "b6b52c632c7ae7ed",
-      "headline": "Apple Intelligence finally gets regulatory approval in China",
-      "url": "https://www.engadget.com/2215606/apple-intelligence-finally-gets-regulatory-approval-in-china/",
-      "source": "Engadget",
-      "country": "CN",
-      "publishedAt": "2026-07-15 14:22:30",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "fc5843e4eda9a0d9",
-      "headline": "How Google May ‘Understand’ Unique Content",
-      "url": "https://www.searchenginejournal.com/how-google-may-understand-unique-content/581959/",
-      "source": "Search Engine Journal",
-      "country": "US",
-      "publishedAt": "2026-07-15 13:30:00",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "15ac1aff02fb244d",
-      "headline": "U.S. Officials Reportedly Confirm First NVIDIA H200 AI GPU Shipments To China Two Months After Trump-Xi Meeting",
-      "url": "https://wccftech.com/u-s-officials-confirm-first-nvidia-h200-ai-gpu-shipments-to-china/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-07-14 16:50:01",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "340e2bcdfe93c000",
-      "headline": "Nvidia Vs. Apple: Nvidia Will Edge Out Apple in Market Cap To End July, but Apple is Growing Faster",
-      "url": "https://247wallst.com/investing/2026/07/14/nvidia-vs-apple-nvidia-will-edge-out-apple-in-market-cap-to-end-july-but-apple-is-growing-faster/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-14 16:21:07",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5b70e697e4af453d",
-      "headline": "Open source AI is just 4 months behind closed frontier models — and 10x cheaper",
-      "url": "https://thenewstack.io/open-weight-models-frontier-costs/",
-      "source": "The New Stack",
-      "country": "US",
-      "publishedAt": "2026-07-14 16:04:23",
-      "relevanceScore": 0.08
     }
   ]
 }
