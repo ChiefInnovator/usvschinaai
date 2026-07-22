@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-07-21T05:07:57.410785+00:00",
+  "lastUpdated": "2026-07-22T05:08:43.748117+00:00",
   "items": [
+    {
+      "id": "bd4e3a937484187a",
+      "headline": "China-based Moonshot AI seeks $50B valuation — and could go public this year: report",
+      "url": "https://nypost.com/2026/07/21/business/china-based-moonshot-ai-seeks-50-billion-valuation-could-go-public-this-year-report/",
+      "source": "New York Post",
+      "country": "Both",
+      "publishedAt": "2026-07-21 16:44:23",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "ee32ca02949b0264",
+      "headline": "Google Just Released Gemini 3.6 Flash, And It Might Be Its Worst Model To-Date",
+      "url": "https://wccftech.com/google-just-released-gemini-3-6-flash-and-it-might-be-its-worst-model-to-date/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-07-21 16:43:47",
+      "relevanceScore": 0.76
+    },
+    {
+      "id": "2277d7ad512b2dd3",
+      "headline": "US pharma firm ropes in Nvidia to build sector's largest supercomputer",
+      "url": "https://us.headtopics.com/news/us-pharma-firm-ropes-in-nvidia-to-build-sector-s-largest-85799570",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-07-21 16:37:37",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "9b2557334223a9cc",
+      "headline": "US threatens sanctions against Chinese AI models over IP theft",
+      "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/",
+      "source": "Tech Crunch",
+      "country": "Both",
+      "publishedAt": "2026-07-21 15:37:05",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c2688b8b95bf9aa8",
+      "headline": "SK Hynix’s HBM Empire Powers 65% US Revenue — Is This the Must-Own AI Stock?",
+      "url": "https://247wallst.com/investing/2026/07/21/sk-hynixs-hbm-empire-powers-65-us-revenue-is-this-the-must-own-ai-stock/",
+      "source": "24/7 Wall St",
+      "country": "US",
+      "publishedAt": "2026-07-21 15:31:10",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "44a7a2f6c20ebf27",
+      "headline": "US May Sanction Chinese AI Models Over Distillation Claims",
+      "url": "https://www.techbooky.com/us-chinese-ai-models-sanctions-distillation-claims/",
+      "source": "Unknown",
+      "country": "Both",
+      "publishedAt": "2026-07-21 14:58:54",
+      "relevanceScore": 0.08
+    },
     {
       "id": "0ccae6550deb5768",
       "headline": "AP Technology SummaryBrief at 11:56 a.m. EDT",
@@ -126,60 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-07-16 16:58:07",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "7b93e351470891ad",
-      "headline": "Ahead of WAIC 2026, Yanshan AI Releases Four Predictions for Enterprise AI Deployment",
-      "url": "https://www.prnewswire.com/news-releases/ahead-of-waic-2026-yanshan-ai-releases-four-predictions-for-enterprise-ai-deployment-302827451.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-07-16 13:03:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "e94879ebc4055a0c",
-      "headline": "Nvidia Might Be a Massive Winner as SpaceX’s Orbital Data Centers Take Off",
-      "url": "https://247wallst.com/investing/2026/07/16/nvidia-might-be-a-massive-winner-as-spacexs-orbital-data-centers-take-off/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-16 13:01:11",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "1ff2374fb32ed74b",
-      "headline": "Google DeepMind CEO Calls for U.S.-Led Global AI Safety Watchdog",
-      "url": "https://www.breitbart.com/tech/2026/07/16/google-deepmind-ceo-calls-for-u-s-led-global-ai-safety-watchdog/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-07-16 12:51:05",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "cc51c9b605e02b6c",
-      "headline": "NVIDIA cuts over half of Asian buyers from AI chip whitelist in China crackdown",
-      "url": "https://www.tweaktown.com/news/112613/nvidia-cuts-over-half-of-asian-buyers-from-ai-chip-whitelist-in-china-crackdown/index.html",
-      "source": "Tweak Town",
-      "country": "CN",
-      "publishedAt": "2026-07-15 15:52:08",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "fa7faee118040f2a",
-      "headline": "NVIDIA CEO Jensen Haung: Our Next Product Is on Pace for “Giant” Sales Volumes",
-      "url": "https://247wallst.com/investing/2026/07/15/nvidia-ceo-jensen-haung-our-next-product-is-on-pace-for-giant-sales-volumes/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-15 15:03:56",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b70db8fdebe111cb",
-      "headline": "AP Technology SummaryBrief at 10:23 a.m. EDT",
-      "url": "https://www.dailyrecordnews.com/ap_news/hitech/ap-technology-summarybrief-at-10-23-a-m-edt/article_46fc7d6c-34f4-5bc0-b1ad-aa6d83246dea.html",
-      "source": "Dailyrecordnews",
-      "country": "US",
-      "publishedAt": "2026-07-15 14:23:35",
-      "relevanceScore": 0.15
     }
   ]
 }
