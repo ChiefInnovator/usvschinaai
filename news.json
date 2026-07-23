@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-22T05:08:43.748117+00:00",
+  "lastUpdated": "2026-07-23T05:09:14.963856+00:00",
   "items": [
+    {
+      "id": "2eb8b78714008a7d",
+      "headline": "Open AI’s hacking agent went rogue. Should we be worried?",
+      "url": "https://www.newscientist.com/article/2580710-open-ais-hacking-agent-went-rogue-should-we-be-worried/",
+      "source": "Newscientist",
+      "country": "US",
+      "publishedAt": "2026-07-22 16:34:35",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "7a0ce00e43cba95e",
+      "headline": "AP Business SummaryBrief at 11:50 a.m. EDT",
+      "url": "https://www.mankatofreepress.com/news/business/ap-business-summarybrief-at-11-50-a-m-edt/article_bba648ed-e3bb-5db2-8884-5e554bddc757.html",
+      "source": "Mankato Free Press",
+      "country": "US",
+      "publishedAt": "2026-07-22 15:50:04",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "f6a26da41f15bce7",
+      "headline": "The latest OpenAI drama made Chinese AI the hero",
+      "url": "https://www.businessinsider.com/hugging-face-hack-openai-rogue-ai-china-cybersecurity-2026-7",
+      "source": "Business Insider",
+      "country": "Both",
+      "publishedAt": "2026-07-22 15:07:54",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "63ba6b2f91618400",
+      "headline": "AP Business SummaryBrief at 10:47 a.m. EDT",
+      "url": "https://www.cadillacnews.com/ap/business/ap-business-summarybrief-at-10-47-a-m-edt/article_3ecf4b29-f04e-5f9a-979e-646981a2c313.html",
+      "source": "Cadillacnews",
+      "country": "US",
+      "publishedAt": "2026-07-22 14:47:52",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "c0ffecc077e9c402",
+      "headline": "AP Business SummaryBrief at 9:40 a.m. EDT",
+      "url": "https://www.messenger-inquirer.com/ap/elections/ap-business-summarybrief-at-9-40-a-m-edt/article_b671b94e-55ce-5e00-84a2-b7842984f3a4.html",
+      "source": "Owensboro Messenger And Inquirer",
+      "country": "US",
+      "publishedAt": "2026-07-22 13:40:14",
+      "relevanceScore": 0.15
+    },
     {
       "id": "bd4e3a937484187a",
       "headline": "China-based Moonshot AI seeks $50B valuation — and could go public this year: report",
@@ -134,51 +179,6 @@
       "source": "Business Insider",
       "country": "CN",
       "publishedAt": "2026-07-18 16:02:43",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "12955ed32a9d4fb1",
-      "headline": "Technology Stocks To Watch Today – July 17th",
-      "url": "https://www.thelincolnianonline.com/2026/07/18/technology-stocks-to-watch-today-july-17th.html",
-      "source": "The Lincolnian Online",
-      "country": "US",
-      "publishedAt": "2026-07-18 13:16:43",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "cc90ba4d13ac264d",
-      "headline": "World leaders champion AI development for good purposes, shared benefits",
-      "url": "http://www.beijingbulletin.com/news/279194335/world-leaders-champion-ai-development-for-good-purposes-shared-benefits",
-      "source": "Beijingbulletin",
-      "country": "CN",
-      "publishedAt": "2026-07-17 16:15:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c8a335a45a3c2fb5",
-      "headline": "The next DeepSeek? A surprise AI breakthrough in China is rattling US market heavyweights.",
-      "url": "https://www.businessinsider.com/stock-market-today-chip-selloff-kimi-moonshot-ai-rotation-soxx-2026-7",
-      "source": "Insider",
-      "country": "CN",
-      "publishedAt": "2026-07-17 15:37:15",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "e543f30ef6077273",
-      "headline": "Price Prediction: Nvidia, AMD & Broadcom-Our Bold Price Predictions for 2029",
-      "url": "https://247wallst.com/investing/2026/07/16/price-prediction-nvidia-amd-broadcom-our-bold-price-predictions-for-2029/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-16 17:00:20",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "e1e343efb96d9848",
-      "headline": "Open Computing AI (OCAI) Attends 2026 Forbes China AI Tech Summit",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-7-16-open-computing-ai-ocai-attends-2026-forbes-china-ai-tech-summit",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-07-16 16:58:07",
       "relevanceScore": 0.08
     }
   ]
