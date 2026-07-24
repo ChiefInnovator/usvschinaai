@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-23T05:09:14.963856+00:00",
+  "lastUpdated": "2026-07-24T05:07:57.130412+00:00",
   "items": [
+    {
+      "id": "e2d8bdae9f3ea37b",
+      "headline": "'The Game Has Changed': Tech Platform Hacked by OpenAI's Out of Control Models Calls for Cybersecurity 'Wake-Up Call'",
+      "url": "https://www.breitbart.com/tech/2026/07/23/the-game-has-changed-tech-platform-hacked-by-openais-out-of-control-models-calls-for-cybersecurity-wake-up-call/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-07-23 15:42:36",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "34d6aee26661f705",
+      "headline": "AI Chip Space Set For Fresh Volatility As China's CXMT Debuts Next Week",
+      "url": "https://industrywired.com/ai/ai-chip-space-set-for-fresh-volatility-as-chinas-cxmt-debuts-next-week-12191736",
+      "source": "Industry Wired",
+      "country": "CN",
+      "publishedAt": "2026-07-23 15:00:37",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "5dc56c5fc016ce13",
+      "headline": "After months of surprising stability in graphics card prices, apparently Nvidia is now raising the cost of its GPU...",
+      "url": "https://www.pcgamer.com/hardware/graphics-cards/after-months-of-surprising-stability-in-graphics-card-prices-apparently-nvidia-is-now-raising-the-cost-of-its-gpu-kits-for-aib-partners/",
+      "source": "Pc Gamer",
+      "country": "US",
+      "publishedAt": "2026-07-23 14:34:33",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "020206b1c9bda03c",
+      "headline": "US Threatens China with New Sanctions Over AI Model Theft as Tech Tensions Escalate",
+      "url": "https://www.androidheadlines.com/2026/07/us-threatens-china-sanctions-ai-model-theft.html",
+      "source": "Androidheadlines",
+      "country": "CN",
+      "publishedAt": "2026-07-23 14:10:32",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "4032e91e75591974",
+      "headline": "The 4 qualities that make the Moonshot AI founder so exceptional, according to his Ph.D. advisor",
+      "url": "https://www.businessinsider.com/moonshot-ai-kimi-k3-founder-professor-on-unique-strengths-qualities-2026-7",
+      "source": "Business Insider",
+      "country": "US",
+      "publishedAt": "2026-07-23 12:18:21",
+      "relevanceScore": 0.08
+    },
     {
       "id": "2eb8b78714008a7d",
       "headline": "Open AI’s hacking agent went rogue. Should we be worried?",
@@ -134,51 +179,6 @@
       "source": "Interesting Engineering",
       "country": "CN",
       "publishedAt": "2026-07-20 13:45:40",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f83626588921e345",
-      "headline": "How AI is Transforming the Way China’s Microdramas Are Made",
-      "url": "https://www.today.com/video/how-ai-is-transforming-the-way-china-s-microdramas-are-made-266943045834",
-      "source": "Nbc News",
-      "country": "Both",
-      "publishedAt": "2026-07-20 13:39:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0dabcb74b02b0e38",
-      "headline": "For humanity: China's AI philosophy wins broad international backing",
-      "url": "https://news.cgtn.com/news/2026-07-19/For-humanity-China-s-AI-philosophy-wins-broad-international-backing-1OTYDgUJJeg/p.html",
-      "source": "Cgtn",
-      "country": "CN",
-      "publishedAt": "2026-07-19 06:52:01",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "534fb3c454734065",
-      "headline": "'World's 1st mass-produced humanoid robot' motors to market in China",
-      "url": "https://newatlas.com/robotics/u1-worlds-first-mass-produced-humanoid-robot/",
-      "source": "New Atlas",
-      "country": "CN",
-      "publishedAt": "2026-07-19 06:03:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "ed7eb27848a42201",
-      "headline": "AI-Powered Connectivity: APAC Charts a Path to a Smarter Digital Future",
-      "url": "https://en.prnasia.com/story/541138-0.shtml",
-      "source": "Pr Newswire Apac",
-      "country": "Both",
-      "publishedAt": "2026-07-18 16:45:00",
-      "relevanceScore": 0.39
-    },
-    {
-      "id": "7d08cb083aa4a5de",
-      "headline": "Meet Yang Zhilin, the CEO and founder behind China's buzzy new Kimi K3 AI model",
-      "url": "https://www.businessinsider.com/who-is-yang-zhilin-ceo-founder-moonshot-ai-kimi-k3-2026-7",
-      "source": "Business Insider",
-      "country": "CN",
-      "publishedAt": "2026-07-18 16:02:43",
       "relevanceScore": 0.08
     }
   ]
