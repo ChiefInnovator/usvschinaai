@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-07-24T05:07:57.130412+00:00",
+  "lastUpdated": "2026-07-25T05:06:24.888286+00:00",
   "items": [
+    {
+      "id": "ee9e5beb9fb297ef",
+      "headline": "Nvidia warns US policies on open-weight models may push AI innovation toward China",
+      "url": "https://interestingengineering.com/ai-robotics/nvidia-open-weight-models-china-us",
+      "source": "Interesting Engineering",
+      "country": "Both",
+      "publishedAt": "2026-07-24 17:05:46",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "07f6088e7a424770",
+      "headline": "What Hugging Face Had That You Don’t: The AI Capability Gap",
+      "url": "https://www.forbes.com/sites/nishatalagala/2026/07/24/what-hugging-face-had-that-you-dont-the-ai-capability-gap/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-07-24 14:52:26",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "bd4c5e98908428c0",
+      "headline": "Microsoft, Meta, Nvidia, and Palantir have a message for Washington",
+      "url": "https://www.businessinsider.com/microsoft-nvidia-meta-palantir-jensen-huang-open-source-ai-letter-2026-7",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-07-24 14:35:27",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "98eeb5424ce58d8a",
+      "headline": "Kimi K3 Raises Fresh US Concerns Over China’s Fast-Growing AI Capabilities",
+      "url": "https://www.analyticsinsight.net/news/kimi-k3-raises-fresh-us-concerns-over-chinas-fast-growing-ai-capabilities",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-07-24 14:30:00",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "79f510e98e1e97a8",
+      "headline": "The Download: an organ transplant breakthrough, and homegrown Chinese chips",
+      "url": "https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/",
+      "source": "Technologyreview",
+      "country": "CN",
+      "publishedAt": "2026-07-24 12:10:00",
+      "relevanceScore": 0.16
+    },
     {
       "id": "e2d8bdae9f3ea37b",
       "headline": "'The Game Has Changed': Tech Platform Hacked by OpenAI's Out of Control Models Calls for Cybersecurity 'Wake-Up Call'",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-21 15:31:10",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "44a7a2f6c20ebf27",
-      "headline": "US May Sanction Chinese AI Models Over Distillation Claims",
-      "url": "https://www.techbooky.com/us-chinese-ai-models-sanctions-distillation-claims/",
-      "source": "Unknown",
-      "country": "Both",
-      "publishedAt": "2026-07-21 14:58:54",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0ccae6550deb5768",
-      "headline": "AP Technology SummaryBrief at 11:56 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-11-56-a-m-edt/article_85b3921c-cb33-52d4-b44a-1143690dd298.html",
-      "source": "Postregister",
-      "country": "CN",
-      "publishedAt": "2026-07-20 15:56:28",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "31c1b0083584cb5c",
-      "headline": "China’s AI Labs Deliver a One-Two Punch: Kimi K3 Goes Open-Source, Alibaba Answers with Qwen 3.8",
-      "url": "https://thecherrycreeknews.com/chinas-ai-labs-deliver-a-one-two-punch-kimi-k3-goes-open-source-alibaba-answers-with-qwen-3-8/",
-      "source": "The Cherry Creek News",
-      "country": "CN",
-      "publishedAt": "2026-07-20 14:33:33",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "8bd492d50c10d39e",
-      "headline": "China unveils roadmap to make nuclear energy systems smarter",
-      "url": "https://us.headtopics.com/news/china-unveils-roadmap-to-make-nuclear-energy-systems-smarter-85764945",
-      "source": "Headtopics",
-      "country": "CN",
-      "publishedAt": "2026-07-20 14:07:47",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "398552635e000100",
-      "headline": "China goes bold, unveils roadmap to make nuclear energy systems more intelligent",
-      "url": "https://interestingengineering.com/energy/china-roadmap-ai-nuclear-energy-systems",
-      "source": "Interesting Engineering",
-      "country": "CN",
-      "publishedAt": "2026-07-20 13:45:40",
-      "relevanceScore": 0.08
     }
   ]
 }
