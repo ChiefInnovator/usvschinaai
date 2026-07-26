@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-07-25T05:06:24.888286+00:00",
+  "lastUpdated": "2026-07-26T05:10:47.327236+00:00",
   "items": [
+    {
+      "id": "064cf1aaba8947c9",
+      "headline": "MoonShot CEO Says “OpenAI Didn’t Invent Anything New,” As Sam Altman Signs The Letter Calling For Open-Weight AI...",
+      "url": "https://wccftech.com/moonshot-ceo-says-openai-didnt-invent-anything-new-as-sam-altman-signs-the-letter-calling-for-open-weight-ai-models-after-the-fact-and-under-pressure/",
+      "source": "Wccftech",
+      "country": "US",
+      "publishedAt": "2026-07-25 16:51:01",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "4b9240bda40defca",
+      "headline": "US models beat China’s Kimi K3 with a 76% score over 32% in cyber benchmarks, tests show",
+      "url": "https://interestingengineering.com/ai-robotics/us-models-beat-chinas-kimi-k3",
+      "source": "Interesting Engineering",
+      "country": "CN",
+      "publishedAt": "2026-07-25 14:38:26",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "0fb47f37c9ec15e7",
+      "headline": "OpenAI quietly signs letter from Nvidia, Microsoft, and Meta warning about dangers of 'premature restrictions' on...",
+      "url": "https://www.techradar.com/ai-platforms-assistants/openai-quietly-signs-letter-from-nvidia-microsoft-and-meta-warning-about-dangers-of-premature-restrictions-on-open-weight-ai-models-as-the-white-house-accuses-china-of-stealing-from-anthropic",
+      "source": "Tech Radar",
+      "country": "Both",
+      "publishedAt": "2026-07-25 12:30:00",
+      "relevanceScore": 0.61
+    },
     {
       "id": "ee9e5beb9fb297ef",
       "headline": "Nvidia warns US policies on open-weight models may push AI innovation toward China",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-21 16:43:47",
       "relevanceScore": 0.76
-    },
-    {
-      "id": "2277d7ad512b2dd3",
-      "headline": "US pharma firm ropes in Nvidia to build sector's largest supercomputer",
-      "url": "https://us.headtopics.com/news/us-pharma-firm-ropes-in-nvidia-to-build-sector-s-largest-85799570",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-07-21 16:37:37",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "9b2557334223a9cc",
-      "headline": "US threatens sanctions against Chinese AI models over IP theft",
-      "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/",
-      "source": "Tech Crunch",
-      "country": "Both",
-      "publishedAt": "2026-07-21 15:37:05",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "c2688b8b95bf9aa8",
-      "headline": "SK Hynix’s HBM Empire Powers 65% US Revenue — Is This the Must-Own AI Stock?",
-      "url": "https://247wallst.com/investing/2026/07/21/sk-hynixs-hbm-empire-powers-65-us-revenue-is-this-the-must-own-ai-stock/",
-      "source": "24/7 Wall St",
-      "country": "US",
-      "publishedAt": "2026-07-21 15:31:10",
-      "relevanceScore": 0.24
     }
   ]
 }
