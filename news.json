@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-27T05:13:03.148697+00:00",
+  "lastUpdated": "2026-07-28T05:06:27.070047+00:00",
   "items": [
+    {
+      "id": "a68bc91a078a31aa",
+      "headline": "Why China is giving away its best AI models",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies",
+      "source": "The Verge",
+      "country": "CN",
+      "publishedAt": "2026-07-27 16:51:50",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5f3bf04ef868f963",
+      "headline": "Anthropic gets heat for being the only major AI lab not supporting open models",
+      "url": "https://www.businessinsider.com/anthropic-open-source-ai-model-weights-criticism-2026-7",
+      "source": "Insider",
+      "country": "US",
+      "publishedAt": "2026-07-27 12:54:33",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "34a9b2aff5c0480a",
+      "headline": "Jensen Huang's first-ever post on X is in defense of open access to AI models, alongside Google, OpenAI, and Meta",
+      "url": "https://www.pcgamer.com/software/ai/jensen-huangs-first-ever-post-on-x-is-in-defense-of-open-access-to-ai-models-alongside-google-openai-and-meta/",
+      "source": "Pc Gamer",
+      "country": "US",
+      "publishedAt": "2026-07-27 12:35:04",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "116240a4d2d1cf4d",
+      "headline": "Moonshot’s Kimi K3, the Chinese AI model spooking Silicon Valley",
+      "url": "https://theweek.com/tech/kimi-k3-moonshot-chinese-ai-firm-anthropic-openai",
+      "source": "The Week",
+      "country": "CN",
+      "publishedAt": "2026-07-27 12:32:57",
+      "relevanceScore": 0.08
+    },
     {
       "id": "9200763b7749eef9",
       "headline": "Decapitation by Robot: A Stark Reminder of the Ethical Quagmire in Advanced AI and Lethal Autonomous Systems",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-07-23 15:00:37",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "5dc56c5fc016ce13",
-      "headline": "After months of surprising stability in graphics card prices, apparently Nvidia is now raising the cost of its GPU...",
-      "url": "https://www.pcgamer.com/hardware/graphics-cards/after-months-of-surprising-stability-in-graphics-card-prices-apparently-nvidia-is-now-raising-the-cost-of-its-gpu-kits-for-aib-partners/",
-      "source": "Pc Gamer",
-      "country": "US",
-      "publishedAt": "2026-07-23 14:34:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "020206b1c9bda03c",
-      "headline": "US Threatens China with New Sanctions Over AI Model Theft as Tech Tensions Escalate",
-      "url": "https://www.androidheadlines.com/2026/07/us-threatens-china-sanctions-ai-model-theft.html",
-      "source": "Androidheadlines",
-      "country": "CN",
-      "publishedAt": "2026-07-23 14:10:32",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "4032e91e75591974",
-      "headline": "The 4 qualities that make the Moonshot AI founder so exceptional, according to his Ph.D. advisor",
-      "url": "https://www.businessinsider.com/moonshot-ai-kimi-k3-founder-professor-on-unique-strengths-qualities-2026-7",
-      "source": "Business Insider",
-      "country": "US",
-      "publishedAt": "2026-07-23 12:18:21",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "2eb8b78714008a7d",
-      "headline": "Open AI’s hacking agent went rogue. Should we be worried?",
-      "url": "https://www.newscientist.com/article/2580710-open-ais-hacking-agent-went-rogue-should-we-be-worried/",
-      "source": "Newscientist",
-      "country": "US",
-      "publishedAt": "2026-07-22 16:34:35",
-      "relevanceScore": 0.23
     }
   ]
 }
