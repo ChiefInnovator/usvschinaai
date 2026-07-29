@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-28T05:06:27.070047+00:00",
+  "lastUpdated": "2026-07-29T05:07:48.174791+00:00",
   "items": [
+    {
+      "id": "89b471b01c4b04b0",
+      "headline": "Apple becomes second ever $5tn company as investors flee AI stocks",
+      "url": "https://www.theguardian.com/technology/2026/jul/28/apple-second-ever-5tn-company-as-investors-flee-ai-stocks",
+      "source": "The Guardian",
+      "country": "US",
+      "publishedAt": "2026-07-28 16:51:56",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "54b20bac6bd208c2",
+      "headline": "Anthropic’s Dario Amodei rejects open model ban, calls for testing",
+      "url": "https://headtopics.com/news/anthropic-s-dario-amodei-rejects-open-model-ban-calls-for-86033915",
+      "source": "Headtopics",
+      "country": "Both",
+      "publishedAt": "2026-07-28 16:37:41",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "407134c8cde40d7a",
+      "headline": "Taiwanese authorities detain Nvidia employee for alleged attempt to smuggle AI chips into China",
+      "url": "https://www.pcgamer.com/hardware/taiwanese-authorities-detain-nvidia-employee-for-alleged-attempt-to-smuggle-ai-chips-into-china/",
+      "source": "Pc Gamer",
+      "country": "CN",
+      "publishedAt": "2026-07-28 15:33:31",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "c76edd70de9e0904",
+      "headline": "Daily Search Forum Recap: July 28, 2026",
+      "url": "https://www.seroundtable.com/recap-07-28-2026-41768.html",
+      "source": "Search Engine Roundtable",
+      "country": "US",
+      "publishedAt": "2026-07-28 14:00:00",
+      "relevanceScore": 0.15
+    },
     {
       "id": "a68bc91a078a31aa",
       "headline": "Why China is giving away its best AI models",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-24 14:35:27",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "98eeb5424ce58d8a",
-      "headline": "Kimi K3 Raises Fresh US Concerns Over China’s Fast-Growing AI Capabilities",
-      "url": "https://www.analyticsinsight.net/news/kimi-k3-raises-fresh-us-concerns-over-chinas-fast-growing-ai-capabilities",
-      "source": "Analytics And Insight",
-      "country": "CN",
-      "publishedAt": "2026-07-24 14:30:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "79f510e98e1e97a8",
-      "headline": "The Download: an organ transplant breakthrough, and homegrown Chinese chips",
-      "url": "https://www.technologyreview.com/2026/07/24/1140776/the-download-organ-transplant-breakthrough-chinese-chips/",
-      "source": "Technologyreview",
-      "country": "CN",
-      "publishedAt": "2026-07-24 12:10:00",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "e2d8bdae9f3ea37b",
-      "headline": "'The Game Has Changed': Tech Platform Hacked by OpenAI's Out of Control Models Calls for Cybersecurity 'Wake-Up Call'",
-      "url": "https://www.breitbart.com/tech/2026/07/23/the-game-has-changed-tech-platform-hacked-by-openais-out-of-control-models-calls-for-cybersecurity-wake-up-call/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-07-23 15:42:36",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "34d6aee26661f705",
-      "headline": "AI Chip Space Set For Fresh Volatility As China's CXMT Debuts Next Week",
-      "url": "https://industrywired.com/ai/ai-chip-space-set-for-fresh-volatility-as-chinas-cxmt-debuts-next-week-12191736",
-      "source": "Industry Wired",
-      "country": "CN",
-      "publishedAt": "2026-07-23 15:00:37",
-      "relevanceScore": 0.16
     }
   ]
 }
