@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-29T05:07:48.174791+00:00",
+  "lastUpdated": "2026-07-30T05:04:00.662707+00:00",
   "items": [
+    {
+      "id": "6fc1d10ac6880b0d",
+      "headline": "Whose AI? Whose Opposition?",
+      "url": "https://www.randomlengthsnews.com/archives/2026/07/29/influence-campaigns/76713",
+      "source": "Random Length News",
+      "country": "US",
+      "publishedAt": "2026-07-29 16:38:39",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "c73f61a6e7f26795",
+      "headline": "A market vet warns that Washington's moves to blunt AI competition from China are largely 'toothless'",
+      "url": "https://www.businessinsider.com/chinese-ai-models-claude-kimik3-deepseek-regulation-anthropic-openai-stocks-2026-7",
+      "source": "Insider",
+      "country": "Both",
+      "publishedAt": "2026-07-29 15:46:24",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "55000cab054a98e3",
+      "headline": "High-powered lasers can wirelessly charge drones mid-flight",
+      "url": "https://www.livescience.com/technology/engineering/new-drone-can-be-charged-mid-flight-using-high-powered-lasers",
+      "source": "Livescience",
+      "country": "CN",
+      "publishedAt": "2026-07-29 15:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f133fa5e22c8456b",
+      "headline": "Mark Zuckerberg Says The U.S. Should Accelerate, Not Pace, AI Development, Warning More Restrictions Could Put China...",
+      "url": "https://www.ibtimes.com/mark-zuckerberg-says-us-should-accelerate-not-pace-ai-development-warning-more-restrictions-3805866",
+      "source": "International Business Times",
+      "country": "Both",
+      "publishedAt": "2026-07-29 14:57:33",
+      "relevanceScore": 0.31
+    },
     {
       "id": "89b471b01c4b04b0",
       "headline": "Apple becomes second ever $5tn company as investors flee AI stocks",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-07-25 14:38:26",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "0fb47f37c9ec15e7",
-      "headline": "OpenAI quietly signs letter from Nvidia, Microsoft, and Meta warning about dangers of 'premature restrictions' on...",
-      "url": "https://www.techradar.com/ai-platforms-assistants/openai-quietly-signs-letter-from-nvidia-microsoft-and-meta-warning-about-dangers-of-premature-restrictions-on-open-weight-ai-models-as-the-white-house-accuses-china-of-stealing-from-anthropic",
-      "source": "Tech Radar",
-      "country": "Both",
-      "publishedAt": "2026-07-25 12:30:00",
-      "relevanceScore": 0.61
-    },
-    {
-      "id": "ee9e5beb9fb297ef",
-      "headline": "Nvidia warns US policies on open-weight models may push AI innovation toward China",
-      "url": "https://interestingengineering.com/ai-robotics/nvidia-open-weight-models-china-us",
-      "source": "Interesting Engineering",
-      "country": "Both",
-      "publishedAt": "2026-07-24 17:05:46",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "07f6088e7a424770",
-      "headline": "What Hugging Face Had That You Don’t: The AI Capability Gap",
-      "url": "https://www.forbes.com/sites/nishatalagala/2026/07/24/what-hugging-face-had-that-you-dont-the-ai-capability-gap/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-07-24 14:52:26",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "bd4c5e98908428c0",
-      "headline": "Microsoft, Meta, Nvidia, and Palantir have a message for Washington",
-      "url": "https://www.businessinsider.com/microsoft-nvidia-meta-palantir-jensen-huang-open-source-ai-letter-2026-7",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-07-24 14:35:27",
-      "relevanceScore": 0.23
     }
   ]
 }
