@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-07-30T05:04:00.662707+00:00",
+  "lastUpdated": "2026-07-31T05:10:29.433074+00:00",
   "items": [
+    {
+      "id": "3558ae0f347cd129",
+      "headline": "AI Industry to World: ‘Somebody Stop Us’",
+      "url": "https://us.headtopics.com/news/ai-industry-to-world-somebody-stop-us-86116383",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-07-30 17:07:55",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "f20ba09680b93acb",
+      "headline": "Inside OpenAI’s Hack of Hugging Face",
+      "url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
+      "source": "The New Yorker",
+      "country": "US",
+      "publishedAt": "2026-07-30 16:01:36",
+      "relevanceScore": 0.15
+    },
     {
       "id": "6fc1d10ac6880b0d",
       "headline": "Whose AI? Whose Opposition?",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-25 21:12:05",
       "relevanceScore": 0.61
-    },
-    {
-      "id": "064cf1aaba8947c9",
-      "headline": "MoonShot CEO Says “OpenAI Didn’t Invent Anything New,” As Sam Altman Signs The Letter Calling For Open-Weight AI...",
-      "url": "https://wccftech.com/moonshot-ceo-says-openai-didnt-invent-anything-new-as-sam-altman-signs-the-letter-calling-for-open-weight-ai-models-after-the-fact-and-under-pressure/",
-      "source": "Wccftech",
-      "country": "US",
-      "publishedAt": "2026-07-25 16:51:01",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "4b9240bda40defca",
-      "headline": "US models beat China’s Kimi K3 with a 76% score over 32% in cyber benchmarks, tests show",
-      "url": "https://interestingengineering.com/ai-robotics/us-models-beat-chinas-kimi-k3",
-      "source": "Interesting Engineering",
-      "country": "CN",
-      "publishedAt": "2026-07-25 14:38:26",
-      "relevanceScore": 0.15
     }
   ]
 }
