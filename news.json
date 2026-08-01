@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-07-31T05:10:29.433074+00:00",
+  "lastUpdated": "2026-08-01T05:09:56.939335+00:00",
   "items": [
+    {
+      "id": "3445918041c7c0a6",
+      "headline": "US AI Models Fuel Chinese Military Systems in Latest Tech Clash",
+      "url": "https://industrywired.com/artificial-intelligence/us-ai-models-fuel-chinese-military-systems-in-latest-tech-clash-12216453",
+      "source": "Industry Wired",
+      "country": "Both",
+      "publishedAt": "2026-07-31 17:00:37",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "4a45d2417affef44",
+      "headline": "AP Technology SummaryBrief at 10:48 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-10-48-a-m-edt/article_0a31fa1b-d635-5192-b414-0758941c6e69.html",
+      "source": "Postregister",
+      "country": "US",
+      "publishedAt": "2026-07-31 14:48:34",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "defb529bd0db24ca",
+      "headline": "China, U.S. in artificial intelligence race shaping the economy & security",
+      "url": "https://ktul.com/news/nation-world/china-us-in-artificial-intelligence-race-shaping-the-economy-security-data-centers-netchoice-patrick-hedger",
+      "source": "Ktul",
+      "country": "Both",
+      "publishedAt": "2026-07-31 14:27:06",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "12fe118e82c7183c",
+      "headline": "EXCLUSIVE: Chinese military researchers tap US AI models to train defence systems",
+      "url": "https://www.bundle.app/en/breaking-news/exclusive-chinese-military-researchers-tap-us-ai-models-to-train-defence-systems-09AF355E-8442-46F4-A3BD-3310A421B850",
+      "source": "Bundle",
+      "country": "CN",
+      "publishedAt": "2026-07-31 13:28:44",
+      "relevanceScore": 0.08
+    },
     {
       "id": "3558ae0f347cd129",
       "headline": "AI Industry to World: ‘Somebody Stop Us’",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-26 10:26:20",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "4ccac7d970ebdbd6",
-      "headline": "Silicon Valley Embraces Affordable Chinese AI Models Amid Rising Competition",
-      "url": "https://headtopics.com/news/silicon-valley-embraces-affordable-chinese-ai-models-amid-85952854",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-07-26 04:35:51",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "8d37f252697d7942",
-      "headline": "Cheaper, open and intelligent: Chinese AI models gain ground, as they make inroads in the US",
-      "url": "https://www.wsls.com/business/2026/07/26/cheaper-open-and-intelligent-chinese-ai-models-gain-ground-as-they-make-inroads-in-the-us/",
-      "source": "Wsls",
-      "country": "Both",
-      "publishedAt": "2026-07-26 04:09:09",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "da70551b890cdab0",
-      "headline": "AP Technology SummaryBrief at 12:05 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-12-05-a-m-edt/article_549539d3-0d06-5e73-abe1-0e4f01a62493.html",
-      "source": "Postregister",
-      "country": "CN",
-      "publishedAt": "2026-07-26 04:05:45",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "883f3cf33819e064",
-      "headline": "Silicon Valley’s Bitter Split Over Chinese Open AI Models",
-      "url": "https://www.webpronews.com/silicon-valleys-bitter-split-over-chinese-open-ai-models/",
-      "source": "Webpronews",
-      "country": "Both",
-      "publishedAt": "2026-07-25 21:12:05",
-      "relevanceScore": 0.61
     }
   ]
 }
