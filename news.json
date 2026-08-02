@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-08-01T05:09:56.939335+00:00",
+  "lastUpdated": "2026-08-02T05:10:05.083404+00:00",
   "items": [
+    {
+      "id": "96f1ce296d1906af",
+      "headline": "China’s tech advances are causing chaos from Silicon Valley to the White House",
+      "url": "https://www.theguardian.com/technology/2026/aug/01/china-silicon-valley-white-house",
+      "source": "The Guardian",
+      "country": "CN",
+      "publishedAt": "2026-08-01 12:00:53",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "041f5e36ce054e2f",
+      "headline": "Silicon Valley clashes over open-source technology",
+      "url": "https://thehill.com/newsletters/technology/6003160-silicon-valley-clashes-over-open-source-technology/",
+      "source": "The Hill",
+      "country": "US",
+      "publishedAt": "2026-07-31 22:17:14",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "ec725874d516d0d0",
+      "headline": "AI Daily Digest â August 1, 2026: ARC-AGI-3 Harness Discovery, EU AI Gigafactories, Devin SWE-1.7",
+      "url": "https://www.bundle.app/en/technology/ai-daily-digest-august-1-2026-arc-agi-3-harness-discovery-eu-ai-gigafactories-devin-swe-17-C670369A-F7EE-4ED2-817C-50055679766A",
+      "source": "Bundle",
+      "country": "US",
+      "publishedAt": "2026-07-31 22:02:13",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "974ed25295a4f111",
+      "headline": "Rogue AI hacking incidents amplify debate over open-source tech",
+      "url": "https://thehill.com/policy/technology/6003142-nvidia-launches-secure-ai-alliance/",
+      "source": "The Hill",
+      "country": "Both",
+      "publishedAt": "2026-07-31 21:50:34",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "82585118a6b8adb4",
+      "headline": "AP Technology SummaryBrief at 5:33 p.m. EDT",
+      "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-5-33-p-m-edt/article_f283d60d-f4c9-5075-88c1-cb687a29c2f0.html",
+      "source": "Rutland Herald",
+      "country": "US",
+      "publishedAt": "2026-07-31 21:33:26",
+      "relevanceScore": 0.23
+    },
     {
       "id": "3445918041c7c0a6",
       "headline": "US AI Models Fuel Chinese Military Systems in Latest Tech Clash",
@@ -134,51 +179,6 @@
       "source": "The Verge",
       "country": "CN",
       "publishedAt": "2026-07-27 16:51:50",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5f3bf04ef868f963",
-      "headline": "Anthropic gets heat for being the only major AI lab not supporting open models",
-      "url": "https://www.businessinsider.com/anthropic-open-source-ai-model-weights-criticism-2026-7",
-      "source": "Insider",
-      "country": "US",
-      "publishedAt": "2026-07-27 12:54:33",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "34a9b2aff5c0480a",
-      "headline": "Jensen Huang's first-ever post on X is in defense of open access to AI models, alongside Google, OpenAI, and Meta",
-      "url": "https://www.pcgamer.com/software/ai/jensen-huangs-first-ever-post-on-x-is-in-defense-of-open-access-to-ai-models-alongside-google-openai-and-meta/",
-      "source": "Pc Gamer",
-      "country": "US",
-      "publishedAt": "2026-07-27 12:35:04",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "116240a4d2d1cf4d",
-      "headline": "Moonshot’s Kimi K3, the Chinese AI model spooking Silicon Valley",
-      "url": "https://theweek.com/tech/kimi-k3-moonshot-chinese-ai-firm-anthropic-openai",
-      "source": "The Week",
-      "country": "CN",
-      "publishedAt": "2026-07-27 12:32:57",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "9200763b7749eef9",
-      "headline": "Decapitation by Robot: A Stark Reminder of the Ethical Quagmire in Advanced AI and Lethal Autonomous Systems",
-      "url": "https://us.headtopics.com/news/decapitation-by-robot-a-stark-reminder-of-the-ethical-85963483",
-      "source": "Headtopics",
-      "country": "CN",
-      "publishedAt": "2026-07-26 13:36:55",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7fa9ec6496f5af0f",
-      "headline": "Silicon Valley Support for Open AI Models Validates China's Bet",
-      "url": "https://www.citynewsservice.cn/articles/china-biz-buzz/in-perspective/silicon-valley-support-for-open-ai-models-validates-chinas-bet-7kr5qvzn",
-      "source": "City News Service",
-      "country": "Both",
-      "publishedAt": "2026-07-26 10:26:20",
       "relevanceScore": 0.08
     }
   ]
