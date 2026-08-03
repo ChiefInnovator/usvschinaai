@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-08-02T05:10:05.083404+00:00",
+  "lastUpdated": "2026-08-03T05:11:26.703075+00:00",
   "items": [
+    {
+      "id": "b22cfcdaebd70df7",
+      "headline": "SpaceX Reports Q2 Numbers This Week. Investors Will Scramble For Major Cues",
+      "url": "https://www.ibtimes.com/spacex-reports-q2-numbers-this-week-investors-will-scramble-major-cues-3805987",
+      "source": "International Business Times",
+      "country": "US",
+      "publishedAt": "2026-08-02 13:50:41",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "bbeb65385c89ed66",
+      "headline": "SpaceX’s Starship just got filmed by its own cargo",
+      "url": "https://www.teslarati.com/spacexs-starship-just-got-filmed-by-its-own-cargo/",
+      "source": "Teslarati",
+      "country": "US",
+      "publishedAt": "2026-08-02 05:06:34",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b436b81fca6cfcfb",
+      "headline": "Apple Rewind: Price upgrade for iPhone, Apple sues OpenAI, and new updates for iOS",
+      "url": "https://www.neowin.net/forum/topic/1468952-apple-rewind-price-upgrade-for-iphone-apple-sues-openai-and-new-updates-for-ios/?comment=599069046&do=findComment",
+      "source": "Neowin Net",
+      "country": "Both",
+      "publishedAt": "2026-08-01 18:04:02",
+      "relevanceScore": 0.99
+    },
     {
       "id": "96f1ce296d1906af",
       "headline": "China’s tech advances are causing chaos from Silicon Valley to the White House",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-28 16:37:41",
       "relevanceScore": 0.31
-    },
-    {
-      "id": "407134c8cde40d7a",
-      "headline": "Taiwanese authorities detain Nvidia employee for alleged attempt to smuggle AI chips into China",
-      "url": "https://www.pcgamer.com/hardware/taiwanese-authorities-detain-nvidia-employee-for-alleged-attempt-to-smuggle-ai-chips-into-china/",
-      "source": "Pc Gamer",
-      "country": "CN",
-      "publishedAt": "2026-07-28 15:33:31",
-      "relevanceScore": 0.16
-    },
-    {
-      "id": "c76edd70de9e0904",
-      "headline": "Daily Search Forum Recap: July 28, 2026",
-      "url": "https://www.seroundtable.com/recap-07-28-2026-41768.html",
-      "source": "Search Engine Roundtable",
-      "country": "US",
-      "publishedAt": "2026-07-28 14:00:00",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "a68bc91a078a31aa",
-      "headline": "Why China is giving away its best AI models",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/971444/how-chinese-open-weight-ai-models-impact-us-companies",
-      "source": "The Verge",
-      "country": "CN",
-      "publishedAt": "2026-07-27 16:51:50",
-      "relevanceScore": 0.08
     }
   ]
 }
