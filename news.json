@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-03T05:11:26.703075+00:00",
+  "lastUpdated": "2026-08-04T05:07:40.873823+00:00",
   "items": [
+    {
+      "id": "3f83fa63ddde815a",
+      "headline": "Chinese hacker used DeepSeek to launch autonomous cyberattacks on vulnerable servers",
+      "url": "https://www.helpnetsecurity.com/2026/08/03/deepseek-ai-autonomous-cyberattacks-hermes-agent/",
+      "source": "Help Net Security",
+      "country": "CN",
+      "publishedAt": "2026-08-03 13:51:57",
+      "relevanceScore": 0.3
+    },
     {
       "id": "b22cfcdaebd70df7",
       "headline": "SpaceX Reports Q2 Numbers This Week. Investors Will Scramble For Major Cues",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-07-28 16:51:56",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "54b20bac6bd208c2",
-      "headline": "Anthropic’s Dario Amodei rejects open model ban, calls for testing",
-      "url": "https://headtopics.com/news/anthropic-s-dario-amodei-rejects-open-model-ban-calls-for-86033915",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-07-28 16:37:41",
-      "relevanceScore": 0.31
     }
   ]
 }
