@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-04T05:07:40.873823+00:00",
+  "lastUpdated": "2026-08-05T05:07:04.869766+00:00",
   "items": [
+    {
+      "id": "6e682740633ae26c",
+      "headline": "New York’s data center moratorium is nonsense policy",
+      "url": "https://headtopics.com/news/new-york-s-data-center-moratorium-is-nonsense-policy-86260875",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-08-04 12:36:53",
+      "relevanceScore": 0.08
+    },
     {
       "id": "3f83fa63ddde815a",
       "headline": "Chinese hacker used DeepSeek to launch autonomous cyberattacks on vulnerable servers",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-07-29 14:57:33",
       "relevanceScore": 0.31
-    },
-    {
-      "id": "89b471b01c4b04b0",
-      "headline": "Apple becomes second ever $5tn company as investors flee AI stocks",
-      "url": "https://www.theguardian.com/technology/2026/jul/28/apple-second-ever-5tn-company-as-investors-flee-ai-stocks",
-      "source": "The Guardian",
-      "country": "US",
-      "publishedAt": "2026-07-28 16:51:56",
-      "relevanceScore": 0.08
     }
   ]
 }
