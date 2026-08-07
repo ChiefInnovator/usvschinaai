@@ -1,6 +1,96 @@
 {
-  "lastUpdated": "2026-08-06T05:08:32.042978+00:00",
+  "lastUpdated": "2026-08-07T04:56:41.525183+00:00",
   "items": [
+    {
+      "id": "78101a641d443959",
+      "headline": "Andreessen Horowitz Partner Boasts That the Company’s New Tech Can Fabricate Fake History Like in “1984”",
+      "url": "https://futurism.com/artificial-intelligence/andreessen-horowitz-chilling-assessment-new-tech",
+      "source": "Futurism",
+      "country": "US",
+      "publishedAt": "2026-08-06 16:54:53",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "f2bfa15f371e6dee",
+      "headline": "China Tightens Drone Exports and Sanctions US Firms",
+      "url": "https://www.techrepublic.com/article/news-china-us-drone-export-tech-restrictions-apac/",
+      "source": "Techrepublic",
+      "country": "Both",
+      "publishedAt": "2026-08-06 16:51:40",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "f3981d1f75c54171",
+      "headline": "Forbidden fruit: Buick Electra gets 435 mile range and 376 hp for $25,000",
+      "url": "https://electrek.co/2026/08/06/forbidden-fruit-buick-electra-gets-435-mile-ev-range-and-25000-price-tag/",
+      "source": "Electrek",
+      "country": "CN",
+      "publishedAt": "2026-08-06 16:02:45",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "b02d179222468c14",
+      "headline": "Defense Startup: AI Turns 2 Months Of Engineering Into 20 Minutes",
+      "url": "https://www.forbes.com/sites/johnkoetsier/2026/08/06/defense-startup-ai-turns-2-months-of-engineering-into-20-minutes/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-08-06 16:00:14",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "3650064629f2e5af",
+      "headline": "ThreatsDay: Odysseus RCE, Samsung One-Click Takeover, iCloud Backdoor Fight + 27 More Stories",
+      "url": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html",
+      "source": "The Hacker News",
+      "country": "US",
+      "publishedAt": "2026-08-06 15:24:31",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "f16c8c15829df3b1",
+      "headline": "China's 1,200 MW nuclear reactor unit successfully passes cold tests",
+      "url": "https://us.headtopics.com/news/china-s-1-200-mw-nuclear-reactor-unit-successfully-passes-86343864",
+      "source": "Headtopics",
+      "country": "CN",
+      "publishedAt": "2026-08-06 14:06:29",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "c03dae1291e5566b",
+      "headline": "The left and right agree on one thing: no data centers",
+      "url": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-08-06 14:00:00",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "70c8a694f69a1596",
+      "headline": "How worried should we be about AI rogue agents?",
+      "url": "https://theweek.com/tech/how-worried-should-we-be-about-ai-rogue-agents",
+      "source": "The Week",
+      "country": "US",
+      "publishedAt": "2026-08-06 13:02:46",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "3b82283290e88292",
+      "headline": "One-wheeled AI security robot could patrol your property",
+      "url": "https://www.foxnews.com/tech/one-wheeled-ai-security-robot-patrol-property",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-08-06 12:27:35",
+      "relevanceScore": 0.0
+    },
+    {
+      "id": "2207dc8818017c82",
+      "headline": "Chinese RAM supplier denies Apple's bid for cheaper RAM",
+      "url": "https://appleinsider.com/articles/26/08/06/chinese-ram-supplier-denies-apples-bid-for-cheaper-ram",
+      "source": "Apple Insider",
+      "country": "CN",
+      "publishedAt": "2026-08-06 11:48:19",
+      "relevanceScore": 0.0
+    },
     {
       "id": "ffd719bd0db0d3f8",
       "headline": "China’s ByteDance Bans Employees From Distilling US AI Models, As Anthropic Confirms It’s Building A Custom Chip For...",
@@ -90,96 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-01 12:00:53",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "041f5e36ce054e2f",
-      "headline": "Silicon Valley clashes over open-source technology",
-      "url": "https://thehill.com/newsletters/technology/6003160-silicon-valley-clashes-over-open-source-technology/",
-      "source": "The Hill",
-      "country": "US",
-      "publishedAt": "2026-07-31 22:17:14",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "ec725874d516d0d0",
-      "headline": "AI Daily Digest â August 1, 2026: ARC-AGI-3 Harness Discovery, EU AI Gigafactories, Devin SWE-1.7",
-      "url": "https://www.bundle.app/en/technology/ai-daily-digest-august-1-2026-arc-agi-3-harness-discovery-eu-ai-gigafactories-devin-swe-17-C670369A-F7EE-4ED2-817C-50055679766A",
-      "source": "Bundle",
-      "country": "US",
-      "publishedAt": "2026-07-31 22:02:13",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "974ed25295a4f111",
-      "headline": "Rogue AI hacking incidents amplify debate over open-source tech",
-      "url": "https://thehill.com/policy/technology/6003142-nvidia-launches-secure-ai-alliance/",
-      "source": "The Hill",
-      "country": "Both",
-      "publishedAt": "2026-07-31 21:50:34",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "82585118a6b8adb4",
-      "headline": "AP Technology SummaryBrief at 5:33 p.m. EDT",
-      "url": "https://www.rutlandherald.com/news/business/ap-technology-summarybrief-at-5-33-p-m-edt/article_f283d60d-f4c9-5075-88c1-cb687a29c2f0.html",
-      "source": "Rutland Herald",
-      "country": "US",
-      "publishedAt": "2026-07-31 21:33:26",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "3445918041c7c0a6",
-      "headline": "US AI Models Fuel Chinese Military Systems in Latest Tech Clash",
-      "url": "https://industrywired.com/artificial-intelligence/us-ai-models-fuel-chinese-military-systems-in-latest-tech-clash-12216453",
-      "source": "Industry Wired",
-      "country": "Both",
-      "publishedAt": "2026-07-31 17:00:37",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "4a45d2417affef44",
-      "headline": "AP Technology SummaryBrief at 10:48 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-10-48-a-m-edt/article_0a31fa1b-d635-5192-b414-0758941c6e69.html",
-      "source": "Postregister",
-      "country": "US",
-      "publishedAt": "2026-07-31 14:48:34",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "defb529bd0db24ca",
-      "headline": "China, U.S. in artificial intelligence race shaping the economy & security",
-      "url": "https://ktul.com/news/nation-world/china-us-in-artificial-intelligence-race-shaping-the-economy-security-data-centers-netchoice-patrick-hedger",
-      "source": "Ktul",
-      "country": "Both",
-      "publishedAt": "2026-07-31 14:27:06",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "12fe118e82c7183c",
-      "headline": "EXCLUSIVE: Chinese military researchers tap US AI models to train defence systems",
-      "url": "https://www.bundle.app/en/breaking-news/exclusive-chinese-military-researchers-tap-us-ai-models-to-train-defence-systems-09AF355E-8442-46F4-A3BD-3310A421B850",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-07-31 13:28:44",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "3558ae0f347cd129",
-      "headline": "AI Industry to World: ‘Somebody Stop Us’",
-      "url": "https://us.headtopics.com/news/ai-industry-to-world-somebody-stop-us-86116383",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-07-30 17:07:55",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "f20ba09680b93acb",
-      "headline": "Inside OpenAI’s Hack of Hugging Face",
-      "url": "https://www.newyorker.com/news/the-lede/inside-openai-hack-of-hugging-face",
-      "source": "The New Yorker",
-      "country": "US",
-      "publishedAt": "2026-07-30 16:01:36",
-      "relevanceScore": 0.15
     }
   ]
 }
