@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-08-07T04:56:41.525183+00:00",
+  "lastUpdated": "2026-08-08T04:31:01.547691+00:00",
   "items": [
+    {
+      "id": "b30535bb65c937be",
+      "headline": "The Unspoken Young Men Crisis: AI Girlfriends",
+      "url": "https://www.dailysignal.com/2026/08/07/young-men-crisis-ai-girlfriends/",
+      "source": "The Daily Signal",
+      "country": "US",
+      "publishedAt": "2026-08-07 15:58:28",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d75ae7b7f9768cc0",
+      "headline": "Biosecurity Alert: Stanford Researchers Use AI to Design 16 Viruses",
+      "url": "https://www.breitbart.com/tech/2026/08/07/biosecurity-alert-stanford-researchers-use-ai-to-design-16-viruses/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-08-07 15:43:22",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "e0df850c0f7de9fe",
+      "headline": "Intersect360 Research Launches Studies on Enterprise AI Adoption, EU Sovereignty",
+      "url": "https://www.hpcwire.com/off-the-wire/intersect360-research-launches-studies-on-enterprise-ai-adoption-eu-sovereignty/",
+      "source": "Hpcwire",
+      "country": "US",
+      "publishedAt": "2026-08-07 15:00:42",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7b55460a3a28d5cc",
+      "headline": "Article on Meta AI head Alexandr Wang to ...",
+      "url": "https://completeaitraining.com/news/article-on-meta-ai-head-alexandr-wang-to/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-08-07 14:53:55",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "3dd7b2dff31b0cf1",
+      "headline": "Panic as another AI model escapes its system, sparking safety scramble by experts",
+      "url": "https://www.the-express.com/news/us-news/213522/panic-another-ai-model-escapes-system",
+      "source": "Daily Express Us",
+      "country": "CN",
+      "publishedAt": "2026-08-07 14:09:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "78101a641d443959",
       "headline": "Andreessen Horowitz Partner Boasts That the Company’s New Tech Can Fabricate Fake History Like in “1984”",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-04 12:36:53",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "3f83fa63ddde815a",
-      "headline": "Chinese hacker used DeepSeek to launch autonomous cyberattacks on vulnerable servers",
-      "url": "https://www.helpnetsecurity.com/2026/08/03/deepseek-ai-autonomous-cyberattacks-hermes-agent/",
-      "source": "Help Net Security",
-      "country": "CN",
-      "publishedAt": "2026-08-03 13:51:57",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "b22cfcdaebd70df7",
-      "headline": "SpaceX Reports Q2 Numbers This Week. Investors Will Scramble For Major Cues",
-      "url": "https://www.ibtimes.com/spacex-reports-q2-numbers-this-week-investors-will-scramble-major-cues-3805987",
-      "source": "International Business Times",
-      "country": "US",
-      "publishedAt": "2026-08-02 13:50:41",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "bbeb65385c89ed66",
-      "headline": "SpaceX’s Starship just got filmed by its own cargo",
-      "url": "https://www.teslarati.com/spacexs-starship-just-got-filmed-by-its-own-cargo/",
-      "source": "Teslarati",
-      "country": "US",
-      "publishedAt": "2026-08-02 05:06:34",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b436b81fca6cfcfb",
-      "headline": "Apple Rewind: Price upgrade for iPhone, Apple sues OpenAI, and new updates for iOS",
-      "url": "https://www.neowin.net/forum/topic/1468952-apple-rewind-price-upgrade-for-iphone-apple-sues-openai-and-new-updates-for-ios/?comment=599069046&do=findComment",
-      "source": "Neowin Net",
-      "country": "Both",
-      "publishedAt": "2026-08-01 18:04:02",
-      "relevanceScore": 0.99
-    },
-    {
-      "id": "96f1ce296d1906af",
-      "headline": "China’s tech advances are causing chaos from Silicon Valley to the White House",
-      "url": "https://www.theguardian.com/technology/2026/aug/01/china-silicon-valley-white-house",
-      "source": "The Guardian",
-      "country": "CN",
-      "publishedAt": "2026-08-01 12:00:53",
-      "relevanceScore": 0.24
     }
   ]
 }
