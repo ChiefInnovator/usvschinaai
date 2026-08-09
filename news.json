@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-08-08T04:31:01.547691+00:00",
+  "lastUpdated": "2026-08-09T04:35:56.973923+00:00",
   "items": [
+    {
+      "id": "661f4e53bb60b8db",
+      "headline": "Google Throws Open Doors to Its Top-Secret Data Center",
+      "url": "https://us.headtopics.com/news/google-throws-open-doors-to-its-top-secret-data-center-86411356",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-08-08 12:36:35",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "89f7ab60d6a1dbef",
+      "headline": "First glimpse into production: BMW Group Plant Woodruff assembles high-voltage batteries for the new BMW iX5",
+      "url": "https://batteriesnews.com/first-glimpse-into-production-bmw-group-plant-woodruff-assembles-high-voltage-batteries-for-the-new-bmw-ix5/",
+      "source": "Batteries News",
+      "country": "US",
+      "publishedAt": "2026-08-08 05:34:46",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "8be2449593637b1d",
+      "headline": "China’s Jingtanhao Regenerated Iron Phosphate Technology Achieves Breakthrough",
+      "url": "https://www.financialcontent.com/article/getnews-2026-8-7-chinas-jingtanhao-regenerated-iron-phosphate-technology-achieves-breakthrough",
+      "source": "Financialcontent",
+      "country": "Both",
+      "publishedAt": "2026-08-07 21:22:01",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "d1748b5e7e38ab64",
+      "headline": "Ring around the ransom.",
+      "url": "https://thecyberwire.com/podcasts/daily-podcast/2610/notes",
+      "source": "The Cyberwire",
+      "country": "Both",
+      "publishedAt": "2026-08-07 20:30:00",
+      "relevanceScore": 0.31
+    },
     {
       "id": "b30535bb65c937be",
       "headline": "The Unspoken Young Men Crisis: AI Girlfriends",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-08-05 17:03:15",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "0e3d7fbc54902fbd",
-      "headline": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-      "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-      "source": "Wired",
-      "country": "US",
-      "publishedAt": "2026-08-05 16:26:36",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "03e287bb18e3f6b2",
-      "headline": "CXMT Says No Thank You to Apple’s Demand For A Price Cut, as Huawei And Xiaomi Hand It Rare Leverage – Report",
-      "url": "https://wccftech.com/cxmt-says-no-thank-you-to-apples-demand-for-a-price-cut-as-huawei-and-xiaomi-hand-it-rare-leverage-report/",
-      "source": "Wccftech",
-      "country": "CN",
-      "publishedAt": "2026-08-05 15:12:53",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "4b5de6587b309700",
-      "headline": "Geniatech Accelerates Edge AI and Next-Gen Robotics Evolution with New Renesas RZ/V2H Strategic Integration",
-      "url": "https://www.financialcontent.com/article/marketersmedia-2026-8-5-geniatech-accelerates-edge-ai-and-next-gen-robotics-evolution-with-new-renesas-rzv2h-strategic-integration",
-      "source": "Financialcontent",
-      "country": "US",
-      "publishedAt": "2026-08-05 13:17:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "6e682740633ae26c",
-      "headline": "New York’s data center moratorium is nonsense policy",
-      "url": "https://headtopics.com/news/new-york-s-data-center-moratorium-is-nonsense-policy-86260875",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-08-04 12:36:53",
-      "relevanceScore": 0.08
     }
   ]
 }
