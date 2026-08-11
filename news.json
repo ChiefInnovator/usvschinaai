@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-08-10T04:40:42.585074+00:00",
+  "lastUpdated": "2026-08-11T04:36:59.292394+00:00",
   "items": [
+    {
+      "id": "a3550e15475bf118",
+      "headline": "Zuckerberg manifesto pushes open-source approach on AI as Meta releases latest model",
+      "url": "https://abcnews.com/Technology/wireStory/zuckerberg-manifesto-pushes-open-source-approach-ai-meta-135519669",
+      "source": "Abc News",
+      "country": "US",
+      "publishedAt": "2026-08-10 15:54:04",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "0efc98dfe6a4e260",
+      "headline": "Zuckerberg manifesto pushes an open-source approach on AI as Meta releases its latest model",
+      "url": "https://www.clickondetroit.com/business/2026/08/10/zuckerberg-manifesto-pushes-an-open-source-approach-on-ai-as-meta-releases-its-latest-model/",
+      "source": "Clickondetroit",
+      "country": "US",
+      "publishedAt": "2026-08-10 15:41:46",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "bee387657a9bb00c",
+      "headline": "On theCUBE Pod: Black Hat exposes agentic threat, theCUBE remembers David Floyer",
+      "url": "https://siliconangle.com/2026/08/10/agentic-ai-systems-david-floyer-thecubepod/",
+      "source": "Siliconangle",
+      "country": "Both",
+      "publishedAt": "2026-08-10 14:26:45",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "2d1bf62c93c2439a",
+      "headline": "2008 vs 2026: The Same Dominoes Are Falling",
+      "url": "https://freerepublic.com/focus/f-chat/4391291/posts",
+      "source": "Freerepublic",
+      "country": "US",
+      "publishedAt": "2026-08-10 14:21:43",
+      "relevanceScore": 0.08
+    },
     {
       "id": "f7813ed4fe190802",
       "headline": "We need more microchips to beat China. You won't believe where Apple has turned to get them.",
@@ -143,42 +179,6 @@
       "source": "Forbes",
       "country": "US",
       "publishedAt": "2026-08-06 16:00:14",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "3650064629f2e5af",
-      "headline": "ThreatsDay: Odysseus RCE, Samsung One-Click Takeover, iCloud Backdoor Fight + 27 More Stories",
-      "url": "https://thehackernews.com/2026/08/threatsday-odysseus-rce-samsung-one.html",
-      "source": "The Hacker News",
-      "country": "US",
-      "publishedAt": "2026-08-06 15:24:31",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "f16c8c15829df3b1",
-      "headline": "China's 1,200 MW nuclear reactor unit successfully passes cold tests",
-      "url": "https://us.headtopics.com/news/china-s-1-200-mw-nuclear-reactor-unit-successfully-passes-86343864",
-      "source": "Headtopics",
-      "country": "CN",
-      "publishedAt": "2026-08-06 14:06:29",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "c03dae1291e5566b",
-      "headline": "The left and right agree on one thing: no data centers",
-      "url": "https://www.theverge.com/podcast/971855/ai-data-center-backlash-protests-florida-bipartisan",
-      "source": "The Verge",
-      "country": "US",
-      "publishedAt": "2026-08-06 14:00:00",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "70c8a694f69a1596",
-      "headline": "How worried should we be about AI rogue agents?",
-      "url": "https://theweek.com/tech/how-worried-should-we-be-about-ai-rogue-agents",
-      "source": "The Week",
-      "country": "US",
-      "publishedAt": "2026-08-06 13:02:46",
       "relevanceScore": 0.0
     }
   ]
