@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-08-11T04:36:59.292394+00:00",
+  "lastUpdated": "2026-08-12T04:42:36.693378+00:00",
   "items": [
+    {
+      "id": "ab4c673a4da72422",
+      "headline": "NVIDIA Success Story: Remarkable Growth from Video Games to AI",
+      "url": "https://www.analyticsinsight.net/tech-news/nvidia-success-story-remarkable-growth-from-video-games-to-ai",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-08-11 16:00:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "e9c0adc83ab40b6c",
+      "headline": "NVIDIA’s Nemotron 3.5 Lightning Accelerates Token Generation By 4x But Agentic Tasks Only Speed Up By 30%, As...",
+      "url": "https://wccftech.com/nvidias-nemotron-3-5-lightning-accelerates-token-generation-by-4x-but-agentic-tasks-only-speed-up-by-30-as-orchestration-remains-the-real-bottleneck/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-08-11 15:39:07",
+      "relevanceScore": 0.39
+    },
+    {
+      "id": "00b978b2a8cc0bfb",
+      "headline": "After 10 years of Pixels, why is Google still making phones?",
+      "url": "https://www.tomsguide.com/phones/google-pixel-phones/after-10-years-of-pixels-why-is-google-still-making-phones",
+      "source": "Tom's Guide",
+      "country": "US",
+      "publishedAt": "2026-08-11 15:12:36",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "14cb838c100f5d63",
+      "headline": "Mistral AI wants to build 1 gigawatt of European compute by 2030 — and lock in customers now.",
+      "url": "https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now",
+      "source": "Venturebeat",
+      "country": "Both",
+      "publishedAt": "2026-08-11 13:59:00",
+      "relevanceScore": 0.69
+    },
     {
       "id": "a3550e15475bf118",
       "headline": "Zuckerberg manifesto pushes open-source approach on AI as Meta releases latest model",
@@ -144,42 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-07 14:09:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "78101a641d443959",
-      "headline": "Andreessen Horowitz Partner Boasts That the Company’s New Tech Can Fabricate Fake History Like in “1984”",
-      "url": "https://futurism.com/artificial-intelligence/andreessen-horowitz-chilling-assessment-new-tech",
-      "source": "Futurism",
-      "country": "US",
-      "publishedAt": "2026-08-06 16:54:53",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "f2bfa15f371e6dee",
-      "headline": "China Tightens Drone Exports and Sanctions US Firms",
-      "url": "https://www.techrepublic.com/article/news-china-us-drone-export-tech-restrictions-apac/",
-      "source": "Techrepublic",
-      "country": "Both",
-      "publishedAt": "2026-08-06 16:51:40",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "f3981d1f75c54171",
-      "headline": "Forbidden fruit: Buick Electra gets 435 mile range and 376 hp for $25,000",
-      "url": "https://electrek.co/2026/08/06/forbidden-fruit-buick-electra-gets-435-mile-ev-range-and-25000-price-tag/",
-      "source": "Electrek",
-      "country": "CN",
-      "publishedAt": "2026-08-06 16:02:45",
-      "relevanceScore": 0.0
-    },
-    {
-      "id": "b02d179222468c14",
-      "headline": "Defense Startup: AI Turns 2 Months Of Engineering Into 20 Minutes",
-      "url": "https://www.forbes.com/sites/johnkoetsier/2026/08/06/defense-startup-ai-turns-2-months-of-engineering-into-20-minutes/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-08-06 16:00:14",
-      "relevanceScore": 0.0
     }
   ]
 }
