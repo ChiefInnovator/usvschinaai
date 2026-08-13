@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-08-12T04:42:36.693378+00:00",
+  "lastUpdated": "2026-08-13T04:42:50.626096+00:00",
   "items": [
+    {
+      "id": "4b0b3b61a0cba128",
+      "headline": "A look at AI news website RuntimeWire, which costs $100/day to run and \"beat\" human reporters on OpenAI's Black Hat...",
+      "url": "https://mediagazer.com/260812/p8",
+      "source": "Mediagazer",
+      "country": "US",
+      "publishedAt": "2026-08-12 15:00:37",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "0f8a27ebd05121b4",
+      "headline": "Automated cyberattacks are here — careless techies and well-funded foreigners are getting the blame",
+      "url": "https://www.theblaze.com/tech/automated-cyberattacks-are-here-careless-techies-and-well-funded-foreigners-are-getting-the-blame",
+      "source": "Blaze Media",
+      "country": "Both",
+      "publishedAt": "2026-08-12 14:30:00",
+      "relevanceScore": 0.76
+    },
+    {
+      "id": "884fa28689163007",
+      "headline": "Nvidia, China and the 6G elephant in the room",
+      "url": "https://www.sdxcentral.com/control-plane/nvidia-china-and-the-6g-elephant-in-the-room/",
+      "source": "Sdxcentral",
+      "country": "CN",
+      "publishedAt": "2026-08-12 14:11:28",
+      "relevanceScore": 0.08
+    },
     {
       "id": "ab4c673a4da72422",
       "headline": "NVIDIA Success Story: Remarkable Growth from Video Games to AI",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-07 15:43:22",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "e0df850c0f7de9fe",
-      "headline": "Intersect360 Research Launches Studies on Enterprise AI Adoption, EU Sovereignty",
-      "url": "https://www.hpcwire.com/off-the-wire/intersect360-research-launches-studies-on-enterprise-ai-adoption-eu-sovereignty/",
-      "source": "Hpcwire",
-      "country": "US",
-      "publishedAt": "2026-08-07 15:00:42",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7b55460a3a28d5cc",
-      "headline": "Article on Meta AI head Alexandr Wang to ...",
-      "url": "https://completeaitraining.com/news/article-on-meta-ai-head-alexandr-wang-to/",
-      "source": "Complete Ai Training",
-      "country": "Both",
-      "publishedAt": "2026-08-07 14:53:55",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "3dd7b2dff31b0cf1",
-      "headline": "Panic as another AI model escapes its system, sparking safety scramble by experts",
-      "url": "https://www.the-express.com/news/us-news/213522/panic-another-ai-model-escapes-system",
-      "source": "Daily Express Us",
-      "country": "CN",
-      "publishedAt": "2026-08-07 14:09:00",
-      "relevanceScore": 0.08
     }
   ]
 }
