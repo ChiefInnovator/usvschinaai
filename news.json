@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-08-13T04:42:50.626096+00:00",
+  "lastUpdated": "2026-08-14T04:42:21.501971+00:00",
   "items": [
+    {
+      "id": "702bdd81a5504958",
+      "headline": "Generative AI in the Real World: AI for Real Estate with Ben Miller",
+      "url": "https://www.oreilly.com/radar/podcast/generative-ai-in-the-real-world-ai-for-real-estate-with-ben-miller/",
+      "source": "O'reilly Media",
+      "country": "US",
+      "publishedAt": "2026-08-13 13:06:23",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "f0bef613d88356e5",
+      "headline": "NVIDIA CEO Warns of ‘Horrible Outcome’ If China Optimizes AI Models for Huawei Hardware Instead of American Chips",
+      "url": "https://247wallst.com/investing/2026/08/13/nvidia-ceo-warns-of-horrible-outcome-if-china-optimizes-ai-models-for-huawei-hardware-instead-of-american-chips/",
+      "source": "24/7 Wall St",
+      "country": "Both",
+      "publishedAt": "2026-08-13 13:00:49",
+      "relevanceScore": 0.54
+    },
+    {
+      "id": "c5640cb68216e1c9",
+      "headline": "Writer says its new Palmyra X6 model cuts AI agent costs by 52% as token spending surges",
+      "url": "https://venturebeat.com/orchestration/writer-says-its-new-palmyra-x6-model-cuts-ai-agent-costs-by-52-as-token-spending-surges",
+      "source": "Venturebeat",
+      "country": "Both",
+      "publishedAt": "2026-08-13 13:00:00",
+      "relevanceScore": 1.0
+    },
     {
       "id": "4b0b3b61a0cba128",
       "headline": "A look at AI news website RuntimeWire, which costs $100/day to run and \"beat\" human reporters on OpenAI's Black Hat...",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-08-07 21:22:01",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "d1748b5e7e38ab64",
-      "headline": "Ring around the ransom.",
-      "url": "https://thecyberwire.com/podcasts/daily-podcast/2610/notes",
-      "source": "The Cyberwire",
-      "country": "Both",
-      "publishedAt": "2026-08-07 20:30:00",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "b30535bb65c937be",
-      "headline": "The Unspoken Young Men Crisis: AI Girlfriends",
-      "url": "https://www.dailysignal.com/2026/08/07/young-men-crisis-ai-girlfriends/",
-      "source": "The Daily Signal",
-      "country": "US",
-      "publishedAt": "2026-08-07 15:58:28",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "d75ae7b7f9768cc0",
-      "headline": "Biosecurity Alert: Stanford Researchers Use AI to Design 16 Viruses",
-      "url": "https://www.breitbart.com/tech/2026/08/07/biosecurity-alert-stanford-researchers-use-ai-to-design-16-viruses/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-08-07 15:43:22",
-      "relevanceScore": 0.16
     }
   ]
 }
