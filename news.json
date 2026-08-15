@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-08-14T04:42:21.501971+00:00",
+  "lastUpdated": "2026-08-15T04:17:16.095913+00:00",
   "items": [
+    {
+      "id": "d7a028da231e2bad",
+      "headline": "Apple Intelligence in China: Alibaba Backs a Custom AI Model",
+      "url": "https://www.techrepublic.com/article/news-apple-china-ai-model-alibaba-intelligence-apac/",
+      "source": "Techrepublic",
+      "country": "CN",
+      "publishedAt": "2026-08-14 15:58:05",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "b2346f3238d944c6",
+      "headline": "Apple trains China-specific AI model with Alibaba's support",
+      "url": "https://completeaitraining.com/news/apple-trains-china-specific-ai-model-with-alibabas-support/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-08-14 15:53:10",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "2e96ce330386d72a",
+      "headline": "Apple training its own China-specific AI model with Alibaba's support",
+      "url": "https://qz.com/apple-china-ai-model-alibaba-training-081426",
+      "source": "Quartz",
+      "country": "CN",
+      "publishedAt": "2026-08-14 14:10:27",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "ee488d512c77c920",
+      "headline": "Apple has trained its own AI for China rather than using Gemini",
+      "url": "https://appleinsider.com/articles/26/08/14/apple-has-trained-its-own-ai-for-china-rather-than-using-gemini",
+      "source": "Apple Insider",
+      "country": "Both",
+      "publishedAt": "2026-08-14 11:21:05",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "8abc528b655bda5e",
+      "headline": "Losing To Anthropic, OpenAI, Google, Meta Now Touts Open Weight AI",
+      "url": "http://www.thelowdownblog.com/2026/08/losing-to-anthropic-openai-google-meta.html",
+      "source": "The Lowdown Blog",
+      "country": "Both",
+      "publishedAt": "2026-08-14 10:23:45",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "8687e833f5ff5632",
+      "headline": "Apple trained its own AI model for China with help from Alibaba",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
+      "source": "The Verge",
+      "country": "CN",
+      "publishedAt": "2026-08-14 09:21:17",
+      "relevanceScore": 0.23
+    },
     {
       "id": "702bdd81a5504958",
       "headline": "Generative AI in the Real World: AI for Real Estate with Ben Miller",
@@ -125,60 +179,6 @@
       "source": "Freerepublic",
       "country": "US",
       "publishedAt": "2026-08-10 14:21:43",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f7813ed4fe190802",
-      "headline": "We need more microchips to beat China. You won't believe where Apple has turned to get them.",
-      "url": "https://www.theblaze.com/tech/we-need-more-microchips-to-beat-china-you-won-t-believe-where-apple-has-turned-to-get-them",
-      "source": "Blaze Media",
-      "country": "Both",
-      "publishedAt": "2026-08-09 16:30:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "8a3f5be03ba7d62f",
-      "headline": "OpenAI’s Atlas Shutdown Shows Why AI Doesn’t Need a New Browser",
-      "url": "https://www.igeekphone.com/openais-atlas-shutdown-shows-why-ai-doesnt-need-a-new-browser/",
-      "source": "Igeekphone China Phone, Tablet Pc, Vr, Rc Drone Ne",
-      "country": "Both",
-      "publishedAt": "2026-08-09 13:52:55",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "59afee5501401623",
-      "headline": "Micron’s Memory Boom Hits a Geopolitical Speed Bump",
-      "url": "https://www.newscase.com/microns-memory-boom-hits-a-geopolitical-speed-bump/",
-      "source": "Newscase",
-      "country": "US",
-      "publishedAt": "2026-08-09 08:51:05",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "661f4e53bb60b8db",
-      "headline": "Google Throws Open Doors to Its Top-Secret Data Center",
-      "url": "https://us.headtopics.com/news/google-throws-open-doors-to-its-top-secret-data-center-86411356",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-08-08 12:36:35",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "89f7ab60d6a1dbef",
-      "headline": "First glimpse into production: BMW Group Plant Woodruff assembles high-voltage batteries for the new BMW iX5",
-      "url": "https://batteriesnews.com/first-glimpse-into-production-bmw-group-plant-woodruff-assembles-high-voltage-batteries-for-the-new-bmw-ix5/",
-      "source": "Batteries News",
-      "country": "US",
-      "publishedAt": "2026-08-08 05:34:46",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "8be2449593637b1d",
-      "headline": "China’s Jingtanhao Regenerated Iron Phosphate Technology Achieves Breakthrough",
-      "url": "https://www.financialcontent.com/article/getnews-2026-8-7-chinas-jingtanhao-regenerated-iron-phosphate-technology-achieves-breakthrough",
-      "source": "Financialcontent",
-      "country": "Both",
-      "publishedAt": "2026-08-07 21:22:01",
       "relevanceScore": 0.08
     }
   ]
