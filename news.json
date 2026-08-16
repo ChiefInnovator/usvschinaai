@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-08-15T04:17:16.095913+00:00",
+  "lastUpdated": "2026-08-16T04:17:31.971594+00:00",
   "items": [
+    {
+      "id": "de5f781934559e06",
+      "headline": "US tells 30-plus countries to pick a side on AI, bars parallel China participation",
+      "url": "https://completeaitraining.com/news/us-tells-30-plus-countries-to-pick-a-side-on-ai-bars/",
+      "source": "Complete Ai Training",
+      "country": "CN",
+      "publishedAt": "2026-08-15 15:21:18",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7036cfc54099f278",
+      "headline": "Apple's China Memory Chips Plan Runs Into US Resistance",
+      "url": "https://www.analyticsinsight.net/news/apples-china-memory-chips-plan-runs-into-us-resistance",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-08-15 12:16:51",
+      "relevanceScore": 0.08
+    },
     {
       "id": "d7a028da231e2bad",
       "headline": "Apple Intelligence in China: Alibaba Backs a Custom AI Model",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-10 15:41:46",
       "relevanceScore": 0.31
-    },
-    {
-      "id": "bee387657a9bb00c",
-      "headline": "On theCUBE Pod: Black Hat exposes agentic threat, theCUBE remembers David Floyer",
-      "url": "https://siliconangle.com/2026/08/10/agentic-ai-systems-david-floyer-thecubepod/",
-      "source": "Siliconangle",
-      "country": "Both",
-      "publishedAt": "2026-08-10 14:26:45",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "2d1bf62c93c2439a",
-      "headline": "2008 vs 2026: The Same Dominoes Are Falling",
-      "url": "https://freerepublic.com/focus/f-chat/4391291/posts",
-      "source": "Freerepublic",
-      "country": "US",
-      "publishedAt": "2026-08-10 14:21:43",
-      "relevanceScore": 0.08
     }
   ]
 }
