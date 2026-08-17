@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-08-16T04:17:31.971594+00:00",
+  "lastUpdated": "2026-08-17T04:18:08.280044+00:00",
   "items": [
+    {
+      "id": "def690308ca52b03",
+      "headline": "Meta and Google just got beaten by an AI giant you might not expect",
+      "url": "https://us.headtopics.com/news/meta-and-google-just-got-beaten-by-an-ai-giant-you-might-86684939",
+      "source": "Headtopics",
+      "country": "Both",
+      "publishedAt": "2026-08-16 15:36:43",
+      "relevanceScore": 0.6
+    },
+    {
+      "id": "6236be94c1bae7d3",
+      "headline": "Rogue AI aren’t science fiction anymore",
+      "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-08-16 12:00:00",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "8b9c47c30f4d2be3",
+      "headline": "US Pressures Apple to Avoid Chinese Memory Chips",
+      "url": "https://www.analyticsinsight.net/tech-news/us-pressures-apple-to-avoid-chinese-memory-chips",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-08-16 10:50:17",
+      "relevanceScore": 0.16
+    },
+    {
+      "id": "24367cabcde9a1bf",
+      "headline": "AI's New Red Flag: US Dangles Pax Silica At Partners To Sideline China",
+      "url": "https://www.ibtimes.com/ais-new-red-flag-us-dangles-pax-silica-partners-sideline-china-3806460",
+      "source": "International Business Times",
+      "country": "Both",
+      "publishedAt": "2026-08-16 09:45:09",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "b73533a38c607345",
+      "headline": "Indonesia opens first university AI center with UGM, Indosat and Nvidia",
+      "url": "https://completeaitraining.com/news/indonesia-opens-first-university-ai-center-with-ugm-indosat/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-08-15 23:23:36",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5f732087ef582d4d",
+      "headline": "Meet the young billionaires getting filthy rich off AI — and their lavish purchases",
+      "url": "https://nypost.com/2026/08/15/us-news/silicon-valleys-young-billionaires-getting-rich-from-ai/",
+      "source": "New York Post",
+      "country": "US",
+      "publishedAt": "2026-08-15 20:03:52",
+      "relevanceScore": 0.08
+    },
     {
       "id": "de5f781934559e06",
       "headline": "US tells 30-plus countries to pick a side on AI, bars parallel China participation",
@@ -126,60 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-12 14:11:28",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "ab4c673a4da72422",
-      "headline": "NVIDIA Success Story: Remarkable Growth from Video Games to AI",
-      "url": "https://www.analyticsinsight.net/tech-news/nvidia-success-story-remarkable-growth-from-video-games-to-ai",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-08-11 16:00:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "e9c0adc83ab40b6c",
-      "headline": "NVIDIA’s Nemotron 3.5 Lightning Accelerates Token Generation By 4x But Agentic Tasks Only Speed Up By 30%, As...",
-      "url": "https://wccftech.com/nvidias-nemotron-3-5-lightning-accelerates-token-generation-by-4x-but-agentic-tasks-only-speed-up-by-30-as-orchestration-remains-the-real-bottleneck/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-08-11 15:39:07",
-      "relevanceScore": 0.39
-    },
-    {
-      "id": "00b978b2a8cc0bfb",
-      "headline": "After 10 years of Pixels, why is Google still making phones?",
-      "url": "https://www.tomsguide.com/phones/google-pixel-phones/after-10-years-of-pixels-why-is-google-still-making-phones",
-      "source": "Tom's Guide",
-      "country": "US",
-      "publishedAt": "2026-08-11 15:12:36",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "14cb838c100f5d63",
-      "headline": "Mistral AI wants to build 1 gigawatt of European compute by 2030 — and lock in customers now.",
-      "url": "https://venturebeat.com/infrastructure/mistral-ai-wants-to-build-1-gigawatt-of-european-compute-by-2030-and-lock-in-customers-now",
-      "source": "Venturebeat",
-      "country": "Both",
-      "publishedAt": "2026-08-11 13:59:00",
-      "relevanceScore": 0.69
-    },
-    {
-      "id": "a3550e15475bf118",
-      "headline": "Zuckerberg manifesto pushes open-source approach on AI as Meta releases latest model",
-      "url": "https://abcnews.com/Technology/wireStory/zuckerberg-manifesto-pushes-open-source-approach-ai-meta-135519669",
-      "source": "Abc News",
-      "country": "US",
-      "publishedAt": "2026-08-10 15:54:04",
-      "relevanceScore": 0.31
-    },
-    {
-      "id": "0efc98dfe6a4e260",
-      "headline": "Zuckerberg manifesto pushes an open-source approach on AI as Meta releases its latest model",
-      "url": "https://www.clickondetroit.com/business/2026/08/10/zuckerberg-manifesto-pushes-an-open-source-approach-on-ai-as-meta-releases-its-latest-model/",
-      "source": "Clickondetroit",
-      "country": "US",
-      "publishedAt": "2026-08-10 15:41:46",
-      "relevanceScore": 0.31
     }
   ]
 }
