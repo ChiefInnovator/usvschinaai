@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-08-17T04:18:08.280044+00:00",
+  "lastUpdated": "2026-08-18T04:15:41.213495+00:00",
   "items": [
+    {
+      "id": "bbcd22a20822ddcc",
+      "headline": "DeepSeek’s Peak-Hour Pricing Betrays Where Its Users Really Live, Calming US Fears of a China AI Takeover, Even As...",
+      "url": "https://wccftech.com/deepseeks-peak-hour-pricing-betrays-where-its-users-really-live-calming-us-fears-of-a-china-ai-takeover-even-as-alibabas-qwen-models-bury-meta-on-hugging-face/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-08-17 15:07:00",
+      "relevanceScore": 0.83
+    },
+    {
+      "id": "421377b0324d7209",
+      "headline": "Anthropic CEO Dario Amodei Calls AI Backlash a Crisis of Trust as Power Demands Ignite Public Fury",
+      "url": "https://www.webpronews.com/anthropic-ceo-dario-amodei-calls-ai-backlash-a-crisis-of-trust-as-power-demands-ignite-public-fury/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-08-17 12:52:04",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "311d61694288a37a",
+      "headline": "Apple With Alibaba Has Built AI Only For China",
+      "url": "http://www.thelowdownblog.com/2026/08/apple-with-alibaba-has-built-ai-only.html",
+      "source": "The Lowdown Blog",
+      "country": "Both",
+      "publishedAt": "2026-08-17 12:51:49",
+      "relevanceScore": 0.54
+    },
     {
       "id": "def690308ca52b03",
       "headline": "Meta and Google just got beaten by an AI giant you might not expect",
@@ -153,33 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-08-13 13:00:00",
       "relevanceScore": 1.0
-    },
-    {
-      "id": "4b0b3b61a0cba128",
-      "headline": "A look at AI news website RuntimeWire, which costs $100/day to run and \"beat\" human reporters on OpenAI's Black Hat...",
-      "url": "https://mediagazer.com/260812/p8",
-      "source": "Mediagazer",
-      "country": "US",
-      "publishedAt": "2026-08-12 15:00:37",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "0f8a27ebd05121b4",
-      "headline": "Automated cyberattacks are here — careless techies and well-funded foreigners are getting the blame",
-      "url": "https://www.theblaze.com/tech/automated-cyberattacks-are-here-careless-techies-and-well-funded-foreigners-are-getting-the-blame",
-      "source": "Blaze Media",
-      "country": "Both",
-      "publishedAt": "2026-08-12 14:30:00",
-      "relevanceScore": 0.76
-    },
-    {
-      "id": "884fa28689163007",
-      "headline": "Nvidia, China and the 6G elephant in the room",
-      "url": "https://www.sdxcentral.com/control-plane/nvidia-china-and-the-6g-elephant-in-the-room/",
-      "source": "Sdxcentral",
-      "country": "CN",
-      "publishedAt": "2026-08-12 14:11:28",
-      "relevanceScore": 0.08
     }
   ]
 }
