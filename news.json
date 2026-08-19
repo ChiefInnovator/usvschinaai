@@ -1,6 +1,60 @@
 {
-  "lastUpdated": "2026-08-18T04:15:41.213495+00:00",
+  "lastUpdated": "2026-08-19T04:16:24.206264+00:00",
   "items": [
+    {
+      "id": "8f6623fd06f00a7a",
+      "headline": "EU Launches New Brussels Team to Enforce AI Act Against Deepfakes and Hacking",
+      "url": "https://www.itsecuritynews.info/eu-launches-new-brussels-team-to-enforce-ai-act-against-deepfakes-and-hacking/",
+      "source": "It Security News",
+      "country": "US",
+      "publishedAt": "2026-08-18 15:31:22",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "bc1016a5fecaefec",
+      "headline": "AP Technology SummaryBrief at 10:21 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-10-21-a-m-edt/article_51452136-6f9c-5937-b1e2-df8e9fbc44eb.html",
+      "source": "Postregister",
+      "country": "US",
+      "publishedAt": "2026-08-18 14:21:41",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "cc4ef08eb321f6f5",
+      "headline": "OpenAI’s Greg Brockman: Z.ai’s GLM-5.3 likely to “significantly accelerate the threat landscape”",
+      "url": "https://thenewstack.io/openai-open-weight-glm-5-3/",
+      "source": "The New Stack",
+      "country": "Both",
+      "publishedAt": "2026-08-18 13:10:15",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "5724cb8ac8d8ae6f",
+      "headline": "Ramaco Resources, Inc. Announces the Entry into a Non-Binding Memorandum of Understanding with Bedrock Semiconductor...",
+      "url": "https://www.prnewswire.com/news-releases/ramaco-resources-inc-announces-the-entry-into-a-non-binding-memorandum-of-understanding-with-bedrock-semiconductor-inc-302854067.html",
+      "source": "Pr Newswire",
+      "country": "US",
+      "publishedAt": "2026-08-18 12:30:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "2a3168930fe7162e",
+      "headline": "Critical Comparison: Valens Semiconductor (NYSE:VLN) vs. Ambiq Micro (NYSE:AMBQ)",
+      "url": "https://www.thelincolnianonline.com/2026/08/18/critical-comparison-valens-semiconductor-nysevln-vs-ambiq-micro-nyseambq.html",
+      "source": "The Lincolnian Online",
+      "country": "US",
+      "publishedAt": "2026-08-18 12:29:03",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "0d4af817a9268b37",
+      "headline": "Artificial intelligence race between US, China at pivotal point",
+      "url": "https://magicvalley.com/article_388a9156-1e95-56d4-a14e-344760297e66.html",
+      "source": "Magic Valley",
+      "country": "Both",
+      "publishedAt": "2026-08-18 12:17:09",
+      "relevanceScore": 0.08
+    },
     {
       "id": "bbcd22a20822ddcc",
       "headline": "DeepSeek’s Peak-Hour Pricing Betrays Where Its Users Really Live, Calming US Fears of a China AI Takeover, Even As...",
@@ -126,60 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-14 14:10:27",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "ee488d512c77c920",
-      "headline": "Apple has trained its own AI for China rather than using Gemini",
-      "url": "https://appleinsider.com/articles/26/08/14/apple-has-trained-its-own-ai-for-china-rather-than-using-gemini",
-      "source": "Apple Insider",
-      "country": "Both",
-      "publishedAt": "2026-08-14 11:21:05",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "8abc528b655bda5e",
-      "headline": "Losing To Anthropic, OpenAI, Google, Meta Now Touts Open Weight AI",
-      "url": "http://www.thelowdownblog.com/2026/08/losing-to-anthropic-openai-google-meta.html",
-      "source": "The Lowdown Blog",
-      "country": "Both",
-      "publishedAt": "2026-08-14 10:23:45",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "8687e833f5ff5632",
-      "headline": "Apple trained its own AI model for China with help from Alibaba",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
-      "source": "The Verge",
-      "country": "CN",
-      "publishedAt": "2026-08-14 09:21:17",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "702bdd81a5504958",
-      "headline": "Generative AI in the Real World: AI for Real Estate with Ben Miller",
-      "url": "https://www.oreilly.com/radar/podcast/generative-ai-in-the-real-world-ai-for-real-estate-with-ben-miller/",
-      "source": "O'reilly Media",
-      "country": "US",
-      "publishedAt": "2026-08-13 13:06:23",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "f0bef613d88356e5",
-      "headline": "NVIDIA CEO Warns of ‘Horrible Outcome’ If China Optimizes AI Models for Huawei Hardware Instead of American Chips",
-      "url": "https://247wallst.com/investing/2026/08/13/nvidia-ceo-warns-of-horrible-outcome-if-china-optimizes-ai-models-for-huawei-hardware-instead-of-american-chips/",
-      "source": "24/7 Wall St",
-      "country": "Both",
-      "publishedAt": "2026-08-13 13:00:49",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "c5640cb68216e1c9",
-      "headline": "Writer says its new Palmyra X6 model cuts AI agent costs by 52% as token spending surges",
-      "url": "https://venturebeat.com/orchestration/writer-says-its-new-palmyra-x6-model-cuts-ai-agent-costs-by-52-as-token-spending-surges",
-      "source": "Venturebeat",
-      "country": "Both",
-      "publishedAt": "2026-08-13 13:00:00",
-      "relevanceScore": 1.0
     }
   ]
 }
