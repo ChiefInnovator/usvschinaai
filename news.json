@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-19T04:16:24.206264+00:00",
+  "lastUpdated": "2026-08-20T04:16:34.620165+00:00",
   "items": [
+    {
+      "id": "63e957f81c0e2cce",
+      "headline": "Forge Nano Breaks Ground on “America’s Battery Gigafactory” to Strengthen U.S. Defense Supply Chains",
+      "url": "https://www.financialcontent.com/article/gnwcq-2026-8-19-forge-nano-breaks-ground-on-americas-battery-gigafactory-to-strengthen-us-defense-supply-chains",
+      "source": "Financialcontent",
+      "country": "US",
+      "publishedAt": "2026-08-19 15:38:55",
+      "relevanceScore": 0.16
+    },
     {
       "id": "8f6623fd06f00a7a",
       "headline": "EU Launches New Brussels Team to Enforce AI Act Against Deepfakes and Hacking",
@@ -170,15 +179,6 @@
       "source": "Complete Ai Training",
       "country": "CN",
       "publishedAt": "2026-08-14 15:53:10",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "2e96ce330386d72a",
-      "headline": "Apple training its own China-specific AI model with Alibaba's support",
-      "url": "https://qz.com/apple-china-ai-model-alibaba-training-081426",
-      "source": "Quartz",
-      "country": "CN",
-      "publishedAt": "2026-08-14 14:10:27",
       "relevanceScore": 0.23
     }
   ]
