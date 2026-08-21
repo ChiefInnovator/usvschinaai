@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-08-20T04:16:34.620165+00:00",
+  "lastUpdated": "2026-08-21T04:19:35.101044+00:00",
   "items": [
+    {
+      "id": "ddf31010d0e10774",
+      "headline": "Future Fitbit Wearable Teased In Google Pixel Family Image",
+      "url": "https://www.forbes.com/sites/andrewwilliams/2026/08/20/future-fitbit-wearable-teased-in-google-pixel-family-image/",
+      "source": "Forbes",
+      "country": "US",
+      "publishedAt": "2026-08-20 15:23:55",
+      "relevanceScore": 0.15
+    },
+    {
+      "id": "b6e7b12a0f82839f",
+      "headline": "This obscure FTC proposal exposes the widening fight over what AI can say",
+      "url": "https://www.fastcompany.com/91592355/this-obscure-ftc-proposal-exposes-the-widening-fight-over-what-ai-can-say",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-08-20 13:30:04",
+      "relevanceScore": 0.32
+    },
     {
       "id": "63e957f81c0e2cce",
       "headline": "Forge Nano Breaks Ground on “America’s Battery Gigafactory” to Strengthen U.S. Defense Supply Chains",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-15 12:16:51",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "d7a028da231e2bad",
-      "headline": "Apple Intelligence in China: Alibaba Backs a Custom AI Model",
-      "url": "https://www.techrepublic.com/article/news-apple-china-ai-model-alibaba-intelligence-apac/",
-      "source": "Techrepublic",
-      "country": "CN",
-      "publishedAt": "2026-08-14 15:58:05",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "b2346f3238d944c6",
-      "headline": "Apple trains China-specific AI model with Alibaba's support",
-      "url": "https://completeaitraining.com/news/apple-trains-china-specific-ai-model-with-alibabas-support/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-08-14 15:53:10",
-      "relevanceScore": 0.23
     }
   ]
 }
