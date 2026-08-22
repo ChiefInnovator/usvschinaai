@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-08-21T04:19:35.101044+00:00",
+  "lastUpdated": "2026-08-22T04:14:08.123746+00:00",
   "items": [
+    {
+      "id": "fb86f382f06413fd",
+      "headline": "I worked at OpenAI. Here’s how tech companies can prepare for a slowdown | Miles Brundage",
+      "url": "https://www.theguardian.com/commentisfree/2026/aug/21/openai-frontier-ai-speed",
+      "source": "The Guardian",
+      "country": "Both",
+      "publishedAt": "2026-08-21 10:00:32",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "e442622b0451a854",
+      "headline": "This new social network would be just as happy to stay small",
+      "url": "https://www.fastcompany.com/91593130/divine-vine-video-nostr-rabble",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-08-21 10:00:00",
+      "relevanceScore": 0.38
+    },
     {
       "id": "ddf31010d0e10774",
       "headline": "Future Fitbit Wearable Teased In Google Pixel Family Image",
@@ -161,24 +179,6 @@
       "source": "New York Post",
       "country": "US",
       "publishedAt": "2026-08-15 20:03:52",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "de5f781934559e06",
-      "headline": "US tells 30-plus countries to pick a side on AI, bars parallel China participation",
-      "url": "https://completeaitraining.com/news/us-tells-30-plus-countries-to-pick-a-side-on-ai-bars/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-08-15 15:21:18",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7036cfc54099f278",
-      "headline": "Apple's China Memory Chips Plan Runs Into US Resistance",
-      "url": "https://www.analyticsinsight.net/news/apples-china-memory-chips-plan-runs-into-us-resistance",
-      "source": "Analytics And Insight",
-      "country": "CN",
-      "publishedAt": "2026-08-15 12:16:51",
       "relevanceScore": 0.08
     }
   ]
