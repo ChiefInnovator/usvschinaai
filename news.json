@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-22T04:14:08.123746+00:00",
+  "lastUpdated": "2026-08-23T04:19:20.410726+00:00",
   "items": [
+    {
+      "id": "a3095f5eac3f1c4d",
+      "headline": "AI’s Three-Body Problem: no single force can dictate the outcome",
+      "url": "https://fortune.com/2026/08/22/ais-three-body-problem-no-single-force-can-dictate-the-outcome/",
+      "source": "Fortune",
+      "country": "Both",
+      "publishedAt": "2026-08-22 11:30:00",
+      "relevanceScore": 0.3
+    },
     {
       "id": "fb86f382f06413fd",
       "headline": "I worked at OpenAI. Here’s how tech companies can prepare for a slowdown | Miles Brundage",
@@ -170,15 +179,6 @@
       "source": "Complete Ai Training",
       "country": "US",
       "publishedAt": "2026-08-15 23:23:36",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5f732087ef582d4d",
-      "headline": "Meet the young billionaires getting filthy rich off AI — and their lavish purchases",
-      "url": "https://nypost.com/2026/08/15/us-news/silicon-valleys-young-billionaires-getting-rich-from-ai/",
-      "source": "New York Post",
-      "country": "US",
-      "publishedAt": "2026-08-15 20:03:52",
       "relevanceScore": 0.08
     }
   ]
