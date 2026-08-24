@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-08-23T04:19:20.410726+00:00",
+  "lastUpdated": "2026-08-24T04:20:28.335848+00:00",
   "items": [
+    {
+      "id": "442aa8b7e4d44545",
+      "headline": "Nvidia’s Two-Front Gamble: Raising Server Prices While Backstopping a $105 Billion AI Buildout",
+      "url": "https://www.newscase.com/nvidias-two-front-gamble-raising-server-prices-while-backstopping-a-105-billion-ai-buildout/",
+      "source": "Newscase",
+      "country": "US",
+      "publishedAt": "2026-08-23 11:51:05",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "251f1976fb9a8a72",
+      "headline": "‘We are hitting a different chapter’: OpenAI leader warns of threat of ‘persistent’ AI cyber-attacks",
+      "url": "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane",
+      "source": "The Guardian",
+      "country": "US",
+      "publishedAt": "2026-08-23 08:00:27",
+      "relevanceScore": 0.23
+    },
     {
       "id": "a3095f5eac3f1c4d",
       "headline": "AI’s Three-Body Problem: no single force can dictate the outcome",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-08-16 10:50:17",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "24367cabcde9a1bf",
-      "headline": "AI's New Red Flag: US Dangles Pax Silica At Partners To Sideline China",
-      "url": "https://www.ibtimes.com/ais-new-red-flag-us-dangles-pax-silica-partners-sideline-china-3806460",
-      "source": "International Business Times",
-      "country": "Both",
-      "publishedAt": "2026-08-16 09:45:09",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "b73533a38c607345",
-      "headline": "Indonesia opens first university AI center with UGM, Indosat and Nvidia",
-      "url": "https://completeaitraining.com/news/indonesia-opens-first-university-ai-center-with-ugm-indosat/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-08-15 23:23:36",
-      "relevanceScore": 0.08
     }
   ]
 }
