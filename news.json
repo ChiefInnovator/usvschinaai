@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-24T04:20:28.335848+00:00",
+  "lastUpdated": "2026-08-25T04:17:19.245594+00:00",
   "items": [
+    {
+      "id": "1ea41a26dff7a803",
+      "headline": "Unbreakable Shield: Why Taiwan’s Chip Expertise Cannot Be Cloned",
+      "url": "https://cepa.org/article/unbreakable-shield-why-taiwans-chip-expertise-cannot-be-cloned/",
+      "source": "Cepa",
+      "country": "US",
+      "publishedAt": "2026-08-24 13:58:44",
+      "relevanceScore": 0.08
+    },
     {
       "id": "442aa8b7e4d44545",
       "headline": "Nvidia’s Two-Front Gamble: Raising Server Prices While Backstopping a $105 Billion AI Buildout",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-16 12:00:00",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "8b9c47c30f4d2be3",
-      "headline": "US Pressures Apple to Avoid Chinese Memory Chips",
-      "url": "https://www.analyticsinsight.net/tech-news/us-pressures-apple-to-avoid-chinese-memory-chips",
-      "source": "Analytics And Insight",
-      "country": "CN",
-      "publishedAt": "2026-08-16 10:50:17",
-      "relevanceScore": 0.16
     }
   ]
 }
