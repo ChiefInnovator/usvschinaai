@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-08-25T04:17:19.245594+00:00",
+  "lastUpdated": "2026-08-26T04:21:25.724588+00:00",
   "items": [
+    {
+      "id": "fef01040d11f0563",
+      "headline": "Apple targets developer AI performance gains with new M6 Mac Mini and M5 Ultra Mac Studio devices",
+      "url": "https://www.itpro.com/software/apple/apple-targets-developer-ai-performance-gains-with-new-m6-mac-mini-and-m5-ultra-mac-studio-devices",
+      "source": "Itpro",
+      "country": "US",
+      "publishedAt": "2026-08-25 15:15:02",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "7247a85875b2ebdd",
+      "headline": "AP Technology SummaryBrief at 8:50 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-8-50-a-m-edt/article_80f71176-a1de-51ab-ab8c-9fb48ef63d71.html",
+      "source": "Postregister",
+      "country": "CN",
+      "publishedAt": "2026-08-25 12:50:17",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "1be60fe837ba9e89",
+      "headline": "AP Technology SummaryBrief at 7:22 a.m. EDT",
+      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-7-22-a-m-edt/article_80f71176-a1de-51ab-ab8c-9fb48ef63d71.html",
+      "source": "Postregister",
+      "country": "CN",
+      "publishedAt": "2026-08-25 11:22:23",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "80a8e31bf116acf3",
+      "headline": "Meta goes on trial as Silicon Valley faces a growing backlash",
+      "url": "https://www.theguardian.com/global/2026/aug/25/meta-trial-silicon-valley",
+      "source": "The Guardian",
+      "country": "US",
+      "publishedAt": "2026-08-25 11:21:56",
+      "relevanceScore": 0.45
+    },
     {
       "id": "1ea41a26dff7a803",
       "headline": "Unbreakable Shield: Why Taiwan’s Chip Expertise Cannot Be Cloned",
@@ -144,42 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-08-17 15:07:00",
       "relevanceScore": 0.83
-    },
-    {
-      "id": "421377b0324d7209",
-      "headline": "Anthropic CEO Dario Amodei Calls AI Backlash a Crisis of Trust as Power Demands Ignite Public Fury",
-      "url": "https://www.webpronews.com/anthropic-ceo-dario-amodei-calls-ai-backlash-a-crisis-of-trust-as-power-demands-ignite-public-fury/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-08-17 12:52:04",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "311d61694288a37a",
-      "headline": "Apple With Alibaba Has Built AI Only For China",
-      "url": "http://www.thelowdownblog.com/2026/08/apple-with-alibaba-has-built-ai-only.html",
-      "source": "The Lowdown Blog",
-      "country": "Both",
-      "publishedAt": "2026-08-17 12:51:49",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "def690308ca52b03",
-      "headline": "Meta and Google just got beaten by an AI giant you might not expect",
-      "url": "https://us.headtopics.com/news/meta-and-google-just-got-beaten-by-an-ai-giant-you-might-86684939",
-      "source": "Headtopics",
-      "country": "Both",
-      "publishedAt": "2026-08-16 15:36:43",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "6236be94c1bae7d3",
-      "headline": "Rogue AI aren’t science fiction anymore",
-      "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
-      "source": "The Verge",
-      "country": "US",
-      "publishedAt": "2026-08-16 12:00:00",
-      "relevanceScore": 0.15
     }
   ]
 }
