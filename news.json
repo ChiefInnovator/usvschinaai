@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-08-26T04:21:25.724588+00:00",
+  "lastUpdated": "2026-08-27T05:48:52.431266+00:00",
   "items": [
+    {
+      "id": "aef59677252f2f04",
+      "headline": "West Virginia looks to AI data center boom to help eliminate state income tax",
+      "url": "https://katv.com/news/nation-world/west-virginia-looks-to-ai-data-center-boom-to-help-eliminate-state-income-tax-artificial-intelligence-steve-moore-technology-google-amazon-chatgpt-openai-economy-iran-federal-reserve-interest-rates",
+      "source": "Katv",
+      "country": "US",
+      "publishedAt": "2026-08-26 17:12:28",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "2eff80336b049319",
+      "headline": "Tesla Optimus vs. BYD Xiao Di vs. LG CLOiD: Nvidia enters AI robot segment",
+      "url": "https://www.notebookcheck.net/Tesla-Optimus-vs-BYD-Xiao-Di-vs-LG-CLOiD-Nvidia-enters-AI-robot-segment.1379260.0.html",
+      "source": "Notebookcheck",
+      "country": "US",
+      "publishedAt": "2026-08-26 15:26:00",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5f36040a0b6e83e2",
+      "headline": "NVIDIA Raises AI Chip Prices, Forcing Silicon Valley to Rethink AI Strategy",
+      "url": "https://www.analyticsinsight.net/news/nvidia-raises-ai-chip-prices-forcing-silicon-valley-to-rethink-ai-strategy",
+      "source": "Analytics And Insight",
+      "country": "Both",
+      "publishedAt": "2026-08-26 13:15:00",
+      "relevanceScore": 0.54
+    },
     {
       "id": "fef01040d11f0563",
       "headline": "Apple targets developer AI performance gains with new M6 Mac Mini and M5 Ultra Mac Studio devices",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-18 12:30:00",
       "relevanceScore": 0.08
-    },
-    {
-      "id": "2a3168930fe7162e",
-      "headline": "Critical Comparison: Valens Semiconductor (NYSE:VLN) vs. Ambiq Micro (NYSE:AMBQ)",
-      "url": "https://www.thelincolnianonline.com/2026/08/18/critical-comparison-valens-semiconductor-nysevln-vs-ambiq-micro-nyseambq.html",
-      "source": "The Lincolnian Online",
-      "country": "US",
-      "publishedAt": "2026-08-18 12:29:03",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0d4af817a9268b37",
-      "headline": "Artificial intelligence race between US, China at pivotal point",
-      "url": "https://magicvalley.com/article_388a9156-1e95-56d4-a14e-344760297e66.html",
-      "source": "Magic Valley",
-      "country": "Both",
-      "publishedAt": "2026-08-18 12:17:09",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "bbcd22a20822ddcc",
-      "headline": "DeepSeek’s Peak-Hour Pricing Betrays Where Its Users Really Live, Calming US Fears of a China AI Takeover, Even As...",
-      "url": "https://wccftech.com/deepseeks-peak-hour-pricing-betrays-where-its-users-really-live-calming-us-fears-of-a-china-ai-takeover-even-as-alibabas-qwen-models-bury-meta-on-hugging-face/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-08-17 15:07:00",
-      "relevanceScore": 0.83
     }
   ]
 }
