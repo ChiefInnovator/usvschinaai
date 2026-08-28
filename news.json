@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-08-27T05:48:52.431266+00:00",
+  "lastUpdated": "2026-08-28T06:41:31.227648+00:00",
   "items": [
+    {
+      "id": "494c6c4815110d6a",
+      "headline": "Tesla ends in-house wrap service that always seemed like a short-term program",
+      "url": "https://www.teslarati.com/tesla-ends-in-house-wrap-service/",
+      "source": "Teslarati",
+      "country": "Both",
+      "publishedAt": "2026-08-27 17:00:26",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "3e772d37855e81f3",
+      "headline": "For global AI governance, the US and China must cooperate while competing",
+      "url": "https://thehill.com/homenews/6052665-us-china-ai-collaboration/",
+      "source": "The Hill",
+      "country": "Both",
+      "publishedAt": "2026-08-27 16:30:00",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "cc97001c9930f819",
+      "headline": "ARGENTINA: The Ai Extraction Zone",
+      "url": "https://beforeitsnews.com/alternative/2026/08/argentina-the-ai-extraction-zone-3868708.html",
+      "source": "Beforeitsnews",
+      "country": "US",
+      "publishedAt": "2026-08-27 15:49:04",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "5ae66a76b5fa9d85",
+      "headline": "Hong Kong launches AI training for all",
+      "url": "http://www.hongkongherald.com/news/279269118/hong-kong-launches-ai-training-for-all",
+      "source": "Hong Kong Herald",
+      "country": "US",
+      "publishedAt": "2026-08-27 15:45:33",
+      "relevanceScore": 0.08
+    },
     {
       "id": "aef59677252f2f04",
       "headline": "West Virginia looks to AI data center boom to help eliminate state income tax",
@@ -144,42 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-19 15:38:55",
       "relevanceScore": 0.16
-    },
-    {
-      "id": "8f6623fd06f00a7a",
-      "headline": "EU Launches New Brussels Team to Enforce AI Act Against Deepfakes and Hacking",
-      "url": "https://www.itsecuritynews.info/eu-launches-new-brussels-team-to-enforce-ai-act-against-deepfakes-and-hacking/",
-      "source": "It Security News",
-      "country": "US",
-      "publishedAt": "2026-08-18 15:31:22",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "bc1016a5fecaefec",
-      "headline": "AP Technology SummaryBrief at 10:21 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-10-21-a-m-edt/article_51452136-6f9c-5937-b1e2-df8e9fbc44eb.html",
-      "source": "Postregister",
-      "country": "US",
-      "publishedAt": "2026-08-18 14:21:41",
-      "relevanceScore": 0.15
-    },
-    {
-      "id": "cc4ef08eb321f6f5",
-      "headline": "OpenAI’s Greg Brockman: Z.ai’s GLM-5.3 likely to “significantly accelerate the threat landscape”",
-      "url": "https://thenewstack.io/openai-open-weight-glm-5-3/",
-      "source": "The New Stack",
-      "country": "Both",
-      "publishedAt": "2026-08-18 13:10:15",
-      "relevanceScore": 0.23
-    },
-    {
-      "id": "5724cb8ac8d8ae6f",
-      "headline": "Ramaco Resources, Inc. Announces the Entry into a Non-Binding Memorandum of Understanding with Bedrock Semiconductor...",
-      "url": "https://www.prnewswire.com/news-releases/ramaco-resources-inc-announces-the-entry-into-a-non-binding-memorandum-of-understanding-with-bedrock-semiconductor-inc-302854067.html",
-      "source": "Pr Newswire",
-      "country": "US",
-      "publishedAt": "2026-08-18 12:30:00",
-      "relevanceScore": 0.08
     }
   ]
 }
