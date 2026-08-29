@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-08-28T06:41:31.227648+00:00",
+  "lastUpdated": "2026-08-29T04:11:55.024557+00:00",
   "items": [
+    {
+      "id": "0d222433fa20f390",
+      "headline": "Plasma 'breakthrough' could advance fusion reactor isotope enrichment",
+      "url": "https://us.headtopics.com/news/plasma-breakthrough-could-advance-fusion-reactor-isotope-87140993",
+      "source": "Headtopics",
+      "country": "US",
+      "publishedAt": "2026-08-28 16:07:09",
+      "relevanceScore": 0.08
+    },
+    {
+      "id": "76b20960191e170d",
+      "headline": "New US tariffs threaten to make PCs, game consoles, and data centers more expensive, again",
+      "url": "https://www.techspot.com/news/113650-new-us-tariffs-threaten-make-pcs-game-consoles.html",
+      "source": "Techspot",
+      "country": "US",
+      "publishedAt": "2026-08-28 12:47:00",
+      "relevanceScore": 0.08
+    },
     {
       "id": "494c6c4815110d6a",
       "headline": "Tesla ends in-house wrap service that always seemed like a short-term program",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-08-20 15:23:55",
       "relevanceScore": 0.15
-    },
-    {
-      "id": "b6e7b12a0f82839f",
-      "headline": "This obscure FTC proposal exposes the widening fight over what AI can say",
-      "url": "https://www.fastcompany.com/91592355/this-obscure-ftc-proposal-exposes-the-widening-fight-over-what-ai-can-say",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-08-20 13:30:04",
-      "relevanceScore": 0.32
-    },
-    {
-      "id": "63e957f81c0e2cce",
-      "headline": "Forge Nano Breaks Ground on “America’s Battery Gigafactory” to Strengthen U.S. Defense Supply Chains",
-      "url": "https://www.financialcontent.com/article/gnwcq-2026-8-19-forge-nano-breaks-ground-on-americas-battery-gigafactory-to-strengthen-us-defense-supply-chains",
-      "source": "Financialcontent",
-      "country": "US",
-      "publishedAt": "2026-08-19 15:38:55",
-      "relevanceScore": 0.16
     }
   ]
 }
