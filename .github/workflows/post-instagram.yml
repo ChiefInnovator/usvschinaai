@@ -34,7 +34,10 @@ jobs:
 
       - name: Verify image is accessible
         run: |
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://usvschina.ai/ig-image.png")
+          # `|| echo "000"` keeps the substitution from killing the step under
+          # bash -e when curl itself fails (e.g. DNS down) — without it the
+          # graceful image_ready=false path below is unreachable.
+          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://usvschina.ai/ig-image.png" || echo "000")
           if [ "$HTTP_STATUS" != "200" ]; then
             echo "WARNING: ig-image.png not accessible (HTTP $HTTP_STATUS)"
             echo "image_ready=false" >> $GITHUB_OUTPUT

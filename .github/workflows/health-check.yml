@@ -1,0 +1,54 @@
+name: Site Health Check
+
+# Uptime + data-freshness monitor. A failing run triggers GitHub's normal
+# workflow-failure email — the alert channel that was missing during the
+# Aug 16-29 outage, when the site was down for 13 days while every deploy
+# workflow reported green.
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Site reachable (custom domain)
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://usvschina.ai/ || echo "000")
+          echo "usvschina.ai -> HTTP $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::error::usvschina.ai unreachable (HTTP $STATUS) — check DNS / Azure subscription billing state"
+            exit 1
+          fi
+
+      - name: Site reachable (SWA default hostname)
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" --max-time 30 https://orange-desert-08276c810.4.azurestaticapps.net/ || echo "000")
+          echo "SWA default host -> HTTP $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "::error::Static Web App default hostname unreachable (HTTP $STATUS)"
+            exit 1
+          fi
+
+      - name: Data freshness (scrape ran within 30h)
+        run: |
+          curl -sf --max-time 30 https://usvschina.ai/current.json -o current.json \
+            || curl -sf --max-time 30 https://usvschina.ai/models.json -o current.json
+          python3 - <<'EOF'
+          import json, sys
+          from datetime import datetime, timezone, timedelta
+          with open("current.json") as f:
+              data = json.load(f)
+          ts = data["history"][0]["timestamp"]
+          # Timestamps look like 2026-08-29T07:44:51+00:00 — fromisoformat handles them.
+          dt = datetime.fromisoformat(ts)
+          if dt.tzinfo is None:
+              dt = dt.replace(tzinfo=timezone.utc)
+          age = datetime.now(timezone.utc) - dt
+          print(f"latest snapshot: {ts} (age {age})")
+          if age > timedelta(hours=30):
+              print(f"::error::Leaderboard data is stale ({age} old) — daily scrape may be failing silently")
+              sys.exit(1)
+          EOF
