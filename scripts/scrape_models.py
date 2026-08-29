@@ -59,10 +59,12 @@ MISSING_VALUE_MARKERS = {"", "-", "\u2013", "\u2014", "n/a", "N/A", "null", "Non
 # know its documented range.
 BENCHMARK_KNOWN_RANGES: Dict[str, Tuple[float, float]] = {
     # CodeArena = Chatbot Arena / LMArena coding Elo. Starting Elo is 1000 per
-    # LMSYS methodology; top frontier models currently sit around 1500–2000
-    # (Apr 2026 snapshot). (1000, 2000) anchors on the published floor and a
-    # defensible ceiling so the scale doesn't drift as new models enter.
-    "CodeArena": (1000.0, 2000.0),
+    # LMSYS methodology; top frontier models sit around 2600-2700 as of
+    # Aug 2026 (the old 2000 ceiling was exceeded, which pushed normalized
+    # scores past 100 — caught by validate_models.py). Normalized values are
+    # additionally clamped to [0, 100] in calculate_derived_scores so future
+    # ceiling drift degrades gracefully instead of amplifying.
+    "CodeArena": (1000.0, 2800.0),
 }
 
 
@@ -74,7 +76,22 @@ BENCHMARK_NAME_ALIASES: Dict[str, str] = {
     # canonicalized form -> shared canonical token
     "humanityslastexam": "hle",
     "hle": "hle",
+    # MRCRv2 appears as "MRCRv2" on the leaderboard table and
+    # "MRCRv2 (8-needle)" on detail pages — same benchmark, and without this
+    # alias both columns land in the snapshot and can double-count in Pass 2.
+    "mrcrv2": "mrcrv2",
+    "mrcrv28needle": "mrcrv2",
 }
+
+# Detail pages occasionally leak non-benchmark artifacts (e.g. a "GDP.pdf"
+# link label) into the flight payload. Reject anything that looks like a
+# filename before it becomes a benchmark column.
+_ARTIFACT_HEADER_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
+
+
+def is_artifact_header(name: str) -> bool:
+    """Whether a detail-page benchmark name is a scraped file artifact."""
+    return bool(_ARTIFACT_HEADER_RE.search(name.strip()))
 
 
 def canonicalize_benchmark_name(name: str) -> str:
@@ -160,6 +177,19 @@ def parse_to_number(value: str) -> float:
         return float(cleaned)
     except ValueError:
         return 0.0
+
+
+def entry_has_pricing(entry: "LeaderboardEntry") -> bool:
+    """Whether a model has public pricing (input + output cost > 0).
+
+    Unpriced models get Value = 0 by construction; including that 0 in the
+    Value min/max cohort would make "no public pricing" indistinguishable from
+    "worst value for money" and drag the normalization floor down for everyone
+    else. They are excluded from the bounds and clamp to 0 instead.
+    """
+    cost_in = parse_to_number(entry.columns.get("Input$/M") or entry.columns.get("Input $/M", "0"))
+    cost_out = parse_to_number(entry.columns.get("Output$/M") or entry.columns.get("Output $/M", "0"))
+    return (cost_in + cost_out) > 0
 
 
 def resolve_benchmark_range(
@@ -248,11 +278,13 @@ def calculate_derived_scores(
 
         score = parse_to_number(raw_val)
 
-        # Normalize benchmark score to 0-100 if min/max available
+        # Normalize benchmark score to 0-100 if min/max available. Clamp so a
+        # fixed known range whose ceiling has drifted (e.g. CodeArena Elo
+        # passing the old 2000 cap) can't push a score past 100.
         if b in benchmark_min_max:
             min_b, max_b = benchmark_min_max[b]
             if max_b > min_b:
-                score = ((score - min_b) / (max_b - min_b)) * 100
+                score = max(0.0, min(100.0, ((score - min_b) / (max_b - min_b)) * 100))
 
         total_weighted += score * weight
         weight_sum += weight
@@ -273,7 +305,10 @@ def calculate_derived_scores(
         norm_avg_iq = avg_iq
     
     if min_value is not None and max_value is not None and max_value > min_value:
-        norm_value = ((value - min_value) / (max_value - min_value)) * 100
+        # Clamp at 0: unpriced models (value 0) are excluded from the min/max
+        # cohort, so their raw value can sit below min_value. Without the clamp
+        # they'd get a negative Value contribution instead of simply zero.
+        norm_value = max(0.0, ((value - min_value) / (max_value - min_value)) * 100)
     else:
         norm_value = value
     
@@ -767,6 +802,9 @@ def enrich_with_metadata(
             # Extract benchmark scores from the embedded flight payload
             detail_scores = extract_detail_benchmarks(page)
             for detail_name, detail_value in detail_scores.items():
+                if is_artifact_header(detail_name):
+                    print(f"    -- ignoring artifact header: {detail_name!r}")
+                    continue
                 canon = canonicalize_benchmark_name(detail_name)
                 if not canon:
                     continue
@@ -922,7 +960,17 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
     with open(models_path, 'w') as f:
         json.dump(data, f, indent=2)
 
-    print(f"\n✅ Successfully prepended entry to models.json")
+    # Also emit current.json: identical top-level shape but history truncated
+    # to the latest entry only. index.html fetches this (~40 KB) instead of the
+    # full multi-MB archive; models.json remains the complete dataset that the
+    # schema.org Dataset block and history.html point at.
+    current = {k: v for k, v in data.items() if k != "history"}
+    current["history"] = data["history"][:1]
+    current_path = models_path.parent / "current.json"
+    with open(current_path, 'w') as f:
+        json.dump(current, f, indent=2)
+
+    print(f"\n✅ Successfully prepended entry to models.json (+ wrote current.json)")
 
 
 # URLs whose <lastmod> should get bumped every time the daily scraper runs.
@@ -1161,7 +1209,10 @@ def run_scraper(args):
                 for e in all_entries:
                     scores = calculate_derived_scores(e, benchmark_headers, participation_counts, max_participation, benchmark_min_max=benchmark_min_max)
                     avg_iq_values.append(scores["avgIq"])
-                    value_values.append(scores["value"])
+                    # Unpriced models are excluded from the Value bounds — see
+                    # entry_has_pricing.
+                    if entry_has_pricing(e):
+                        value_values.append(scores["value"])
                 
                 min_avg_iq = min(avg_iq_values) if avg_iq_values else 0
                 max_avg_iq = max(avg_iq_values) if avg_iq_values else 1
@@ -1500,7 +1551,10 @@ def run_scraper(args):
                             qualified_benchmarks=qset,
                         )
                         iqs.append(s["avgIq"])
-                        vals.append(s["value"])
+                        # Unpriced models are excluded from the Value bounds —
+                        # see entry_has_pricing.
+                        if entry_has_pricing(e):
+                            vals.append(s["value"])
                     miq, maq = (min(iqs), max(iqs)) if iqs else (0.0, 1.0)
                     mv, mxv = (min(vals), max(vals)) if vals else (0.0, 1.0)
 

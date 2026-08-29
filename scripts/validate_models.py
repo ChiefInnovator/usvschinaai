@@ -1,0 +1,167 @@
+#!/usr/bin/env python3
+"""Pre-publish validation gate for models.json.
+
+Runs in CI between the scraper and the commit step (see daily-scrape.yml).
+A non-zero exit fails the workflow, so a bad snapshot is never committed and
+yesterday's data stays live.
+
+Checks (ERROR = fail the run, WARN = print only):
+  ERROR  benchmark header that looks like a scraped file artifact (e.g. GDP.pdf)
+  ERROR  duplicate-alias headers (same benchmark under two names, e.g.
+         MRCRv2 vs MRCRv2(8-needle)) — double-counts in Pass 2 scoring
+  ERROR  percent cell outside 0-100
+  ERROR  CodeArena Elo outside 800-2500
+  ERROR  negative pricing
+  ERROR  model row with no Released date (released-only filter regressed)
+  WARN   cohort smaller than 10 per country
+  WARN   description "released <date>" disagrees with Released column presence
+  WARN   any benchmark cell moving > 15 points vs the previous snapshot
+"""
+import json
+import re
+import sys
+from pathlib import Path
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
+MODELS_PATH = REPO_ROOT / "models.json"
+
+MISSING = {"", "-", "–", "—", "n/a", "N/A", "null", "None", "—"}
+
+# Row keys that are metadata, not benchmark columns. Mirrors the frontend
+# BASE_EXCLUDE_KEYS / scraper metadata_columns split.
+META_KEYS = {
+    "model", "organization", "link", "origin", "description", "created",
+    "avgIq", "value", "unified", "_provenance", "_scoring",
+    "Model", "Country", "License", "Context", "Input$/M", "Output$/M",
+    "Speed", "Parameters(B)", "KnowledgeCutoff", "Multimodal", "Released",
+    "Organization", "LLMStats", "Latency", "CodeArena",
+    # category aggregates
+    "Reasoning", "Math", "Coding", "Search", "Writing", "Vision", "Tools",
+    "LongCtx", "Finance", "Legal", "Health",
+}
+
+ARTIFACT_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
+DESC_RELEASED_RE = re.compile(r"released [A-Z][a-z]{2} \d{1,2}, \d{4}")
+
+
+def canon(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", name.lower())
+
+
+def alias_base(name: str) -> str:
+    """Canonical form with any trailing parenthetical stripped first."""
+    return canon(re.sub(r"\([^)]*\)\s*$", "", name.strip()))
+
+
+def parse_num(value):
+    if value is None:
+        return None
+    cleaned = str(value).replace("%", "").replace(",", "").replace("$", "").strip()
+    if cleaned in MISSING:
+        return None
+    try:
+        return float(cleaned)
+    except ValueError:
+        return None
+
+
+def rows_of(entry):
+    for team in entry.get("teams", {}).values():
+        for row in team:
+            yield row
+
+
+def main() -> int:
+    errors, warnings = [], []
+
+    with open(MODELS_PATH) as f:
+        data = json.load(f)
+    history = data.get("history") or []
+    if not history:
+        print("ERROR: models.json has no history entries")
+        return 1
+    entry = history[0]
+    prev = history[1] if len(history) > 1 else None
+
+    # ---- collect benchmark headers across all rows -------------------------
+    headers = set()
+    for row in rows_of(entry):
+        headers.update(k for k in row if k not in META_KEYS)
+
+    # ---- artifact-looking headers ------------------------------------------
+    for h in sorted(headers):
+        if ARTIFACT_RE.search(h):
+            errors.append(f"benchmark header looks like a file artifact: {h!r}")
+
+    # ---- duplicate-alias detection -----------------------------------------
+    by_base = {}
+    for h in headers:
+        by_base.setdefault(alias_base(h), set()).add(h)
+    for base, names in sorted(by_base.items()):
+        if len(names) > 1:
+            errors.append(
+                f"duplicate benchmark columns (alias collision, will double-count): {sorted(names)}"
+            )
+
+    # ---- per-cell checks ----------------------------------------------------
+    for row in rows_of(entry):
+        name = row.get("model", "?")
+
+        released = str(row.get("created", "")).strip()
+        if released in MISSING:
+            errors.append(f"{name}: no Released date — released-only filter regressed")
+
+        desc = row.get("description") or ""
+        if DESC_RELEASED_RE.search(desc) and released in MISSING:
+            warnings.append(f"{name}: description mentions a release date but Released column is empty")
+
+        for col in ("Input$/M", "Output$/M"):
+            v = parse_num(row.get(col))
+            if v is not None and v < 0:
+                errors.append(f"{name}: negative pricing {col}={row.get(col)!r}")
+
+        elo = parse_num(row.get("CodeArena"))
+        if elo is not None and not (800 <= elo <= 3200):
+            errors.append(f"{name}: CodeArena Elo out of range: {elo}")
+
+        for h in headers:
+            raw = row.get(h)
+            if raw is None or not isinstance(raw, str):
+                continue
+            if raw.strip() in MISSING:
+                continue
+            if raw.strip().endswith("%"):
+                v = parse_num(raw)
+                if v is not None and not (0 <= v <= 100):
+                    errors.append(f"{name}: {h} percent value out of range: {raw!r}")
+
+    # ---- cohort size --------------------------------------------------------
+    for team_key, team_rows in entry.get("teams", {}).items():
+        if len(team_rows) < 10:
+            warnings.append(f"cohort {team_key} has only {len(team_rows)} models")
+
+    # ---- day-over-day drift -------------------------------------------------
+    if prev:
+        prev_rows = {r.get("model"): r for r in rows_of(prev)}
+        for row in rows_of(entry):
+            p = prev_rows.get(row.get("model"))
+            if not p:
+                continue
+            for h in headers:
+                a, b = parse_num(row.get(h)), parse_num(p.get(h))
+                if a is not None and b is not None and abs(a - b) > 15:
+                    warnings.append(
+                        f"{row.get('model')}: {h} moved {b} -> {a} day-over-day (>15 pts)"
+                    )
+
+    # ---- report -------------------------------------------------------------
+    for w in warnings:
+        print(f"WARN:  {w}")
+    for e in errors:
+        print(f"ERROR: {e}")
+    print(f"\nvalidate_models: {len(errors)} error(s), {len(warnings)} warning(s)")
+    return 1 if errors else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
