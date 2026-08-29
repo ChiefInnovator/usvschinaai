@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-08-29T04:11:55.024557+00:00",
+  "lastUpdated": "2026-08-29T07:44:51.838659+00:00",
   "items": [
+    {
+      "id": "dd213a704c54c42b",
+      "headline": "Trump Admin Sounds Alarm On Global Chinese AI Expansion",
+      "url": "https://ijr.com/article/trump-admin-ai-coalition-china-huawei",
+      "source": "Ijr",
+      "country": "Both",
+      "publishedAt": "2026-08-28 18:04:34",
+      "relevanceScore": 0.08
+    },
     {
       "id": "0d222433fa20f390",
       "headline": "Plasma 'breakthrough' could advance fusion reactor isotope enrichment",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-08-21 10:00:00",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "ddf31010d0e10774",
-      "headline": "Future Fitbit Wearable Teased In Google Pixel Family Image",
-      "url": "https://www.forbes.com/sites/andrewwilliams/2026/08/20/future-fitbit-wearable-teased-in-google-pixel-family-image/",
-      "source": "Forbes",
-      "country": "US",
-      "publishedAt": "2026-08-20 15:23:55",
-      "relevanceScore": 0.15
     }
   ]
 }
