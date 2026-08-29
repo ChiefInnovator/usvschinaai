@@ -1,42 +1,6 @@
 {
-  "lastUpdated": "2026-08-29T07:44:51.838659+00:00",
+  "lastUpdated": "2026-08-29T11:27:12.917183+00:00",
   "items": [
-    {
-      "id": "dd213a704c54c42b",
-      "headline": "Trump Admin Sounds Alarm On Global Chinese AI Expansion",
-      "url": "https://ijr.com/article/trump-admin-ai-coalition-china-huawei",
-      "source": "Ijr",
-      "country": "Both",
-      "publishedAt": "2026-08-28 18:04:34",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "0d222433fa20f390",
-      "headline": "Plasma 'breakthrough' could advance fusion reactor isotope enrichment",
-      "url": "https://us.headtopics.com/news/plasma-breakthrough-could-advance-fusion-reactor-isotope-87140993",
-      "source": "Headtopics",
-      "country": "US",
-      "publishedAt": "2026-08-28 16:07:09",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "76b20960191e170d",
-      "headline": "New US tariffs threaten to make PCs, game consoles, and data centers more expensive, again",
-      "url": "https://www.techspot.com/news/113650-new-us-tariffs-threaten-make-pcs-game-consoles.html",
-      "source": "Techspot",
-      "country": "US",
-      "publishedAt": "2026-08-28 12:47:00",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "494c6c4815110d6a",
-      "headline": "Tesla ends in-house wrap service that always seemed like a short-term program",
-      "url": "https://www.teslarati.com/tesla-ends-in-house-wrap-service/",
-      "source": "Teslarati",
-      "country": "Both",
-      "publishedAt": "2026-08-27 17:00:26",
-      "relevanceScore": 0.08
-    },
     {
       "id": "3e772d37855e81f3",
       "headline": "For global AI governance, the US and China must cooperate while competing",
@@ -45,42 +9,6 @@
       "country": "Both",
       "publishedAt": "2026-08-27 16:30:00",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "cc97001c9930f819",
-      "headline": "ARGENTINA: The Ai Extraction Zone",
-      "url": "https://beforeitsnews.com/alternative/2026/08/argentina-the-ai-extraction-zone-3868708.html",
-      "source": "Beforeitsnews",
-      "country": "US",
-      "publishedAt": "2026-08-27 15:49:04",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "5ae66a76b5fa9d85",
-      "headline": "Hong Kong launches AI training for all",
-      "url": "http://www.hongkongherald.com/news/279269118/hong-kong-launches-ai-training-for-all",
-      "source": "Hong Kong Herald",
-      "country": "US",
-      "publishedAt": "2026-08-27 15:45:33",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "aef59677252f2f04",
-      "headline": "West Virginia looks to AI data center boom to help eliminate state income tax",
-      "url": "https://katv.com/news/nation-world/west-virginia-looks-to-ai-data-center-boom-to-help-eliminate-state-income-tax-artificial-intelligence-steve-moore-technology-google-amazon-chatgpt-openai-economy-iran-federal-reserve-interest-rates",
-      "source": "Katv",
-      "country": "US",
-      "publishedAt": "2026-08-26 17:12:28",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "2eff80336b049319",
-      "headline": "Tesla Optimus vs. BYD Xiao Di vs. LG CLOiD: Nvidia enters AI robot segment",
-      "url": "https://www.notebookcheck.net/Tesla-Optimus-vs-BYD-Xiao-Di-vs-LG-CLOiD-Nvidia-enters-AI-robot-segment.1379260.0.html",
-      "source": "Notebookcheck",
-      "country": "US",
-      "publishedAt": "2026-08-26 15:26:00",
-      "relevanceScore": 0.08
     },
     {
       "id": "5f36040a0b6e83e2",
@@ -92,33 +20,6 @@
       "relevanceScore": 0.54
     },
     {
-      "id": "fef01040d11f0563",
-      "headline": "Apple targets developer AI performance gains with new M6 Mac Mini and M5 Ultra Mac Studio devices",
-      "url": "https://www.itpro.com/software/apple/apple-targets-developer-ai-performance-gains-with-new-m6-mac-mini-and-m5-ultra-mac-studio-devices",
-      "source": "Itpro",
-      "country": "US",
-      "publishedAt": "2026-08-25 15:15:02",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "7247a85875b2ebdd",
-      "headline": "AP Technology SummaryBrief at 8:50 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-8-50-a-m-edt/article_80f71176-a1de-51ab-ab8c-9fb48ef63d71.html",
-      "source": "Postregister",
-      "country": "CN",
-      "publishedAt": "2026-08-25 12:50:17",
-      "relevanceScore": 0.08
-    },
-    {
-      "id": "1be60fe837ba9e89",
-      "headline": "AP Technology SummaryBrief at 7:22 a.m. EDT",
-      "url": "https://www.postregister.com/businessreport/business/ap-technology-summarybrief-at-7-22-a-m-edt/article_80f71176-a1de-51ab-ab8c-9fb48ef63d71.html",
-      "source": "Postregister",
-      "country": "CN",
-      "publishedAt": "2026-08-25 11:22:23",
-      "relevanceScore": 0.08
-    },
-    {
       "id": "80a8e31bf116acf3",
       "headline": "Meta goes on trial as Silicon Valley faces a growing backlash",
       "url": "https://www.theguardian.com/global/2026/aug/25/meta-trial-silicon-valley",
@@ -126,15 +27,6 @@
       "country": "US",
       "publishedAt": "2026-08-25 11:21:56",
       "relevanceScore": 0.45
-    },
-    {
-      "id": "1ea41a26dff7a803",
-      "headline": "Unbreakable Shield: Why Taiwan’s Chip Expertise Cannot Be Cloned",
-      "url": "https://cepa.org/article/unbreakable-shield-why-taiwans-chip-expertise-cannot-be-cloned/",
-      "source": "Cepa",
-      "country": "US",
-      "publishedAt": "2026-08-24 13:58:44",
-      "relevanceScore": 0.08
     },
     {
       "id": "442aa8b7e4d44545",
