@@ -130,6 +130,11 @@ jobs:
           git add data/ai_fill_history.jsonl 2>/dev/null || true
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
+          # The scrape takes ~45 min; if anything was pushed to main in that
+          # window, a plain push is rejected. Merge (never rebase) the remote
+          # first — data files are only written by this workflow, so the merge
+          # is clean unless two scrape runs overlap, which should fail loudly.
+          git pull --no-rebase https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
       
       - name: Notify success
