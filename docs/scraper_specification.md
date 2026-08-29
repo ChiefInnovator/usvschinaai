@@ -137,6 +137,10 @@ The gap-filling pass is gated by:
 
 See [ai_gap_filling.md](ai_gap_filling.md) for the full specification, including the §5 useless-work filters (origin lock, locale suffix, vendor-internal, hopeless tier), §6 tiering (Tier 1 = one fill from qualifying, Tier 2 = within reach, Tier 3 = permanently off), §10 caching, §11 audit log, and §12 confidence-threshold validation.
 
+### Fresh source federation
+
+The gap-filling pass can only enrich models and benchmark columns that llm-stats already exposed. New launch-day models and launch-page benchmark tables require an upstream ingestion lane. See [fresh_model_statistics_federation.md](fresh_model_statistics_federation.md) for the proposed source-federation layer: provider release adapters, benchmark-owner adapters, evidence logs, reconciliation, provisional rows, and a four-hour fresh-release scan.
+
 ### Benchmark range resolution
 
 For each benchmark that participates in scoring, the normalization range
