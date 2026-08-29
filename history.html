@@ -62,8 +62,8 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
         .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
@@ -307,7 +307,7 @@
                 }
             } catch (error) {
                 console.error('Error:', error);
-                container.innerHTML = '<div class="text-center text-red-400 py-12">Failed to load history data. Please ensure you are running on a local server.</div>';
+                container.innerHTML = '<div class="text-center text-red-400 py-12">Couldn\'t load history data. <button type="button" onclick="fetchHistory()" class="text-blue-400 hover:underline">Retry</button></div>';
             }
         }
 
@@ -763,6 +763,13 @@
             loadNewsMarquee();
         }
     })();
+    </script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
     </script>
 </body>
 </html>

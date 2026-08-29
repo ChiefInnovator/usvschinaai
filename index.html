@@ -69,9 +69,9 @@
     }
     </script>
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
         .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
@@ -438,7 +438,7 @@
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Value (efficiency)</h4>
                     <p class="mb-4">Value = AvgIQ ÷ (Input $/M + Output $/M). Lower cost with higher capability increases Value.</p>
-                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified.</p>
+                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified. Models without public pricing show — and are excluded from Value normalization rather than scored as zero-value.</p>
 
                     <h4 class="text-white font-bold mb-2 text-lg">National Score</h4>
                     <p class="mb-4">For USA and China, we sum the Unified scores of that nation’s models inside the global Top 10.</p>
@@ -462,6 +462,7 @@
             <a href="about.html" class="hover:text-white transition">About</a>
             <a href="privacy.html" class="hover:text-white transition">Privacy</a>
             <a href="terms.html" class="hover:text-white transition">Terms</a>
+            <span id="install-app-slot"></span>
         </div>
     </footer>
 
@@ -478,7 +479,7 @@
             'BrowseComp': 'BrowseComp',
             'ARC-AGIv2': 'ARC-AGI v2',
             'HLE': 'HLE',
-            'MMMLU': 'MMLU-Pro',
+            'MMMLU': 'MMMLU',
             'MMLU-Pro': 'MMLU-Pro',
             'LiveCodeBench': 'LiveCodeBench',
             'SWE-benchVerified': 'SWE-Bench Verified',
@@ -505,10 +506,15 @@
 
         const formatNumber = (num, decimals = 1) => Number(num || 0).toFixed(decimals);
         const formatUnified = (num) => Number(num || 0).toFixed(2);
+        // Escape upstream strings (model names, orgs, descriptions come from
+        // scraped llm-stats data) before interpolating into innerHTML.
+        const esc = (str) => String(str ?? '').replace(/[&<>"']/g, (c) => ({
+            '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+        }[c]));
         const formatUpdatedTimestamp = (ts) => {
             if (!ts) return '';
             const d = new Date(ts);
-            if (Number.isNaN(d)) return ts;
+            if (Number.isNaN(d.getTime())) return ts;
             const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             const now = new Date();
             const diffDays = Math.max(0, Math.round((now - d) / (1000 * 60 * 60 * 24)));
@@ -632,8 +638,8 @@
                     <tr class="hover:bg-white/5 transition">
                         <td class="p-3 font-bold">${rankDisplay}</td>
                         <td class="p-3">
-                            <a href="${model.link}" target="_blank" class="font-semibold hover:text-blue-400 transition">
-                                ${model.name}
+                            <a href="${esc(model.link)}" target="_blank" class="font-semibold hover:text-blue-400 transition">
+                                ${esc(model.name)}
                             </a>
                         </td>
                         <td class="p-3">
@@ -662,13 +668,19 @@
 
         async function fetchModels() {
             try {
-                const response = await fetch('models.json');
+                // current.json is the latest snapshot only (~40 KB); the full
+                // multi-MB archive (models.json) is only a fallback for the
+                // window before the first scraper run that emits current.json.
+                let response = await fetch('current.json');
+                if (!response.ok) response = await fetch('models.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
                 appData = await response.json();
                 const history = Array.isArray(appData.history) ? appData.history : [];
                 if (!history.length) throw new Error('No history entries in models.json');
                 currentEntry = history[0];
                 models = normalizeModelsFromEntry(currentEntry);
                 populateStaticContent();
+                renderStaleBanner();
                 calculateTotals();
                 renderTable();
                 renderMatrix();
@@ -680,7 +692,31 @@
                 }
             } catch (error) {
                 console.error('Error fetching models:', error);
+                const tbody = document.getElementById('models-table-body');
+                if (tbody) {
+                    tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-slate-400">' +
+                        'Couldn\'t load leaderboard data. ' +
+                        '<button type="button" onclick="fetchModels()" class="text-blue-400 hover:underline">Retry</button>' +
+                        '</td></tr>';
+                }
+                const subtitle = document.getElementById('page-subtitle');
+                if (subtitle) subtitle.textContent = 'Data temporarily unavailable';
             }
+        }
+
+        // If the newest snapshot is older than 26h, the daily scrape has
+        // missed a cycle — say so instead of presenting stale data as live.
+        function renderStaleBanner() {
+            if (!currentEntry?.timestamp) return;
+            const age = Date.now() - new Date(currentEntry.timestamp).getTime();
+            if (Number.isNaN(age) || age < 26 * 60 * 60 * 1000) return;
+            const subtitle = document.getElementById('page-subtitle');
+            if (!subtitle) return;
+            const days = Math.round(age / (24 * 60 * 60 * 1000));
+            const warn = document.createElement('div');
+            warn.className = 'mt-2 inline-block text-xs text-amber-400 bg-amber-500/10 border border-amber-500/30 rounded-full px-3 py-1';
+            warn.textContent = `⚠ Data is ${days} day${days === 1 ? '' : 's'} old — the daily update may be delayed`;
+            subtitle.insertAdjacentElement('afterend', warn);
         }
 
         function populateStaticContent() {
@@ -878,8 +914,13 @@
             displayModels.sort((a, b) => {
                 const valA = a[currentSort.key];
                 const valB = b[currentSort.key];
-                if (currentSort.direction === 'asc') return valA > valB ? 1 : -1;
-                return valA < valB ? 1 : -1;
+                let cmp;
+                if (typeof valA === 'string' || typeof valB === 'string') {
+                    cmp = String(valA).localeCompare(String(valB));
+                } else {
+                    cmp = (valA || 0) - (valB || 0);
+                }
+                return currentSort.direction === 'asc' ? cmp : -cmp;
             });
 
             const maxIq = Math.max(...models.map(m => m.iq), 1);
@@ -899,24 +940,27 @@
                 const iqWidth = Math.min(100, (model.iq / maxIq) * 100);
                 const valueWidth = Math.min(100, (model.value / maxValue) * 100);
                 const description = model.description || '';
+                // No public pricing → Value is undefined, not "0 value for
+                // money". Show a dash instead of a score.
+                const unpriced = (model.costIn + model.costOut) <= 0;
 
                 tr.innerHTML = `
                     <td class="p-6">${rankDisplay}</td>
                     <td class="p-6">
                         <div class="flex flex-col">
-                            <a href="${model.link}" target="_blank" class="font-bold text-lg hover:text-white hover:underline decoration-blue-500/50 underline-offset-4 transition flex items-center gap-2 peer">
-                                ${model.name}
+                            <a href="${esc(model.link)}" target="_blank" class="font-bold text-lg hover:text-white hover:underline decoration-blue-500/50 underline-offset-4 transition flex items-center gap-2 peer">
+                                ${esc(model.name)}
                                 <span class="text-xs ${originClass} bg-white/5 px-2 py-0.5 rounded-full no-underline">${flag} ${model.origin}</span>
                                 <i data-lucide="external-link" class="w-3 h-3 opacity-0 group-hover:opacity-50 transition"></i>
                             </a>
                             <div class="flex items-center gap-2 mt-1">
-                                <a href="${model.companyLink}" target="_blank" class="text-xs text-slate-400 hover:text-blue-400 transition flex items-center gap-1">
-                                    <i data-lucide="building-2" class="w-3 h-3"></i> ${model.organization}
+                                <a href="${esc(model.companyLink)}" target="_blank" class="text-xs text-slate-400 hover:text-blue-400 transition flex items-center gap-1">
+                                    <i data-lucide="building-2" class="w-3 h-3"></i> ${esc(model.organization)}
                                 </a>
                                 <span class="text-xs text-slate-600">•</span>
-                                <span class="text-xs text-slate-500">Released: ${model.createdDate || '—'}</span>
+                                <span class="text-xs text-slate-500">Released: ${esc(model.createdDate) || '—'}</span>
                             </div>
-                            ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${description}</p>` : ''}
+                            ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${esc(description)}</p>` : ''}
                         </div>
                     </td>
                     <td class="p-6">
@@ -932,10 +976,10 @@
                     <td class="p-6">
                         <div class="flex flex-col gap-1">
                             <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span>${formatNumber(model.value)}</span>
+                                <span title="${unpriced ? 'No public pricing — Value not scored' : ''}">${unpriced ? '—' : formatNumber(model.value)}</span>
                             </div>
                             <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
-                                <div class="bg-green-500 h-full rounded-full" style="width: ${valueWidth}%"></div>
+                                <div class="bg-green-500 h-full rounded-full" style="width: ${unpriced ? 0 : valueWidth}%"></div>
                             </div>
                         </div>
                     </td>
@@ -1159,7 +1203,7 @@
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <div class="text-lg font-bold ${textColor} flex items-center gap-2">
-                                    ${rankIcon} ${c.name} ${flag}
+                                    ${rankIcon} ${esc(c.name)} ${flag}
                                 </div>
                                 <div class="text-xs text-slate-500">${c.modelCount} model${c.modelCount > 1 ? 's' : ''} in Top 10</div>
                             </div>
@@ -1170,7 +1214,7 @@
                         </div>
                         <div class="${bgColor} rounded-lg p-3">
                             <div class="text-xs text-slate-400 mb-1">Models:</div>
-                            <div class="text-sm text-slate-300">${c.models.join(', ')}</div>
+                            <div class="text-sm text-slate-300">${esc(c.models.join(', '))}</div>
                         </div>
                     </div>
                 `;
@@ -1179,6 +1223,29 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             fetchModels();
+        });
+
+        // PWA: register the service worker and surface an install affordance
+        // only when the browser says installation is actually available.
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(() => {});
+            });
+        }
+        let deferredInstallPrompt = null;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredInstallPrompt = e;
+            const slot = document.getElementById('install-app-slot');
+            if (!slot) return;
+            slot.innerHTML = '<button type="button" id="install-app-btn" class="hover:text-white transition">Install app</button>';
+            document.getElementById('install-app-btn').addEventListener('click', async () => {
+                if (!deferredInstallPrompt) return;
+                deferredInstallPrompt.prompt();
+                await deferredInstallPrompt.userChoice;
+                deferredInstallPrompt = null;
+                slot.innerHTML = '';
+            });
         });
     </script>
 

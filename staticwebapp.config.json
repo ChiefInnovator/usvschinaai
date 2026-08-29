@@ -1,0 +1,30 @@
+{
+  "globalHeaders": {
+    "X-Frame-Options": "SAMEORIGIN"
+  },
+  "routes": [
+    {
+      "route": "/favicon-*.png",
+      "headers": { "cache-control": "public, max-age=604800" }
+    },
+    {
+      "route": "/web-app-manifest-*.png",
+      "headers": { "cache-control": "public, max-age=604800" }
+    },
+    {
+      "route": "/maskable-*.png",
+      "headers": { "cache-control": "public, max-age=604800" }
+    },
+    {
+      "route": "/og-image.png",
+      "headers": { "cache-control": "public, max-age=3600" }
+    },
+    {
+      "route": "/ig-image.png",
+      "headers": { "cache-control": "public, max-age=3600" }
+    }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/404.html" }
+  }
+}
