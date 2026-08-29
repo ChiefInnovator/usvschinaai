@@ -9,7 +9,7 @@
       "name": "TEAM USA",
       "flag": "\ud83c\uddfa\ud83c\uddf8",
       "description": "The Frontier Artisans",
-      "badge": "OVERALL WINNER",
+      "badge": "RUNNER UP",
       "color": "blue"
     },
     "china": {
@@ -17,7 +17,7 @@
       "name": "TEAM CHINA",
       "flag": "\ud83c\udde8\ud83c\uddf3",
       "description": "The Scaling Giants",
-      "badge": "RUNNER UP",
+      "badge": "OVERALL WINNER",
       "color": "red"
     }
   },

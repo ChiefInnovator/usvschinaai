@@ -942,6 +942,25 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
 
     data['history'].insert(0, new_entry)
 
+    # Keep the static team badges in sync with the actual result. These were
+    # once hand-written ("OVERALL WINNER" on the USA card) and went stale when
+    # the lead changed hands — recompute from the new snapshot's top-10 totals
+    # (same aggregation as the frontend and the OG/IG images).
+    try:
+        rows = [m for team in new_entry.get("teams", {}).values() for m in team]
+        top10 = sorted(rows, key=lambda m: -float(m.get("unified", 0)))[:10]
+        us_total = sum(float(m.get("unified", 0)) for m in top10 if m.get("origin") == "US")
+        cn_total = sum(float(m.get("unified", 0)) for m in top10 if m.get("origin") == "CN")
+        teams_meta = data.get("teams", {})
+        if "usa" in teams_meta and "china" in teams_meta:
+            if us_total == cn_total:
+                teams_meta["usa"]["badge"] = teams_meta["china"]["badge"] = "TIED"
+            else:
+                teams_meta["usa"]["badge"] = "OVERALL WINNER" if us_total > cn_total else "RUNNER UP"
+                teams_meta["china"]["badge"] = "OVERALL WINNER" if cn_total > us_total else "RUNNER UP"
+    except Exception as e:
+        print(f"Warning: could not recompute team badges ({e})")
+
     # Update footerText with the latest timestamp
     ts = new_entry.get("timestamp", "")
     if ts and "metadata" in data:

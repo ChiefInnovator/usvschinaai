@@ -735,12 +735,13 @@
                 const usa = appData.teams.usa;
                 document.getElementById('team-usa-name').innerHTML = `${usa.name} ${usa.flag}`;
                 document.getElementById('team-usa-desc').textContent = usa.description;
-                document.getElementById('team-usa-badge').textContent = usa.badge;
+                // Badges are computed from live totals in calculateTotals(),
+                // not read from JSON — the static values went stale when the
+                // lead changed hands.
 
                 const china = appData.teams.china;
                 document.getElementById('team-china-name').innerHTML = `${china.name} ${china.flag}`;
                 document.getElementById('team-china-desc').textContent = china.description;
-                document.getElementById('team-china-badge').textContent = china.badge;
             }
 
             const thead = document.getElementById('table-header');
@@ -875,6 +876,19 @@
             document.getElementById('score-china').textContent = formatUnified(cnTotal);
             document.getElementById('avg-iq-china').textContent = formatNumber(cnAvgIq);
             document.getElementById('avg-value-china').textContent = formatNumber(cnAvgVal);
+
+            // Winner/runner-up badges follow the actual totals.
+            const usaBadge = document.getElementById('team-usa-badge');
+            const chinaBadge = document.getElementById('team-china-badge');
+            if (usaBadge && chinaBadge) {
+                if (usTotal === cnTotal) {
+                    usaBadge.textContent = 'TIED';
+                    chinaBadge.textContent = 'TIED';
+                } else {
+                    usaBadge.textContent = usTotal > cnTotal ? 'OVERALL WINNER' : 'RUNNER UP';
+                    chinaBadge.textContent = cnTotal > usTotal ? 'OVERALL WINNER' : 'RUNNER UP';
+                }
+            }
 
             const usaCard = document.getElementById('team-usa-card');
             const chinaCard = document.getElementById('team-china-card');
