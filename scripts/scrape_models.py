@@ -1043,6 +1043,14 @@ def update_index_meta_description(index_path: Path, run_date: Optional[str] = No
         return False  # already current; no rewrite needed
 
     new_src = _INDEX_META_DATE_PATTERN.sub(rf"\g<1>{new_label}\g<3>", src, count=1)
+
+    # Also keep the year current in the page/OG/Twitter titles and the footer
+    # copyright — "Compare Top AI Models 2025" was still shipping in social
+    # previews in Aug 2026.
+    year = dt.strftime("%Y")
+    new_src = re.sub(r"(Compare Top AI Models )\d{4}", rf"\g<1>{year}", new_src)
+    new_src = re.sub(r"(&copy; )\d{4}( US vs CHINA AI)", rf"\g<1>{year}\g<2>", new_src)
+
     index_path.write_text(new_src, encoding="utf-8")
     print(f"Updated index.html meta description: {match.group(2)} → {new_label}")
     return True
