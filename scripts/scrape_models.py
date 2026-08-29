@@ -1043,17 +1043,51 @@ def update_index_meta_description(index_path: Path, run_date: Optional[str] = No
         return False  # already current; no rewrite needed
 
     new_src = _INDEX_META_DATE_PATTERN.sub(rf"\g<1>{new_label}\g<3>", src, count=1)
-
-    # Also keep the year current in the page/OG/Twitter titles and the footer
-    # copyright — "Compare Top AI Models 2025" was still shipping in social
-    # previews in Aug 2026.
-    year = dt.strftime("%Y")
-    new_src = re.sub(r"(Compare Top AI Models )\d{4}", rf"\g<1>{year}", new_src)
-    new_src = re.sub(r"(&copy; )\d{4}( US vs CHINA AI)", rf"\g<1>{year}\g<2>", new_src)
-
     index_path.write_text(new_src, encoding="utf-8")
     print(f"Updated index.html meta description: {match.group(2)} → {new_label}")
     return True
+
+
+# Year-bearing strings that must not rot across a New Year rollover. Applied
+# to every public page on each daily run — no manual bump needed. Patterns are
+# anchored on the surrounding words so unrelated four-digit numbers (scores,
+# benchmark names like "AIME 2025") are never touched.
+_PAGE_YEAR_PATTERNS = (
+    re.compile(r"(Compare Top AI Models )\d{4}"),
+    re.compile(r"(AI Race Timeline )\d{4}"),
+    re.compile(r"(&copy; )\d{4}( US vs CHINA AI)"),
+)
+
+
+def update_page_years(paths: List[Path], run_date: Optional[str] = None) -> bool:
+    """Rewrite the year in titles/OG tags/footers on every page to the run year.
+
+    "Compare Top AI Models 2025" was still shipping in social previews in
+    Aug 2026 — this keeps those strings current automatically at each rollover.
+    Returns True if any file changed.
+    """
+    if run_date:
+        try:
+            from dateutil.parser import parse as parse_date
+            year = parse_date(run_date).strftime("%Y")
+        except Exception:
+            year = datetime.now().strftime("%Y")
+    else:
+        year = datetime.now().strftime("%Y")
+
+    changed_any = False
+    for path in paths:
+        if not path.exists():
+            continue
+        src = path.read_text(encoding="utf-8")
+        new_src = src
+        for pat in _PAGE_YEAR_PATTERNS:
+            new_src = pat.sub(lambda m: m.group(1) + year + (m.group(2) if m.lastindex and m.lastindex > 1 else ""), new_src)
+        if new_src != src:
+            path.write_text(new_src, encoding="utf-8")
+            print(f"Updated year strings in {path.name} → {year}")
+            changed_any = True
+    return changed_any
 
 
 def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -> bool:
@@ -1758,6 +1792,11 @@ def run_scraper(args):
                 # current month, not whatever month the file was last hand-edited.
                 try:
                     update_index_meta_description(workspace_dir / "index.html", run_date=run_date)
+                    update_page_years(
+                        [workspace_dir / p for p in
+                         ("index.html", "history.html", "about.html", "privacy.html", "terms.html")],
+                        run_date=run_date,
+                    )
                 except Exception as meta_err:
                     print(f"Warning: could not update index.html meta description: {meta_err}")
 
