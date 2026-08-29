@@ -607,7 +607,12 @@ def scrape_country_leaderboard(
     print(f"  Found {len(rows)} rows")
     
     entries = []
-    for i, row in enumerate(rows[:max_models]):
+    # Iterate past max_models so that models skipped by the released-only
+    # filter below are backfilled by the next-ranked model instead of
+    # shrinking the cohort.
+    for i, row in enumerate(rows):
+        if len(entries) >= max_models:
+            break
         # Get model link
         link_elem = row.query_selector("a")
         if not link_elem:
@@ -661,16 +666,25 @@ def scrape_country_leaderboard(
                     
                 columns[header] = raw_value
         
+        # Released-only filter: unreleased preview/checkpoint models show no
+        # date in llm-stats' Released column ("-"). They have no pricing and
+        # often selective benchmark reporting, so they distort the rankings —
+        # exclude them from the cohort entirely.
+        released = columns.get("Released", "").strip()
+        if released in ("", "-", "—", "–"):
+            print(f"    -- skipping {name}: no release date (unreleased)")
+            continue
+
         entry = LeaderboardEntry(
-            rank=i + 1,
+            rank=len(entries) + 1,
             name=name,
             country=origin_code,
             url=url,
             columns=columns
         )
-        
+
         entries.append(entry)
-        print(f"    {i+1}. {name}")
+        print(f"    {len(entries)}. {name}")
     
     return entries, all_headers, benchmark_headers
 
