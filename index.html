@@ -31,6 +31,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="US vs China AI scoreboard">
     <meta property="og:site_name" content="US vs CHINA AI">
     <meta property="og:locale" content="en_US">
     
@@ -40,6 +41,7 @@
     <meta name="twitter:title" content="US vs CHINA AI | Global Leaderboard - Compare Top AI Models 2025">
     <meta name="twitter:description" content="Compare the world's best AI models ranked by intelligence and cost efficiency. Track which country is winning the AI race.">
     <meta name="twitter:image" content="https://usvschina.ai/og-image.png?v=1788002835">
+    <meta name="twitter:image:alt" content="US vs China AI scoreboard">
     
     <!-- Additional SEO/AEO Meta -->
     <!-- theme-color is injected at runtime below to keep the HTML lint-clean
@@ -1049,7 +1051,14 @@
         }
 
         function shareOnLinkedIn() {
-            const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+            // LinkedIn caches scrapes per-URL for ~a week and there is no purge
+            // API — a cached failure (e.g. from a site outage) breaks previews
+            // until the URL changes. A daily version param guarantees each
+            // day's share gets a fresh scrape; og:url still points at the
+            // clean canonical.
+            const day = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+            const freshUrl = `${shareUrl}?v=${day}`;
+            const url = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(freshUrl)}`;
             window.open(url, '_blank', 'width=550,height=420');
         }
 
