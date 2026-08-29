@@ -6,6 +6,7 @@ Writes news.json to the repository root.
 import hashlib
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -27,6 +28,19 @@ MAX_HEADLINE_LENGTH = 120
 # Drop articles older than this many days from the merge so the feed can't
 # accumulate stale-but-high-relevance headlines that crowd out new ones.
 MAX_ARTICLE_AGE_DAYS = 14
+
+# Minimum relevance score to publish. One MEDIUM keyword scores 0.08, which
+# previously let near-random tech stories through (the old filter was > 0).
+MIN_RELEVANCE = 0.20
+
+# Domains that repeatedly surfaced conspiracy/aggregator/content-farm items
+# in the live feed. Matched against the article URL host (suffix match, so
+# subdomains like us.headtopics.com are covered).
+DENYLIST_DOMAINS = (
+    "beforeitsnews.com",
+    "headtopics.com",
+    "hongkongherald.com",
+)
 
 RELEVANCE_KEYWORDS_HIGH = [
     "openai", "anthropic", "google", "deepseek", "alibaba", "meta",
@@ -91,22 +105,33 @@ def determine_country(article):
         return "Both"
     if has_cn:
         return "CN"
-    return "US"
+    if has_us:
+        return "US"
+    # Neither matched: "Both" is the honest default. The old default of "US"
+    # mislabeled anything the keyword lists missed (e.g. Hong Kong stories).
+    return "Both"
 
 
 def calculate_relevance(article):
-    """Score 0.0-1.0 based on keyword matching."""
-    text = " ".join([
-        article.get("title") or "",
-        article.get("description") or "",
-    ]).lower()
+    """Score 0.0-1.0 based on keyword matching.
+
+    Title hits are worth double a description hit: a story *about* a model or
+    the AI race names it in the headline; a passing mention buried in the
+    description usually means the story is about something else.
+    """
+    title = (article.get("title") or "").lower()
+    desc = (article.get("description") or "").lower()
 
     score = 0.0
     for kw in RELEVANCE_KEYWORDS_HIGH:
-        if kw in text:
+        if kw in title:
+            score += 0.30
+        elif kw in desc:
             score += 0.15
     for kw in RELEVANCE_KEYWORDS_MEDIUM:
-        if kw in text:
+        if kw in title:
+            score += 0.16
+        elif kw in desc:
             score += 0.08
     return min(score, 1.0)
 
@@ -140,17 +165,45 @@ def transform_article(raw):
     }
 
 
+def normalize_url(url):
+    """Dedup key for a URL: host + path, no scheme/www/query/fragment.
+
+    Catches republished items whose headline differs slightly (e.g. AP
+    digests timestamped in the title) but that point at the same article.
+    """
+    u = (url or "").strip().lower()
+    u = re.sub(r"^https?://", "", u)
+    u = re.sub(r"^www\.", "", u)
+    u = u.split("?")[0].split("#")[0]
+    return u.rstrip("/")
+
+
+def article_domain(url):
+    """Bare host of an article URL (for the deny-list suffix match)."""
+    host = normalize_url(url).split("/")[0]
+    return host
+
+
+def is_denied(url):
+    host = article_domain(url)
+    return any(host == d or host.endswith("." + d) for d in DENYLIST_DOMAINS)
+
+
 def deduplicate(articles):
-    """Remove duplicates by ID and similar titles."""
+    """Remove duplicates by ID, normalized URL, and similar titles."""
     seen_ids = set()
+    seen_urls = set()
     seen_titles = set()
     unique = []
     for a in articles:
         aid = a["id"]
+        url_key = normalize_url(a.get("url"))
         title_key = a["headline"].lower().strip()[:60]
-        if aid in seen_ids or title_key in seen_titles:
+        if aid in seen_ids or (url_key and url_key in seen_urls) or title_key in seen_titles:
             continue
         seen_ids.add(aid)
+        if url_key:
+            seen_urls.add(url_key)
         seen_titles.add(title_key)
         unique.append(a)
     return unique
@@ -207,6 +260,13 @@ def merge_with_existing(new_articles, news_path):
     cutoff = datetime.now(timezone.utc) - timedelta(days=MAX_ARTICLE_AGE_DAYS)
     fresh = [a for a in deduped if _is_fresh(a, cutoff)]
 
+    # Quality floor applies to carried-over items too, so junk already in
+    # news.json ages out on the next run instead of persisting for 14 days.
+    fresh = [
+        a for a in fresh
+        if a.get("relevanceScore", 0) >= MIN_RELEVANCE and not is_denied(a.get("url"))
+    ]
+
     # Primary sort: publishedAt descending (newest first).
     # Secondary sort: relevance descending (break ties by quality).
     fresh.sort(
@@ -241,11 +301,13 @@ def main():
     transformed = [a for a in transformed if a["headline"] and a["url"]]
     print(f"  Transformed {len(transformed)} valid articles")
 
-    # Filter out clearly irrelevant articles (relevance score 0)
-    relevant = [a for a in transformed if a["relevanceScore"] > 0]
-    if relevant:
-        transformed = relevant
-        print(f"  {len(transformed)} articles passed relevance filter")
+    # Quality floor: relevance threshold + source deny-list. (The old filter
+    # kept anything with score > 0, i.e. a single 0.08 keyword hit.)
+    transformed = [
+        a for a in transformed
+        if a["relevanceScore"] >= MIN_RELEVANCE and not is_denied(a["url"])
+    ]
+    print(f"  {len(transformed)} articles passed relevance/source filter")
 
     # Merge with existing
     final = merge_with_existing(transformed, news_path)
