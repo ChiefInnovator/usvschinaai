@@ -91,38 +91,104 @@ def build_caption(data):
     )
 
 
+# Graph API version. v21.0 (Oct 2024) is at/near its ~2-year sunset window;
+# keep this current when Meta announces deprecations.
+GRAPH_API_BASE = "https://graph.facebook.com/v23.0"
+
+
+def _raise_with_body(resp, context):
+    """raise_for_status, but print the Graph error JSON first.
+
+    The error body (code/subcode/message) is the only way to distinguish an
+    expired token from a rate limit from a media error — don't swallow it.
+    """
+    if not resp.ok:
+        print(f"ERROR during {context}: HTTP {resp.status_code}")
+        print(resp.text[:2000])
+    resp.raise_for_status()
+
+
+def check_token_expiry(access_token):
+    """Warn when the access token expires within 30 days. Soft-fail."""
+    try:
+        resp = requests.get(
+            f"{GRAPH_API_BASE}/debug_token",
+            params={"input_token": access_token, "access_token": access_token},
+            timeout=30,
+        )
+        info = resp.json().get("data", {})
+        expires_at = info.get("expires_at")
+        if not expires_at:  # 0 / absent = never expires
+            print("Token check: no expiry (never-expiring token confirmed)")
+            return
+        from datetime import datetime, timezone
+        remaining = datetime.fromtimestamp(expires_at, tz=timezone.utc) - datetime.now(timezone.utc)
+        if remaining.days < 30:
+            print(f"WARNING: Instagram access token expires in {remaining.days} day(s) — rotate it soon")
+        else:
+            print(f"Token check: expires in {remaining.days} day(s)")
+    except Exception as e:
+        print(f"Token check skipped ({e})")
+
+
+def wait_for_container(creation_id, access_token, timeout_seconds=60):
+    """Poll the media container until Instagram reports FINISHED.
+
+    Replaces a blind fixed sleep — the classic source of intermittent
+    'Media ID is not available' publish failures.
+    """
+    deadline = time.time() + timeout_seconds
+    while time.time() < deadline:
+        resp = requests.get(
+            f"{GRAPH_API_BASE}/{creation_id}",
+            params={"fields": "status_code", "access_token": access_token},
+            timeout=30,
+        )
+        _raise_with_body(resp, "container status poll")
+        status = resp.json().get("status_code", "")
+        print(f"  container status: {status}")
+        if status == "FINISHED":
+            return
+        if status == "ERROR":
+            raise RuntimeError(f"Media container {creation_id} failed processing")
+        time.sleep(5)
+    raise RuntimeError(f"Media container {creation_id} not ready after {timeout_seconds}s")
+
+
 def post_to_instagram(image_url, caption, access_token, ig_user_id):
     """Two-step Instagram Graph API publish."""
-    base_url = "https://graph.facebook.com/v21.0"
+    check_token_expiry(access_token)
 
     # Step 1: Create media container
     print(f"Creating media container for {image_url}...")
     create_resp = requests.post(
-        f"{base_url}/{ig_user_id}/media",
+        f"{GRAPH_API_BASE}/{ig_user_id}/media",
         data={
             "image_url": image_url,
             "caption": caption,
             "access_token": access_token,
         },
+        timeout=60,
     )
-    create_resp.raise_for_status()
+    _raise_with_body(create_resp, "media container creation")
     creation_id = create_resp.json()["id"]
     print(f"Media container created: {creation_id}")
 
     # Wait for Instagram to download and process the image
     print("Waiting for container processing...")
-    time.sleep(15)
+    wait_for_container(creation_id, access_token)
 
     # Step 2: Publish
     print("Publishing...")
     publish_resp = requests.post(
-        f"{base_url}/{ig_user_id}/media_publish",
+        f"{GRAPH_API_BASE}/{ig_user_id}/media_publish",
         data={
             "creation_id": creation_id,
             "access_token": access_token,
         },
+        timeout=60,
     )
-    publish_resp.raise_for_status()
+    _raise_with_body(publish_resp, "media publish")
     post_id = publish_resp.json()["id"]
     print(f"Published! Post ID: {post_id}")
     return post_id
