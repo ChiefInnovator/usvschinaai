@@ -67,6 +67,14 @@ LOCALE_SUFFIXES: Tuple[str, ...] = ("-zh", "-ja", "-ko", "-de", "-fr", "-es", "-
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 OPENAI_MODELS_URL = "https://api.openai.com/v1/models"
 
+
+class QuotaExhausted(Exception):
+    """The API key is out of quota (billing) — no retry can succeed."""
+
+
+class RateLimitedOut(Exception):
+    """Every retry attempt for one call returned 429 without recovering."""
+
 REPO_ROOT = Path(__file__).parent.parent
 DATA_DIR = REPO_ROOT / "data"
 CACHE_FILE = DATA_DIR / "ai_gap_cache.json"
@@ -519,10 +527,12 @@ def query_openai_responses(
         "Content-Type": "application/json",
     }
 
+    all_attempts_429 = True
     for attempt in range(max_retries):
         try:
             resp = requests.post(OPENAI_RESPONSES_URL, headers=headers, json=body, timeout=120)
         except requests.RequestException as e:
+            all_attempts_429 = False
             print(f"[gap-fill] network error ({e}); retry {attempt + 1}/{max_retries}")
             time.sleep(2 ** attempt)
             continue
@@ -534,6 +544,14 @@ def query_openai_responses(
                 print(f"[gap-fill] invalid JSON in 200 response: {e}")
                 return None
         if resp.status_code == 429:
+            # Quota-class 429s (insufficient_quota = the key is out of billing
+            # credit) never recover — abort instead of sleeping through the
+            # backoff ladder. Before this check, a dead key cost every batch
+            # the full 126s ladder: 20 batches x 126s = 42 wasted minutes per
+            # run (observed Apr 25 - Aug 29, with zero fills accepted).
+            err_text = resp.text[:500]
+            if "insufficient_quota" in err_text or "billing" in err_text.lower():
+                raise QuotaExhausted(err_text)
             # Honor Retry-After if present. Add exponential backoff on top so
             # repeated 429s back off rather than hammer at a fixed interval.
             try:
@@ -545,6 +563,7 @@ def query_openai_responses(
             time.sleep(backoff)
             continue
         if 500 <= resp.status_code < 600:
+            all_attempts_429 = False
             print(f"[gap-fill] {resp.status_code} from OpenAI; retry {attempt + 1}/{max_retries}")
             time.sleep(2 ** attempt)
             continue
@@ -552,6 +571,11 @@ def query_openai_responses(
         print(f"[gap-fill] OpenAI returned {resp.status_code}: {resp.text[:200]}")
         return None
 
+    if all_attempts_429:
+        # Six straight 429s spanning >2 minutes of backoff is not pacing —
+        # the key is effectively rate-dead for this run. Let the caller decide
+        # whether to abort the whole pass.
+        raise RateLimitedOut(f"all {max_retries} attempts returned 429")
     return None
 
 
@@ -880,6 +904,9 @@ def run_gap_filling_pass(
     fills_accepted = 0
     fills_dropped_low_conf = 0
     api_calls = 0
+    # Consecutive batches whose every retry 429'd. Two in a row aborts the
+    # pass — see the RateLimitedOut handler below.
+    rate_limited_batches = 0
 
     for rep, cands in groups:
         if api_calls >= max_calls:
@@ -941,13 +968,26 @@ def run_gap_filling_pass(
             organization=rep.organization,
             benchmarks=batch_benchmarks,
         )
-        raw = query_openai_responses(
-            system,
-            user,
-            model=model,
-            api_key=api_key,
-            max_output_tokens=max_out,
-        )
+        try:
+            raw = query_openai_responses(
+                system,
+                user,
+                model=model,
+                api_key=api_key,
+                max_output_tokens=max_out,
+            )
+        except QuotaExhausted as e:
+            print(f"[gap-fill] ABORTING PASS: API key out of quota — {e}")
+            print("[gap-fill] fix billing at platform.openai.com; skipping remaining batches")
+            break
+        except RateLimitedOut:
+            rate_limited_batches += 1
+            if rate_limited_batches >= 2:
+                print("[gap-fill] ABORTING PASS: 2 consecutive batches exhausted all "
+                      "retries on 429 — key is rate-dead this run; skipping remaining batches")
+                break
+            continue
+        rate_limited_batches = 0
         if raw is None:
             continue
 
