@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "US vs CHINA AI",
-    "footerText": "Data Audited Aug 29, 2026 | Source: llm-stats.com | IQ = flat average over the qualified benchmark set (two-pass scoring, category aggregates excluded)"
+    "footerText": "Data Audited Aug 30, 2026 | Source: llm-stats.com | IQ = flat average over the qualified benchmark set (two-pass scoring, category aggregates excluded)"
   },
   "teams": {
     "usa": {
@@ -45,7 +45,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-08-29T11:27:11+00:00",
+      "timestamp": "2026-08-30T03:30:30+00:00",
       "teams": {
         "US": [
           {
@@ -170,7 +170,7 @@
             "Context": "1M",
             "Input$/M": "$10.00",
             "Output$/M": "$50.00",
-            "Speed": "5c/s",
+            "Speed": "12c/s",
             "CodeArena": "2,003",
             "Reasoning": "53.3",
             "Math": "41.8",
@@ -193,7 +193,7 @@
             "MRCRv2": "\u2014",
             "SWE-benchPro": "80.0%",
             "Parameters(B)": "-",
-            "Latency": "14.0s",
+            "Latency": "13.9s",
             "KnowledgeCutoff": "-",
             "Multimodal": "Yes",
             "AutomationBench": "17.4%",
@@ -613,7 +613,7 @@
             "MRCRv2": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "2800",
-            "Latency": "14.8s",
+            "Latency": "5.4s",
             "KnowledgeCutoff": "-",
             "Multimodal": "Yes",
             "AutomationBench": "30.8%",
