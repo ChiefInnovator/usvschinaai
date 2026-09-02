@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-02T03:32:25.522354+00:00",
+  "lastUpdated": "2026-09-02T11:52:55.000794+00:00",
   "items": [
+    {
+      "id": "287f7ac33283d2b7",
+      "headline": "Chinese State Media Accuses Anthropic of AI Double Standards",
+      "url": "https://www.techrepublic.com/article/news-anthropic-ai-double-standards-apac-china/",
+      "source": "Techrepublic",
+      "country": "Both",
+      "publishedAt": "2026-09-01 20:14:31",
+      "relevanceScore": 0.3
+    },
     {
       "id": "5ae60030e2f2939e",
       "headline": "The sky’s the limit with connected vehicles",
