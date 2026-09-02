@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-09-01T03:34:12.432219+00:00",
+  "lastUpdated": "2026-09-02T03:32:25.522354+00:00",
   "items": [
+    {
+      "id": "5ae60030e2f2939e",
+      "headline": "The sky’s the limit with connected vehicles",
+      "url": "https://www.computerweekly.com/feature/The-skys-the-limit-with-connected-vehicles",
+      "source": "Techtarget",
+      "country": "CN",
+      "publishedAt": "2026-09-01 10:30:00",
+      "relevanceScore": 0.56
+    },
+    {
+      "id": "23305098a6c78b04",
+      "headline": "Silicon Valley Is Making Its Wildest Promises Ever. This Number From Anthropic Proves It.",
+      "url": "https://slate.com/technology/2026/09/artificial-intelligence-anthropic-spacex-ipo.html?via=rss",
+      "source": "Slate",
+      "country": "US",
+      "publishedAt": "2026-09-01 09:45:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "4606702253476f5a",
+      "headline": "Robots are Learning Fast; Can AI Finally Make Them Autonomous?",
+      "url": "https://www.analyticsinsight.net/artificial-intelligence/robots-are-learning-fast-can-ai-finally-make-them-autonomous",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-09-01 07:53:11",
+      "relevanceScore": 0.23
+    },
     {
       "id": "0e06cac2cb8a084e",
       "headline": "DeepSeek down live: Chinese AI app not working properly amid ...",
