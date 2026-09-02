@@ -19,6 +19,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from playwright.sync_api import sync_playwright
 
+from benchmark_names import canonicalize_benchmark_name, is_artifact_header
 from model_families import superseded_models
 
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
@@ -68,42 +69,6 @@ BENCHMARK_KNOWN_RANGES: Dict[str, Tuple[float, float]] = {
     # ceiling drift degrades gracefully instead of amplifying.
     "CodeArena": (1000.0, 2800.0),
 }
-
-
-# Some benchmarks appear under an abbreviation on the leaderboard table and a
-# different spelled-out name on the detail page. Canonicalization can't fuzzy-match
-# across these — they need an explicit alias. Map either direction into a shared
-# canonical token so both forms collapse to the same key.
-BENCHMARK_NAME_ALIASES: Dict[str, str] = {
-    # canonicalized form -> shared canonical token
-    "humanityslastexam": "hle",
-    "hle": "hle",
-    # MRCRv2 appears as "MRCRv2" on the leaderboard table and
-    # "MRCRv2 (8-needle)" on detail pages — same benchmark, and without this
-    # alias both columns land in the snapshot and can double-count in Pass 2.
-    "mrcrv2": "mrcrv2",
-    "mrcrv28needle": "mrcrv2",
-}
-
-# Detail pages occasionally leak non-benchmark artifacts (e.g. a "GDP.pdf"
-# link label) into the flight payload. Reject anything that looks like a
-# filename before it becomes a benchmark column.
-_ARTIFACT_HEADER_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
-
-
-def is_artifact_header(name: str) -> bool:
-    """Whether a detail-page benchmark name is a scraped file artifact."""
-    return bool(_ARTIFACT_HEADER_RE.search(name.strip()))
-
-
-def canonicalize_benchmark_name(name: str) -> str:
-    """Lowercased, alphanumeric-only form for fuzzy benchmark-name matching.
-
-    Known abbreviation variants (e.g. "Humanity's Last Exam" ↔ "HLE") are collapsed
-    through BENCHMARK_NAME_ALIASES so both forms resolve to the same key.
-    """
-    canon = re.sub(r"[^a-z0-9]", "", name.lower())
-    return BENCHMARK_NAME_ALIASES.get(canon, canon)
 
 
 # Benchmark records in the flight payload are flat objects delimited by `{` / `}`.

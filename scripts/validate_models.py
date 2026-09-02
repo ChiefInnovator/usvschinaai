@@ -24,6 +24,7 @@ import re
 import sys
 from pathlib import Path
 
+from benchmark_names import canonicalize_benchmark_name
 from model_families import superseded_models
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -48,13 +49,13 @@ ARTIFACT_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
 DESC_RELEASED_RE = re.compile(r"released [A-Z][a-z]{2} \d{1,2}, \d{4}")
 
 
-def canon(name: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", name.lower())
-
-
 def alias_base(name: str) -> str:
-    """Canonical form with any trailing parenthetical stripped first."""
-    return canon(re.sub(r"\([^)]*\)\s*$", "", name.strip()))
+    """Shared benchmark identity — see scripts/benchmark_names.py.
+
+    The scraper merges variants using this exact function, so a collision here
+    means the merge failed rather than that the two names merely look alike.
+    """
+    return canonicalize_benchmark_name(name)
 
 
 def parse_num(value):
