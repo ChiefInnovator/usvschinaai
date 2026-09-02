@@ -2,7 +2,7 @@
 
 **Status:** Proposed
 **Date:** 2026-04-25
-**Owner:** aiolympics
+**Owner:** usvschinaai
 
 ## 1. Problem
 

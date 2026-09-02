@@ -91,7 +91,7 @@ News Sources → News API/RSS → Python Scraper → news.json → Frontend Disp
 ### 3.3 File Structure
 
 ```
-aiolympics/
+usvschinaai/
 ├── news.json              # Latest news data
 ├── scripts/
 │   └── scrape_news.py     # News aggregation script

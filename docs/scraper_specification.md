@@ -1,6 +1,6 @@
 # Specification: Automated Leaderboard Scraper and Scoring
 
-**Project**: aiolympics  
+**Project**: usvschinaai  
 **Feature**: Python-based automation for updating AI model leaderboard rankings  
 **Status**: Active Development (Staged Architecture)
 
@@ -255,7 +255,7 @@ The OpenAI Responses API is called via plain `requests` against `https://api.ope
 ## 9. File Organization
 
 ```text
-aiolympics/
+usvschinaai/
 ├── models.json                          # primary data file
 ├── news.json                            # secondary news feed
 ├── sitemap.xml                          # auto-updated lastmod on each scrape

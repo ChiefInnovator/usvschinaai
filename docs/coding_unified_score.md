@@ -2,7 +2,7 @@
 
 **Status:** Proposed — not yet implemented.
 **Date:** 2026-04-12
-**Owner:** aiolympics
+**Owner:** usvschinaai
 
 ## 1. Goal
 

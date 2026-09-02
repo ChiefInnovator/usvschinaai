@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""AI gap-filling pass for the aiolympics scraper.
+"""AI gap-filling pass for the usvschinaai scraper.
 
 See docs/ai_gap_filling.md for the full specification.
 
