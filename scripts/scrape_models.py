@@ -19,6 +19,8 @@ from typing import Any, Dict, List, Optional, Tuple
 
 from playwright.sync_api import sync_playwright
 
+from model_families import superseded_models
+
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
 # available before run_gap_filling_pass needs them. CI provides these via
 # GitHub Actions secrets directly so the load_dotenv call is a no-op there.
@@ -537,6 +539,30 @@ def format_table(
     return "\n".join(lines)
 
 
+def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["LeaderboardEntry"]:
+    """Drop rows that are older versions of another model in the same cohort.
+
+    Freed slots backfill from the next-ranked model, the same way the
+    released-only filter behaves. See scripts/model_families.py for the
+    family/version rules.
+    """
+    superseded = superseded_models([e.name for e in entries])
+
+    seen_names = set()
+    kept = []
+    for idx, entry in enumerate(entries):
+        if idx in superseded:
+            print(f"    -- skipping {entry.name}: superseded by {superseded[idx]}")
+            continue
+        # Belt and braces: the same model listed twice under one name.
+        if entry.name in seen_names:
+            print(f"    -- skipping {entry.name}: duplicate row")
+            continue
+        seen_names.add(entry.name)
+        kept.append(entry)
+    return kept
+
+
 def scrape_country_leaderboard(
     page,
     country_name: str,
@@ -641,13 +667,13 @@ def scrape_country_leaderboard(
     rows = page.query_selector_all("tbody tr")
     print(f"  Found {len(rows)} rows")
     
-    entries = []
-    # Iterate past max_models so that models skipped by the released-only
-    # filter below are backfilled by the next-ranked model instead of
-    # shrinking the cohort.
+    candidates: List[LeaderboardEntry] = []
+    # Parse every row rather than stopping at max_models, so that models dropped
+    # by the released-only filter below — or by the superseded-version dedupe
+    # after the loop — are backfilled by the next-ranked model instead of
+    # shrinking the cohort. The dedupe cannot run inline because the newer
+    # sibling is not guaranteed to rank above the older one.
     for i, row in enumerate(rows):
-        if len(entries) >= max_models:
-            break
         # Get model link
         link_elem = row.query_selector("a")
         if not link_elem:
@@ -710,17 +736,26 @@ def scrape_country_leaderboard(
             print(f"    -- skipping {name}: no release date (unreleased)")
             continue
 
-        entry = LeaderboardEntry(
-            rank=len(entries) + 1,
+        candidates.append(LeaderboardEntry(
+            rank=len(candidates) + 1,
             name=name,
             country=origin_code,
             url=url,
             columns=columns
+        ))
+
+    entries = dedupe_superseded_versions(candidates)[:max_models]
+    for position, entry in enumerate(entries, 1):
+        entry.rank = position
+        print(f"    {position}. {entry.name}")
+
+    if len(entries) < max_models:
+        print(
+            f"  WARNING: only {len(entries)} of {max_models} models left for "
+            f"{origin_code} after filtering ({len(candidates)} rows parsed). "
+            f"Scoring assumes a cohort of {max_models}."
         )
 
-        entries.append(entry)
-        print(f"    {len(entries)}. {name}")
-    
     return entries, all_headers, benchmark_headers
 
 

@@ -13,6 +13,8 @@ Checks (ERROR = fail the run, WARN = print only):
   ERROR  CodeArena Elo outside 800-2500
   ERROR  negative pricing
   ERROR  model row with no Released date (released-only filter regressed)
+  ERROR  two rows that are the same model at different versions, or the same
+         model listed twice (superseded-version dedupe regressed)
   WARN   cohort smaller than 10 per country
   WARN   description "released <date>" disagrees with Released column presence
   WARN   any benchmark cell moving > 15 points vs the previous snapshot
@@ -21,6 +23,8 @@ import json
 import re
 import sys
 from pathlib import Path
+
+from model_families import superseded_models
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 MODELS_PATH = REPO_ROOT / "models.json"
@@ -139,6 +143,23 @@ def main() -> int:
     for team_key, team_rows in entry.get("teams", {}).items():
         if len(team_rows) < 10:
             warnings.append(f"cohort {team_key} has only {len(team_rows)} models")
+
+    # ---- one row per model --------------------------------------------------
+    # The scraper keeps only the newest version of a family (see
+    # scripts/model_families.py). If an older sibling reaches models.json the
+    # dedupe regressed, so fail rather than publish the same model twice.
+    for team_key, team_rows in entry.get("teams", {}).items():
+        names = [r.get("model", "?") for r in team_rows]
+        for idx, winner in sorted(superseded_models(names).items()):
+            errors.append(
+                f"cohort {team_key}: {names[idx]!r} is an older version of "
+                f"{winner!r} — superseded-version dedupe regressed"
+            )
+        seen = set()
+        for n in names:
+            if n in seen:
+                errors.append(f"cohort {team_key}: {n!r} listed twice")
+            seen.add(n)
 
     # ---- day-over-day drift -------------------------------------------------
     if prev:
