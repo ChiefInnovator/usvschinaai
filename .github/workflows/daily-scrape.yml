@@ -35,6 +35,11 @@ jobs:
       - name: Install Playwright browsers
         run: |
           playwright install chromium
+
+      - name: Run test suite
+        # Cheap preflight: catches dependency/version problems before the
+        # ~45 minute scrape, and guards the superseded-version dedupe.
+        run: python -m unittest discover -s tests
       
       - name: Run scraper
         env:
