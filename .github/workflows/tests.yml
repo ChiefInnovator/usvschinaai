@@ -24,6 +24,10 @@ jobs:
         with:
           python-version: '3.14'
 
+      - name: Install Pillow
+        # The icon tests read pixels; the rest of the suite is stdlib-only.
+        run: pip install "$(grep -i '^Pillow==' scripts/requirements.txt)"
+
       - name: Run test suite
         run: python -m unittest discover -s tests -v
 
