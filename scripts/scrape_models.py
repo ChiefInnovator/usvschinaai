@@ -633,6 +633,17 @@ def scrape_country_leaderboard(
         "Input $/M", "Output $/M", "Input$/M", "Output$/M",
         "Parameters (B)", "Parameters(B)", "Knowledge Cutoff", "KnowledgeCutoff",
         "Multimodal", "Released",
+        # Not benchmarks, and each distorts the average in its own way:
+        #   LLM Stats  — llm-stats' own composite OF the benchmarks, so scoring
+        #                it counts every benchmark a second time.
+        #   Latency    — seconds, where lower is better. Normalised as a
+        #                benchmark it rewarded the slowest model: Claude Opus 5
+        #                at 11.1s outscored Muse Spark 1.3 at 3.0s.
+        #   CodeArena  — an Elo on a different scale with its own known range;
+        #                it skews a flat average of percentages.
+        # validate_models.META_KEYS already listed all three; the scraper did
+        # not, and a test now asserts the two stay in step.
+        "Latency", "LLM Stats", "LLMStats", "CodeArena",
         # Category-level aggregates (rollups of individual benchmarks)
         "Reasoning", "Math", "Coding", "Search", "Writing", "Vision", "Tools",
         "Long Ctx", "LongCtx", "Finance", "Legal", "Health",
