@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-02T11:52:55.000794+00:00",
+  "lastUpdated": "2026-09-03T10:18:18.384507+00:00",
   "items": [
+    {
+      "id": "b9f90567efb0c771",
+      "headline": "Trump Admin Tells Court: Let OpenAI Rip Off The Intercept’s Articles",
+      "url": "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/",
+      "source": "The Intercept",
+      "country": "US",
+      "publishedAt": "2026-09-02 18:40:51",
+      "relevanceScore": 0.3
+    },
     {
       "id": "287f7ac33283d2b7",
       "headline": "Chinese State Media Accuses Anthropic of AI Double Standards",
