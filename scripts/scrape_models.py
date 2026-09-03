@@ -504,15 +504,17 @@ def format_table(
     return "\n".join(lines)
 
 
-# A model must report at least this many benchmarks on the leaderboard table to
-# join a country's cohort. Below it there is nothing to compare, and the model
-# still consumes a top-10 slot and drags its team's total toward zero.
-MIN_BENCHMARKS_FOR_COHORT = 2
-
 # Share of the qualified benchmark set a model must report to be ranked. Without
 # this, a model measured on 2 of 7 benchmarks that happened to score well on both
 # outranks one measured on all 7 — which is how Gemini 3.8 Flash took #1 on
 # 2026-09-03 with an avgIq of 75.73 from exactly two numbers.
+#
+# Deliberately applied at scoring time, not when the cohort is built. An earlier
+# version filtered on the leaderboard table before enrich_with_metadata had
+# fetched each model's detail page, and newly released models carry most of
+# their scores on the detail page — so it evicted Claude Fable 5.1, Muse Spark
+# 1.3, Gemini 3.8 Flash and Grok 4.6 for "reporting 1 benchmark" and rolled the
+# whole US cohort back to the previous generation.
 MIN_QUALIFIED_COVERAGE = 0.5
 
 
@@ -643,7 +645,7 @@ def scrape_country_leaderboard(
         #                it skews a flat average of percentages.
         # validate_models.META_KEYS already listed all three; the scraper did
         # not, and a test now asserts the two stay in step.
-        "Latency", "LLM Stats", "LLMStats", "CodeArena",
+        "Latency", "LLM Stats", "LLMStats", "Code Arena", "CodeArena",
         # Category-level aggregates (rollups of individual benchmarks)
         "Reasoning", "Math", "Coding", "Search", "Writing", "Vision", "Tools",
         "Long Ctx", "LongCtx", "Finance", "Legal", "Health",
@@ -722,23 +724,6 @@ def scrape_country_leaderboard(
         released = columns.get("Released", "").strip()
         if released in ("", "-", "—", "–"):
             print(f"    -- skipping {name}: no release date (unreleased)")
-            continue
-
-        # Unmeasured-model filter: a model has to report something before it can
-        # be compared. "Gemini 3.8 Flash Cyber" reached the 2026-09-03 board with
-        # a single specialist benchmark (CyberGym), scored avgIq 0.0 / unified
-        # 0.0, and still occupied a US top-10 slot that a measured model should
-        # have had. Skipping here rather than at scoring time means the freed
-        # slot backfills from the next-ranked model.
-        reported = sum(
-            1 for b in benchmark_headers
-            if columns.get(b, "") not in MISSING_VALUE_MARKERS
-        )
-        if reported < MIN_BENCHMARKS_FOR_COHORT:
-            print(
-                f"    -- skipping {name}: only {reported} benchmark(s) reported "
-                f"(need >= {MIN_BENCHMARKS_FOR_COHORT}) — not comparable"
-            )
             continue
 
         candidates.append(LeaderboardEntry(

@@ -31,10 +31,14 @@ def scraper_metadata_columns() -> set:
 
 
 # Columns that are not benchmark scores and must never reach the flat average.
+# Both spellings of every multi-word column. The leaderboard table header is
+# spaced ("Code Arena") while the models.json row key is not ("CodeArena"), and
+# metadata_columns is matched against the *table header* — excluding only the
+# unspaced form let Code Arena into the scored set.
 NON_BENCHMARKS = [
     "LLM Stats", "LLMStats",   # llm-stats' own composite — circular
     "Latency",                 # seconds, lower is better
-    "CodeArena",               # Elo, different scale
+    "Code Arena", "CodeArena", # Elo, different scale
     "Speed", "Multimodal", "Released", "License", "Context",
 ]
 
@@ -51,6 +55,13 @@ class MetadataColumnTests(unittest.TestCase):
     def test_latency_is_excluded(self):
         """Regression: normalised higher-is-better, it rewarded slow models."""
         self.assertIn("Latency", scraper_metadata_columns())
+
+    def test_multi_word_columns_excluded_in_both_spellings(self):
+        """The table header is spaced; the row key is not. Both must be listed."""
+        cols = scraper_metadata_columns()
+        for spaced, tight in (("Code Arena", "CodeArena"), ("LLM Stats", "LLMStats")):
+            self.assertIn(spaced, cols, f"{spaced!r} (table header form) not excluded")
+            self.assertIn(tight, cols, f"{tight!r} (row key form) not excluded")
 
     def test_llmstats_is_excluded(self):
         """Regression: it is the composite OF the benchmarks — circular."""
