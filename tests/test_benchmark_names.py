@@ -189,6 +189,7 @@ class ApplyTimeSiblingLockTests(unittest.TestCase):
             return GapCandidate(
                 model_name="Claude Fable 5.1", model_country="US", model_url="",
                 organization="Anthropic", benchmark=benchmark, tier=1,
+                cohort_count=0, top_cohort_count=0,
             )
 
         fill = {"score": 67.4, "source_url": "https://example.test", "confidence": "high", "source_type": "model_card"}
