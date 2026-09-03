@@ -1,15 +1,5 @@
 {
   "Claude Fable 5.1": {
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T11:20:32.200252+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "DeepSWE v1.1 Pass@1.",
-      "score": "67.4%",
-      "source_type": "model_card",
-      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
-    },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -57,7 +47,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.4",
-      "notes": "Anthropic’s Claude Opus 4.5 system card reports 92.77% without tools, averaged over 5 trials; rounded to one decimal.",
+      "notes": "Anthropic\u2019s Claude Opus 4.5 system card reports 92.77% without tools, averaged over 5 trials; rounded to one decimal.",
       "score": "92.8%",
       "source_type": "model_card",
       "source_url": "https://assets.anthropic.com/m/64823ba7485345a7/Claude-Opus-4-5-System-Card.pdf"
@@ -67,7 +57,7 @@
       "cached_at": "2026-04-18T04:12:54.425735+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.4",
-      "notes": "Anthropic’s Claude Sonnet 4.6 system card includes a BrowseComp comparison chart showing Claude Opus 4.5 at 67.8% accuracy.",
+      "notes": "Anthropic\u2019s Claude Sonnet 4.6 system card includes a BrowseComp comparison chart showing Claude Opus 4.5 at 67.8% accuracy.",
       "score": "67.8%",
       "source_type": "model_card",
       "source_url": "https://www-cdn.anthropic.com/bbd8ef16d70b7a1665f14f306ee88b53f686aa75.pdf"
@@ -77,7 +67,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Scale’s HLE leaderboard lists the base model `claude-opus-4-5-20251101` at 14.16% accuracy; rounded to one decimal.",
+      "notes": "Scale\u2019s HLE leaderboard lists the base model `claude-opus-4-5-20251101` at 14.16% accuracy; rounded to one decimal.",
       "score": "14.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://labs.scale.com/leaderboard/humanitys_last_exam"
@@ -87,7 +77,7 @@
       "cached_at": "2026-04-13T04:26:01.517605+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.4",
-      "notes": "Anthropic’s official system card reports Claude Opus 4.5 at 70.6% on MMMU-Pro (no tools).",
+      "notes": "Anthropic\u2019s official system card reports Claude Opus 4.5 at 70.6% on MMMU-Pro (no tools).",
       "score": "70.6%",
       "source_type": "model_card",
       "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
@@ -103,16 +93,6 @@
       "score": "47.8%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
-    },
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "DeepSWE v1.1 leaderboard result for claude-opus-5 at max effort; the leaderboard reports 74% ±4%.",
-      "score": "74.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://deepswe.datacurve.ai/"
     },
     "SWE-bench Pro": {
       "benchmark": "SWE-bench Pro",
@@ -148,16 +128,6 @@
     }
   },
   "Claude Sonnet 5": {
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "DeepSWE v1.1 leaderboard result for claude-sonnet-5[max], updated September 2, 2026.",
-      "score": "54.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://deepswe.datacurve.ai/"
-    },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -187,7 +157,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Official Terminal-Bench 2.0 leaderboard lists Terminus 2 + GLM 4.6 at 24.5%±2.4; this is agent-scaffold dependent rather than a vendor self-report.",
+      "notes": "Official Terminal-Bench 2.0 leaderboard lists Terminus 2 + GLM 4.6 at 24.5%\u00b12.4; this is agent-scaffold dependent rather than a vendor self-report.",
       "score": "24.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.tbench.ai/leaderboard/terminal-bench/2.0"
@@ -211,7 +181,7 @@
       "cached_at": "2026-04-19T04:22:47.828462+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "MathArena lists GLM 5 at 96.67% on “AIME 2025 Final-Answer Comps.”",
+      "notes": "MathArena lists GLM 5 at 96.67% on \u201cAIME 2025 Final-Answer Comps.\u201d",
       "score": "96.67%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://matharena.ai/models/glm_glm_5"
@@ -257,18 +227,7 @@
       "source_url": "https://docs.z.ai/guides/llm/glm-5"
     }
   },
-  "GLM-5.3": {
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Z.ai reports DeepSWE v1.1 using mini-swe-agent, temperature 0.95, top-p 1.0, a 6-hour timeout, and 400K context.",
-      "score": "66.9%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/zai-org/GLM-5.3"
-    }
-  },
+  "GLM-5.3": {},
   "GLM-5.3-Flash": {
     "Code Arena": {
       "benchmark": "Code Arena",
@@ -279,16 +238,6 @@
       "score": "1604",
       "source_type": "third_party_leaderboard",
       "source_url": "https://arena.ai/leaderboard/code?q=glm"
-    },
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Reported for DeepSWE v1.1 using the mini-swe-agent harness.",
-      "score": "63.4%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
     }
   },
   "GPT-5 High": {
@@ -347,7 +296,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.4",
-      "notes": "OpenAI’s GPT-5.1 developer post reports GPT-5 (high) at 72.8% on SWE-bench Verified over all 500 problems.",
+      "notes": "OpenAI\u2019s GPT-5.1 developer post reports GPT-5 (high) at 72.8% on SWE-bench Verified over all 500 problems.",
       "score": "72.8%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/gpt-5-1-for-developers/"
@@ -441,7 +390,7 @@
       "cached_at": "2026-04-13T04:26:01.517605+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Terminal-Bench 2.0 reports agent-model pairs; the paper’s best result for GPT-5.2 is 62.9% with Codex CLI, while the same model scores 54.0% with Terminus 2.",
+      "notes": "Terminal-Bench 2.0 reports agent-model pairs; the paper\u2019s best result for GPT-5.2 is 62.9% with Codex CLI, while the same model scores 54.0% with Terminus 2.",
       "score": "62.9%",
       "source_type": "paper",
       "source_url": "https://openreview.net/pdf/574281303882f822808ab57ac3a57a2bddfbc7a3.pdf"
@@ -489,7 +438,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Google’s official Gemini 3.1 Pro page reports this for “Gemini 3 Pro Thinking (High),” so the provenance is official but the exact base-vs-setting labeling is slightly ambiguous.",
+      "notes": "Google\u2019s official Gemini 3.1 Pro page reports this for \u201cGemini 3 Pro Thinking (High),\u201d so the provenance is official but the exact base-vs-setting labeling is slightly ambiguous.",
       "score": "59.2%",
       "source_type": "vendor_blog",
       "source_url": "https://deepmind.google/models/gemini/pro/"
@@ -499,7 +448,7 @@
       "cached_at": "2026-04-12T19:44:48.151542+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Google’s official Gemini 3.1 Pro page reports this for “Gemini 3 Pro Thinking (High),” so the provenance is official but the exact base-vs-setting labeling is slightly ambiguous.",
+      "notes": "Google\u2019s official Gemini 3.1 Pro page reports this for \u201cGemini 3 Pro Thinking (High),\u201d so the provenance is official but the exact base-vs-setting labeling is slightly ambiguous.",
       "score": "54.1%",
       "source_type": "vendor_blog",
       "source_url": "https://deepmind.google/models/gemini/pro/"
@@ -525,16 +474,6 @@
       "score": "9.6%",
       "source_type": "paper",
       "source_url": "https://arxiv.org/abs/2604.18934"
-    },
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports this for Gemini CLI using Gemini 3.1 Pro (high); this is a harness-specific evaluation.",
-      "score": "14.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/agents/coding-agents/comparisons/gemini-cli-vs-muse-code"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -570,16 +509,6 @@
     }
   },
   "Gemini 3.8 Flash": {
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Reported by Google for DeepSWE v1.1 using a mini-SWE agent harness with high thinking.",
-      "score": "73.7%",
-      "source_type": "model_card",
-      "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
-    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-09-03T11:20:32.200252+00:00",
@@ -681,7 +610,7 @@
       "cached_at": "2026-04-16T04:23:23.324924+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Official Moonshot model card lists K2 0905 at 44.5 on Terminal-Bench with simulated tools (JSON) and says scores used the default agent framework, Terminus-2; I marked medium because the table labels it “Terminal-Bench” rather than explicitly “Terminal-Bench 2.0”.",
+      "notes": "Official Moonshot model card lists K2 0905 at 44.5 on Terminal-Bench with simulated tools (JSON) and says scores used the default agent framework, Terminus-2; I marked medium because the table labels it \u201cTerminal-Bench\u201d rather than explicitly \u201cTerminal-Bench 2.0\u201d.",
       "score": "44.5%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K2-Thinking/blob/5b64d2a87e32f24d6231ef01ee676f65e54496a7/README.md"
@@ -715,7 +644,7 @@
       "cached_at": "2026-04-14T04:19:41.339418+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.4",
-      "notes": "Z.ai’s official GLM-5 model card reports Kimi K2.5 at 63.8 on MCP-Atlas (Public Set); this is a third-party comparative table, not a Moonshot primary source.",
+      "notes": "Z.ai\u2019s official GLM-5 model card reports Kimi K2.5 at 63.8 on MCP-Atlas (Public Set); this is a third-party comparative table, not a Moonshot primary source.",
       "score": "63.8%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/zai-org/GLM-5/blob/c35b39f62af17ae76fd6dc5e95a7824d8c01a207/README.md"
@@ -737,7 +666,7 @@
       "cached_at": "2026-09-03T11:09:22.124913+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Listed as a self-reported score on The Aggregate’s NL2Repo leaderboard.",
+      "notes": "Listed as a self-reported score on The Aggregate\u2019s NL2Repo leaderboard.",
       "score": "58.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://theaggregate.ai/benchmark?slug=nl2repo"
@@ -791,7 +720,7 @@
       "cached_at": "2026-04-15T04:18:44.483120+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.4",
-      "notes": "MiniMax’s model card lists “Terminal Bench 2” at 51.7, which corresponds to Terminal-Bench 2.0.",
+      "notes": "MiniMax\u2019s model card lists \u201cTerminal Bench 2\u201d at 51.7, which corresponds to Terminal-Bench 2.0.",
       "score": "51.7%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blame/6ff285653e093c76a26a2254fd7c3533c15143cb/README.md"
@@ -829,18 +758,7 @@
       "source_url": "https://huggingface.co/zai-org/GLM-5.1-FP8/blob/main/README.md"
     }
   },
-  "Muse Spark 1.3": {
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Reported by Meta for DeepSWE v1.1 using Muse Spark 1.3 with max reasoning and a mini-swe agent.",
-      "score": "75.4%",
-      "source_type": "model_card",
-      "source_url": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology"
-    }
-  },
+  "Muse Spark 1.3": {},
   "Qwen3.5-122B-A10B": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -919,16 +837,6 @@
       "score": "1622",
       "source_type": "third_party_leaderboard",
       "source_url": "https://arena.ai/leaderboard/code"
-    },
-    "DeepSWE": {
-      "benchmark": "DeepSWE",
-      "cached_at": "2026-09-03T10:39:12.689411+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Reported by Qwen for DeepSWE 1.1.",
-      "score": "58.7%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
     }
   }
 }

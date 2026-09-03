@@ -826,6 +826,17 @@ def _apply_fill(
     for entry in combined_entries:
         if entry.name != candidate.model_name or entry.country != candidate.model_country:
             continue
+        # Re-check the sibling-version lock here, not only in build_candidates.
+        # Candidates are built before any fill lands, so when a model has BOTH
+        # DeepSWE and DeepSWE 1.1 cached, neither is present at build time and
+        # the lock sees nothing - then the cache writes both. Checking at apply
+        # time catches a sibling filled moments earlier in the same pass.
+        if has_sibling_version_value(entry, candidate.benchmark, list(entry.columns.keys())):
+            print(
+                f"[gap-fill]   -- not filling {candidate.benchmark} for {entry.name}: "
+                f"a sibling version is already reported"
+            )
+            return False
         entry.columns[candidate.benchmark] = _format_score(validated["score"])
         provenance = entry.columns.get("_provenance")
         if not isinstance(provenance, dict):
