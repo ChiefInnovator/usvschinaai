@@ -250,6 +250,16 @@
     }
   },
   "GLM-5.3-Flash": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Arena.ai Code Arena: WebDev overall Elo score for glm-5.3-flash.",
+      "score": "1604",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://arena.ai/leaderboard/code?q=glm"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -527,6 +537,18 @@
       "source_url": "https://toolathlon.xyz/docs/leaderboard"
     }
   },
+  "Gemini 3.7 Flash": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official model card reports Code Arena Elo 1588.",
+      "score": "1588",
+      "source_type": "model_card",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/"
+    }
+  },
   "Gemini 3.8 Flash": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -539,7 +561,29 @@
       "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
     }
   },
+  "Grok 4.5": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official ALE leaderboard pass rate for Grok 4.5 run in the Grok Build harness at High effort; its separate ALE score is 51.2%.",
+      "score": "27.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    }
+  },
   "Hy4 preview": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Code Arena WebDev Elo; listed as preliminary.",
+      "score": "1631",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://arena.ai/leaderboard/code/webdev?rankBy=labs"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-09-03T10:56:49.859844+00:00",
@@ -647,6 +691,16 @@
       "score": "28.3%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    "NL2Repo": {
+      "benchmark": "NL2Repo",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Listed as a self-reported score on The Aggregate’s NL2Repo leaderboard.",
+      "score": "58.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://theaggregate.ai/benchmark?slug=nl2repo"
     },
     "OSWorld 2.0": {
       "benchmark": "OSWorld 2.0",
@@ -791,7 +845,41 @@
       "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
     }
   },
+  "Qwen3.8 Max": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Arena Code Arena WebDev overall score for the base qwen3.8-max entry; the leaderboard marks it preliminary.",
+      "score": "1669",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://arena.ai/leaderboard/code/webdev"
+    }
+  },
+  "Qwen3.8-27B": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Code Arena WebDev overall score; leaderboard snapshot dated August 31, 2026.",
+      "score": "1599",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://arena.ai/leaderboard/code"
+    }
+  },
   "Qwen3.8-Flash-Next": {
+    "Code Arena": {
+      "benchmark": "Code Arena",
+      "cached_at": "2026-09-03T11:09:22.124913+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Code Arena WebDev Overall Elo; listed as preliminary on the September 2, 2026 leaderboard snapshot.",
+      "score": "1622",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://arena.ai/leaderboard/code"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
