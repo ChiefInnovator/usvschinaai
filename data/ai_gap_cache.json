@@ -476,6 +476,26 @@
     }
   },
   "Gemini 3.1 Pro": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-03T10:56:49.859844+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ALE-V1 average partial-credit Score for Gemini CLI using gemini-3-1-pro at High effort; corresponding Pass Rate is 15.8%.",
+      "score": "32.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    },
+    "AutomationBench": {
+      "benchmark": "AutomationBench",
+      "cached_at": "2026-09-03T10:56:49.859844+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "API/default-toolset result for Gemini 3.1 Pro (high) reported in the AutomationBench paper.",
+      "score": "9.6%",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/abs/2604.18934"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -495,6 +515,16 @@
       "score": "76.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/agents/coding-agents/comparisons/gemini-cli-vs-muse-code"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-03T10:56:49.859844+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Toolathlon-Verified Pass@1; independently evaluated entry for Gemini 3.1 Pro (high), dated July 1, 2026.",
+      "score": "61.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://toolathlon.xyz/docs/leaderboard"
     }
   },
   "Gemini 3.8 Flash": {
@@ -507,6 +537,18 @@
       "score": "73.7%",
       "source_type": "model_card",
       "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
+    }
+  },
+  "Hy4 preview": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-03T10:56:49.859844+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Tencent reports this for the text-only HLE-with-tools setting.",
+      "score": "55.4%",
+      "source_type": "model_card",
+      "source_url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg"
     }
   },
   "Kimi K2 0905": {
