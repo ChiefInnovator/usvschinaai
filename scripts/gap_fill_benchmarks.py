@@ -25,11 +25,16 @@ import requests
 # Constants from the spec
 # -----------------------------------------------------------------------------
 
-# Default model chain — `gpt-5.4` as the primary research model, `gpt-5.4-pro`
-# as the stronger fallback if full 5.4 isn't available, and `gpt-5.3` as the
-# last-resort fallback for older accounts. Override at runtime with the
-# AI_GAP_FILL_MODEL env var.
-DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.4", "gpt-5.4-pro", "gpt-5.3"]
+# Default model chain — `gpt-5.6-terra` as the primary research model: a
+# generation newer than gpt-5.4 and cheaper ($2.00/$12.00 per M vs
+# $2.50/$15.00), and it supports everything this pass needs (Responses API,
+# the web_search tool, json_schema structured outputs, reasoning effort).
+# `gpt-5.6-sol` is the stronger fallback and `gpt-5.4` the last resort if the
+# 5.6 line isn't available on the account. Not using gpt-5.6-luna despite it
+# being ~10x cheaper: it is the weakest tier, and a hallucinated benchmark
+# score gets published as fact, which is worse than leaving the cell empty.
+# Override with AI_GAP_FILL_MODEL.
+DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.6-terra", "gpt-5.6-sol", "gpt-5.4"]
 
 # Reasoning tier for the Responses API. Research tasks don't need deep
 # chain-of-thought, so "low" minimizes hidden reasoning tokens which are

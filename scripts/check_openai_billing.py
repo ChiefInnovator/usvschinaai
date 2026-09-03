@@ -24,7 +24,7 @@ import urllib.error
 import urllib.request
 
 RESPONSES_URL = "https://api.openai.com/v1/responses"
-DEFAULT_MODEL = "gpt-5.4"
+DEFAULT_MODEL = "gpt-5.6-terra"
 
 
 def check(api_key: str, model: str) -> tuple[bool, str]:
