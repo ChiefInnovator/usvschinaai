@@ -1544,26 +1544,29 @@ def run_scraper(args):
                 max_value = max(value_values) if value_values else 1
 
                 # -----------------------------------------------------------------
-                # Pass 2: two-pass scoring with convergence iteration
+                # Pass 2: rescore on the qualified benchmark set
                 # -----------------------------------------------------------------
-                # 1. Rank all models by Pass 1 Unified to pick the Initial Top 10.
-                # 2. Determine the qualified benchmark set: benchmarks where >= 8 of
-                #    the current top 10 reported a value.
-                # 3. Rescore every model (not just the top 10) using only qualified
-                #    benchmarks and a flat average — so a model that skipped an
-                #    "easy win" benchmark is no longer penalised for the absence.
-                # 4. The Pass 2 ranking can produce a *different* top 10 than Pass 1
-                #    used to derive the qualified set. If we don't iterate, benchmarks
-                #    that should qualify based on the actual final top 10 can be
-                #    excluded simply because Pass 1 happened to put a non-reporting
-                #    model in its top 10. To fix this, we re-derive the qualified
-                #    set from the new Pass 2 top 10 and re-run Pass 2. We loop until
-                #    the qualified set is stable, capped at MAX_QUALIFIED_ITERATIONS
-                #    to prevent oscillation in pathological cases.
+                # The qualified set is the benchmarks enough of the cohort reported
+                # that comparing models on them is apples-to-apples. Pass 2 rescores
+                # every model as a flat average over just those, so a model that
+                # skipped an "easy win" benchmark is not penalised for the absence.
+                #
+                # The set is derived from the WHOLE cohort, not from the top 10.
+                # Deriving it from the top 10 made scoring depend on cohort
+                # membership: removing two duplicate models on 2026-09-02 pushed HLE
+                # from 8/10 to 7/10 reporters, switching it off entirely and dropping
+                # Claude Fable 5.1 from #1 to #16 with no change in any benchmark
+                # value. It also created a feedback loop - the set decided the top 10
+                # and the top 10 decided the set - which needed iteration and
+                # oscillation detection to terminate at all.
+                #
+                # Against the full cohort there is no loop, so no iteration: the set
+                # is computed once and is identical whether or not duplicate models
+                # were dropped. A proportional threshold keeps it meaningful if the
+                # cohort size ever changes.
                 # If fewer than 3 benchmarks qualify, fall back to Pass 1 silently.
-                QUALIFIED_THRESHOLD = 8
+                QUALIFIED_FRACTION = 0.5
                 MIN_QUALIFIED_FLOOR = 3
-                MAX_QUALIFIED_ITERATIONS = 5
                 qualified_benchmarks: Optional[set] = None
 
                 def _pass1_unified(e: LeaderboardEntry) -> float:
@@ -1579,15 +1582,21 @@ def run_scraper(args):
                         benchmark_min_max=benchmark_min_max,
                     )["unified"]
 
-                def _qualified_for_top10(top10: List[LeaderboardEntry]) -> set:
-                    """Return benchmarks reported by ≥ QUALIFIED_THRESHOLD of the given top 10."""
+                qualified_min_reports = max(2, round(len(combined_entries) * QUALIFIED_FRACTION))
+
+                def _qualified_for_cohort() -> set:
+                    """Benchmarks reported by enough of the full cohort to compare on.
+
+                    Deliberately independent of the ranking: dropping or adding a
+                    model must not change which benchmarks count.
+                    """
                     out = set()
                     for b in benchmark_headers:
                         count = sum(
-                            1 for e in top10
+                            1 for e in combined_entries
                             if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
                         )
-                        if count >= QUALIFIED_THRESHOLD:
+                        if count >= qualified_min_reports:
                             out.add(b)
                     return out
 
@@ -1635,70 +1644,28 @@ def run_scraper(args):
                     return new_top10, bmm, miq, maq, mv, mxv
 
                 initial_top10 = sorted(combined_entries, key=_pass1_unified, reverse=True)[:10]
-                print(f"\n--- Pass 2 / Two-pass scoring ---")
-                print(f"Pass 1 Top 10 (used as the seed for the qualified-set search):")
+                print(f"\n--- Pass 2 / Qualified-set scoring ---")
+                print(f"Pass 1 Top 10:")
                 for i, e in enumerate(initial_top10, 1):
                     print(f"  {i:>2}. {e.name} ({e.country})")
 
-                current_top10 = initial_top10
-                qualified_set = _qualified_for_top10(current_top10)
+                qualified_set = _qualified_for_cohort()
 
                 if len(qualified_set) < MIN_QUALIFIED_FLOOR:
                     print(f"\nWARNING: only {len(qualified_set)} benchmarks qualified "
                           f"(need >= {MIN_QUALIFIED_FLOOR}). Falling back to Pass 1 scoring.")
                 else:
-                    # Iterate: re-derive qualified set from each new Pass 2 top 10 and
-                    # re-rank, until the set stops changing.
-                    seen_qsets: List[set] = [qualified_set]
-                    converged = False
-                    pass2_bmm: Dict[str, tuple] = {}
-                    pass2_miq = pass2_maq = pass2_mv = pass2_mxv = 0.0
-                    for iteration in range(1, MAX_QUALIFIED_ITERATIONS + 1):
-                        new_top10, pass2_bmm, pass2_miq, pass2_maq, pass2_mv, pass2_mxv = _rank_with_qset(qualified_set)
-                        new_qset = _qualified_for_top10(new_top10)
-                        added = sorted(new_qset - qualified_set)
-                        removed = sorted(qualified_set - new_qset)
-                        if not added and not removed:
-                            print(f"\nQualified set converged after {iteration} iteration(s).")
-                            current_top10 = new_top10
-                            converged = True
-                            break
-                        print(
-                            f"\nIteration {iteration}: qualified set changed. "
-                            f"+{len(added)} added, -{len(removed)} removed."
-                        )
-                        if added:
-                            print(f"  added: {', '.join(added)}")
-                        if removed:
-                            print(f"  removed: {', '.join(removed)}")
-                        # Detect oscillation: if we've already seen this exact set, stop.
-                        if any(new_qset == prev for prev in seen_qsets):
-                            print(
-                                f"  → oscillation detected (set repeats a previous iteration); "
-                                f"stopping at iteration {iteration}."
-                            )
-                            current_top10 = new_top10
-                            qualified_set = new_qset
-                            break
-                        seen_qsets.append(new_qset)
-                        qualified_set = new_qset
-                        current_top10 = new_top10
-                    else:
-                        print(
-                            f"\nReached MAX_QUALIFIED_ITERATIONS ({MAX_QUALIFIED_ITERATIONS}) "
-                            f"without convergence. Using last computed qualified set."
-                        )
-
+                    current_top10, pass2_bmm, pass2_miq, pass2_maq, pass2_mv, pass2_mxv = _rank_with_qset(qualified_set)
                     qualified_benchmarks = qualified_set
 
-                    print(f"\nFinal qualified benchmarks ({len(qualified_set)} of {len(benchmark_headers)}, "
-                          f"threshold >= {QUALIFIED_THRESHOLD}/10 of Pass 2 Top 10):")
+                    print(f"\nQualified benchmarks ({len(qualified_set)} of {len(benchmark_headers)}, "
+                          f"threshold >= {qualified_min_reports}/{len(combined_entries)} of the full cohort):")
                     for b in sorted(qualified_set):
                         count = sum(
-                            1 for e in current_top10
+                            1 for e in combined_entries
                             if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
                         )
-                        print(f"  ✓ {b}  ({count}/10)")
+                        print(f"  ✓ {b}  ({count}/{len(combined_entries)})")
 
                     print(f"\nFinal Pass 2 Top 10:")
                     for i, e in enumerate(current_top10, 1):

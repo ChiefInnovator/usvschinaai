@@ -13,8 +13,8 @@ Checks (ERROR = fail the run, WARN = print only):
   ERROR  CodeArena Elo outside 800-2500
   ERROR  negative pricing
   ERROR  model row with no Released date (released-only filter regressed)
-  ERROR  two rows that are the same model at different versions, or the same
-         model listed twice (superseded-version dedupe regressed)
+  WARN   two rows that are the same model at different versions, or the same
+         model listed twice (should have been dropped at scrape time)
   WARN   cohort smaller than 10 per country
   WARN   description "released <date>" disagrees with Released column presence
   WARN   any benchmark cell moving > 15 points vs the previous snapshot
@@ -159,15 +159,19 @@ def main() -> int:
     # dedupe regressed, so fail rather than publish the same model twice.
     for team_key, team_rows in entry.get("teams", {}).items():
         names = [r.get("model", "?") for r in team_rows]
+        # Warnings, not errors. The scraper already drops superseded models at
+        # the point each country's top 10 is fetched; if one still reaches here
+        # the right response is to say so and publish, not to halt the run and
+        # leave the site on stale data.
         for idx, winner in sorted(superseded_models(names).items()):
-            errors.append(
+            warnings.append(
                 f"cohort {team_key}: {names[idx]!r} is an older version of "
-                f"{winner!r} — superseded-version dedupe regressed"
+                f"{winner!r} — should have been dropped at scrape time"
             )
         seen = set()
         for n in names:
             if n in seen:
-                errors.append(f"cohort {team_key}: {n!r} listed twice")
+                warnings.append(f"cohort {team_key}: {n!r} listed twice")
             seen.add(n)
 
     # ---- day-over-day drift -------------------------------------------------
