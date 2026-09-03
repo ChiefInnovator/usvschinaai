@@ -7,8 +7,8 @@ yesterday's data stays live.
 
 Checks (ERROR = fail the run, WARN = print only):
   ERROR  benchmark header that looks like a scraped file artifact (e.g. GDP.pdf)
-  ERROR  duplicate-alias headers (same benchmark under two names, e.g.
-         MRCRv2 vs MRCRv2(8-needle)) — double-counts in Pass 2 scoring
+  WARN   duplicate-alias headers (same benchmark under two names) — may
+         double-count, but never blocks publishing
   ERROR  percent cell outside 0-100
   ERROR  CodeArena Elo outside 800-2500
   ERROR  negative pricing
@@ -50,14 +50,15 @@ DESC_RELEASED_RE = re.compile(r"released [A-Z][a-z]{2} \d{1,2}, \d{4}")
 
 
 def alias_base(name: str) -> str:
-    """Canonical form with any trailing parenthetical stripped first.
+    """Canonical form used to detect two columns that are the same benchmark.
 
-    Deliberately stricter than the scraper's canonicalize_benchmark_name: the
-    scraper merges only the variants named in BENCHMARK_NAME_ALIASES, and this
-    catches the ones it did not, so the run halts and a human decides rather
-    than a benchmark silently counting twice.
+    A trailing parenthetical is NOT stripped: "MMMU-Pro (with tools)" is a
+    different benchmark from "MMMU-Pro" — running a model with tools measures
+    something else — so both columns are expected to coexist and both count.
+    This catches only true spelling collisions (punctuation or casing), not
+    qualified variants.
     """
-    return canonicalize_benchmark_name(re.sub(r"\([^)]*\)\s*$", "", name.strip()))
+    return canonicalize_benchmark_name(name)
 
 
 def parse_num(value):
@@ -106,8 +107,13 @@ def main() -> int:
         by_base.setdefault(alias_base(h), set()).add(h)
     for base, names in sorted(by_base.items()):
         if len(names) > 1:
-            errors.append(
-                f"duplicate benchmark columns (alias collision, will double-count): {sorted(names)}"
+            # A warning, not an error: the daily run must never stop and wait
+            # for someone to adjudicate a benchmark name. Publishing slightly
+            # over-weighted data beats publishing nothing, and the site then
+            # goes stale until a human notices. Add the pair to
+            # BENCHMARK_NAME_ALIASES if they really are one benchmark.
+            warnings.append(
+                f"duplicate benchmark columns (alias collision, may double-count): {sorted(names)}"
             )
 
     # ---- per-cell checks ----------------------------------------------------

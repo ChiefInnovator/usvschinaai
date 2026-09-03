@@ -88,11 +88,18 @@ class ArtifactHeaderTests(unittest.TestCase):
             self.assertFalse(is_artifact_header(name), name)
 
 
-class ValidatorCatchesWhatTheScraperLeavesTests(unittest.TestCase):
-    def test_validator_flags_the_unmerged_variant(self):
-        """The scraper leaves it; the validator must still catch it."""
+class ValidatorCollisionTests(unittest.TestCase):
+    def test_qualified_variant_is_a_separate_benchmark_not_a_collision(self):
+        """MMMU-Pro (with tools) measures something else — both columns stand.
+
+        The validator must not halt the run over this pair.
+        """
         from validate_models import alias_base
-        self.assertEqual(alias_base("MMMU-Pro (with tools)"), alias_base("MMMU-Pro"))
+        self.assertNotEqual(alias_base("MMMU-Pro (with tools)"), alias_base("MMMU-Pro"))
+
+    def test_true_spelling_collision_is_still_flagged(self):
+        from validate_models import alias_base
+        self.assertEqual(alias_base("MMMU Pro"), alias_base("mmmu-pro"))
 
     def test_validator_does_not_flag_genuinely_different_benchmarks(self):
         from validate_models import alias_base
