@@ -1,5 +1,15 @@
 {
   "Claude Fable 5.1": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T11:20:32.200252+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1 Pass@1.",
+      "score": "67.4%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
+    },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -9,6 +19,16 @@
       "score": "67.4%",
       "source_type": "model_card",
       "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-03T11:20:32.200252+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy; listed for Claude Fable 5.1 with adaptive reasoning, max effort, and default fallback.",
+      "score": "93.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/gpqa_diamond_epoch/"
     },
     "SWE-bench Pro": {
       "benchmark": "SWE-bench Pro",
@@ -559,6 +579,26 @@
       "score": "73.7%",
       "source_type": "model_card",
       "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-03T11:20:32.200252+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Google reports this as Humanity's Last Exam (HLE).",
+      "score": "45.4%",
+      "source_type": "model_card",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash"
+    },
+    "SWE-bench Pro": {
+      "benchmark": "SWE-bench Pro",
+      "cached_at": "2026-09-03T11:20:32.200252+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Google reports this as SWE-Bench Pro.",
+      "score": "61.6%",
+      "source_type": "model_card",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash"
     }
   },
   "Grok 4.5": {
