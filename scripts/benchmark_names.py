@@ -54,3 +54,21 @@ def canonicalize_benchmark_name(name: str) -> str:
     """
     canon = re.sub(r"[^a-z0-9]", "", name.strip().lower())
     return BENCHMARK_NAME_ALIASES.get(canon, canon)
+
+
+# Trailing version on a benchmark column: the "1.1" in "DeepSWE1.1", the "2.1"
+# in "Terminal-Bench2.1". Different versions are different benchmarks and stay
+# separate columns — this is only used to spot that two columns are versions of
+# each other, never to merge them.
+_TRAILING_VERSION_RE = re.compile(r"\d+$")
+
+
+def benchmark_version_base(name: str) -> str:
+    """Key shared by every version of one benchmark.
+
+    "DeepSWE" and "DeepSWE1.1" both reduce to "deepswe"; "Terminal-Bench2.1"
+    and "Terminal-Bench4.0" both to "terminalbench". Columns are still scored
+    independently — see canonicalize_benchmark_name, which does NOT collapse
+    versions.
+    """
+    return _TRAILING_VERSION_RE.sub("", canonicalize_benchmark_name(name))

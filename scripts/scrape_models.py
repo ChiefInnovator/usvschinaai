@@ -504,6 +504,18 @@ def format_table(
     return "\n".join(lines)
 
 
+# A model must report at least this many benchmarks on the leaderboard table to
+# join a country's cohort. Below it there is nothing to compare, and the model
+# still consumes a top-10 slot and drags its team's total toward zero.
+MIN_BENCHMARKS_FOR_COHORT = 2
+
+# Share of the qualified benchmark set a model must report to be ranked. Without
+# this, a model measured on 2 of 7 benchmarks that happened to score well on both
+# outranks one measured on all 7 — which is how Gemini 3.8 Flash took #1 on
+# 2026-09-03 with an avgIq of 75.73 from exactly two numbers.
+MIN_QUALIFIED_COVERAGE = 0.5
+
+
 def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["LeaderboardEntry"]:
     """Drop rows that are older versions of another model in the same cohort.
 
@@ -699,6 +711,23 @@ def scrape_country_leaderboard(
         released = columns.get("Released", "").strip()
         if released in ("", "-", "—", "–"):
             print(f"    -- skipping {name}: no release date (unreleased)")
+            continue
+
+        # Unmeasured-model filter: a model has to report something before it can
+        # be compared. "Gemini 3.8 Flash Cyber" reached the 2026-09-03 board with
+        # a single specialist benchmark (CyberGym), scored avgIq 0.0 / unified
+        # 0.0, and still occupied a US top-10 slot that a measured model should
+        # have had. Skipping here rather than at scoring time means the freed
+        # slot backfills from the next-ranked model.
+        reported = sum(
+            1 for b in benchmark_headers
+            if columns.get(b, "") not in MISSING_VALUE_MARKERS
+        )
+        if reported < MIN_BENCHMARKS_FOR_COHORT:
+            print(
+                f"    -- skipping {name}: only {reported} benchmark(s) reported "
+                f"(need >= {MIN_BENCHMARKS_FOR_COHORT}) — not comparable"
+            )
             continue
 
         candidates.append(LeaderboardEntry(
@@ -1676,6 +1705,33 @@ def run_scraper(args):
                     max_avg_iq = pass2_maq
                     min_value = pass2_mv
                     max_value = pass2_mxv
+
+                    # Minimum-coverage rule. A flat average over the qualified
+                    # set says nothing useful when a model only reported two of
+                    # them: the score reflects which benchmarks it happened to
+                    # run, not how good it is. Applied here, after gap-filling
+                    # has had its chance to fill the cells, so a model is only
+                    # dropped when the number genuinely isn't available anywhere.
+                    min_cov = max(1, int(round(len(qualified_set) * MIN_QUALIFIED_COVERAGE)))
+
+                    def _coverage(e: LeaderboardEntry) -> int:
+                        return sum(
+                            1 for b in qualified_set
+                            if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
+                        )
+
+                    under = [e for e in combined_entries if _coverage(e) < min_cov]
+                    if under:
+                        print(
+                            f"\nDropping {len(under)} model(s) below the minimum coverage "
+                            f"of {min_cov}/{len(qualified_set)} qualified benchmarks:"
+                        )
+                        for e in sorted(under, key=lambda x: -_coverage(x)):
+                            print(f"  -- {e.name} ({e.country}) — {_coverage(e)}/{len(qualified_set)}")
+                        dropped_names = {e.name for e in under}
+                        us_entries = [e for e in us_entries if e.name not in dropped_names]
+                        cn_entries = [e for e in cn_entries if e.name not in dropped_names]
+                        combined_entries = us_entries + cn_entries
 
                     print(f"\nPass 2 scoring applied. Non-qualified benchmarks are kept as raw columns "
                           f"but excluded from AvgIQ / Unified.")

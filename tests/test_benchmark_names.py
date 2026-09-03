@@ -109,3 +109,59 @@ class ValidatorCollisionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class VersionSiblingTests(unittest.TestCase):
+    """Versions stay separate columns, but we must be able to spot they are kin.
+
+    Gap-fill filled `DeepSWE` for five models with a value exactly equal to
+    their existing `DeepSWE1.1`, while every genuinely scraped pair differed.
+    It was copying the sibling rather than researching the benchmark, and since
+    both columns score, that double-weighted the benchmark.
+    """
+
+    def test_versions_share_a_base(self):
+        from benchmark_names import benchmark_version_base
+        self.assertEqual(
+            benchmark_version_base("DeepSWE"), benchmark_version_base("DeepSWE1.1")
+        )
+        self.assertEqual(
+            benchmark_version_base("Terminal-Bench2.1"),
+            benchmark_version_base("Terminal-Bench4.0"),
+        )
+
+    def test_different_benchmarks_do_not_share_a_base(self):
+        from benchmark_names import benchmark_version_base
+        bases = [
+            benchmark_version_base(n)
+            for n in ("DeepSWE1.1", "SWE-benchPro", "Terminal-Bench2.1", "HLE", "OSWorld2.0")
+        ]
+        self.assertEqual(len(set(bases)), len(bases))
+
+    def test_sharing_a_base_does_not_merge_the_columns(self):
+        """Scoring must still treat them as two separate benchmarks."""
+        self.assertNotEqual(
+            canonicalize_benchmark_name("DeepSWE"),
+            canonicalize_benchmark_name("DeepSWE1.1"),
+        )
+
+
+class SiblingVersionLockTests(unittest.TestCase):
+    def test_gap_fill_skips_a_benchmark_whose_sibling_is_already_reported(self):
+        try:
+            from gap_fill_benchmarks import has_sibling_version_value
+        except ImportError:
+            self.skipTest("gap_fill_benchmarks needs requests")
+
+        class Entry:
+            def __init__(self, columns):
+                self.columns = columns
+
+        headers = ["DeepSWE", "DeepSWE1.1", "HLE"]
+        has_sibling = Entry({"DeepSWE1.1": "75.4%", "HLE": "60.0%"})
+        self.assertTrue(has_sibling_version_value(has_sibling, "DeepSWE", headers))
+        # No sibling reported -> researching it is legitimate.
+        no_sibling = Entry({"HLE": "60.0%"})
+        self.assertFalse(has_sibling_version_value(no_sibling, "DeepSWE", headers))
+        # An unrelated benchmark is never blocked.
+        self.assertFalse(has_sibling_version_value(has_sibling, "HLE", headers))

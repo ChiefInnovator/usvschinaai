@@ -20,6 +20,8 @@ from typing import Any, Dict, FrozenSet, List, Optional, Tuple
 
 import requests
 
+from benchmark_names import benchmark_version_base
+
 
 # -----------------------------------------------------------------------------
 # Constants from the spec
@@ -275,6 +277,29 @@ def assign_tier(cohort_count: int) -> int:
     return 3
 
 
+def has_sibling_version_value(entry: Any, benchmark: str, benchmark_headers: List[str]) -> bool:
+    """Whether the model already reports another version of this benchmark.
+
+    On 2026-09-03 the pass filled `DeepSWE` for five models with a value exactly
+    equal to their existing `DeepSWE1.1` — 75.4/75.4, 73.7/73.7, 66.9/66.9,
+    63.4/63.4, 58.7/58.7 — while every model whose two values came from
+    llm-stats directly differed (72.7/73.0, 67.5/69.0, 69.6/70.0, 67.2/67.0).
+    It was copying the sibling, not researching the benchmark, and since both
+    columns are scored the effect was to weight that benchmark twice. Muse Spark
+    1.3 reached #1 partly on the duplicate.
+
+    A model that has run v1.1 and not v1.0 usually has no v1.0 number to find,
+    so the honest outcome is an empty cell.
+    """
+    base = benchmark_version_base(benchmark)
+    for other in benchmark_headers:
+        if other == benchmark:
+            continue
+        if benchmark_version_base(other) == base and _has_value(entry, other):
+            return True
+    return False
+
+
 def build_candidates(
     combined_entries: List[Any],
     benchmark_headers: List[str],
@@ -309,6 +334,9 @@ def build_candidates(
                 continue
             # §5.4 vendor-internal lock
             if is_vendor_blocked(entry, benchmark, combined_entries):
+                continue
+            # §5.6 sibling-version lock
+            if has_sibling_version_value(entry, benchmark, benchmark_headers):
                 continue
 
             candidates.append(
