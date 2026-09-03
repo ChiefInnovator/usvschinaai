@@ -50,12 +50,14 @@ DESC_RELEASED_RE = re.compile(r"released [A-Z][a-z]{2} \d{1,2}, \d{4}")
 
 
 def alias_base(name: str) -> str:
-    """Shared benchmark identity — see scripts/benchmark_names.py.
+    """Canonical form with any trailing parenthetical stripped first.
 
-    The scraper merges variants using this exact function, so a collision here
-    means the merge failed rather than that the two names merely look alike.
+    Deliberately stricter than the scraper's canonicalize_benchmark_name: the
+    scraper merges only the variants named in BENCHMARK_NAME_ALIASES, and this
+    catches the ones it did not, so the run halts and a human decides rather
+    than a benchmark silently counting twice.
     """
-    return canonicalize_benchmark_name(name)
+    return canonicalize_benchmark_name(re.sub(r"\([^)]*\)\s*$", "", name.strip()))
 
 
 def parse_num(value):

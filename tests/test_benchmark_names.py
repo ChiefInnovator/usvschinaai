@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Tests for benchmark-name identity (scripts/benchmark_names.py).
 
-Written after a production incident: llm-stats began exposing "MMMU-Pro (with
-tools)" on detail pages, the scraper added it as a second column beside
-"MMMU-Pro", and validate_models.py halted the daily run to stop the two
-double-counting in Pass 2 scoring. The site went a full cycle without fresh
-data. The same thing had happened before with "MRCRv2 (8-needle)".
+Two names are merged only when BENCHMARK_NAME_ALIASES says so. Anything else
+that looks like a duplicate is left as two columns for validate_models.py to
+flag, which halts the run so a human decides whether they really measure the
+same thing. That split is deliberate — the scraper does not get to assume.
 """
 import sys
 import unittest
@@ -16,41 +15,48 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
 
 
-class TrailingParentheticalTests(unittest.TestCase):
-    def test_mmmu_pro_with_tools_merges(self):
-        """The exact collision that broke the 2026-09-02 scrape."""
-        self.assertEqual(
-            canonicalize_benchmark_name("MMMU-Pro (with tools)"),
-            canonicalize_benchmark_name("MMMU-Pro"),
-        )
-
-    def test_mrcrv2_8_needle_merges(self):
-        """The earlier instance, previously handled by a hand-written alias."""
+class ExplicitAliasOnlyTests(unittest.TestCase):
+    def test_listed_variant_merges(self):
+        """MRCRv2 (8-needle) is named in the alias table, so it merges."""
         self.assertEqual(
             canonicalize_benchmark_name("MRCRv2 (8-needle)"),
             canonicalize_benchmark_name("MRCRv2"),
         )
 
-    def test_arbitrary_future_variant_merges(self):
-        """A qualifier we have never seen must not need a code change."""
-        for qualifier in ("(no tools)", "(pass@1)", "(64k context)", "(v2 harness)"):
-            self.assertEqual(
+    def test_unlisted_variant_is_NOT_merged(self):
+        """MMMU-Pro (with tools) is not in the table, so it stays separate.
+
+        The scraper must not silently fold an unrecognised variant into another
+        column; validate_models.py flags the pair instead.
+        """
+        self.assertNotEqual(
+            canonicalize_benchmark_name("MMMU-Pro (with tools)"),
+            canonicalize_benchmark_name("MMMU-Pro"),
+        )
+
+    def test_arbitrary_future_variant_is_NOT_merged(self):
+        for qualifier in ("(no tools)", "(pass@1)", "(64k context)"):
+            self.assertNotEqual(
                 canonicalize_benchmark_name(f"SWE-benchPro {qualifier}"),
                 canonicalize_benchmark_name("SWE-benchPro"),
                 qualifier,
             )
 
-    def test_only_trailing_parentheticals_are_stripped(self):
-        """A leading or embedded parenthetical is part of the name."""
-        self.assertNotEqual(
-            canonicalize_benchmark_name("GPQA (Diamond) Extended"),
-            canonicalize_benchmark_name("GPQA"),
-        )
-
     def test_distinct_benchmarks_stay_distinct(self):
         names = ["GPQA", "BrowseComp", "MMMU-Pro", "SWE-benchPro", "Terminal-Bench2.1"]
         keys = [canonicalize_benchmark_name(n) for n in names]
         self.assertEqual(len(set(keys)), len(names))
+
+    def test_version_variants_stay_separate(self):
+        """Terminal-Bench 4.0 runs ~60 points below 2.1 — different benchmarks."""
+        self.assertNotEqual(
+            canonicalize_benchmark_name("Terminal-Bench2.1"),
+            canonicalize_benchmark_name("Terminal-Bench4.0"),
+        )
+        self.assertNotEqual(
+            canonicalize_benchmark_name("DeepSWE"),
+            canonicalize_benchmark_name("DeepSWE1.1"),
+        )
 
 
 class AbbreviationAliasTests(unittest.TestCase):
@@ -82,12 +88,16 @@ class ArtifactHeaderTests(unittest.TestCase):
             self.assertFalse(is_artifact_header(name), name)
 
 
-class ScraperValidatorAgreementTests(unittest.TestCase):
-    def test_validator_uses_the_same_identity_as_the_scraper(self):
-        """Separate copies previously drifted and halted the daily run."""
+class ValidatorCatchesWhatTheScraperLeavesTests(unittest.TestCase):
+    def test_validator_flags_the_unmerged_variant(self):
+        """The scraper leaves it; the validator must still catch it."""
         from validate_models import alias_base
-        for name in ("MMMU-Pro (with tools)", "MRCRv2 (8-needle)", "HLE", "GPQA"):
-            self.assertEqual(alias_base(name), canonicalize_benchmark_name(name), name)
+        self.assertEqual(alias_base("MMMU-Pro (with tools)"), alias_base("MMMU-Pro"))
+
+    def test_validator_does_not_flag_genuinely_different_benchmarks(self):
+        from validate_models import alias_base
+        self.assertNotEqual(alias_base("Terminal-Bench2.1"), alias_base("Terminal-Bench4.0"))
+        self.assertNotEqual(alias_base("GPQA"), alias_base("BrowseComp"))
 
 
 if __name__ == "__main__":

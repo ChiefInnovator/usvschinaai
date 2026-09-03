@@ -19,16 +19,19 @@ can use it without installing Playwright.
 import re
 from typing import Dict
 
-# A trailing parenthetical qualifies a benchmark rather than naming a new one:
-# "MMMU-Pro (with tools)" is MMMU-Pro under a particular harness setting.
-_TRAILING_PARENTHETICAL_RE = re.compile(r"\s*\([^)]*\)\s*$")
-
-# Variants that are not distinguished by a parenthetical still need an explicit
-# alias — canonicalization cannot fuzzy-match an abbreviation to its expansion.
+# Naming variants are collapsed only where they are named explicitly below.
+# Nothing is merged generically: two columns that look like the same benchmark
+# are left alone for validate_models.py to flag, so a human decides whether
+# they really measure the same thing rather than the scraper assuming it.
 BENCHMARK_NAME_ALIASES: Dict[str, str] = {
     # canonicalized form -> shared canonical token
     "humanityslastexam": "hle",
     "hle": "hle",
+    # MRCRv2 appears as "MRCRv2" on the leaderboard table and
+    # "MRCRv2 (8-needle)" on detail pages — same benchmark, and without this
+    # alias both columns land in the snapshot and can double-count in Pass 2.
+    "mrcrv2": "mrcrv2",
+    "mrcrv28needle": "mrcrv2",
 }
 
 # Detail pages occasionally leak non-benchmark artifacts (e.g. a "GDP.pdf"
@@ -43,14 +46,11 @@ def is_artifact_header(name: str) -> bool:
 
 
 def canonicalize_benchmark_name(name: str) -> str:
-    """Lowercased, alphanumeric-only key that collapses naming variants.
+    """Lowercased, alphanumeric-only form for fuzzy benchmark-name matching.
 
-    A trailing parenthetical is dropped first, so a new qualified variant on
-    llm-stats merges into its base column automatically instead of halting the
-    daily run until someone hand-writes an alias. Remaining abbreviation pairs
-    (e.g. "Humanity's Last Exam" / "HLE") resolve through
-    BENCHMARK_NAME_ALIASES.
+    Known abbreviation variants (e.g. "Humanity's Last Exam" / "HLE") are
+    collapsed through BENCHMARK_NAME_ALIASES so both forms resolve to the same
+    key. Unlisted variants are deliberately NOT merged.
     """
-    base = _TRAILING_PARENTHETICAL_RE.sub("", name.strip())
-    canon = re.sub(r"[^a-z0-9]", "", base.lower())
+    canon = re.sub(r"[^a-z0-9]", "", name.strip().lower())
     return BENCHMARK_NAME_ALIASES.get(canon, canon)
