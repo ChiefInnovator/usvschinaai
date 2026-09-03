@@ -1,4 +1,36 @@
 {
+  "Claude Fable 5.1": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1 at max effort.",
+      "score": "67.4%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
+    },
+    "SWE-bench Pro": {
+      "benchmark": "SWE-bench Pro",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported at max effort.",
+      "score": "81.2%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1 at max effort.",
+      "score": "77.8%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
+    }
+  },
   "Claude Opus 4.5": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -41,6 +73,48 @@
       "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
     }
   },
+  "Claude Opus 5": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass rate for Claude Code using Claude Opus 5 on the current Snorkel AI leaderboard snapshot.",
+      "score": "47.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1 leaderboard result for claude-opus-5 at max effort; the leaderboard reports 74% ±4%.",
+      "score": "74.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://deepswe.datacurve.ai/"
+    },
+    "SWE-bench Pro": {
+      "benchmark": "SWE-bench Pro",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported in Anthropic's Claude Opus 5 system card.",
+      "score": "79.2%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-system-card"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Toolathlon-Verified Pass@1, averaged over three trials; evaluated at max effort.",
+      "score": "80.6%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-system-card"
+    }
+  },
   "Claude Sonnet 4.6": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -51,6 +125,40 @@
       "score": "95.6%",
       "source_type": "model_card",
       "source_url": "https://anthropic.com/claude-sonnet-4-6-system-card"
+    }
+  },
+  "Claude Sonnet 5": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1 leaderboard result for claude-sonnet-5[max], updated September 2, 2026.",
+      "score": "54.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://deepswe.datacurve.ai/"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Anthropic reports this result using its specified xhigh-effort agent configuration.",
+      "score": "80.4%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf"
+    }
+  },
+  "DeepSeek-V4-Flash-Vision-Exp": {
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported specifically as Toolathlon-Verified using DeepSeek Harness minimal mode, max effort, temperature 1.0, and top_p 0.95.",
+      "score": "75.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
     }
   },
   "GLM-4.6": {
@@ -127,6 +235,30 @@
       "score": "56.2%",
       "source_type": "vendor_blog",
       "source_url": "https://docs.z.ai/guides/llm/glm-5"
+    }
+  },
+  "GLM-5.3": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Z.ai reports DeepSWE v1.1 using mini-swe-agent, temperature 0.95, top-p 1.0, a 6-hour timeout, and 400K context.",
+      "score": "66.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3"
+    }
+  },
+  "GLM-5.3-Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported for DeepSWE v1.1 using the mini-swe-agent harness.",
+      "score": "63.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/zai-org/GLM-5.3-Flash"
     }
   },
   "GPT-5 High": {
@@ -343,6 +475,40 @@
       "source_url": "https://deepmind.google/models/gemini/pro/"
     }
   },
+  "Gemini 3.1 Pro": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis reports this for Gemini CLI using Gemini 3.1 Pro (high); this is a harness-specific evaluation.",
+      "score": "14.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/agents/coding-agents/comparisons/gemini-cli-vs-muse-code"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis reports this for Gemini CLI using Gemini 3.1 Pro (high); this is a harness-specific evaluation.",
+      "score": "76.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/agents/coding-agents/comparisons/gemini-cli-vs-muse-code"
+    }
+  },
+  "Gemini 3.8 Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported by Google for DeepSWE v1.1 using a mini-SWE agent harness with high thinking.",
+      "score": "73.7%",
+      "source_type": "model_card",
+      "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
+    }
+  },
   "Kimi K2 0905": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -429,6 +595,28 @@
       "source_url": "https://huggingface.co/zai-org/GLM-5/blob/c35b39f62af17ae76fd6dc5e95a7824d8c01a207/README.md"
     }
   },
+  "Kimi K3": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official model card reports the primary leaderboard pass-rate metric; Kimi K3 was evaluated with Kimi Code at max reasoning effort.",
+      "score": "28.3%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    "OSWorld 2.0": {
+      "benchmark": "OSWorld 2.0",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official model card reports this result for Kimi K3 at max reasoning effort.",
+      "score": "58.3%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    }
+  },
   "MiniMax M2.1": {
     "Terminal-Bench 2.0": {
       "benchmark": "Terminal-Bench 2.0",
@@ -505,6 +693,18 @@
       "source_url": "https://huggingface.co/zai-org/GLM-5.1-FP8/blob/main/README.md"
     }
   },
+  "Muse Spark 1.3": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported by Meta for DeepSWE v1.1 using Muse Spark 1.3 with max reasoning and a mini-swe agent.",
+      "score": "75.4%",
+      "source_type": "model_card",
+      "source_url": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology"
+    }
+  },
   "Qwen3.5-122B-A10B": {
     "AIME 2025": {
       "benchmark": "AIME 2025",
@@ -547,6 +747,18 @@
       "score": "79.0%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+    }
+  },
+  "Qwen3.8-Flash-Next": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-03T10:39:12.689411+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported by Qwen for DeepSWE 1.1.",
+      "score": "58.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
     }
   }
 }
