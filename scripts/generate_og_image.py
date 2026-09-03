@@ -2,7 +2,8 @@
 """
 Generate og-image.png and ig-image.png from models.json data using Playwright.
 OG image: 1200x630 landscape for social sharing.
-IG image: 1080x1920 portrait for Instagram with top-10 leaderboard.
+IG image: 1080x1350 (4:5) for Instagram. The feed crops anything taller
+than 4:5, so a 9:16 canvas lost the header and the #10 row.
 Both images are compressed via Pillow to minimize file size.
 """
 import json
@@ -322,11 +323,11 @@ def main():
         compress_png(og_output_path)
         print(f"Saved OG image: {og_output_path}")
 
-        # --- IG image (1080x1920) ---
+        # --- IG image (1080x1350, Instagram's tallest uncropped feed ratio) ---
         if ig_template_path.exists():
             top10 = load_top10_models(models_path)
             ig_html = build_ig_html(scores, top10, ig_template_path)
-            screenshot_html(ig_html, ig_output_path, 1080, 1920)
+            screenshot_html(ig_html, ig_output_path, 1080, 1350)
             compress_png(ig_output_path)
             print(f"Saved IG image: {ig_output_path}")
         else:
