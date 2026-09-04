@@ -129,13 +129,18 @@ class PaletteTests(unittest.TestCase):
 
     def test_chart_formats_use_neutral_surfaces_only(self):
         """Bars and lines carry team blue/red; on cobalt or sunrise they vanished."""
-        import colorsys
+        # Chroma (RGB max - min), not HLS saturation: HLS rates near-black
+        # #020617 as 84% saturated, which is nonsense for a surface.
+        def chroma(hexs):
+            r, g, b = (int(hexs[i:i+2], 16) / 255 for i in (1, 3, 5))
+            return max(r, g, b) - min(r, g, b)
         for fmt in CHART_FORMATS:
             for name in FORMAT_PALETTES[fmt]:
                 bg = PALETTES[name]["bg"]
-                r, g, b = (int(bg[i:i+2], 16) / 255 for i in (1, 3, 5))
-                _, _, sat = colorsys.rgb_to_hls(r, g, b)
-                self.assertLess(sat, 0.5, f"{fmt} on {name}: saturated surface {bg} fights the team hues")
+                self.assertLess(chroma(bg), 0.15, f"{fmt} on {name}: coloured surface {bg} fights the team hues")
+        # And the rule has teeth: the saturated palettes must fail it.
+        self.assertGreater(chroma(PALETTES["cobalt"]["bg"]), 0.15)
+        self.assertGreater(chroma(PALETTES["sunrise"]["bg"]), 0.15)
 
     def test_never_yesterdays_palette(self):
         for fmt in FORMAT_PALETTES:
