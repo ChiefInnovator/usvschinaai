@@ -107,6 +107,11 @@ class PaletteTests(unittest.TestCase):
             for p in opts:
                 self.assertIn(p, PALETTES)
 
+    def test_accent_is_never_the_ink_colour(self):
+        """On newsprint the accent equalled the ink, so the #4 highlight bar vanished."""
+        for name, pal in PALETTES.items():
+            self.assertNotEqual(pal["accent"].lower(), pal["ink"].lower(), name)
+
     def test_never_yesterdays_palette(self):
         for fmt in FORMAT_PALETTES:
             for yesterday in PALETTES:

@@ -40,8 +40,8 @@ NO_REPEAT_DAYS = 5
 # Each format has two palettes so the same story two days apart still looks
 # different, and the chooser refuses yesterday's palette outright.
 PALETTES = {
-    "midnight":  {"bg": "#020617", "bg2": "#0f172a", "ink": "#f8fafc", "muted": "#94a3b8", "accent": "#f8fafc"},
-    "newsprint": {"bg": "#eef2f7", "bg2": "#dfe6ee", "ink": "#0b1f3a", "muted": "#4b5b70", "accent": "#0b1f3a"},
+    "midnight":  {"bg": "#020617", "bg2": "#0f172a", "ink": "#f8fafc", "muted": "#94a3b8", "accent": "#fbbf24"},
+    "newsprint": {"bg": "#eef2f7", "bg2": "#dfe6ee", "ink": "#0b1f3a", "muted": "#4b5b70", "accent": "#b45309"},  # amber: accent must differ from ink or highlights vanish
     "cobalt":    {"bg": "#1e3a8a", "bg2": "#1d4ed8", "ink": "#eff6ff", "muted": "#bfdbfe", "accent": "#facc15"},
     "signal":    {"bg": "#7f1d1d", "bg2": "#b91c1c", "ink": "#fff1f2", "muted": "#fecaca", "accent": "#fde68a"},
     "graphite":  {"bg": "#1f2937", "bg2": "#111827", "ink": "#f9fafb", "muted": "#9ca3af", "accent": "#f59e0b"},
