@@ -167,6 +167,8 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
             "image_url": image_url,
             "caption": caption,
             "access_token": access_token,
+            **tag_fields(),
+            **collaborator_fields(),
         },
         timeout=60,
     )
@@ -212,7 +214,7 @@ def post_carousel(image_urls, caption, access_token, ig_user_id):
         print(f"Creating carousel item {i}/{len(image_urls)} for {url}...")
         resp = requests.post(
             f"{GRAPH_API_BASE}/{ig_user_id}/media",
-            data={"image_url": url, "is_carousel_item": "true", "access_token": access_token},
+            data={"image_url": url, "is_carousel_item": "true", "access_token": access_token, **tag_fields()},
             timeout=60,
         )
         _raise_with_body(resp, f"carousel item {i}")
@@ -224,7 +226,7 @@ def post_carousel(image_urls, caption, access_token, ig_user_id):
     parent = requests.post(
         f"{GRAPH_API_BASE}/{ig_user_id}/media",
         data={"media_type": "CAROUSEL", "children": ",".join(child_ids),
-              "caption": caption, "access_token": access_token},
+              "caption": caption, "access_token": access_token, **collaborator_fields()},
         timeout=60,
     )
     _raise_with_body(parent, "carousel container")
@@ -241,6 +243,50 @@ def post_carousel(image_urls, caption, access_token, ig_user_id):
     post_id = publish.json()["id"]
     print(f"Published carousel! Post ID: {post_id}")
     return post_id
+
+
+# ---------------------------------------------------------------------------
+# Tagging
+# ---------------------------------------------------------------------------
+# IG_TAG_USERNAME (default richcrane): mentioned in the caption and tagged on
+# every image via user_tags (public accounts only; x/y are fractions of the
+# image, placed bottom-right beside the site URL). IG_COLLABORATORS (opt-in,
+# comma-separated, max 3) adds the post to those accounts' own grids via the
+# collaborators field; the invited account has to accept.
+
+DEFAULT_TAG_USERNAME = "richcrane"
+TAG_POSITION = {"x": 0.92, "y": 0.96}
+
+
+def tag_username():
+    return os.environ.get("IG_TAG_USERNAME", DEFAULT_TAG_USERNAME).strip().lstrip("@")
+
+
+def collaborators():
+    raw = os.environ.get("IG_COLLABORATORS", "")
+    names = [n.strip().lstrip("@") for n in raw.split(",") if n.strip()]
+    return names[:3]
+
+
+def with_mention(caption, username=None):
+    """Append an @mention once, on its own line, if it is not already there."""
+    username = username or tag_username()
+    if not username or f"@{username}" in caption:
+        return caption
+    return f"{caption.rstrip()}\n\n@{username}"
+
+
+def tag_fields(username=None):
+    """Extra form fields for an image container so the account is tagged on it."""
+    username = username or tag_username()
+    if not username:
+        return {}
+    return {"user_tags": json.dumps([{"username": username, **TAG_POSITION}])}
+
+
+def collaborator_fields():
+    names = collaborators()
+    return {"collaborators": json.dumps(names)} if names else {}
 
 
 # ---------------------------------------------------------------------------
@@ -341,7 +387,7 @@ def main():
             return
 
     data = load_caption_data(models_path)
-    caption = os.environ.get("IG_CAPTION") or build_caption(data)
+    caption = with_mention(os.environ.get("IG_CAPTION") or build_caption(data))
 
     print(f"Caption:\n{caption}\n")
 

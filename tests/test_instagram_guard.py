@@ -138,3 +138,51 @@ class CarouselTests(unittest.TestCase):
             pti.post_carousel(["only-one"], "cap", "tok", "user")
         with self.assertRaises(ValueError):
             pti.post_carousel([f"s{i}" for i in range(11)], "cap", "tok", "user")
+
+
+@unittest.skipIf(pti is None, "requests not installed")
+class TaggingTests(unittest.TestCase):
+    def setUp(self):
+        import os
+        for k in ("IG_TAG_USERNAME", "IG_COLLABORATORS"):
+            self.addCleanup(os.environ.pop, k, None)
+            os.environ.pop(k, None)
+
+    def test_default_handle_is_richcrane(self):
+        self.assertEqual(pti.tag_username(), "richcrane")
+
+    def test_mention_added_once_and_not_duplicated(self):
+        c = pti.with_mention("Hook\n\n#AI")
+        self.assertTrue(c.endswith("\n\n@richcrane"))
+        self.assertEqual(pti.with_mention(c), c)
+
+    def test_user_tags_field_shape(self):
+        t = json.loads(pti.tag_fields()["user_tags"])
+        self.assertEqual(t, [{"username": "richcrane", "x": 0.92, "y": 0.96}])
+        self.assertTrue(0 <= t[0]["x"] <= 1 and 0 <= t[0]["y"] <= 1)
+
+    def test_collaborators_opt_in_and_capped(self):
+        import os
+        self.assertEqual(pti.collaborator_fields(), {})
+        os.environ["IG_COLLABORATORS"] = "@richcrane, mill5, a, b"
+        self.assertEqual(json.loads(pti.collaborator_fields()["collaborators"]), ["richcrane", "mill5", "a"])
+
+    def test_carousel_tags_every_child_and_collaborators_on_parent(self):
+        import os
+        os.environ["IG_COLLABORATORS"] = "richcrane"
+        calls = []
+        class R:
+            ok, status_code, text = True, 200, ""
+            def __init__(self, p): self._p = p
+            def json(self): return self._p
+            def raise_for_status(self): pass
+        def post(url, data=None, timeout=None):
+            calls.append((url.rsplit("/", 1)[-1], dict(data))); return R({"id": f"c{len(calls)}"})
+        self.addCleanup(setattr, pti.requests, "post", pti.requests.post)
+        self.addCleanup(setattr, pti, "wait_for_container", pti.wait_for_container)
+        self.addCleanup(setattr, pti, "check_token_expiry", pti.check_token_expiry)
+        pti.requests.post = post; pti.wait_for_container = lambda *a, **k: None; pti.check_token_expiry = lambda *a, **k: None
+        pti.post_carousel(["https://x/1.png", "https://x/2.png"], "cap", "tok", "user")
+        self.assertIn("user_tags", calls[0][1]); self.assertIn("user_tags", calls[1][1])
+        self.assertNotIn("user_tags", calls[2][1])
+        self.assertEqual(json.loads(calls[2][1]["collaborators"]), ["richcrane"])
