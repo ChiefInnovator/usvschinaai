@@ -189,3 +189,65 @@ class CacheOnlyTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+
+class RescoreTests(unittest.TestCase):
+    """Owner decision 2026-09-04: fill cells, then re-score with today's scorer."""
+
+    def _snapshot(self):
+        import backfill_gap_fill as bf
+        def row(name, origin, **cells):
+            r = {"model": name, "organization": "x", "origin": origin, "created": "Aug. 2026",
+                 "avgIq": 1.0, "value": 1.0, "unified": 1.0, "coverage": "0/0",
+                 "Input$/M": "$1.00", "Output$/M": "$2.00"}
+            r.update(cells); return r
+        us = [row(f"US{i}", "US", A=f"{50+i}%", B=f"{50+i}%", C=f"{50+i}%", D=f"{50+i}%") for i in range(5)]
+        cn = [row(f"CN{i}", "CN", A=f"{40+i}%", B=f"{40+i}%", C=f"{40+i}%", D=f"{40+i}%") for i in range(5)]
+        return bf, {"timestamp": "2026-08-20T03:00:00+00:00", "teams": {"US": us, "CN": cn}}
+
+    def test_rescore_rewrites_scores_and_keeps_originals_once(self):
+        bf, snap = self._snapshot()
+        changed = bf.rescore_snapshot(snap)
+        self.assertEqual(changed, 10)
+        top = snap["teams"]["US"][4]
+        self.assertEqual(top["_prior"], {"avgIq": 1.0, "value": 1.0, "unified": 1.0, "coverage": "0/0"})
+        self.assertNotEqual(top["unified"], 1.0)
+        first_prior = dict(top["_prior"])
+        top["A"] = "99%"                               # a later fill
+        bf.rescore_snapshot(snap)
+        self.assertEqual(top["_prior"], first_prior, "_prior must never be overwritten")
+
+    def test_cohort_membership_and_order_are_untouched(self):
+        bf, snap = self._snapshot()
+        before = {t: [r["model"] for r in rows] for t, rows in snap["teams"].items()}
+        bf.rescore_snapshot(snap)
+        after = {t: [r["model"] for r in rows] for t, rows in snap["teams"].items()}
+        self.assertEqual(before, after)
+
+    def test_a_fill_changes_the_top_ten(self):
+        bf, snap = self._snapshot()
+        bf.rescore_snapshot(snap)
+        rank = lambda: sorted((r["model"] for t in snap["teams"].values() for r in t),
+                              key=lambda m: -next(float(r["unified"]) for t in snap["teams"].values() for r in t if r["model"] == m))
+        self.assertEqual(rank()[0], "US4")
+        cn0 = snap["teams"]["CN"][0]
+        for b in ("A", "B", "C", "D"):
+            cn0[b] = "95%"                             # backfill lands strong numbers
+        bf.rescore_snapshot(snap)
+        self.assertEqual(rank()[0], "CN0")
+
+    def test_coverage_is_written_and_sparse_cells_are_kept(self):
+        bf, snap = self._snapshot()
+        snap["teams"]["US"][0]["Rare"] = "1%"          # reported by one model only
+        bf.rescore_snapshot(snap)
+        self.assertEqual(snap["teams"]["US"][0]["coverage"], "4/4")
+        self.assertIn("Rare", snap["teams"]["US"][0], "history cells must never be deleted")
+
+    def test_badges_follow_the_rescored_newest_snapshot(self):
+        bf, snap = self._snapshot()
+        data = {"teams": {"usa": {"badge": "RUNNER UP"}, "china": {"badge": "OVERALL WINNER"}}, "history": [snap]}
+        bf.rescore_snapshot(snap)
+        bf.recompute_badges(data)
+        self.assertEqual(data["teams"]["usa"]["badge"], "OVERALL WINNER")
+        self.assertEqual(data["teams"]["china"]["badge"], "RUNNER UP")

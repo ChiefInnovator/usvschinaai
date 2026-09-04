@@ -48,6 +48,7 @@ CURRENT_JSON = REPO_ROOT / "current.json"
 # its source URL in _provenance, and the daily pass keeps using the strong
 # chain. Override with --model.
 BACKFILL_MODEL = "gpt-5.6-luna"
+DEFAULT_DAYS = 45
 
 # Row fields that are bookkeeping, not leaderboard columns. META_KEYS covers
 # the metadata/aggregate columns the scraper itself excludes from scoring
@@ -271,6 +272,90 @@ def analyze(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str]
             print(f"  {name} ({country}) — {len(bms)}: {', '.join(sorted(bms))}")
 
 
+# ---------------------------------------------------------------------------
+# Re-scoring - owner decision 2026-09-04 (reverses the earlier "cells only")
+# ---------------------------------------------------------------------------
+# After cells are filled, each snapshot in the window is re-scored with the
+# SAME implementation the daily run uses (scripts/scoring.py). The cohort is
+# left exactly as it was - no deduping, no additions, no drops - only the
+# numbers change, and the top 10 falls out of the filled data. Each row keeps
+# its originally published scores under `_prior` the first time it is
+# re-scored, so the change is auditable and reversible.
+
+SCORE_KEYS = ("avgIq", "value", "unified", "coverage")
+
+
+class ScoreEntry:
+    """Row -> the duck type scoring.score_cohort needs (.columns, .name, .country)."""
+    def __init__(self, row: Dict[str, Any], country: str):
+        self.row, self.name, self.country, self.url = row, row.get("model", ""), country, row.get("link", "")
+        self.columns: Dict[str, Any] = {k: v for k, v in row.items() if isinstance(v, str)}
+        self.columns["Organization"] = row.get("organization", "")
+        self.columns["Released"] = row.get("created", "")
+
+
+def scoring_headers(entries: List["ScoreEntry"]) -> List[str]:
+    """Benchmark columns present in the snapshot, by the validator's definition."""
+    keys = set()
+    for e in entries:
+        keys.update(k for k in e.columns if k not in META_KEYS and k not in EXTRA_NON_BENCHMARK
+                    and k not in ("Organization", "Released", "description") and not k.startswith("_"))
+    return sorted(keys)
+
+
+def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
+    """Re-score one snapshot in place. Returns how many rows changed."""
+    from scoring import build_benchmark_participation, MIN_COHORT_PARTICIPATION, score_cohort
+    entries = [ScoreEntry(r, c) for c in ("US", "CN") for r in snapshot.get("teams", {}).get(c, [])]
+    if not entries:
+        return 0
+    headers = scoring_headers(entries)
+    # Mirror the daily run's sparse drop for scoring purposes WITHOUT deleting
+    # the cells from history: score only benchmarks enough of the cohort report.
+    counts, _ = build_benchmark_participation(entries, headers)
+    headers = [b for b in headers if counts.get(b, 0) >= MIN_COHORT_PARTICIPATION]
+    result = score_cohort(entries, headers, drop_sparse=False, log=lambda *a, **k: None)
+    changed = 0
+    for e in entries:
+        s = result.scores_for(e)
+        n, q = result.coverage(e)
+        new = {"avgIq": s["avgIq"], "value": s["value"], "unified": s["unified"],
+               "coverage": f"{n}/{q}" if q else ""}
+        old = {k: e.row.get(k) for k in SCORE_KEYS}
+        if any(old.get(k) != new[k] for k in SCORE_KEYS):
+            e.row.setdefault("_prior", {k: old[k] for k in SCORE_KEYS if old.get(k) is not None})
+            e.row.update(new)
+            changed += 1
+    return changed
+
+
+def rescore_window(snapshots: List[Tuple[str, Dict[str, Any]]]) -> int:
+    total = 0
+    for day, snap in snapshots:
+        n = rescore_snapshot(snap)
+        total += n
+        print(f"[rescore] {day}: {n} rows re-scored")
+    return total
+
+
+def recompute_badges(data: Dict[str, Any]) -> None:
+    """Same aggregation as prepend_history: top-10 unified totals decide the badges."""
+    history = data.get("history") or []
+    if not history:
+        return
+    rows = [m for team in history[0].get("teams", {}).values() for m in team]
+    top10 = sorted(rows, key=lambda m: -float(m.get("unified", 0)))[:10]
+    us = sum(float(m.get("unified", 0)) for m in top10 if m.get("origin") == "US")
+    cn = sum(float(m.get("unified", 0)) for m in top10 if m.get("origin") == "CN")
+    teams = data.get("teams", {})
+    if "usa" in teams and "china" in teams:
+        if us == cn:
+            teams["usa"]["badge"] = teams["china"]["badge"] = "TIED"
+        else:
+            teams["usa"]["badge"] = "OVERALL WINNER" if us > cn else "RUNNER UP"
+            teams["china"]["badge"] = "OVERALL WINNER" if cn > us else "RUNNER UP"
+
+
 def save(data: Dict[str, Any], models_path: Path) -> None:
     """Write models.json, and re-emit current.json from its newest entry.
 
@@ -291,8 +376,12 @@ def save(data: Dict[str, Any], models_path: Path) -> None:
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--days", type=int, default=35,
-                    help="Window size in days, counted back from the newest snapshot (default: 35)")
+    ap.add_argument("--days", type=int, default=DEFAULT_DAYS,
+                    help=f"Window size in days, counted back from the newest snapshot (default: {DEFAULT_DAYS})")
+    ap.add_argument("--no-rescore", action="store_true",
+                    help="Fill cells only; leave avgIq/value/unified as published (the pre-2026-09-04 behaviour)")
+    ap.add_argument("--rescore-only", action="store_true",
+                    help="Make no fills; just re-score every snapshot in the window with today's scorer")
     ap.add_argument("--dry-run", action="store_true",
                     help="Report what would be filled; make no API calls and write nothing")
     ap.add_argument("--cache-only", action="store_true",
@@ -329,14 +418,27 @@ def main() -> int:
         analyze(snapshots, display)
         return 0
 
+    def finish(total_filled: int) -> int:
+        rescored = 0
+        if not args.no_rescore:
+            rescored = rescore_window(snapshots)
+            recompute_badges(data)
+            print(f"[rescore] {rescored} rows re-scored across {len(snapshots)} days")
+        if total_filled or rescored:
+            save(data, args.models_json)
+        return 0
+
+    if args.rescore_only:
+        print(f"\n[backfill] rescore-only over {len(snapshots)} days "
+              f"({snapshots[-1][0]} .. {snapshots[0][0]})")
+        return finish(0)
+
     if args.cache_only:
         print(f"\n[backfill] cache-only over {len(snapshots)} days "
               f"({snapshots[-1][0]} .. {snapshots[0][0]})")
         total_filled = apply_cached(snapshots, display, args.min_confidence)
         print(f"\n[backfill] {total_filled} cells filled from cache")
-        if total_filled:
-            save(data, args.models_json)
-        return 0
+        return finish(total_filled)
 
     # --max-calls is a ceiling on the whole run, not per day, so the count has
     # to survive across days. run_gap_filling_pass reports fills, not calls,
@@ -383,9 +485,7 @@ def main() -> int:
         gf.query_openai_responses = real_query
 
     print(f"\n[backfill] {total_filled} cells filled across {len(snapshots)} days")
-    if total_filled:
-        save(data, args.models_json)
-    return 0
+    return finish(total_filled)
 
 
 if __name__ == "__main__":

@@ -22,6 +22,11 @@ from playwright.sync_api import sync_playwright
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
 from cohort_selection import TEAM_SIZE, min_coverage_for, select_team
 from model_families import superseded_models
+from scoring import (  # noqa: E402  - single scoring implementation
+    BENCHMARK_KNOWN_RANGES, MISSING_VALUE_MARKERS, build_benchmark_participation,
+    calculate_derived_scores, entry_has_pricing, parse_to_number,
+    resolve_benchmark_range, score_cohort, drop_sparse_benchmarks,
+)
 
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
 # available before run_gap_filling_pass needs them. CI provides these via
@@ -47,29 +52,6 @@ class LeaderboardEntry:
     country: str
     url: str
     columns: Dict[str, str] = field(default_factory=dict)  # Header -> raw value
-
-
-# Placeholders that mean "this cell is missing." llm-stats uses a typographic
-# em-dash (U+2014) and occasionally an en-dash (U+2013) for un-reported benchmarks,
-# not the ASCII hyphen-minus. Missing that distinction silently poisons averages
-# because parse_to_number coerces em-dash to 0.0.
-MISSING_VALUE_MARKERS = {"", "-", "\u2013", "\u2014", "n/a", "N/A", "null", "None"}
-
-
-# Explicit (min, max) ranges for benchmarks whose scale isn't already 0–100. Used
-# to normalize non-percentage benchmarks without amplifying cohort-range artifacts.
-# Percentage benchmarks (values ending in "%") don't need an entry here — they're
-# auto-detected and treated as (0, 100). Only add a benchmark when you actually
-# know its documented range.
-BENCHMARK_KNOWN_RANGES: Dict[str, Tuple[float, float]] = {
-    # CodeArena = Chatbot Arena / LMArena coding Elo. Starting Elo is 1000 per
-    # LMSYS methodology; top frontier models sit around 2600-2700 as of
-    # Aug 2026 (the old 2000 ceiling was exceeded, which pushed normalized
-    # scores past 100 — caught by validate_models.py). Normalized values are
-    # additionally clamped to [0, 100] in calculate_derived_scores so future
-    # ceiling drift degrades gracefully instead of amplifying.
-    "CodeArena": (1000.0, 2800.0),
-}
 
 
 # Benchmark records in the flight payload are flat objects delimited by `{` / `}`.
@@ -128,168 +110,6 @@ def extract_detail_benchmarks(page) -> Dict[str, str]:
         results.setdefault(name, formatted)
 
     return results
-
-
-def parse_to_number(value: str) -> float:
-    """Convert raw string to number for calculations. Non-numeric → 0."""
-    if not value or not isinstance(value, str):
-        return 0.0
-    
-    cleaned = value.replace("%", "").replace(",", "").replace("$", "").strip()
-
-    # Handle common placeholders
-    if cleaned in MISSING_VALUE_MARKERS:
-        return 0.0
-    
-    try:
-        return float(cleaned)
-    except ValueError:
-        return 0.0
-
-
-def entry_has_pricing(entry: "LeaderboardEntry") -> bool:
-    """Whether a model has public pricing (input + output cost > 0).
-
-    Unpriced models get Value = 0 by construction; including that 0 in the
-    Value min/max cohort would make "no public pricing" indistinguishable from
-    "worst value for money" and drag the normalization floor down for everyone
-    else. They are excluded from the bounds and clamp to 0 instead.
-    """
-    cost_in = parse_to_number(entry.columns.get("Input$/M") or entry.columns.get("Input $/M", "0"))
-    cost_out = parse_to_number(entry.columns.get("Output$/M") or entry.columns.get("Output $/M", "0"))
-    return (cost_in + cost_out) > 0
-
-
-def resolve_benchmark_range(
-    benchmark_name: str,
-    entries: List["LeaderboardEntry"],
-) -> Optional[Tuple[float, float]]:
-    """Determine the (min, max) range to normalize a benchmark against.
-
-    Precedence:
-      1. An explicit entry in BENCHMARK_KNOWN_RANGES (e.g. CodeArena → 1000-2000).
-      2. Auto-detect percentage benchmarks: if every non-missing cell ends in "%",
-         the range is (0, 100). No cohort-dependence, no amplification artifact.
-      3. Fall back to the cohort's min/max for benchmarks with unknown scale.
-
-    Returns None if no model in ``entries`` has a value for this benchmark.
-    """
-    if benchmark_name in BENCHMARK_KNOWN_RANGES:
-        return BENCHMARK_KNOWN_RANGES[benchmark_name]
-
-    present = [
-        str(e.columns.get(benchmark_name, "")).strip()
-        for e in entries
-        if e.columns.get(benchmark_name, "") not in MISSING_VALUE_MARKERS
-    ]
-    if not present:
-        return None
-
-    if all(v.endswith("%") for v in present):
-        return (0.0, 100.0)
-
-    numeric = [parse_to_number(v) for v in present]
-    return (min(numeric), max(numeric))
-
-
-def calculate_derived_scores(
-    entry: LeaderboardEntry,
-    benchmark_headers: List[str],
-    participation: Optional[Dict[str, int]] = None,
-    max_participation: Optional[int] = None,
-    min_avg_iq: Optional[float] = None,
-    max_avg_iq: Optional[float] = None,
-    min_value: Optional[float] = None,
-    max_value: Optional[float] = None,
-    benchmark_min_max: Optional[Dict[str, tuple]] = None,
-    qualified_benchmarks: Optional[set] = None,
-) -> Dict[str, float]:
-    """Calculate total, avgIq, value, unified from raw columns.
-
-    Two-pass semantics:
-    - Pass 1 (default, qualified_benchmarks is None): participation-weighted average
-      across every benchmark in benchmark_headers, skipping single-participant ones.
-    - Pass 2 (qualified_benchmarks is set): flat (unweighted) average, restricted to
-      benchmarks in that set. Pass 2 is used after Pass 1 picks the Initial Top 10
-      and we know which benchmarks have enough coverage to compare apples-to-apples.
-    """
-    if participation is None:
-        participation = {}
-    if not max_participation or max_participation <= 0:
-        max_participation = max(participation.values(), default=1)
-    if max_participation <= 0:
-        max_participation = 1
-    if benchmark_min_max is None:
-        benchmark_min_max = {}
-
-    pass_two = qualified_benchmarks is not None
-
-    total_weighted = 0.0
-    weight_sum = 0.0
-    for b in benchmark_headers:
-        raw_val = entry.columns.get(b, "")
-        # Skip missing/placeholder cells
-        if raw_val in MISSING_VALUE_MARKERS:
-            continue
-
-        if pass_two:
-            # Pass 2: only qualified benchmarks count, and each contributes equally.
-            if b not in qualified_benchmarks:
-                continue
-            weight = 1.0
-        else:
-            # Pass 1: skip benchmarks with a single participant across the cohort.
-            part = participation.get(b, 0) if participation else 0
-            if part <= 1:
-                continue
-            weight = (part / max_participation) if max_participation else 1.0
-
-        score = parse_to_number(raw_val)
-
-        # Normalize benchmark score to 0-100 if min/max available. Clamp so a
-        # fixed known range whose ceiling has drifted (e.g. CodeArena Elo
-        # passing the old 2000 cap) can't push a score past 100.
-        if b in benchmark_min_max:
-            min_b, max_b = benchmark_min_max[b]
-            if max_b > min_b:
-                score = max(0.0, min(100.0, ((score - min_b) / (max_b - min_b)) * 100))
-
-        total_weighted += score * weight
-        weight_sum += weight
-    
-    avg_iq = total_weighted / weight_sum if weight_sum > 0 else 0.0
-    
-    # Value (avgIq / total cost: input + output)
-    # Try both formats for backwards compatibility
-    cost_in = parse_to_number(entry.columns.get("Input$/M") or entry.columns.get("Input $/M", "0"))
-    cost_out = parse_to_number(entry.columns.get("Output$/M") or entry.columns.get("Output $/M", "0"))
-    total_cost = cost_in + cost_out
-    value = avg_iq / total_cost if total_cost > 0 else 0.0
-    
-    # Normalize to 0-100 if bounds provided
-    if min_avg_iq is not None and max_avg_iq is not None and max_avg_iq > min_avg_iq:
-        norm_avg_iq = ((avg_iq - min_avg_iq) / (max_avg_iq - min_avg_iq)) * 100
-    else:
-        norm_avg_iq = avg_iq
-    
-    if min_value is not None and max_value is not None and max_value > min_value:
-        # Clamp at 0: unpriced models (value 0) are excluded from the min/max
-        # cohort, so their raw value can sit below min_value. Without the clamp
-        # they'd get a negative Value contribution instead of simply zero.
-        norm_value = max(0.0, ((value - min_value) / (max_value - min_value)) * 100)
-    else:
-        norm_value = value
-    
-    # Unified (90% normalized capability, 10% normalized cost efficiency)
-    unified = norm_avg_iq * 0.9 + norm_value * 0.1
-    # Scale final Unified by 10 as requested
-    unified *= 10
-    
-    return {
-        "avgIq": round(avg_iq, 2),
-        "value": round(value, 2),
-        "unified": round(unified, 2)
-    }
 
 
 def write_csv(
@@ -1159,20 +979,6 @@ def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -
     return changed
 
 
-def build_benchmark_participation(entries: List[LeaderboardEntry], benchmark_headers: List[str]) -> Tuple[Dict[str, int], int]:
-    """Count participation per benchmark and return counts with max participation."""
-    counts: Dict[str, int] = {b: 0 for b in benchmark_headers}
-    for entry in entries:
-        for b in benchmark_headers:
-            raw_val = entry.columns.get(b, "")
-            if raw_val not in MISSING_VALUE_MARKERS:
-                counts[b] += 1
-    max_participation = max(counts.values(), default=1)
-    if max_participation <= 0:
-        max_participation = 1
-    return counts, max_participation
-
-
 def run_scraper(args):
     """Main scraper execution."""
     workspace_dir = Path(__file__).parent.parent
@@ -1479,36 +1285,14 @@ def run_scraper(args):
 
                 combined_entries = us_entries + cn_entries
 
-                # Drop benchmarks that barely anyone reports. A benchmark needs
-                # at least MIN_COHORT_PARTICIPATION non-missing cells across the
-                # cohort or we drop it entirely. We drop from both benchmark_headers
-                # (so it doesn't participate in scoring) AND from every entry's
-                # column dict (so it doesn't land in models.json at all).
-                #
-                # The floor is an absolute count (4) rather than a fraction so the
-                # rule stays stable as the cohort changes size and so a "merely
-                # sparse" benchmark can still slip in if four providers happen to
-                # publish it.
-                MIN_COHORT_PARTICIPATION = 4
+                # Sparse-benchmark drop, then gap-fill, then scoring. The scoring
+                # itself lives in scripts/scoring.py - one implementation shared
+                # with the history backfill so the two can never disagree.
                 cohort_size = len(combined_entries)
-                pre_drop_counts, _ = build_benchmark_participation(
-                    combined_entries, benchmark_headers
-                )
-                sparse_benchmarks = [
-                    b for b in benchmark_headers
-                    if pre_drop_counts.get(b, 0) < MIN_COHORT_PARTICIPATION
-                ]
+                benchmark_headers, sparse_benchmarks = drop_sparse_benchmarks(combined_entries, benchmark_headers)
                 if sparse_benchmarks:
-                    print(f"\nDropping {len(sparse_benchmarks)} sparse benchmarks "
-                          f"(< {MIN_COHORT_PARTICIPATION} of {cohort_size} models reporting):")
-                    for b in sorted(sparse_benchmarks):
-                        print(f"  - {b}  ({pre_drop_counts.get(b, 0)}/{cohort_size})")
                     sparse_set = set(sparse_benchmarks)
-                    benchmark_headers = [b for b in benchmark_headers if b not in sparse_set]
                     all_headers = [h for h in all_headers if h not in sparse_set]
-                    for e in combined_entries:
-                        for b in sparse_benchmarks:
-                            e.columns.pop(b, None)
 
                 # -------------------------------------------------------------
                 # Gap-Filling Pass — runs BEFORE Pass 1 so the scoring sees the
@@ -1530,235 +1314,57 @@ def run_scraper(args):
                 else:
                     print("\n[gap-fill] disabled by --no-gap-fill")
 
-                # Rebuild participation counts now that the header set and cell values
-                # have both expanded from detail-page enrichment AND any gap-fills.
-                participation_counts, max_participation = build_benchmark_participation(
-                    combined_entries, benchmark_headers
-                )
-
-                # Calculate per-benchmark min/max for normalization (exclude single-participant benchmarks)
-                benchmark_min_max = {}
-                for b in benchmark_headers:
-                    if participation_counts.get(b, 0) <= 1:
-                        continue
-                    values = []
-                    for e in combined_entries:
-                        raw_val = e.columns.get(b, "")
-                        if raw_val and raw_val not in MISSING_VALUE_MARKERS:
-                            values.append(parse_to_number(raw_val))
-                    if values:
-                        benchmark_min_max[b] = (min(values), max(values))
-
-                # Compute min/max for AvgIQ and Value using normalized benchmark scores
-                avg_iq_values = []
-                value_values = []
-                for e in combined_entries:
-                    scores = calculate_derived_scores(
-                        e,
-                        benchmark_headers,
-                        participation_counts,
-                        max_participation,
-                        benchmark_min_max=benchmark_min_max,
-                    )
-                    avg_iq_values.append(scores["avgIq"])
-                    value_values.append(scores["value"])
-
-                min_avg_iq = min(avg_iq_values) if avg_iq_values else 0
-                max_avg_iq = max(avg_iq_values) if avg_iq_values else 1
-                min_value = min(value_values) if value_values else 0
-                max_value = max(value_values) if value_values else 1
+                scoring = score_cohort(combined_entries, benchmark_headers, drop_sparse=False)
+                benchmark_headers = scoring.benchmark_headers
+                participation_counts, max_participation = scoring.participation, scoring.max_participation
+                min_avg_iq, max_avg_iq = scoring.min_avg_iq, scoring.max_avg_iq
+                min_value, max_value = scoring.min_value, scoring.max_value
+                benchmark_min_max = scoring.benchmark_min_max
+                qualified_benchmarks = scoring.qualified_benchmarks
 
                 # -----------------------------------------------------------------
-                # Pass 2: rescore on the qualified benchmark set
+                # Pick each country's published top 10 from the pool, ranked by the
+                # final unified score among models meeting minimum coverage. Under
+                # a Pass 1 fallback there is no coverage concept and it is plain
+                # top-N. See cohort_selection.select_team.
                 # -----------------------------------------------------------------
-                # The qualified set is the benchmarks enough of the cohort reported
-                # that comparing models on them is apples-to-apples. Pass 2 rescores
-                # every model as a flat average over just those, so a model that
-                # skipped an "easy win" benchmark is not penalised for the absence.
-                #
-                # The set is derived from the WHOLE cohort, not from the top 10.
-                # Deriving it from the top 10 made scoring depend on cohort
-                # membership: removing two duplicate models on 2026-09-02 pushed HLE
-                # from 8/10 to 7/10 reporters, switching it off entirely and dropping
-                # Claude Fable 5.1 from #1 to #16 with no change in any benchmark
-                # value. It also created a feedback loop - the set decided the top 10
-                # and the top 10 decided the set - which needed iteration and
-                # oscillation detection to terminate at all.
-                #
-                # Against the full cohort there is no loop, so no iteration: the set
-                # is computed once and is identical whether or not duplicate models
-                # were dropped. A proportional threshold keeps it meaningful if the
-                # cohort size ever changes.
-                # If fewer than 3 benchmarks qualify, fall back to Pass 1 silently.
-                QUALIFIED_FRACTION = 0.5
-                MIN_QUALIFIED_FLOOR = 3
-                qualified_benchmarks: Optional[set] = None
+                def _final_unified(e: LeaderboardEntry) -> float:
+                    return scoring.scores_for(e)["unified"]
 
-                def _pass1_unified(e: LeaderboardEntry) -> float:
-                    return calculate_derived_scores(
-                        e,
-                        benchmark_headers,
-                        participation_counts,
-                        max_participation,
-                        min_avg_iq,
-                        max_avg_iq,
-                        min_value,
-                        max_value,
-                        benchmark_min_max=benchmark_min_max,
-                    )["unified"]
+                def _coverage(e: LeaderboardEntry) -> int:
+                    return scoring.coverage(e)[0]
 
-                qualified_min_reports = max(2, round(len(combined_entries) * QUALIFIED_FRACTION))
-
-                def _qualified_for_cohort() -> set:
-                    """Benchmarks reported by enough of the full cohort to compare on.
-
-                    Deliberately independent of the ranking: dropping or adding a
-                    model must not change which benchmarks count.
-                    """
-                    out = set()
-                    for b in benchmark_headers:
-                        count = sum(
-                            1 for e in combined_entries
-                            if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
-                        )
-                        if count >= qualified_min_reports:
-                            out.add(b)
-                    return out
-
-                def _rank_with_qset(qset: set) -> Tuple[List[LeaderboardEntry], Dict[str, tuple], float, float, float, float]:
-                    """Compute Pass 2 ranking + min/max under the given qualified set.
-
-                    Returns (top10, pass2_benchmark_min_max, min_iq, max_iq, min_v, max_v).
-                    """
-                    bmm: Dict[str, tuple] = {}
-                    for b in qset:
-                        rng = resolve_benchmark_range(b, combined_entries)
-                        if rng is not None:
-                            bmm[b] = rng
-
-                    iqs: List[float] = []
-                    vals: List[float] = []
-                    for e in combined_entries:
-                        s = calculate_derived_scores(
-                            e,
-                            benchmark_headers,
-                            benchmark_min_max=bmm,
-                            qualified_benchmarks=qset,
-                        )
-                        iqs.append(s["avgIq"])
-                        # Unpriced models are excluded from the Value bounds —
-                        # see entry_has_pricing.
-                        if entry_has_pricing(e):
-                            vals.append(s["value"])
-                    miq, maq = (min(iqs), max(iqs)) if iqs else (0.0, 1.0)
-                    mv, mxv = (min(vals), max(vals)) if vals else (0.0, 1.0)
-
-                    def _unified(e: LeaderboardEntry) -> float:
-                        return calculate_derived_scores(
-                            e,
-                            benchmark_headers,
-                            min_avg_iq=miq,
-                            max_avg_iq=maq,
-                            min_value=mv,
-                            max_value=mxv,
-                            benchmark_min_max=bmm,
-                            qualified_benchmarks=qset,
-                        )["unified"]
-
-                    new_top10 = sorted(combined_entries, key=_unified, reverse=True)[:10]
-                    return new_top10, bmm, miq, maq, mv, mxv
-
-                initial_top10 = sorted(combined_entries, key=_pass1_unified, reverse=True)[:10]
-                print(f"\n--- Pass 2 / Qualified-set scoring ---")
-                print(f"Pass 1 Top 10:")
-                for i, e in enumerate(initial_top10, 1):
-                    print(f"  {i:>2}. {e.name} ({e.country})")
-
-                qualified_set = _qualified_for_cohort()
-
-                if len(qualified_set) < MIN_QUALIFIED_FLOOR:
-                    print(f"\nWARNING: only {len(qualified_set)} benchmarks qualified "
-                          f"(need >= {MIN_QUALIFIED_FLOOR}). Falling back to Pass 1 scoring.")
-                    # No coverage concept in Pass 1; just take the top 10 per
-                    # country from the pool by Pass 1 unified.
-                    us_entries, _ = select_team(us_entries, _pass1_unified, lambda e: 0, 0, TEAM_SIZE)
-                    cn_entries, _ = select_team(cn_entries, _pass1_unified, lambda e: 0, 0, TEAM_SIZE)
-                    combined_entries = us_entries + cn_entries
-                else:
-                    current_top10, pass2_bmm, pass2_miq, pass2_maq, pass2_mv, pass2_mxv = _rank_with_qset(qualified_set)
-                    qualified_benchmarks = qualified_set
-
-                    print(f"\nQualified benchmarks ({len(qualified_set)} of {len(benchmark_headers)}, "
-                          f"threshold >= {qualified_min_reports}/{len(combined_entries)} of the full cohort):")
-                    for b in sorted(qualified_set):
-                        count = sum(
-                            1 for e in combined_entries
-                            if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
-                        )
-                        print(f"  ✓ {b}  ({count}/{len(combined_entries)})")
-
-                    print(f"\nFinal Pass 2 Top 10:")
-                    for i, e in enumerate(current_top10, 1):
-                        print(f"  {i:>2}. {e.name} ({e.country})")
-
-                    benchmark_min_max = pass2_bmm
-                    min_avg_iq = pass2_miq
-                    max_avg_iq = pass2_maq
-                    min_value = pass2_mv
-                    max_value = pass2_mxv
-
-                    # Minimum-coverage rule. A flat average over the qualified
-                    # set says nothing useful when a model only reported two of
-                    # them: the score reflects which benchmarks it happened to
-                    # run, not how good it is. Applied here, after gap-filling
-                    # has had its chance to fill the cells, so a model is only
-                    # dropped when the number genuinely isn't available anywhere.
+                if qualified_benchmarks:
+                    qualified_set = qualified_benchmarks
                     min_cov = min_coverage_for(len(qualified_set))
-
-                    def _coverage(e: LeaderboardEntry) -> int:
-                        return sum(
-                            1 for b in qualified_set
-                            if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
-                        )
-
-                    def _final_unified(e: LeaderboardEntry) -> float:
-                        return calculate_derived_scores(
-                            e, benchmark_headers,
-                            min_avg_iq=min_avg_iq, max_avg_iq=max_avg_iq,
-                            min_value=min_value, max_value=max_value,
-                            benchmark_min_max=benchmark_min_max,
-                            qualified_benchmarks=qualified_benchmarks,
-                        )["unified"]
-
                     for e in combined_entries:
                         e.columns["_coverage"] = f"{_coverage(e)}/{len(qualified_set)}"
+                else:
+                    qualified_set, min_cov = set(), 0
 
-                    print(f"\nSelecting {TEAM_SIZE} per country from the pool "
-                          f"(US {len(us_entries)}, CN {len(cn_entries)}); "
-                          f"minimum coverage {min_cov}/{len(qualified_set)}:")
-                    picked = {}
-                    for code, pool in (("US", us_entries), ("CN", cn_entries)):
-                        chosen, provisional = select_team(
-                            pool, _final_unified, _coverage, min_cov, TEAM_SIZE
-                        )
-                        for e in provisional:
-                            e.columns["_provisional"] = "true"
-                        left_out = [e for e in pool if e not in chosen]
-                        picked[code] = chosen
-                        print(f"  {code}: {len(chosen)} chosen, {len(provisional)} provisional "
-                              f"(under coverage, kept so the team is not short), "
-                              f"{len(left_out)} left out")
-                        for e in provisional:
-                            print(f"     ~ {e.name} — {_coverage(e)}/{len(qualified_set)} (provisional)")
-                        for e in left_out:
-                            print(f"     -- {e.name} — {_coverage(e)}/{len(qualified_set)}, "
-                                  f"unified {_final_unified(e):.1f}")
-                    us_entries = picked["US"]
-                    cn_entries = picked["CN"]
-                    combined_entries = us_entries + cn_entries
+                print(f"\nSelecting {TEAM_SIZE} per country from the pool "
+                      f"(US {len(us_entries)}, CN {len(cn_entries)}); "
+                      f"minimum coverage {min_cov}/{len(qualified_set)}:")
+                picked = {}
+                for code, pool in (("US", us_entries), ("CN", cn_entries)):
+                    chosen, provisional = select_team(pool, _final_unified, _coverage, min_cov, TEAM_SIZE)
+                    for e in provisional:
+                        e.columns["_provisional"] = "true"
+                    left_out = [e for e in pool if e not in chosen]
+                    picked[code] = chosen
+                    print(f"  {code}: {len(chosen)} chosen, {len(provisional)} provisional "
+                          f"(under coverage, kept so the team is not short), {len(left_out)} left out")
+                    for e in provisional:
+                        print(f"     ~ {e.name} — {_coverage(e)}/{len(qualified_set)} (provisional)")
+                    for e in left_out:
+                        print(f"     -- {e.name} — {_coverage(e)}/{len(qualified_set)}, unified {_final_unified(e):.1f}")
+                us_entries = picked["US"]
+                cn_entries = picked["CN"]
+                combined_entries = us_entries + cn_entries
 
-                    print(f"\nPass 2 scoring applied. Non-qualified benchmarks are kept as raw columns "
-                          f"but excluded from AvgIQ / Unified.")
+                print(f"\nFinal Top 10:")
+                for i, e in enumerate(sorted(combined_entries, key=_final_unified, reverse=True)[:10], 1):
+                    print(f"  {i:>2}. {e.name} ({e.country})")
 
                 # -----------------------------------------------------------------
                 # From here on, every helper is called with qualified_benchmarks, so

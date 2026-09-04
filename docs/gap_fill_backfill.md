@@ -1,8 +1,9 @@
 # Gap-fill backfill — state and handoff
 
-**Date:** 2026-09-04
-**Scope:** retroactively run the AI gap-filling pass over the last 35 days of
-stored history snapshots (2026-08-01 .. 2026-09-04).
+**Date:** 2026-09-04 (updated later the same day)
+**Scope:** retroactively run the AI gap-filling pass over the last **45** days of
+stored history snapshots, then re-score them. Extending back to 2026-04-25 is
+the follow-on, run in the background.
 
 ## 1. What the gap actually was
 
@@ -28,17 +29,28 @@ The pass runs live, before Pass 1, so it only ever enriches the day it runs on
 (`docs/ai_gap_filling.md` §2). Days it did not run on stay sparse forever
 unless something replays it. That is what `scripts/backfill_gap_fill.py` does.
 
-## 2. Decision on record: cells only, no rescoring
+## 2. Decision on record: fill cells, then re-score (owner, 2026-09-04)
 
-Backfilled cells are written to the history rows. `avgIq`, `value`, `unified`
-and `coverage` are **left as originally published**.
+The first version of this doc recorded "cells only, no rescoring". The owner
+reversed that the same day: **backfilled cells are written to the history
+rows and each snapshot in the window is then re-scored** with the same
+implementation the daily run uses (`scripts/scoring.py`, extracted from
+`scrape_models.py` for exactly this purpose so the two cannot drift).
 
-The consequence is deliberate and worth restating, because it looks like a bug:
-a history row can show a GPQA score that is not part of that row's own average.
-Rescoring would mean extracting the ~300-line Pass 1 / Pass 2 block out of
-`scrape_models.main()` into a reusable function — a refactor of the production
-daily path — and it would rewrite already-published historical rankings. Owner
-chose not to. **Do not "fix" this without asking.**
+Rules of the re-score:
+
+- **The cohort is untouched.** No deduping, no additions, no drops. Each past
+  day keeps exactly the models it had; only their numbers change, and the top
+  10 falls out of the filled data.
+- **Originals are kept.** The first time a row is re-scored its published
+  `avgIq` / `value` / `unified` / `coverage` are copied to `_prior`; later
+  re-scores never overwrite `_prior`.
+- **Today's scorer, not that day's.** Full-cohort qualified set, coverage
+  floor, `Latency` / `LLM Stats` / `Code Arena` excluded. A re-scored day will
+  differ from what was published then even where no cell was filled. That is
+  what makes the 30-day trend comparable end to end.
+- `--no-rescore` restores the cells-only behaviour; `--rescore-only` re-scores
+  the window without filling anything.
 
 ## 3. What has been done
 
@@ -87,8 +99,9 @@ distinct **models** in the window, not with the number of days.
 
 So there are two ways to finish the job:
 
-**A. Run it in CI** (no key handling at all). Add a `workflow_dispatch`
-workflow that installs `scripts/requirements.txt`, exports
+**A. Run it in CI** (no key handling at all) — **this is now built:**
+`.github/workflows/backfill-gap-fill.yml` (`workflow_dispatch`; inputs: days,
+max_calls, model, rescore). It installs `scripts/requirements.txt`, exports
 `OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}`, runs the command in §6, then
 `validate_models.py`, then commits `models.json` + `current.json` +
 `data/ai_gap_cache.json` + `data/ai_fill_history.jsonl`. This is the
@@ -104,14 +117,14 @@ plaintext value.
 
 ```bash
 # Report only — no API calls, writes nothing.
-.venv/bin/python scripts/backfill_gap_fill.py --dry-run --days 35
+.venv/bin/python scripts/backfill_gap_fill.py --dry-run --days 45
 
 # Apply only what is already in data/ai_gap_cache.json — no API calls.
 # (Already done for the current window; re-running is a no-op.)
-.venv/bin/python scripts/backfill_gap_fill.py --cache-only --days 35
+.venv/bin/python scripts/backfill_gap_fill.py --cache-only --days 45
 
 # The live run. Needs a working OPENAI_API_KEY.
-.venv/bin/python scripts/backfill_gap_fill.py --days 35 --max-calls 60
+.venv/bin/python scripts/backfill_gap_fill.py --days 45 --max-calls 80
 ```
 
 Always run `python scripts/validate_models.py` afterwards — it is the same gate
@@ -121,8 +134,10 @@ the previous snapshot.
 ### Flags
 
 | Flag | Default | Notes |
-|---|---|---|
-| `--days` | 35 | Counted back from the newest snapshot's timestamp, not calendar dates |
+| --- | --- | --- |
+| `--days` | 45 | Counted back from the newest snapshot's timestamp, not calendar dates |
+| `--no-rescore` | off | Fill cells only; leave scores as published |
+| `--rescore-only` | off | No fills; re-score the window with today's scorer |
 | `--dry-run` | off | Report candidates, cache coverage, call estimate |
 | `--cache-only` | off | Apply cached fills only; never calls the API |
 | `--max-calls` | 40 | Ceiling for the whole run, not per day; counts real HTTP calls |
@@ -135,7 +150,7 @@ Per the price table in `scripts/social_caption.py` (USD per million tokens),
 and the ~9K input / ~5K output per call that `gap_fill_benchmarks` documents:
 
 | Model | In / Out | ~48 calls |
-|---|---|---|
+| --- | --- | --- |
 | `gpt-5.6-luna` | 0.20 / 1.20 | **≈ $0.40** |
 | `gpt-5.6-terra` | 2.00 / 12.00 | ≈ $3.75 |
 
