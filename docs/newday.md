@@ -51,7 +51,7 @@ Use actual benchmark data available on llm-stats.com. **ALL 11 benchmarks are RE
 
 - **IQ Index**: Average of ALL 11 benchmark scores. Missing benchmarks count as 0.
 
-  ```
+  ```text
   IQ = (AIME 2025 + HMMT 2025 + GPQA Diamond + ARC-AGI + BrowseComp + ARC-AGI v2 + HLE + MMLU-Pro + LiveCodeBench + SWE-Bench Verified + CodeForces) / 11
   ```
 
