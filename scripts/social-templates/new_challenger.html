@@ -1,0 +1,23 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.hero { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 40px; }
+.enters { font-size: 34px; color: var(--muted); }
+.rank { font-size: 420px; line-height: 0.85; color: var(--accent); margin: 10px 0 0 -8px; }
+.name { font-size: 96px; margin-top: 8px; }
+.meta { font-size: 30px; color: var(--muted); margin-top: 16px; }
+.meta b { color: var(--ink); font-weight: 700; }
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.cell { border-top: 4px solid var(--muted); padding-top: 10px; font-size: 22px; color: var(--muted); }
+.cell b { display: block; font-size: 30px; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cell.hot { border-top-color: var(--accent); }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">{{headline}}</div>
+<div class="hero">
+  <div class="enters">{{team_flag}} {{org}} {{verb}}</div>
+  <div class="rank display">#{{rank}}</div>
+  <div class="name display">{{name}}</div>
+  <div class="meta"><b>{{unified}}</b> Unified &nbsp;·&nbsp; <b>{{iq}}</b> IQ &nbsp;·&nbsp; <b>{{price}}</b> per M tokens</div>
+</div>
+<div class="strip">{{top5_cells}}</div>
+<div class="footer"><span><strong>{{leader_line}}</strong></span><span>usvschina.ai</span></div>
+</body></html>

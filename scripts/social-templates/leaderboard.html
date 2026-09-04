@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.totals { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 28px; }
+.tot { padding: 18px 22px; border-radius: 16px; background: color-mix(in srgb, var(--ink) 8%, transparent); border-left: 8px solid; }
+.tot.us { border-color: var(--us); } .tot.cn { border-color: var(--cn); }
+.tot b { display: block; font-size: 84px; line-height: 1; }
+.tot span { font-size: 24px; color: var(--muted); }
+.rows { margin-top: 26px; display: grid; gap: 6px; flex: 1; }
+.row { display: grid; grid-template-columns: 70px 1fr auto; align-items: center; gap: 14px; padding: 8px 14px; border-radius: 12px; background: color-mix(in srgb, var(--ink) 6%, transparent); border-left: 6px solid; }
+.row.us { border-color: var(--us); } .row.cn { border-color: var(--cn); }
+.row .n { font-size: 44px; color: var(--muted); }
+.row .m { font-size: 34px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row .s { font-size: 40px; }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">{{leader_headline}}</div>
+<div class="totals">
+  <div class="tot us"><b class="display">{{us_total}}</b><span>🇺🇸 Team USA &nbsp;·&nbsp; {{us_count}} in the top 10</span></div>
+  <div class="tot cn"><b class="display">{{cn_total}}</b><span>🇨🇳 Team China &nbsp;·&nbsp; {{cn_count}} in the top 10</span></div>
+</div>
+<div class="rows">{{rows}}</div>
+<div class="footer"><span>Unified Power Score, top 10 of both teams</span><span>usvschina.ai</span></div>
+</body></html>

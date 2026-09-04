@@ -89,3 +89,6 @@ out/
 # Backup files
 *.bak
 *.backup
+
+# Rendered social previews for review; not published
+data/social_preview/

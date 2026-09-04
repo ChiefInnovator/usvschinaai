@@ -1,0 +1,22 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.hero { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+.delta { font-size: 440px; line-height: 0.85; color: var(--accent); margin-left: -10px; }
+.delta small { font-size: 120px; vertical-align: top; }
+.name { font-size: 92px; margin-top: 10px; }
+.path { font-size: 34px; color: var(--muted); margin-top: 18px; }
+.path b { color: var(--ink); }
+.ladder { display: flex; gap: 14px; margin-top: 44px; align-items: flex-end; height: 120px; }
+.rung { flex: 1; background: color-mix(in srgb, var(--muted) 35%, transparent); border-radius: 8px 8px 0 0; position: relative; }
+.rung.now { background: var(--accent); }
+.rung span { position: absolute; top: -34px; left: 0; right: 0; text-align: center; font-size: 22px; color: var(--muted); }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">Biggest move of the day</div>
+<div class="hero">
+  <div class="delta display"><small>{{arrow}}</small>{{places}}</div>
+  <div class="name display">{{team_flag}} {{name}}</div>
+  <div class="path">from <b>#{{from_rank}}</b> to <b>#{{to_rank}}</b> &nbsp;·&nbsp; now <b>{{unified}}</b> Unified</div>
+</div>
+<div class="ladder">{{ladder}}</div>
+<div class="footer"><span><strong>{{leader_line}}</strong></span><span>usvschina.ai</span></div>
+</body></html>

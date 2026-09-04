@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: {{bg}}; --bg2: {{bg2}}; --ink: {{ink}}; --muted: {{muted}}; --accent: {{accent}};
+  --us: #3b82f6; --cn: #ef4444;
+  /* 3:4 profile-grid crop removes ~3% of each side of a 4:5 image. */
+  --safe-x: 56px;
+}
+body {
+  width: 1080px; height: 1350px; overflow: hidden;
+  background: linear-gradient(160deg, var(--bg) 0%, var(--bg2) 100%);
+  color: var(--ink);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  display: flex; flex-direction: column;
+  padding: 64px var(--safe-x) 48px;
+}
+.display { font-family: 'Bebas Neue', 'IBM Plex Sans', sans-serif; letter-spacing: 0.01em; line-height: 0.9; }
+.kicker { font-size: 26px; font-weight: 600; color: var(--muted); }
+.headline { font-size: 64px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-top: 10px; }
+.footer { margin-top: auto; padding-top: 30px; display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; color: var(--muted); }
+.footer strong { color: var(--ink); font-weight: 700; }
+.teamdot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; vertical-align: middle; margin-right: 10px; }
+.us { background: var(--us); } .cn { background: var(--cn); }
