@@ -195,6 +195,54 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
 
 
 
+def post_carousel(image_urls, caption, access_token, ig_user_id):
+    """Publish a carousel: one child container per slide, then a parent.
+
+    Every slide must be the same aspect ratio (the renderer emits 4:5 for all
+    of them). Carousels get the most reach and saves on Instagram, and the
+    grid shows only the first slide, so the cover carries the day's story and
+    the full leaderboard still ships as a later slide.
+    """
+    check_token_expiry(access_token)
+    if not 2 <= len(image_urls) <= 10:
+        raise ValueError(f"carousel needs 2-10 slides, got {len(image_urls)}")
+
+    child_ids = []
+    for i, url in enumerate(image_urls, 1):
+        print(f"Creating carousel item {i}/{len(image_urls)} for {url}...")
+        resp = requests.post(
+            f"{GRAPH_API_BASE}/{ig_user_id}/media",
+            data={"image_url": url, "is_carousel_item": "true", "access_token": access_token},
+            timeout=60,
+        )
+        _raise_with_body(resp, f"carousel item {i}")
+        cid = resp.json()["id"]
+        wait_for_container(cid, access_token)
+        child_ids.append(cid)
+
+    print("Creating carousel container...")
+    parent = requests.post(
+        f"{GRAPH_API_BASE}/{ig_user_id}/media",
+        data={"media_type": "CAROUSEL", "children": ",".join(child_ids),
+              "caption": caption, "access_token": access_token},
+        timeout=60,
+    )
+    _raise_with_body(parent, "carousel container")
+    creation_id = parent.json()["id"]
+    wait_for_container(creation_id, access_token)
+
+    print("Publishing carousel...")
+    publish = requests.post(
+        f"{GRAPH_API_BASE}/{ig_user_id}/media_publish",
+        data={"creation_id": creation_id, "access_token": access_token},
+        timeout=60,
+    )
+    _raise_with_body(publish, "carousel publish")
+    post_id = publish.json()["id"]
+    print(f"Published carousel! Post ID: {post_id}")
+    return post_id
+
+
 # ---------------------------------------------------------------------------
 # Once-per-day guard
 # ---------------------------------------------------------------------------
@@ -293,11 +341,18 @@ def main():
             return
 
     data = load_caption_data(models_path)
-    caption = build_caption(data)
+    caption = os.environ.get("IG_CAPTION") or build_caption(data)
 
     print(f"Caption:\n{caption}\n")
 
-    post_to_instagram(image_url, caption, access_token, ig_user_id)
+    # IG_CAROUSEL_URLS: comma-separated slide URLs, all 4:5. Set by the
+    # workflow once the social renderer is wired in; absent, the single
+    # ig-image.png post is unchanged.
+    slides = [u.strip() for u in os.environ.get("IG_CAROUSEL_URLS", "").split(",") if u.strip()]
+    if len(slides) >= 2:
+        post_carousel(slides, caption, access_token, ig_user_id)
+    else:
+        post_to_instagram(image_url, caption, access_token, ig_user_id)
     print("Instagram post complete.")
 
 

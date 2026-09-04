@@ -94,3 +94,47 @@ class SnapshotIsTodayTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+@unittest.skipIf(pti is None, "requests not installed")
+class CarouselTests(unittest.TestCase):
+    """Child containers with is_carousel_item, one CAROUSEL parent, one publish."""
+
+    def _capture(self):
+        calls = []
+        class R:
+            ok, status_code, text = True, 200, ""
+            def __init__(self, payload): self._p = payload
+            def json(self): return self._p
+            def raise_for_status(self): pass
+        def post(url, data=None, timeout=None):
+            calls.append((url.rsplit("/", 1)[-1], dict(data)))
+            n = len(calls)
+            return R({"id": f"c{n}"})
+        self.addCleanup(setattr, pti.requests, "post", pti.requests.post)
+        self.addCleanup(setattr, pti, "wait_for_container", pti.wait_for_container)
+        self.addCleanup(setattr, pti, "check_token_expiry", pti.check_token_expiry)
+        pti.requests.post = post
+        pti.wait_for_container = lambda *a, **k: None
+        pti.check_token_expiry = lambda *a, **k: None
+        return calls
+
+    def test_call_sequence(self):
+        calls = self._capture()
+        post_id = pti.post_carousel(["https://x/1.png", "https://x/2.png"], "cap", "tok", "user")
+        kinds = [c[0] for c in calls]
+        self.assertEqual(kinds, ["media", "media", "media", "media_publish"])
+        self.assertEqual(calls[0][1]["is_carousel_item"], "true")
+        self.assertEqual(calls[1][1]["image_url"], "https://x/2.png")
+        self.assertEqual(calls[2][1]["media_type"], "CAROUSEL")
+        self.assertEqual(calls[2][1]["children"], "c1,c2")
+        self.assertEqual(calls[2][1]["caption"], "cap")
+        self.assertEqual(calls[3][1]["creation_id"], "c3")
+        self.assertEqual(post_id, "c4")
+
+    def test_rejects_wrong_slide_counts(self):
+        self._capture()
+        with self.assertRaises(ValueError):
+            pti.post_carousel(["only-one"], "cap", "tok", "user")
+        with self.assertRaises(ValueError):
+            pti.post_carousel([f"s{i}" for i in range(11)], "cap", "tok", "user")
