@@ -20,7 +20,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from playwright.sync_api import sync_playwright
 
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
-from cohort_selection import TEAM_SIZE, select_team
+from cohort_selection import TEAM_SIZE, min_coverage_for, select_team
 from model_families import superseded_models
 
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
@@ -504,19 +504,6 @@ def format_table(
     lines.append(f"{'=' * 80}\n")
     return "\n".join(lines)
 
-
-# Share of the qualified benchmark set a model must report to be ranked. Without
-# this, a model measured on 2 of 7 benchmarks that happened to score well on both
-# outranks one measured on all 7 — which is how Gemini 3.8 Flash took #1 on
-# 2026-09-03 with an avgIq of 75.73 from exactly two numbers.
-#
-# Deliberately applied at scoring time, not when the cohort is built. An earlier
-# version filtered on the leaderboard table before enrich_with_metadata had
-# fetched each model's detail page, and newly released models carry most of
-# their scores on the detail page — so it evicted Claude Fable 5.1, Muse Spark
-# 1.3, Gemini 3.8 Flash and Grok 4.6 for "reporting 1 benchmark" and rolled the
-# whole US cohort back to the previous generation.
-MIN_QUALIFIED_COVERAGE = 0.5
 
 # Deduplicated, released candidates kept per country through enrichment and
 # scoring. The published top 10 is chosen from this pool at the end (see
@@ -1726,7 +1713,7 @@ def run_scraper(args):
                     # run, not how good it is. Applied here, after gap-filling
                     # has had its chance to fill the cells, so a model is only
                     # dropped when the number genuinely isn't available anywhere.
-                    min_cov = max(1, int(round(len(qualified_set) * MIN_QUALIFIED_COVERAGE)))
+                    min_cov = min_coverage_for(len(qualified_set))
 
                     def _coverage(e: LeaderboardEntry) -> int:
                         return sum(

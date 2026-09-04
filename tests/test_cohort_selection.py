@@ -6,7 +6,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from cohort_selection import select_team
+from cohort_selection import min_coverage_for, select_team
 
 
 class M:
@@ -57,6 +57,24 @@ class SelectTeamTests(unittest.TestCase):
         chosen, prov = select_team(pool, U, C, min_coverage=0)
         self.assertEqual([m.name for m in chosen], [f"m{i}" for i in range(11, 1, -1)])
         self.assertEqual(prov, [])
+
+
+class MinCoverageTests(unittest.TestCase):
+    def test_a_third_rounded_up(self):
+        # 2026-09-04: Muse Spark 1.3 at 3/8 must rank; 2/7 and 2/8 must not.
+        self.assertEqual(min_coverage_for(8), 3)
+        self.assertEqual(min_coverage_for(7), 3)
+        self.assertEqual(min_coverage_for(9), 3)
+        self.assertEqual(min_coverage_for(10), 4)
+        self.assertEqual(min_coverage_for(12), 4)
+
+    def test_two_of_seven_is_still_excluded(self):
+        """The Gemini 3.8 Flash #1-on-two-benchmarks artifact stays out."""
+        self.assertGreater(min_coverage_for(7), 2)
+
+    def test_never_below_one(self):
+        self.assertEqual(min_coverage_for(0), 1)
+        self.assertEqual(min_coverage_for(1), 1)
 
 
 if __name__ == "__main__":

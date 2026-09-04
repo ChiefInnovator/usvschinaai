@@ -15,6 +15,20 @@ T = TypeVar("T")
 
 TEAM_SIZE = 10
 
+# Share of the qualified benchmark set a model must report to be ranked,
+# rounded UP. A third: on 2026-09-04 the pool's highest-scoring model (Muse
+# Spark 1.3, unified 948) was excluded at 3/8 under a 50% floor. A third still
+# keeps out the cases the rule exists for - 2 of 7 (the Gemini 3.8 Flash #1
+# artifact), 2 of 8, 1 of 8 - because rounding up never lets 2 through until
+# the set is 6 or smaller.
+MIN_QUALIFIED_COVERAGE = 1 / 3
+
+
+def min_coverage_for(qualified_count: int) -> int:
+    """Minimum reported benchmarks to rank, for a qualified set of this size."""
+    import math
+    return max(1, math.ceil(qualified_count * MIN_QUALIFIED_COVERAGE))
+
 
 def select_team(
     entries: List[T],
