@@ -1,4 +1,26 @@
 {
+  "Claude Fable 5": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The leaderboard reports a 48.7% score for Claude Code using Claude Fable 5 with 40% of tasks downgraded.",
+      "score": "48.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic's system card reports 88.0% for the shared Fable/Mythos model in the single-agent BrowseComp evaluation.",
+      "score": "88.0%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf"
+    }
+  },
   "Claude Fable 5.1": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -93,6 +115,38 @@
       "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
     }
   },
+  "Claude Opus 4.8": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The Agents' Last Exam leaderboard reports 45.1% for Claude Opus 4.8; the result is agent-harness-specific (Claude Code).",
+      "score": "45.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    },
+    "AutomationBench": {
+      "benchmark": "AutomationBench",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic's Claude Opus 4.8 system card reports 15.5% on AutomationBench.",
+      "score": "15.5%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic's Claude Opus 4.8 system card reports 74.6% on Terminal-Bench 2.1.",
+      "score": "74.6%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/0b4915911bb0d19eca5b5ee635c80fef830a37ea.pdf"
+    }
+  },
   "Claude Opus 5": {
     "Agents' Last Exam": {
       "benchmark": "Agents' Last Exam",
@@ -169,6 +223,38 @@
       "score": "75.9%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+    }
+  },
+  "DeepSeek-V4-Pro-Max": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-04T11:24:18.318931+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The model card reports 16.5 for DeepSeek-V4-Pro (Preview), corresponding to the preview/max configuration.",
+      "score": "16.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813#deepseek-v4-pro-0813"
+    },
+    "AutomationBench": {
+      "benchmark": "AutomationBench",
+      "cached_at": "2026-09-04T11:24:18.318931+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The model card reports 12.8 for DeepSeek-V4-Pro (Preview), corresponding to the preview/max configuration; it is distinct from the later V4-Pro-0813 score of 31.8.",
+      "score": "12.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813#deepseek-v4-pro-0813"
+    },
+    "NL2Repo": {
+      "benchmark": "NL2Repo",
+      "cached_at": "2026-09-04T11:24:18.318931+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The model card reports 38.5 for DeepSeek-V4-Pro (Preview), corresponding to the preview/max configuration; it is distinct from the later V4-Pro-0813 score of 61.5.",
+      "score": "38.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813#deepseek-v4-pro-0813"
     }
   },
   "GLM-4.6": {
@@ -440,6 +526,38 @@
       "source_url": "https://openai.com/es-ES/index/introducing-gpt-5-4-mini-and-nano/"
     }
   },
+  "GPT-5.5": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Overall pass rate for the fixed OpenClaw harness with GPT-5.5; other harnesses produce different scores.",
+      "score": "22.8%",
+      "source_type": "paper",
+      "source_url": "https://pdfs.assets.alphaxiv.org/2606.05405v1.pdf"
+    },
+    "AutomationBench": {
+      "benchmark": "AutomationBench",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Listed for GPT-5.5 on the 600-task/public AutomationBench entry, based on a vendor comparison table; the leaderboard marks the result as self-reported.",
+      "score": "12.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.llmreference.com/benchmark/automation-bench"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-04T11:35:24.832215+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Reported for GPT-5.5 with the Terminus 2 harness and xhigh reasoning; this is not the official OpenAI Terminal-Bench 2.0 result.",
+      "score": "78.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.tbench.ai/leaderboard/terminal-bench/2.1"
+    }
+  },
   "GPT-5.5 Pro": {
     "GPQA": {
       "benchmark": "GPQA",
@@ -450,6 +568,30 @@
       "score": "93.9%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-5-5/"
+    }
+  },
+  "GPT-5.6 Luna": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-04T11:24:18.318931+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Artificial Analysis reports 39.5% for GPT-5.6 Luna with maximum reasoning effort; the configuration is not specified in the user request.",
+      "score": "39.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gpt-5-6-luna"
+    }
+  },
+  "GPT-5.6 Terra": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-04T11:28:32.530593+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "OpenAI reports 50.4% for GPT-5.6 Terra on Agents' Last Exam, the benchmark corresponding to HLE.",
+      "score": "50.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/gpt-5-6/"
     }
   },
   "GPT-6 Astra": {
