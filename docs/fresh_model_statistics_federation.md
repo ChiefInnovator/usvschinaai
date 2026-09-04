@@ -329,4 +329,3 @@ The existing sparkles marker for AI-filled cells should become a general provena
 - Add DeepSeek official-source adapter.
 - Add table-image extraction behind review.
 - Add summary metrics: source lag, accepted fills by source tier, conflict count, provisional row count.
-

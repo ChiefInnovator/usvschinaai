@@ -87,15 +87,15 @@ Note: this is a **coding-specific** top 10 — it is not guaranteed to match the
 
 ### Qualified coding benchmark set
 
-6. For each coding benchmark, count how many of the Coding Initial Top 10 reported a non-missing value. Keep benchmarks where that count is **≥ 8**. This is the **qualified coding set**.
-7. If fewer than **2** coding benchmarks qualify, the coding score is undefined for this snapshot. Emit `codingAvgIq`, `codingValue`, and `codingUnified` as `null` and log a warning. (The threshold is 2 instead of the general-score floor of 3 because the coding benchmark universe is smaller — see §7.)
+1. For each coding benchmark, count how many of the Coding Initial Top 10 reported a non-missing value. Keep benchmarks where that count is **≥ 8**. This is the **qualified coding set**.
+2. If fewer than **2** coding benchmarks qualify, the coding score is undefined for this snapshot. Emit `codingAvgIq`, `codingValue`, and `codingUnified` as `null` and log a warning. (The threshold is 2 instead of the general-score floor of 3 because the coding benchmark universe is smaller — see §7.)
 
 ### Pass 2 — coding rescore
 
-8. For every model in the cohort, compute `codingAvgIq_2` as a flat average of normalized scores over the qualified coding benchmarks only. Flat, not participation-weighted.
-9. `codingValue_2 = codingAvgIq_2 / (Input $/M + Output $/M)`.
-10. Rebuild `min/max_codingAvgIq` and `min/max_codingValue` across the full cohort from Pass 2 outputs.
-11. `codingUnified_2 = 10 × (0.9 × norm(codingAvgIq_2) + 0.1 × norm(codingValue_2))`.
+1. For every model in the cohort, compute `codingAvgIq_2` as a flat average of normalized scores over the qualified coding benchmarks only. Flat, not participation-weighted.
+2. `codingValue_2 = codingAvgIq_2 / (Input $/M + Output $/M)`.
+3. Rebuild `min/max_codingAvgIq` and `min/max_codingValue` across the full cohort from Pass 2 outputs.
+4. `codingUnified_2 = 10 × (0.9 × norm(codingAvgIq_2) + 0.1 × norm(codingValue_2))`.
 
 Pass 2 values are the ones persisted to `models.json` under the new keys.
 

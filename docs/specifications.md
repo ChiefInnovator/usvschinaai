@@ -3,7 +3,7 @@
 ## 1. Project Overview
 
 | Field | Value |
-|-------|-------|
+| ------- | ------- |
 | **Project Name** | US vs CHINA AI Dashboard |
 | **Domain** | usvschina.ai |
 | **Date** | December 30, 2025 |
@@ -21,7 +21,7 @@
 ### Design System
 
 | Element | Value |
-|---------|-------|
+| --------- | ------- |
 | Background | `bg-slate-950` |
 | USA Accent | `#3b82f6` (Electric Blue) |
 | China Accent | `#ef4444` (Crimson Red) |
@@ -111,6 +111,7 @@ $$\text{Unified} = I \times \left(1 + \frac{V_{\text{norm}}}{100}\right)$$
 | Value (V_norm) | 50–100 | Boosts the score (1.5× to 2.0× multiplier) |
 
 **Examples:**
+
 - IQ 80, Value 75 (avg cost) → Unified = 80 × 1.75 = **140**
 - IQ 60, Value 100 (free) → Unified = 60 × 2.0 = **120** (can't overcome low IQ)
 - IQ 40, Value 100 (free) → Unified = 40 × 2.0 = **80** (low IQ ceiling)
@@ -124,7 +125,7 @@ $$I = \frac{\sum_{i=1}^{n} \text{Benchmark}_i}{n} \quad \text{where } n = \text{
 #### 10 Frontier Benchmarks
 
 | # | Benchmark | Category | Source |
-|---|-----------|----------|--------|
+| --- | ----------- | ---------- | -------- |
 | 1 | AIME 2025 | Math Olympiad | [llm-stats](https://llm-stats.com/benchmarks/aime-2025) |
 | 2 | HMMT 2025 | Math Tournament | [llm-stats](https://llm-stats.com/benchmarks/hmmt) |
 | 3 | GPQA Diamond | PhD Science | [llm-stats](https://llm-stats.com/benchmarks/gpqa) |
@@ -167,7 +168,7 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ### Pages
 
 | Page | Title Format | Data Source |
-|------|--------------|-------------|
+| ------ | -------------- | ------------- |
 | index.html | `US vs CHINA AI` | Latest `history[]` entry |
 | history.html | `Historical Archives` | All `history[]` entries (desc by date) |
 | about.html | `About This Project` | Static content |
@@ -175,7 +176,7 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ### Filters (index.html & history.html)
 
 | Filter | Behavior |
-|--------|----------|
+| -------- | ---------- |
 | Top 10 (default) | Global Top 10 by Unified score |
 | All | All models in dataset |
 | USA | All US-origin models |
@@ -184,7 +185,7 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ### Benchmark Badge Colors
 
 | Color | Benchmarks |
-|-------|------------|
+| ------- | ------------ |
 | Blue | AIME 2025, HMMT 2025, GPQA Diamond |
 | Red | ARC-AGI, BrowseComp, ARC-AGI v2 |
 | Purple | HLE, MMLU-Pro, LiveCodeBench |
@@ -193,7 +194,7 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ## 7. Current Rankings (Dec 31, 2025)
 
 | Rank | Model | Origin | Unified | IQ (0-100) | Value (50-100) |
-|------|-------|--------|---------|-----------|----------------|
+| ------ | ------- | -------- | --------- | ----------- | ---------------- |
 | 1 | Gemini 3 Flash | 🇺🇸 | 166.5 | 89.4 | 86.3 |
 | 2 | Gemini 3 Pro | 🇺🇸 | 155.2 | 89.4 | 73.6 |
 | 3 | Grok-4 Heavy | 🇺🇸 | 152.7 | 89.3 | 71.0 |
@@ -217,4 +218,3 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ---
 
 *Last Updated: December 31, 2025*
-

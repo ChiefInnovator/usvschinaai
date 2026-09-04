@@ -17,12 +17,14 @@ Automate data collection and aggregation for the US vs China AI leaderboard by s
 The scraper operates in three distinct stages, each building upon the previous:
 
 ### Stage 1: Basic Leaderboard Extraction (`--leaderboard-basic`)
+
 - **Purpose**: Extract top-10 models per country with essential identification data
 - **Output**: Console tables (China/US) showing rank, name, country, model URL
 - **Data Captured**: Minimal columns for verification and Stage 2 input
 - **JSON Write**: Optional via `--write-json` flag
 
 ### Stage 2: Full Leaderboard Extraction (`--leaderboard-full`)
+
 - Purpose: Capture all visible table columns from the leaderboard and compute derived scores
 - Console output: Combined Top 20 table sorted by Unified (descending)
 - Files written:
@@ -34,6 +36,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 - Notes: The Model column is widened in the table for readability
 
 ### Stage 3: Model Page Metadata Enrichment
+
 - **Purpose**: Navigate to each model detail page for additional metadata
 - **Output**: Enriched console tables + final models.json update
 - *4. Data Structure & Schema
@@ -42,6 +45,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 **Output**: Single history entry object prepended to `models.json`
 
 ### Raw Data Preservation Rules
+
 - **Store exactly as read**: All leaderboard cell values captured as raw strings
 - **No inference**: Never substitute missing data with defaults or computed values
 - **Null handling**: Empty cells stored as empty string; "-" stored as "-"; "n/a" stored as "n/a"
@@ -49,6 +53,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 - **Derived scores**: Computed fields (avgIq, value, unified) calculated from raw strings at display/persist time
 
 ### Per-Model Object (20 total: 10 US + 10 CN)
+
 ```json
 {
   "rank": 1-10,
@@ -79,6 +84,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 ```
 
 **History Entry Object**:
+
 ```json
 {
   "timestamp": "YYYY-MM-DDTHH:MM:SS±HH:MM",

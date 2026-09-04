@@ -1,12 +1,15 @@
 # News Marquee Feature Specification
+
 **US vs China AI Dashboard Enhancement**
 
 ## 1. Overview
 
 ### 1.1 Goal
+
 Add a dynamic news marquee at the top of the website that displays the latest AI-related news about US and China, allowing users to click through to read full articles.
 
 ### 1.2 Success Metrics
+
 - Display fresh, relevant AI news (updated at least daily)
 - High click-through rate (users engaging with news)
 - Fast load time (<500ms for marquee)
@@ -21,6 +24,7 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 **Position**: Fixed banner at the top of the page, above the scoreboard
 
 **Layout**:
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ 🔥 LATEST NEWS: [Headline 1] • [Headline 2] • [Headline 3] │
@@ -29,6 +33,7 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 ```
 
 **Style Consistency**:
+
 - Match existing neon/glass-morphism design
 - Use Tailwind CSS classes
 - Lucide icons for news indicator
@@ -45,12 +50,14 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 ### 2.3 Content Display
 
 **Headline Format**:
+
 ```
 [Country Flag] [Organization] released [Model Name] achieving [Score]% on [Benchmark]
 🇺🇸 OpenAI released GPT-5.2 achieving 92.4% on GPQA • 🇨🇳 DeepSeek launches V3.2...
 ```
 
 **Each Item Shows**:
+
 - Country flag (🇺🇸 or 🇨🇳)
 - Headline (max 100 characters)
 - Source (e.g., "TechCrunch")
@@ -73,6 +80,7 @@ News Sources → News API/RSS → Python Scraper → news.json → Frontend Disp
 ### 3.2 News Sources
 
 **Primary Sources** (Free Tier):
+
 1. **NewsAPI.org** (Free: 100 requests/day)
    - Endpoint: `https://newsapi.org/v2/everything`
    - Query: `"artificial intelligence" AND ("China" OR "United States")`
@@ -103,6 +111,7 @@ usvschinaai/
 ### 3.4 Data Schema
 
 **news.json**:
+
 ```json
 {
   "lastUpdated": "2026-01-24T12:00:00Z",
@@ -124,6 +133,7 @@ usvschinaai/
 ```
 
 **Fields**:
+
 - `id`: SHA256 hash of URL + publishedAt (deduplication)
 - `headline`: Cleaned, formatted headline (max 100 chars)
 - `url`: Original article URL
@@ -139,6 +149,7 @@ usvschinaai/
 ## 4. Implementation Plan
 
 ### Phase 1: MVP (Week 1)
+
 **Goal**: Basic news marquee with manual updates
 
 - [ ] Design HTML/CSS marquee component
@@ -150,6 +161,7 @@ usvschinaai/
 **Deliverable**: Working marquee with static data
 
 ### Phase 2: Automation (Week 2)
+
 **Goal**: Automated daily news updates
 
 - [ ] Create `scripts/scrape_news.py`
@@ -162,6 +174,7 @@ usvschinaai/
 **Deliverable**: Automated news updates via GitHub Actions
 
 ### Phase 3: Enhancement (Week 3-4)
+
 **Goal**: Improve relevance and user experience
 
 - [ ] Add keyword filtering (model names, benchmarks)
@@ -174,6 +187,7 @@ usvschinaai/
 **Deliverable**: Intelligent news curation
 
 ### Phase 4: Advanced (Future)
+
 **Goal**: Real-time updates and AI summarization
 
 - [ ] Add Twitter/X integration for researcher announcements
@@ -370,6 +384,7 @@ newsTrack.addEventListener('mouseleave', () => { /* resume */ });
 ### 7.1 Filtering Criteria
 
 **Include**:
+
 - New model releases (GPT-5, Gemini 3, DeepSeek V3, etc.)
 - Benchmark achievements
 - Funding announcements (>$50M)
@@ -378,6 +393,7 @@ newsTrack.addEventListener('mouseleave', () => { /* resume */ });
 - Company partnerships
 
 **Exclude**:
+
 - General tech news
 - Unrelated AI applications
 - Op-eds/opinions (unless from major figures)
@@ -387,15 +403,18 @@ newsTrack.addEventListener('mouseleave', () => { /* resume */ });
 ### 7.2 Keyword Weights
 
 **High Priority (score +0.3)**:
+
 - Model names: GPT, Gemini, Claude, DeepSeek, GLM, Qwen
 - Benchmarks: GPQA, MMLU, SWE-bench, ARC-AGI
 - Companies: OpenAI, Anthropic, Google, DeepSeek, Alibaba
 
 **Medium Priority (score +0.2)**:
+
 - Keywords: "artificial intelligence", "machine learning", "AI model"
 - Actions: "released", "launched", "achieved", "breakthrough"
 
 **Low Priority (score +0.1)**:
+
 - General: "technology", "innovation", "research"
 
 ---
@@ -443,6 +462,7 @@ newsItem.addEventListener('click', (e) => {
 ```
 
 **Key Metrics**:
+
 - Click-through rate (CTR)
 - Most clicked sources
 - Most clicked categories
@@ -461,6 +481,7 @@ newsItem.addEventListener('click', (e) => {
 ## 10. Future Enhancements
 
 ### 10.1 v2.0 Features
+
 - [ ] User accounts (save preferences)
 - [ ] Email digest (weekly AI roundup)
 - [ ] Filter by category/source
@@ -469,6 +490,7 @@ newsItem.addEventListener('click', (e) => {
 - [ ] Multilingual support (Chinese translations)
 
 ### 10.2 v3.0 Features
+
 - [ ] AI-powered summarization (using Claude/GPT)
 - [ ] Sentiment analysis (bullish/bearish for US/CN)
 - [ ] Trend detection (rising topics)
@@ -480,23 +502,27 @@ newsItem.addEventListener('click', (e) => {
 ## 11. Testing Plan
 
 ### 11.1 Unit Tests
+
 - [ ] Test news fetching from each source
 - [ ] Test deduplication logic
 - [ ] Test relevance scoring
 - [ ] Test headline cleaning
 
 ### 11.2 Integration Tests
+
 - [ ] Test GitHub Action workflow
 - [ ] Test news.json update
 - [ ] Test frontend loading
 
 ### 11.3 UI Tests
+
 - [ ] Test marquee scrolling
 - [ ] Test click-through
 - [ ] Test responsive design (mobile/tablet/desktop)
 - [ ] Test accessibility (screen readers)
 
 ### 11.4 Performance Tests
+
 - [ ] Load test (1000 concurrent users)
 - [ ] Animation smoothness test (60 FPS)
 - [ ] Network throttling test (3G connection)
@@ -506,6 +532,7 @@ newsItem.addEventListener('click', (e) => {
 ## 12. Dependencies
 
 ### 12.1 Python Packages
+
 ```txt
 requests==2.31.0
 feedparser==6.0.10
@@ -514,11 +541,13 @@ beautifulsoup4==4.12.0  # Optional: for web scraping
 ```
 
 ### 12.2 External APIs
+
 - NewsAPI.org (free tier: 100 req/day)
 - Optional: Twitter/X API v2 (free tier)
 - Optional: OpenAI API (for summarization)
 
 ### 12.3 GitHub Secrets
+
 ```
 NEWSAPI_KEY=your_newsapi_key_here
 ```
@@ -528,6 +557,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 ## 13. Launch Checklist
 
 ### Pre-Launch
+
 - [ ] Test on all major browsers (Chrome, Firefox, Safari, Edge)
 - [ ] Test on mobile devices (iOS, Android)
 - [ ] Verify accessibility (WCAG 2.1 AA)
@@ -535,6 +565,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 - [ ] Configure error monitoring
 
 ### Launch Day
+
 - [ ] Deploy news marquee HTML/CSS/JS
 - [ ] Run initial news scrape
 - [ ] Verify GitHub Action runs successfully
@@ -542,6 +573,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 - [ ] Announce feature on social media
 
 ### Post-Launch
+
 - [ ] Monitor CTR for first week
 - [ ] Gather user feedback
 - [ ] Fix any bugs
@@ -553,6 +585,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 ## 14. Budget Estimate
 
 ### Free Tier (MVP)
+
 - NewsAPI.org: Free (100 req/day)
 - RSS Feeds: Free
 - GitHub Actions: Free (2000 min/month)
@@ -560,6 +593,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 - **Total: $0/month**
 
 ### Paid Tier (Enhanced)
+
 - NewsAPI.org Pro: $449/month (100K req/day)
 - OpenAI API: ~$10/month (summarization)
 - Monitoring: Free (Google Analytics)
@@ -572,7 +606,7 @@ NEWSAPI_KEY=your_newsapi_key_here
 ## 15. Risks & Mitigation
 
 | Risk | Impact | Probability | Mitigation |
-|------|--------|-------------|------------|
+| ------ | -------- | ------------- | ------------ |
 | API rate limit exceeded | High | Medium | Cache aggressively, use multiple sources |
 | Irrelevant news shown | Medium | High | Improve filtering, manual curation |
 | Marquee distracts from main content | Medium | Low | Add dismiss button, subtle design |
@@ -584,6 +618,6 @@ NEWSAPI_KEY=your_newsapi_key_here
 ## Contact & Ownership
 
 **Owner**: Rich Crane (ChiefInnovator)
-**Repository**: https://github.com/ChiefInnovator/usvschinaai
-**Website**: https://usvschina.ai
+**Repository**: <https://github.com/ChiefInnovator/usvschinaai>
+**Website**: <https://usvschina.ai>
 **Last Updated**: 2026-01-24
