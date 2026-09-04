@@ -19,6 +19,16 @@
       "score": "88.0%",
       "source_type": "model_card",
       "source_url": "https://www-cdn.anthropic.com/57a52ea7d8f0e54e8a542e908266086df425cdf5/Claude%20Fable%205%20%26%20Claude%20Mythos%205%20System%20Card.pdf"
+    },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic's system card reports an 83.3% pass rate for Claude Fable 5.",
+      "score": "83.3%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-fable-5-mythos-5-system-card"
     }
   },
   "Claude Fable 5.1": {
@@ -113,6 +123,30 @@
       "score": "70.6%",
       "source_type": "model_card",
       "source_url": "https://www-cdn.anthropic.com/14e4fb01875d2a69f646fa5e574dea2b1c0ff7b5.pdf"
+    }
+  },
+  "Claude Opus 4.6": {
+    "SWE-bench Pro": {
+      "benchmark": "SWE-bench Pro",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic reports 53.4% for Opus 4.6 on SWE-bench Pro.",
+      "score": "53.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.anthropic.com/glasswing"
+    }
+  },
+  "Claude Opus 4.7": {
+    "SWE-benchMultilingual": {
+      "benchmark": "SWE-benchMultilingual",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Anthropic's official Claude Opus 4.7 System Card reports 80.5% on SWE-bench Multilingual.",
+      "score": "80.5%",
+      "source_type": "model_card",
+      "source_url": "https://www-cdn.anthropic.com/037f06850df7fbe871e206dad004c3db5fd50340/Claude%20Opus%204.7%20System%20Card.pdf"
     }
   },
   "Claude Opus 4.8": {
@@ -213,6 +247,18 @@
       "source_url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf"
     }
   },
+  "DeepSeek-V4-Flash-0731": {
+    "LiveBench": {
+      "benchmark": "LiveBench",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LiveBench leaderboard reports 74.2 for DeepSeek V4 Flash 0731; this is the overall score.",
+      "score": "74.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://livebench.ai/?lang=zh-hant"
+    }
+  },
   "DeepSeek-V4-Flash-Vision-Exp": {
     "Toolathlon": {
       "benchmark": "Toolathlon",
@@ -245,6 +291,16 @@
       "score": "12.8%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813#deepseek-v4-pro-0813"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The official DeepSeek-V4 model card reports 87.5% EM for the Pro-Max reasoning mode.",
+      "score": "87.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro"
     },
     "NL2Repo": {
       "benchmark": "NL2Repo",
@@ -331,6 +387,50 @@
       "score": "56.2%",
       "source_type": "vendor_blog",
       "source_url": "https://docs.z.ai/guides/llm/glm-5"
+    }
+  },
+  "GLM-5.1": {
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Reported for GLM-5.1 Open by Z.ai on the Evals Report leaderboard; the official Z.AI GLM-5.1 page reports SWE-bench Pro instead, not SWE-bench Verified.",
+      "score": "74.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://evals.report/benchmarks/swe-bench-verified?tab=scores"
+    }
+  },
+  "GLM-5.2": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-04T12:02:28.027273+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The model card directly reports the GLM-5.2 score.",
+      "score": "23.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    "AutomationBench": {
+      "benchmark": "AutomationBench",
+      "cached_at": "2026-09-04T12:02:28.027273+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The model card reports GLM-5.2 on the AutomationBench Public evaluation.",
+      "score": "12.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731"
+    },
+    "GDPval-AA": {
+      "benchmark": "GDPval-AA",
+      "cached_at": "2026-09-04T12:14:47.990403+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Artificial Analysis reports 1524 Elo for GLM-5.2 on GDPval-AA v2; the requested benchmark label is GDPval-AA.",
+      "score": "1524",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/releases/glm-5-2"
     }
   },
   "GLM-5.3": {},
@@ -582,6 +682,38 @@
       "source_url": "https://artificialanalysis.ai/models/gpt-5-6-luna"
     }
   },
+  "GPT-5.6 Sol": {
+    "FrontierSWE": {
+      "benchmark": "FrontierSWE",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The official FrontierSWE v2 results table reports GPT-5.6 at 32.2%, while the accompanying analysis identifies the evaluated agent as GPT-5.6 Sol.",
+      "score": "32.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.frontierswe.com/blog/v2"
+    },
+    "LiveBench": {
+      "benchmark": "LiveBench",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LiveBench reports GPT-5.6 Sol Max Effort at 81.0 overall for the 2026-06-25 release; this is a max-effort variant rather than an unspecified default-effort score.",
+      "score": "81.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://livebench.ai/?_bhlid=775bb11125f1f030a8bd2adee064b9ef8a3c7249"
+    },
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Scale's leaderboard reports gpt-5.6 (sol) at 81.80%; the page notes a specific April 8, 2026 evaluation update and does not provide a full protocol match beyond the listed configuration.",
+      "score": "81.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://labs.scale.com/leaderboard/mcp_atlas"
+    }
+  },
   "GPT-5.6 Terra": {
     "HLE": {
       "benchmark": "HLE",
@@ -661,6 +793,16 @@
       "source_type": "paper",
       "source_url": "https://arxiv.org/abs/2604.18934"
     },
+    "OSWorld-Verified": {
+      "benchmark": "OSWorld-Verified",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LLM Stats lists Gemini 3.1 Pro at 76.2% on OSWorld-Verified.",
+      "score": "76.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/osworld-verified"
+    },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -726,6 +868,48 @@
       "score": "27.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://agents-last-exam.org/leaderboard"
+    },
+    "FrontierSWE": {
+      "benchmark": "FrontierSWE",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "FrontierSWE V1 reports 72% dominance for Grok 4.5.",
+      "score": "72.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.frontierswe.com/v1"
+    },
+    "LiveBench": {
+      "benchmark": "LiveBench",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LiveBench reports 75.77 overall for grok-4.5 on the June 25, 2026 release; rounded to one decimal place.",
+      "score": "75.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://livebench.ai/"
+    }
+  },
+  "Hy3": {
+    "GDPval-AA": {
+      "benchmark": "GDPval-AA",
+      "cached_at": "2026-09-04T12:14:47.990403+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Third-party benchmark listing reports Hy3 at 1,212 Elo; the official Tencent model materials located did not publish a GDPval-AA score.",
+      "score": "1212",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/models/tencent-hy3/"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Tencent's public vendor-verification table reports 29.74 for HY3, but the exact HLE protocol is not specified.",
+      "score": "29.74%",
+      "source_type": "vendor_blog",
+      "source_url": "https://github.com/Tencent/TokenHub-Vendor-Verifier"
     }
   },
   "Hy4 preview": {
@@ -825,15 +1009,47 @@
     }
   },
   "Kimi K2.5": {
+    "FrontierCode1.1": {
+      "benchmark": "FrontierCode1.1",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The public FrontierCode Main leaderboard lists Kimi K2.5 at 6.9%; the page identifies the benchmark as FrontierCode Main rather than explicitly naming version 1.1.",
+      "score": "6.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://agentsdirectory.dev/benchmarks/frontiercode-main/"
+    },
     "MCP Atlas": {
       "benchmark": "MCP Atlas",
-      "cached_at": "2026-04-14T04:19:41.339418+00:00",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.4",
-      "notes": "Z.ai’s official GLM-5 model card reports Kimi K2.5 at 63.8 on MCP-Atlas (Public Set); this is a third-party comparative table, not a Moonshot primary source.",
-      "score": "63.8%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/zai-org/GLM-5/blob/c35b39f62af17ae76fd6dc5e95a7824d8c01a207/README.md"
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The published MCP Atlas snapshot lists Kimi K2.5 at 29.5%; other aggregators report different protocol/configuration results.",
+      "score": "29.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchlm.ai/benchmarks/mcpatlas"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Toolathlon's published leaderboard lists Kimi-K2.5 at 27.8% ± 0.8 under the default configuration.",
+      "score": "27.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://toolathlon.xyz/"
+    }
+  },
+  "Kimi K2.6": {
+    "MCP Atlas": {
+      "benchmark": "MCP Atlas",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LLM Stats reports 55.9% for Kimi K2.6 on MCP-Atlas; other public leaderboard snapshots report different evaluation configurations.",
+      "score": "55.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/models/kimi-k2.6"
     }
   },
   "Kimi K3": {
@@ -846,6 +1062,26 @@
       "score": "28.3%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    "FinanceAgentv2": {
+      "benchmark": "FinanceAgentv2",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "MoonshotAI's Kimi K3 evaluation table reports 54.4 for Finance Agent v2.",
+      "score": "54.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://github.com/MoonshotAI/Kimi-K3/blob/main/README.md"
+    },
+    "LiveBench": {
+      "benchmark": "LiveBench",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "LiveBench leaderboard lists Kimi K3 open with an overall score of 79.2.",
+      "score": "79.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://livebench.ai/"
     },
     "NL2Repo": {
       "benchmark": "NL2Repo",
@@ -866,6 +1102,16 @@
       "score": "58.3%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K3"
+    },
+    "OSWorld-Verified": {
+      "benchmark": "OSWorld-Verified",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "The official Kimi K3 model card reports 84.8 for OSWorld-Verified.",
+      "score": "84.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3/blob/main/README.md"
     }
   },
   "MiniMax M2.1": {
@@ -1002,13 +1248,45 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-04-12T19:44:48.151542+00:00",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
       "confidence": "high",
-      "llm_model": "gpt-5.4",
-      "notes": "Reported on the official Hugging Face model card for Qwen/Qwen3.5-397B-A17B in the Vision Language benchmark table.",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Official Qwen model card reports 79.0 for MMMU-Pro.",
       "score": "79.0%",
       "source_type": "model_card",
-      "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B"
+      "source_url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/README.md"
+    },
+    "OSWorld-Verified": {
+      "benchmark": "OSWorld-Verified",
+      "cached_at": "2026-09-04T12:15:59.436876+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Reported in the model card's Visual Agent benchmark table.",
+      "score": "62.2%",
+      "source_type": "model_card",
+      "source_url": "https://build.nvidia.com/qwen/qwen3.5-397b-a17b/modelcard"
+    }
+  },
+  "Qwen3.7 Max": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Qwen's official Qwen3.8 model card reports the Qwen3.7-Max baseline at 21.6 under its stated harness protocol.",
+      "score": "21.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8/blob/main/README.md"
+    },
+    "FrontierSWE": {
+      "benchmark": "FrontierSWE",
+      "cached_at": "2026-09-04T12:04:44.496312+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Qwen's official Qwen3.8 model card reports the Qwen3.7-Max baseline at 40.7.",
+      "score": "40.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8/blob/main/README.md"
     }
   },
   "Qwen3.7-Plus": {
@@ -1097,6 +1375,58 @@
       "score": "86.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/qwen3-8-flash-next"
+    }
+  },
+  "Seed 2.0 Pro": {
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Official Seed2.0 evaluation, HLE no-tool text-only setting.",
+      "score": "32.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://seed.bytedance.com/en/seed2"
+    },
+    "IMO-AnswerBench": {
+      "benchmark": "IMO-AnswerBench",
+      "cached_at": "2026-09-04T12:15:59.436876+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "ByteDance’s Seed2.0 model card reports 89.3% for Seed2.0 Pro on IMOAnswerBench (no tool).",
+      "score": "89.3%",
+      "source_type": "model_card",
+      "source_url": "https://arxiv.org/abs/2607.00248"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Official Seed2.0 Pro evaluation result; the page labels the benchmark MMMU_Pro.",
+      "score": "78.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://seed.bytedance.com/en/seed2"
+    },
+    "SWE-benchMultilingual": {
+      "benchmark": "SWE-benchMultilingual",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Official Seed2.0 evaluation result; the page labels the benchmark SWE Multilingual.",
+      "score": "71.7%",
+      "source_type": "vendor_blog",
+      "source_url": "https://seed.bytedance.com/en/seed2"
+    },
+    "Terminal-Bench 2.0": {
+      "benchmark": "Terminal-Bench 2.0",
+      "cached_at": "2026-09-04T12:10:32.266278+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-luna",
+      "notes": "Official Seed2.0 evaluation result.",
+      "score": "55.8%",
+      "source_type": "vendor_blog",
+      "source_url": "https://seed.bytedance.com/en/seed2"
     }
   }
 }

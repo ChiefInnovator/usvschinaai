@@ -585,7 +585,7 @@
             "CharXiv-R": "\u2014",
             "MMMU-Pro": "80.7%",
             "MCPAtlas": "\u2014",
-            "HLE": "\u2014",
+            "HLE": "50.4%",
             "Toolathlon": "53.1%",
             "FrontierMath": "84.9%",
             "MRCRv2": "89.6%",
@@ -617,7 +617,16 @@
             "OSWorld2.0": "50.2%",
             "SEC-benchPro": "57.7%",
             "Terminal-Bench2.1": "87.4%",
-            "Terminal-Bench4.0": "21.5%"
+            "Terminal-Bench4.0": "21.5%",
+            "_provenance": {
+              "HLE": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-luna",
+                "url": "https://openai.com/index/gpt-5-6/",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            }
           },
           {
             "model": "Laguna S 2.1",
