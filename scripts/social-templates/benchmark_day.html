@@ -1,0 +1,24 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.bench { margin-top: 36px; }
+.bench .name { font-size: 190px; line-height: 0.9; color: var(--accent); }
+.bench .note { font-size: 28px; color: var(--muted); margin-top: 12px; }
+.chart { margin-top: 56px; display: grid; gap: 32px; }
+.bar { display: grid; grid-template-columns: 60px 330px 1fr 140px; align-items: center; gap: 16px; font-size: 34px; }
+.bar .n { color: var(--muted); }
+.bar .m { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+.bar .t { height: 46px; border-radius: 0 4px 4px 0; }
+.bar .t.us { background: var(--us); } .bar .t.cn { background: var(--cn); }
+.bar .v { text-align: right; font-weight: 700; }
+.legend { display: flex; gap: 28px; font-size: 26px; color: var(--muted); margin-top: 40px; }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">Benchmark of the day</div>
+<div class="subhead">{{leader_line}}</div>
+<div class="bench">
+  <div class="name display">{{bench_name}}</div>
+  <div class="note">{{bench_reporters}} of {{bench_cohort}} models on the board report it</div>
+</div>
+<div class="chart">{{bars}}</div>
+<div class="legend"><span><i class="teamdot us"></i>Team USA</span><span><i class="teamdot cn"></i>Team China</span></div>
+<div class="footer"><span></span><span>usvschina.ai</span></div>
+</body></html>

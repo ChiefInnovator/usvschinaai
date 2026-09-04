@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.hero { margin-top: 40px; }
+.hero .big { font-size: 180px; line-height: 0.9; color: var(--accent); }
+.hero .big small { font-size: 60px; color: var(--ink); margin-left: 14px; }
+.hero .who { font-size: 40px; font-weight: 700; margin-top: 12px; }
+.hero .why { font-size: 28px; color: var(--muted); margin-top: 6px; }
+.chart { margin-top: 56px; display: grid; gap: 30px; }
+.bar { display: grid; grid-template-columns: 330px 1fr 140px; align-items: center; gap: 16px; font-size: 34px; }
+.bar .m { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+.bar .t { height: 44px; border-radius: 0 4px 4px 0; }
+.bar .t.us { background: var(--us); } .bar .t.cn { background: var(--cn); }
+.bar .v { text-align: right; font-weight: 700; }
+.axis { font-size: 26px; color: var(--muted); margin-top: 20px; }
+.legend { display: flex; gap: 28px; font-size: 26px; color: var(--muted); margin-top: 30px; }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">Power per dollar</div>
+<div class="subhead">{{leader_line}}</div>
+<div class="hero">
+  <div class="big display">{{best_per_dollar}}<small>Unified per $</small></div>
+  <div class="who">{{best_flag}} {{best_model}}</div>
+  <div class="why">{{best_unified}} Unified at {{best_price}} per million input tokens — #{{best_rank}} overall</div>
+</div>
+<div class="chart">{{bars}}</div>
+<div class="axis">Unified Power Score ÷ input price, top 10 only</div>
+<div class="legend"><span><i class="teamdot us"></i>Team USA</span><span><i class="teamdot cn"></i>Team China</span></div>
+<div class="footer"><span></span><span>usvschina.ai</span></div>
+</body></html>

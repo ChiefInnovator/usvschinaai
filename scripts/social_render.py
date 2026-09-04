@@ -18,7 +18,7 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from social_formats import PALETTES, plan_today, build_day_facts  # noqa: E402
+from social_formats import PALETTES, plan_today, build_day_facts, build_chart_facts, read_history  # noqa: E402
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 TEMPLATES = REPO_ROOT / "scripts" / "social-templates"
@@ -29,8 +29,8 @@ WIDTH, HEIGHT = 1080, 1350
 TEMPLATE_FOR = {
     "head_to_head": "head_to_head", "new_challenger": "new_challenger",
     "biggest_mover": "biggest_mover", "leaderboard": "leaderboard",
-    "lead_change": "leaderboard", "price_vs_power": "head_to_head",
-    "benchmark_day": "leaderboard", "trend_30d": "leaderboard",
+    "lead_change": "leaderboard", "price_vs_power": "price_vs_power",
+    "benchmark_day": "benchmark_day", "trend_30d": "trend_30d",
 }
 
 FLAG = {"US": "🇺🇸", "CN": "🇨🇳"}
@@ -60,7 +60,7 @@ def _leader_line(facts: Dict[str, Any]) -> str:
     return f"{who} by {facts['margin']:.0f}"
 
 
-def fill(fmt: str, palette: str, facts: Dict[str, Any]) -> str:
+def fill(fmt: str, palette: str, facts: Dict[str, Any], charts: Dict[str, Any] = None) -> str:
     tpl = (TEMPLATES / f"{TEMPLATE_FOR[fmt]}.html").read_text()
     base = (TEMPLATES / "_base.css").read_text()
     for k, v in PALETTES[palette].items():
@@ -108,6 +108,36 @@ def fill(fmt: str, palette: str, facts: Dict[str, Any]) -> str:
             rungs.append(f'<div class="rung{cls}" style="height:{h:.0f}%"><span>#{rk}</span></div>')
         vals["ladder"] = "".join(rungs[:14])
 
+    if fmt == "price_vs_power" and charts:
+        top = charts["value_top5"]; best = top[0] if top else None
+        mx = max((x["per_dollar"] for x in top), default=1) or 1
+        vals.update({
+            "best_per_dollar": e(f"{best['per_dollar']:,.0f}") if best else "—",
+            "best_flag": FLAG[best["origin"]] if best else "", "best_model": e(best["model"]) if best else "—",
+            "best_unified": e(f"{best['unified']:.0f}") if best else "", "best_price": e(_price(best)) if best else "",
+            "best_rank": e(best["rank"]) if best else "",
+            "bars": "".join(
+                f'<div class="bar"><span class="m">{FLAG[x["origin"]]} {e(x["model"])}</span>'
+                f'<div><div class="t {x["origin"].lower()}" style="width:{max(4, 100*x["per_dollar"]/mx):.0f}%"></div></div>'
+                f'<span class="v">{x["per_dollar"]:,.0f}</span></div>' for x in top),
+        })
+
+    if fmt == "benchmark_day" and charts:
+        top = charts["benchmark_top5"]
+        mx = max((x["value"] for x in top), default=1) or 1
+        vals.update({
+            "bench_name": e(charts["benchmark"] or "—"),
+            "bench_reporters": e(charts["benchmark_reporters"]), "bench_cohort": e(charts["benchmark_cohort"]),
+            "bars": "".join(
+                f'<div class="bar"><span class="n display">{i}</span><span class="m">{FLAG[x["origin"]]} {e(x["model"])}</span>'
+                f'<div><div class="t {x["origin"].lower()}" style="width:{max(4, 100*x["value"]/mx):.0f}%"></div></div>'
+                f'<span class="v">{x["value"]:.1f}%</span></div>' for i, x in enumerate(top, 1)),
+        })
+
+    if fmt == "trend_30d" and charts:
+        vals.update({"margin": e(f"{facts['margin']:,.0f}"), "svg": _trend_svg(charts["trend"]),
+                     "range_note": e(f"{charts['trend'][0]['date']} to {charts['trend'][-1]['date']}") if charts["trend"] else ""})
+
     # leaderboard fields are always filled (it's the fallback template too)
     t = facts["totals"]
     vals.update({
@@ -122,6 +152,35 @@ def fill(fmt: str, palette: str, facts: Dict[str, Any]) -> str:
     for k, v in vals.items():
         tpl = tpl.replace("{{" + k + "}}", v)
     return tpl
+
+
+def _trend_svg(series: List[Dict[str, Any]], w: int = 968, h: int = 760) -> str:
+    """Two-series line chart as inline SVG. 2px lines, 8px end markers,
+    three recessive gridlines, direct labels at the line ends, ink text."""
+    if len(series) < 2:
+        return ""
+    pad_l, pad_r, pad_t, pad_b = 90, 150, 20, 44
+    xs = [pad_l + i * (w - pad_l - pad_r) / (len(series) - 1) for i in range(len(series))]
+    lo = min(min(p["US"], p["CN"]) for p in series); hi = max(max(p["US"], p["CN"]) for p in series)
+    # Round the axis to whole 500s so the ticks read as numbers, not noise.
+    step = 500
+    lo = max(0, (int(lo) // step) * step); hi = ((int(hi) // step) + 1) * step
+    def y(v): return pad_t + (hi - v) * (h - pad_t - pad_b) / (hi - lo or 1)
+    out = [f'<svg viewBox="0 0 {w} {h}" xmlns="http://www.w3.org/2000/svg" font-family="IBM Plex Sans, system-ui" font-size="22">']
+    for k in range(3):
+        v = lo + (hi - lo) * k / 2; yy = y(v)
+        out.append(f'<line x1="{pad_l}" y1="{yy:.1f}" x2="{w - pad_r}" y2="{yy:.1f}" stroke="currentColor" stroke-opacity="0.18" stroke-width="1"/>')
+        out.append(f'<text x="{pad_l - 12}" y="{yy + 8:.1f}" text-anchor="end" fill="currentColor" fill-opacity="0.7">{v:,.0f}</text>')
+    for key, col in (("US", "#3b82f6"), ("CN", "#ef4444")):
+        pts = " ".join(f"{x:.1f},{y(p[key]):.1f}" for x, p in zip(xs, series))
+        out.append(f'<polyline points="{pts}" fill="none" stroke="{col}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>')
+        lx, ly = xs[-1], y(series[-1][key])
+        out.append(f'<circle cx="{lx:.1f}" cy="{ly:.1f}" r="7" fill="{col}" stroke="currentColor" stroke-opacity="0.9" stroke-width="2"/>')
+        out.append(f'<text x="{lx + 16:.1f}" y="{ly + 8:.1f}" fill="currentColor" font-weight="700">{"USA" if key == "US" else "China"} {series[-1][key]:,.0f}</text>')
+    out.append(f'<text x="{pad_l}" y="{h - 10}" fill="currentColor" fill-opacity="0.7">{series[0]["date"]}</text>')
+    out.append(f'<text x="{w - pad_r}" y="{h - 10}" text-anchor="end" fill="currentColor" fill-opacity="0.7">{series[-1]["date"]}</text>')
+    out.append("</svg>")
+    return "".join(out)
 
 
 def render_png(html_text: str, out: Path) -> Path:
@@ -141,10 +200,11 @@ def render_png(html_text: str, out: Path) -> Path:
 def render_plan(plan: Dict[str, Any], out_dir: Path = PREVIEW_DIR) -> List[Path]:
     """The day's cover slide plus the leaderboard as a second slide."""
     fmt, pal, facts = plan["format"], plan["palette"], plan["facts"]
+    charts = plan.get("charts")
     slides = [(fmt, pal)]
     if fmt != "leaderboard":
         slides.append(("leaderboard", pal))
-    return [render_png(fill(f, p, facts), out_dir / f"{i+1:02d}_{f}_{p}.png") for i, (f, p) in enumerate(slides)]
+    return [render_png(fill(f, p, facts, charts), out_dir / f"{i+1:02d}_{f}_{p}.png") for i, (f, p) in enumerate(slides)]
 
 
 def main() -> None:
@@ -154,16 +214,19 @@ def main() -> None:
     args = ap.parse_args()
     data = json.load(open(REPO_ROOT / "models.json"))
     out = Path(args.out)
+    recent_b = [h.get("benchmark") for h in read_history() if h.get("benchmark")]
     if args.all:
         facts = build_day_facts(data)
+        charts = build_chart_facts(data, recent_b)
         from social_formats import FORMAT_PALETTES
         for fmt, pals in FORMAT_PALETTES.items():
             if TEMPLATE_FOR.get(fmt) != fmt:
                 continue  # no dedicated template yet
             for pal in pals:
-                print("  wrote", render_png(fill(fmt, pal, facts), out / f"{fmt}__{pal}.png").name)
+                print("  wrote", render_png(fill(fmt, pal, facts, charts), out / f"{fmt}__{pal}.png").name)
         return
     plan = plan_today(data)
+    plan["charts"] = build_chart_facts(data, recent_b)
     for p in render_plan(plan, out):
         print("  wrote", p.name)
 

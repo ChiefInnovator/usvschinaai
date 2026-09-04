@@ -7,8 +7,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from social_formats import (FORMAT_PALETTES, NO_REPEAT_DAYS, PALETTES, build_day_facts,
-                            choose_format, choose_palette, detect_events, plan_today)
+from social_formats import (CHART_FORMATS, FORMAT_PALETTES, NO_REPEAT_DAYS, PALETTES, build_day_facts,
+                            build_chart_facts, choose_benchmark, choose_format, choose_palette,
+                            detect_events, per_day_series, plan_today)
 
 
 def row(model, origin, unified, iq=50.0, value=1.0, price_in=1.0):
@@ -126,6 +127,16 @@ class PaletteTests(unittest.TestCase):
             d = abs(h1 - h2); d = min(d, 360 - d)
             self.assertLess(d, 30, f"{name}: bg hue {h1:.0f} vs bg2 hue {h2:.0f} - two hues in one palette")
 
+    def test_chart_formats_use_neutral_surfaces_only(self):
+        """Bars and lines carry team blue/red; on cobalt or sunrise they vanished."""
+        import colorsys
+        for fmt in CHART_FORMATS:
+            for name in FORMAT_PALETTES[fmt]:
+                bg = PALETTES[name]["bg"]
+                r, g, b = (int(bg[i:i+2], 16) / 255 for i in (1, 3, 5))
+                _, _, sat = colorsys.rgb_to_hls(r, g, b)
+                self.assertLess(sat, 0.5, f"{fmt} on {name}: saturated surface {bg} fights the team hues")
+
     def test_never_yesterdays_palette(self):
         for fmt in FORMAT_PALETTES:
             for yesterday in PALETTES:
@@ -157,6 +168,35 @@ class OnePalettePerPostTests(unittest.TestCase):
         palettes = {n.rsplit("_", 1)[-1].replace(".png", "") for n in seen}
         self.assertEqual(len(seen), 2)
         self.assertEqual(len(palettes), 1, f"slides used different palettes: {seen}")
+
+
+class ChartFactsTests(unittest.TestCase):
+    def test_per_day_series_takes_latest_snapshot_per_day_oldest_first(self):
+        hist = [snapshot("2026-09-04T09:00:00+00:00", US, CN), snapshot("2026-09-04T03:00:00+00:00", CN, US),
+                snapshot("2026-09-03T03:00:00+00:00", US, CN)]
+        s = per_day_series(hist)
+        self.assertEqual([p["date"] for p in s], ["2026-09-03", "2026-09-04"])
+        self.assertEqual(s[-1]["US"], 900 + 880 + 860 + 840 + 820)   # the 09:00 run, not 03:00
+
+    def test_series_capped_at_30_days(self):
+        hist = [snapshot(f"2026-08-{d:02d}T03:00:00+00:00", US, CN) for d in range(31, 0, -1)] + \
+               [snapshot(f"2026-07-{d:02d}T03:00:00+00:00", US, CN) for d in range(31, 0, -1)]
+        self.assertEqual(len(per_day_series(hist)), 30)
+
+    def test_benchmark_rotates_and_skips_recent(self):
+        q = ["A", "B", "C", "D"]
+        self.assertEqual(choose_benchmark(q, [], 0), "A")
+        self.assertEqual(choose_benchmark(q, [], 1), "B")
+        self.assertEqual(choose_benchmark(q, ["B"], 1), "C")
+        self.assertIsNone(choose_benchmark([], [], 5))
+
+    def test_chart_facts_are_separate_from_caption_facts(self):
+        d = data(snapshot(T, US, CN), snapshot(Y, US, CN))
+        self.assertNotIn("trend", build_day_facts(d))
+        c = build_chart_facts(d, [], today=datetime(2026, 9, 4, tzinfo=timezone.utc))
+        self.assertEqual(len(c["trend"]), 2)
+        self.assertTrue(c["value_top5"])
+        self.assertEqual(c["value_top5"][0]["per_dollar"], round(c["value_top5"][0]["unified"] / c["value_top5"][0]["price_in"], 1))
 
 
 class PlanTests(unittest.TestCase):

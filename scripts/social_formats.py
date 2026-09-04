@@ -35,6 +35,7 @@ FORMATS = [
     ("leaderboard",     0),   # the full top 10 - a cadence element, not the feed
 ]
 FORMAT_WEIGHT = dict(FORMATS)
+CHART_FORMATS = {"price_vs_power", "benchmark_day", "trend_30d"}
 NO_REPEAT_DAYS = 5
 
 # Each format has two palettes so the same story two days apart still looks
@@ -59,9 +60,11 @@ FORMAT_PALETTES = {
     "new_challenger": ["graphite", "newsprint"],
     "biggest_mover":  ["graphite", "sunrise"],
     "head_to_head":   ["newsprint", "midnight"],
-    "price_vs_power": ["sunrise", "newsprint"],
-    "benchmark_day":  ["cobalt", "graphite"],
-    "trend_30d":      ["newsprint", "cobalt"],
+    # Chart tiles carry team blue/red as bar and line colour, so their surface
+    # must be neutral: on cobalt the US bars vanished, on sunrise the CN bars did.
+    "price_vs_power": ["midnight", "newsprint"],
+    "benchmark_day":  ["graphite", "newsprint"],
+    "trend_30d":      ["newsprint", "graphite"],
     "leaderboard":    ["midnight", "graphite"],
 }
 
@@ -259,3 +262,97 @@ def plan_today(data: Dict[str, Any], history: Optional[List[Dict[str, Any]]] = N
     fmt = choose_format(facts, recent_formats, today)
     palette = choose_palette(fmt, facts, recent_palettes)
     return {"facts": facts, "format": fmt, "palette": palette, "weight": FORMAT_WEIGHT[fmt]}
+
+
+# ---------------------------------------------------------------------------
+# Chart facts - for the three chart tiles only. Deliberately NOT part of
+# build_day_facts(): that dict is the caption model's whole input budget, and
+# a 30-day series or per-benchmark values would triple it for no caption gain.
+# ---------------------------------------------------------------------------
+
+META_KEYS_FOR_CHARTS = {
+    "model", "organization", "link", "origin", "description", "created", "avgIq", "value",
+    "unified", "coverage", "provisional", "_provenance", "_scoring", "Model", "Country",
+    "License", "Context", "Input$/M", "Output$/M", "Speed", "Parameters(B)", "KnowledgeCutoff",
+    "Multimodal", "Released", "Organization", "LLMStats", "Latency", "CodeArena",
+    "Reasoning", "Math", "Coding", "Search", "Writing", "Vision", "Tools", "LongCtx",
+    "Finance", "Legal", "Health",
+}
+MISSING = {"", "-", "–", "—", "n/a", "N/A", "null", "None"}
+TREND_DAYS = 30
+BENCHMARK_NO_REPEAT = 6
+
+
+def _reported(r: Dict[str, Any], b: str) -> bool:
+    v = r.get(b)
+    return isinstance(v, str) and v.strip() not in MISSING
+
+
+def qualified_benchmarks(rows: List[Dict[str, Any]]) -> List[str]:
+    """Same rule as the scorer: reported by at least half the cohort."""
+    headers = set()
+    for r in rows:
+        headers.update(k for k in r if k not in META_KEYS_FOR_CHARTS)
+    need = max(2, round(len(rows) * 0.5))
+    return sorted(b for b in headers if sum(_reported(r, b) for r in rows) >= need)
+
+
+def choose_benchmark(qualified: List[str], recent: List[str], day_index: int) -> Optional[str]:
+    """Rotate through the qualified set, skipping any featured recently."""
+    if not qualified:
+        return None
+    recent_set = set(recent[-BENCHMARK_NO_REPEAT:])
+    order = qualified[day_index % len(qualified):] + qualified[: day_index % len(qualified)]
+    for b in order:
+        if b not in recent_set:
+            return b
+    return order[0]
+
+
+def per_day_series(history: List[Dict[str, Any]], days: int = TREND_DAYS) -> List[Dict[str, Any]]:
+    """Latest snapshot per UTC day, oldest first, up to `days` days."""
+    byday: Dict[str, Dict[str, Any]] = {}
+    for e in history:                      # history is newest-first
+        day = _date(e.get("timestamp", ""))
+        if day and day not in byday:
+            byday[day] = e
+    out = []
+    for day in sorted(byday)[-days:]:
+        t = _totals(_board(byday[day]))
+        out.append({"date": day, "US": t["US"], "CN": t["CN"]})
+    return out
+
+
+def build_chart_facts(data: Dict[str, Any], recent_benchmarks: Optional[List[str]] = None,
+                      today: Optional[datetime] = None) -> Dict[str, Any]:
+    history = data.get("history") or []
+    rows = _board(history[0]) if history else []
+    today = today or datetime.now(timezone.utc)
+
+    # benchmark of the day
+    qual = qualified_benchmarks(rows)
+    bench = choose_benchmark(qual, recent_benchmarks or [], today.timetuple().tm_yday)
+    top5 = []
+    if bench:
+        vals = [(_num(r.get(bench)), r["model"], r["origin"]) for r in rows if _reported(r, bench)]
+        vals = [(v, m, o) for v, m, o in vals if v is not None]
+        top5 = [{"model": m, "origin": o, "value": v} for v, m, o in sorted(vals, reverse=True)[:5]]
+    reporters = sum(_reported(r, bench) for r in rows) if bench else 0
+
+    # price vs power: unified per $ of input price, over the top 10
+    priced = []
+    for i, r in enumerate(rows[:10], 1):
+        price = _num(r.get("Input$/M"))
+        if price and price > 0:
+            priced.append({"model": r["model"], "origin": r["origin"], "rank": i,
+                           "unified": round(float(r.get("unified", 0)), 1), "price_in": price,
+                           "per_dollar": round(float(r.get("unified", 0)) / price, 1)})
+    priced.sort(key=lambda x: -x["per_dollar"])
+
+    return {
+        "benchmark": bench, "benchmark_reporters": reporters, "benchmark_cohort": len(rows), "benchmark_top5": top5,
+        "value_top5": priced[:5],
+        "cheapest_in_top10": min(priced, key=lambda x: x["price_in"]) if priced else None,
+        "priciest_in_top10": max(priced, key=lambda x: x["price_in"]) if priced else None,
+        "trend": per_day_series(history),
+    }

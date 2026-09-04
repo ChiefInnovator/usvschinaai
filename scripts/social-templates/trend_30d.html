@@ -1,0 +1,15 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
+.hero { margin-top: 30px; display: flex; align-items: baseline; gap: 22px; }
+.hero .big { font-size: 140px; line-height: 0.9; color: var(--accent); }
+.hero .lbl { font-size: 30px; color: var(--muted); max-width: 420px; line-height: 1.2; }
+.plot { margin-top: 36px; }
+.plot svg { width: 100%; height: auto; display: block; }
+.legend { display: flex; gap: 28px; font-size: 26px; color: var(--muted); margin-top: 18px; }
+</style></head><body>
+<div class="kicker">{{date_long}}</div>
+<div class="headline">30 days of the race</div>
+<div class="hero"><div class="big display">{{margin}}</div><div class="lbl">point margin today, top-10 Unified total</div></div>
+<div class="plot">{{svg}}</div>
+<div class="legend"><span><i class="teamdot us"></i>Team USA</span><span><i class="teamdot cn"></i>Team China</span><span>{{range_note}}</span></div>
+<div class="footer"><span></span><span>usvschina.ai</span></div>
+</body></html>
