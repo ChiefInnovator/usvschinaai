@@ -1,6 +1,6 @@
 # News Marquee Feature Specification
 
-**US vs China AI Dashboard Enhancement**
+US vs China AI Dashboard Enhancement
 
 ## 1. Overview
 
@@ -25,7 +25,7 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 
 **Layout**:
 
-```
+```text
 ┌─────────────────────────────────────────────────────────────┐
 │ 🔥 LATEST NEWS: [Headline 1] • [Headline 2] • [Headline 3] │
 │                 ←─────────────────────────────────→          │
@@ -51,7 +51,7 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 
 **Headline Format**:
 
-```
+```text
 [Country Flag] [Organization] released [Model Name] achieving [Score]% on [Benchmark]
 🇺🇸 OpenAI released GPT-5.2 achieving 92.4% on GPQA • 🇨🇳 DeepSeek launches V3.2...
 ```
@@ -70,7 +70,7 @@ Add a dynamic news marquee at the top of the website that displays the latest AI
 
 ### 3.1 Data Pipeline
 
-```
+```text
 News Sources → News API/RSS → Python Scraper → news.json → Frontend Display
      ↓              ↓              ↓               ↓              ↓
   Various      Aggregation    Daily Cron     Static File    Client JS
@@ -98,7 +98,7 @@ News Sources → News API/RSS → Python Scraper → news.json → Frontend Disp
 
 ### 3.3 File Structure
 
-```
+```text
 usvschinaai/
 ├── news.json              # Latest news data
 ├── scripts/
@@ -548,7 +548,7 @@ beautifulsoup4==4.12.0  # Optional: for web scraping
 
 ### 12.3 GitHub Secrets
 
-```
+```text
 NEWSAPI_KEY=your_newsapi_key_here
 ```
 

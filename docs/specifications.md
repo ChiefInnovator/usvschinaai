@@ -29,7 +29,7 @@
 
 ## 3. File Structure
 
-```
+```text
 ├── index.html        # Main leaderboard (loads latest history entry)
 ├── history.html      # Historical archives (loads all history entries)
 ├── about.html        # Methodology, assumptions, benchmarks
@@ -106,7 +106,7 @@ $$\text{Unified} = I \times \left(1 + \frac{V_{\text{norm}}}{100}\right)$$
 **Intelligence gates everything.** A model with low intelligence cannot score high, regardless of how cheap it is. Value acts as a multiplier boost, not an equal component.
 
 | Component | Range | Role |
-|-----------|-------|------|
+| --------- | ----- | ---- |
 | Intelligence (I) | 0–100 | Gates the score (multiplicative) |
 | Value (V_norm) | 50–100 | Boosts the score (1.5× to 2.0× multiplier) |
 
@@ -152,7 +152,7 @@ $$C = \frac{3 \times \text{Input} + 1 \times \text{Output}}{4}$$
 $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 
 | Threshold | Cost | Raw Value | Normalized |
-|-----------|------|-----------|------------|
+| --------- | ---- | --------- | ---------- |
 | Floor (Best) | $0.25 | 100 | 100 |
 | Ceiling (Worst) | $60.00 | 0 | 50 |
 
@@ -209,7 +209,7 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 ### National Totals (Top 10 Method)
 
 | Team | Score | Models in Top 10 |
-|------|-------|------------------|
+| ---- | ----- | ---------------- |
 | 🇺🇸 USA | 773.3 | 5 |
 | 🇨🇳 China | 705.0 | 5 |
 
@@ -217,4 +217,4 @@ $$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
 
 ---
 
-*Last Updated: December 31, 2025*
+Last Updated: December 31, 2025
