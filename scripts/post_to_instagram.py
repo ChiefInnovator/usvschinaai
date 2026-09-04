@@ -215,22 +215,37 @@ def already_posted_today(access_token, ig_user_id, now=None):
     try:
         resp = requests.get(
             f"{GRAPH_API_BASE}/{ig_user_id}/media",
-            params={"fields": "id,timestamp", "limit": 1, "access_token": access_token},
+            params={"fields": "id,timestamp,permalink", "limit": 10, "access_token": access_token},
             timeout=30,
         )
         resp.raise_for_status()
         items = resp.json().get("data", [])
     except Exception as exc:  # network, auth, schema - anything
         return f"UNKNOWN (could not query Instagram: {exc})"
-    if not items:
-        return None
-    ts = items[0].get("timestamp", "")
+
     # Graph API timestamps look like 2026-09-03T10:07:00+0000
-    try:
-        posted = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z").astimezone(timezone.utc)
-    except ValueError:
-        return f"UNKNOWN (unparseable timestamp {ts!r})"
-    return ts if posted.date() == now.date() else None
+    def _parse(ts):
+        try:
+            return datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z").astimezone(timezone.utc)
+        except (TypeError, ValueError):
+            return None
+
+    today = []
+    for item in items:
+        posted = _parse(item.get("timestamp"))
+        if posted is None:
+            return f"UNKNOWN (unparseable timestamp {item.get('timestamp')!r})"
+        if posted.date() == now.date():
+            today.append(item)
+    if not today:
+        return None
+    # List every post from today so a manual clean-up knows exactly what
+    # remains; the guard only sees what Instagram reports, and "I deleted
+    # today's post" can mean any one of several.
+    print(f"Instagram reports {len(today)} post(s) today (UTC):")
+    for item in today:
+        print(f"  {item.get('timestamp')}  id={item.get('id')}  {item.get('permalink', '')}")
+    return today[0].get("timestamp", "")
 
 
 def snapshot_is_today(models_path, now=None):

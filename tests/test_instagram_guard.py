@@ -52,6 +52,21 @@ class AlreadyPostedTodayTests(unittest.TestCase):
         self._with({"data": [{"id": "1", "timestamp": "2026-09-03T23:30:00-0500"}]})
         self.assertTrue(pti.already_posted_today("t", "u", now=NOW))
 
+    def test_several_posts_today_still_blocks_and_reports_newest(self):
+        self._with({"data": [
+            {"id": "3", "timestamp": "2026-09-04T09:22:57+0000"},
+            {"id": "2", "timestamp": "2026-09-04T05:14:00+0000"},
+            {"id": "1", "timestamp": "2026-09-03T23:00:00+0000"},
+        ]})
+        self.assertEqual(pti.already_posted_today("t", "u", now=NOW), "2026-09-04T09:22:57+0000")
+
+    def test_only_older_posts_in_the_window_allows(self):
+        self._with({"data": [
+            {"id": "2", "timestamp": "2026-09-03T09:00:00+0000"},
+            {"id": "1", "timestamp": "2026-09-02T09:00:00+0000"},
+        ]})
+        self.assertIsNone(pti.already_posted_today("t", "u", now=NOW))
+
     def test_no_media_allows(self):
         self._with({"data": []})
         self.assertIsNone(pti.already_posted_today("t", "u", now=NOW))
