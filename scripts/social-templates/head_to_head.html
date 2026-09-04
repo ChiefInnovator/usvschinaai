@@ -1,8 +1,9 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8"><style>{{base_css}}
 .split { display: grid; grid-template-columns: 1fr 96px 1fr; align-items: start; margin-top: 40px; }
 .side { padding: 36px 28px; border-radius: 22px; }
-.side.left { background: color-mix(in srgb, var(--us) 18%, transparent); }
-.side.right { background: color-mix(in srgb, var(--cn) 18%, transparent); }
+.side { background: color-mix(in srgb, var(--ink) 8%, transparent); border-top: 10px solid; }
+.side.left { border-top-color: var(--us); }
+.side.right { border-top-color: var(--cn); }
 .flag { font-size: 44px; }
 .name { font-size: 78px; margin-top: 18px; word-break: break-word; }
 .org { font-size: 26px; color: var(--muted); margin-top: 10px; }
@@ -13,6 +14,7 @@
 </style></head><body>
 <div class="kicker">{{date_long}}</div>
 <div class="headline">Today's number ones</div>
+<div class="subhead">{{leader_line}}</div>
 <div class="split">
   <div class="side left"><div class="flag">🇺🇸</div><div class="name display">{{us_name}}</div><div class="org">{{us_org}}</div>
     <div class="stats">
@@ -30,5 +32,5 @@
       <div class="stat"><b class="display">#{{cn_rank}}</b><span>overall today</span></div>
     </div></div>
 </div>
-<div class="footer"><span><strong>{{leader_line}}</strong></span><span>usvschina.ai</span></div>
+<div class="footer"><span></span><span>usvschina.ai</span></div>
 </body></html>

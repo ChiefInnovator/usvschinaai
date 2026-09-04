@@ -39,13 +39,17 @@ NO_REPEAT_DAYS = 5
 
 # Each format has two palettes so the same story two days apart still looks
 # different, and the chooser refuses yesterday's palette outright.
+#
+# A palette is ONE hue (bg -> bg2 is a tint/shade of the same hue, or neutral)
+# plus one accent. Variation lives between posts, never inside one: a post's
+# slides all share a palette, and team blue/red appear only as thin markers.
 PALETTES = {
     "midnight":  {"bg": "#020617", "bg2": "#0f172a", "ink": "#f8fafc", "muted": "#94a3b8", "accent": "#fbbf24"},
     "newsprint": {"bg": "#eef2f7", "bg2": "#dfe6ee", "ink": "#0b1f3a", "muted": "#4b5b70", "accent": "#b45309"},  # amber: accent must differ from ink or highlights vanish
     "cobalt":    {"bg": "#1e3a8a", "bg2": "#1d4ed8", "ink": "#eff6ff", "muted": "#bfdbfe", "accent": "#facc15"},
     "signal":    {"bg": "#7f1d1d", "bg2": "#b91c1c", "ink": "#fff1f2", "muted": "#fecaca", "accent": "#fde68a"},
     "graphite":  {"bg": "#1f2937", "bg2": "#111827", "ink": "#f9fafb", "muted": "#9ca3af", "accent": "#f59e0b"},
-    "sunrise":   {"bg": "#f97316", "bg2": "#db2777", "ink": "#fffbeb", "muted": "#ffe4e6", "accent": "#0b1f3a"},
+    "sunrise":   {"bg": "#f97316", "bg2": "#c2410c", "ink": "#fffbeb", "muted": "#ffedd5", "accent": "#0b1f3a"},  # one hue: orange -> deep orange
 }
 # Team colours are constant across palettes so the encoding never changes.
 TEAM = {"US": "#3b82f6", "CN": "#ef4444"}

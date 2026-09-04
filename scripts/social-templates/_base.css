@@ -17,6 +17,7 @@ body {
 }
 .display { font-family: 'Bebas Neue', 'IBM Plex Sans', sans-serif; letter-spacing: 0.01em; line-height: 0.9; }
 .kicker { font-size: 26px; font-weight: 600; color: var(--muted); }
+.subhead { font-size: 32px; font-weight: 600; color: var(--muted); margin-top: 10px; }
 .headline { font-size: 64px; font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; margin-top: 10px; }
 .footer { margin-top: auto; padding-top: 30px; display: flex; justify-content: space-between; align-items: baseline; font-size: 24px; color: var(--muted); }
 .footer strong { color: var(--ink); font-weight: 700; }

@@ -112,6 +112,20 @@ class PaletteTests(unittest.TestCase):
         for name, pal in PALETTES.items():
             self.assertNotEqual(pal["accent"].lower(), pal["ink"].lower(), name)
 
+    def test_each_palette_is_a_single_hue(self):
+        """Variation belongs between posts, not inside one tile."""
+        import colorsys
+        def hs(hexs):
+            r, g, b = (int(hexs[i:i+2], 16) / 255 for i in (1, 3, 5))
+            h, l, s_ = colorsys.rgb_to_hls(r, g, b)
+            return h * 360, s_
+        for name, pal in PALETTES.items():
+            (h1, s1), (h2, s2) = hs(pal["bg"]), hs(pal["bg2"])
+            if s1 < 0.12 and s2 < 0.12:
+                continue  # neutral (graphite, newsprint, midnight)
+            d = abs(h1 - h2); d = min(d, 360 - d)
+            self.assertLess(d, 30, f"{name}: bg hue {h1:.0f} vs bg2 hue {h2:.0f} - two hues in one palette")
+
     def test_never_yesterdays_palette(self):
         for fmt in FORMAT_PALETTES:
             for yesterday in PALETTES:
@@ -130,6 +144,19 @@ class PaletteTests(unittest.TestCase):
             if recent_p:
                 self.assertNotEqual(p, recent_p[-1])
             recent_p.append(p)
+
+
+class OnePalettePerPostTests(unittest.TestCase):
+    def test_all_slides_of_a_post_share_the_palette(self):
+        import social_render
+        seen = []
+        social_render.render_png = lambda html_text, out: seen.append(out.name) or out
+        plan = plan_today(data(snapshot(T, US, CN), snapshot(Y, US, CN)), history=[],
+                          today=datetime(2026, 9, 4, tzinfo=timezone.utc))
+        social_render.render_plan(plan, Path("/tmp/_unused"))
+        palettes = {n.rsplit("_", 1)[-1].replace(".png", "") for n in seen}
+        self.assertEqual(len(seen), 2)
+        self.assertEqual(len(palettes), 1, f"slides used different palettes: {seen}")
 
 
 class PlanTests(unittest.TestCase):
