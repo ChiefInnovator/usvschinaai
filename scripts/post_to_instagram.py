@@ -194,6 +194,60 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
     return post_id
 
 
+
+# ---------------------------------------------------------------------------
+# Once-per-day guard
+# ---------------------------------------------------------------------------
+# The workflow fires on every successful deploy, and a deploy follows every
+# push to main - code changes included. On 2026-09-03 that produced several
+# posts of the same day's board within a few hours. The rule is at most one
+# post per UTC day, and the source of truth for "did we post today" is
+# Instagram itself, not repo state: ask the account for its latest media.
+
+def already_posted_today(access_token, ig_user_id, now=None):
+    """Return the timestamp of today's post if one exists, else None.
+
+    Fails CLOSED: if Instagram cannot be asked, returns a sentinel string so
+    the caller skips - a missed post is recoverable, a duplicate is not.
+    """
+    from datetime import datetime, timezone
+    now = now or datetime.now(timezone.utc)
+    try:
+        resp = requests.get(
+            f"{GRAPH_API_BASE}/{ig_user_id}/media",
+            params={"fields": "id,timestamp", "limit": 1, "access_token": access_token},
+            timeout=30,
+        )
+        resp.raise_for_status()
+        items = resp.json().get("data", [])
+    except Exception as exc:  # network, auth, schema - anything
+        return f"UNKNOWN (could not query Instagram: {exc})"
+    if not items:
+        return None
+    ts = items[0].get("timestamp", "")
+    # Graph API timestamps look like 2026-09-03T10:07:00+0000
+    try:
+        posted = datetime.strptime(ts, "%Y-%m-%dT%H:%M:%S%z").astimezone(timezone.utc)
+    except ValueError:
+        return f"UNKNOWN (unparseable timestamp {ts!r})"
+    return ts if posted.date() == now.date() else None
+
+
+def snapshot_is_today(models_path, now=None):
+    """Only publish a board that was scraped today - never re-post stale data."""
+    from datetime import datetime, timezone
+    now = now or datetime.now(timezone.utc)
+    with open(models_path) as f:
+        history = json.load(f).get("history") or []
+    if not history:
+        return False
+    ts = history[0].get("timestamp", "")
+    try:
+        scraped = datetime.fromisoformat(ts).astimezone(timezone.utc)
+    except ValueError:
+        return False
+    return scraped.date() == now.date()
+
 def main():
     access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
     ig_user_id = os.environ.get("IG_USER_ID")
@@ -210,6 +264,18 @@ def main():
         sys.exit(1)
 
     image_url = "https://usvschina.ai/ig-image.png"
+
+    force = os.environ.get("IG_FORCE", "").lower() in ("1", "true", "yes")
+    if force:
+        print("IG_FORCE set - bypassing the once-per-day and freshness guards")
+    else:
+        posted = already_posted_today(access_token, ig_user_id)
+        if posted:
+            print(f"Skipping: already posted today ({posted}). Maximum one post per day.")
+            return
+        if not snapshot_is_today(models_path):
+            print("Skipping: latest snapshot is not from today - not re-posting stale data.")
+            return
 
     data = load_caption_data(models_path)
     caption = build_caption(data)
