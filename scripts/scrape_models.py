@@ -693,8 +693,14 @@ def build_history_entry(
     max_value: Optional[float] = None,
     benchmark_min_max: Optional[Dict[str, tuple]] = None,
     qualified_benchmarks: Optional[set] = None,
+    scoring_parameters: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """Build models.json history entry from scraped data."""
+    """Build models.json history entry from scraped data.
+
+    `scoring_parameters` is ScoringResult.to_snapshot(): the qualified set and
+    bounds the pool was scored with. The published rows are the top 10 per
+    country, not the pool, so without it a later re-score (backfill) cannot
+    reproduce these numbers."""
     # Get timezone-aware timestamp
     now_local = datetime.now()
     now_utc = datetime.now(timezone.utc)
@@ -768,13 +774,16 @@ def build_history_entry(
     us_rows = [entry_to_row(e) for e in us_entries]
     cn_rows = [entry_to_row(e) for e in cn_entries]
     
-    return {
+    entry: Dict[str, Any] = {
         "timestamp": timestamp,
         "teams": {
             "US": us_rows,
             "CN": cn_rows
         }
     }
+    if scoring_parameters:
+        entry["scoring"] = scoring_parameters
+    return entry
 
 
 def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
@@ -1427,6 +1436,7 @@ def run_scraper(args):
                     max_value,
                     benchmark_min_max=benchmark_min_max,
                     qualified_benchmarks=qualified_benchmarks,
+                    scoring_parameters=scoring.to_snapshot() if stage == "metadata" else None,
                 )
                 prepend_history(models_path, new_entry)
 

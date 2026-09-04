@@ -901,10 +901,18 @@ def run_gap_filling_pass(
     max_calls: int = DEFAULT_MAX_CALLS,
     min_confidence: str = "high",
     scraper_run_ts: str = "",
+    skip_pairs: Optional[set] = None,
+    on_batch=None,
 ) -> int:
     """Orchestrate one gap-filling pass. Mutates combined_entries in place.
 
     Returns the number of cells filled (cache hits + fresh fills accepted).
+
+    `skip_pairs` is a set of (model_name, benchmark) never to research;
+    `on_batch(model_name, benchmarks)` is called once per answered batch.
+    Together they let a caller that replays the pass over many days (the
+    history backfill) remember what it has already asked, because null
+    results are deliberately not cached here.
 
     **Batching:** candidates are grouped by model and emitted as ONE API call
     per model, asking for all the model's missing benchmarks in a single
@@ -933,6 +941,10 @@ def run_gap_filling_pass(
 
     candidates = build_candidates(combined_entries, benchmark_headers, enabled_tiers=frozenset({1, 2}))
     print(f"[gap-fill] {len(candidates)} candidate gaps after §5 filters and §6 tiering")
+    if skip_pairs:
+        before = len(candidates)
+        candidates = [c for c in candidates if (c.model_name, c.benchmark) not in skip_pairs]
+        print(f"[gap-fill] {before - len(candidates)} skipped as already researched")
     if not candidates:
         return 0
 
@@ -1046,6 +1058,8 @@ def run_gap_filling_pass(
             schema_failures += 1
             print("  → batch schema validation failed")
             continue
+        if on_batch is not None:
+            on_batch(model_name, list(batch_benchmarks))
 
         # Apply each validated result to its matching candidate
         for cand in batch_candidates:

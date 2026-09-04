@@ -184,7 +184,10 @@ def calculate_derived_scores(
     
     # Normalize to 0-100 if bounds provided
     if min_avg_iq is not None and max_avg_iq is not None and max_avg_iq > min_avg_iq:
-        norm_avg_iq = ((avg_iq - min_avg_iq) / (max_avg_iq - min_avg_iq)) * 100
+        # Clamp to [0, 100]: a no-op when the bounds come from this cohort, but
+        # a re-score against a snapshot's stored bounds can see a filled cell
+        # push avgIq past them.
+        norm_avg_iq = min(100.0, max(0.0, ((avg_iq - min_avg_iq) / (max_avg_iq - min_avg_iq)) * 100))
     else:
         norm_avg_iq = avg_iq
     
@@ -192,7 +195,8 @@ def calculate_derived_scores(
         # Clamp at 0: unpriced models (value 0) are excluded from the min/max
         # cohort, so their raw value can sit below min_value. Without the clamp
         # they'd get a negative Value contribution instead of simply zero.
-        norm_value = max(0.0, ((value - min_value) / (max_value - min_value)) * 100)
+        # Clamp at 100 for the same reason as avgIq above (stored bounds).
+        norm_value = min(100.0, max(0.0, ((value - min_value) / (max_value - min_value)) * 100))
     else:
         norm_value = value
     
@@ -257,6 +261,37 @@ class ScoringResult:
         n = sum(1 for b in self.qualified_benchmarks if entry.columns.get(b, "") not in MISSING_VALUE_MARKERS)
         return (n, len(self.qualified_benchmarks))
 
+    def to_snapshot(self) -> Dict[str, Any]:
+        """The parameters a later re-score needs to reproduce these numbers
+        exactly: the qualified set and every normalisation bound.
+
+        The daily run scores a pool (15 per country) and publishes the top 10
+        per country, so the published rows alone cannot recover the scale they
+        were normalised against. Stored on the history snapshot as `scoring`;
+        `score_cohort(..., fixed=block)` consumes it.
+        """
+        return {
+            "version": 2,
+            "qualified": sorted(self.qualified_benchmarks) if self.qualified_benchmarks else None,
+            "qualifiedMinReports": self.qualified_min_reports,
+            "bounds": {"minAvgIq": self.min_avg_iq, "maxAvgIq": self.max_avg_iq,
+                       "minValue": self.min_value, "maxValue": self.max_value},
+            "benchmarkRanges": {b: [lo, hi] for b, (lo, hi) in sorted(self.benchmark_min_max.items())},
+        }
+
+
+def _fixed_result(benchmark_headers: List[str], participation: Dict[str, int], max_participation: int,
+                  fixed: Dict[str, Any]) -> ScoringResult:
+    """A ScoringResult whose qualified set and bounds come from a stored
+    `to_snapshot()` block rather than from the entries being scored."""
+    bounds = fixed.get("bounds") or {}
+    ranges = {b: (float(lo), float(hi)) for b, (lo, hi) in (fixed.get("benchmarkRanges") or {}).items()}
+    qualified = set(fixed["qualified"]) if fixed.get("qualified") else None
+    return ScoringResult(list(benchmark_headers), [], participation, max_participation,
+                         float(bounds.get("minAvgIq", 0.0)), float(bounds.get("maxAvgIq", 1.0)),
+                         float(bounds.get("minValue", 0.0)), float(bounds.get("maxValue", 1.0)),
+                         ranges, qualified, int(fixed.get("qualifiedMinReports", 0)))
+
 
 def _is_reported(entry: Any, b: str) -> bool:
     return entry.columns.get(b, "") not in MISSING_VALUE_MARKERS
@@ -285,16 +320,23 @@ def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log
 
 
 def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_sparse: bool = True,
-                 log=print) -> ScoringResult:
+                 log=print, fixed: Optional[Dict[str, Any]] = None) -> ScoringResult:
     """Score a cohort. With drop_sparse (the default), sparse benchmarks are
     removed first; the daily run passes False because it drops them itself
-    before gap-filling."""
+    before gap-filling.
+
+    `fixed` is a ScoringResult.to_snapshot() block. When given, the qualified
+    set and the normalisation bounds are taken from it instead of being
+    derived from `entries`, so a snapshot's published rows re-score on the
+    scale of the pool they were originally normalised against."""
     benchmark_headers = list(benchmark_headers)
     dropped: List[str] = []
     if drop_sparse:
         benchmark_headers, dropped = drop_sparse_benchmarks(entries, benchmark_headers, log)
 
     participation, max_participation = build_benchmark_participation(entries, benchmark_headers)
+    if fixed is not None:
+        return _fixed_result(benchmark_headers, participation, max_participation, fixed)
 
     benchmark_min_max: Dict[str, tuple] = {}
     for b in benchmark_headers:

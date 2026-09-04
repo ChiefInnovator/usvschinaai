@@ -8,9 +8,13 @@ window scored on un-enriched data. This script replays the pass over the
 snapshots we already have in models.json.
 
 Cache economics: gap_fill_benchmarks caches positive results per
-(model, benchmark) with a 30-day TTL, so a model researched for the first
-snapshot is free for the other 34 days. The API cost scales with the number of
-DISTINCT models across the window, not with the number of days.
+(model, benchmark) with a 30-day TTL, but deliberately never caches a null
+("no published score") result, and most gaps ARE nulls. Left alone, the pass
+re-asks the same questions for the same model on every day of the window: the
+first live run spent its whole 80-call budget on 5 days for 8 fills. So this
+script keeps its own memory of what it has asked (data/ai_gap_backfill_asked.json,
+same 30-day TTL) and hands it to the pass as `skip_pairs`. With it, the cost
+scales with the number of DISTINCT models across the window, not with days.
 
 Anachronism caveat: a score researched today is written into a snapshot from
 weeks ago. The cache does not record when a vendor published the number, so a
@@ -24,6 +28,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -38,6 +43,11 @@ import gap_fill_benchmarks as gf  # noqa: E402
 
 MODELS_JSON = REPO_ROOT / "models.json"
 CURRENT_JSON = REPO_ROOT / "current.json"
+# (model, benchmark) pairs a backfill batch has already asked about, with the
+# time they were asked. Null answers are not cached by gap_fill_benchmarks, so
+# without this every day of the window re-buys the same nulls.
+ASKED_FILE = REPO_ROOT / "data" / "ai_gap_backfill_asked.json"
+ASKED_TTL_DAYS = gf.POSITIVE_CACHE_TTL_DAYS
 
 # The daily scrape researches a handful of cells and can afford the strong
 # model. A 35-day backfill researches every distinct model in the window at
@@ -204,6 +214,45 @@ def apply_cached(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str,
     return total
 
 
+# ---------------------------------------------------------------------------
+# Asked-pairs memory
+# ---------------------------------------------------------------------------
+
+def load_asked(path: Path = ASKED_FILE) -> Dict[str, Dict[str, str]]:
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        return data if isinstance(data, dict) else {}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def save_asked(asked: Dict[str, Dict[str, str]], path: Path = ASKED_FILE) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(asked, f, ensure_ascii=False, indent=2, sort_keys=True)
+        f.write("\n")
+
+
+def fresh_asked_pairs(asked: Dict[str, Dict[str, str]], now: datetime) -> set:
+    """(model, benchmark) pairs asked within ASKED_TTL_DAYS."""
+    out = set()
+    for model, benchmarks in asked.items():
+        for benchmark, ts in benchmarks.items():
+            try:
+                when = datetime.fromisoformat(ts)
+            except (TypeError, ValueError):
+                continue
+            if now - when < timedelta(days=ASKED_TTL_DAYS):
+                out.add((model, benchmark))
+    return out
+
+
+def record_asked(asked: Dict[str, Dict[str, str]], model: str, benchmarks: List[str], now: datetime) -> None:
+    slot = asked.setdefault(model, {})
+    for benchmark in benchmarks:
+        slot[benchmark] = now.isoformat()
+
+
 def daily_snapshots(history: List[Dict[str, Any]], days: int) -> List[Tuple[str, Dict[str, Any]]]:
     """Latest snapshot per UTC day within the window, newest day first.
 
@@ -228,47 +277,66 @@ def daily_snapshots(history: List[Dict[str, Any]], days: int) -> List[Tuple[str,
     return sorted(byday.items(), key=lambda kv: kv[0], reverse=True)
 
 
-def analyze(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str]) -> None:
-    """Dry-run report: candidates, cache coverage and the live-call estimate."""
-    cache = gf.load_cache()
-    now = datetime.now(timezone.utc)
+def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str],
+                   cache: Dict[str, Dict[str, Any]], asked_pairs: set, now: datetime) -> Dict[str, Any]:
+    """Simulate the pass's budget over the window.
 
-    total_candidates = 0
-    cached_resolvable = 0
-    needs_call: Dict[Tuple[str, str], set] = {}
-    per_day: List[Tuple[str, int, int]] = []
-
+    One call per (day, model) with at least one candidate that is neither
+    cache-fresh nor already asked; a call marks its pairs asked for the older
+    days that follow, exactly as the live run does. Counting distinct models
+    alone (the earlier estimate) assumed nulls were cached, which they are not.
+    """
+    asked = set(asked_pairs)
+    calls = 0
+    total = cached = skipped = 0
+    per_day: List[Tuple[str, int, int, int, int]] = []
+    to_research: Dict[Tuple[str, str], set] = {}
     for day, snap in snapshots:
         entries = hydrate(snap, display)
         headers = [display.get(k, k) for k in snapshot_benchmark_keys(snap)]
         candidates = gf.build_candidates(entries, headers, enabled_tiers=frozenset({1, 2}))
-        day_cached = 0
+        day_cached = day_skipped = 0
+        batches: Dict[Tuple[str, str], List[str]] = {}
         for cand in candidates:
             entry = cache.get(cand.model_name, {}).get(cand.benchmark)
             if entry and gf.cache_is_fresh(entry, now):
                 day_cached += 1
-                cached_resolvable += 1
+            elif (cand.model_name, cand.benchmark) in asked:
+                day_skipped += 1
             else:
-                needs_call.setdefault((cand.model_name, cand.model_country), set()).add(cand.benchmark)
-        total_candidates += len(candidates)
-        per_day.append((day, len(candidates), day_cached))
+                batches.setdefault((cand.model_name, cand.model_country), []).append(cand.benchmark)
+        for (name, country), bms in batches.items():
+            asked.update((name, b) for b in bms)
+            to_research.setdefault((name, country), set()).update(bms)
+        calls += len(batches)
+        total += len(candidates); cached += day_cached; skipped += day_skipped
+        per_day.append((day, len(candidates), day_cached, day_skipped, len(batches)))
+    return {"calls": calls, "candidates": total, "cached": cached, "skipped": skipped,
+            "per_day": per_day, "to_research": to_research}
+
+
+def analyze(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str]) -> None:
+    """Dry-run report: candidates, cache coverage and the live-call estimate."""
+    now = datetime.now(timezone.utc)
+    est = estimate_calls(snapshots, display, gf.load_cache(), fresh_asked_pairs(load_asked(), now), now)
 
     print(f"\nDays in window: {len(snapshots)}  "
           f"({snapshots[-1][0]} .. {snapshots[0][0]})")
-    print(f"Gap candidates across the window: {total_candidates}")
-    print(f"  resolvable from the existing cache: {cached_resolvable}")
-    print(f"  needing a live lookup:              {total_candidates - cached_resolvable}")
+    print(f"Gap candidates across the window: {est['candidates']}")
+    print(f"  resolvable from the existing cache: {est['cached']}")
+    print(f"  already asked (null, within TTL):   {est['skipped']}")
+    print(f"  needing a live lookup:              {est['candidates'] - est['cached'] - est['skipped']}")
     print(f"\nDistinct (model, benchmark) pairs to research: "
-          f"{sum(len(v) for v in needs_call.values())}")
-    print(f"Batched API calls required (one per model): {len(needs_call)}")
+          f"{sum(len(v) for v in est['to_research'].values())}")
+    print(f"Batched API calls required (one per model per day it is first seen): {est['calls']}")
 
-    print("\nPer day (candidates / already cached):")
-    for day, n, c in per_day:
-        print(f"  {day}  {n:4d} / {c:4d}")
+    print("\nPer day (candidates / cached / already asked / calls):")
+    for day, n, c, s, k in est["per_day"]:
+        print(f"  {day}  {n:4d} / {c:4d} / {s:4d} / {k:3d}")
 
-    if needs_call:
+    if est["to_research"]:
         print("\nModels needing a live lookup:")
-        for (name, country), bms in sorted(needs_call.items(), key=lambda kv: -len(kv[1])):
+        for (name, country), bms in sorted(est["to_research"].items(), key=lambda kv: -len(kv[1])):
             print(f"  {name} ({country}) — {len(bms)}: {', '.join(sorted(bms))}")
 
 
@@ -303,18 +371,54 @@ def scoring_headers(entries: List["ScoreEntry"]) -> List[str]:
     return sorted(keys)
 
 
+_COVERAGE = re.compile(r"^\d+/[1-9]\d*$")
+
+
+def pool_scored_without_parameters(snapshot: Dict[str, Any]) -> bool:
+    """True for a snapshot the daily pool scorer produced (rows carry a
+    coverage 'k/q') before it stored its scoring parameters, and that the
+    backfill has never re-scored (no `_prior`).
+
+    The pool it was normalised against (15 per country) is not in the
+    snapshot, only the published top 10 per country. Re-deriving bounds from
+    those 20 rows crushed the bottom of the board to ~0 on 2026-09-04, so such
+    snapshots keep their published numbers."""
+    if snapshot.get("scoring"):
+        return False
+    rows = [r for c in ("US", "CN") for r in snapshot.get("teams", {}).get(c, [])]
+    return (any(_COVERAGE.match(str(r.get("coverage") or "")) for r in rows)
+            and not any("_prior" in r for r in rows))
+
+
 def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
-    """Re-score one snapshot in place. Returns how many rows changed."""
+    """Re-score one snapshot in place. Returns how many rows changed.
+
+    Three cases:
+    - `scoring` block present (daily run since 2026-09-04): re-score on the
+      pool's own scale - stored qualified set and bounds - so an unchanged
+      snapshot reproduces its published numbers exactly and a filled cell
+      moves only its own row.
+    - pool-scored but no block: left alone (see pool_scored_without_parameters).
+    - legacy (top-10-per-country cohort, pre-pool): qualified set and bounds
+      derived from the 20 rows, which is how those days were scored anyway.
+    """
     from scoring import build_benchmark_participation, MIN_COHORT_PARTICIPATION, score_cohort
+    if pool_scored_without_parameters(snapshot):
+        return 0
     entries = [ScoreEntry(r, c) for c in ("US", "CN") for r in snapshot.get("teams", {}).get(c, [])]
     if not entries:
         return 0
     headers = scoring_headers(entries)
-    # Mirror the daily run's sparse drop for scoring purposes WITHOUT deleting
-    # the cells from history: score only benchmarks enough of the cohort report.
-    counts, _ = build_benchmark_participation(entries, headers)
-    headers = [b for b in headers if counts.get(b, 0) >= MIN_COHORT_PARTICIPATION]
-    result = score_cohort(entries, headers, drop_sparse=False, log=lambda *a, **k: None)
+    fixed = snapshot.get("scoring")
+    if fixed:
+        headers = sorted(set(headers) | set(fixed.get("qualified") or []))
+        result = score_cohort(entries, headers, drop_sparse=False, log=lambda *a, **k: None, fixed=fixed)
+    else:
+        # Mirror the daily run's sparse drop for scoring purposes WITHOUT deleting
+        # the cells from history: score only benchmarks enough of the cohort report.
+        counts, _ = build_benchmark_participation(entries, headers)
+        headers = [b for b in headers if counts.get(b, 0) >= MIN_COHORT_PARTICIPATION]
+        result = score_cohort(entries, headers, drop_sparse=False, log=lambda *a, **k: None)
     changed = 0
     for e in entries:
         s = result.scores_for(e)
@@ -332,9 +436,13 @@ def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
 def rescore_window(snapshots: List[Tuple[str, Dict[str, Any]]]) -> int:
     total = 0
     for day, snap in snapshots:
+        if pool_scored_without_parameters(snap):
+            print(f"[rescore] {day}: kept as published (pool-scored, parameters not stored)")
+            continue
         n = rescore_snapshot(snap)
         total += n
-        print(f"[rescore] {day}: {n} rows re-scored")
+        print(f"[rescore] {day}: {n} rows re-scored"
+              + (" on the stored pool scale" if snap.get("scoring") else ""))
     return total
 
 
@@ -454,6 +562,16 @@ def main() -> int:
 
     gf.query_openai_responses = counting_query
 
+    asked = load_asked()
+    now = datetime.now(timezone.utc)
+    asked_pairs = fresh_asked_pairs(asked, now)
+    print(f"[backfill] {len(asked_pairs)} (model, benchmark) pairs already asked within "
+          f"{ASKED_TTL_DAYS} days; they will not be re-bought")
+
+    def remember(model_name: str, benchmarks: List[str]) -> None:
+        record_asked(asked, model_name, benchmarks, now)
+        asked_pairs.update((model_name, b) for b in benchmarks)
+
     total_filled = 0
     try:
         # Spent newest-day first, so if the ceiling bites it is the stale end
@@ -473,10 +591,14 @@ def main() -> int:
                     max_calls=remaining,
                     min_confidence=args.min_confidence,
                     scraper_run_ts=f"backfill:{day}",
+                    skip_pairs=asked_pairs,
+                    on_batch=remember,
                 )
             except Exception as e:
                 print(f"[backfill] pass failed for {day} ({e}); leaving the day unchanged")
                 continue
+            finally:
+                save_asked(asked)   # every answered batch is remembered even if a later day fails
             day_filled = write_back(entries)
             total_filled += day_filled
             print(f"[backfill] {day}: {day_filled} cells written "

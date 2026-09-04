@@ -251,3 +251,118 @@ class RescoreTests(unittest.TestCase):
         bf.recompute_badges(data)
         self.assertEqual(data["teams"]["usa"]["badge"], "OVERALL WINNER")
         self.assertEqual(data["teams"]["china"]["badge"], "RUNNER UP")
+
+
+class RescoreScaleTests(unittest.TestCase):
+    """2026-09-04 (afternoon): the first live backfill re-derived bounds from the
+    20 published rows of two pool-scored days and crushed the bottom of the live
+    board (Claude Sonnet 5: 579 -> 1). A pool-scored day keeps its numbers unless
+    the daily run stored the pool's parameters on the snapshot."""
+
+    def _pool_day(self, with_block):
+        from scoring import score_cohort
+
+        class P:
+            def __init__(s, name, country, iq):
+                s.name, s.country, s.url = name, country, ""
+                s.columns = {"Input$/M": "$1.00", "Output$/M": "$2.00",
+                             "A": f"{iq}%", "B": f"{iq}%", "C": f"{iq}%"}
+        pool = [P(f"{c}{i}", c, 30 + i * 2) for c in ("US", "CN") for i in range(15)]
+        res = score_cohort(pool, ["A", "B", "C"], drop_sparse=False, log=lambda *a, **k: None)
+        rows = {"US": [], "CN": []}
+        for e in sorted(pool, key=lambda e: -res.scores_for(e)["unified"]):
+            if len(rows[e.country]) < 10:
+                s = res.scores_for(e)
+                n, q = res.coverage(e)
+                rows[e.country].append({"model": e.name, "organization": "x", "origin": e.country,
+                                        "created": "Aug. 2026", "avgIq": s["avgIq"], "value": s["value"],
+                                        "unified": s["unified"], "coverage": f"{n}/{q}", **e.columns})
+        snap = {"timestamp": "2026-09-05T03:00:00+00:00", "teams": rows}
+        if with_block:
+            snap["scoring"] = json.loads(json.dumps(res.to_snapshot()))
+        return snap
+
+    def test_pool_scored_day_without_parameters_is_kept_as_published(self):
+        snap = self._pool_day(with_block=False)
+        before = json.dumps(snap, sort_keys=True)
+        self.assertTrue(bf.pool_scored_without_parameters(snap))
+        self.assertEqual(bf.rescore_snapshot(snap), 0)
+        self.assertEqual(json.dumps(snap, sort_keys=True), before)
+
+    def test_stored_parameters_reproduce_the_published_numbers(self):
+        snap = self._pool_day(with_block=True)
+        self.assertFalse(bf.pool_scored_without_parameters(snap))
+        self.assertEqual(bf.rescore_snapshot(snap), 0, "an unchanged snapshot must re-score to itself")
+        self.assertTrue(all("_prior" not in r for t in snap["teams"].values() for r in t))
+
+    def test_a_fill_on_a_pool_scored_day_moves_only_its_row(self):
+        snap = self._pool_day(with_block=True)
+        before = {r["model"]: r["unified"] for t in snap["teams"].values() for r in t}
+        target = snap["teams"]["US"][-1]
+        target["A"] = "99%"
+        self.assertEqual(bf.rescore_snapshot(snap), 1)
+        self.assertGreater(target["unified"], before[target["model"]])
+        self.assertLessEqual(target["unified"], 1000.0)
+        self.assertEqual(target["_prior"]["unified"], before[target["model"]])
+        for t in snap["teams"].values():
+            for r in t:
+                if r is not target:
+                    self.assertEqual(r["unified"], before[r["model"]], r["model"])
+
+    def test_legacy_day_already_rescored_once_is_rescored_again(self):
+        """Coverage written by the first backfill must not make a legacy day look pool-scored."""
+        _, snap = RescoreTests("test_cohort_membership_and_order_are_untouched")._snapshot()
+        self.assertGreater(bf.rescore_snapshot(snap), 0)
+        self.assertTrue(all(r["coverage"] and "_prior" in r for t in snap["teams"].values() for r in t))
+        self.assertFalse(bf.pool_scored_without_parameters(snap))
+        snap["teams"]["CN"][0]["A"] = "95%"
+        self.assertGreaterEqual(bf.rescore_snapshot(snap), 1)
+
+
+class AskedMemoryTests(unittest.TestCase):
+    """gap_fill_benchmarks never caches a null answer, so the first live backfill
+    re-bought the same nulls on every day: 80 calls for 5 days and 8 fills. The
+    backfill remembers what it asked and skips it for ASKED_TTL_DAYS."""
+
+    def test_fresh_pairs_respect_the_ttl(self):
+        now = datetime(2026, 9, 4, tzinfo=timezone.utc)
+        asked = {}
+        bf.record_asked(asked, "M", ["HLE", "GPQA"], now - timedelta(days=bf.ASKED_TTL_DAYS - 1))
+        bf.record_asked(asked, "Old", ["HLE"], now - timedelta(days=bf.ASKED_TTL_DAYS + 1))
+        asked.setdefault("Junk", {})["HLE"] = "not a date"
+        self.assertEqual(bf.fresh_asked_pairs(asked, now), {("M", "HLE"), ("M", "GPQA")})
+
+    def test_roundtrip_through_disk_and_corruption(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            path = Path(d) / "asked.json"
+            asked = {"M": {"HLE": "2026-09-04T11:15:00+00:00"}}
+            bf.save_asked(asked, path)
+            self.assertEqual(bf.load_asked(path), asked)
+            path.write_text("{not json", encoding="utf-8")
+            self.assertEqual(bf.load_asked(path), {})
+            self.assertEqual(bf.load_asked(Path(d) / "missing.json"), {})
+
+    def test_estimate_counts_one_call_per_model_per_first_day(self):
+        us = [_row("M", "US", HLE="—")]
+        cn = [_row("K", "CN", HLE="—")]
+        snapshots = [("2026-09-04", _snapshot("2026-09-04T03:00:00+00:00", us, cn)),
+                     ("2026-09-03", _snapshot("2026-09-03T03:00:00+00:00", us, cn))]
+        real = bf.gf.build_candidates
+
+        def fake(entries, headers, enabled_tiers=None):
+            return [bf.gf.GapCandidate(e.name, e.country, e.url, "Org", "HLE", 1, 1, 1) for e in entries]
+        bf.gf.build_candidates = fake
+        try:
+            now = datetime(2026, 9, 4, tzinfo=timezone.utc)
+            est = bf.estimate_calls(snapshots, {}, {}, set(), now)
+            self.assertEqual((est["calls"], est["skipped"], est["cached"]), (2, 2, 0),
+                             "two models on day one, both already asked by day two")
+            est = bf.estimate_calls(snapshots, {}, {}, {("M", "HLE")}, now)
+            self.assertEqual((est["calls"], est["skipped"]), (1, 3))
+            cache = {"M": {"HLE": {"score": 1.0, "cached_at": now.isoformat()}},
+                     "K": {"HLE": {"score": 1.0, "cached_at": now.isoformat()}}}
+            est = bf.estimate_calls(snapshots, {}, cache, set(), now)
+            self.assertEqual((est["calls"], est["cached"]), (0, 4))
+        finally:
+            bf.gf.build_candidates = real

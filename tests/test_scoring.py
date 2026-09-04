@@ -148,3 +148,65 @@ class ScoreShapeTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class StoredParametersTests(unittest.TestCase):
+    """2026-09-04 (afternoon): the daily run scores a pool of 15 per country and
+    publishes the top 10 per country. The first history backfill re-derived the
+    bounds from those 20 published rows and crushed the bottom of the live board
+    (Claude Sonnet 5: 579 -> 1). A re-score must reuse the pool's parameters."""
+
+    HEADERS = ["A", "B", "C", "D", "E"]
+
+    def _pool_and_published(self):
+        pool = cohort(n=30, benches=tuple(self.HEADERS))
+        for e in pool[16:]:                  # E is reported only by the weaker half of the pool
+            e.columns.pop("E")
+        result = score_cohort(pool, self.HEADERS, drop_sparse=False, log=lambda *a, **k: None)
+        published = pool[10:]                # the 20 strongest = what the snapshot stores
+        return pool, published, result
+
+    def test_block_reproduces_pool_scores_for_the_published_rows(self):
+        _, published, result = self._pool_and_published()
+        import json
+        block = json.loads(json.dumps(result.to_snapshot()))       # survives a trip through models.json
+        again = score_cohort(published, self.HEADERS, drop_sparse=False, log=lambda *a, **k: None, fixed=block)
+        for e in published:
+            self.assertEqual(again.scores_for(e), result.scores_for(e), e.name)
+            self.assertEqual(again.coverage(e), result.coverage(e), e.name)
+
+    def test_rederiving_from_the_published_rows_alone_changes_scale_and_qualified_set(self):
+        _, published, result = self._pool_and_published()
+        alone = score_cohort(published, self.HEADERS, drop_sparse=False, log=lambda *a, **k: None)
+        self.assertIn("E", result.qualified_benchmarks, "16 of 30 pool models report E")
+        self.assertNotIn("E", alone.qualified_benchmarks, "only 6 of the 20 published rows do")
+        weakest = published[0]
+        self.assertGreater(result.scores_for(weakest)["unified"], 0, "above the pool's floor when published")
+        self.assertLess(alone.scores_for(weakest)["unified"], 1.0, "crushed to the floor of the 20")
+
+    def test_a_filled_cell_moves_only_its_row_and_stays_within_bounds(self):
+        _, published, result = self._pool_and_published()
+        block = result.to_snapshot()
+        before = {e.name: result.scores_for(e)["unified"] for e in published}
+        target = published[5]
+        target.columns["A"] = pct(99.0)
+        again = score_cohort(published, self.HEADERS, drop_sparse=False, log=lambda *a, **k: None, fixed=block)
+        for e in published:
+            if e is target:
+                self.assertGreater(again.scores_for(e)["unified"], before[e.name])
+            else:
+                self.assertEqual(again.scores_for(e)["unified"], before[e.name], e.name)
+        top = published[-1]
+        top.columns.update({b: pct(100.0) for b in self.HEADERS})
+        capped = score_cohort(published, self.HEADERS, drop_sparse=False, log=lambda *a, **k: None, fixed=block)
+        self.assertLessEqual(capped.scores_for(top)["unified"], 1000.0)
+        self.assertGreaterEqual(capped.scores_for(published[0])["unified"], 0.0)
+
+    def test_block_is_plain_json(self):
+        import json
+        _, _, result = self._pool_and_published()
+        block = result.to_snapshot()
+        self.assertEqual(block["version"], 2)
+        self.assertEqual(block["qualified"], sorted(result.qualified_benchmarks))
+        self.assertEqual(set(block["bounds"]), {"minAvgIq", "maxAvgIq", "minValue", "maxValue"})
+        self.assertEqual(json.loads(json.dumps(block)), block)
