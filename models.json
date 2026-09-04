@@ -8472,9 +8472,9 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.5s",
             "KnowledgeCutoff": "-",
@@ -8485,7 +8485,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Fable 5.1",
@@ -8523,16 +8539,40 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "65.0%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "77.8%",
             "MRCRv2": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "81.2%",
             "Parameters(B)": "-",
             "Latency": "\u2013",
             "KnowledgeCutoff": "-",
             "Multimodal": "Yes",
             "AutomationBench": "31.4%",
             "GDPval-AA": "61.8%",
-            "OSWorld2.0": "77.9%"
+            "OSWorld2.0": "77.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            },
+            "DeepSWE1.1": "67.4%"
           },
           {
             "model": "GPT-5.6 Terra",
@@ -8743,7 +8783,17 @@
             "LegalAgentBenchmark": "5.8%",
             "OfficeQAPro": "59.4%",
             "OSWorld-Verified": "81.2%",
-            "SWE-benchMultilingual": "78.3%"
+            "SWE-benchMultilingual": "78.3%",
+            "Terminal-Bench2.1": "80.4%",
+            "_provenance": {
+              "Terminal-Bench2.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           }
         ],
         "CN": [
@@ -8800,7 +8850,17 @@
             "OfficeQAPro": "63.3%",
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -8997,7 +9057,7 @@
             "CharXiv-R": "\u2014",
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "83.7%",
-            "HLE": "\u2014",
+            "HLE": "55.4%",
             "Toolathlon": "74.1%",
             "MRCRv2": "\u2014",
             "SWE-benchPro": "65.7%",
@@ -9017,7 +9077,16 @@
             "PostTrainBench": "35.6%",
             "ProgramBench": "17.5%",
             "SWE-benchMultilingual": "82.9%",
-            "Terminal-Bench2.1": "85.4%"
+            "Terminal-Bench2.1": "85.4%",
+            "_provenance": {
+              "HLE": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3-Flash",
@@ -9216,7 +9285,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
@@ -9227,7 +9296,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -9385,10 +9463,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "ApexAgents": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.1s",
             "KnowledgeCutoff": "-",
@@ -9400,7 +9478,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Fable 5",
@@ -9728,7 +9822,17 @@
             "LegalAgentBenchmark": "5.8%",
             "OfficeQAPro": "59.4%",
             "OSWorld-Verified": "81.2%",
-            "SWE-benchMultilingual": "78.3%"
+            "SWE-benchMultilingual": "78.3%",
+            "Terminal-Bench2.1": "80.4%",
+            "_provenance": {
+              "Terminal-Bench2.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GPT-5.5",
@@ -9888,7 +9992,17 @@
             "OfficeQAPro": "63.3%",
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -10088,7 +10202,7 @@
             "CharXiv-R": "\u2014",
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "83.7%",
-            "HLE": "\u2014",
+            "HLE": "55.4%",
             "Toolathlon": "74.1%",
             "MRCRv2": "\u2014",
             "ApexAgents": "37.1%",
@@ -10109,7 +10223,16 @@
             "PostTrainBench": "35.6%",
             "ProgramBench": "17.5%",
             "SWE-benchMultilingual": "82.9%",
-            "Terminal-Bench2.1": "85.4%"
+            "Terminal-Bench2.1": "85.4%",
+            "_provenance": {
+              "HLE": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3-Flash",
@@ -10311,7 +10434,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "ApexAgents": "\u2014",
             "SWE-benchPro": "\u2014",
@@ -10323,7 +10446,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -10482,10 +10614,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "ApexAgents": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.1s",
             "KnowledgeCutoff": "-",
@@ -10497,7 +10629,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Fable 5",
@@ -10825,7 +10973,17 @@
             "LegalAgentBenchmark": "5.8%",
             "OfficeQAPro": "59.4%",
             "OSWorld-Verified": "81.2%",
-            "SWE-benchMultilingual": "78.3%"
+            "SWE-benchMultilingual": "78.3%",
+            "Terminal-Bench2.1": "80.4%",
+            "_provenance": {
+              "Terminal-Bench2.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GPT-5.5",
@@ -10985,7 +11143,17 @@
             "OfficeQAPro": "63.3%",
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -11185,7 +11353,7 @@
             "CharXiv-R": "\u2014",
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "83.7%",
-            "HLE": "\u2014",
+            "HLE": "55.4%",
             "Toolathlon": "74.1%",
             "MRCRv2": "\u2014",
             "ApexAgents": "37.1%",
@@ -11206,7 +11374,16 @@
             "PostTrainBench": "35.6%",
             "ProgramBench": "17.5%",
             "SWE-benchMultilingual": "82.9%",
-            "Terminal-Bench2.1": "85.4%"
+            "Terminal-Bench2.1": "85.4%",
+            "_provenance": {
+              "HLE": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3-Flash",
@@ -11408,7 +11585,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "ApexAgents": "\u2014",
             "SWE-benchPro": "\u2014",
@@ -11420,7 +11597,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -11578,9 +11764,9 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.1s",
             "KnowledgeCutoff": "-",
@@ -11590,7 +11776,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Fable 5",
@@ -11905,7 +12107,17 @@
             "HealthBenchProfessional": "57.8%",
             "LegalAgentBenchmark": "5.8%",
             "OfficeQAPro": "59.4%",
-            "OSWorld-Verified": "81.2%"
+            "OSWorld-Verified": "81.2%",
+            "Terminal-Bench2.1": "80.4%",
+            "_provenance": {
+              "Terminal-Bench2.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GPT-5.5",
@@ -12065,7 +12277,17 @@
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
             "SWE-Marathon": "42.0%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -12363,7 +12585,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
@@ -12374,7 +12596,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -12631,9 +12862,9 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.1s",
             "KnowledgeCutoff": "-",
@@ -12643,7 +12874,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Fable 5",
@@ -12958,7 +13205,17 @@
             "HealthBenchProfessional": "57.8%",
             "LegalAgentBenchmark": "5.8%",
             "OfficeQAPro": "59.4%",
-            "OSWorld-Verified": "81.2%"
+            "OSWorld-Verified": "81.2%",
+            "Terminal-Bench2.1": "80.4%",
+            "_provenance": {
+              "Terminal-Bench2.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GPT-5.5",
@@ -13118,7 +13375,17 @@
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
             "SWE-Marathon": "42.0%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -13416,7 +13683,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
@@ -13427,7 +13694,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -15858,9 +16134,9 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.9s",
             "KnowledgeCutoff": "-",
@@ -15870,7 +16146,23 @@
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
             "LegalAgentBenchmark": "11.7%",
-            "OSWorld2.0": "70.6%"
+            "OSWorld2.0": "70.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Claude Mythos Preview",
@@ -16364,7 +16656,17 @@
             "OfficeQAPro": "63.3%",
             "PostTrainBench": "36.6%",
             "ProgramBench": "77.8%",
-            "Terminal-Bench2.1": "88.3%"
+            "Terminal-Bench2.1": "88.3%",
+            "Agents'LastExam": "28.3%",
+            "_provenance": {
+              "Agents'LastExam": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/moonshotai/Kimi-K3",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "GLM-5.3",
@@ -16669,7 +16971,7 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "\u2014",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "75.9%",
             "MRCRv2": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
@@ -16680,7 +16982,16 @@
             "AutomationBench": "25.7%",
             "DeepSWE": "59.3%",
             "NL2Repo": "57.7%",
-            "Terminal-Bench2.1": "83.9%"
+            "Terminal-Bench2.1": "83.9%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Seed 2.1 Pro",
@@ -16887,10 +17198,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "9.9s",
             "KnowledgeCutoff": "-",
@@ -16899,7 +17210,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -16940,7 +17267,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -16954,7 +17281,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -18027,10 +18363,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "9.2s",
             "KnowledgeCutoff": "-",
@@ -18039,7 +18375,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -18080,7 +18432,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -18094,7 +18446,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -19167,10 +19528,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.8s",
             "KnowledgeCutoff": "-",
@@ -19179,7 +19540,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -19220,7 +19597,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -19234,7 +19611,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -20307,10 +20693,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -20319,7 +20705,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -20360,7 +20762,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -20374,7 +20776,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -21447,10 +21858,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -21459,7 +21870,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -21500,7 +21927,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -21514,7 +21941,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -22587,10 +23023,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -22599,7 +23035,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -22640,7 +23092,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -22654,7 +23106,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -23727,10 +24188,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -23739,7 +24200,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -23780,7 +24257,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -23794,7 +24271,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -24867,10 +25353,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -24879,7 +25365,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -24920,7 +25422,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -24934,7 +25436,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -26007,10 +26518,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "8.2s",
             "KnowledgeCutoff": "-",
@@ -26019,7 +26530,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -26060,7 +26587,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -26074,7 +26601,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -27147,10 +27683,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "5.6s",
             "KnowledgeCutoff": "-",
@@ -27159,7 +27695,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -27200,7 +27752,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -27214,7 +27766,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -28287,10 +28848,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "9.8s",
             "KnowledgeCutoff": "-",
@@ -28299,7 +28860,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -28340,7 +28917,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -28354,7 +28931,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -29427,10 +30013,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "9.8s",
             "KnowledgeCutoff": "-",
@@ -29439,7 +30025,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -29480,7 +30082,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -29494,7 +30096,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -30567,10 +31178,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "9.8s",
             "KnowledgeCutoff": "-",
@@ -30579,7 +31190,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -30620,7 +31247,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -30634,7 +31261,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -31707,10 +32343,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "10.0s",
             "KnowledgeCutoff": "-",
@@ -31719,7 +32355,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -31760,7 +32412,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -31774,7 +32426,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -32847,10 +33508,10 @@
             "MMMU-Pro": "\u2014",
             "MCPAtlas": "\u2014",
             "HLE": "64.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "80.6%",
             "MRCRv2": "\u2014",
             "SciCode": "\u2014",
-            "SWE-benchPro": "\u2014",
+            "SWE-benchPro": "79.2%",
             "Parameters(B)": "-",
             "Latency": "19.5s",
             "KnowledgeCutoff": "-",
@@ -32859,7 +33520,23 @@
             "DeepSWE1.1": "68.8%",
             "FrontierCode1.1": "53.4%",
             "HealthBenchProfessional": "59.8%",
-            "LegalAgentBenchmark": "11.7%"
+            "LegalAgentBenchmark": "11.7%",
+            "_provenance": {
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
+                "confidence": "high",
+                "source_type": "model_card"
+              }
+            }
           },
           {
             "model": "Gemini 3.1 Pro",
@@ -32900,7 +33577,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
             "SWE-benchPro": "54.2%",
@@ -32914,7 +33591,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "GPT-5.6 Sol",
@@ -34098,7 +34784,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -34114,7 +34800,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -34985,7 +35680,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -35010,7 +35705,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -35279,7 +35991,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -35295,7 +36007,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -36166,7 +36887,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -36191,7 +36912,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -36460,7 +37198,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -36476,7 +37214,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -37347,7 +38094,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -37372,7 +38119,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -37641,7 +38405,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -37657,7 +38421,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -38528,7 +39301,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -38553,7 +39326,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -38822,7 +39612,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -38838,7 +39628,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -39709,7 +40508,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -39734,7 +40533,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -40003,7 +40819,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -40019,7 +40835,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -40890,7 +41715,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -40915,7 +41740,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -41184,7 +42026,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -41200,7 +42042,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -42071,7 +42922,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -42096,7 +42947,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -42366,7 +43234,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -42383,7 +43251,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -43264,7 +44141,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -43290,7 +44167,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -43561,7 +44455,7 @@
             "ScreenSpotPro": "\u2014",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -43578,7 +44472,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -44459,7 +45362,7 @@
             "ScreenSpotPro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -44485,7 +45388,24 @@
             "OSWorld-Verified": "73.3%",
             "SkillsBench": "54.9%",
             "SWE-benchMultilingual": "75.8%",
-            "Terminal-Bench2.0": "70.3%"
+            "Terminal-Bench2.0": "70.3%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -44753,7 +45673,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -44770,7 +45690,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -45606,7 +46535,7 @@
             "MMMU-Pro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -45642,7 +46571,24 @@
             "SWE-benchMultilingual": "75.8%",
             "Terminal-Bench2.0": "70.3%",
             "VITA-Bench": "45.6%",
-            "WMT24++": "84.6%"
+            "WMT24++": "84.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -45979,7 +46925,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -45996,7 +46942,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -46832,7 +47787,7 @@
             "MMMU-Pro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -46868,7 +47823,24 @@
             "SWE-benchMultilingual": "75.8%",
             "Terminal-Bench2.0": "70.3%",
             "VITA-Bench": "45.6%",
-            "WMT24++": "84.6%"
+            "WMT24++": "84.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
@@ -47205,7 +48177,7 @@
             "MMMU-Pro": "80.5%",
             "MCPAtlas": "69.2%",
             "HLE": "51.4%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "61.1%",
             "FrontierMath": "\u2014",
             "MRCRv2": "26.3%",
             "SciCode": "59.0%",
@@ -47222,7 +48194,16 @@
             "LegalAgentBenchmark": "0.0%",
             "LiveBench": "79.9%",
             "MRCRv2(8-needle)": "26.3%",
-            "Terminal-Bench2.0": "68.5%"
+            "Terminal-Bench2.0": "68.5%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://toolathlon.xyz/docs/leaderboard",
+                "confidence": "high",
+                "source_type": "third_party_leaderboard"
+              }
+            }
           },
           {
             "model": "Claude Opus 4.7",
@@ -48058,7 +49039,7 @@
             "MMMU-Pro": "79.0%",
             "MCPAtlas": "73.2%",
             "HLE": "34.7%",
-            "Toolathlon": "\u2014",
+            "Toolathlon": "50.6%",
             "FrontierMath": "\u2014",
             "MRCRv2": "91.7%",
             "SciCode": "51.3%",
@@ -48094,7 +49075,24 @@
             "SWE-benchMultilingual": "75.8%",
             "Terminal-Bench2.0": "70.3%",
             "VITA-Bench": "45.6%",
-            "WMT24++": "84.6%"
+            "WMT24++": "84.6%",
+            "_provenance": {
+              "Toolathlon": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              },
+              "DeepSWE1.1": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "DeepSWE1.1": "16.5%"
           },
           {
             "model": "DeepSeek-V4-Pro-Max",
