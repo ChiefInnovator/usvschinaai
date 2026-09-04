@@ -104,6 +104,19 @@ class SupersededTests(unittest.TestCase):
         # GLM-5.3 and GLM-5.3-Flash are different products at the same version.
         self.assertEqual(dropped(["GLM-5.3", "GLM-5.3-Flash"]), [])
 
+    def test_variants_never_supersede_each_other(self):
+        """A first GPT-6 listing must not wipe the GPT-5.6 tiers.
+
+        On 2026-09-04 'GPT-6 Astra' caused Sol, Terra and Luna to be skipped
+        as superseded, then was dropped for coverage itself — OpenAI ended
+        with no models on the board.
+        """
+        names = ["GPT-6 Astra", "GPT-5.6 Sol", "GPT-5.6 Terra", "GPT-5.6 Luna", "GPT-5.5"]
+        self.assertEqual(dropped(names), ["GPT-5.5"])
+
+    def test_bare_name_loses_to_a_newer_untiered_release_too(self):
+        self.assertEqual(dropped(["GPT-6 Astra", "GPT-5.5"]), ["GPT-5.5"])
+
     def test_bare_name_folds_into_variants(self):
         # Chosen behaviour: GPT-5.5 loses to GPT-5.6 Sol / Terra.
         self.assertEqual(dropped(["GPT-5.6 Sol", "GPT-5.6 Terra", "GPT-5.5"]), ["GPT-5.5"])

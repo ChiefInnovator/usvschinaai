@@ -64,36 +64,52 @@ def superseded_models(names: List[str]) -> Dict[int, str]:
     """Map index -> superseding model name, for every name that is an older
     version of another name in the list.
 
-    A bare family name folds into its suffixed variants when the bare name is a
-    single brand token that also appears on its own: "GPT-5.5" competes with
-    "GPT-5.6 Sol" and "GPT-5.6 Terra". The single-token guard stops a deep
-    variant chain from absorbing its own prefix, so "DeepSeek-V4-Flash" is not
-    superseded by an experimental "DeepSeek-V4-Flash-Vision-Exp".
+    Two rules, and they are deliberately asymmetric:
 
-    Names tied on version are all kept — Sol and Terra are siblings, not
-    successors. Only a strictly newer version supersedes, so the result never
-    depends on the order the leaderboard happened to rank them in.
+    * A named variant competes only within its own family: "GPT-5.6 Sol" is
+      superseded by a newer "GPT-5.7 Sol", never by "GPT-6 Astra". On
+      2026-09-04 a first "GPT-6 Astra" listing wiped Sol, Terra and Luna
+      off the board and was then itself dropped for coverage, leaving OpenAI
+      with no models at all. Variants are siblings, not successors.
+
+    * A bare brand name — a single token like "GPT-5.5" or "GLM-5.2" — is the
+      un-tiered release, and folds into ANY newer entry of that brand, tiered
+      or not. It loses to "GPT-5.6 Sol" and to "GPT-6 Astra" alike.
+
+    Names tied on version are all kept, and only a strictly newer version
+    supersedes, so the result never depends on leaderboard order.
     """
     family_keys = [model_family_key(n) for n in names]
-    brand_roots = {k for k in family_keys if len(k.split()) == 1}
-
-    def group_for(key: str) -> str:
-        head = key.split()[0] if key else key
-        return head if head in brand_roots else key
-
-    groups: Dict[str, List[int]] = {}
-    for idx, key in enumerate(family_keys):
-        groups.setdefault(group_for(key), []).append(idx)
+    versions = [model_version_key(n) for n in names]
 
     superseded: Dict[int, str] = {}
+
+    # Rule 1: within an exact family (brand + tier words).
+    groups: Dict[str, List[int]] = {}
+    for idx, key in enumerate(family_keys):
+        groups.setdefault(key, []).append(idx)
     for indexes in groups.values():
-        versions = [model_version_key(names[i]) for i in indexes]
-        known = [v for v in versions if v is not None]
+        known = [(versions[i], i) for i in indexes if versions[i] is not None]
         if len(known) < 2:
             continue
-        newest = max(known)
-        winner = next(names[i] for i, v in zip(indexes, versions) if v == newest)
-        for i, version in zip(indexes, versions):
-            if version is not None and version < newest:
-                superseded[i] = winner
+        newest_v, newest_i = max(known)
+        for v, i in known:
+            if v < newest_v:
+                superseded[i] = names[newest_i]
+
+    # Rule 2: a bare brand name loses to any newer entry of the same brand.
+    for i, key in enumerate(family_keys):
+        if len(key.split()) != 1 or versions[i] is None:
+            continue
+        brand = key
+        rivals = [
+            (versions[j], j) for j in range(len(names))
+            if j != i and versions[j] is not None
+            and family_keys[j].split() and family_keys[j].split()[0] == brand
+        ]
+        if not rivals:
+            continue
+        newest_v, newest_j = max(rivals)
+        if newest_v > versions[i]:
+            superseded[i] = names[newest_j]
     return superseded

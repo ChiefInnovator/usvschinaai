@@ -20,6 +20,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from playwright.sync_api import sync_playwright
 
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
+from cohort_selection import TEAM_SIZE, select_team
 from model_families import superseded_models
 
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
@@ -517,6 +518,12 @@ def format_table(
 # whole US cohort back to the previous generation.
 MIN_QUALIFIED_COVERAGE = 0.5
 
+# Deduplicated, released candidates kept per country through enrichment and
+# scoring. The published top 10 is chosen from this pool at the end (see
+# cohort_selection.select_team), so a model removed for coverage is replaced
+# rather than leaving the team short. 30 rows are parsed per country.
+COHORT_POOL_SIZE = 15
+
 
 def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["LeaderboardEntry"]:
     """Drop rows that are older versions of another model in the same cohort.
@@ -920,7 +927,11 @@ def build_history_entry(
             "created": released,
             "avgIq": scores["avgIq"],
             "value": scores["value"],
-            "unified": scores["unified"]
+            "unified": scores["unified"],
+            # Coverage of the qualified benchmark set this model was scored on,
+            # and whether it was kept only to avoid publishing a short team.
+            "coverage": entry.columns.get("_coverage", ""),
+            "provisional": entry.columns.get("_provisional") == "true",
         }
 
         # Add all raw column values (preserve original keys without modification)
@@ -932,6 +943,8 @@ def build_history_entry(
                 continue
             # Provenance dict needs its inner keys space-stripped to match
             # the score keys on this row (see below for the score-key rule).
+            if header in ("_coverage", "_provisional"):
+                continue
             if header == "_provenance" and isinstance(value, dict):
                 row["_provenance"] = {
                     inner.replace(" ", ""): entry_val
@@ -1203,11 +1216,11 @@ def run_scraper(args):
         try:
             # Scrape both countries
             us_entries, us_headers, us_benchmarks = scrape_country_leaderboard(
-                page, "United States", "US", max_models=10, stage=stage
+                page, "United States", "US", max_models=COHORT_POOL_SIZE, stage=stage
             )
             
             cn_entries, cn_headers, cn_benchmarks = scrape_country_leaderboard(
-                page, "China", "CN", max_models=10, stage=stage
+                page, "China", "CN", max_models=COHORT_POOL_SIZE, stage=stage
             )
             
             # Use US headers as canonical
@@ -1679,6 +1692,11 @@ def run_scraper(args):
                 if len(qualified_set) < MIN_QUALIFIED_FLOOR:
                     print(f"\nWARNING: only {len(qualified_set)} benchmarks qualified "
                           f"(need >= {MIN_QUALIFIED_FLOOR}). Falling back to Pass 1 scoring.")
+                    # No coverage concept in Pass 1; just take the top 10 per
+                    # country from the pool by Pass 1 unified.
+                    us_entries, _ = select_team(us_entries, _pass1_unified, lambda e: 0, 0, TEAM_SIZE)
+                    cn_entries, _ = select_team(cn_entries, _pass1_unified, lambda e: 0, 0, TEAM_SIZE)
+                    combined_entries = us_entries + cn_entries
                 else:
                     current_top10, pass2_bmm, pass2_miq, pass2_maq, pass2_mv, pass2_mxv = _rank_with_qset(qualified_set)
                     qualified_benchmarks = qualified_set
@@ -1716,18 +1734,41 @@ def run_scraper(args):
                             if e.columns.get(b, "") not in MISSING_VALUE_MARKERS
                         )
 
-                    under = [e for e in combined_entries if _coverage(e) < min_cov]
-                    if under:
-                        print(
-                            f"\nDropping {len(under)} model(s) below the minimum coverage "
-                            f"of {min_cov}/{len(qualified_set)} qualified benchmarks:"
+                    def _final_unified(e: LeaderboardEntry) -> float:
+                        return calculate_derived_scores(
+                            e, benchmark_headers,
+                            min_avg_iq=min_avg_iq, max_avg_iq=max_avg_iq,
+                            min_value=min_value, max_value=max_value,
+                            benchmark_min_max=benchmark_min_max,
+                            qualified_benchmarks=qualified_benchmarks,
+                        )["unified"]
+
+                    for e in combined_entries:
+                        e.columns["_coverage"] = f"{_coverage(e)}/{len(qualified_set)}"
+
+                    print(f"\nSelecting {TEAM_SIZE} per country from the pool "
+                          f"(US {len(us_entries)}, CN {len(cn_entries)}); "
+                          f"minimum coverage {min_cov}/{len(qualified_set)}:")
+                    picked = {}
+                    for code, pool in (("US", us_entries), ("CN", cn_entries)):
+                        chosen, provisional = select_team(
+                            pool, _final_unified, _coverage, min_cov, TEAM_SIZE
                         )
-                        for e in sorted(under, key=lambda x: -_coverage(x)):
-                            print(f"  -- {e.name} ({e.country}) — {_coverage(e)}/{len(qualified_set)}")
-                        dropped_names = {e.name for e in under}
-                        us_entries = [e for e in us_entries if e.name not in dropped_names]
-                        cn_entries = [e for e in cn_entries if e.name not in dropped_names]
-                        combined_entries = us_entries + cn_entries
+                        for e in provisional:
+                            e.columns["_provisional"] = "true"
+                        left_out = [e for e in pool if e not in chosen]
+                        picked[code] = chosen
+                        print(f"  {code}: {len(chosen)} chosen, {len(provisional)} provisional "
+                              f"(under coverage, kept so the team is not short), "
+                              f"{len(left_out)} left out")
+                        for e in provisional:
+                            print(f"     ~ {e.name} — {_coverage(e)}/{len(qualified_set)} (provisional)")
+                        for e in left_out:
+                            print(f"     -- {e.name} — {_coverage(e)}/{len(qualified_set)}, "
+                                  f"unified {_final_unified(e):.1f}")
+                    us_entries = picked["US"]
+                    cn_entries = picked["CN"]
+                    combined_entries = us_entries + cn_entries
 
                     print(f"\nPass 2 scoring applied. Non-qualified benchmarks are kept as raw columns "
                           f"but excluded from AvgIQ / Unified.")
