@@ -146,10 +146,17 @@ class SupersededTests(unittest.TestCase):
     def test_unversioned_names_are_never_dropped(self):
         self.assertEqual(dropped(["Command R", "Command R+"]), [])
 
-    def test_unversioned_name_survives_alongside_versioned_sibling(self):
-        # No version means no evidence it is older; keep it rather than guess.
-        names = ["Grok 4.5", "Grok"]
-        self.assertEqual(dropped(names), [])
+    def test_unversioned_original_is_superseded_by_a_versioned_sibling(self):
+        """An unversioned name in a versioned family is the v1.0 original.
+
+        2026-09-04: the April "Muse Spark" took the US slot that "Muse Spark
+        1.3" had been excluded from. It is the older product, not an alias.
+        """
+        self.assertEqual(dropped(["Muse Spark", "Muse Spark 1.3"]), ["Muse Spark"])
+        self.assertEqual(dropped(["Grok 4.5", "Grok"]), ["Grok"])
+
+    def test_unversioned_name_with_no_versioned_sibling_is_kept(self):
+        self.assertEqual(dropped(["Command R", "Kimi K3"]), [])
 
     def test_empty_and_single_inputs(self):
         self.assertEqual(dropped([]), [])

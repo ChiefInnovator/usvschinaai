@@ -36,7 +36,8 @@ MISSING = {"", "-", "–", "—", "n/a", "N/A", "null", "None", "—"}
 # BASE_EXCLUDE_KEYS / scraper metadata_columns split.
 META_KEYS = {
     "model", "organization", "link", "origin", "description", "created",
-    "avgIq", "value", "unified", "_provenance", "_scoring",
+    "avgIq", "value", "unified", "coverage", "provisional",
+    "_provenance", "_scoring",
     "Model", "Country", "License", "Context", "Input$/M", "Output$/M",
     "Speed", "Parameters(B)", "KnowledgeCutoff", "Multimodal", "Released",
     "Organization", "LLMStats", "Latency", "CodeArena",

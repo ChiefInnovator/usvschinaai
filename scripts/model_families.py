@@ -97,6 +97,19 @@ def superseded_models(names: List[str]) -> Dict[int, str]:
             if v < newest_v:
                 superseded[i] = names[newest_i]
 
+    # Rule 1b: an unversioned name is the original release of its family.
+    # "Muse Spark" (Apr 2026) beside "Muse Spark 1.3" is v1.0, not an alias,
+    # and on 2026-09-04 it took the top-10 slot that 1.3 was excluded from.
+    # Any versioned sibling in the same family supersedes it.
+    for key, indexes in groups.items():
+        versioned = [(versions[i], i) for i in indexes if versions[i] is not None]
+        if not versioned:
+            continue
+        newest_v, newest_i = max(versioned)
+        for i in indexes:
+            if versions[i] is None:
+                superseded[i] = names[newest_i]
+
     # Rule 2: a bare brand name loses to any newer entry of the same brand.
     for i, key in enumerate(family_keys):
         if len(key.split()) != 1 or versions[i] is None:

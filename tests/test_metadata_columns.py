@@ -74,8 +74,10 @@ class MetadataColumnTests(unittest.TestCase):
         collapsed = {c.replace(" ", "") for c in cols}
         drifted = [
             k for k in META_KEYS
+            # Row-level fields the scraper generates itself; never table headers.
             if k not in ("model", "organization", "link", "origin", "description",
-                         "created", "avgIq", "value", "unified", "_provenance", "_scoring")
+                         "created", "avgIq", "value", "unified", "coverage", "provisional",
+                         "_provenance", "_scoring")
             and k.replace(" ", "") not in collapsed
         ]
         self.assertEqual(
