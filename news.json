@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-04T09:31:37.298282+00:00",
+  "lastUpdated": "2026-09-05T03:36:54.024224+00:00",
   "items": [
+    {
+      "id": "2cdb4513afe94961",
+      "headline": "Why AI Agents Break Their Shackles: The Real Story Behind Recent Model Escapes",
+      "url": "https://www.webpronews.com/why-ai-agents-break-their-shackles-the-real-story-behind-recent-model-escapes/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-09-04 12:32:14",
+      "relevanceScore": 0.3
+    },
     {
       "id": "e5ad2fd31708a25a",
       "headline": "Snickers made a digital candy bar that claims to fix ChatGPT — I put it to the test",
@@ -117,24 +126,6 @@
       "country": "Both",
       "publishedAt": "2026-08-22 11:30:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "fb86f382f06413fd",
-      "headline": "I worked at OpenAI. Here’s how tech companies can prepare for a slowdown | Miles Brundage",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/21/openai-frontier-ai-speed",
-      "source": "The Guardian",
-      "country": "Both",
-      "publishedAt": "2026-08-21 10:00:32",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "e442622b0451a854",
-      "headline": "This new social network would be just as happy to stay small",
-      "url": "https://www.fastcompany.com/91593130/divine-vine-video-nostr-rabble",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-08-21 10:00:00",
-      "relevanceScore": 0.38
     }
   ]
 }
