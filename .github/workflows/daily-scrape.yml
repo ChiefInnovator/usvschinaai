@@ -79,6 +79,16 @@ jobs:
         run: |
           python scripts/generate_og_image.py
 
+      # Today's Instagram carousel: format + palette rotation, two slides in
+      # social/, caption (luna; terra on high-weight days), social/plan.json.
+      # post_to_instagram.py refuses to post without today's plan.
+      - name: Render social slides and caption
+        continue-on-error: true
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/social_publish.py
+
       - name: Update sitemap lastmod dates
         run: |
           TODAY=$(date -u +'%Y-%m-%d')
@@ -125,6 +135,7 @@ jobs:
           git ls-files --others --exclude-standard | grep -q ig-image.png && CHANGES=true
           git ls-files --others --exclude-standard | grep -q 'data/ai_gap_cache.json' && CHANGES=true
           git ls-files --others --exclude-standard | grep -q 'data/ai_fill_history.jsonl' && CHANGES=true
+          git status --porcelain social/ data/social_history.jsonl data/social_caption_cache.json data/social_cost.jsonl | grep -q . && CHANGES=true
           echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
 
       - name: Commit and push changes
@@ -142,6 +153,10 @@ jobs:
           # audit history is visible in git log.
           git add data/ai_gap_cache.json 2>/dev/null || true
           git add data/ai_fill_history.jsonl 2>/dev/null || true
+          # Today's carousel (older slides are removed), rotation history,
+          # caption cache and the USD ledger.
+          git add -A social/ 2>/dev/null || true
+          git add data/social_history.jsonl data/social_caption_cache.json data/social_cost.jsonl 2>/dev/null || true
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
           # The scrape takes ~45 min; if anything was pushed to main in that

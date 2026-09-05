@@ -62,7 +62,9 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           # The script asks Instagram for its latest post and skips if that was
-          # today. Only a manual dispatch with force=true bypasses it.
+          # today. Only a manual dispatch with force=true bypasses it. It posts
+          # the carousel in social/plan.json (written by the daily scrape) and
+          # skips when there is no plan for today.
           IG_FORCE: ${{ github.event.inputs.force == 'true' && '1' || '' }}
         run: |
           if [ -n "$INSTAGRAM_ACCESS_TOKEN" ] && [ -n "$IG_USER_ID" ]; then

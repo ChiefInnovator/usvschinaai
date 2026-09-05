@@ -357,6 +357,46 @@ def snapshot_is_today(models_path, now=None):
         return False
     return scraped.date() == now.date()
 
+PLAN_FILE = Path(__file__).resolve().parent.parent / "social" / "plan.json"
+
+
+def load_plan(path=PLAN_FILE, now=None):
+    """Today's carousel plan written by social_publish.py, or None if it is
+    missing, unreadable, incomplete, or from another UTC day."""
+    from datetime import datetime, timezone
+    try:
+        plan = json.loads(Path(path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return None
+    now = now or datetime.now(timezone.utc)
+    if not isinstance(plan, dict) or plan.get("date") != now.strftime("%Y-%m-%d"):
+        return None
+    if len(plan.get("urls") or []) < 2 or not plan.get("caption"):
+        return None
+    return plan
+
+
+def _url_ok(url):
+    try:
+        r = requests.get(url, timeout=15, stream=True)
+        r.close()
+        return r.status_code == 200
+    except requests.RequestException:
+        return False
+
+
+def wait_for_urls(urls, attempts=8, delay=15):
+    """Instagram fetches slides by URL at publish time, so every slide must be
+    reachable first. Deploy has finished when this runs; the CDN may lag."""
+    for i in range(attempts):
+        missing = [u for u in urls if not _url_ok(u)]
+        if not missing:
+            return True
+        print(f"  {len(missing)} slide(s) not reachable yet; retry {i + 1}/{attempts} in {delay}s")
+        time.sleep(delay)
+    return False
+
+
 def main():
     access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
     ig_user_id = os.environ.get("IG_USER_ID")
@@ -386,16 +426,34 @@ def main():
             print("Skipping: latest snapshot is not from today - not re-posting stale data.")
             return
 
+    # The day's carousel comes from social/plan.json (social_publish.py, run by
+    # the daily scrape). IG_CAROUSEL_URLS / IG_CAPTION still override it for a
+    # manual post. Without a plan for today nothing is posted: the legacy
+    # single tile is the monotonous grid the rotation replaces, and posting it
+    # would spend the day's one post. IG_LEGACY_TILE=1 allows it explicitly.
+    plan = load_plan()
+    slides = [u.strip() for u in os.environ.get("IG_CAROUSEL_URLS", "").split(",") if u.strip()]
+    use_plan = plan is not None and not slides
+    if use_plan:
+        slides = list(plan["urls"])
+        print(f"Plan: {plan.get('format')} / {plan.get('palette')} ({len(slides)} slides, "
+              f"caption via {plan.get('caption_source', '?')})")
+    legacy_ok = os.environ.get("IG_LEGACY_TILE", "").lower() in ("1", "true", "yes")
+    if len(slides) < 2 and not legacy_ok:
+        print("Skipping: no social/plan.json for today. The daily scrape renders it; "
+              "the legacy single tile is not posted (IG_LEGACY_TILE=1 to allow).")
+        return
+
     data = load_caption_data(models_path)
-    caption = with_mention(os.environ.get("IG_CAPTION") or build_caption(data))
+    caption = with_mention(os.environ.get("IG_CAPTION")
+                           or (plan["caption"] if use_plan else build_caption(data)))
 
     print(f"Caption:\n{caption}\n")
 
-    # IG_CAROUSEL_URLS: comma-separated slide URLs, all 4:5. Set by the
-    # workflow once the social renderer is wired in; absent, the single
-    # ig-image.png post is unchanged.
-    slides = [u.strip() for u in os.environ.get("IG_CAROUSEL_URLS", "").split(",") if u.strip()]
     if len(slides) >= 2:
+        if not wait_for_urls(slides):
+            print("ERROR: carousel slides never became reachable; not posting.")
+            sys.exit(1)
         post_carousel(slides, caption, access_token, ig_user_id)
     else:
         post_to_instagram(image_url, caption, access_token, ig_user_id)

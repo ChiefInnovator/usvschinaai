@@ -186,3 +186,91 @@ class TaggingTests(unittest.TestCase):
         self.assertIn("user_tags", calls[0][1]); self.assertIn("user_tags", calls[1][1])
         self.assertNotIn("user_tags", calls[2][1])
         self.assertEqual(json.loads(calls[2][1]["collaborators"]), ["richcrane"])
+
+
+class PlanTests(unittest.TestCase):
+    """The poster publishes the carousel social_publish.py planned for today,
+    and posts nothing at all without one - the legacy single tile is the
+    monotonous grid the rotation replaces."""
+
+    def _plan(self, date="2026-09-05", **over):
+        p = {"date": date, "format": "head_to_head", "palette": "midnight", "caption_source": "gpt-5.6-luna",
+             "urls": ["https://usvschina.ai/social/a.png", "https://usvschina.ai/social/b.png"], "caption": "Hook\n\n• a"}
+        p.update(over)
+        return p
+
+    def _write(self, d, plan):
+        path = Path(d) / "plan.json"
+        path.write_text(json.dumps(plan))
+        return path
+
+    def test_todays_plan_loads(self):
+        import tempfile
+        now = datetime(2026, 9, 5, 4, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(pti.load_plan(self._write(d, self._plan()), now)["format"], "head_to_head")
+
+    def test_stale_incomplete_or_missing_plan_is_ignored(self):
+        import tempfile
+        now = datetime(2026, 9, 5, 4, tzinfo=timezone.utc)
+        with tempfile.TemporaryDirectory() as d:
+            self.assertIsNone(pti.load_plan(self._write(d, self._plan(date="2026-09-04")), now))
+            self.assertIsNone(pti.load_plan(self._write(d, self._plan(urls=["one"])), now))
+            self.assertIsNone(pti.load_plan(self._write(d, self._plan(caption="")), now))
+            (Path(d) / "plan.json").write_text("{nope")
+            self.assertIsNone(pti.load_plan(Path(d) / "plan.json", now))
+            self.assertIsNone(pti.load_plan(Path(d) / "missing.json", now))
+
+    def _run_main(self, plan, env, wait_ok=True):
+        import os
+        calls = []
+        for name in ("load_plan", "already_posted_today", "snapshot_is_today", "wait_for_urls",
+                     "post_carousel", "post_to_instagram", "load_caption_data", "build_caption"):
+            self.addCleanup(setattr, pti, name, getattr(pti, name))
+        pti.load_plan = lambda *a, **k: plan
+        pti.already_posted_today = lambda *a, **k: None
+        pti.snapshot_is_today = lambda *a, **k: True
+        pti.wait_for_urls = lambda urls, **k: wait_ok
+        pti.post_carousel = lambda slides, caption, *a: calls.append(("carousel", slides, caption))
+        pti.post_to_instagram = lambda url, caption, *a: calls.append(("single", url, caption))
+        pti.load_caption_data = lambda p: {}
+        pti.build_caption = lambda d: "LEGACY"
+        keys = ("INSTAGRAM_ACCESS_TOKEN", "IG_USER_ID", "IG_CAROUSEL_URLS", "IG_CAPTION", "IG_LEGACY_TILE", "IG_FORCE")
+        saved = {k: os.environ.get(k) for k in keys}
+        for k in keys:
+            os.environ.pop(k, None)
+        os.environ.update({"INSTAGRAM_ACCESS_TOKEN": "t", "IG_USER_ID": "u", **env})
+        try:
+            pti.main()
+        finally:
+            for k, v in saved.items():
+                if v is None:
+                    os.environ.pop(k, None)
+                else:
+                    os.environ[k] = v
+        return calls
+
+    def test_plan_posts_the_carousel_with_its_caption_and_mention(self):
+        calls = self._run_main(self._plan(), {})
+        self.assertEqual(len(calls), 1)
+        kind, slides, caption = calls[0]
+        self.assertEqual((kind, slides), ("carousel", self._plan()["urls"]))
+        self.assertTrue(caption.startswith("Hook"))
+        self.assertIn("@richcrane", caption)
+
+    def test_no_plan_posts_nothing(self):
+        self.assertEqual(self._run_main(None, {}), [])
+
+    def test_legacy_tile_only_when_explicitly_allowed(self):
+        calls = self._run_main(None, {"IG_LEGACY_TILE": "1"})
+        self.assertEqual(calls[0][0], "single")
+        self.assertTrue(calls[0][2].startswith("LEGACY"))
+
+    def test_env_override_wins_over_the_plan(self):
+        calls = self._run_main(self._plan(), {"IG_CAROUSEL_URLS": "https://x/1.png,https://x/2.png", "IG_CAPTION": "Manual"})
+        self.assertEqual(calls[0][1], ["https://x/1.png", "https://x/2.png"])
+        self.assertTrue(calls[0][2].startswith("Manual"))
+
+    def test_unreachable_slides_abort_without_posting(self):
+        with self.assertRaises(SystemExit):
+            self._run_main(self._plan(), {}, wait_ok=False)
