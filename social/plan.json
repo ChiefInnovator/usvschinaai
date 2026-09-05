@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-05",
+  "timestamp": "2026-09-05T10:50:28+00:00",
+  "format": "biggest_mover",
+  "palette": "graphite",
+  "weight": 2,
+  "slides": [
+    "2026-09-05-1-biggest_mover-graphite.png",
+    "2026-09-05-2-leaderboard-graphite.png"
+  ],
+  "urls": [
+    "https://usvschina.ai/social/2026-09-05-1-biggest_mover-graphite.png",
+    "https://usvschina.ai/social/2026-09-05-2-leaderboard-graphite.png"
+  ],
+  "caption": "Claude Opus 5 made the day’s biggest move, climbing 5 places\n\n• Claude Opus 5 reached rank 2 with a unified score of 820.5.\n• The US leads China 4895.32 to 3024.96 on the daily scoreboard.\n• US models hold 6 of the top 10 spots; China holds 4.\n\nIs Claude Opus 5 now the model to watch at rank 2?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChinaAI #ClaudeOpus5 #AIBenchmark #AIModels #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-09-05T10:50:32.828836+00:00"
+}

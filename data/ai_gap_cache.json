@@ -192,6 +192,16 @@
       "source_type": "third_party_leaderboard",
       "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-05T10:43:47.614849+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy, as reported for Claude Opus 5 in Anthropic’s July 2026 system card.",
+      "score": "93.7%",
+      "source_type": "model_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-system-card"
+    },
     "SWE-bench Pro": {
       "benchmark": "SWE-bench Pro",
       "cached_at": "2026-09-03T10:39:12.689411+00:00",
@@ -226,6 +236,16 @@
     }
   },
   "Claude Sonnet 5": {
+    "Agents' Last Exam": {
+      "benchmark": "Agents' Last Exam",
+      "cached_at": "2026-09-05T10:43:47.614849+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Google DeepMind’s August 2026 model card reports Claude Sonnet 5 at a 33.3% pass rate.",
+      "score": "33.3%",
+      "source_type": "model_card",
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-7-flash/"
+    },
     "GPQA": {
       "benchmark": "GPQA",
       "cached_at": "2026-09-04T03:31:16.151504+00:00",
