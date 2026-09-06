@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "US vs CHINA AI",
-    "footerText": "Data Audited Sep 5, 2026 | Source: llm-stats.com | IQ = flat average over the qualified benchmark set (two-pass scoring, category aggregates excluded)"
+    "footerText": "Data Audited Sep 6, 2026 | Source: llm-stats.com | IQ = flat average over the qualified benchmark set (two-pass scoring, category aggregates excluded)"
   },
   "teams": {
     "usa": {
@@ -45,7 +45,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-09-05T10:50:28+00:00",
+      "timestamp": "2026-09-06T03:38:36+00:00",
       "teams": {
         "US": [
           {
@@ -94,7 +94,7 @@
             "ApexAgents": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
-            "Latency": "8.8s",
+            "Latency": "8.7s",
             "KnowledgeCutoff": "-",
             "Multimodal": "Yes",
             "AutomationBench": "49.4%",
@@ -169,89 +169,17 @@
                 "confidence": "high",
                 "source_type": "model_card"
               },
-              "SWE-benchPro": {
-                "source": "ai_filled",
-                "llm_model": "gpt-5.6-terra",
-                "url": "https://www.anthropic.com/claude-opus-5-system-card",
-                "confidence": "high",
-                "source_type": "model_card"
-              },
               "GPQA": {
                 "source": "ai_filled",
                 "llm_model": "gpt-5.6-terra",
                 "url": "https://www.anthropic.com/claude-opus-5-system-card",
                 "confidence": "high",
                 "source_type": "model_card"
-              }
-            }
-          },
-          {
-            "model": "Gemini 3.8 Flash",
-            "organization": "Google",
-            "link": "https://llm-stats.com/models/gemini-3.8-flash",
-            "origin": "US",
-            "description": "Gemini 3.8 Flash by Google \u2014 released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
-            "created": "Sep. 2026",
-            "avgIq": 67.53,
-            "value": 15.01,
-            "unified": 810.3,
-            "coverage": "4/8",
-            "provisional": false,
-            "Model": "Gemini 3.8 Flash\nNEW",
-            "LLMStats": "51.0",
-            "Country": "\ud83c\uddfa\ud83c\uddf8",
-            "License": "Closed",
-            "Context": "1.0M",
-            "Input$/M": "$0.75",
-            "Output$/M": "$3.75",
-            "Speed": "50c/s",
-            "CodeArena": "\u2013",
-            "Reasoning": "46.9",
-            "Math": "\u2013",
-            "Coding": "39.3",
-            "Search": "\u2013",
-            "Writing": "\u2013",
-            "Vision": "33.8",
-            "Tools": "26.7",
-            "LongCtx": "27.4",
-            "Finance": "5.7",
-            "Legal": "5.7",
-            "Health": "\u2013",
-            "GPQA": "\u2014",
-            "SWE-benchVerified": "\u2014",
-            "BrowseComp": "\u2014",
-            "CharXiv-R": "86.2%",
-            "MMMU-Pro": "\u2014",
-            "MCPAtlas": "\u2014",
-            "HLE": "45.4%",
-            "Toolathlon": "\u2014",
-            "FrontierMath": "\u2014",
-            "MRCRv2": "\u2014",
-            "SciCode": "\u2014",
-            "ApexAgents": "\u2014",
-            "SWE-benchPro": "61.6%",
-            "Parameters(B)": "-",
-            "Latency": "20.3s",
-            "KnowledgeCutoff": "Mar. 2026",
-            "Multimodal": "Yes",
-            "DeepSWE1.1": "73.7%",
-            "GDPval-AA": "51.5%",
-            "LVBench": "87.1%",
-            "OSWorld2.0": "59.0%",
-            "Terminal-Bench2.1": "89.4%",
-            "Terminal-Bench4.0": "19.1%",
-            "_provenance": {
-              "HLE": {
-                "source": "ai_filled",
-                "llm_model": "gpt-5.6-terra",
-                "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash",
-                "confidence": "high",
-                "source_type": "model_card"
               },
               "SWE-benchPro": {
                 "source": "ai_filled",
                 "llm_model": "gpt-5.6-terra",
-                "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash",
+                "url": "https://www.anthropic.com/claude-opus-5-system-card",
                 "confidence": "high",
                 "source_type": "model_card"
               }
@@ -276,7 +204,7 @@
             "Context": "1.1M",
             "Input$/M": "$10.00",
             "Output$/M": "$50.00",
-            "Speed": "90c/s",
+            "Speed": "57c/s",
             "CodeArena": "\u2013",
             "Reasoning": "58.7",
             "Math": "35.3",
@@ -303,7 +231,7 @@
             "ApexAgents": "\u2014",
             "SWE-benchPro": "\u2014",
             "Parameters(B)": "-",
-            "Latency": "18.0s",
+            "Latency": "16.5s",
             "KnowledgeCutoff": "Apr. 2026",
             "Multimodal": "Yes",
             "Agents'LastExam": "59.3%",
@@ -501,7 +429,7 @@
             "Context": "1.1M",
             "Input$/M": "$0.20",
             "Output$/M": "$1.20",
-            "Speed": "86c/s",
+            "Speed": "78c/s",
             "CodeArena": "1,166",
             "Reasoning": "44.4",
             "Math": "28.7",
@@ -528,7 +456,7 @@
             "ApexAgents": "\u2014",
             "SWE-benchPro": "62.7%",
             "Parameters(B)": "-",
-            "Latency": "2.9s",
+            "Latency": "4.6s",
             "KnowledgeCutoff": "Feb. 2026",
             "Multimodal": "Yes",
             "Agents'LastExam": "50.3%",
@@ -687,6 +615,86 @@
                 "source_type": "vendor_blog"
               }
             }
+          },
+          {
+            "model": "Gemini 3.8 Flash",
+            "organization": "Google",
+            "link": "https://llm-stats.com/models/gemini-3.8-flash",
+            "origin": "US",
+            "description": "Gemini 3.8 Flash by Google \u2014 released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+            "created": "Sep. 2026",
+            "avgIq": 59.96,
+            "value": 13.32,
+            "unified": 719.46,
+            "coverage": "5/8",
+            "provisional": false,
+            "Model": "Gemini 3.8 Flash\nNEW",
+            "LLMStats": "51.0",
+            "Country": "\ud83c\uddfa\ud83c\uddf8",
+            "License": "Closed",
+            "Context": "1.0M",
+            "Input$/M": "$0.75",
+            "Output$/M": "$3.75",
+            "Speed": "47c/s",
+            "CodeArena": "\u2013",
+            "Reasoning": "46.9",
+            "Math": "\u2013",
+            "Coding": "39.3",
+            "Search": "\u2013",
+            "Writing": "\u2013",
+            "Vision": "33.8",
+            "Tools": "26.7",
+            "LongCtx": "27.4",
+            "Finance": "5.7",
+            "Legal": "5.7",
+            "Health": "\u2013",
+            "GPQA": "\u2014",
+            "SWE-benchVerified": "\u2014",
+            "BrowseComp": "\u2014",
+            "CharXiv-R": "86.2%",
+            "MMMU-Pro": "\u2014",
+            "MCPAtlas": "\u2014",
+            "HLE": "45.4%",
+            "Toolathlon": "\u2014",
+            "FrontierMath": "\u2014",
+            "MRCRv2": "\u2014",
+            "SciCode": "\u2014",
+            "ApexAgents": "\u2014",
+            "SWE-benchPro": "61.6%",
+            "Parameters(B)": "-",
+            "Latency": "14.2s",
+            "KnowledgeCutoff": "Mar. 2026",
+            "Multimodal": "Yes",
+            "DeepSWE1.1": "73.7%",
+            "GDPval-AA": "51.5%",
+            "LVBench": "87.1%",
+            "OSWorld2.0": "59.0%",
+            "Terminal-Bench2.1": "89.4%",
+            "Terminal-Bench4.0": "19.1%",
+            "_provenance": {
+              "HLE": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "SWE-benchPro": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash",
+                "confidence": "high",
+                "source_type": "model_card"
+              },
+              "AutomationBench": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://zapier.com/fr/benchmarks",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            },
+            "AutomationBench": "29.7%"
           },
           {
             "model": "Claude Sonnet 5",
@@ -975,7 +983,17 @@
             "RealWorldQA": "88.0%",
             "Terminal-Bench2.1": "86.6%",
             "Vision2Web": "69.0%",
-            "WorkspaceBench": "67.7%"
+            "WorkspaceBench": "67.7%",
+            "OSWorld2.0": "46.7%",
+            "_provenance": {
+              "OSWorld2.0": {
+                "source": "ai_filled",
+                "llm_model": "gpt-5.6-terra",
+                "url": "https://qwen.ai/blog?id=qwen3.8",
+                "confidence": "high",
+                "source_type": "vendor_blog"
+              }
+            }
           },
           {
             "model": "GLM-5.3-Flash",
@@ -1389,7 +1407,7 @@
             "Context": "1.0M",
             "Input$/M": "$0.09",
             "Output$/M": "$0.18",
-            "Speed": "24c/s",
+            "Speed": "22c/s",
             "CodeArena": "2,407",
             "Reasoning": "42.5",
             "Math": "\u2013",
