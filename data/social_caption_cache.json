@@ -35,5 +35,23 @@
       "#Qwen",
       "#Leaderboard"
     ]
+  },
+  "2026-09-07T03:40:59+00:00|head_to_head": {
+    "hook": "The US leads China by 1,801.8 points on September 7",
+    "bullets": [
+      "US holds 4,826.71 points to China\u2019s 3,024.96.",
+      "Muse Spark 1.3 ranks 1st with a 948.2 unified score.",
+      "Qwen3.8 Flash is China\u2019s top model at rank 3 with 783.6."
+    ],
+    "question": "Can China close the 1,801.8-point gap?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#MuseSpark13",
+      "#Qwen38Flash",
+      "#AILeaderboard"
+    ]
   }
 }
