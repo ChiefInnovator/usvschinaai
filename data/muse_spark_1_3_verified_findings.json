@@ -1,0 +1,62 @@
+[
+  {
+    "model": "Muse Spark 1.3",
+    "benchmark": "DeepSWE 1.1",
+    "score": 75.4,
+    "unit": "percent",
+    "sourceUrl": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology#page=4",
+    "publishedAt": null,
+    "retrievedAt": "2026-09-06",
+    "effort": "max",
+    "configuration": "max reasoning effort; Meta Model API with mini-swe-agent; official 113-task set; task pass rate.",
+    "confidence": "high",
+    "notes": "Score independently visually verified on PDF page 4; methodology pages 2–3 identify the exact tasks and harness. PDF publication date not established, so applicability begins at retrieval.",
+    "component": "deepswe-1.1",
+    "sourceType": "model_card"
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "benchmark": "Terminal-Bench 2.1",
+    "score": 89.2,
+    "unit": "percent",
+    "sourceUrl": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology#page=4",
+    "publishedAt": null,
+    "retrievedAt": "2026-09-06",
+    "effort": "xhigh",
+    "configuration": "xhigh reasoning effort; Native coding harness in Meta's evaluation framework; isolated sandbox; official verifier; mean pass@1 over 89 tasks.",
+    "confidence": "high",
+    "notes": "Independently visually verified PDF page 4: Muse Spark 1.3 xhigh 89.2, max 88.8. Methodology page 3 confirms 89 tasks, native coding harness, official verifier, mean pass@1. User-pasted September 2 publication date is unverified; attachment correctly leaves it null.",
+    "component": "terminal-bench-2.1",
+    "sourceType": "model_card"
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "benchmark": "MMMU-Pro",
+    "score": 82.0,
+    "unit": "percent",
+    "sourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3-xhigh",
+    "publishedAt": null,
+    "retrievedAt": "2026-09-06",
+    "effort": "xhigh",
+    "configuration": "xhigh reasoning effort; Artificial Analysis; 1730 questions; 10-option multiple choice; pass@1.",
+    "confidence": "high",
+    "notes": "Embedded mmmuPro value is 0.820231213872832, reported here to one decimal percent. Max record is null.",
+    "component": "mmmu-pro",
+    "sourceType": "third_party_leaderboard"
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "benchmark": "GPQA Diamond",
+    "score": 94.1,
+    "unit": "percent",
+    "sourceUrl": "https://artificialanalysis.ai/models/muse-spark-1-3-xhigh",
+    "publishedAt": null,
+    "retrievedAt": "2026-09-06",
+    "effort": "xhigh",
+    "configuration": "xhigh reasoning effort; Artificial Analysis; 198-question Diamond subset; four-option multiple choice; pass@1.",
+    "confidence": "high",
+    "notes": "Embedded gpqa value is 0.941414141414141, reported here to one decimal percent. Exceeds max at approximately 93.8.",
+    "component": "gpqa-diamond",
+    "sourceType": "third_party_leaderboard"
+  }
+]

@@ -199,7 +199,7 @@ def apply_cached(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str,
         entries = hydrate(snap, display)
         headers = [display.get(k, k) for k in snapshot_benchmark_keys(snap)]
         applied = 0
-        for cand in gf.build_candidates(entries, headers, enabled_tiers=frozenset({1, 2})):
+        for cand in gf.build_candidates(entries):
             cached = cache.get(cand.model_name, {}).get(cand.benchmark)
             if not cached or not gf.cache_is_fresh(cached, now):
                 continue
@@ -294,7 +294,7 @@ def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[st
     for day, snap in snapshots:
         entries = hydrate(snap, display)
         headers = [display.get(k, k) for k in snapshot_benchmark_keys(snap)]
-        candidates = gf.build_candidates(entries, headers, enabled_tiers=frozenset({1, 2}))
+        candidates = gf.build_candidates(entries)
         day_cached = day_skipped = 0
         batches: Dict[Tuple[str, str], List[str]] = {}
         for cand in candidates:
@@ -402,6 +402,13 @@ def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
     - legacy (top-10-per-country cohort, pre-pool): qualified set and bounds
       derived from the 20 rows, which is how those days were scored anyway.
     """
+    if (snapshot.get("scoring") or {}).get("version", 0) >= 3:
+        # The revised inputs keep Value separate and replace materialized scores.
+        from rescore_history import rescore_snapshot as replay_snapshot
+        before = [{k: row.get(k) for k in SCORE_KEYS} for team in snapshot['teams'].values() for row in team]
+        replay_snapshot(snapshot, {'results': []})
+        after = [{k: row.get(k) for k in SCORE_KEYS} for team in snapshot['teams'].values() for row in team]
+        return sum(a != b for a, b in zip(before, after))
     from scoring import build_benchmark_participation, MIN_COHORT_PARTICIPATION, score_cohort
     if pool_scored_without_parameters(snapshot):
         return 0
@@ -512,6 +519,10 @@ def main() -> int:
     with open(args.models_json, "r", encoding="utf-8") as f:
         data = json.load(f)
     history = data.get("history") or []
+    if any((snap.get("scoring") or {}).get("version", 0) >= 3 for snap in history) and not args.dry_run:
+        print("Use scripts/rescore_history.py --write for revised history. "
+              "This older cache/live backfill cannot establish historical publication dates.")
+        return 2
     snapshots = daily_snapshots(history, args.days)
     if not snapshots:
         print("No snapshots in the requested window; nothing to do.")
@@ -587,7 +598,7 @@ def main() -> int:
                   f"{len(headers)} benchmark columns ===")
             try:
                 gf.run_gap_filling_pass(
-                    entries, headers,
+                    entries,
                     max_calls=remaining,
                     min_confidence=args.min_confidence,
                     scraper_run_ts=f"backfill:{day}",

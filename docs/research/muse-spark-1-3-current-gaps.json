@@ -1,0 +1,106 @@
+{
+  "model": "Muse Spark 1.3",
+  "checkedAt": "2026-09-06",
+  "avgIq": 24.35,
+  "coverage": "4/19",
+  "benchmarks": [
+    {
+      "benchmark": "Toolathlon",
+      "savedScore": null
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "savedScore": null
+    },
+    {
+      "benchmark": "DeepSWE",
+      "savedScore": null
+    },
+    {
+      "benchmark": "DeepSWE 1.1",
+      "savedScore": "75.4%"
+    },
+    {
+      "benchmark": "LiveCodeBench v6",
+      "savedScore": null
+    },
+    {
+      "benchmark": "Terminal-Bench 2.1",
+      "savedScore": "89.2%"
+    },
+    {
+      "benchmark": "BrowseComp",
+      "savedScore": null
+    },
+    {
+      "benchmark": "MMMU-Pro",
+      "savedScore": "82%"
+    },
+    {
+      "benchmark": "CharXiv-R",
+      "savedScore": null
+    },
+    {
+      "benchmark": "ARC-AGI-2",
+      "savedScore": null
+    },
+    {
+      "benchmark": "OfficeQA Pro",
+      "savedScore": null
+    },
+    {
+      "benchmark": "IFBench",
+      "savedScore": null
+    },
+    {
+      "benchmark": "GPQA Diamond",
+      "savedScore": "94.1%"
+    },
+    {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "savedScore": null
+    },
+    {
+      "benchmark": "GPQA",
+      "savedScore": null
+    },
+    {
+      "benchmark": "MMLU-Pro",
+      "savedScore": null
+    },
+    {
+      "benchmark": "AIME 2025",
+      "savedScore": null
+    },
+    {
+      "benchmark": "Humanity’s Last Exam",
+      "savedScore": null
+    },
+    {
+      "benchmark": "SWE-bench Verified",
+      "savedScore": null
+    }
+  ],
+  "additionalCandidate": {
+    "benchmark": "HLE text-only",
+    "score": 49.1,
+    "effort": "max",
+    "source": "https://artificialanalysis.ai/models/muse-spark-1-3",
+    "methodology": "https://artificialanalysis.ai/evaluations/humanitys-last-exam",
+    "status": "Not ingested: AA specifies 2,158 text-only questions, unlike selected full HLE. xhigh is 47.5; effort is not the exclusion reason."
+  },
+  "result": "No additional compatible result verified in this research pass. Current scoring data unchanged.",
+  "researchPriority": [
+    "FrontierMath Tiers 1-3 v2",
+    "CharXiv-R",
+    "ARC-AGI-2",
+    "OfficeQA Pro"
+  ],
+  "sourcesChecked": [
+    "https://llm-stats.com/models/muse-spark-1.3",
+    "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "https://artificialanalysis.ai/models/muse-spark-1-3-xhigh",
+    "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+  ],
+  "limitations": "Targeted model search and current embedded source records; absence in this pass is not proof no published result exists."
+}

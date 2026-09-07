@@ -196,6 +196,10 @@
             margin: 0 0.75rem;
             font-size: 0.95rem;
         }
+        .benchmark-summary { list-style: none; }
+        .benchmark-summary::-webkit-details-marker { display: none; }
+        #benchmarks-section[open] .benchmark-preview { display: none; }
+        #benchmarks-section[open] .benchmark-chevron { transform: rotate(180deg); }
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
@@ -216,6 +220,16 @@
                 <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
                 <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
             </div>
+        </nav>
+
+        <nav aria-label="Page sections" class="flex flex-wrap justify-center gap-3 mb-8 text-sm">
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#scoreboard">Scoreboard</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#leaderboardFlipContainer">Leaderboard</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#benchmarks-section">Benchmarks</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#intelligence-matrix">Intelligence vs. Value</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#last-30-days">Last 30 Days</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#companies">Companies</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#methodology">Methodology</a>
         </nav>
 
         <header class="text-center mb-12">
@@ -250,7 +264,7 @@
         </header>
 
         <!-- National Scoreboard -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div id="scoreboard" class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             <!-- Team USA -->
             <div class="glass scoreboard-card p-8 rounded-3xl border-2 border-blue-500/30 hover:border-blue-500/60 neon-blue relative group transition-all duration-300" id="team-usa-card">
                 <div class="flex justify-between items-start relative z-10">
@@ -352,18 +366,22 @@
                 </div>
                 
                 <!-- Benchmarks Included -->
-                <div class="p-6">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <i data-lucide="target" class="text-slate-400"></i> Benchmarks Included
-                    </h3>
-                    <div id="benchmarks-container" class="flex flex-wrap gap-2">
+                <details id="benchmarks-section" class="p-6">
+                    <summary class="benchmark-summary cursor-pointer rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400">
+                        <span class="flex items-center justify-between gap-3">
+                            <span class="font-bold text-white text-sm md:text-lg">Benchmarks Included</span>
+                            <svg class="benchmark-chevron w-5 h-5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                        </span>
+                        <span id="benchmarks-preview" class="benchmark-preview block mt-3 text-sm text-slate-400 truncate" aria-hidden="true">Loading benchmarks…</span>
+                    </summary>
+                    <div id="benchmarks-container" class="flex flex-wrap gap-2 mt-4">
                         <!-- Loaded from JSON -->
                     </div>
-                </div>
+                </details>
         </div>
 
         <!-- Intelligence vs Value Matrix -->
-        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+        <div id="intelligence-matrix" class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
                 <i data-lucide="scatter-chart" class="text-purple-400"></i> Intelligence vs. Value Matrix
             </h3>
@@ -406,8 +424,17 @@
             </div>
         </div>
 
+        <section id="last-30-days" aria-labelledby="trend-title" class="glass rounded-3xl p-6 md:p-8 mb-12 border border-white/5">
+            <h3 id="trend-title" class="text-2xl font-bold mb-2">Last 30 Days: US vs. China</h3>
+            <p class="text-slate-400 text-sm mb-4">National scores from the global Top 10. Each point is a recorded archive snapshot; lines connect observations. Hover for the exact time and scores.</p>
+            <p id="trend-status" role="status" class="text-slate-400 text-sm mb-4">Loading historical comparison…</p>
+            <div class="relative w-full h-[350px] md:h-[420px]">
+                <canvas id="trendChart" role="img" aria-label="Last 30 days of United States and China national scores"></canvas>
+            </div>
+        </section>
+
         <!-- Company Leaderboard -->
-        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+        <div id="companies" class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
                 <i data-lucide="building-2" class="text-green-400"></i> Company Leaderboard
             </h3>
@@ -419,7 +446,7 @@
         </div>
 
         <!-- Methodology Section -->
-        <div class="glass rounded-3xl p-8 mb-12 border border-white/5">
+        <div id="methodology" class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
                 <i data-lucide="book-open" class="text-slate-400"></i> Scoring Methodology
             </h3>
@@ -432,15 +459,15 @@
                     </div>
                     <p class="mb-4 text-xs text-slate-500 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
 
-                    <h4 class="text-white font-bold mb-2 text-lg">AvgIQ (two-pass)</h4>
-                    <p class="mb-2"><strong>Pass&nbsp;1</strong> uses a participation-weighted average across every benchmark to pick the <em>Initial Top&nbsp;10</em>. <strong>Pass&nbsp;2</strong> keeps only benchmarks reported by at least 8 of those 10 models (the <em>qualified set</em>) and flat-averages them for the entire cohort.</p>
-                    <p class="mb-2 text-xs text-slate-500">This stops a model from being penalised for skipping an easy-win benchmark everyone else posted — we compare models only on tests the top tier actually shares.</p>
-                    <p class="text-xs text-slate-500">Percentage benchmarks (GPQA, MMMU-Pro, etc.) use their raw 0–100 score directly. Non-percentage benchmarks with a known range (CodeArena Elo 1000–2000) use that range. Anything else falls back to cohort min–max. Category aggregates (Reasoning, Math, Coding, …) are excluded to prevent double-counting.</p>
+                    <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (nineteen benchmarks)</h4>
+                    <p class="mb-2">Avg IQ combines the nineteen selected benchmark scores using fixed allocations. The denominator always includes all nineteen; missing results contribute zero.</p>
+                    <p class="mb-2 text-xs text-slate-500">For each benchmark, we use the highest verified score for the exact model across all effort levels. The benchmark version, subset and evaluation protocol must match; results involving fallback to another model are excluded.</p>
+                    <p class="text-xs text-slate-500">Participation does not change benchmark eligibility or scoring. Models have no minimum benchmark-count requirement. Coverage describes available evidence; it does not determine whether a model can rank.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Value (efficiency)</h4>
                     <p class="mb-4">Value = AvgIQ ÷ (Input $/M + Output $/M). Lower cost with higher capability increases Value.</p>
-                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified. Models without public pricing show — and are excluded from Value normalization rather than scored as zero-value.</p>
+                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified. Models without usable public pricing receive zero Value.</p>
 
                     <h4 class="text-white font-bold mb-2 text-lg">National Score</h4>
                     <p class="mb-4">For USA and China, we sum the Unified scores of that nation’s models inside the global Top 10.</p>
@@ -685,6 +712,7 @@
                 calculateTotals();
                 renderTable();
                 renderMatrix();
+                renderThirtyDayTrend();
                 renderCompanyLeaderboard();
                 populateBenchmarkDetailsTable();
                 updateFilterUI();
@@ -769,7 +797,11 @@
 
             const benchmarksContainer = document.getElementById('benchmarks-container');
             if (benchmarksContainer) {
-                benchmarksContainer.innerHTML = benchmarkList.map(b => {
+                const included = appData.metadata?.avgIqBenchmarks || benchmarkList;
+                const preview = document.getElementById('benchmarks-preview');
+                preview.textContent = included.join(' · ');
+                preview.title = included.join(' · ');
+                benchmarksContainer.innerHTML = included.map(b => {
                     const colorClass = getBenchmarkColor(b);
                     return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
                 }).join('');
@@ -815,7 +847,7 @@
                     "name": "How are AI models ranked on this leaderboard?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ uses two-pass scoring: Pass 1 picks the Initial Top 10 via participation-weighted benchmarks; Pass 2 rescores every model as a flat average over the benchmarks that at least 8 of those 10 reported. Value = AvgIQ ÷ (Input + Output cost)."
+                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines nineteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value = Avg IQ ÷ (Input + Output cost)."
                     }
                 }]
             };
@@ -1088,6 +1120,47 @@
             const subject = encodeURIComponent(shareTitle);
             const body = encodeURIComponent(`${shareText}\n\n${shareUrl}`);
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
+        }
+
+        let trendChart = null;
+        async function renderThirtyDayTrend() {
+            const status = document.getElementById('trend-status');
+            try {
+                const response = await fetch('models.json');
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const archive = await response.json();
+                const snapshots = [...(archive.history || [])].filter(snapshot => Number.isFinite(Date.parse(snapshot.timestamp))).sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp));
+                if (!snapshots.length || !window.Chart) throw new Error('Chart or history unavailable');
+                const end = Date.parse(snapshots[snapshots.length - 1].timestamp);
+                const start = end - 30 * 86400000;
+                const recent = snapshots.filter(snapshot => Date.parse(snapshot.timestamp) >= start);
+                const values = {US: [], CN: []};
+                for (const snapshot of recent) {
+                    const top = Object.entries(snapshot.teams || {}).flatMap(([country, rows]) => rows.map(row => ({country, score: Number(row.unified)}))).filter(row => Number.isFinite(row.score)).sort((a, b) => b.score - a.score).slice(0, 10);
+                    for (const country of ['US', 'CN']) values[country].push({x: Date.parse(snapshot.timestamp), y: top.filter(row => row.country === country).reduce((sum, row) => sum + row.score, 0)});
+                }
+                if (trendChart) trendChart.destroy();
+                trendChart = new Chart(document.getElementById('trendChart'), {
+                    type: 'line',
+                    data: {datasets: [
+                        {label: 'USA', data: values.US, borderColor: '#3b82f6', backgroundColor: '#3b82f6', pointRadius: 2, borderWidth: 2, spanGaps: false},
+                        {label: 'China', data: values.CN, borderColor: '#ef4444', backgroundColor: '#ef4444', pointRadius: 2, borderWidth: 2, spanGaps: false}
+                    ]},
+                    options: {responsive: true, maintainAspectRatio: false, interaction: {mode: 'index', intersect: false},
+                        plugins: {legend: {labels: {color: '#cbd5e1'}}, tooltip: {callbacks: {
+                            title: items => {
+                                return new Date(items[0].raw.x).toLocaleString('en-US');
+                            },
+                            label: item => `${item.dataset.label}: ${Number(item.raw.y).toFixed(1)}`
+                        }}},
+                        scales: {x: {type: 'linear', min: start, max: end, ticks: {color: '#94a3b8', maxTicksLimit: 6, callback: value => new Date(value).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}, grid: {color: 'rgba(255,255,255,0.05)'}},
+                            y: {beginAtZero: true, title: {display: true, text: 'National Unified Score', color: '#94a3b8'}, ticks: {color: '#94a3b8'}, grid: {color: 'rgba(255,255,255,0.05)'}}}}
+                });
+                status.textContent = `${new Date(start).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})} – ${new Date(end).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})} · ${recent.length} recorded snapshots`;
+            } catch (error) {
+                status.textContent = 'Historical comparison could not load. Reload the page to try again.';
+                console.error('Error loading 30-day chart:', error);
+            }
         }
 
         let matrixChart = null;

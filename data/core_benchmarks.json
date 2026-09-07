@@ -1,0 +1,175 @@
+{
+  "version": 6,
+  "scope": "All nineteen Avg IQ components at configured weights, without participation filters or participation weighting; fixed 100% denominator and missing results zero",
+  "benchmarks": [
+    {
+      "id": "toolathlon",
+      "name": "Toolathlon",
+      "weight": 0.099304865938,
+      "aliases": [
+        "Toolathlon"
+      ]
+    },
+    {
+      "id": "agents-last-exam",
+      "name": "Agents’ Last Exam",
+      "weight": 0.099304865938,
+      "aliases": [
+        "Agents' Last Exam",
+        "Agents’ Last Exam"
+      ]
+    },
+    {
+      "id": "deepswe",
+      "name": "DeepSWE",
+      "weight": 0.099304865938,
+      "aliases": [
+        "DeepSWE"
+      ]
+    },
+    {
+      "id": "deepswe-1.1",
+      "name": "DeepSWE 1.1",
+      "weight": 0.099304865938,
+      "aliases": [
+        "DeepSWE 1.1"
+      ]
+    },
+    {
+      "id": "livecodebench-v6",
+      "name": "LiveCodeBench v6",
+      "weight": 0.099304865938,
+      "aliases": [
+        "LiveCodeBench v6"
+      ]
+    },
+    {
+      "id": "terminal-bench-2.1",
+      "name": "Terminal-Bench 2.1",
+      "weight": 0.099304865938,
+      "aliases": [
+        "Terminal-Bench 2.1"
+      ]
+    },
+    {
+      "id": "browsecomp",
+      "name": "BrowseComp",
+      "weight": 0.099304865938,
+      "aliases": [
+        "BrowseComp"
+      ]
+    },
+    {
+      "id": "mmmu-pro",
+      "name": "MMMU-Pro",
+      "weight": 0.099304865938,
+      "aliases": [
+        "MMMU-Pro"
+      ]
+    },
+    {
+      "id": "charxiv-r",
+      "name": "CharXiv-R",
+      "weight": 5.06454816286,
+      "aliases": [
+        "CharXiv-R"
+      ]
+    },
+    {
+      "id": "arc-agi-2",
+      "name": "ARC-AGI-2",
+      "weight": 3.872889771598,
+      "aliases": [
+        "ARC-AGI-2",
+        "ARC-AGI v2"
+      ]
+    },
+    {
+      "id": "officeqa-pro",
+      "name": "OfficeQA Pro",
+      "weight": 0.297914597815,
+      "aliases": [
+        "OfficeQA Pro"
+      ]
+    },
+    {
+      "id": "ifbench",
+      "name": "IFBench",
+      "weight": 0.099304865938,
+      "aliases": [
+        "IFBench"
+      ]
+    },
+    {
+      "id": "gpqa-diamond",
+      "name": "GPQA Diamond",
+      "weight": 25.620655412116,
+      "aliases": [
+        "GPQA Diamond"
+      ]
+    },
+    {
+      "id": "frontiermath-1-3-v2",
+      "name": "FrontierMath — Tiers 1–3 v2",
+      "weight": 63.753723932475,
+      "aliases": [
+        "FrontierMath Tiers 1–3 v2",
+        "FrontierMath Tiers 1-3 (v2)"
+      ]
+    },
+    {
+      "id": "gpqa",
+      "name": "GPQA",
+      "weight": 0.099304865938,
+      "aliases": [
+        "GPQA"
+      ]
+    },
+    {
+      "id": "mmlu-pro",
+      "name": "MMLU-Pro",
+      "weight": 0.099304865938,
+      "aliases": [
+        "MMLU-Pro"
+      ]
+    },
+    {
+      "id": "aime-2025",
+      "name": "AIME 2025",
+      "weight": 0.099304865938,
+      "aliases": [
+        "AIME 2025"
+      ]
+    },
+    {
+      "id": "humanitys-last-exam",
+      "name": "Humanity’s Last Exam",
+      "weight": 0.099304865938,
+      "aliases": [
+        "Humanity’s Last Exam",
+        "Humanity's Last Exam",
+        "HLE"
+      ]
+    },
+    {
+      "id": "swe-bench-verified",
+      "name": "SWE-bench Verified",
+      "weight": 0.099304865938,
+      "aliases": [
+        "SWE-bench Verified",
+        "SWE-Bench Verified"
+      ]
+    }
+  ],
+  "missingContribution": 0,
+  "denominator": 1.0,
+  "participationFiltering": false,
+  "calibration": {
+    "date": "2026-09-06",
+    "target": "User-provided llm-stats 15-model screenshot order",
+    "method": "Minimize rank displacement weighted by 1 + 5 / target rank; 0.1 percentage-point increments; each component at least 0.1%; missing results zero",
+    "report": "docs/research/llm-stats-ranking-calibration.md",
+    "extension": "Added DeepSWE, LiveCodeBench v6, GPQA, MMLU-Pro and AIME 2025 with equal allocations to DeepSWE 1.1; proportionally normalized all allocations. Latest three use the previous-addition allocation pending any different requested weights. Humanity’s Last Exam and SWE-bench Verified added at the same allocation as the recent additions, with proportional normalization."
+  },
+  "effortPolicy": "Highest verified score per exact model and benchmark across effort settings; preserve source effort as provenance, never as an eligibility filter"
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "model": "GPT-5.4",
+    "component": "officeqa-pro",
+    "score": 56.39,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "GPT-5.1",
+    "component": "officeqa-pro",
+    "score": 45.1,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "officeqa-pro",
+    "score": 57.1,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "Claude Opus 4.5",
+    "component": "officeqa-pro",
+    "score": 55.6,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "officeqa-pro",
+    "score": 51.9,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "Claude Sonnet 4.5",
+    "component": "officeqa-pro",
+    "score": 41.4,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "officeqa-pro",
+    "score": 33.1,
+    "sourceUrl": "https://arxiv.org/html/2603.08655v1",
+    "publishedAt": "2026-03-09",
+    "sourceType": "paper",
+    "confidence": "high",
+    "configuration": "OfficeQA Pro full corpus, 0.0% error threshold; Databricks parsed documents. Full-corpus DBX result or custom-agent HTML/Markdown result from Tables 1, 4 and 5. Oracle-page and OfficeQA-Full subset results excluded."
+  }
+]

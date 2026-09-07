@@ -119,15 +119,20 @@ def calculate_derived_scores(
     max_value: Optional[float] = None,
     benchmark_min_max: Optional[Dict[str, tuple]] = None,
     qualified_benchmarks: Optional[set] = None,
+    benchmark_weights: Optional[Dict[str, float]] = None,
+    value_reference: Optional[Any] = None,
+    round_results: bool = True,
 ) -> Dict[str, float]:
     """Calculate total, avgIq, value, unified from raw columns.
 
     Two-pass semantics:
     - Pass 1 (default, qualified_benchmarks is None): participation-weighted average
       across every benchmark in benchmark_headers, skipping single-participant ones.
-    - Pass 2 (qualified_benchmarks is set): flat (unweighted) average, restricted to
-      benchmarks in that set. Pass 2 is used after Pass 1 picks the Initial Top 10
-      and we know which benchmarks have enough coverage to compare apples-to-apples.
+    - Pass 2 (qualified_benchmarks is set): restrict contributions to benchmarks
+      meeting the whole-cohort qualification threshold. Default weights are one.
+    - With benchmark_weights, replace participation weights and qualification
+      gates with the configured allocations and a fixed 1.00 denominator. Without them, retain reported-only
+      averaging, including on the independent Value input path.
     """
     if participation is None:
         participation = {}
@@ -144,11 +149,16 @@ def calculate_derived_scores(
     weight_sum = 0.0
     for b in benchmark_headers:
         raw_val = entry.columns.get(b, "")
+        if benchmark_weights is not None and not hasattr(entry, "source_entry"):
+            from avg_iq_benchmarks import selected_value
+            raw_val = selected_value(entry.columns, b)
         # Skip missing/placeholder cells
         if raw_val in MISSING_VALUE_MARKERS:
             continue
 
-        if pass_two:
+        if benchmark_weights is not None:
+            weight = benchmark_weights.get(b, 0.0)
+        elif pass_two:
             # Pass 2: only qualified benchmarks count, and each contributes equally.
             if b not in qualified_benchmarks:
                 continue
@@ -173,7 +183,11 @@ def calculate_derived_scores(
         total_weighted += score * weight
         weight_sum += weight
     
-    avg_iq = total_weighted / weight_sum if weight_sum > 0 else 0.0
+    # Selected Avg IQ uses the entire configured 100% allocation. Missing and
+    # ineligible components contribute zero rather than shrinking the denominator.
+    # The original reported-only denominator remains intact on the Value path.
+    denominator = 1.0 if benchmark_weights is not None else weight_sum
+    avg_iq = total_weighted / denominator if denominator > 0 else 0.0
     
     # Value (avgIq / total cost: input + output)
     # Try both formats for backwards compatibility
@@ -181,6 +195,8 @@ def calculate_derived_scores(
     cost_out = parse_to_number(entry.columns.get("Output$/M") or entry.columns.get("Output $/M", "0"))
     total_cost = cost_in + cost_out
     value = avg_iq / total_cost if total_cost > 0 else 0.0
+    if value_reference is not None:
+        value = value_reference.scores_for(getattr(entry, "source_entry", entry), round_results=False)["value"]
     
     # Normalize to 0-100 if bounds provided
     if min_avg_iq is not None and max_avg_iq is not None and max_avg_iq > min_avg_iq:
@@ -206,9 +222,9 @@ def calculate_derived_scores(
     unified *= 10
     
     return {
-        "avgIq": round(avg_iq, 2),
-        "value": round(value, 2),
-        "unified": round(unified, 2)
+        "avgIq": round(avg_iq, 2) if round_results else avg_iq,
+        "value": round(value, 2) if round_results else value,
+        "unified": round(unified, 2) if round_results else unified
     }
 
 
@@ -247,18 +263,25 @@ class ScoringResult:
     qualified_benchmarks: Optional[set]      # None => Pass 1 fallback
     qualified_min_reports: int
 
-    def scores_for(self, entry: Any) -> Dict[str, float]:
+    benchmark_weights: Optional[Dict[str, float]] = None
+    value_reference: Optional[Any] = None
+
+    def scores_for(self, entry: Any, *, round_results: bool = True) -> Dict[str, float]:
         return calculate_derived_scores(
             entry, self.benchmark_headers, self.participation, self.max_participation,
             self.min_avg_iq, self.max_avg_iq, self.min_value, self.max_value,
             benchmark_min_max=self.benchmark_min_max, qualified_benchmarks=self.qualified_benchmarks,
+            benchmark_weights=self.benchmark_weights, value_reference=self.value_reference, round_results=round_results,
         )
 
     def coverage(self, entry: Any) -> Tuple[int, int]:
         """(reported, qualified) for this entry; (0, 0) under Pass 1 fallback."""
         if not self.qualified_benchmarks:
             return (0, 0)
-        n = sum(1 for b in self.qualified_benchmarks if entry.columns.get(b, "") not in MISSING_VALUE_MARKERS)
+        from avg_iq_benchmarks import selected_value
+        n = sum(1 for b in self.qualified_benchmarks
+                if (selected_value(entry.columns, b) if self.benchmark_weights is not None
+                    else entry.columns.get(b, "")) not in MISSING_VALUE_MARKERS)
         return (n, len(self.qualified_benchmarks))
 
     def to_snapshot(self) -> Dict[str, Any]:
@@ -271,11 +294,13 @@ class ScoringResult:
         `score_cohort(..., fixed=block)` consumes it.
         """
         return {
-            "version": 2,
+            "version": 4 if self.benchmark_weights is not None else 2,
+            **({"avgIqWeights": self.benchmark_weights} if self.benchmark_weights is not None else {}),
+            **({"avgIqWeights": self.benchmark_weights, "valueInputs": {"headers": self.value_reference.benchmark_headers, "parameters": self.value_reference.to_snapshot(), "participation": self.value_reference.participation, "maxParticipation": self.value_reference.max_participation}} if self.value_reference else {}),
             "qualified": sorted(self.qualified_benchmarks) if self.qualified_benchmarks else None,
             "qualifiedMinReports": self.qualified_min_reports,
-            "bounds": {"minAvgIq": self.min_avg_iq, "maxAvgIq": self.max_avg_iq,
-                       "minValue": self.min_value, "maxValue": self.max_value},
+            "bounds": {"minAvgIq": float(self.min_avg_iq), "maxAvgIq": float(self.max_avg_iq),
+                       "minValue": float(self.min_value), "maxValue": float(self.max_value)},
             "benchmarkRanges": {b: [lo, hi] for b, (lo, hi) in sorted(self.benchmark_min_max.items())},
         }
 
@@ -287,22 +312,24 @@ def _fixed_result(benchmark_headers: List[str], participation: Dict[str, int], m
     bounds = fixed.get("bounds") or {}
     ranges = {b: (float(lo), float(hi)) for b, (lo, hi) in (fixed.get("benchmarkRanges") or {}).items()}
     qualified = set(fixed["qualified"]) if fixed.get("qualified") else None
-    return ScoringResult(list(benchmark_headers), [], participation, max_participation,
+    value_inputs = fixed.get("valueInputs")
+    value_reference = _fixed_result(value_inputs["headers"], value_inputs["participation"], value_inputs["maxParticipation"], value_inputs["parameters"]) if value_inputs else None
+    return ScoringResult(list(fixed.get("avgIqWeights") or benchmark_headers), [], participation, max_participation,
                          float(bounds.get("minAvgIq", 0.0)), float(bounds.get("maxAvgIq", 1.0)),
                          float(bounds.get("minValue", 0.0)), float(bounds.get("maxValue", 1.0)),
-                         ranges, qualified, int(fixed.get("qualifiedMinReports", 0)))
+                         ranges, qualified, int(fixed.get("qualifiedMinReports", 0)), fixed.get("avgIqWeights"), value_reference)
 
 
 def _is_reported(entry: Any, b: str) -> bool:
     return entry.columns.get(b, "") not in MISSING_VALUE_MARKERS
 
 
-def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log=print) -> Tuple[List[str], List[str]]:
+def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log=print, *, preserve_cells=False) -> Tuple[List[str], List[str]]:
     """Remove benchmarks reported by fewer than MIN_COHORT_PARTICIPATION models.
 
-    Returns (remaining_headers, dropped). Pops the cells from every entry so a
-    dropped benchmark never reaches models.json. The daily run calls this
-    BEFORE the gap-filling pass, then score_cohort(..., drop_sparse=False).
+    Returns (remaining_headers, dropped). The daily run uses preserve_cells=True
+    to retain all discovered results while applying the same eligibility floor.
+    The default retains compatibility with callers requesting destructive filtering.
     """
     pre_counts, _ = build_benchmark_participation(entries, benchmark_headers)
     dropped = [b for b in benchmark_headers if pre_counts.get(b, 0) < MIN_COHORT_PARTICIPATION]
@@ -312,15 +339,18 @@ def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log
         for b in sorted(dropped):
             log(f"  - {b}  ({pre_counts.get(b, 0)}/{len(entries)})")
         sparse = set(dropped)
-        for e in entries:
-            for b in dropped:
-                e.columns.pop(b, None)
+        if not preserve_cells:
+            for e in entries:
+                for b in dropped:
+                    e.columns.pop(b, None)
         return [b for b in benchmark_headers if b not in sparse], dropped
     return list(benchmark_headers), []
 
 
 def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_sparse: bool = True,
-                 log=print, fixed: Optional[Dict[str, Any]] = None) -> ScoringResult:
+                 log=print, fixed: Optional[Dict[str, Any]] = None,
+                 benchmark_weights: Optional[Dict[str, float]] = None,
+                 value_reference: Optional[ScoringResult] = None) -> ScoringResult:
     """Score a cohort. With drop_sparse (the default), sparse benchmarks are
     removed first; the daily run passes False because it drops them itself
     before gap-filling.
@@ -331,38 +361,46 @@ def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_spars
     scale of the pool they were originally normalised against."""
     benchmark_headers = list(benchmark_headers)
     dropped: List[str] = []
-    if drop_sparse:
+    if drop_sparse and benchmark_weights is None:
         benchmark_headers, dropped = drop_sparse_benchmarks(entries, benchmark_headers, log)
 
     participation, max_participation = build_benchmark_participation(entries, benchmark_headers)
     if fixed is not None:
         return _fixed_result(benchmark_headers, participation, max_participation, fixed)
 
-    benchmark_min_max: Dict[str, tuple] = {}
-    for b in benchmark_headers:
-        if participation.get(b, 0) <= 1:
-            continue
-        values = [parse_to_number(e.columns.get(b, "")) for e in entries
-                  if e.columns.get(b, "") and e.columns.get(b, "") not in MISSING_VALUE_MARKERS]
-        if values:
-            benchmark_min_max[b] = (min(values), max(values))
+    if benchmark_weights is not None:
+        # Explicit selection replaces every participation gate and fallback for IQ.
+        qualified_min = 0
+        qualified = set(benchmark_headers)
+    else:
+        benchmark_min_max: Dict[str, tuple] = {}
+        for b in benchmark_headers:
+            if participation.get(b, 0) <= 1:
+                continue
+            values = [parse_to_number(e.columns.get(b, "")) for e in entries
+                      if e.columns.get(b, "") and e.columns.get(b, "") not in MISSING_VALUE_MARKERS]
+            if values:
+                benchmark_min_max[b] = (min(values), max(values))
 
-    iqs, vals = [], []
-    for e in entries:
-        s = calculate_derived_scores(e, benchmark_headers, participation, max_participation,
-                                     benchmark_min_max=benchmark_min_max)
-        iqs.append(s["avgIq"]); vals.append(s["value"])
-    min_avg_iq, max_avg_iq = (min(iqs), max(iqs)) if iqs else (0, 1)
-    min_value, max_value = (min(vals), max(vals)) if vals else (0, 1)
+        iqs, vals = [], []
+        for e in entries:
+            s = calculate_derived_scores(e, benchmark_headers, participation, max_participation,
+                                         benchmark_min_max=benchmark_min_max, benchmark_weights=benchmark_weights, value_reference=value_reference)
+            iqs.append(s["avgIq"]); vals.append(s["value"])
+        min_avg_iq, max_avg_iq = (min(iqs), max(iqs)) if iqs else (0, 1)
+        min_value, max_value = (min(vals), max(vals)) if vals else (0, 1)
 
-    qualified_min = max(2, round(len(entries) * QUALIFIED_FRACTION))
-    qualified = {b for b in benchmark_headers if sum(_is_reported(e, b) for e in entries) >= qualified_min}
+        if value_reference is not None:
+            min_value, max_value = value_reference.min_value, value_reference.max_value
 
-    if len(qualified) < MIN_QUALIFIED_FLOOR:
-        log(f"\nWARNING: only {len(qualified)} benchmarks qualified (need >= {MIN_QUALIFIED_FLOOR}). "
-            f"Falling back to Pass 1 scoring.")
-        return ScoringResult(benchmark_headers, dropped, participation, max_participation,
-                             min_avg_iq, max_avg_iq, min_value, max_value, benchmark_min_max, None, qualified_min)
+        qualified_min = max(2, round(len(entries) * QUALIFIED_FRACTION))
+        qualified = {b for b in benchmark_headers if sum(_is_reported(e, b) for e in entries) >= qualified_min}
+
+        if len(qualified) < MIN_QUALIFIED_FLOOR:
+            log(f"\nWARNING: only {len(qualified)} benchmarks qualified (need >= {MIN_QUALIFIED_FLOOR}). "
+                f"Falling back to Pass 1 scoring.")
+            return ScoringResult(benchmark_headers, dropped, participation, max_participation,
+                                 min_avg_iq, max_avg_iq, min_value, max_value, benchmark_min_max, None, qualified_min, benchmark_weights, value_reference)
 
     bmm2: Dict[str, tuple] = {}
     for b in qualified:
@@ -371,12 +409,15 @@ def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_spars
             bmm2[b] = rng
     iqs2, vals2 = [], []
     for e in entries:
-        s = calculate_derived_scores(e, benchmark_headers, benchmark_min_max=bmm2, qualified_benchmarks=qualified)
+        s = calculate_derived_scores(e, benchmark_headers, benchmark_min_max=bmm2, qualified_benchmarks=qualified, benchmark_weights=benchmark_weights, value_reference=value_reference)
         iqs2.append(s["avgIq"])
         if entry_has_pricing(e):                # unpriced models are excluded from the Value bounds
             vals2.append(s["value"])
     miq, maq = (min(iqs2), max(iqs2)) if iqs2 else (0.0, 1.0)
     mv, mxv = (min(vals2), max(vals2)) if vals2 else (0.0, 1.0)
+
+    if value_reference is not None:
+        mv, mxv = value_reference.min_value, value_reference.max_value
 
     log(f"\nQualified benchmarks ({len(qualified)} of {len(benchmark_headers)}, "
         f"threshold >= {qualified_min}/{len(entries)} of the full cohort):")
@@ -384,4 +425,14 @@ def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_spars
         log(f"  ✓ {b}  ({sum(_is_reported(e, b) for e in entries)}/{len(entries)})")
 
     return ScoringResult(benchmark_headers, dropped, participation, max_participation,
-                         miq, maq, mv, mxv, bmm2, qualified, qualified_min)
+                         miq, maq, mv, mxv, bmm2, qualified, qualified_min, benchmark_weights, value_reference)
+
+
+def score_avg_iq_cohort(entries, benchmark_headers=None, *, log=print):
+    """Score only the nineteen configured benchmarks; derive Value from that IQ."""
+    from avg_iq_benchmarks import load_config, selected_value
+    from types import SimpleNamespace
+    weights = {b['aliases'][0].replace(' ', ''): b['weight']/100 for b in load_config()['benchmarks']}
+    iq_entries = [SimpleNamespace(columns={**e.columns, **{h: selected_value(e.columns, h) for h in weights}},
+                                 source_entry=e) for e in entries]
+    return score_cohort(iq_entries, list(weights), drop_sparse=False, benchmark_weights=weights, log=log)

@@ -1,0 +1,154 @@
+[
+  {
+    "benchmark": "Toolathlon",
+    "component": "toolathlon",
+    "currentBefore": 14,
+    "currentAfter": 14,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "Agents\u2019 Last Exam",
+    "component": "agents-last-exam",
+    "currentBefore": 15,
+    "currentAfter": 15,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "DeepSWE",
+    "component": "deepswe",
+    "currentBefore": 6,
+    "currentAfter": 6,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "DeepSWE 1.1",
+    "component": "deepswe-1.1",
+    "currentBefore": 20,
+    "currentAfter": 20,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "LiveCodeBench v6",
+    "component": "livecodebench-v6",
+    "currentBefore": 3,
+    "currentAfter": 14,
+    "historicalCellsFilled": 11,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "Terminal-Bench 2.1",
+    "component": "terminal-bench-2.1",
+    "currentBefore": 18,
+    "currentAfter": 18,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "BrowseComp",
+    "component": "browsecomp",
+    "currentBefore": 8,
+    "currentAfter": 8,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "MMMU-Pro",
+    "component": "mmmu-pro",
+    "currentBefore": 12,
+    "currentAfter": 12,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "CharXiv-R",
+    "component": "charxiv-r",
+    "currentBefore": 7,
+    "currentAfter": 7,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "ARC-AGI-2",
+    "component": "arc-agi-2",
+    "currentBefore": 8,
+    "currentAfter": 8,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "OfficeQA Pro",
+    "component": "officeqa-pro",
+    "currentBefore": 6,
+    "currentAfter": 6,
+    "historicalCellsFilled": 460,
+    "historicalCellsUpgraded": 126
+  },
+  {
+    "benchmark": "IFBench",
+    "component": "ifbench",
+    "currentBefore": 8,
+    "currentAfter": 8,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "GPQA Diamond",
+    "component": "gpqa-diamond",
+    "currentBefore": 18,
+    "currentAfter": 19,
+    "historicalCellsFilled": 1,
+    "historicalCellsUpgraded": 3
+  },
+  {
+    "benchmark": "FrontierMath \u2014 Tiers 1\u20133 v2",
+    "component": "frontiermath-1-3-v2",
+    "currentBefore": 12,
+    "currentAfter": 12,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "GPQA",
+    "component": "gpqa",
+    "currentBefore": 11,
+    "currentAfter": 11,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "MMLU-Pro",
+    "component": "mmlu-pro",
+    "currentBefore": 14,
+    "currentAfter": 14,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "AIME 2025",
+    "component": "aime-2025",
+    "currentBefore": 0,
+    "currentAfter": 0,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "Humanity\u2019s Last Exam",
+    "component": "humanitys-last-exam",
+    "currentBefore": 11,
+    "currentAfter": 11,
+    "historicalCellsFilled": 0,
+    "historicalCellsUpgraded": 0
+  },
+  {
+    "benchmark": "SWE-bench Verified",
+    "component": "swe-bench-verified",
+    "currentBefore": 2,
+    "currentAfter": 13,
+    "historicalCellsFilled": 11,
+    "historicalCellsUpgraded": 0
+  }
+]

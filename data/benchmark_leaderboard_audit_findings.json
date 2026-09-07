@@ -1,0 +1,3899 @@
+[
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "toolathlon",
+    "score": 78.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.1",
+    "component": "toolathlon",
+    "score": 75.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-0813",
+    "component": "toolathlon",
+    "score": 74.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "toolathlon",
+    "score": 74.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "toolathlon",
+    "score": 73.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "toolathlon",
+    "score": 73.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "toolathlon",
+    "score": 73.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3",
+    "component": "toolathlon",
+    "score": 73.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "toolathlon",
+    "score": 72.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-0731",
+    "component": "toolathlon",
+    "score": 70.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "toolathlon",
+    "score": 59.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "toolathlon",
+    "score": 57.99999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.5 Flash",
+    "component": "toolathlon",
+    "score": 56.49999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "toolathlon",
+    "score": 55.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "toolathlon",
+    "score": 54.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "toolathlon",
+    "score": 54.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "toolathlon",
+    "score": 53.400000000000006,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "toolathlon",
+    "score": 53.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "toolathlon",
+    "score": 51.800000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "toolathlon",
+    "score": 50.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "toolathlon",
+    "score": 50.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Laguna S 2.1",
+    "component": "toolathlon",
+    "score": 49.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "toolathlon",
+    "score": 49.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "toolathlon",
+    "score": 48.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "toolathlon",
+    "score": 48.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "toolathlon",
+    "score": 47.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "toolathlon",
+    "score": 46.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.7",
+    "component": "toolathlon",
+    "score": 46.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.1",
+    "component": "toolathlon",
+    "score": 43.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4 mini",
+    "component": "toolathlon",
+    "score": 42.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.1",
+    "component": "toolathlon",
+    "score": 40.699999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "toolathlon",
+    "score": 39.800000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "toolathlon",
+    "score": 38.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2 (Thinking)",
+    "component": "toolathlon",
+    "score": 35.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2-Speciale",
+    "component": "toolathlon",
+    "score": 35.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/toolathlon",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-6 Astra",
+    "component": "agents-last-exam",
+    "score": 59.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "agents-last-exam",
+    "score": 52.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "agents-last-exam",
+    "score": 52.400000000000006,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "agents-last-exam",
+    "score": 51.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "agents-last-exam",
+    "score": 51.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "agents-last-exam",
+    "score": 50.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "agents-last-exam",
+    "score": 50.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "agents-last-exam",
+    "score": 42.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "agents-last-exam",
+    "score": 41.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3",
+    "component": "agents-last-exam",
+    "score": 28.499999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Vision-Exp",
+    "component": "agents-last-exam",
+    "score": 27.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.7 Flash",
+    "component": "agents-last-exam",
+    "score": 26.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "agents-last-exam",
+    "score": 26.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-0813",
+    "component": "agents-last-exam",
+    "score": 25.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-0731",
+    "component": "agents-last-exam",
+    "score": 25.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "agents-last-exam",
+    "score": 22.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/agents-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "deepswe",
+    "score": 72.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "deepswe",
+    "score": 69.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "deepswe",
+    "score": 67.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "deepswe",
+    "score": 67.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "deepswe",
+    "score": 64.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-0813",
+    "component": "deepswe",
+    "score": 62.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Vision-Exp",
+    "component": "deepswe",
+    "score": 59.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-0731",
+    "component": "deepswe",
+    "score": 54.400000000000006,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.5",
+    "component": "deepswe",
+    "score": 53.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "deepswe",
+    "score": 46.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "deepswe",
+    "score": 32.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "deepswe",
+    "score": 28.000000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "component": "deepswe-1.1",
+    "score": 75.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-6 Astra",
+    "component": "deepswe-1.1",
+    "score": 74.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.8 Flash",
+    "component": "deepswe-1.1",
+    "score": 73.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "deepswe-1.1",
+    "score": 73.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "deepswe-1.1",
+    "score": 70.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Fable 5",
+    "component": "deepswe-1.1",
+    "score": 70.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "deepswe-1.1",
+    "score": 69.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 5",
+    "component": "deepswe-1.1",
+    "score": 68.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "deepswe-1.1",
+    "score": 67.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "deepswe-1.1",
+    "score": 67.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3",
+    "component": "deepswe-1.1",
+    "score": 66.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.6",
+    "component": "deepswe-1.1",
+    "score": 65.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.7 Flash",
+    "component": "deepswe-1.1",
+    "score": 65.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "deepswe-1.1",
+    "score": 63.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "deepswe-1.1",
+    "score": 59.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "deepswe-1.1",
+    "score": 58.699999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "deepswe-1.1",
+    "score": 58.699999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "deepswe-1.1",
+    "score": 56.599999999999994,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "deepswe-1.1",
+    "score": 54.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.5",
+    "component": "deepswe-1.1",
+    "score": 54.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.1",
+    "component": "deepswe-1.1",
+    "score": 53.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "deepswe-1.1",
+    "score": 52.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "deepswe-1.1",
+    "score": 44.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "deepswe-1.1",
+    "score": 42.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Laguna S 2.1",
+    "component": "deepswe-1.1",
+    "score": 40.400000000000006,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.5 Flash",
+    "component": "deepswe-1.1",
+    "score": 37.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "deepswe-1.1",
+    "score": 30.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "deepswe-1.1",
+    "score": 12.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/deepswe-1.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "livecodebench-v6",
+    "score": 91.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "livecodebench-v6",
+    "score": 91.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "livecodebench-v6",
+    "score": 91.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "livecodebench-v6",
+    "score": 90.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "livecodebench-v6",
+    "score": 89.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "livecodebench-v6",
+    "score": 89.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "livecodebench-v6",
+    "score": 87.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "livecodebench-v6",
+    "score": 87.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "livecodebench-v6",
+    "score": 85.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "livecodebench-v6",
+    "score": 84.89999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "livecodebench-v6",
+    "score": 83.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2-Thinking-0905",
+    "component": "livecodebench-v6",
+    "score": 83.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.6",
+    "component": "livecodebench-v6",
+    "score": 82.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "livecodebench-v6",
+    "score": 80.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2-Flash",
+    "component": "livecodebench-v6",
+    "score": 80.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "livecodebench-v6",
+    "score": 78.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "livecodebench-v6",
+    "score": 74.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3 VL 235B A22B Instruct",
+    "component": "livecodebench-v6",
+    "score": 54.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/livecodebench-v6",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.8 Flash",
+    "component": "terminal-bench-2.1",
+    "score": 89.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "terminal-bench-2.1",
+    "score": 88.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.3",
+    "component": "terminal-bench-2.1",
+    "score": 88.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "terminal-bench-2.1",
+    "score": 88.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3",
+    "component": "terminal-bench-2.1",
+    "score": 88.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-0813",
+    "component": "terminal-bench-2.1",
+    "score": 87.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "terminal-bench-2.1",
+    "score": 87.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "terminal-bench-2.1",
+    "score": 86.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.7 Flash",
+    "component": "terminal-bench-2.1",
+    "score": 85.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "terminal-bench-2.1",
+    "score": 85.39999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "terminal-bench-2.1",
+    "score": 84.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "terminal-bench-2.1",
+    "score": 84.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Fable 5",
+    "component": "terminal-bench-2.1",
+    "score": 84.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Vision-Exp",
+    "component": "terminal-bench-2.1",
+    "score": 83.89999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.5",
+    "component": "terminal-bench-2.1",
+    "score": 83.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "terminal-bench-2.1",
+    "score": 82.69999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-0731",
+    "component": "terminal-bench-2.1",
+    "score": 82.69999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.1",
+    "component": "terminal-bench-2.1",
+    "score": 80.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "terminal-bench-2.1",
+    "score": 73.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "terminal-bench-2.1",
+    "score": 71.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "terminal-bench-2.1",
+    "score": 71.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Laguna S 2.1",
+    "component": "terminal-bench-2.1",
+    "score": 70.19999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/terminal-bench-2.1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-6 Astra",
+    "component": "browsecomp",
+    "score": 91.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "browsecomp",
+    "score": 91.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 5",
+    "component": "browsecomp",
+    "score": 90.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "browsecomp",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "browsecomp",
+    "score": 87.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "browsecomp",
+    "score": 86.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "browsecomp",
+    "score": 86.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "browsecomp",
+    "score": 86.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "browsecomp",
+    "score": 85.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "browsecomp",
+    "score": 84.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "browsecomp",
+    "score": 84.39999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "browsecomp",
+    "score": 84.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "browsecomp",
+    "score": 84.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "browsecomp",
+    "score": 84.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "browsecomp",
+    "score": 83.39999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "browsecomp",
+    "score": 83.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "browsecomp",
+    "score": 82.69999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "browsecomp",
+    "score": 79.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.1",
+    "component": "browsecomp",
+    "score": 79.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2 Pro",
+    "component": "browsecomp",
+    "score": 77.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "browsecomp",
+    "score": 77.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.5",
+    "component": "browsecomp",
+    "score": 76.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5",
+    "component": "browsecomp",
+    "score": 75.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "browsecomp",
+    "score": 74.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "browsecomp",
+    "score": 74.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "browsecomp",
+    "score": 73.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "browsecomp",
+    "score": 69.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "browsecomp",
+    "score": 65.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "browsecomp",
+    "score": 63.800000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.1",
+    "component": "browsecomp",
+    "score": 62.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "browsecomp",
+    "score": 61.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "browsecomp",
+    "score": 61.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2-Thinking-0905",
+    "component": "browsecomp",
+    "score": 60.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2-Flash",
+    "component": "browsecomp",
+    "score": 58.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "browsecomp",
+    "score": 52.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2 (Thinking)",
+    "component": "browsecomp",
+    "score": 51.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/browsecomp",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.5 Flash",
+    "component": "mmmu-pro",
+    "score": 83.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "mmmu-pro",
+    "score": 83.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "mmmu-pro",
+    "score": 83.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "mmmu-pro",
+    "score": 82.69999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "mmmu-pro",
+    "score": 82.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "mmmu-pro",
+    "score": 81.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "mmmu-pro",
+    "score": 81.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "mmmu-pro",
+    "score": 81.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "mmmu-pro",
+    "score": 81.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "mmmu-pro",
+    "score": 80.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "mmmu-pro",
+    "score": 80.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "mmmu-pro",
+    "score": 80.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "mmmu-pro",
+    "score": 80.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "mmmu-pro",
+    "score": 79.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "mmmu-pro",
+    "score": 79.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "mmmu-pro",
+    "score": 78.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "mmmu-pro",
+    "score": 78.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "mmmu-pro",
+    "score": 78.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "mmmu-pro",
+    "score": 77.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "mmmu-pro",
+    "score": 76.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4 mini",
+    "component": "mmmu-pro",
+    "score": 76.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "mmmu-pro",
+    "score": 75.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "mmmu-pro",
+    "score": 75.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "mmmu-pro",
+    "score": 75.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3 VL 235B A22B Instruct",
+    "component": "mmmu-pro",
+    "score": 68.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmmu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "charxiv-r",
+    "score": 93.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "charxiv-r",
+    "score": 91.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "charxiv-r",
+    "score": 91.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "charxiv-r",
+    "score": 90.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "charxiv-r",
+    "score": 90.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "charxiv-r",
+    "score": 90.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "charxiv-r",
+    "score": 89.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "charxiv-r",
+    "score": 89.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.7 Flash",
+    "component": "charxiv-r",
+    "score": 88.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.1",
+    "component": "charxiv-r",
+    "score": 88.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "charxiv-r",
+    "score": 88.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "charxiv-r",
+    "score": 86.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "charxiv-r",
+    "score": 86.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "charxiv-r",
+    "score": 86.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.8 Flash",
+    "component": "charxiv-r",
+    "score": 86.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "charxiv-r",
+    "score": 85.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.5 Flash",
+    "component": "charxiv-r",
+    "score": 84.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "charxiv-r",
+    "score": 82.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "charxiv-r",
+    "score": 81.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "charxiv-r",
+    "score": 81.39999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "charxiv-r",
+    "score": 80.30000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "charxiv-r",
+    "score": 79.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "charxiv-r",
+    "score": 77.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "charxiv-r",
+    "score": 77.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "charxiv-r",
+    "score": 77.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "charxiv-r",
+    "score": 77.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3 VL 235B A22B Instruct",
+    "component": "charxiv-r",
+    "score": 62.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/charxiv-r",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "officeqa-pro",
+    "score": 72.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "officeqa-pro",
+    "score": 66.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "officeqa-pro",
+    "score": 66.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "officeqa-pro",
+    "score": 63.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "officeqa-pro",
+    "score": 62.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "officeqa-pro",
+    "score": 59.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "officeqa-pro",
+    "score": 54.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/officeqa-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "ifbench",
+    "score": 82.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "ifbench",
+    "score": 81.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "ifbench",
+    "score": 81.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "ifbench",
+    "score": 79.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "ifbench",
+    "score": 79.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "ifbench",
+    "score": 79.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "ifbench",
+    "score": 76.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "ifbench",
+    "score": 76.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "ifbench",
+    "score": 76.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "ifbench",
+    "score": 74.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "ifbench",
+    "score": 70.19999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.1",
+    "component": "ifbench",
+    "score": 70.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/ifbench",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-6 Astra",
+    "component": "gpqa-diamond",
+    "score": 96.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "gpqa-diamond",
+    "score": 94.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "gpqa-diamond",
+    "score": 94.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "gpqa-diamond",
+    "score": 94.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "gpqa-diamond",
+    "score": 94.19999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "gpqa-diamond",
+    "score": 93.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "gpqa-diamond",
+    "score": 93.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "gpqa-diamond",
+    "score": 93.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2 Pro",
+    "component": "gpqa-diamond",
+    "score": 93.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.5",
+    "component": "gpqa-diamond",
+    "score": 93.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "gpqa-diamond",
+    "score": 92.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "gpqa-diamond",
+    "score": 92.80000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "gpqa-diamond",
+    "score": 92.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "gpqa-diamond",
+    "score": 92.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "gpqa-diamond",
+    "score": 92.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "gpqa-diamond",
+    "score": 92.30000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "gpqa-diamond",
+    "score": 92.30000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "gpqa-diamond",
+    "score": 91.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "gpqa-diamond",
+    "score": 91.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "gpqa-diamond",
+    "score": 91.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "gpqa-diamond",
+    "score": 91.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "gpqa-diamond",
+    "score": 91.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "gpqa-diamond",
+    "score": 90.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "gpqa-diamond",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "gpqa-diamond",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "gpqa-diamond",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "gpqa-diamond",
+    "score": 90.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "gpqa-diamond",
+    "score": 90.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "gpqa-diamond",
+    "score": 89.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "gpqa-diamond",
+    "score": 89.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "gpqa-diamond",
+    "score": 89.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "gpqa-diamond",
+    "score": 88.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "gpqa-diamond",
+    "score": 88.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 High",
+    "component": "gpqa-diamond",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 Thinking",
+    "component": "gpqa-diamond",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "gpqa-diamond",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5 Medium",
+    "component": "gpqa-diamond",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1",
+    "component": "gpqa-diamond",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4 mini",
+    "component": "gpqa-diamond",
+    "score": 88.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "gpqa-diamond",
+    "score": 87.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5 High",
+    "component": "gpqa-diamond",
+    "score": 87.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.5",
+    "component": "gpqa-diamond",
+    "score": 87.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa-diamond",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-6 Astra",
+    "component": "gpqa",
+    "score": 96.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "component": "gpqa",
+    "score": 94.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "gpqa",
+    "score": 94.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "gpqa",
+    "score": 94.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "gpqa",
+    "score": 94.19999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "gpqa",
+    "score": 93.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "gpqa",
+    "score": 93.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "gpqa",
+    "score": 93.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2 Pro",
+    "component": "gpqa",
+    "score": 93.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Grok 4.5",
+    "component": "gpqa",
+    "score": 93.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Terra",
+    "component": "gpqa",
+    "score": 92.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "gpqa",
+    "score": 92.80000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "gpqa",
+    "score": 92.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "gpqa",
+    "score": 92.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "gpqa",
+    "score": 92.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy4 preview",
+    "component": "gpqa",
+    "score": 92.30000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.6 Luna",
+    "component": "gpqa",
+    "score": 92.30000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "gpqa",
+    "score": 91.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "gpqa",
+    "score": 91.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "gpqa",
+    "score": 91.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "gpqa",
+    "score": 91.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "gpqa",
+    "score": 91.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "gpqa",
+    "score": 90.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "gpqa",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "gpqa",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "gpqa",
+    "score": 90.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "gpqa",
+    "score": 90.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "gpqa",
+    "score": 90.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "gpqa",
+    "score": 89.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "gpqa",
+    "score": 89.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-27B",
+    "component": "gpqa",
+    "score": 89.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "gpqa",
+    "score": 88.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "gpqa",
+    "score": 88.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 High",
+    "component": "gpqa",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 Thinking",
+    "component": "gpqa",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "gpqa",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5 Medium",
+    "component": "gpqa",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1",
+    "component": "gpqa",
+    "score": 88.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4 mini",
+    "component": "gpqa",
+    "score": 88.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "gpqa",
+    "score": 87.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5 High",
+    "component": "gpqa",
+    "score": 87.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.5",
+    "component": "gpqa",
+    "score": 87.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/gpqa",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "mmlu-pro",
+    "score": 89.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "mmlu-pro",
+    "score": 88.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "mmlu-pro",
+    "score": 88.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.1",
+    "component": "mmlu-pro",
+    "score": 88.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "mmlu-pro",
+    "score": 87.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "mmlu-pro",
+    "score": 87.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "mmlu-pro",
+    "score": 87.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "mmlu-pro",
+    "score": 86.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "mmlu-pro",
+    "score": 86.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "mmlu-pro",
+    "score": 86.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "mmlu-pro",
+    "score": 85.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2 (Thinking)",
+    "component": "mmlu-pro",
+    "score": 85.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2-Exp",
+    "component": "mmlu-pro",
+    "score": 85.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2-Flash",
+    "component": "mmlu-pro",
+    "score": 84.89999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.5",
+    "component": "mmlu-pro",
+    "score": 84.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2-Thinking-0905",
+    "component": "mmlu-pro",
+    "score": 84.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "mmlu-pro",
+    "score": 84.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2 0905",
+    "component": "mmlu-pro",
+    "score": 82.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2",
+    "component": "mmlu-pro",
+    "score": 82.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3 VL 235B A22B Instruct",
+    "component": "mmlu-pro",
+    "score": 81.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/mmlu-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "aime-2025",
+    "score": 100.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "aime-2025",
+    "score": 100.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2 Pro",
+    "component": "aime-2025",
+    "score": 100.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2-Thinking-0905",
+    "component": "aime-2025",
+    "score": 100.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "aime-2025",
+    "score": 99.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "aime-2025",
+    "score": 99.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 High",
+    "component": "aime-2025",
+    "score": 99.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 Medium",
+    "component": "aime-2025",
+    "score": 98.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "aime-2025",
+    "score": 98.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "aime-2025",
+    "score": 96.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2-Speciale",
+    "component": "aime-2025",
+    "score": 96.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "aime-2025",
+    "score": 95.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5 High",
+    "component": "aime-2025",
+    "score": 94.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2-Flash",
+    "component": "aime-2025",
+    "score": 94.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1",
+    "component": "aime-2025",
+    "score": 94.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 Thinking",
+    "component": "aime-2025",
+    "score": 94.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.6",
+    "component": "aime-2025",
+    "score": 93.89999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2 (Thinking)",
+    "component": "aime-2025",
+    "score": 93.10000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/aime-2025",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Fable 5.1",
+    "component": "humanitys-last-exam",
+    "score": 65.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "humanitys-last-exam",
+    "score": 64.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 5",
+    "component": "humanitys-last-exam",
+    "score": 64.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Fable 5",
+    "component": "humanitys-last-exam",
+    "score": 64.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3",
+    "component": "humanitys-last-exam",
+    "score": 62.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark 1.1",
+    "component": "humanitys-last-exam",
+    "score": 62.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-0813",
+    "component": "humanitys-last-exam",
+    "score": 60.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "humanitys-last-exam",
+    "score": 58.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "humanitys-last-exam",
+    "score": 57.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "humanitys-last-exam",
+    "score": 57.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "humanitys-last-exam",
+    "score": 56.00000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "humanitys-last-exam",
+    "score": 55.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.3-Flash",
+    "component": "humanitys-last-exam",
+    "score": 55.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.2",
+    "component": "humanitys-last-exam",
+    "score": 54.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "humanitys-last-exam",
+    "score": 54.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "humanitys-last-exam",
+    "score": 53.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5.1",
+    "component": "humanitys-last-exam",
+    "score": 52.300000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.5",
+    "component": "humanitys-last-exam",
+    "score": 52.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "humanitys-last-exam",
+    "score": 51.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2-Thinking-0905",
+    "component": "humanitys-last-exam",
+    "score": 51.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "humanitys-last-exam",
+    "score": 50.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "humanitys-last-exam",
+    "score": 49.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-27B",
+    "component": "humanitys-last-exam",
+    "score": 48.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "humanitys-last-exam",
+    "score": 48.199999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-122B-A10B",
+    "component": "humanitys-last-exam",
+    "score": 47.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-35B-A3B",
+    "component": "humanitys-last-exam",
+    "score": 47.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "humanitys-last-exam",
+    "score": 45.800000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "humanitys-last-exam",
+    "score": 45.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Max",
+    "component": "humanitys-last-exam",
+    "score": 43.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "humanitys-last-exam",
+    "score": 43.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "humanitys-last-exam",
+    "score": 42.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "humanitys-last-exam",
+    "score": 41.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.5 Flash",
+    "component": "humanitys-last-exam",
+    "score": 40.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "humanitys-last-exam",
+    "score": 39.800000000000004,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2 Pro",
+    "component": "humanitys-last-exam",
+    "score": 36.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "humanitys-last-exam",
+    "score": 36.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8-Flash-Next",
+    "component": "humanitys-last-exam",
+    "score": 35.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.8 Flash",
+    "component": "humanitys-last-exam",
+    "score": 35.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "humanitys-last-exam",
+    "score": 34.699999999999996,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "humanitys-last-exam",
+    "score": 34.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2.5-Pro",
+    "component": "humanitys-last-exam",
+    "score": 34.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/humanity%27s-last-exam",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Fable 5",
+    "component": "swe-bench-verified",
+    "score": 95.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Mythos Preview",
+    "component": "swe-bench-verified",
+    "score": 93.89999999999999,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.8",
+    "component": "swe-bench-verified",
+    "score": 88.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.7",
+    "component": "swe-bench-verified",
+    "score": 87.6,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "swe-bench-verified",
+    "score": 85.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.5",
+    "component": "swe-bench-verified",
+    "score": 80.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.6",
+    "component": "swe-bench-verified",
+    "score": 80.80000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Pro-Max",
+    "component": "swe-bench-verified",
+    "score": 80.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3.1 Pro",
+    "component": "swe-bench-verified",
+    "score": 80.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7 Max",
+    "component": "swe-bench-verified",
+    "score": 80.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiniMax M2.5",
+    "component": "swe-bench-verified",
+    "score": 80.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.6",
+    "component": "swe-bench-verified",
+    "score": 80.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.2",
+    "component": "swe-bench-verified",
+    "score": 80.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Sonnet 4.6",
+    "component": "swe-bench-verified",
+    "score": 79.60000000000001,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-Max",
+    "component": "swe-bench-verified",
+    "score": 79.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2.5-Pro",
+    "component": "swe-bench-verified",
+    "score": 78.9,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.6 Plus",
+    "component": "swe-bench-verified",
+    "score": 78.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Hy3",
+    "component": "swe-bench-verified",
+    "score": 78.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Flash",
+    "component": "swe-bench-verified",
+    "score": 78.0,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-5",
+    "component": "swe-bench-verified",
+    "score": 77.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.7-Plus",
+    "component": "swe-bench-verified",
+    "score": 77.7,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Muse Spark",
+    "component": "swe-bench-verified",
+    "score": 77.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Kimi K2.5",
+    "component": "swe-bench-verified",
+    "score": 76.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Seed 2.0 Pro",
+    "component": "swe-bench-verified",
+    "score": 76.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Qwen3.5-397B-A17B",
+    "component": "swe-bench-verified",
+    "score": 76.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1",
+    "component": "swe-bench-verified",
+    "score": 76.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GPT-5.1 Thinking",
+    "component": "swe-bench-verified",
+    "score": 76.3,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Gemini 3 Pro",
+    "component": "swe-bench-verified",
+    "score": 76.2,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "Claude Opus 4.1",
+    "component": "swe-bench-verified",
+    "score": 74.5,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "GLM-4.7",
+    "component": "swe-bench-verified",
+    "score": 73.8,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "MiMo-V2-Flash",
+    "component": "swe-bench-verified",
+    "score": 73.4,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  },
+  {
+    "model": "DeepSeek-V3.2 (Thinking)",
+    "component": "swe-bench-verified",
+    "score": 73.1,
+    "sourceUrl": "https://llm-stats.com/benchmarks/swe-bench-verified",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact benchmark leaderboard and model link; 0\u20131 score normalized to percentage. Visible table only; individual publication date unknown."
+  }
+]

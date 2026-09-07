@@ -20,12 +20,12 @@ from typing import Any, Dict, List, Optional, Tuple
 from playwright.sync_api import sync_playwright
 
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
-from cohort_selection import TEAM_SIZE, min_coverage_for, select_team
+from cohort_selection import TEAM_SIZE, select_team
 from model_families import superseded_models
 from scoring import (  # noqa: E402  - single scoring implementation
     BENCHMARK_KNOWN_RANGES, MISSING_VALUE_MARKERS, build_benchmark_participation,
     calculate_derived_scores, entry_has_pricing, parse_to_number,
-    resolve_benchmark_range, score_cohort, drop_sparse_benchmarks,
+    resolve_benchmark_range, score_cohort, score_avg_iq_cohort, drop_sparse_benchmarks,
 )
 
 # Load .env at module import so OPENAI_API_KEY (and any other env vars) are
@@ -261,6 +261,7 @@ def format_table(
     max_value: Optional[float] = None,
     benchmark_min_max: Optional[Dict[str, tuple]] = None,
     qualified_benchmarks: Optional[set] = None,
+    scoring_result: Optional[Any] = None,
 ) -> str:
     """Format entries as a readable table with column width limits."""
     lines = []
@@ -298,7 +299,7 @@ def format_table(
         
         # Add derived scores with normalization
         if include_derived and benchmark_headers:
-            scores = calculate_derived_scores(
+            scores = scoring_result.scores_for(entry) if scoring_result is not None else calculate_derived_scores(
                 entry,
                 benchmark_headers,
                 participation,
@@ -327,8 +328,8 @@ def format_table(
 
 # Deduplicated, released candidates kept per country through enrichment and
 # scoring. The published top 10 is chosen from this pool at the end (see
-# cohort_selection.select_team), so a model removed for coverage is replaced
-# rather than leaving the team short. 30 rows are parsed per country.
+# cohort_selection.select_team), solely by Unified Score. Benchmark coverage
+# never excludes a model. 30 rows are parsed per country.
 COHORT_POOL_SIZE = 15
 
 
@@ -693,6 +694,7 @@ def build_history_entry(
     max_value: Optional[float] = None,
     benchmark_min_max: Optional[Dict[str, tuple]] = None,
     qualified_benchmarks: Optional[set] = None,
+    scoring_result: Optional[Any] = None,
     scoring_parameters: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """Build models.json history entry from scraped data.
@@ -713,7 +715,7 @@ def build_history_entry(
 
     def entry_to_row(entry: LeaderboardEntry) -> Dict[str, Any]:
         """Convert LeaderboardEntry to models.json row format."""
-        scores = calculate_derived_scores(
+        scores = scoring_result.scores_for(entry) if scoring_result is not None else calculate_derived_scores(
             entry,
             benchmark_headers,
             participation,
@@ -769,7 +771,8 @@ def build_history_entry(
             if key not in row:
                 row[key] = value
 
-        return row
+        from avg_iq_benchmarks import selected_columns
+        return selected_columns(row)
     
     us_rows = [entry_to_row(e) for e in us_entries]
     cn_rows = [entry_to_row(e) for e in cn_entries]
@@ -795,6 +798,8 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
         data['history'] = []
 
     data['history'].insert(0, new_entry)
+    from avg_iq_benchmarks import load_config
+    data.setdefault('metadata', {})['avgIqBenchmarks'] = [b['name'] for b in load_config()['benchmarks']]
 
     # Keep the static team badges in sync with the actual result. These were
     # once hand-written ("OVERALL WINNER" on the USA card) and went stale when
@@ -826,8 +831,7 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
             date_label = ts[:10]
         data["metadata"]["footerText"] = (
             f"Data Audited {date_label} | Source: llm-stats.com | "
-            "IQ = flat average over the qualified benchmark set "
-            "(two-pass scoring, category aggregates excluded)"
+            "IQ = nineteen configured weights; missing results count as zero"
         )
 
     with open(models_path, 'w') as f:
@@ -1294,36 +1298,37 @@ def run_scraper(args):
 
                 combined_entries = us_entries + cn_entries
 
-                # Sparse-benchmark drop, then gap-fill, then scoring. The scoring
-                # itself lives in scripts/scoring.py - one implementation shared
-                # with the history backfill so the two can never disagree.
-                cohort_size = len(combined_entries)
-                benchmark_headers, sparse_benchmarks = drop_sparse_benchmarks(combined_entries, benchmark_headers)
-                if sparse_benchmarks:
-                    sparse_set = set(sparse_benchmarks)
-                    all_headers = [h for h in all_headers if h not in sparse_set]
-
+                # Research and scoring both use the configured nineteen components.
                 # -------------------------------------------------------------
                 # Gap-Filling Pass — runs BEFORE Pass 1 so the scoring sees the
                 # enriched data from the start. See docs/ai_gap_filling.md.
-                # Skipped automatically if --no-gap-fill is set, OPENAI_API_KEY
-                # is missing, or no candidates exist after the §5/§6 filters.
+                # --no-gap-fill disables refresh and AI research. Direct sources
+                # do not require OPENAI_API_KEY; all nineteen components are researched.
                 # -------------------------------------------------------------
                 if not getattr(args, "no_gap_fill", False):
+                    from refresh_benchmark_sources import refresh_sources, persist_ai_findings
+                    refresh_sources(combined_entries, write=not args.dry_run)
+                    from rescore_history import fill_current_entries
+                    fill_current_entries(combined_entries, datetime.now(timezone.utc).isoformat())
                     scrape_run_ts = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
                     try:
                         run_gap_filling_pass(
                             combined_entries,
-                            benchmark_headers,
                             max_calls=getattr(args, "gap_fill_max_calls", 40),
                             scraper_run_ts=scrape_run_ts,
                         )
+                        if not args.dry_run:
+                            persist_ai_findings(combined_entries)
                     except Exception as gap_err:
                         print(f"[gap-fill] pass crashed ({gap_err}); proceeding to Pass 1 unaffected")
                 else:
                     print("\n[gap-fill] disabled by --no-gap-fill")
 
-                scoring = score_cohort(combined_entries, benchmark_headers, drop_sparse=False)
+                from rescore_history import fill_current_entries
+                evidence_headers = fill_current_entries(combined_entries, datetime.now(timezone.utc).isoformat())
+                benchmark_headers += [h for h in evidence_headers if h not in benchmark_headers]
+                all_headers += [h for h in evidence_headers if h not in all_headers]
+                scoring = score_avg_iq_cohort(combined_entries, benchmark_headers)
                 benchmark_headers = scoring.benchmark_headers
                 participation_counts, max_participation = scoring.participation, scoring.max_participation
                 min_avg_iq, max_avg_iq = scoring.min_avg_iq, scoring.max_avg_iq
@@ -1332,10 +1337,8 @@ def run_scraper(args):
                 qualified_benchmarks = scoring.qualified_benchmarks
 
                 # -----------------------------------------------------------------
-                # Pick each country's published top 10 from the pool, ranked by the
-                # final unified score among models meeting minimum coverage. Under
-                # a Pass 1 fallback there is no coverage concept and it is plain
-                # top-N. See cohort_selection.select_team.
+                # Pick each country's published top 10 solely by Unified Score.
+                # Benchmark coverage is descriptive; it never gates selection.
                 # -----------------------------------------------------------------
                 def _final_unified(e: LeaderboardEntry) -> float:
                     return scoring.scores_for(e)["unified"]
@@ -1343,28 +1346,19 @@ def run_scraper(args):
                 def _coverage(e: LeaderboardEntry) -> int:
                     return scoring.coverage(e)[0]
 
-                if qualified_benchmarks:
-                    qualified_set = qualified_benchmarks
-                    min_cov = min_coverage_for(len(qualified_set))
-                    for e in combined_entries:
-                        e.columns["_coverage"] = f"{_coverage(e)}/{len(qualified_set)}"
-                else:
-                    qualified_set, min_cov = set(), 0
+                qualified_set = qualified_benchmarks or set()
+                for e in combined_entries:
+                    e.columns["_coverage"] = f"{_coverage(e)}/{len(qualified_set)}"
+                    e.columns.pop("_provisional", None)
 
-                print(f"\nSelecting {TEAM_SIZE} per country from the pool "
-                      f"(US {len(us_entries)}, CN {len(cn_entries)}); "
-                      f"minimum coverage {min_cov}/{len(qualified_set)}:")
+                print(f"\nSelecting {TEAM_SIZE} per country by Unified Score "
+                      f"(US {len(us_entries)}, CN {len(cn_entries)}):")
                 picked = {}
                 for code, pool in (("US", us_entries), ("CN", cn_entries)):
-                    chosen, provisional = select_team(pool, _final_unified, _coverage, min_cov, TEAM_SIZE)
-                    for e in provisional:
-                        e.columns["_provisional"] = "true"
+                    chosen = select_team(pool, _final_unified, TEAM_SIZE)
                     left_out = [e for e in pool if e not in chosen]
                     picked[code] = chosen
-                    print(f"  {code}: {len(chosen)} chosen, {len(provisional)} provisional "
-                          f"(under coverage, kept so the team is not short), {len(left_out)} left out")
-                    for e in provisional:
-                        print(f"     ~ {e.name} — {_coverage(e)}/{len(qualified_set)} (provisional)")
+                    print(f"  {code}: {len(chosen)} chosen, {len(left_out)} left out")
                     for e in left_out:
                         print(f"     -- {e.name} — {_coverage(e)}/{len(qualified_set)}, unified {_final_unified(e):.1f}")
                 us_entries = picked["US"]
@@ -1396,6 +1390,7 @@ def run_scraper(args):
                     max_value=max_value,
                     benchmark_min_max=benchmark_min_max,
                     qualified_benchmarks=qualified_benchmarks,
+                    scoring_result=scoring,
                 ))
 
                 print(format_table(
@@ -1413,6 +1408,7 @@ def run_scraper(args):
                     max_value=max_value,
                     benchmark_min_max=benchmark_min_max,
                     qualified_benchmarks=qualified_benchmarks,
+                    scoring_result=scoring,
                 ))
 
                 # Metadata stage used to also write stage3_us.csv and stage3_cn.csv,
@@ -1437,6 +1433,7 @@ def run_scraper(args):
                     benchmark_min_max=benchmark_min_max,
                     qualified_benchmarks=qualified_benchmarks,
                     scoring_parameters=scoring.to_snapshot() if stage == "metadata" else None,
+                    scoring_result=scoring if stage == "metadata" else None,
                 )
                 prepend_history(models_path, new_entry)
 

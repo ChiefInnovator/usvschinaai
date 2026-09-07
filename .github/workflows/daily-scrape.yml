@@ -33,10 +33,8 @@ jobs:
           pip install -r scripts/requirements.txt
       
       - name: Check OpenAI billing
-        # Fails in seconds rather than after a 45 minute scrape. Without a
-        # funded key the gap-filling pass aborts and the cohort is scored on
-        # whatever llm-stats happens to publish — which is how models ended up
-        # ranked on 2 of 7 benchmarks while gap-fill had been dead since April.
+        continue-on-error: true
+        # Report AI access problems without blocking API-independent source refresh.
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/check_openai_billing.py
@@ -54,11 +52,13 @@ jobs:
         env:
           # Used by the AI gap-filling pass (scripts/gap_fill_benchmarks.py)
           # to query OpenAI's Responses API with the web_search tool.
-          # If unset, the gap-filling pass is silently skipped — Pass 1 and
-          # Pass 2 still run normally on the un-enriched data.
+          # Direct-source refresh runs even when AI research is unavailable.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python scripts/scrape_models.py
+
+      - name: Rescore retained history from refreshed evidence
+        run: python scripts/rescore_history.py --write
 
       - name: Validate scraped data
         # Fails the run (keeping yesterday's data live) on alias-duplicate
@@ -120,6 +120,7 @@ jobs:
         id: changes
         run: |
           CHANGES=false
+          git diff --quiet data/ || CHANGES=true
           git diff --quiet models.json || CHANGES=true
           git diff --quiet current.json 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q current.json && CHANGES=true
@@ -149,10 +150,11 @@ jobs:
           git add sitemap.xml 2>/dev/null || true
           git add *.html 2>/dev/null || true
           # AI gap-fill cache + audit log are committed so the next run benefits
-          # from prior cached negative responses (no wasted API calls) and the
+          # from prior verified positive responses and the
           # audit history is visible in git log.
           git add data/ai_gap_cache.json 2>/dev/null || true
           git add data/ai_fill_history.jsonl 2>/dev/null || true
+          git add data/historical_benchmark_evidence.json data/historical_benchmark_gaps.json data/benchmark_source_refresh.json
           # Today's carousel (older slides are removed), rotation history,
           # caption cache and the USD ledger.
           git add -A social/ 2>/dev/null || true
