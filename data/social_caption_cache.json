@@ -53,5 +53,23 @@
       "#Qwen38Flash",
       "#AILeaderboard"
     ]
+  },
+  "2026-09-08T03:39:33+00:00|price_vs_power": {
+    "hook": "US leads the scoreboard, but China owns the sharper value plays.",
+    "bullets": [
+      "US holds 6 of the top 10 and leads China 4826.71 to 3024.96.",
+      "Muse Spark 1.3 ranks 1 with 948.2 unified and 237.3 value.",
+      "Qwen3.8 Flash ranks 3 with 783.6 unified and 100.4 value."
+    ],
+    "question": "Would you pick the highest score or the best value?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#Qwen",
+      "#MuseSpark",
+      "#AIEvaluation"
+    ]
   }
 }

@@ -268,6 +268,26 @@
     }
   },
   "DeepSeek-V4-Flash-0731": {
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-08T03:31:38.515613+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports GPQA Diamond at 91% for DeepSeek V4 Flash 0731.",
+      "score": "91.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+    },
+    "HLE": {
+      "benchmark": "HLE",
+      "cached_at": "2026-09-08T03:31:38.515613+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports Humanity's Last Exam at 37% for DeepSeek V4 Flash 0731.",
+      "score": "37.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/articles/deepseek-v4-flash-0731-scores-50-on-the-artificial-analysis-intelligence-index-10-points-above-previous-deepseek-v4-flash"
+    },
     "LiveBench": {
       "benchmark": "LiveBench",
       "cached_at": "2026-09-04T12:04:44.496312+00:00",
@@ -289,6 +309,18 @@
       "score": "75.9%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp"
+    }
+  },
+  "DeepSeek-V4-Pro-0813": {
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-08T03:31:38.515613+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "NVIDIA reports 88.51 on GPQA Diamond for the exact MXFP4 source checkpoint, DeepSeek-V4-Pro-0813, evaluated with SGLang at max reasoning effort.",
+      "score": "88.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-NVFP4"
     }
   },
   "DeepSeek-V4-Pro-Max": {
@@ -484,6 +516,16 @@
       "score": "1604",
       "source_type": "third_party_leaderboard",
       "source_url": "https://arena.ai/leaderboard/code?q=glm"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-08T03:31:38.515613+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports this as GPQA Diamond.",
+      "score": "91.2%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/glm-5-3-flash/"
     }
   },
   "GPT-5 High": {
