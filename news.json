@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-08T03:39:35.063136+00:00",
+  "lastUpdated": "2026-09-09T03:39:46.642433+00:00",
   "items": [
+    {
+      "id": "af0aed950c337dc1",
+      "headline": "The New York Times is grasping at straws",
+      "url": "https://www.theblaze.com/columns/opinion/the-new-york-times-is-grasping-at-straws",
+      "source": "Blaze Media",
+      "country": "Both",
+      "publishedAt": "2026-09-08 15:00:00",
+      "relevanceScore": 0.77
+    },
+    {
+      "id": "c4871734618c97b3",
+      "headline": "Rivian’s Gambit for Full Autonomy",
+      "url": "https://spectrum.ieee.org/rivian-self-driving",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-09-08 13:00:04",
+      "relevanceScore": 0.56
+    },
     {
       "id": "5401e1b7035d3cbe",
       "headline": "Students are quietly replacing Google with AI",
@@ -117,15 +135,6 @@
       "country": "Both",
       "publishedAt": "2026-08-26 13:15:00",
       "relevanceScore": 0.54
-    },
-    {
-      "id": "80a8e31bf116acf3",
-      "headline": "Meta goes on trial as Silicon Valley faces a growing backlash",
-      "url": "https://www.theguardian.com/global/2026/aug/25/meta-trial-silicon-valley",
-      "source": "The Guardian",
-      "country": "US",
-      "publishedAt": "2026-08-25 11:21:56",
-      "relevanceScore": 0.45
     }
   ]
 }

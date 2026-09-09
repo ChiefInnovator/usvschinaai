@@ -929,6 +929,16 @@
       "source_type": "vendor_blog",
       "source_url": "https://zapier.com/fr/benchmarks"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-09T03:32:26.202976+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported as GPQA Diamond; the comparative table identifies the exact Gemini 3.8 Flash model, but states results are maximum at any effort.",
+      "score": "95.3%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/gpt-6-astra/?video=1223245010"
+    },
     "HLE": {
       "benchmark": "HLE",
       "cached_at": "2026-09-03T11:20:32.200252+00:00",

@@ -2,3 +2,4 @@
 {"ts": "2026-09-06T03:38:45.688669+00:00", "model": "gpt-5.6-terra", "format": "new_challenger", "input_tokens": 1057, "output_tokens": 174, "cached_tokens": 0, "usd": 0.004202}
 {"ts": "2026-09-07T03:41:09.914554+00:00", "model": "gpt-5.6-luna", "format": "head_to_head", "input_tokens": 1036, "output_tokens": 210, "cached_tokens": 0, "usd": 0.000459}
 {"ts": "2026-09-08T03:39:45.154250+00:00", "model": "gpt-5.6-luna", "format": "price_vs_power", "input_tokens": 1036, "output_tokens": 206, "cached_tokens": 0, "usd": 0.000454}
+{"ts": "2026-09-09T03:39:55.587302+00:00", "model": "gpt-5.6-luna", "format": "benchmark_day", "input_tokens": 1046, "output_tokens": 207, "cached_tokens": 0, "usd": 0.000458}
