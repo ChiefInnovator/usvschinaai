@@ -11,7 +11,7 @@
                 teams[country] = rows.map(ref => {
                     const model = catalog.models[ref.modelId];
                     const profile = model && model.profiles[ref.profileId];
-                    if (!profile) throw new Error('Missing shared model/profile: ' + ref.modelId);
+                    if (!profile) throw new Error('Missing shared model/profile: modelId=' + ref.modelId + ', profileId=' + ref.profileId);
                     const row = {...profile, ...ref, _provenance: {}};
                     for (const component of catalog.components) {
                         const key = component.column;

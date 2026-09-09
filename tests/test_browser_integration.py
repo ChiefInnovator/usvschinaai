@@ -30,7 +30,15 @@ class BrowserIntegrationTests(unittest.TestCase):
         cls.temp=tempfile.TemporaryDirectory();cls.root=Path(cls.temp.name)
         cls.addClassCleanup(cls.temp.cleanup)
         for name in ('index.html','history.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js'):
-            dest=cls.root/name;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes((ROOT/name).read_bytes())
+            dest=cls.root/name;dest.parent.mkdir(parents=True,exist_ok=True)
+            content=(ROOT/name).read_text()
+            if name.endswith('.html'):
+                # Expose the actual closure-scoped functions only in test fixtures.
+                # Declarations remain intact, so application calls keep their scope.
+                import re
+                content=re.sub(r'((?:async )?function (\w+)\([^()]*\)\s*\{)',
+                    lambda match: f'(window.__contractFunctions ||= {{}})["{match[2]}"] = {match[2]};\n'+match[1],content)
+            dest.write_text(content)
         # Keep the real UI configuration, but use a small deterministic roster.
         base=load_data(ROOT/'current.json');base.pop('schemaVersion',None);base.pop('modelCatalog',None)
         sample=copy.deepcopy(base['history'][0]);sample['teams']={'US':[],'CN':[]}
@@ -149,17 +157,33 @@ class BrowserIntegrationTests(unittest.TestCase):
                 for name,raw in contracts:
                     rules=json.loads(raw)
                     result=self.page.evaluate('''async ({name,rules}) => {
+                        const action=window[name] || window.__contractFunctions[name];
+                        if (typeof action !== 'function') throw new Error('Missing callable: ' + name);
                         const values=rules.map(r=>r==='mapping'?{}:r==='index'?0:r.startsWith('enum:')?r.slice(5).split('|')[0]:'sample');
                         AppContract.check(name,values,rules);
                         let rejected=0;
                         for (let i=0;i<rules.length;i++) {
                             const bad=values.slice();bad[i]=rules[i]==='mapping'?[]:rules[i]==='index'?-1:rules[i]==='?json'?(()=>{}):42;
-                            try { await window[name](...bad); } catch(e) { if(e instanceof TypeError) rejected++; }
+                            try { await action(...bad); } catch(e) { if(e instanceof TypeError && e.message.startsWith(name + ':')) rejected++; }
                         }
-                        try {await window[name](...values, 'unexpected argument');} catch(e) {if(e instanceof TypeError) rejected++;}
+                        try {await action(...values, 'unexpected argument');} catch(e) {if(e instanceof TypeError && e.message.startsWith(name + ':')) rejected++;}
                         return rejected===rules.length+1;
                     }''',dict(name=name,rules=rules))
                     self.assertTrue(result,name)
+
+    def test_json_contract_rejects_nonfinite_and_cyclic_values(self):
+        self.page.goto(self.url+'/index.html');self.ready()
+        result=self.page.evaluate('''() => {
+            const cycle={};cycle.self=cycle;
+            const invalid=[NaN,Infinity,-Infinity,{score:NaN},[Infinity],cycle];
+            for (const value of invalid) {
+                try {AppContract.check('jsonTest',[value],['json']);return false;}
+                catch(error) {if(!(error instanceof TypeError) || !error.message.startsWith('jsonTest:'))return false;}
+            }
+            for(const value of [null,0,84.5,'score',true,{scores:[1,2,null]}]) AppContract.check('jsonTest',[value],['json']);
+            return true;
+        }''')
+        self.assertTrue(result)
 
     def test_archive_index_precondition_rejects_out_of_range_without_changing_state(self):
         self.page.goto(self.url+'/history.html');self.page.wait_for_function('historyData.length === 5')

@@ -1,5 +1,15 @@
 /* Input contracts shared by page actions and the model catalog reader. */
 (function (root) {
+    const isJson = (value, seen = new Set()) => {
+        if (value === null || typeof value === 'string' || typeof value === 'boolean') return true;
+        if (typeof value === 'number') return Number.isFinite(value);
+        if (typeof value !== 'object' || seen.has(value)) return false;
+        if (!Array.isArray(value) && Object.getPrototypeOf(value) !== Object.prototype) return false;
+        seen.add(value);
+        const valid = Object.values(value).every(item => isJson(item, seen));
+        seen.delete(value);
+        return valid;
+    };
     function check(method, args, rules) {
         if (typeof method !== 'string' || !method || !args || !Array.isArray(rules)) {
             throw new TypeError('Invalid precondition declaration');
@@ -14,7 +24,7 @@
             const valid = kind === 'mapping' ? value !== null && typeof value === 'object' && !Array.isArray(value) :
                 kind === 'text' ? typeof value === 'string' :
                 kind === 'index' ? Number.isInteger(value) && value >= 0 :
-                kind === 'json' ? value === null || ['string', 'number', 'boolean', 'object'].includes(typeof value) :
+                kind === 'json' ? isJson(value) :
                 kind.startsWith('enum:') ? kind.slice(5).split('|').includes(value) : false;
             if (!valid) throw new TypeError(method + ': argument ' + (i + 1) + ' must satisfy ' + rule);
         });
