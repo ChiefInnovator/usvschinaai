@@ -5,8 +5,10 @@
 
 Without --write, validates and reports without modifying application data.
 """
+from preconditions import preconditions
 import argparse
 import copy
+from model_store import load_data, load_evidence, save_data
 import json
 from datetime import date, datetime
 from pathlib import Path
@@ -18,13 +20,15 @@ from scoring import (MISSING_VALUE_MARKERS, MIN_COHORT_PARTICIPATION,
                      build_benchmark_participation, score_avg_iq_cohort)
 
 ROOT = Path(__file__).resolve().parents[1]
-EVIDENCE_PATH = ROOT / 'data/historical_benchmark_evidence.json'
+EVIDENCE_PATH = ROOT / 'data/model_catalog.json'
 
 
+@preconditions(snapshot='mapping')
 def rows(snapshot):
     return [(country, row) for country, team in snapshot['teams'].items() for row in team]
 
 
+@preconditions(row='mapping', component='mapping')
 def component_key(row, component):
     aliases = {canonical(a) for a in component['aliases']}
     keys = [k for k in row if canonical(k) in aliases]
@@ -33,6 +37,7 @@ def component_key(row, component):
                 keys[0] if keys else component['aliases'][0].replace(' ', ''))
 
 
+@preconditions(evidence='mapping')
 def validate_evidence(evidence):
     ids = {b['id'] for b in load_config()['benchmarks']}
     seen = set()
@@ -52,12 +57,23 @@ def validate_evidence(evidence):
                 raise ValueError('Historical applicability precedes '+key)
 
 
-def apply_evidence(snapshot, evidence):
+@preconditions(evidence='mapping')
+def index_evidence(evidence):
+    indexed = {}
+    for record in sorted(evidence['results'], key=lambda r: (-r['score'], r['availableFrom'], r['id'])):
+        if not record.get('excludedReason'):
+            indexed.setdefault(record['model'], []).append(record)
+    return indexed
+
+
+@preconditions(snapshot='mapping', evidence='mapping', indexed='?mapping')
+def apply_evidence(snapshot, evidence, *, indexed=None):
     components = {b['id']: b for b in load_config()['benchmarks']}
     added = []
     day = snapshot['timestamp'][:10]
+    indexed = index_evidence(evidence) if indexed is None else indexed
     for _, row in rows(snapshot):
-        for record in sorted(evidence['results'], key=lambda r: (-r['score'], r['availableFrom'], r['id'])):
+        for record in indexed.get(row['model'], ()):
             if record.get('excludedReason') or row['model'] != record['model'] or day < record['availableFrom']:
                 continue
             key = component_key(row, components[record['component']])
@@ -75,10 +91,11 @@ def apply_evidence(snapshot, evidence):
     return added
 
 
+@preconditions(entries='sequence', timestamp='timestamp', evidence='?mapping')
 def fill_current_entries(entries, timestamp, evidence=None):
     """Reuse validated findings for exact models on or after their evidence dates."""
     if evidence is None:
-        evidence = json.loads(EVIDENCE_PATH.read_text())
+        evidence = load_evidence(EVIDENCE_PATH)
     validate_evidence(evidence)
     proxies = [{**entry.columns, 'model': entry.name} for entry in entries]
     snapshot = {'timestamp': timestamp, 'teams': {'cohort': proxies}}
@@ -94,6 +111,7 @@ def fill_current_entries(entries, timestamp, evidence=None):
     return list(dict.fromkeys(new_headers))
 
 
+@preconditions(parameters='mapping', headers='sequence')
 def normalize_parameters(parameters, headers):
     """Daily serialization removes spaces from row keys, but not parameter keys."""
     by_canonical = {canonical(h): h for h in headers}
@@ -108,12 +126,13 @@ def normalize_parameters(parameters, headers):
     return result
 
 
-def rescore_snapshot(snapshot, evidence):
+@preconditions(snapshot='mapping', evidence='mapping', indexed='?mapping')
+def rescore_snapshot(snapshot, evidence, *, indexed=None):
     for _, row in rows(snapshot):
         clean = selected_columns(row)
         row.clear()
         row.update(clean)
-    added = apply_evidence(snapshot, evidence)
+    added = apply_evidence(snapshot, evidence, indexed=indexed)
     entries = [ScoreEntry(row, country) for country, row in rows(snapshot)]
     result = score_avg_iq_cohort(entries, log=lambda *a: None)
     for entry in entries:
@@ -127,6 +146,7 @@ def rescore_snapshot(snapshot, evidence):
     return added
 
 
+@preconditions(history='sequence')
 def audit_gaps(history):
     gaps = {}
     components = load_config()['benchmarks']
@@ -140,6 +160,7 @@ def audit_gaps(history):
     return gaps
 
 
+@preconditions(model='text', component='text', days='set', evidence='mapping')
 def unresolved_record(model, component, days, evidence):
     known = [r['availableFrom'] for r in evidence['results']
              if r['model'] == model and r['component'] == component]
@@ -156,6 +177,7 @@ def unresolved_record(model, component, days, evidence):
             'beforeBenchmarkReleaseDays': before_release, 'beforeAvailableEvidenceDays': before_evidence}
 
 
+@preconditions(data='mapping', evidence='mapping', rebuild='bool')
 def replay(data, evidence, *, rebuild=False):
     validate_evidence(evidence)
     if rebuild:
@@ -167,11 +189,12 @@ def replay(data, evidence, *, rebuild=False):
                 row.update(clean)
     before = audit_gaps(data['history'])
     filled = []
+    indexed = index_evidence(evidence)
     for snapshot in data['history']:
-        filled.extend(rescore_snapshot(snapshot, evidence))
+        filled.extend(rescore_snapshot(snapshot, evidence, indexed=indexed))
     recompute_badges(data)
     data.setdefault('metadata', {})['avgIqBenchmarks'] = [b['name'] for b in load_config()['benchmarks']]
-    data['metadata']['footerText'] = 'Avg IQ: nineteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.'
+    data['metadata']['footerText'] = 'Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.'
     after = audit_gaps(data['history'])
     dates = sorted({s['timestamp'][:10] for s in data['history']})
     return {'firstDate': dates[0], 'lastDate': dates[-1], 'calendarDays': len(dates),
@@ -184,6 +207,7 @@ def replay(data, evidence, *, rebuild=False):
 
 
 
+@preconditions(data='mapping')
 def refresh_images(data):
     """Regenerate existing image exports without editing templates or publishing."""
     from generate_og_image import (load_scores, load_top10_models, load_news_items,
@@ -222,6 +246,7 @@ def refresh_images(data):
     (ROOT / 'data/social_caption_cache.json').write_text('{}\n')
 
 
+@preconditions()
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--write', action='store_true')
@@ -230,14 +255,11 @@ def main():
     args = parser.parse_args()
     if args.refresh_images and not args.write:
         parser.error('--refresh-images requires --write')
-    data = json.loads((ROOT / 'models.json').read_text())
-    evidence = json.loads(EVIDENCE_PATH.read_text())
+    data = load_data(ROOT / 'models.json')
+    evidence = load_evidence(EVIDENCE_PATH)
     report = replay(data, evidence, rebuild=args.rebuild)
     if args.write:
-        (ROOT / 'models.json').write_text(json.dumps(data, indent=2))
-        current = {k: v for k, v in data.items() if k != 'history'}
-        current['history'] = data['history'][:1]
-        (ROOT / 'current.json').write_text(json.dumps(current, indent=2))
+        save_data(data, ROOT / 'models.json')
         # Audit contains missing evidence only, never old calculated scores.
         (ROOT / 'data/historical_benchmark_gaps.json').write_text(json.dumps(report['unresolved'], indent=2)+'\n')
     if args.refresh_images:

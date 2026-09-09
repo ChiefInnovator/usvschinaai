@@ -20,6 +20,7 @@ be inline in run_scraper():
   5. Pass 2: flat average over the qualified set, with its own bounds; falls
      back to Pass 1 if fewer than MIN_QUALIFIED_FLOOR benchmarks qualify
 """
+from preconditions import preconditions
 from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple
 
@@ -46,6 +47,7 @@ BENCHMARK_KNOWN_RANGES: Dict[str, Tuple[float, float]] = {
 }
 
 
+@preconditions(value='json')
 def parse_to_number(value: str) -> float:
     """Convert raw string to number for calculations. Non-numeric → 0."""
     if not value or not isinstance(value, str):
@@ -63,6 +65,7 @@ def parse_to_number(value: str) -> float:
         return 0.0
 
 
+@preconditions(entry='entry')
 def entry_has_pricing(entry: "LeaderboardEntry") -> bool:
     """Whether a model has public pricing (input + output cost > 0).
 
@@ -76,6 +79,7 @@ def entry_has_pricing(entry: "LeaderboardEntry") -> bool:
     return (cost_in + cost_out) > 0
 
 
+@preconditions(benchmark_name='text', entries='sequence')
 def resolve_benchmark_range(
     benchmark_name: str,
     entries: List["LeaderboardEntry"],
@@ -108,6 +112,7 @@ def resolve_benchmark_range(
     return (min(numeric), max(numeric))
 
 
+@preconditions(entry='entry', benchmark_headers='sequence', participation='?mapping', max_participation='?int', min_avg_iq='?number', max_avg_iq='?number', min_value='?number', max_value='?number', benchmark_min_max='?mapping', qualified_benchmarks='?set', benchmark_weights='?mapping', round_results='bool')
 def calculate_derived_scores(
     entry: LeaderboardEntry,
     benchmark_headers: List[str],
@@ -228,6 +233,7 @@ def calculate_derived_scores(
     }
 
 
+@preconditions(entries='sequence', benchmark_headers='sequence')
 def build_benchmark_participation(entries: List[LeaderboardEntry], benchmark_headers: List[str]) -> Tuple[Dict[str, int], int]:
     """Count participation per benchmark and return counts with max participation."""
     counts: Dict[str, int] = {b: 0 for b in benchmark_headers}
@@ -266,6 +272,7 @@ class ScoringResult:
     benchmark_weights: Optional[Dict[str, float]] = None
     value_reference: Optional[Any] = None
 
+    @preconditions(entry='entry', round_results='bool')
     def scores_for(self, entry: Any, *, round_results: bool = True) -> Dict[str, float]:
         return calculate_derived_scores(
             entry, self.benchmark_headers, self.participation, self.max_participation,
@@ -274,6 +281,7 @@ class ScoringResult:
             benchmark_weights=self.benchmark_weights, value_reference=self.value_reference, round_results=round_results,
         )
 
+    @preconditions(entry='entry')
     def coverage(self, entry: Any) -> Tuple[int, int]:
         """(reported, qualified) for this entry; (0, 0) under Pass 1 fallback."""
         if not self.qualified_benchmarks:
@@ -284,6 +292,7 @@ class ScoringResult:
                     else entry.columns.get(b, "")) not in MISSING_VALUE_MARKERS)
         return (n, len(self.qualified_benchmarks))
 
+    @preconditions()
     def to_snapshot(self) -> Dict[str, Any]:
         """The parameters a later re-score needs to reproduce these numbers
         exactly: the qualified set and every normalisation bound.
@@ -305,6 +314,7 @@ class ScoringResult:
         }
 
 
+@preconditions(benchmark_headers='sequence', participation='mapping', max_participation='int', fixed='mapping')
 def _fixed_result(benchmark_headers: List[str], participation: Dict[str, int], max_participation: int,
                   fixed: Dict[str, Any]) -> ScoringResult:
     """A ScoringResult whose qualified set and bounds come from a stored
@@ -320,10 +330,12 @@ def _fixed_result(benchmark_headers: List[str], participation: Dict[str, int], m
                          ranges, qualified, int(fixed.get("qualifiedMinReports", 0)), fixed.get("avgIqWeights"), value_reference)
 
 
+@preconditions(entry='entry', b='text')
 def _is_reported(entry: Any, b: str) -> bool:
     return entry.columns.get(b, "") not in MISSING_VALUE_MARKERS
 
 
+@preconditions(entries='sequence', benchmark_headers='sequence', log='callable', preserve_cells='bool')
 def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log=print, *, preserve_cells=False) -> Tuple[List[str], List[str]]:
     """Remove benchmarks reported by fewer than MIN_COHORT_PARTICIPATION models.
 
@@ -347,6 +359,7 @@ def drop_sparse_benchmarks(entries: List[Any], benchmark_headers: List[str], log
     return list(benchmark_headers), []
 
 
+@preconditions(entries='sequence', benchmark_headers='sequence', drop_sparse='bool', log='callable', fixed='?mapping', benchmark_weights='?mapping', value_reference='?namespace')
 def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_sparse: bool = True,
                  log=print, fixed: Optional[Dict[str, Any]] = None,
                  benchmark_weights: Optional[Dict[str, float]] = None,
@@ -428,8 +441,9 @@ def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_spars
                          miq, maq, mv, mxv, bmm2, qualified, qualified_min, benchmark_weights, value_reference)
 
 
+@preconditions(entries='sequence', benchmark_headers='?sequence', log='callable')
 def score_avg_iq_cohort(entries, benchmark_headers=None, *, log=print):
-    """Score only the nineteen configured benchmarks; derive Value from that IQ."""
+    """Score only the eighteen configured benchmarks; derive Value from that IQ."""
     from avg_iq_benchmarks import load_config, selected_value
     from types import SimpleNamespace
     weights = {b['aliases'][0].replace(' ', ''): b['weight']/100 for b in load_config()['benchmarks']}

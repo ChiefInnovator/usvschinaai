@@ -13,6 +13,12 @@ from avg_iq_benchmarks import load_config, selected_value
 
 
 class SourceRefreshTests(unittest.TestCase):
+    def test_detail_refresh_parses_fetched_html_without_browser(self):
+        html = json.dumps(json.dumps(dict(benchmark_id=1, name='GPQA Diamond', normalized_score=0.8), separators=(',', ':')))
+        with patch.object(refresh, 'fetch', return_value=html):
+            found = refresh.detail_results('Model A', 'https://example.org/model-a')
+        self.assertEqual([(r['component'], r['score']) for r in found], [('gpqa-diamond', 80.0)])
+
     def test_original_toolathlon_not_verified(self):
         def table(score):
             return '<table><tr><th>Model</th></tr><tr><td>Model A-high</td><td>x</td><td>Agent</td><td>2026-08-01</td><td>'+score+'</td></tr></table>'
@@ -54,6 +60,7 @@ class SourceRefreshTests(unittest.TestCase):
                 report=refresh.refresh_sources([entry],write=False)
             self.assertEqual(report['accepted'],1)
             self.assertTrue(report['failures'])
+            self.assertNotIn('vals:aime', [f['source'] for f in report['failures']])
             self.assertEqual(path.read_text(),original)
             self.assertEqual(selected_value(entry.columns,'GPQA Diamond'),'80%')
 

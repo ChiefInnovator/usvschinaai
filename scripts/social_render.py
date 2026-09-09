@@ -9,8 +9,10 @@ filled from the `facts` dict.
   python scripts/social_render.py            # today's plan -> data/social_preview/<format>.png
   python scripts/social_render.py --all      # every format, today's facts, for review
 """
+from preconditions import preconditions
 import argparse
 import html
+from model_store import load_data
 import json
 import sys
 from datetime import datetime
@@ -36,15 +38,18 @@ TEMPLATE_FOR = {
 FLAG = {"US": "🇺🇸", "CN": "🇨🇳"}
 
 
+@preconditions(v='json')
 def e(v: Any) -> str:
     return html.escape("" if v is None else str(v))
 
 
+@preconditions(m='mapping')
 def _price(m: Dict[str, Any]) -> str:
     p = m.get("price_in")
     return "—" if p is None else (f"${p:.2f}" if p >= 0.1 else f"${p:.3f}")
 
 
+@preconditions(facts='mapping')
 def _date_long(facts: Dict[str, Any]) -> str:
     try:
         return datetime.fromisoformat(facts["timestamp"]).strftime("%A, %B %-d, %Y")
@@ -52,6 +57,7 @@ def _date_long(facts: Dict[str, Any]) -> str:
         return facts.get("date", "")
 
 
+@preconditions(facts='mapping')
 def _leader_line(facts: Dict[str, Any]) -> str:
     t = facts["totals"]
     if facts["leader"] == "TIE":
@@ -60,6 +66,7 @@ def _leader_line(facts: Dict[str, Any]) -> str:
     return f"{who} by {facts['margin']:.0f}"
 
 
+@preconditions(fmt='text', palette='text', facts='mapping', charts='?mapping')
 def fill(fmt: str, palette: str, facts: Dict[str, Any], charts: Dict[str, Any] = None) -> str:
     tpl = (TEMPLATES / f"{TEMPLATE_FOR[fmt]}.html").read_text()
     base = (TEMPLATES / "_base.css").read_text()
@@ -154,6 +161,7 @@ def fill(fmt: str, palette: str, facts: Dict[str, Any], charts: Dict[str, Any] =
     return tpl
 
 
+@preconditions(series='sequence', w='int', h='int')
 def _trend_svg(series: List[Dict[str, Any]], w: int = 968, h: int = 760) -> str:
     """Two-series line chart as inline SVG. 2px lines, 8px end markers,
     three recessive gridlines, direct labels at the line ends, ink text."""
@@ -183,6 +191,7 @@ def _trend_svg(series: List[Dict[str, Any]], w: int = 968, h: int = 760) -> str:
     return "".join(out)
 
 
+@preconditions(html_text='text', out='path')
 def render_png(html_text: str, out: Path) -> Path:
     from playwright.sync_api import sync_playwright
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -197,6 +206,7 @@ def render_png(html_text: str, out: Path) -> Path:
     return out
 
 
+@preconditions(plan='mapping', out_dir='path')
 def render_plan(plan: Dict[str, Any], out_dir: Path = PREVIEW_DIR) -> List[Path]:
     """The day's cover slide plus the leaderboard as a second slide."""
     fmt, pal, facts = plan["format"], plan["palette"], plan["facts"]
@@ -207,12 +217,13 @@ def render_plan(plan: Dict[str, Any], out_dir: Path = PREVIEW_DIR) -> List[Path]
     return [render_png(fill(f, p, facts, charts), out_dir / f"{i+1:02d}_{f}_{p}.png") for i, (f, p) in enumerate(slides)]
 
 
+@preconditions()
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="render every format for review")
     ap.add_argument("--out", default=str(PREVIEW_DIR))
     args = ap.parse_args()
-    data = json.load(open(REPO_ROOT / "models.json"))
+    data = load_data(REPO_ROOT / "models.json")
     out = Path(args.out)
     recent_b = [h.get("benchmark") for h in read_history() if h.get("benchmark")]
     if args.all:

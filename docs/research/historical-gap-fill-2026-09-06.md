@@ -2,7 +2,7 @@
 
 Checked all 90 retained models against 94 sources using the existing refresh workflow and all 19 configured benchmarks. The refresh found 765 observations but no new distinct evidence. Additional research inspected eight official publisher model repositories and the dated GPT-5.2 launch tables.
 
-Accepted 261 dated observations covering 19 retained models. Official Hugging Face README revisions are pinned by commit, and their timestamps establish observation availability. Comparison columns retain the publishing vendor as their source; they are not represented as independent benchmark-operator measurements. Findings, configurations and citations are stored in `data/historical_gap_research_findings.json` and replayable evidence in `data/historical_benchmark_evidence.json`.
+Accepted 261 dated observations covering 19 retained models. Official Hugging Face README revisions are pinned by commit, and their timestamps establish observation availability. Comparison columns retain the publishing vendor as their source; they are not represented as independent benchmark-operator measurements. Findings, configurations and citations are stored in `data/historical_gap_research_findings.json` and replayable evidence in `data/model_catalog.json`.
 
 ## Result
 

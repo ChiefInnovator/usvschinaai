@@ -3,7 +3,7 @@
 
 ## ✨ Features
 - **Unified Score (0–1000)**: A comprehensive metric that evaluates AI models based on both capability and value.
-- **Nineteen-Benchmark Scoring**: Nineteen configured Avg IQ benchmark allocations, with no participation filters or multipliers, a fixed 100% denominator, and missing results contributing zero. Avg Value uses the same rebuilt Avg IQ and retained model prices.
+- **Eighteen-Benchmark Scoring**: Eighteen configured Avg IQ benchmark allocations, with no participation filters or multipliers, a fixed 100% denominator, and missing results contributing zero. Avg Value uses the same rebuilt Avg IQ and retained model prices.
 - **Smart Normalization**: Percentage benchmarks (GPQA, MMMU-Pro, etc.) use their raw 0–100 score directly. Non-percentage benchmarks with a known range (CodeArena helper range 1000–2800) use that range. Only unknown-scale benchmarks fall back to cohort min–max.
 - **National Scoreboard**: An engaging scoreboard format to compare the AI prowess of Team USA 🇺🇸 and Team China 🇨🇳.
 - **Auto-Sorted Rankings**: Instantly see AI models ranked by their Unified Scores with a simple descending order display.
@@ -14,19 +14,19 @@
 ## 🧮 Scoring Methodology (at a glance)
 
 ```text
-Avg IQ inputs: nineteen components in data/core_benchmarks.json, totaling 100%
-Only these nineteen benchmark columns remain in current and historical data
+Avg IQ inputs: eighteen components in data/core_benchmarks.json, totaling 100%
+Only these eighteen benchmark columns remain in current and historical data
 AvgIQ = sum(normalized scores × configured weights) / 1.00
-Missing results contribute zero; denominator always includes all 19
+Missing results contribute zero; denominator always includes all 18
 Models are selected by Unified Score only, with no benchmark-count minimum
 Value = AvgIQ ÷ (Input $/M + Output $/M)
 Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
 ```
 
 Rebuild all retained historical cohorts with `.venv/bin/python scripts/rescore_history.py --rebuild --write --refresh-images`.
-This removes old benchmark scores and scoring inputs, repopulates the nineteen components from dated evidence, and recalculates every score.
+This removes old benchmark scores and scoring inputs, repopulates the eighteen components from dated evidence, and recalculates every score.
 
-The fixed benchmark allocations approximate the supplied llm-stats ranking. Each benchmark uses the highest verified score for the exact model across effort levels, with source and historical-date checks preserved.
+Benchmark allocations retain the previous 30/70 Astra/Fable distribution, followed by a transfer of 1.5 percentage points from Terminal-Bench 2.1, MMMU-Pro, BrowseComp, Agents’ Last Exam, MMLU-Pro, and LiveCodeBench v6 to Toolathlon, SWE-bench Verified, IFBench, CharXiv-R, DeepSWE, and OfficeQA Pro. Both the deductions and additions are proportional to the previous weights within each group. The latest adjustment sets SWE-bench Verified to 0.25% and OfficeQA Pro to 0.10%, distributing the freed 0.17786273848129009 percentage points proportionally to the existing weights of GPQA Diamond, ARC-AGI-2, FrontierMath — Tiers 1–3 v2, DeepSWE 1.1, and Humanity’s Last Exam, where both Astra and Fable have scores. The subsequent adjustment sets Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%, BrowseComp to 2%, and Agents’ Last Exam to 1.4%, adding the freed 0.8790340342808083 percentage points to DeepSWE 1.1. Total benchmark weight remains 100%. This weight set applies to all models across history. Benchmark evidence and roster membership remain unchanged.
 
 Full rationale and design decisions: [docs/two_pass_scoring.md](docs/two_pass_scoring.md).
 
@@ -92,3 +92,7 @@ For inquiries, you can reach out to the creator:
 ---
 
 <sub>Powered by [RepoBeacon](https://repobeacon.com)</sub>
+
+Shared model records, dated roster references, and full-history recalculation are documented in [Model storage](docs/model_storage.md).
+
+Run all checks and review the application contracts in [Testing and preconditions](docs/testing.md).

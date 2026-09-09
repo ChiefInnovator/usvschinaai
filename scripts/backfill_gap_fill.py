@@ -25,7 +25,9 @@ Usage:
     python3 scripts/backfill_gap_fill.py --dry-run
     python3 scripts/backfill_gap_fill.py --days 35 --max-calls 60
 """
+from preconditions import preconditions
 import argparse
+from model_store import load_data, save_data
 import json
 import os
 import re
@@ -75,6 +77,7 @@ class HistoryEntry:
     pulls in Playwright).
     """
 
+    @preconditions(row='mapping', columns='mapping')
     def __init__(self, row: Dict[str, Any], columns: Dict[str, Any]):
         self.row = row
         self.name = row.get("model", "")
@@ -83,6 +86,7 @@ class HistoryEntry:
         self.columns = columns
 
 
+@preconditions(rows_keys='set')
 def build_display_names(rows_keys: set) -> Dict[str, str]:
     """Map each space-stripped row key to the header spelling the pass expects.
 
@@ -119,6 +123,7 @@ def build_display_names(rows_keys: set) -> Dict[str, str]:
     return {k: canon_to_original.get(canonicalize_benchmark_name(k), k) for k in rows_keys}
 
 
+@preconditions(snapshot='mapping')
 def snapshot_benchmark_keys(snapshot: Dict[str, Any]) -> List[str]:
     """Row keys in this snapshot that are scoreable benchmark columns."""
     keys: List[str] = []
@@ -135,6 +140,7 @@ def snapshot_benchmark_keys(snapshot: Dict[str, Any]) -> List[str]:
     return keys
 
 
+@preconditions(snapshot='mapping', display='mapping')
 def hydrate(snapshot: Dict[str, Any], display: Dict[str, str]) -> List[HistoryEntry]:
     """Wrap a snapshot's rows as gap-fill entries, keyed by display header.
 
@@ -161,6 +167,7 @@ def hydrate(snapshot: Dict[str, Any], display: Dict[str, str]) -> List[HistoryEn
     return entries
 
 
+@preconditions(entries='sequence')
 def write_back(entries: List[HistoryEntry]) -> int:
     """Copy filled cells and provenance from entry.columns back onto the rows.
 
@@ -182,6 +189,7 @@ def write_back(entries: List[HistoryEntry]) -> int:
     return filled
 
 
+@preconditions(snapshots='sequence', display='mapping', min_confidence='text')
 def apply_cached(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str],
                  min_confidence: str) -> int:
     """Apply only the fills already in the cache — no API key, no calls.
@@ -218,6 +226,7 @@ def apply_cached(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str,
 # Asked-pairs memory
 # ---------------------------------------------------------------------------
 
+@preconditions(path='path')
 def load_asked(path: Path = ASKED_FILE) -> Dict[str, Dict[str, str]]:
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -227,12 +236,14 @@ def load_asked(path: Path = ASKED_FILE) -> Dict[str, Dict[str, str]]:
         return {}
 
 
+@preconditions(asked='mapping', path='path')
 def save_asked(asked: Dict[str, Dict[str, str]], path: Path = ASKED_FILE) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(asked, f, ensure_ascii=False, indent=2, sort_keys=True)
         f.write("\n")
 
 
+@preconditions(asked='mapping', now='datetime')
 def fresh_asked_pairs(asked: Dict[str, Dict[str, str]], now: datetime) -> set:
     """(model, benchmark) pairs asked within ASKED_TTL_DAYS."""
     out = set()
@@ -247,12 +258,14 @@ def fresh_asked_pairs(asked: Dict[str, Dict[str, str]], now: datetime) -> set:
     return out
 
 
+@preconditions(asked='mapping', model='text', benchmarks='sequence', now='datetime')
 def record_asked(asked: Dict[str, Dict[str, str]], model: str, benchmarks: List[str], now: datetime) -> None:
     slot = asked.setdefault(model, {})
     for benchmark in benchmarks:
         slot[benchmark] = now.isoformat()
 
 
+@preconditions(history='sequence', days='int')
 def daily_snapshots(history: List[Dict[str, Any]], days: int) -> List[Tuple[str, Dict[str, Any]]]:
     """Latest snapshot per UTC day within the window, newest day first.
 
@@ -277,6 +290,7 @@ def daily_snapshots(history: List[Dict[str, Any]], days: int) -> List[Tuple[str,
     return sorted(byday.items(), key=lambda kv: kv[0], reverse=True)
 
 
+@preconditions(snapshots='sequence', display='mapping', cache='mapping', asked_pairs='set', now='datetime')
 def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str],
                    cache: Dict[str, Dict[str, Any]], asked_pairs: set, now: datetime) -> Dict[str, Any]:
     """Simulate the pass's budget over the window.
@@ -315,6 +329,7 @@ def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[st
             "per_day": per_day, "to_research": to_research}
 
 
+@preconditions(snapshots='sequence', display='mapping')
 def analyze(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[str, str]) -> None:
     """Dry-run report: candidates, cache coverage and the live-call estimate."""
     now = datetime.now(timezone.utc)
@@ -355,6 +370,7 @@ SCORE_KEYS = ("avgIq", "value", "unified", "coverage")
 
 class ScoreEntry:
     """Row -> the duck type scoring.score_cohort needs (.columns, .name, .country)."""
+    @preconditions(row='mapping', country='text')
     def __init__(self, row: Dict[str, Any], country: str):
         self.row, self.name, self.country, self.url = row, row.get("model", ""), country, row.get("link", "")
         self.columns: Dict[str, Any] = {k: v for k, v in row.items() if isinstance(v, str)}
@@ -362,6 +378,7 @@ class ScoreEntry:
         self.columns["Released"] = row.get("created", "")
 
 
+@preconditions(entries='sequence')
 def scoring_headers(entries: List["ScoreEntry"]) -> List[str]:
     """Benchmark columns present in the snapshot, by the validator's definition."""
     keys = set()
@@ -374,6 +391,7 @@ def scoring_headers(entries: List["ScoreEntry"]) -> List[str]:
 _COVERAGE = re.compile(r"^\d+/[1-9]\d*$")
 
 
+@preconditions(snapshot='mapping')
 def pool_scored_without_parameters(snapshot: Dict[str, Any]) -> bool:
     """True for a snapshot the daily pool scorer produced (rows carry a
     coverage 'k/q') before it stored its scoring parameters, and that the
@@ -390,6 +408,7 @@ def pool_scored_without_parameters(snapshot: Dict[str, Any]) -> bool:
             and not any("_prior" in r for r in rows))
 
 
+@preconditions(snapshot='mapping')
 def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
     """Re-score one snapshot in place. Returns how many rows changed.
 
@@ -440,6 +459,7 @@ def rescore_snapshot(snapshot: Dict[str, Any]) -> int:
     return changed
 
 
+@preconditions(snapshots='sequence')
 def rescore_window(snapshots: List[Tuple[str, Dict[str, Any]]]) -> int:
     total = 0
     for day, snap in snapshots:
@@ -453,6 +473,7 @@ def rescore_window(snapshots: List[Tuple[str, Dict[str, Any]]]) -> int:
     return total
 
 
+@preconditions(data='mapping')
 def recompute_badges(data: Dict[str, Any]) -> None:
     """Same aggregation as prepend_history: top-10 unified totals decide the badges."""
     history = data.get("history") or []
@@ -471,23 +492,17 @@ def recompute_badges(data: Dict[str, Any]) -> None:
             teams["china"]["badge"] = "OVERALL WINNER" if cn > us else "RUNNER UP"
 
 
+@preconditions(data='mapping', models_path='path')
 def save(data: Dict[str, Any], models_path: Path) -> None:
     """Write models.json, and re-emit current.json from its newest entry.
 
     Mirrors prepend_history's dual write so index.html (which reads the small
     current.json) does not drift from the archive it was derived from.
     """
-    with open(models_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
-    print(f"[backfill] wrote {models_path}")
-    if models_path == MODELS_JSON:
-        current = {k: v for k, v in data.items() if k != "history"}
-        current["history"] = data["history"][:1]
-        with open(CURRENT_JSON, "w", encoding="utf-8") as f:
-            json.dump(current, f, indent=2)
-        print(f"[backfill] wrote {CURRENT_JSON}")
+    save_data(data, models_path)
 
 
+@preconditions()
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -516,8 +531,7 @@ def main() -> int:
     # walks its fallback chain if the account cannot call this one.
     os.environ["AI_GAP_FILL_MODEL"] = args.model
 
-    with open(args.models_json, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_data(args.models_json)
     history = data.get("history") or []
     if any((snap.get("scoring") or {}).get("version", 0) >= 3 for snap in history) and not args.dry_run:
         print("Use scripts/rescore_history.py --write for revised history. "

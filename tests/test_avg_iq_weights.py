@@ -17,12 +17,11 @@ class WeightedInputsTests(unittest.TestCase):
         self.assertEqual(selected_weights(['HLE (no tools, text only)', 'HLE with tools', 'SWE-bench Pro', 'SWE-bench Lite']), {})
         self.assertEqual(selected_value({'SWE-BenchVerified': '80%'}, 'SWE-bench Verified'), '80%')
         weights = selected_weights(['Humanity’s Last Exam', 'SWE-bench Verified', 'DeepSWE'])
-        self.assertEqual(weights['Humanity’s Last Exam'], weights['DeepSWE'])
-        self.assertEqual(weights['SWE-bench Verified'], weights['DeepSWE'])
         model = E('M', 'US', **{'HLE': '40%', 'SWE-benchVerified': '80%'})
         result = score_avg_iq_cohort([model], log=lambda *a: None)
-        self.assertEqual(result.coverage(model), (2, 19))
-        self.assertEqual(result.scores_for(model)['avgIq'], round(120 * weights['DeepSWE'], 2))
+        self.assertEqual(result.coverage(model), (2, 18))
+        self.assertEqual(result.scores_for(model)['avgIq'],
+                         round(40 * weights['Humanity’s Last Exam'] + 80 * weights['SWE-bench Verified'], 2))
 
     def entries(self):
         return [E(str(i), 'US', Toolathlon=f'{90-i}%', **{
@@ -30,32 +29,29 @@ class WeightedInputsTests(unittest.TestCase):
 
     def test_configuration_and_exact_versions(self):
         b = load_config()['benchmarks']
-        self.assertEqual(len(b), 19)
+        self.assertEqual(len(b), 18)
         self.assertAlmostEqual(sum(x['weight'] for x in b), 100)
-        self.assertTrue(all(x['weight'] > 0 for x in b))
+        self.assertTrue(all(x['weight'] >= 0 for x in b))
         self.assertEqual(selected_weights(['GPQA Extended', 'DeepSWE 1.0', 'Terminal-Bench2.0', 'FrontierMath', 'ARC-AGI', 'CharXiv']), {})
         self.assertEqual(selected_weights(['DeepSWE1.1']), {'DeepSWE1.1': next(b['weight']/100 for b in load_config()['benchmarks'] if b['id']=='deepswe-1.1')})
 
-    def test_deepswe_versions_have_equal_allocations_and_independent_scores(self):
+    def test_deepswe_versions_have_independent_weights_and_scores(self):
         from avg_iq_benchmarks import selected_value
         weights=selected_weights(['DeepSWE','DeepSWE1.1'])
-        self.assertEqual(weights['DeepSWE'],weights['DeepSWE1.1'])
         self.assertEqual(selected_value({'DeepSWE1.1':'90%'},'DeepSWE'),'')
         self.assertEqual(selected_value({'DeepSWE':'80%'},'DeepSWE1.1'),'')
         model=E('M','US',**{'DeepSWE':'80%','DeepSWE1.1':'90%'})
         scored=score_avg_iq_cohort([model],log=lambda *a:None)
-        self.assertEqual(scored.scores_for(model)['avgIq'],round(170*weights['DeepSWE'],2))
-        self.assertEqual(scored.coverage(model),(2,19))
+        self.assertEqual(scored.scores_for(model)['avgIq'],round(80*weights['DeepSWE']+90*weights['DeepSWE1.1'],2))
+        self.assertEqual(scored.coverage(model),(2,18))
 
     def test_livecodebench_v6_allocation_and_version_boundary(self):
         from avg_iq_benchmarks import selected_value
         weights=selected_weights(['LiveCodeBench v6','DeepSWE','DeepSWE1.1'])
-        self.assertEqual(weights['LiveCodeBench v6'],weights['DeepSWE'])
-        self.assertEqual(weights['LiveCodeBench v6'],weights['DeepSWE1.1'])
         self.assertEqual(selected_value({'LiveCodeBench':'99%','LiveCodeBench v5':'98%'},'LiveCodeBench v6'),'')
         model=E('M','CN',**{'LiveCodeBenchv6':'80%'})
         result=score_avg_iq_cohort([model],log=lambda *a:None)
-        self.assertEqual(result.coverage(model),(1,19))
+        self.assertEqual(result.coverage(model),(1,18))
         self.assertEqual(result.scores_for(model)['avgIq'],round(80*weights['LiveCodeBench v6'],2))
 
     def test_new_benchmarks_and_gpqa_subsets_score_separately(self):
@@ -64,9 +60,10 @@ class WeightedInputsTests(unittest.TestCase):
         self.assertEqual(selected_value({'GPQA Diamond':'90%'},'GPQA'),'')
         model=E('M','US',**{'GPQA':'80%','GPQADiamond':'90%','MMLU-Pro':'70%','AIME2025':'60%'})
         result=score_avg_iq_cohort([model],log=lambda *a:None)
-        self.assertEqual(result.coverage(model),(4,19))
+        self.assertEqual(result.coverage(model),(3,18))
         weights=selected_weights(['GPQA','GPQA Diamond','MMLU-Pro','AIME 2025'])
-        expected=80*weights['GPQA']+90*weights['GPQA Diamond']+70*weights['MMLU-Pro']+60*weights['AIME 2025']
+        self.assertNotIn('AIME 2025', weights)
+        expected=80*weights['GPQA']+90*weights['GPQA Diamond']+70*weights['MMLU-Pro']
         self.assertEqual(result.scores_for(model)['avgIq'],round(expected,2))
 
     def test_fixed_denominator_drives_value_and_formula(self):
@@ -93,7 +90,7 @@ class WeightedInputsTests(unittest.TestCase):
         result = score_avg_iq_cohort(entries, ['Toolathlon','DeepSWE1.1','BrowseComp','IFBench'], log=lambda *a: None)
         self.assertEqual(result.scores_for(entries[0])['avgIq'], round(90*selected_weights(['Toolathlon'])['Toolathlon']+70*selected_weights(['BrowseComp'])['BrowseComp']+95*selected_weights(['IFBench'])['IFBench'],2))
         self.assertIn('IFBench', result.benchmark_headers)
-        self.assertEqual(len(result.qualified_benchmarks),19)
+        self.assertEqual(len(result.qualified_benchmarks),18)
         self.assertEqual(result.qualified_min_reports,0)
         self.assertEqual([e.columns for e in entries], before)
 
@@ -102,7 +99,7 @@ class WeightedInputsTests(unittest.TestCase):
         result=score_avg_iq_cohort(entries,['BrowseComp'],log=lambda *a: None)
         self.assertEqual(result.scores_for(entries[0])['avgIq'],round(91.5*selected_weights(['BrowseComp'])['BrowseComp'],2))
         self.assertEqual(result.scores_for(entries[1])['avgIq'],0)
-        self.assertEqual(len(result.benchmark_headers),19)
+        self.assertEqual(len(result.benchmark_headers),18)
 
     def test_muse_example_keeps_all_twelve_allocations_in_denominator(self):
         e=E('Muse Spark 1.3','US', **{'DeepSWE1.1':'75.4%', 'Terminal-Bench2.1':'88.8%'})

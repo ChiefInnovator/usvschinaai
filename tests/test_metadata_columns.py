@@ -1,90 +1,51 @@
-#!/usr/bin/env python3
-"""The scraper and the validator must agree on what is not a benchmark.
-
-They kept separate lists and drifted: validate_models.META_KEYS excluded
-`LLM Stats`, `Latency` and `CodeArena`, but the scraper's metadata_columns did
-not, so all three were scored as benchmarks. `LLM Stats` is llm-stats' own
-composite of the benchmarks, so it counted every benchmark twice, and `Latency`
-is in seconds where lower is better — normalised as a benchmark it rewarded the
-slowest model in the cohort.
-"""
-import re
+"""Import only configured benchmarks; never discover new scoring inputs implicitly."""
+import json
 import sys
 import unittest
 from pathlib import Path
-
-REPO_ROOT = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(REPO_ROOT / "scripts"))
-
-from validate_models import META_KEYS
-
-
-def scraper_metadata_columns() -> set:
-    """Parse metadata_columns out of scrape_country_leaderboard.
-
-    Read from source rather than imported because it is a local inside the
-    scrape function, and importing the module needs Playwright.
-    """
-    src = (REPO_ROOT / "scripts" / "scrape_models.py").read_text()
-    block = re.search(r"metadata_columns = \{(.*?)\n    \}", src, re.S).group(1)
-    return set(re.findall(r'"([^"]+)"', block))
-
-
-# Columns that are not benchmark scores and must never reach the flat average.
-# Both spellings of every multi-word column. The leaderboard table header is
-# spaced ("Code Arena") while the models.json row key is not ("CodeArena"), and
-# metadata_columns is matched against the *table header* — excluding only the
-# unspaced form let Code Arena into the scored set.
-NON_BENCHMARKS = [
-    "LLM Stats", "LLMStats",   # llm-stats' own composite — circular
-    "Latency",                 # seconds, lower is better
-    "Code Arena", "CodeArena", # Elo, different scale
-    "Speed", "Multimodal", "Released", "License", "Context",
-]
+from unittest.mock import MagicMock, patch
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
+with patch('dotenv.load_dotenv'):
+    from scrape_models import extract_detail_benchmarks, scrape_country_leaderboard
+from avg_iq_benchmarks import load_config
 
 
 class MetadataColumnTests(unittest.TestCase):
-    def test_scraper_excludes_every_non_benchmark(self):
-        cols = scraper_metadata_columns()
-        missing = [c for c in NON_BENCHMARKS if c not in cols]
-        self.assertEqual(
-            missing, [],
-            f"scraper would score these as benchmarks: {missing}",
-        )
+    def test_detail_import_keeps_every_supported_benchmark_and_drops_others(self):
+        names = [b['aliases'][0] for b in load_config()['benchmarks']]
+        extras = ['Obsolete Benchmark', 'SimpleVQA', 'LLM Stats', 'Code Arena']
+        payload = ''.join(json.dumps(json.dumps(dict(benchmark_id=i, name=name,
+            normalized_score=0.75), separators=(',', ':'))) for i, name in enumerate(names + extras))
+        page = MagicMock()
+        page.content.return_value = payload
+        self.assertEqual(extract_detail_benchmarks(page), {name: '75.0%' for name in names})
 
-    def test_latency_is_excluded(self):
-        """Regression: normalised higher-is-better, it rewarded slow models."""
-        self.assertIn("Latency", scraper_metadata_columns())
-
-    def test_multi_word_columns_excluded_in_both_spellings(self):
-        """The table header is spaced; the row key is not. Both must be listed."""
-        cols = scraper_metadata_columns()
-        for spaced, tight in (("Code Arena", "CodeArena"), ("LLM Stats", "LLMStats")):
-            self.assertIn(spaced, cols, f"{spaced!r} (table header form) not excluded")
-            self.assertIn(tight, cols, f"{tight!r} (row key form) not excluded")
-
-    def test_llmstats_is_excluded(self):
-        """Regression: it is the composite OF the benchmarks — circular."""
-        cols = scraper_metadata_columns()
-        self.assertTrue("LLM Stats" in cols and "LLMStats" in cols)
-
-    def test_scraper_and_validator_agree(self):
-        """The drift that let all three through in the first place."""
-        cols = scraper_metadata_columns()
-        collapsed = {c.replace(" ", "") for c in cols}
-        drifted = [
-            k for k in META_KEYS
-            # Row-level fields the scraper generates itself; never table headers.
-            if k not in ("model", "organization", "link", "origin", "description",
-                         "created", "avgIq", "value", "unified", "coverage", "provisional",
-                         "_provenance", "_scoring")
-            and k.replace(" ", "") not in collapsed
-        ]
-        self.assertEqual(
-            drifted, [],
-            f"validator treats these as metadata but the scraper scores them: {drifted}",
-        )
-
-
-if __name__ == "__main__":
-    unittest.main(verbosity=2)
+    def test_table_import_drops_unsupported_columns_without_shifting_cells(self):
+        names = [b['aliases'][0] for b in load_config()['benchmarks']]
+        headers = ['Model', 'Obsolete Benchmark', 'Released', 'Input $/M',
+                   'LLM Stats', 'Latency', 'Code Arena'] + names
+        values = ['Test Model', '99%', '2026-01-01', '$1', '90', '3', '1500'] + ['75%'] * len(names)
+        page, row, link = MagicMock(), MagicMock(), MagicMock()
+        link.inner_text.return_value = 'Test Model'
+        link.get_attribute.return_value = '/models/test'
+        row.query_selector.return_value = link
+        cells = []
+        for value in values:
+            cell = MagicMock(); cell.inner_text.return_value = value; cells.append(cell)
+        row.query_selector_all.return_value = cells
+        ths = []
+        for name in headers:
+            th = MagicMock(); th.inner_text.return_value = name; ths.append(th)
+        page.query_selector_all.side_effect = lambda selector: ths if selector == 'thead th' else [row]
+        with patch('scrape_models.time.sleep'):
+            entries, imported_headers, benchmarks = scrape_country_leaderboard(page, 'United States', 'US', max_models=1)
+        self.assertEqual(benchmarks, names)
+        self.assertEqual(len(entries), 1)
+        for excluded in ('Obsolete Benchmark', 'LLM Stats', 'Code Arena'):
+            self.assertNotIn(excluded, imported_headers)
+            self.assertNotIn(excluded, entries[0].columns)
+        self.assertEqual(entries[0].columns['Released'], '2026-01-01')
+        self.assertEqual(entries[0].columns['Input $/M'], '$1')
+        self.assertEqual(entries[0].columns['Latency'], '3')
+        for name in names:
+            self.assertEqual(entries[0].columns[name], '75%')

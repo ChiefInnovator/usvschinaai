@@ -16,6 +16,7 @@ they need different fixes:
 
 Exit 0 = usable. Exit 1 = do not run.
 """
+from preconditions import preconditions
 import argparse
 import json
 import os
@@ -27,6 +28,7 @@ RESPONSES_URL = "https://api.openai.com/v1/responses"
 DEFAULT_MODEL = "gpt-5.6-terra"
 
 
+@preconditions(api_key='text', model='text')
 def check(api_key: str, model: str) -> tuple[bool, str]:
     """Smallest possible billable call — enough to prove quota exists."""
     body = json.dumps({"model": model, "input": "ping", "max_output_tokens": 16}).encode()
@@ -56,6 +58,7 @@ def check(api_key: str, model: str) -> tuple[bool, str]:
         return False, f"Could not reach OpenAI: {e}"
 
 
+@preconditions()
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--model", default=os.environ.get("AI_GAP_FILL_MODEL", DEFAULT_MODEL))

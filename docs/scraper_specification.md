@@ -70,7 +70,6 @@ The scraper operates in three distinct stages, each building upon the previous:
   "avgIq": number,
   "value": number,
   "unified": number,
-  "AIME 2025": "string (raw score)",
   "HMMT 2025": "string (raw score)",
   "GPQA Diamond": "string (raw score)",
   "BrowseComp": "string (raw score)",
@@ -97,7 +96,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 
 **Note**: All benchmark columns are auto-detected; the concrete set may change based on llm-stats table updates.
 
-## 5. Derived Score Calculations (Current — nineteen benchmarks)
+## 5. Derived Score Calculations (Current — eighteen benchmarks)
 
 All derived scores are computed from raw strings at display/persist time. Scoring
 runs in two passes so that models aren't penalised simply for skipping benchmarks
@@ -129,12 +128,12 @@ scoring.
 
 ### Selected benchmark storage
 
-Only the nineteen configured benchmark columns are persisted. Original sparse
+Only the eighteen configured benchmark columns are persisted. Original sparse
 benchmark filtering is not used for either Avg IQ, Value or gap research.
 
 ### AI gap-filling pass
 
-Before scoring, `run_gap_filling_pass()` researches every missing component from the nineteen benchmarks in `data/core_benchmarks.json` for every retained model. It has no participation thresholds, qualification tiers, country/vendor filters or model coverage minimum. All gaps for a model are batched together in incoming model order. Existing configured aliases count as reported; sibling versions do not substitute for a requested result or prevent research.
+Before scoring, `run_gap_filling_pass()` researches every missing component from the eighteen benchmarks in `data/core_benchmarks.json` for every retained model. It has no participation thresholds, qualification tiers, country/vendor filters or model coverage minimum. All gaps for a model are batched together in incoming model order. Existing configured aliases count as reported; sibling versions do not substitute for a requested result or prevent research.
 
 The pass requires `OPENAI_API_KEY`, can be disabled with `--no-gap-fill`, and uses `--gap-fill-max-calls N` (default 40) as an API-call budget. Exact benchmark/model/protocol matching and source validation remain required. See [ai_gap_filling.md](ai_gap_filling.md) for caching, provenance and research behavior.
 
@@ -146,16 +145,16 @@ The gap-filling pass can only enrich models and benchmark columns that llm-stats
 
 The authoritative methodology is [two_pass_scoring.md](two_pass_scoring.md).
 `scripts/scoring.py` implements both paths; `data/core_benchmarks.json` supplies
-the nineteen Avg IQ components and allocations totaling 100%.
+the eighteen Avg IQ components and allocations totaling 100%.
 
-Avg IQ includes all nineteen components at their configured weights. No
+Avg IQ includes all eighteen components at their configured weights. No
 participation filter, half-cohort gate, participation multiplier, or fallback
 can remove or downweight one of these components. Normalization still uses
 known ranges, then percentage detection, then cohort ranges. Avg IQ divides
 by a fixed 1.00 (100%); missing results contribute zero. Value retains its
 original participation rules and reported-only denominator.
 
-Avg Value uses the same nineteen-benchmark Avg IQ divided by total input and output
+Avg Value uses the same eighteen-benchmark Avg IQ divided by total input and output
 price. Saved scoring version 4 contains only new weights, ranges and bounds,
 without legacy Value inputs. Historical rebuilding removes old benchmark scores
 and regenerates scores from dated evidence while retaining model cohorts.
@@ -289,7 +288,7 @@ All open questions have been resolved:
 | Benchmark handling | Auto-detected, per-benchmark range resolution (known → percentage → cohort fallback), category aggregates excluded, sparse benchmarks excluded from scoring at < 4 reporting models, with raw data retained. |
 | Cron schedule | Daily via `.github/workflows/daily-scrape.yml`. |
 | Failure notifications | Silent — errors logged to Actions output only, no Slack/email/GitHub alerts. |
-| Two-pass scoring | Implemented over the whole scoring cohort with the configured nineteen weights for Avg IQ and Value. See [two_pass_scoring.md](two_pass_scoring.md). |
+| Two-pass scoring | Implemented over the whole scoring cohort with the configured eighteen weights for Avg IQ and Value. See [two_pass_scoring.md](two_pass_scoring.md). |
 | AI gap-filling | Implemented via OpenAI Responses API + `web_search` tool. See [ai_gap_filling.md](ai_gap_filling.md). |
 
 ---
@@ -313,3 +312,5 @@ accepted evidence is retained with dates and configuration, then the daily
 workflow rescores historical snapshots before generating the existing visuals.
 See [AI gap filling](ai_gap_filling.md#routine-research-workflow) for source
 coverage, failure handling and the limits of automated research.
+
+Shared model records, dated roster references, and full-history recalculation are documented in [Model storage](model_storage.md).

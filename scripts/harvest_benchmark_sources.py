@@ -15,9 +15,11 @@ For each exact model and selected benchmark, use the highest verified score
 across reasoning-effort settings. Different components may use different effort
 levels. Preserve release identity and reject mixed-model fallback configurations.
 """
+from preconditions import preconditions
 import argparse
 import csv
 import io
+from model_store import load_data
 import json
 import re
 import sys
@@ -53,10 +55,12 @@ MAX_FINGERPRINT_DELTA = 1.5
 EFFORT_TOKENS = ('minimal', 'low', 'medium', 'xhigh', 'high', 'max')
 
 
+@preconditions(name='text')
 def squash(name):
     return ''.join(c for c in name.lower() if c.isalnum())
 
 
+@preconditions(name='text')
 def strip_effort(name):
     """Strip only recognized effort settings, preserving release/variant identity."""
     qualifier = re.search(r'\s*\(([^)]*)\)\s*$', name)
@@ -67,6 +71,7 @@ def strip_effort(name):
     return re.sub(r'_(?:minimal|low|medium|high|xhigh|max)$', '', name)
 
 
+@preconditions(label='text')
 def effort_of(label):
     """The reasoning-effort token a source encodes in its variant label."""
     text = label.lower()
@@ -75,6 +80,7 @@ def effort_of(label):
     return next((token for token in EFFORT_TOKENS if token in text), None)
 
 
+@preconditions(url='text', binary='bool')
 def fetch(url, binary=False):
     request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
     with urllib.request.urlopen(request, timeout=120) as response:
@@ -82,9 +88,10 @@ def fetch(url, binary=False):
     return payload if binary else payload.decode('utf-8', 'replace')
 
 
+@preconditions()
 def observed_values():
     """Benchmark values already recorded per model, keyed by canonical name."""
-    data = json.loads((ROOT / 'models.json').read_text())
+    data = load_data(ROOT / 'models.json')
     wanted = {canonical(name): field for name, field in FINGERPRINT_COLUMNS.items()}
     observed = {}
     for snapshot in data['history']:
@@ -102,6 +109,7 @@ def observed_values():
     return observed
 
 
+@preconditions(html='text')
 def load_aa(html):
     """Pull every model record out of the Next.js streamed payload."""
     chunks = re.findall(r'self\.__next_f\.push\(\[1,"(.*?)"\]\)', html, re.S)
@@ -126,6 +134,7 @@ def load_aa(html):
     return {record['name']: record for record in models}
 
 
+@preconditions(names='iterable', our_models='sequence')
 def group_by_model(names, our_models):
     """Map each of our model names to the source's variant labels for it."""
     groups = {}
@@ -139,6 +148,7 @@ def group_by_model(names, our_models):
     return resolved
 
 
+@preconditions(html='text', our_models='sequence', observed='mapping')
 def harvest_aa(html, our_models, observed):
     records = load_aa(html)
     findings, skipped, efforts = [], [], {}
@@ -163,6 +173,7 @@ def harvest_aa(html, our_models, observed):
     return findings, skipped, efforts
 
 
+@preconditions(tables='mapping', our_models='sequence', observed='mapping', efforts='?mapping')
 def harvest_epoch(tables, our_models, observed, efforts=None):
     findings, skipped = [], []
     for filename, (component, score_column, date_column) in EPOCH_TABLES.items():
@@ -199,6 +210,7 @@ def harvest_epoch(tables, our_models, observed, efforts=None):
     return findings, skipped
 
 
+@preconditions()
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--out', default='data/harvested_findings.json')

@@ -9,6 +9,7 @@ look up benchmark scores from public sources, validates the response against a
 strict JSON schema, and writes the result back to entry.columns plus an audit
 log line.
 """
+from preconditions import preconditions
 import json
 import os
 import re
@@ -103,6 +104,7 @@ class GapCandidate:
 # -----------------------------------------------------------------------------
 
 
+@preconditions()
 def resolve_openai_key() -> Optional[str]:
     """Read OPENAI_API_KEY from the environment.
 
@@ -114,6 +116,7 @@ def resolve_openai_key() -> Optional[str]:
     return key if key else None
 
 
+@preconditions()
 def load_cache() -> Dict[str, Dict[str, Any]]:
     if not CACHE_FILE.exists():
         return {}
@@ -125,18 +128,21 @@ def load_cache() -> Dict[str, Dict[str, Any]]:
         return {}
 
 
+@preconditions(cache='mapping')
 def save_cache(cache: Dict[str, Dict[str, Any]]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+@preconditions(entry='mapping')
 def append_audit_entry(entry: Dict[str, Any]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
     with open(AUDIT_FILE, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
+@preconditions(entry='mapping', now='datetime')
 def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     """Whether a cached entry is still within its TTL.
 
@@ -158,6 +164,7 @@ def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     return (now - cached_at) < timedelta(days=POSITIVE_CACHE_TTL_DAYS)
 
 
+@preconditions(combined_entries='sequence')
 def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
     """Research every missing configured Avg IQ component for every retained model.
 
@@ -177,6 +184,7 @@ def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
     ]
 
 
+@preconditions(api_key='text', chain='?sequence')
 def discover_available_model(api_key: str, chain: Optional[List[str]] = None) -> Optional[str]:
     """Walk the model chain and return the first one the account can call.
 
@@ -287,6 +295,7 @@ _SYSTEM_PROMPT = (
 )
 
 
+@preconditions(model_name='text', model_country='text', model_url='text', organization='text', benchmarks='sequence')
 def build_prompt_batch(
     model_name: str,
     model_country: str,
@@ -344,6 +353,7 @@ _RESULT_REQUIRED = [
 ]
 
 
+@preconditions(system='text', user='text', model='text', api_key='text', max_output_tokens='positive_int', max_retries='positive_int')
 def query_openai_responses(
     system: str,
     user: str,
@@ -460,6 +470,7 @@ def query_openai_responses(
     return None
 
 
+@preconditions(raw='mapping')
 def extract_json_from_response(raw: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """Pull the strict JSON object out of an OpenAI Responses API result.
 
@@ -522,6 +533,7 @@ def extract_json_from_response(raw: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 _URL_IN_TEXT = re.compile(r"https?://[^\s\)\]]+")
 
 
+@preconditions()
 def _salvage_url_from_notes(notes: Any) -> Optional[str]:
     if not isinstance(notes, str) or not notes:
         return None
@@ -529,6 +541,7 @@ def _salvage_url_from_notes(notes: Any) -> Optional[str]:
     return match.group(0) if match else None
 
 
+@preconditions(entry='mapping', benchmark='text')
 def _validate_result_entry(entry: Dict[str, Any], benchmark: str) -> Optional[Dict[str, Any]]:
     """Validate a single result-object entry from the batched `results` array.
 
@@ -607,6 +620,7 @@ def _validate_result_entry(entry: Dict[str, Any], benchmark: str) -> Optional[Di
     return entry
 
 
+@preconditions(parsed='mapping', expected_benchmarks='sequence')
 def validate_batch_response(
     parsed: Dict[str, Any],
     expected_benchmarks: List[str],
@@ -652,6 +666,7 @@ def validate_batch_response(
 # -----------------------------------------------------------------------------
 
 
+@preconditions(score='json')
 def _format_score(score: Any) -> str:
     """Coerce the LLM-returned score into the same string format used in entry.columns."""
     if isinstance(score, str):
@@ -663,6 +678,7 @@ def _format_score(score: Any) -> str:
     return str(score)
 
 
+@preconditions(combined_entries='sequence', candidate='candidate', validated='mapping', llm_model='text')
 def _apply_fill(
     combined_entries: List[Any],
     candidate: GapCandidate,
@@ -696,6 +712,7 @@ def _apply_fill(
     return False
 
 
+@preconditions(candidates='sequence')
 def _group_by_model(
     candidates: List[GapCandidate],
 ) -> List[Tuple[GapCandidate, List[GapCandidate]]]:
@@ -706,6 +723,7 @@ def _group_by_model(
     return [(cands[0], cands) for cands in groups.values()]
 
 
+@preconditions(combined_entries='sequence', max_calls='nonnegative_int', min_confidence='enum:high|medium|low', scraper_run_ts='text', skip_pairs='?set', on_batch='?callable')
 def run_gap_filling_pass(
     combined_entries: List[Any],
     *,
@@ -751,7 +769,7 @@ def run_gap_filling_pass(
     print(f"[gap-fill] using model: {model}")
 
     candidates = build_candidates(combined_entries)
-    print(f"[gap-fill] {len(candidates)} missing results across the nineteen configured Avg IQ benchmarks")
+    print(f"[gap-fill] {len(candidates)} missing results across the eighteen configured Avg IQ benchmarks")
     if skip_pairs:
         before = len(candidates)
         candidates = [c for c in candidates if (c.model_name, c.benchmark) not in skip_pairs]

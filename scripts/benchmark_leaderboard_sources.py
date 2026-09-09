@@ -1,4 +1,5 @@
 """Exact-version leaderboard adapters for the selected benchmark audit/refresh."""
+from preconditions import preconditions
 import json
 import math
 from html.parser import HTMLParser
@@ -6,6 +7,7 @@ from ingest_benchmark_findings import resolve_model
 from harvest_benchmark_sources import strip_effort
 
 
+@preconditions(payload='mapping', models='mapping')
 def ale_results(payload, models):
     """Use the full ALE pass rate, never partial-credit avgScore or a sub-split."""
     findings = []
@@ -35,6 +37,7 @@ VALS_SOURCES = {
 }
 
 
+@preconditions(value='json')
 def decode_astro(value):
     if isinstance(value, list):
         if len(value) == 2 and isinstance(value[0], int) and value[0] in (0, 1):
@@ -46,15 +49,18 @@ def decode_astro(value):
 
 
 class ValsProps(HTMLParser):
+    @preconditions()
     def __init__(self):
         super().__init__(); self.view = None
 
+    @preconditions(tag='text', attrs='sequence')
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         if tag == 'astro-island' and 'BenchmarkView.' in attrs.get('component-url', ''):
             self.view = decode_astro(json.loads(attrs['props']))['benchmarkView']
 
 
+@preconditions(html='text', slug='text', models='mapping')
 def vals_results(html, slug, models):
     component, expected, task, protocol = VALS_SOURCES[slug]
     parser = ValsProps(); parser.feed(html)

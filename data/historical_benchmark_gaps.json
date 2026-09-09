@@ -1,16 +1,6 @@
 [
   {
     "model": "Claude Fable 5",
-    "component": "aime-2025",
-    "days": 62,
-    "firstDate": "2026-06-10",
-    "lastDate": "2026-09-03",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Fable 5",
     "component": "browsecomp",
     "days": 41,
     "firstDate": "2026-06-10",
@@ -142,19 +132,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "agents-last-exam",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Fable 5.1",
-    "component": "aime-2025",
-    "days": 5,
-    "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -162,9 +142,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "browsecomp",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -172,9 +152,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "charxiv-r",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -182,9 +162,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "deepswe",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -192,9 +172,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "gpqa",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -212,9 +192,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "ifbench",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -242,9 +222,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "mmmu-pro",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -252,9 +232,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "officeqa-pro",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "Available evidence starts on 2026-09-02; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -262,9 +242,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "swe-bench-verified",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -272,9 +252,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "terminal-bench-2.1",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "Available evidence starts on 2026-09-04; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 2
@@ -282,9 +262,9 @@
   {
     "model": "Claude Fable 5.1",
     "component": "toolathlon",
-    "days": 5,
+    "days": 8,
     "firstDate": "2026-09-02",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -292,16 +272,6 @@
   {
     "model": "Claude Mythos Preview",
     "component": "agents-last-exam",
-    "days": 25,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-08-29",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Mythos Preview",
-    "component": "aime-2025",
     "days": 25,
     "firstDate": "2026-07-21",
     "lastDate": "2026-08-29",
@@ -921,16 +891,6 @@
   },
   {
     "model": "Claude Opus 4.7",
-    "component": "aime-2025",
-    "days": 128,
-    "firstDate": "2026-04-21",
-    "lastDate": "2026-08-27",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 128
-  },
-  {
-    "model": "Claude Opus 4.7",
     "component": "deepswe",
     "days": 128,
     "firstDate": "2026-04-21",
@@ -1021,16 +981,6 @@
   },
   {
     "model": "Claude Opus 4.8",
-    "component": "aime-2025",
-    "days": 56,
-    "firstDate": "2026-06-03",
-    "lastDate": "2026-09-01",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Opus 4.8",
     "component": "arc-agi-2",
     "days": 16,
     "firstDate": "2026-06-03",
@@ -1101,20 +1051,10 @@
   },
   {
     "model": "Claude Opus 5",
-    "component": "aime-2025",
-    "days": 25,
-    "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Opus 5",
     "component": "charxiv-r",
-    "days": 25,
+    "days": 28,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1122,9 +1062,9 @@
   {
     "model": "Claude Opus 5",
     "component": "deepswe",
-    "days": 25,
+    "days": 28,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1132,9 +1072,9 @@
   {
     "model": "Claude Opus 5",
     "component": "gpqa",
-    "days": 25,
+    "days": 28,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1142,9 +1082,9 @@
   {
     "model": "Claude Opus 5",
     "component": "ifbench",
-    "days": 25,
+    "days": 28,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1202,9 +1142,9 @@
   {
     "model": "Claude Opus 5",
     "component": "toolathlon",
-    "days": 25,
+    "days": 28,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1441,16 +1381,6 @@
   },
   {
     "model": "Claude Sonnet 4.6",
-    "component": "aime-2025",
-    "days": 146,
-    "firstDate": "2026-02-20",
-    "lastDate": "2026-07-16",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 146
-  },
-  {
-    "model": "Claude Sonnet 4.6",
     "component": "charxiv-r",
     "days": 129,
     "firstDate": "2026-02-20",
@@ -1542,29 +1472,19 @@
   {
     "model": "Claude Sonnet 5",
     "component": "agents-last-exam",
-    "days": 10,
+    "days": 11,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "lastDate": "2026-09-07",
+    "reason": "Available evidence starts on 2026-09-08; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Sonnet 5",
-    "component": "aime-2025",
-    "days": 10,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 11
   },
   {
     "model": "Claude Sonnet 5",
     "component": "arc-agi-2",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1572,9 +1492,9 @@
   {
     "model": "Claude Sonnet 5",
     "component": "deepswe",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1582,9 +1502,9 @@
   {
     "model": "Claude Sonnet 5",
     "component": "gpqa",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1592,9 +1512,9 @@
   {
     "model": "Claude Sonnet 5",
     "component": "ifbench",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -1632,16 +1552,6 @@
   {
     "model": "DeepSeek R1 Distill Llama 70B",
     "component": "agents-last-exam",
-    "days": 1,
-    "firstDate": "2026-02-11",
-    "lastDate": "2026-02-11",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "DeepSeek R1 Distill Llama 70B",
-    "component": "aime-2025",
     "days": 1,
     "firstDate": "2026-02-11",
     "lastDate": "2026-02-11",
@@ -1801,16 +1711,6 @@
   },
   {
     "model": "DeepSeek-R1",
-    "component": "aime-2025",
-    "days": 1,
-    "firstDate": "2026-02-11",
-    "lastDate": "2026-02-11",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 1
-  },
-  {
-    "model": "DeepSeek-R1",
     "component": "browsecomp",
     "days": 1,
     "firstDate": "2026-02-11",
@@ -1942,16 +1842,6 @@
   {
     "model": "DeepSeek-V3.2 (Non-thinking)",
     "component": "agents-last-exam",
-    "days": 19,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-02-12",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "DeepSeek-V3.2 (Non-thinking)",
-    "component": "aime-2025",
     "days": 19,
     "firstDate": "2026-01-23",
     "lastDate": "2026-02-12",
@@ -2481,20 +2371,10 @@
   },
   {
     "model": "DeepSeek-V4-Flash-0731",
-    "component": "aime-2025",
-    "days": 21,
-    "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "DeepSeek-V4-Flash-0731",
     "component": "browsecomp",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2502,9 +2382,9 @@
   {
     "model": "DeepSeek-V4-Flash-0731",
     "component": "charxiv-r",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2512,9 +2392,9 @@
   {
     "model": "DeepSeek-V4-Flash-0731",
     "component": "gpqa",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2522,9 +2402,9 @@
   {
     "model": "DeepSeek-V4-Flash-0731",
     "component": "humanitys-last-exam",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2562,9 +2442,9 @@
   {
     "model": "DeepSeek-V4-Flash-0731",
     "component": "mmmu-pro",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2572,9 +2452,9 @@
   {
     "model": "DeepSeek-V4-Flash-0731",
     "component": "officeqa-pro",
-    "days": 21,
+    "days": 24,
     "firstDate": "2026-08-13",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2598,16 +2478,6 @@
     "reason": "Available evidence starts on 2026-07-31; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 14
-  },
-  {
-    "model": "DeepSeek-V4-Flash-Max",
-    "component": "aime-2025",
-    "days": 14,
-    "firstDate": "2026-05-18",
-    "lastDate": "2026-06-28",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
   },
   {
     "model": "DeepSeek-V4-Flash-Max",
@@ -2708,16 +2578,6 @@
     "reason": "Available evidence starts on 2026-07-31; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 14
-  },
-  {
-    "model": "DeepSeek-V4-Flash-Vision-Exp",
-    "component": "aime-2025",
-    "days": 8,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
   },
   {
     "model": "DeepSeek-V4-Flash-Vision-Exp",
@@ -2861,20 +2721,10 @@
   },
   {
     "model": "DeepSeek-V4-Pro-0813",
-    "component": "aime-2025",
-    "days": 8,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "DeepSeek-V4-Pro-0813",
     "component": "browsecomp",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2882,9 +2732,9 @@
   {
     "model": "DeepSeek-V4-Pro-0813",
     "component": "charxiv-r",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2892,9 +2742,9 @@
   {
     "model": "DeepSeek-V4-Pro-0813",
     "component": "gpqa",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2902,9 +2752,9 @@
   {
     "model": "DeepSeek-V4-Pro-0813",
     "component": "ifbench",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2932,9 +2782,9 @@
   {
     "model": "DeepSeek-V4-Pro-0813",
     "component": "mmmu-pro",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2942,9 +2792,9 @@
   {
     "model": "DeepSeek-V4-Pro-0813",
     "component": "officeqa-pro",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2971,20 +2821,10 @@
   },
   {
     "model": "DeepSeek-V4-Pro-Max",
-    "component": "aime-2025",
-    "days": 109,
-    "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "DeepSeek-V4-Pro-Max",
     "component": "arc-agi-2",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -2992,9 +2832,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "charxiv-r",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3002,9 +2842,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "deepswe",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3022,9 +2862,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "frontiermath-1-3-v2",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research. Benchmark version unavailable on 29 of these days (released 2026-06-12).",
     "beforeBenchmarkReleaseDays": 29,
     "beforeAvailableEvidenceDays": 0
@@ -3032,9 +2872,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "ifbench",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3042,9 +2882,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "livecodebench-v6",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3052,9 +2892,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "mmmu-pro",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3062,9 +2902,9 @@
   {
     "model": "DeepSeek-V4-Pro-Max",
     "component": "officeqa-pro",
-    "days": 109,
+    "days": 111,
     "firstDate": "2026-05-10",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -3082,16 +2922,6 @@
   {
     "model": "ERNIE 4.5",
     "component": "agents-last-exam",
-    "days": 1,
-    "firstDate": "2026-02-11",
-    "lastDate": "2026-02-11",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "ERNIE 4.5",
-    "component": "aime-2025",
     "days": 1,
     "firstDate": "2026-02-11",
     "lastDate": "2026-02-11",
@@ -3248,16 +3078,6 @@
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-4.5",
-    "component": "aime-2025",
-    "days": 22,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-02-16",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 22
   },
   {
     "model": "GLM-4.5",
@@ -3601,16 +3421,6 @@
   },
   {
     "model": "GLM-5",
-    "component": "aime-2025",
-    "days": 173,
-    "firstDate": "2026-02-13",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-5",
     "component": "charxiv-r",
     "days": 173,
     "firstDate": "2026-02-13",
@@ -3751,16 +3561,6 @@
   },
   {
     "model": "GLM-5.1",
-    "component": "aime-2025",
-    "days": 118,
-    "firstDate": "2026-04-09",
-    "lastDate": "2026-08-27",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 118
-  },
-  {
-    "model": "GLM-5.1",
     "component": "arc-agi-2",
     "days": 118,
     "firstDate": "2026-04-09",
@@ -3881,16 +3681,6 @@
   },
   {
     "model": "GLM-5.2",
-    "component": "aime-2025",
-    "days": 65,
-    "firstDate": "2026-06-18",
-    "lastDate": "2026-08-30",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-5.2",
     "component": "browsecomp",
     "days": 65,
     "firstDate": "2026-06-18",
@@ -3991,20 +3781,10 @@
   },
   {
     "model": "GLM-5.3",
-    "component": "aime-2025",
-    "days": 10,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-5.3",
     "component": "arc-agi-2",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4012,9 +3792,9 @@
   {
     "model": "GLM-5.3",
     "component": "browsecomp",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4022,9 +3802,9 @@
   {
     "model": "GLM-5.3",
     "component": "charxiv-r",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4032,9 +3812,9 @@
   {
     "model": "GLM-5.3",
     "component": "deepswe",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4042,9 +3822,9 @@
   {
     "model": "GLM-5.3",
     "component": "gpqa",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4052,9 +3832,9 @@
   {
     "model": "GLM-5.3",
     "component": "ifbench",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4082,9 +3862,9 @@
   {
     "model": "GLM-5.3",
     "component": "mmmu-pro",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4092,9 +3872,9 @@
   {
     "model": "GLM-5.3",
     "component": "officeqa-pro",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4111,20 +3891,10 @@
   },
   {
     "model": "GLM-5.3-Flash",
-    "component": "aime-2025",
-    "days": 10,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-5.3-Flash",
     "component": "arc-agi-2",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4132,9 +3902,9 @@
   {
     "model": "GLM-5.3-Flash",
     "component": "browsecomp",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4142,9 +3912,9 @@
   {
     "model": "GLM-5.3-Flash",
     "component": "deepswe",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4152,9 +3922,9 @@
   {
     "model": "GLM-5.3-Flash",
     "component": "gpqa",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4162,9 +3932,9 @@
   {
     "model": "GLM-5.3-Flash",
     "component": "ifbench",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -4192,9 +3962,9 @@
   {
     "model": "GLM-5.3-Flash",
     "component": "mmmu-pro",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5001,16 +4771,6 @@
   },
   {
     "model": "GPT-5.2 Codex",
-    "component": "aime-2025",
-    "days": 49,
-    "firstDate": "2026-01-28",
-    "lastDate": "2026-04-13",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.2 Codex",
     "component": "arc-agi-2",
     "days": 49,
     "firstDate": "2026-01-28",
@@ -5271,16 +5031,6 @@
   },
   {
     "model": "GPT-5.4",
-    "component": "aime-2025",
-    "days": 173,
-    "firstDate": "2026-03-07",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.4",
     "component": "charxiv-r",
     "days": 173,
     "firstDate": "2026-03-07",
@@ -5372,16 +5122,6 @@
   {
     "model": "GPT-5.4 mini",
     "component": "agents-last-exam",
-    "days": 2,
-    "firstDate": "2026-04-14",
-    "lastDate": "2026-04-15",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.4 mini",
-    "component": "aime-2025",
     "days": 2,
     "firstDate": "2026-04-14",
     "lastDate": "2026-04-15",
@@ -5491,16 +5231,6 @@
   },
   {
     "model": "GPT-5.5",
-    "component": "aime-2025",
-    "days": 117,
-    "firstDate": "2026-05-08",
-    "lastDate": "2026-09-01",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.5",
     "component": "charxiv-r",
     "days": 117,
     "firstDate": "2026-05-08",
@@ -5580,11 +5310,141 @@
     "beforeAvailableEvidenceDays": 73
   },
   {
-    "model": "GPT-5.6 Luna",
-    "component": "aime-2025",
-    "days": 4,
-    "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "model": "GPT-5.5 Pro",
+    "component": "agents-last-exam",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "charxiv-r",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "deepswe",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "deepswe-1.1",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "gpqa",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "gpqa-diamond",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "ifbench",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "livecodebench-v6",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "mmlu-pro",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "mmmu-pro",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "officeqa-pro",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "swe-bench-verified",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "terminal-bench-2.1",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
+    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "beforeBenchmarkReleaseDays": 0,
+    "beforeAvailableEvidenceDays": 0
+  },
+  {
+    "model": "GPT-5.5 Pro",
+    "component": "toolathlon",
+    "days": 1,
+    "firstDate": "2026-09-07",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5592,9 +5452,9 @@
   {
     "model": "GPT-5.6 Luna",
     "component": "charxiv-r",
-    "days": 4,
+    "days": 7,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5602,9 +5462,9 @@
   {
     "model": "GPT-5.6 Luna",
     "component": "humanitys-last-exam",
-    "days": 4,
+    "days": 7,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5612,9 +5472,9 @@
   {
     "model": "GPT-5.6 Luna",
     "component": "ifbench",
-    "days": 4,
+    "days": 7,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5622,9 +5482,9 @@
   {
     "model": "GPT-5.6 Luna",
     "component": "livecodebench-v6",
-    "days": 4,
+    "days": 7,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5642,9 +5502,9 @@
   {
     "model": "GPT-5.6 Luna",
     "component": "officeqa-pro",
-    "days": 4,
+    "days": 7,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5661,20 +5521,10 @@
   },
   {
     "model": "GPT-5.6 Sol",
-    "component": "aime-2025",
-    "days": 52,
-    "firstDate": "2026-07-17",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.6 Sol",
     "component": "charxiv-r",
-    "days": 52,
+    "days": 55,
     "firstDate": "2026-07-17",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5692,9 +5542,9 @@
   {
     "model": "GPT-5.6 Sol",
     "component": "humanitys-last-exam",
-    "days": 52,
+    "days": 55,
     "firstDate": "2026-07-17",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5741,20 +5591,10 @@
   },
   {
     "model": "GPT-5.6 Terra",
-    "component": "aime-2025",
-    "days": 33,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-5.6 Terra",
     "component": "charxiv-r",
-    "days": 33,
+    "days": 36,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5762,9 +5602,9 @@
   {
     "model": "GPT-5.6 Terra",
     "component": "humanitys-last-exam",
-    "days": 33,
+    "days": 36,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5802,9 +5642,9 @@
   {
     "model": "GPT-5.6 Terra",
     "component": "officeqa-pro",
-    "days": 33,
+    "days": 36,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5821,20 +5661,10 @@
   },
   {
     "model": "GPT-6 Astra",
-    "component": "aime-2025",
-    "days": 3,
-    "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GPT-6 Astra",
     "component": "charxiv-r",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5842,9 +5672,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "deepswe",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5862,19 +5692,19 @@
   {
     "model": "GPT-6 Astra",
     "component": "humanitys-last-exam",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "lastDate": "2026-09-07",
+    "reason": "Available evidence starts on 2026-09-08; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 4
   },
   {
     "model": "GPT-6 Astra",
     "component": "ifbench",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5882,9 +5712,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "livecodebench-v6",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5892,9 +5722,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "mmlu-pro",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5902,9 +5732,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "officeqa-pro",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5912,9 +5742,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "swe-bench-verified",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -5922,9 +5752,9 @@
   {
     "model": "GPT-6 Astra",
     "component": "toolathlon",
-    "days": 3,
+    "days": 6,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6232,19 +6062,9 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "agents-last-exam",
-    "days": 190,
+    "days": 191,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Gemini 3.1 Pro",
-    "component": "aime-2025",
-    "days": 190,
-    "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6262,9 +6082,9 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "deepswe",
-    "days": 190,
+    "days": 191,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6292,9 +6112,9 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "ifbench",
-    "days": 190,
+    "days": 191,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6302,9 +6122,9 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "livecodebench-v6",
-    "days": 190,
+    "days": 191,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6312,9 +6132,9 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "mmlu-pro",
-    "days": 190,
+    "days": 191,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6352,16 +6172,6 @@
   {
     "model": "Gemini 3.5 Flash",
     "component": "agents-last-exam",
-    "days": 62,
-    "firstDate": "2026-06-04",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Gemini 3.5 Flash",
-    "component": "aime-2025",
     "days": 62,
     "firstDate": "2026-06-04",
     "lastDate": "2026-08-27",
@@ -6461,16 +6271,6 @@
   },
   {
     "model": "Gemini 3.7 Flash",
-    "component": "aime-2025",
-    "days": 7,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-03",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Gemini 3.7 Flash",
     "component": "browsecomp",
     "days": 7,
     "firstDate": "2026-08-28",
@@ -6572,19 +6372,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "agents-last-exam",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Gemini 3.8 Flash",
-    "component": "aime-2025",
-    "days": 4,
-    "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6592,9 +6382,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "arc-agi-2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6602,9 +6392,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "browsecomp",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6612,9 +6402,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "deepswe",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6622,9 +6412,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "frontiermath-1-3-v2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6632,9 +6422,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "gpqa",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6645,16 +6435,16 @@
     "days": 4,
     "firstDate": "2026-09-03",
     "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "reason": "Available evidence starts on 2026-09-08; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 4
   },
   {
     "model": "Gemini 3.8 Flash",
     "component": "ifbench",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6692,9 +6482,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "officeqa-pro",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6712,19 +6502,9 @@
   {
     "model": "Gemini 3.8 Flash",
     "component": "toolathlon",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Grok 4.5",
-    "component": "aime-2025",
-    "days": 26,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6822,19 +6602,9 @@
   {
     "model": "Grok 4.6",
     "component": "agents-last-exam",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Grok 4.6",
-    "component": "aime-2025",
-    "days": 3,
-    "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6852,9 +6622,9 @@
   {
     "model": "Grok 4.6",
     "component": "browsecomp",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6862,9 +6632,9 @@
   {
     "model": "Grok 4.6",
     "component": "charxiv-r",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6872,9 +6642,9 @@
   {
     "model": "Grok 4.6",
     "component": "deepswe",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6882,9 +6652,9 @@
   {
     "model": "Grok 4.6",
     "component": "gpqa",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6902,9 +6672,9 @@
   {
     "model": "Grok 4.6",
     "component": "humanitys-last-exam",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6912,9 +6682,9 @@
   {
     "model": "Grok 4.6",
     "component": "ifbench",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6942,9 +6712,9 @@
   {
     "model": "Grok 4.6",
     "component": "mmmu-pro",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6962,9 +6732,9 @@
   {
     "model": "Grok 4.6",
     "component": "toolathlon",
-    "days": 3,
+    "days": 4,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-03",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -6978,16 +6748,6 @@
     "reason": "Available evidence starts on 2026-08-28; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 23
-  },
-  {
-    "model": "Hy3",
-    "component": "aime-2025",
-    "days": 23,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
   },
   {
     "model": "Hy3",
@@ -7081,20 +6841,10 @@
   },
   {
     "model": "Hy4 preview",
-    "component": "aime-2025",
-    "days": 7,
-    "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Hy4 preview",
     "component": "arc-agi-2",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7102,9 +6852,9 @@
   {
     "model": "Hy4 preview",
     "component": "browsecomp",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7112,9 +6862,9 @@
   {
     "model": "Hy4 preview",
     "component": "charxiv-r",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7122,9 +6872,9 @@
   {
     "model": "Hy4 preview",
     "component": "frontiermath-1-3-v2",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7132,9 +6882,9 @@
   {
     "model": "Hy4 preview",
     "component": "humanitys-last-exam",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7142,9 +6892,9 @@
   {
     "model": "Hy4 preview",
     "component": "ifbench",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7152,9 +6902,9 @@
   {
     "model": "Hy4 preview",
     "component": "livecodebench-v6",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7162,9 +6912,9 @@
   {
     "model": "Hy4 preview",
     "component": "mmlu-pro",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7172,9 +6922,9 @@
   {
     "model": "Hy4 preview",
     "component": "mmmu-pro",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7182,9 +6932,9 @@
   {
     "model": "Hy4 preview",
     "component": "swe-bench-verified",
-    "days": 7,
+    "days": 9,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7192,16 +6942,6 @@
   {
     "model": "Kimi K2 0905",
     "component": "agents-last-exam",
-    "days": 107,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-05-17",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Kimi K2 0905",
-    "component": "aime-2025",
     "days": 107,
     "firstDate": "2026-01-23",
     "lastDate": "2026-05-17",
@@ -7571,16 +7311,6 @@
   },
   {
     "model": "Kimi K2.6",
-    "component": "aime-2025",
-    "days": 127,
-    "firstDate": "2026-04-23",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Kimi K2.6",
     "component": "arc-agi-2",
     "days": 127,
     "firstDate": "2026-04-23",
@@ -7641,16 +7371,6 @@
   },
   {
     "model": "Kimi K3",
-    "component": "aime-2025",
-    "days": 49,
-    "firstDate": "2026-07-18",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Kimi K3",
     "component": "deepswe",
     "days": 1,
     "firstDate": "2026-07-18",
@@ -7702,19 +7422,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "agents-last-exam",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Laguna S 2.1",
-    "component": "aime-2025",
-    "days": 3,
-    "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7722,9 +7432,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "arc-agi-2",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7732,9 +7442,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "browsecomp",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7742,9 +7452,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "charxiv-r",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7752,9 +7462,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "deepswe",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7762,9 +7472,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "frontiermath-1-3-v2",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7772,9 +7482,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "gpqa",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7782,9 +7492,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "gpqa-diamond",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7792,9 +7502,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "humanitys-last-exam",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7802,9 +7512,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "ifbench",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7812,9 +7522,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "livecodebench-v6",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7822,9 +7532,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "mmlu-pro",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7832,9 +7542,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "mmmu-pro",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7842,9 +7552,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "officeqa-pro",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7852,9 +7562,9 @@
   {
     "model": "Laguna S 2.1",
     "component": "swe-bench-verified",
-    "days": 3,
+    "days": 5,
     "firstDate": "2026-09-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -7962,16 +7672,6 @@
   {
     "model": "MiMo-V2.5-Pro",
     "component": "agents-last-exam",
-    "days": 10,
-    "firstDate": "2026-06-14",
-    "lastDate": "2026-06-26",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "MiMo-V2.5-Pro",
-    "component": "aime-2025",
     "days": 10,
     "firstDate": "2026-06-14",
     "lastDate": "2026-06-26",
@@ -8281,16 +7981,6 @@
   },
   {
     "model": "MiniMax M2.5",
-    "component": "aime-2025",
-    "days": 78,
-    "firstDate": "2026-02-17",
-    "lastDate": "2026-05-08",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 78
-  },
-  {
-    "model": "MiniMax M2.5",
     "component": "charxiv-r",
     "days": 78,
     "firstDate": "2026-02-17",
@@ -8412,16 +8102,6 @@
   {
     "model": "MiniMax M2.7",
     "component": "agents-last-exam",
-    "days": 69,
-    "firstDate": "2026-04-14",
-    "lastDate": "2026-07-20",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 69
-  },
-  {
-    "model": "MiniMax M2.7",
-    "component": "aime-2025",
     "days": 69,
     "firstDate": "2026-04-14",
     "lastDate": "2026-07-20",
@@ -8571,16 +8251,6 @@
   },
   {
     "model": "Muse Spark",
-    "component": "aime-2025",
-    "days": 1,
-    "firstDate": "2026-09-04",
-    "lastDate": "2026-09-04",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 1
-  },
-  {
-    "model": "Muse Spark",
     "component": "browsecomp",
     "days": 1,
     "firstDate": "2026-09-04",
@@ -8661,16 +8331,6 @@
   },
   {
     "model": "Muse Spark 1.1",
-    "component": "aime-2025",
-    "days": 7,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-03",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Muse Spark 1.1",
     "component": "arc-agi-2",
     "days": 7,
     "firstDate": "2026-08-28",
@@ -8782,29 +8442,19 @@
   {
     "model": "Muse Spark 1.3",
     "component": "agents-last-exam",
-    "days": 4,
+    "days": 5,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "lastDate": "2026-09-08",
+    "reason": "Available evidence starts on 2026-09-09; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Muse Spark 1.3",
-    "component": "aime-2025",
-    "days": 4,
-    "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 5
   },
   {
     "model": "Muse Spark 1.3",
     "component": "arc-agi-2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8812,9 +8462,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "browsecomp",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8822,9 +8472,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "charxiv-r",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8832,9 +8482,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "deepswe",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8842,9 +8492,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "frontiermath-1-3-v2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8852,9 +8502,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "gpqa",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8862,9 +8512,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "humanitys-last-exam",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8872,9 +8522,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "ifbench",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8882,9 +8532,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "livecodebench-v6",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8892,9 +8542,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "mmlu-pro",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8912,9 +8562,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "officeqa-pro",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8922,9 +8572,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "swe-bench-verified",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -8932,9 +8582,9 @@
   {
     "model": "Muse Spark 1.3",
     "component": "toolathlon",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9071,16 +8721,6 @@
   },
   {
     "model": "Qwen3.5-122B-A10B",
-    "component": "aime-2025",
-    "days": 33,
-    "firstDate": "2026-03-14",
-    "lastDate": "2026-04-15",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.5-122B-A10B",
     "component": "arc-agi-2",
     "days": 33,
     "firstDate": "2026-03-14",
@@ -9142,16 +8782,6 @@
   {
     "model": "Qwen3.5-27B",
     "component": "agents-last-exam",
-    "days": 2,
-    "firstDate": "2026-04-10",
-    "lastDate": "2026-04-11",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.5-27B",
-    "component": "aime-2025",
     "days": 2,
     "firstDate": "2026-04-10",
     "lastDate": "2026-04-11",
@@ -9241,16 +8871,6 @@
   },
   {
     "model": "Qwen3.5-35B-A3B",
-    "component": "aime-2025",
-    "days": 1,
-    "firstDate": "2026-03-14",
-    "lastDate": "2026-03-14",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.5-35B-A3B",
     "component": "arc-agi-2",
     "days": 1,
     "firstDate": "2026-03-14",
@@ -9331,16 +8951,6 @@
   },
   {
     "model": "Qwen3.5-397B-A17B",
-    "component": "aime-2025",
-    "days": 183,
-    "firstDate": "2026-02-17",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.5-397B-A17B",
     "component": "arc-agi-2",
     "days": 183,
     "firstDate": "2026-02-17",
@@ -9392,16 +9002,6 @@
   {
     "model": "Qwen3.6 Plus",
     "component": "agents-last-exam",
-    "days": 95,
-    "firstDate": "2026-05-09",
-    "lastDate": "2026-08-12",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 95
-  },
-  {
-    "model": "Qwen3.6 Plus",
-    "component": "aime-2025",
     "days": 95,
     "firstDate": "2026-05-09",
     "lastDate": "2026-08-12",
@@ -9478,16 +9078,6 @@
     "reason": "Available evidence starts on 2026-08-12; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 77
-  },
-  {
-    "model": "Qwen3.7 Max",
-    "component": "aime-2025",
-    "days": 93,
-    "firstDate": "2026-05-27",
-    "lastDate": "2026-08-27",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
   },
   {
     "model": "Qwen3.7 Max",
@@ -9591,20 +9181,10 @@
   },
   {
     "model": "Qwen3.7-Plus",
-    "component": "aime-2025",
-    "days": 23,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.7-Plus",
     "component": "arc-agi-2",
-    "days": 23,
+    "days": 24,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9612,9 +9192,9 @@
   {
     "model": "Qwen3.7-Plus",
     "component": "browsecomp",
-    "days": 23,
+    "days": 24,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9622,9 +9202,9 @@
   {
     "model": "Qwen3.7-Plus",
     "component": "deepswe",
-    "days": 23,
+    "days": 24,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9652,9 +9232,9 @@
   {
     "model": "Qwen3.7-Plus",
     "component": "officeqa-pro",
-    "days": 23,
+    "days": 24,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9662,19 +9242,9 @@
   {
     "model": "Qwen3.7-Plus",
     "component": "toolathlon",
-    "days": 23,
+    "days": 24,
     "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.8 Flash",
-    "component": "aime-2025",
-    "days": 7,
-    "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9682,9 +9252,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "arc-agi-2",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9692,9 +9262,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "browsecomp",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9702,9 +9272,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "deepswe",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9712,9 +9282,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "frontiermath-1-3-v2",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9742,9 +9312,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "mmlu-pro",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9752,9 +9322,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "mmmu-pro",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9762,9 +9332,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "officeqa-pro",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9772,9 +9342,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "swe-bench-verified",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9782,19 +9352,9 @@
   {
     "model": "Qwen3.8 Flash",
     "component": "terminal-bench-2.1",
-    "days": 7,
+    "days": 10,
     "firstDate": "2026-08-31",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.8 Max",
-    "component": "aime-2025",
-    "days": 19,
-    "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9802,9 +9362,9 @@
   {
     "model": "Qwen3.8 Max",
     "component": "arc-agi-2",
-    "days": 19,
+    "days": 22,
     "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9812,9 +9372,9 @@
   {
     "model": "Qwen3.8 Max",
     "component": "browsecomp",
-    "days": 19,
+    "days": 22,
     "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9822,9 +9382,9 @@
   {
     "model": "Qwen3.8 Max",
     "component": "charxiv-r",
-    "days": 19,
+    "days": 22,
     "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9832,9 +9392,9 @@
   {
     "model": "Qwen3.8 Max",
     "component": "deepswe",
-    "days": 19,
+    "days": 22,
     "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9862,9 +9422,9 @@
   {
     "model": "Qwen3.8 Max",
     "component": "officeqa-pro",
-    "days": 19,
+    "days": 22,
     "firstDate": "2026-08-04",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9891,20 +9451,10 @@
   },
   {
     "model": "Qwen3.8-27B",
-    "component": "aime-2025",
-    "days": 4,
-    "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.8-27B",
     "component": "arc-agi-2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9912,9 +9462,9 @@
   {
     "model": "Qwen3.8-27B",
     "component": "browsecomp",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9922,9 +9472,9 @@
   {
     "model": "Qwen3.8-27B",
     "component": "deepswe",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9932,9 +9482,9 @@
   {
     "model": "Qwen3.8-27B",
     "component": "frontiermath-1-3-v2",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9962,9 +9512,9 @@
   {
     "model": "Qwen3.8-27B",
     "component": "officeqa-pro",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -9982,19 +9532,9 @@
   {
     "model": "Qwen3.8-27B",
     "component": "toolathlon",
-    "days": 4,
+    "days": 6,
     "firstDate": "2026-09-03",
-    "lastDate": "2026-09-06",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Qwen3.8-Flash-Next",
-    "component": "aime-2025",
-    "days": 10,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10002,9 +9542,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "arc-agi-2",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10012,9 +9552,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "browsecomp",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10022,9 +9562,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "deepswe",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10032,9 +9572,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "frontiermath-1-3-v2",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10052,9 +9592,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "mmlu-pro",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10062,9 +9602,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "officeqa-pro",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10072,9 +9612,9 @@
   {
     "model": "Qwen3.8-Flash-Next",
     "component": "swe-bench-verified",
-    "days": 10,
+    "days": 13,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-06",
+    "lastDate": "2026-09-09",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10088,16 +9628,6 @@
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Seed 2.0 Pro",
-    "component": "aime-2025",
-    "days": 23,
-    "firstDate": "2026-07-21",
-    "lastDate": "2026-08-12",
-    "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 23
   },
   {
     "model": "Seed 2.0 Pro",
@@ -10191,16 +9721,6 @@
   },
   {
     "model": "Seed 2.1 Pro",
-    "component": "aime-2025",
-    "days": 8,
-    "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Seed 2.1 Pro",
     "component": "arc-agi-2",
     "days": 8,
     "firstDate": "2026-08-28",
@@ -10212,9 +9732,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "deepswe-1.1",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10222,9 +9742,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "frontiermath-1-3-v2",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10232,9 +9752,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "gpqa",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10242,9 +9762,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "ifbench",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10252,9 +9772,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "livecodebench-v6",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10262,9 +9782,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "mmlu-pro",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
@@ -10272,9 +9792,9 @@
   {
     "model": "Seed 2.1 Pro",
     "component": "swe-bench-verified",
-    "days": 8,
+    "days": 9,
     "firstDate": "2026-08-28",
-    "lastDate": "2026-09-04",
+    "lastDate": "2026-09-07",
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0

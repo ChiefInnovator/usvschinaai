@@ -16,7 +16,9 @@ Stripping a trailing parenthetical generically retires that whole class.
 Deliberately free of third-party imports so the test suite and the CI validator
 can use it without installing Playwright.
 """
+from preconditions import preconditions
 import re
+from functools import lru_cache
 from typing import Dict
 
 # Naming variants are collapsed only where they are named explicitly below.
@@ -40,11 +42,14 @@ BENCHMARK_NAME_ALIASES: Dict[str, str] = {
 _ARTIFACT_HEADER_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
 
 
+@preconditions(name='text')
 def is_artifact_header(name: str) -> bool:
     """Whether a detail-page benchmark name is a scraped file artifact."""
     return bool(_ARTIFACT_HEADER_RE.search(name.strip()))
 
 
+@preconditions(name='text')
+@lru_cache(maxsize=8192)
 def canonicalize_benchmark_name(name: str) -> str:
     """Lowercased, alphanumeric-only form for fuzzy benchmark-name matching.
 
@@ -63,6 +68,7 @@ def canonicalize_benchmark_name(name: str) -> str:
 _TRAILING_VERSION_RE = re.compile(r"\d+$")
 
 
+@preconditions(name='text')
 def benchmark_version_base(name: str) -> str:
     """Key shared by every version of one benchmark.
 

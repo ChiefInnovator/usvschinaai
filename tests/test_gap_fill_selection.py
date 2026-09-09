@@ -22,7 +22,7 @@ class ResearchSelectionTests(unittest.TestCase):
                 entries = [entry(i, {b: '80%' for b in names} if i < count else {})
                            for i in range(20)]
                 candidates = build_candidates(entries)
-                self.assertEqual(len(candidates), (20-count)*19)
+                self.assertEqual(len(candidates), (20-count)*len(names))
                 for _, group in _group_by_model(candidates):
                     self.assertEqual([c.benchmark for c in group], names)
 
@@ -30,7 +30,7 @@ class ResearchSelectionTests(unittest.TestCase):
         e = entry(0, {'GPQA': '96%', 'DeepSWE1.1': '74.1%',
                       'ARC-AGIv2': '95%', 'Terminal-Bench4.0': '57%', 'HLE': '65%'})
         names = {c.benchmark for c in build_candidates([e])}
-        self.assertEqual(len(names), 15)
+        self.assertEqual(len(names), 14)
         self.assertIn('GPQA Diamond', names)
         self.assertIn('Terminal-Bench 2.1', names)
         self.assertNotIn('DeepSWE 1.1', names)

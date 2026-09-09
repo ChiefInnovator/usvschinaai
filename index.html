@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/preconditions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US vs CHINA AI | Global Leaderboard - Compare Top AI Models 2026</title>
@@ -71,6 +72,7 @@
     }
     </script>
     
+    <script src="js/model-store.js"></script>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
@@ -426,7 +428,7 @@
 
         <section id="last-30-days" aria-labelledby="trend-title" class="glass rounded-3xl p-6 md:p-8 mb-12 border border-white/5">
             <h3 id="trend-title" class="text-2xl font-bold mb-2">Last 30 Days: US vs. China</h3>
-            <p class="text-slate-400 text-sm mb-4">National scores from the global Top 10. Each point is a recorded archive snapshot; lines connect observations. Hover for the exact time and scores.</p>
+            <p class="text-slate-400 text-sm mb-4">National scores from the global Top 10. One point per UTC day, using that day’s latest snapshot. Lines connect recorded days. Hover for the snapshot time and scores.</p>
             <p id="trend-status" role="status" class="text-slate-400 text-sm mb-4">Loading historical comparison…</p>
             <div class="relative w-full h-[350px] md:h-[420px]">
                 <canvas id="trendChart" role="img" aria-label="Last 30 days of United States and China national scores"></canvas>
@@ -459,8 +461,8 @@
                     </div>
                     <p class="mb-4 text-xs text-slate-500 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
 
-                    <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (nineteen benchmarks)</h4>
-                    <p class="mb-2">Avg IQ combines the nineteen selected benchmark scores using fixed allocations. The denominator always includes all nineteen; missing results contribute zero.</p>
+                    <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (eighteen benchmarks)</h4>
+                    <p class="mb-2">Avg IQ combines the eighteen selected benchmark scores using fixed allocations. The denominator always includes all eighteen; missing results contribute zero.</p>
                     <p class="mb-2 text-xs text-slate-500">For each benchmark, we use the highest verified score for the exact model across all effort levels. The benchmark version, subset and evaluation protocol must match; results involving fallback to another model are excluded.</p>
                     <p class="text-xs text-slate-500">Participation does not change benchmark eligibility or scoring. Models have no minimum benchmark-count requirement. Coverage describes available evidence; it does not determine whether a model can rank.</p>
                 </div>
@@ -500,7 +502,6 @@
             'model', 'name', 'company', 'company_link', 'link', 'origin', 'description', 'created', 'total', 'avgIq', 'value', 'unified',
             'Model', 'Country', 'License', 'Context', 'Input$/M', 'Input $/M', 'Output$/M', 'Output $/M', 'Speed', 'Parameters(B)', 'KnowledgeCutoff', 'Multimodal', 'Released', 'Organization', '', 'rank', 'coverage', 'provisional']);
         const BENCHMARK_NAME_MAP = {
-            'AIME2025': 'AIME 2025',
             'HMMT2025': 'HMMT 2025',
             'GPQA': 'GPQA Diamond',
             'GPQADiamond': 'GPQA Diamond',
@@ -563,6 +564,7 @@
         };
 
         function extractBenchmarks(row) {
+            AppContract.check("extractBenchmarks", arguments, ["mapping"]);
             const benchmarks = [];
             Object.entries(row || {}).forEach(([key, raw]) => {
                 if (BASE_EXCLUDE_KEYS.has(key)) return;
@@ -587,6 +589,7 @@
         // column name (e.g. "MMMLU"), so we normalize the key to match what
         // benchmarkMap uses.
         function extractProvenance(row) {
+            AppContract.check("extractProvenance", arguments, ["mapping"]);
             const out = {};
             const prov = row && row._provenance;
             if (!prov || typeof prov !== 'object') return out;
@@ -599,6 +602,7 @@
         }
 
         function normalizeModelsFromEntry(entry) {
+            AppContract.check("normalizeModelsFromEntry", arguments, ["mapping"]);
             const combined = [...(entry?.teams?.US || []), ...(entry?.teams?.CN || [])];
             const normalized = combined.map((row) => {
                 const benchmarks = extractBenchmarks(row);
@@ -634,6 +638,7 @@
 
         // Populate Benchmark Details Table (if present)
         function populateBenchmarkDetailsTable() {
+            AppContract.check("populateBenchmarkDetailsTable", arguments, []);
             const tbody = document.getElementById('benchmark-details-tbody');
             if (!tbody || !models.length || !benchmarkList.length) return;
 
@@ -683,7 +688,8 @@
         }
 
         function getBenchmarkColor(name) {
-            const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
+            AppContract.check("getBenchmarkColor", arguments, ["text"]);
+            const blueGroup = ['HMMT 2025', 'GPQA Diamond'];
             const redGroup = ['ARC-AGI', 'ARC-AGI v2', 'BrowseComp'];
             const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench', 'MMMU'];
             const yellowGroup = ['SWE-Bench Verified', 'CodeForces'];
@@ -695,14 +701,13 @@
         }
 
         async function fetchModels() {
+            AppContract.check("fetchModels", arguments, []);
             try {
-                // current.json is the latest snapshot only (~40 KB); the full
-                // multi-MB archive (models.json) is only a fallback for the
-                // window before the first scraper run that emits current.json.
+                // Dated roster references are expanded from the shared model catalog.
                 let response = await fetch('current.json');
                 if (!response.ok) response = await fetch('models.json');
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                appData = await response.json();
+                appData = await ModelStore.expand(await response.json());
                 const history = Array.isArray(appData.history) ? appData.history : [];
                 if (!history.length) throw new Error('No history entries in models.json');
                 currentEntry = history[0];
@@ -736,6 +741,7 @@
         // If the newest snapshot is older than 26h, the daily scrape has
         // missed a cycle — say so instead of presenting stale data as live.
         function renderStaleBanner() {
+            AppContract.check("renderStaleBanner", arguments, []);
             if (!currentEntry?.timestamp) return;
             const age = Date.now() - new Date(currentEntry.timestamp).getTime();
             if (Number.isNaN(age) || age < 26 * 60 * 60 * 1000) return;
@@ -749,6 +755,7 @@
         }
 
         function populateStaticContent() {
+            AppContract.check("populateStaticContent", arguments, []);
             const metaTitle = appData?.metadata?.title || 'US vs CHINA AI';
             document.title = `${metaTitle} | Global Leaderboard`;
 
@@ -811,6 +818,7 @@
         }
 
         function injectStructuredData() {
+            AppContract.check("injectStructuredData", arguments, []);
             if (!models.length || !currentEntry) return;
             const sorted = [...models].sort((a, b) => b.unified - a.unified);
             const top10 = sorted.slice(0, 10);
@@ -847,7 +855,7 @@
                     "name": "How are AI models ranked on this leaderboard?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines nineteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value = Avg IQ ÷ (Input + Output cost)."
+                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value = Avg IQ ÷ (Input + Output cost)."
                     }
                 }]
             };
@@ -890,6 +898,7 @@
         }
 
         function calculateTotals() {
+            AppContract.check("calculateTotals", arguments, []);
             const allSorted = [...models].sort((a, b) => b.unified - a.unified);
             const top10 = allSorted.slice(0, 10);
             const usInTop10 = top10.filter(m => m.origin === 'US');
@@ -946,6 +955,7 @@
         }
 
         function renderTable() {
+            AppContract.check("renderTable", arguments, []);
             const tbody = document.getElementById('models-table-body');
             tbody.innerHTML = '';
 
@@ -1043,6 +1053,7 @@
         }
 
         function sortTable(key) {
+            AppContract.check("sortTable", arguments, ["enum:rank|name|iq|value|unified|model|avgIq"]);
             if (currentSort.key === key) {
                 currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
             } else {
@@ -1053,6 +1064,7 @@
         }
 
         function setFilter(filter) {
+            AppContract.check("setFilter", arguments, ["enum:top10|all|US|CN"]);
             currentFilter = filter;
             renderTable();
             renderMatrix();
@@ -1060,6 +1072,7 @@
         }
 
         function updateFilterUI() {
+            AppContract.check("updateFilterUI", arguments, []);
             const buttons = {
                 'top10': document.getElementById('filter-top10'),
                 'all': document.getElementById('filter-all'),
@@ -1086,16 +1099,19 @@
         const shareText = 'Check out this AI model leaderboard comparing USA and China\'s best AI models. See which country is winning the AI race!';
 
         function shareOnX() {
+            AppContract.check("shareOnX", arguments, []);
             const url = `https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
             window.open(url, '_blank', 'width=550,height=420');
         }
 
         function shareOnFacebook() {
+            AppContract.check("shareOnFacebook", arguments, []);
             const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
             window.open(url, '_blank', 'width=550,height=420');
         }
 
         function shareOnLinkedIn() {
+            AppContract.check("shareOnLinkedIn", arguments, []);
             // LinkedIn caches scrapes per-URL for ~a week and there is no purge
             // API — a cached failure (e.g. from a site outage) breaks previews
             // until the URL changes. A daily version param guarantees each
@@ -1108,6 +1124,7 @@
         }
 
         function copyLink() {
+            AppContract.check("copyLink", arguments, []);
             const btnText = document.getElementById('copy-link-text');
             const originalText = btnText.textContent;
             navigator.clipboard.writeText(shareUrl).then(() => {
@@ -1117,6 +1134,7 @@
         }
 
         function shareViaEmail() {
+            AppContract.check("shareViaEmail", arguments, []);
             const subject = encodeURIComponent(shareTitle);
             const body = encodeURIComponent(`${shareText}\n\n${shareUrl}`);
             window.location.href = `mailto:?subject=${subject}&body=${body}`;
@@ -1124,20 +1142,29 @@
 
         let trendChart = null;
         async function renderThirtyDayTrend() {
+            AppContract.check("renderThirtyDayTrend", arguments, []);
             const status = document.getElementById('trend-status');
             try {
                 const response = await fetch('models.json');
                 if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                // National totals need only stored roster scores, not benchmark hydration.
                 const archive = await response.json();
                 const snapshots = [...(archive.history || [])].filter(snapshot => Number.isFinite(Date.parse(snapshot.timestamp))).sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp));
                 if (!snapshots.length || !window.Chart) throw new Error('Chart or history unavailable');
-                const end = Date.parse(snapshots[snapshots.length - 1].timestamp);
-                const start = end - 30 * 86400000;
-                const recent = snapshots.filter(snapshot => Date.parse(snapshot.timestamp) >= start);
+                const dayMillis = 86400000;
+                const end = Math.floor(Date.parse(snapshots[snapshots.length - 1].timestamp) / dayMillis) * dayMillis;
+                const start = end - 29 * dayMillis;
+                // Sorted ascending: later observations replace earlier ones for each UTC day.
+                const daily = new Map();
+                for (const snapshot of snapshots) {
+                    const day = Math.floor(Date.parse(snapshot.timestamp) / dayMillis) * dayMillis;
+                    if (day >= start) daily.set(day, snapshot);
+                }
+                const recent = [...daily.entries()];
                 const values = {US: [], CN: []};
-                for (const snapshot of recent) {
+                for (const [day, snapshot] of recent) {
                     const top = Object.entries(snapshot.teams || {}).flatMap(([country, rows]) => rows.map(row => ({country, score: Number(row.unified)}))).filter(row => Number.isFinite(row.score)).sort((a, b) => b.score - a.score).slice(0, 10);
-                    for (const country of ['US', 'CN']) values[country].push({x: Date.parse(snapshot.timestamp), y: top.filter(row => row.country === country).reduce((sum, row) => sum + row.score, 0)});
+                    for (const country of ['US', 'CN']) values[country].push({x: day, snapshotTimestamp: snapshot.timestamp, y: top.filter(row => row.country === country).reduce((sum, row) => sum + row.score, 0)});
                 }
                 if (trendChart) trendChart.destroy();
                 trendChart = new Chart(document.getElementById('trendChart'), {
@@ -1149,14 +1176,14 @@
                     options: {responsive: true, maintainAspectRatio: false, interaction: {mode: 'index', intersect: false},
                         plugins: {legend: {labels: {color: '#cbd5e1'}}, tooltip: {callbacks: {
                             title: items => {
-                                return new Date(items[0].raw.x).toLocaleString('en-US');
+                                return new Date(items[0].raw.snapshotTimestamp).toLocaleString('en-US', {timeZone: 'UTC'}) + ' UTC';
                             },
                             label: item => `${item.dataset.label}: ${Number(item.raw.y).toFixed(1)}`
                         }}},
-                        scales: {x: {type: 'linear', min: start, max: end, ticks: {color: '#94a3b8', maxTicksLimit: 6, callback: value => new Date(value).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})}, grid: {color: 'rgba(255,255,255,0.05)'}},
+                        scales: {x: {type: 'linear', min: start, max: end, ticks: {color: '#94a3b8', maxTicksLimit: 6, callback: value => new Date(value).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'})}, grid: {color: 'rgba(255,255,255,0.05)'}},
                             y: {beginAtZero: true, title: {display: true, text: 'National Unified Score', color: '#94a3b8'}, ticks: {color: '#94a3b8'}, grid: {color: 'rgba(255,255,255,0.05)'}}}}
                 });
-                status.textContent = `${new Date(start).toLocaleDateString('en-US', {month: 'short', day: 'numeric'})} – ${new Date(end).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})} · ${recent.length} recorded snapshots`;
+                status.textContent = `${new Date(start).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'})} – ${new Date(end).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'})} · ${recent.length} daily snapshots · UTC`;
             } catch (error) {
                 status.textContent = 'Historical comparison could not load. Reload the page to try again.';
                 console.error('Error loading 30-day chart:', error);
@@ -1165,6 +1192,7 @@
 
         let matrixChart = null;
         function renderMatrix() {
+            AppContract.check("renderMatrix", arguments, []);
             const canvas = document.getElementById('matrixChart');
             if (!canvas || typeof canvas.getContext !== 'function') return;
             if (!window.Chart || !models.length) return;
@@ -1272,6 +1300,7 @@
         }
 
         function renderCompanyLeaderboard() {
+            AppContract.check("renderCompanyLeaderboard", arguments, []);
             if (!models.length) return;
             const container = document.getElementById('company-leaderboard');
             if (!container) return;
@@ -1348,6 +1377,7 @@
     <script>
     (function() {
         function timeAgo(dateStr) {
+            AppContract.check("timeAgo", arguments, ["?json"]);
             if (!dateStr) return '';
             try {
                 var date = new Date(dateStr);
@@ -1367,18 +1397,21 @@
         }
 
         function getCountryFlag(country) {
+            AppContract.check("getCountryFlag", arguments, ["?json"]);
             if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
             if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
             return '\u{1F30D}';
         }
 
         function escapeHtml(str) {
+            AppContract.check("escapeHtml", arguments, ["?json"]);
             var div = document.createElement('div');
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
         }
 
         async function loadNewsMarquee() {
+            AppContract.check("loadNewsMarquee", arguments, []);
             var container = document.getElementById('newsMarquee');
             if (!container) return;
 

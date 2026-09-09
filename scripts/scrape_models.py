@@ -3,9 +3,10 @@
 Scrape LLM leaderboard data from llm-stats.com with staged architecture.
 Supports --leaderboard-basic (Stage 1), --leaderboard-full (Stage 2), and full scrape (Stage 3).
 """
+from preconditions import preconditions
 import argparse
-import codecs
 import csv
+from model_store import load_data, save_data
 import json
 import os
 import shutil
@@ -20,6 +21,7 @@ from typing import Any, Dict, List, Optional, Tuple
 from playwright.sync_api import sync_playwright
 
 from benchmark_names import canonicalize_benchmark_name, is_artifact_header
+from avg_iq_benchmarks import MODEL_FIELDS, load_config
 from cohort_selection import TEAM_SIZE, select_team
 from model_families import superseded_models
 from scoring import (  # noqa: E402  - single scoring implementation
@@ -67,13 +69,14 @@ _DETAIL_NAME_PATTERN = re.compile(r'\\"name\\":\\"(.+?)\\",')
 _DETAIL_NORM_PATTERN = re.compile(r'\\"normalized_score\\":(null|[0-9.]+)')
 
 
+@preconditions(page='content_page')
 def extract_detail_benchmarks(page) -> Dict[str, str]:
     """Parse benchmark scores from a model detail page's embedded Next.js flight payload.
 
     Uses the ``normalized_score`` field because it is consistently in the 0–1 range,
     whereas the raw ``score`` field sometimes ships as a fraction with a ``max_score``
     of 100 (e.g. SimpleVQA, ZEROBench) which yields nonsense if naively multiplied.
-    Returns {benchmark_name: "xx.x%"} for every benchmark on the page.
+    Returns {benchmark_name: "xx.x%"} for supported benchmarks only.
 
     Records where ``normalized_score`` is ``null`` (e.g. GDPval-AA, OmniDocBench 1.5,
     Vending-Bench 2 — benchmarks where llm-stats has the raw score but hasn't decided
@@ -85,6 +88,8 @@ def extract_detail_benchmarks(page) -> Dict[str, str]:
         return {}
 
     results: Dict[str, str] = {}
+    supported = {canonicalize_benchmark_name(alias)
+                 for component in load_config()['benchmarks'] for alias in component['aliases']}
     for record_match in _DETAIL_RECORD_PATTERN.finditer(html):
         record = record_match.group(0)
 
@@ -98,9 +103,13 @@ def extract_detail_benchmarks(page) -> Dict[str, str]:
             continue  # benchmark hasn't been normalized yet on llm-stats; skip
 
         try:
-            name = codecs.decode(name_match.group(1), "unicode_escape")
+            # Flight embeds JSON inside a JSON string; decode both escaping layers.
+            name = json.loads('"' + json.loads('"' + name_match.group(1) + '"') + '"')
             normalized = float(raw_norm)
-        except (UnicodeDecodeError, ValueError):
+        except ValueError:
+            continue
+
+        if canonicalize_benchmark_name(name) not in supported:
             continue
 
         if normalized < 0 or normalized > 1.0:
@@ -112,6 +121,7 @@ def extract_detail_benchmarks(page) -> Dict[str, str]:
     return results
 
 
+@preconditions(entries='sequence', filepath='path', headers='sequence', include_derived='bool', benchmark_headers='?sequence', rank_column_name='text', participation='?mapping', max_participation='?int', min_avg_iq='?number', max_avg_iq='?number', min_value='?number', max_value='?number', benchmark_min_max='?mapping', qualified_benchmarks='?set')
 def write_csv(
     entries: List[LeaderboardEntry],
     filepath: Path,
@@ -190,6 +200,7 @@ def write_csv(
     print(f"  Written to: {filepath.name}")
 
 
+@preconditions(entries='sequence', filepath='path', headers='sequence', include_derived='bool', benchmark_headers='?sequence', participation='?mapping', max_participation='?int', min_avg_iq='?number', max_avg_iq='?number', min_value='?number', max_value='?number', benchmark_min_max='?mapping', qualified_benchmarks='?set')
 def write_json(
     entries: List[LeaderboardEntry],
     filepath: Path,
@@ -244,6 +255,7 @@ def write_json(
     print(f"  Written to: {filepath.name}")
 
 
+@preconditions(entries='sequence', title='text', headers='sequence', max_col_width='int', model_col_extra='int', include_derived='bool', benchmark_headers='?sequence', rank_column_name='text', participation='?mapping', max_participation='?int', min_avg_iq='?number', max_avg_iq='?number', min_value='?number', max_value='?number', benchmark_min_max='?mapping', qualified_benchmarks='?set')
 def format_table(
     entries: List[LeaderboardEntry],
     title: str,
@@ -333,6 +345,7 @@ def format_table(
 COHORT_POOL_SIZE = 15
 
 
+@preconditions(entries='sequence')
 def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["LeaderboardEntry"]:
     """Drop rows that are older versions of another model in the same cohort.
 
@@ -357,6 +370,7 @@ def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["Leade
     return kept
 
 
+@preconditions(page='page', country_name='text', origin_code='text', max_models='int', stage='text')
 def scrape_country_leaderboard(
     page,
     country_name: str,
@@ -436,37 +450,11 @@ def scrape_country_leaderboard(
     all_headers = [h.inner_text().strip() for h in header_elements]
     print(f"  Found {len(all_headers)} columns")
     
-    # Identify benchmark columns (exclude metadata/non-benchmark columns).
-    #
-    # The llm-stats leaderboard also emits per-category aggregate columns that roll
-    # up individual benchmarks (Reasoning, Math, Coding, Search, Writing, Vision,
-    # Tools, Long Ctx, Finance, Legal, Health). Keeping them as benchmarks would
-    # double-count — each individual GPQA/AIME/etc. already feeds the "Reasoning"
-    # aggregate, so scoring across both drags outliers twice. We retain the raw
-    # columns for display but exclude them from the scoring set.
-    metadata_columns = {
-        "Rank", "Model", "Country", "License", "Context", "Input", "Output",
-        "Speed", "Organization", "Created", "Description",
-        "Input $/M", "Output $/M", "Input$/M", "Output$/M",
-        "Parameters (B)", "Parameters(B)", "Knowledge Cutoff", "KnowledgeCutoff",
-        "Multimodal", "Released",
-        # Not benchmarks, and each distorts the average in its own way:
-        #   LLM Stats  — llm-stats' own composite OF the benchmarks, so scoring
-        #                it counts every benchmark a second time.
-        #   Latency    — seconds, where lower is better. Normalised as a
-        #                benchmark it rewarded the slowest model: Claude Opus 5
-        #                at 11.1s outscored Muse Spark 1.3 at 3.0s.
-        #   CodeArena  — an Elo on a different scale with its own known range;
-        #                it skews a flat average of percentages.
-        # validate_models.META_KEYS already listed all three; the scraper did
-        # not, and a test now asserts the two stay in step.
-        "Latency", "LLM Stats", "LLMStats", "Code Arena", "CodeArena",
-        # Category-level aggregates (rollups of individual benchmarks)
-        "Reasoning", "Math", "Coding", "Search", "Writing", "Vision", "Tools",
-        "Long Ctx", "LongCtx", "Finance", "Legal", "Health",
-    }
-
-    benchmark_headers = [h for h in all_headers if h not in metadata_columns and h]
+    # The configured benchmark list is the only import allowlist.
+    supported = {canonicalize_benchmark_name(alias)
+                 for component in load_config()['benchmarks'] for alias in component['aliases']}
+    benchmark_headers = [h for h in all_headers if canonicalize_benchmark_name(h) in supported]
+    retained_headers = set(benchmark_headers) | MODEL_FIELDS | {'Rank', 'Input', 'Output', 'Created', 'Description'}
     
     # Extract rows
     rows = page.query_selector_all("tbody tr")
@@ -494,6 +482,8 @@ def scrape_country_leaderboard(
         columns = {}
         
         for col_idx, header in enumerate(all_headers):
+            if header not in retained_headers:
+                continue
             if col_idx < len(cells):
                 raw_value = cells[col_idx].inner_text().strip()
                 # Special handling for Multimodal column: llm-stats renders this
@@ -561,9 +551,10 @@ def scrape_country_leaderboard(
             f"Scoring assumes a cohort of {max_models}."
         )
 
-    return entries, all_headers, benchmark_headers
+    return entries, [h for h in all_headers if h in retained_headers], benchmark_headers
 
 
+@preconditions(page='page')
 def scrape_global_leaderboard(page) -> Dict[str, int]:
     """
     Scrape global leaderboard (no country filter) to get llm-stats rankings.
@@ -594,6 +585,7 @@ def scrape_global_leaderboard(page) -> Dict[str, int]:
     return global_rankings
 
 
+@preconditions(page='page', entries='sequence', known_benchmark_headers='?sequence', canonical_header_map='?mapping')
 def enrich_with_metadata(
     page,
     entries: List[LeaderboardEntry],
@@ -669,6 +661,7 @@ def enrich_with_metadata(
     return entries, new_headers
 
 
+@preconditions(models_path='path')
 def backup_models_json(models_path: Path) -> Path:
     """Create timestamped backup of models.json."""
     timestamp = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H%M%S")
@@ -681,6 +674,7 @@ def backup_models_json(models_path: Path) -> Path:
     return backup_path
 
 
+@preconditions(us_entries='sequence', cn_entries='sequence', all_headers='sequence', benchmark_headers='sequence', participation='?mapping', max_participation='?int', min_avg_iq='?number', max_avg_iq='?number', min_value='?number', max_value='?number', benchmark_min_max='?mapping', qualified_benchmarks='?set', scoring_parameters='?mapping')
 def build_history_entry(
     us_entries: List[LeaderboardEntry],
     cn_entries: List[LeaderboardEntry],
@@ -789,10 +783,10 @@ def build_history_entry(
     return entry
 
 
+@preconditions(models_path='path', new_entry='mapping')
 def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
     """Prepend new history entry to models.json."""
-    with open(models_path, 'r') as f:
-        data = json.load(f)
+    data = load_data(models_path)
 
     if 'history' not in data:
         data['history'] = []
@@ -831,21 +825,18 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
             date_label = ts[:10]
         data["metadata"]["footerText"] = (
             f"Data Audited {date_label} | Source: llm-stats.com | "
-            "IQ = nineteen configured weights; missing results count as zero"
+            "IQ = eighteen configured weights; missing results count as zero"
         )
 
-    with open(models_path, 'w') as f:
-        json.dump(data, f, indent=2)
-
-    # Also emit current.json: identical top-level shape but history truncated
-    # to the latest entry only. index.html fetches this (~40 KB) instead of the
-    # full multi-MB archive; models.json remains the complete dataset that the
-    # schema.org Dataset block and history.html point at.
-    current = {k: v for k, v in data.items() if k != "history"}
-    current["history"] = data["history"][:1]
-    current_path = models_path.parent / "current.json"
-    with open(current_path, 'w') as f:
-        json.dump(current, f, indent=2)
+    # Store observations once, then recompute every retained roster from them.
+    save_data(data, models_path)
+    from model_store import load_evidence
+    from rescore_history import replay
+    data = load_data(models_path)
+    report = replay(data, load_evidence(models_path.parent / 'data/model_catalog.json'))
+    save_data(data, models_path)
+    from model_store import atomic_json
+    atomic_json(models_path.parent / 'data/historical_benchmark_gaps.json', report['unresolved'])
 
     print(f"\n✅ Successfully prepended entry to models.json (+ wrote current.json)")
 
@@ -867,6 +858,7 @@ _INDEX_META_DATE_PATTERN = re.compile(
 )
 
 
+@preconditions(index_path='path', run_date='?text')
 def update_index_meta_description(index_path: Path, run_date: Optional[str] = None) -> bool:
     """Rewrite the trailing "Updated <Month Year>." in index.html's meta description.
 
@@ -917,6 +909,7 @@ _PAGE_YEAR_PATTERNS = (
 )
 
 
+@preconditions(paths='sequence', run_date='?text')
 def update_page_years(paths: List[Path], run_date: Optional[str] = None) -> bool:
     """Rewrite the year in titles/OG tags/footers on every page to the run year.
 
@@ -948,6 +941,7 @@ def update_page_years(paths: List[Path], run_date: Optional[str] = None) -> bool
     return changed_any
 
 
+@preconditions(sitemap_path='path', run_date='?text')
 def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -> bool:
     """Bump <lastmod> to today on every URL in _DAILY_SITEMAP_URLS.
 
@@ -992,6 +986,7 @@ def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -
     return changed
 
 
+@preconditions(args='namespace')
 def run_scraper(args):
     """Main scraper execution."""
     workspace_dir = Path(__file__).parent.parent
@@ -1298,12 +1293,12 @@ def run_scraper(args):
 
                 combined_entries = us_entries + cn_entries
 
-                # Research and scoring both use the configured nineteen components.
+                # Research and scoring both use the configured eighteen components.
                 # -------------------------------------------------------------
                 # Gap-Filling Pass — runs BEFORE Pass 1 so the scoring sees the
                 # enriched data from the start. See docs/ai_gap_filling.md.
                 # --no-gap-fill disables refresh and AI research. Direct sources
-                # do not require OPENAI_API_KEY; all nineteen components are researched.
+                # do not require OPENAI_API_KEY; all eighteen components are researched.
                 # -------------------------------------------------------------
                 if not getattr(args, "no_gap_fill", False):
                     from refresh_benchmark_sources import refresh_sources, persist_ai_findings
@@ -1503,6 +1498,7 @@ def run_scraper(args):
             browser.close()
 
 
+@preconditions()
 def main():
     parser = argparse.ArgumentParser(
         description="Scrape llm-stats.com leaderboard with staged architecture"

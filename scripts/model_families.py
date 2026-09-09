@@ -7,6 +7,7 @@ site should show each model once, at its newest version. Shared by the scraper
 (which drops the superseded rows) and validate_models.py (which fails the run
 if any survive).
 """
+from preconditions import preconditions
 import re
 from typing import Dict, List, Optional, Tuple
 
@@ -17,6 +18,7 @@ VERSION_TOKEN_RE = re.compile(r"\d+(?:\.\d+)*")
 CHECKPOINT_RE = re.compile(r"^\d{4}$")
 
 
+@preconditions(name='text')
 def model_family_key(name: str) -> str:
     """Collapse a model name to its family, dropping version/checkpoint tokens.
 
@@ -40,6 +42,7 @@ def model_family_key(name: str) -> str:
     return " ".join(tokens)
 
 
+@preconditions(name='text')
 def model_version_key(name: str) -> Optional[Tuple[int, ...]]:
     """Sortable version for a model name, or None if it carries no version.
 
@@ -60,6 +63,7 @@ def model_version_key(name: str) -> Optional[Tuple[int, ...]]:
     return version + (0,) * (4 - len(version)) + (checkpoint,)
 
 
+@preconditions(names='sequence')
 def superseded_models(names: List[str]) -> Dict[int, str]:
     """Map index -> superseding model name, for every name that is an older
     version of another name in the list.

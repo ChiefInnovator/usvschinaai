@@ -19,6 +19,8 @@ Checks (ERROR = fail the run, WARN = print only):
   WARN   description "released <date>" disagrees with Released column presence
   WARN   any benchmark cell moving > 15 points vs the previous snapshot
 """
+from preconditions import preconditions
+from model_store import load_data
 import json
 import re
 import sys
@@ -50,6 +52,7 @@ ARTIFACT_RE = re.compile(r"\.(pdf|html?|docx?|xlsx?|csv|json)$", re.IGNORECASE)
 DESC_RELEASED_RE = re.compile(r"released [A-Z][a-z]{2} \d{1,2}, \d{4}")
 
 
+@preconditions(name='text')
 def alias_base(name: str) -> str:
     """Canonical form used to detect two columns that are the same benchmark.
 
@@ -62,6 +65,7 @@ def alias_base(name: str) -> str:
     return canonicalize_benchmark_name(name)
 
 
+@preconditions(value='json')
 def parse_num(value):
     if value is None:
         return None
@@ -74,17 +78,18 @@ def parse_num(value):
         return None
 
 
+@preconditions(entry='mapping')
 def rows_of(entry):
     for team in entry.get("teams", {}).values():
         for row in team:
             yield row
 
 
+@preconditions()
 def main() -> int:
     errors, warnings = [], []
 
-    with open(MODELS_PATH) as f:
-        data = json.load(f)
+    data = load_data(MODELS_PATH)
     history = data.get("history") or []
     if not history:
         print("ERROR: models.json has no history entries")

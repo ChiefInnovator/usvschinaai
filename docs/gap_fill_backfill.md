@@ -3,11 +3,11 @@
 Run `.venv/bin/python scripts/rescore_history.py --rebuild --write --refresh-images`.
 The rebuild retains historical timestamps, exact model cohorts and model
 metadata/pricing. It clears every old benchmark and calculated score, applies
-dated evidence for the configured nineteen benchmarks, and recalculates Avg IQ,
+dated evidence for the configured eighteen benchmarks, and recalculates Avg IQ,
 Value, Unified Score, coverage, badges and graph inputs. Without `--rebuild`,
 replay retains selected raw results but still removes all legacy benchmark fields.
 
-Evidence is stored separately in `data/historical_benchmark_evidence.json`, with
+Evidence is stored separately in `data/model_catalog.json`, with
 exact model/component, percentage, source, configuration and earliest supported
 date. Stable retained observations for selected benchmarks are usable only from
 their recorded observation date. Published evidence cannot be backdated before
@@ -74,3 +74,5 @@ accepted evidence is retained with dates and configuration, then the daily
 workflow rescores historical snapshots before generating the existing visuals.
 See [AI gap filling](ai_gap_filling.md#routine-research-workflow) for source
 coverage, failure handling and the limits of automated research.
+
+Shared model records, dated roster references, and full-history recalculation are documented in [Model storage](model_storage.md).

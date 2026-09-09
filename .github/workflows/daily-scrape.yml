@@ -41,7 +41,7 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          playwright install chromium
+          python -m playwright install --with-deps chromium
 
       - name: Run test suite
         # Cheap preflight: catches dependency/version problems before the
@@ -121,7 +121,7 @@ jobs:
         run: |
           CHANGES=false
           git diff --quiet data/ || CHANGES=true
-          git diff --quiet models.json || CHANGES=true
+          git diff --quiet models.json data/model_catalog.json || CHANGES=true
           git diff --quiet current.json 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q current.json && CHANGES=true
           git diff --quiet news.json 2>/dev/null || CHANGES=true
@@ -154,7 +154,7 @@ jobs:
           # audit history is visible in git log.
           git add data/ai_gap_cache.json 2>/dev/null || true
           git add data/ai_fill_history.jsonl 2>/dev/null || true
-          git add data/historical_benchmark_evidence.json data/historical_benchmark_gaps.json data/benchmark_source_refresh.json
+          git add data/model_catalog.json data/historical_benchmark_gaps.json data/benchmark_source_refresh.json
           # Today's carousel (older slides are removed), rotation history,
           # caption cache and the USD ledger.
           git add -A social/ 2>/dev/null || true

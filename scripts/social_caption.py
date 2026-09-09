@@ -23,6 +23,8 @@ spends as few as the job allows:
 
 Batching is deliberately absent: at one call a day there is nothing to batch.
 """
+from preconditions import preconditions
+from model_store import load_data
 import json
 import os
 import sys
@@ -72,6 +74,7 @@ CAPTION_SCHEMA = {
 BASE_TAGS = ["#AI", "#ArtificialIntelligence", "#USvsChina", "#LLM", "#AIRace", "#TechNews"]
 
 
+@preconditions(weight='int')
 def choose_caption_model(weight: int) -> str:
     override = os.environ.get("SOCIAL_CAPTION_MODEL", "").strip()
     if override:
@@ -79,6 +82,7 @@ def choose_caption_model(weight: int) -> str:
     return STRONG_MODEL if weight >= ESCALATE_AT_WEIGHT else ROUTINE_MODEL
 
 
+@preconditions(model='text', usage='mapping')
 def cost_usd(model: str, usage: Dict[str, Any]) -> float:
     pin, pcached, pout = PRICES.get(model, (0.0, 0.0, 0.0))
     inp = int(usage.get("input_tokens", 0))
@@ -87,6 +91,7 @@ def cost_usd(model: str, usage: Dict[str, Any]) -> float:
     return round(((inp - cached) * pin + cached * pcached + out * pout) / 1_000_000, 6)
 
 
+@preconditions(facts='mapping', fmt='text')
 def fallback_caption(facts: Dict[str, Any], fmt: str) -> Dict[str, Any]:
     """Deterministic, number-true caption when the model is unavailable."""
     t = facts["totals"]; top = facts["top10"]
@@ -106,6 +111,7 @@ def fallback_caption(facts: Dict[str, Any], fmt: str) -> Dict[str, Any]:
             "question": "Which lab would you bet on for the rest of 2026?", "hashtags": BASE_TAGS}
 
 
+@preconditions()
 def _load_cache() -> Dict[str, Any]:
     try:
         return json.loads(CACHE_PATH.read_text())
@@ -113,17 +119,20 @@ def _load_cache() -> Dict[str, Any]:
         return {}
 
 
+@preconditions(cache='mapping')
 def _save_cache(cache: Dict[str, Any]) -> None:
     CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     CACHE_PATH.write_text(json.dumps(cache, indent=2))
 
 
+@preconditions(record='mapping')
 def _ledger(record: Dict[str, Any]) -> None:
     LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
     with open(LEDGER_PATH, "a") as f:
         f.write(json.dumps(record) + "\n")
 
 
+@preconditions(model='text', facts='mapping', fmt='text', api_key='text')
 def call_model(model: str, facts: Dict[str, Any], fmt: str, api_key: str) -> Dict[str, Any]:
     """One Responses API call, schema-constrained, capped. Raises on any problem."""
     body = {
@@ -148,6 +157,7 @@ def call_model(model: str, facts: Dict[str, Any], fmt: str, api_key: str) -> Dic
     return caption
 
 
+@preconditions(facts='mapping', fmt='text', weight='int', api_key='?text', use_cache='bool')
 def generate_caption(facts: Dict[str, Any], fmt: str, weight: int,
                      api_key: Optional[str] = None, use_cache: bool = True) -> Dict[str, Any]:
     key = f"{facts.get('timestamp', '')}|{fmt}"
@@ -177,6 +187,7 @@ def generate_caption(facts: Dict[str, Any], fmt: str, weight: int,
     return dict(caption, _source=model)
 
 
+@preconditions(caption='mapping')
 def render_caption(caption: Dict[str, Any]) -> str:
     lines = [caption["hook"], ""] + [f"• {b}" for b in caption["bullets"]] + ["", caption["question"], "",
              "Live board: usvschina.ai", "", " ".join(t if t.startswith("#") else f"#{t}" for t in caption["hashtags"])]
@@ -186,7 +197,7 @@ def render_caption(caption: Dict[str, Any]) -> str:
 if __name__ == "__main__":
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from social_formats import plan_today
-    plan = plan_today(json.load(open(REPO_ROOT / "models.json")))
+    plan = plan_today(load_data(REPO_ROOT / "models.json"))
     cap = generate_caption(plan["facts"], plan["format"], plan["weight"])
     print(f"[caption] source={cap.get('_source')} model={choose_caption_model(plan['weight'])}\n")
     print(render_caption(cap))

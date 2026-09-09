@@ -60,5 +60,5 @@ DeepSWE operator page was checked for its separate v1/v1.1 series; existing Epoc
 - `data/benchmark_leaderboard_audit_findings.json`: benchmark-page observations.
 - `data/ale_audit_findings.json`: full-split official ALE observations.
 - `data/officeqa_paper_audit_findings.json`: dated OfficeQA paper observations.
-- `data/historical_benchmark_evidence.json`: accepted evidence used for replay.
+- `data/model_catalog.json`: accepted evidence used for replay.
 - `data/historical_benchmark_gaps.json`: remaining historical gaps.

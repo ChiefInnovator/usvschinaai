@@ -6,6 +6,8 @@ IG image: 1080x1350 (4:5) for Instagram. The feed crops anything taller
 than 4:5, so a 9:16 canvas lost the header and the #10 row.
 Both images are compressed via Pillow to minimize file size.
 """
+from preconditions import preconditions
+from model_store import load_data
 import json
 import re
 import sys
@@ -17,6 +19,7 @@ from PIL import Image
 from playwright.sync_api import sync_playwright
 
 
+@preconditions(models_path='path')
 def load_scores(models_path):
     """Read models.json and compute team scores mirroring index.html JS logic.
 
@@ -26,8 +29,7 @@ def load_scores(models_path):
       3. Average avgIq and value for each country → Avg IQ / Avg Value
     We replicate that here so the OG image shows the same numbers.
     """
-    with open(models_path) as f:
-        data = json.load(f)
+    data = load_data(models_path)
 
     history = data.get("history", [])
     if not history:
@@ -92,10 +94,10 @@ def load_scores(models_path):
     }
 
 
+@preconditions(models_path='path')
 def load_top10_models(models_path):
     """Return the top 10 models with name, origin, and unified score."""
-    with open(models_path) as f:
-        data = json.load(f)
+    data = load_data(models_path)
 
     entry = data["history"][0]
     all_models = []
@@ -110,6 +112,7 @@ def load_top10_models(models_path):
     return all_models[:10]
 
 
+@preconditions(top10='sequence')
 def build_top10_html(top10):
     """Build HTML rows for the top 10 leaderboard in the IG template."""
     rows = []
@@ -128,6 +131,7 @@ def build_top10_html(top10):
     return "\n".join(rows)
 
 
+@preconditions(news_path='path')
 def load_news_items(news_path):
     """Read news.json and return all items sorted by relevance for the marquee."""
     try:
@@ -154,6 +158,7 @@ def load_news_items(news_path):
         return None
 
 
+@preconditions(news_items='sequence')
 def build_news_html(news_items):
     """Build the inner HTML for the news marquee track from news items."""
     if not news_items:
@@ -173,6 +178,7 @@ def build_news_html(news_items):
     return single + single
 
 
+@preconditions(scores='mapping', news_items='sequence', template_path='path')
 def build_html(scores, news_items, template_path):
     """Load the OG HTML template and replace placeholders with computed scores."""
     template = template_path.read_text(encoding="utf-8")
@@ -206,6 +212,7 @@ def build_html(scores, news_items, template_path):
     return html
 
 
+@preconditions(scores='mapping', top10='sequence', template_path='path')
 def build_ig_html(scores, top10, template_path):
     """Load the IG HTML template and replace placeholders with scores and leaderboard."""
     template = template_path.read_text(encoding="utf-8")
@@ -245,6 +252,7 @@ def build_ig_html(scores, top10, template_path):
     return html
 
 
+@preconditions(html='text', output_path='path', width='positive_int', height='positive_int')
 def screenshot_html(html, output_path, width, height):
     """Use Playwright to render HTML at given dimensions and save a screenshot."""
     with sync_playwright() as p:
@@ -257,6 +265,7 @@ def screenshot_html(html, output_path, width, height):
             browser.close()
 
 
+@preconditions(path='path')
 def compress_png(path):
     """Compress a PNG file in-place using Pillow for smaller file size."""
     original_size = path.stat().st_size
@@ -268,6 +277,7 @@ def compress_png(path):
     print(f"Compressed {path.name}: {original_size:,} → {compressed_size:,} bytes ({pct:.1f}% smaller)")
 
 
+@preconditions(workspace='path')
 def update_og_image_version(workspace):
     """Update og:image and twitter:image URLs in all HTML files with a cache-busting version."""
     version = int(time.time())
@@ -291,6 +301,7 @@ def update_og_image_version(workspace):
     return updated
 
 
+@preconditions()
 def main():
     workspace = Path(__file__).resolve().parent.parent
     models_path = workspace / "models.json"

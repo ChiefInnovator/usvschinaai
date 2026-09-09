@@ -5,13 +5,15 @@
 
 Each findings file is a JSON array of researched results (see
 docs/gap_fill_backfill.md). Records are normalized into
-`data/historical_benchmark_evidence.json` entries: the applicability date is
+`data/model_catalog.json` entries: the applicability date is
 clamped so a score is never applied before the source published it, before the
 benchmark version existed, or before the model appeared in our history.
 Without --write the command reports what it would add and changes nothing.
 """
+from preconditions import preconditions
 import argparse
 import hashlib
+from model_store import load_data, load_evidence, save_evidence
 import json
 import sys
 from datetime import date, datetime, timezone
@@ -24,15 +26,16 @@ from benchmark_names import canonicalize_benchmark_name as canonical
 from scoring import MISSING_VALUE_MARKERS
 
 ROOT = Path(__file__).resolve().parents[1]
-EVIDENCE_PATH = ROOT / 'data/historical_benchmark_evidence.json'
+EVIDENCE_PATH = ROOT / 'data/model_catalog.json'
 RETRIEVED_AT = datetime.now(timezone.utc).date().isoformat()
 ACCEPTED_SOURCE_TYPES = {'vendor_blog', 'model_card', 'system_card', 'paper',
                          'official_leaderboard', 'third_party_leaderboard'}
 
 
+@preconditions()
 def model_first_seen():
     """Earliest snapshot date each model appears in, keyed by exact model name."""
-    data = json.loads((ROOT / 'models.json').read_text())
+    data = load_data(ROOT / 'models.json')
     first = {}
     for snapshot in data['history']:
         day = snapshot['timestamp'][:10]
@@ -44,10 +47,12 @@ def model_first_seen():
     return first
 
 
+@preconditions(name='text')
 def squash(name):
     return ''.join(c for c in name.lower() if c.isalnum())
 
 
+@preconditions(name='text', first_seen='mapping')
 def resolve_model(name, first_seen):
     """Match a researched name to an exact history model, allowing only
     punctuation/spacing differences and only when the match is unambiguous."""
@@ -57,6 +62,7 @@ def resolve_model(name, first_seen):
     return matches[0] if len(matches) == 1 else None
 
 
+@preconditions(raw='json')
 def parse_score(raw):
     if isinstance(raw, (int, float)):
         value = float(raw)
@@ -69,11 +75,13 @@ def parse_score(raw):
     return round(value, 1) if 0 <= value <= 100 else None
 
 
+@preconditions(finding='mapping')
 def record_id(finding):
     seed = f"{finding['model']}|{finding['component']}|{finding['score']}|{finding.get('sourceUrl')}"
     return hashlib.sha1(seed.encode()).hexdigest()[:16]
 
 
+@preconditions(finding='mapping', components='mapping', availability='mapping', first_seen='mapping', undated_from_release='bool', retrieved_at='?date')
 def normalize(finding, components, availability, first_seen, undated_from_release=False, *, retrieved_at=None):
     """Return (evidence_record, None) or (None, rejection_reason)."""
     retrieved_at = retrieved_at or RETRIEVED_AT
@@ -132,6 +140,7 @@ def normalize(finding, components, availability, first_seen, undated_from_releas
     return record, None
 
 
+@preconditions()
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('findings', nargs='+')
@@ -141,7 +150,7 @@ def main():
                              'availability date rather than only from the retrieval date')
     args = parser.parse_args()
 
-    evidence = json.loads(EVIDENCE_PATH.read_text())
+    evidence = load_evidence(EVIDENCE_PATH)
     components = {b['id']: b for b in load_config()['benchmarks']}
     availability = evidence.get('benchmarkAvailability', {})
     first_seen = model_first_seen()
@@ -173,7 +182,7 @@ def main():
         evidence['results'].extend(added)
         evidence['results'].sort(key=lambda r: (r['model'], r['component'], r['availableFrom']))
         evidence['retrievedAt'] = RETRIEVED_AT
-        EVIDENCE_PATH.write_text(json.dumps(evidence, indent=2, ensure_ascii=False)+'\n')
+        save_evidence(evidence, EVIDENCE_PATH)
     (ROOT / 'data/benchmark_findings_rejected.json').write_text(
         json.dumps(rejected, indent=2, ensure_ascii=False)+'\n')
     print(json.dumps(report, indent=2))

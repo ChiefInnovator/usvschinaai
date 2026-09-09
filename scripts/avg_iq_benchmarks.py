@@ -1,4 +1,5 @@
 """Versioned inputs for Avg IQ; unrelated benchmark records stay untouched."""
+from preconditions import preconditions
 import json
 import math
 from functools import lru_cache
@@ -8,12 +9,13 @@ from benchmark_names import canonicalize_benchmark_name as canonical
 CONFIG_PATH = Path(__file__).resolve().parents[1] / 'data/core_benchmarks.json'
 
 
+@preconditions()
 @lru_cache(maxsize=1)
 def load_config():
     config = json.loads(CONFIG_PATH.read_text())
     benchmarks = config['benchmarks']
-    if len(benchmarks) != 19 or not math.isclose(sum(b['weight'] for b in benchmarks), 100, rel_tol=0, abs_tol=1e-9) or any(not math.isfinite(b['weight']) or b['weight'] <= 0 for b in benchmarks) or config.get('denominator') != 1.0 or config.get('missingContribution') != 0:
-        raise ValueError('Avg IQ requires nineteen benchmark weights totaling 100%')
+    if len(benchmarks) != 18 or not math.isclose(sum(b['weight'] for b in benchmarks), 100, rel_tol=0, abs_tol=1e-9) or any(not math.isfinite(b['weight']) or b['weight'] < 0 for b in benchmarks) or config.get('denominator') != 1.0 or config.get('missingContribution') != 0:
+        raise ValueError('Avg IQ requires eighteen benchmark weights totaling 100%')
     aliases = {}
     for b in benchmarks:
         for alias in b['aliases']:
@@ -24,6 +26,7 @@ def load_config():
     return config
 
 
+@preconditions(headers='sequence', config='?mapping')
 def selected_weights(headers, config=None):
     config = config or load_config()
     aliases = {canonical(a): b['weight'] for b in config['benchmarks'] for a in b['aliases']}
@@ -32,6 +35,7 @@ def selected_weights(headers, config=None):
     return {header: aliases[canonical(header)]/100 for header in headers if canonical(header) in aliases}
 
 
+@preconditions(header='text')
 @lru_cache(maxsize=128)
 def component_aliases(header):
     for component in load_config()['benchmarks']:
@@ -41,6 +45,7 @@ def component_aliases(header):
     return frozenset()
 
 
+@preconditions(columns='mapping', header='text')
 def selected_value(columns, header):
     """Resolve one configured component using ingestion's first-present rule."""
     from scoring import MISSING_VALUE_MARKERS
@@ -66,6 +71,7 @@ MODEL_FIELDS = frozenset({
 DERIVED_FIELDS = frozenset({'avgIq', 'value', 'unified', 'coverage', 'provisional', '_coverage'})
 
 
+@preconditions(columns='mapping', rebuild='bool')
 def selected_columns(columns, *, rebuild=False):
     """Drop legacy benchmark inputs; optionally clear all scores for rebuilding."""
     result = {k: v for k, v in columns.items() if k in MODEL_FIELDS}

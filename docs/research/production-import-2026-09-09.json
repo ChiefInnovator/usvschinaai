@@ -1,0 +1,2069 @@
+{
+  "source": "https://usvschina.ai/models.json",
+  "retrievedAt": "2026-09-09",
+  "sourceSha256": "f6c6555e82bd28508f84062f3477627700eb9cb572a786731f6f384591b81203",
+  "importedTimestamps": [
+    "2026-09-09T03:39:45+00:00",
+    "2026-09-08T03:39:33+00:00"
+  ],
+  "previousSnapshotsPreserved": 234,
+  "snapshotCount": 236,
+  "schemaVersion": 2,
+  "benchmarkCount": 19,
+  "snapshots": [
+    {
+      "date": "2026-09-09",
+      "models": 20,
+      "supportedBenchmarkCells": 220,
+      "missingBenchmarkCells": 160
+    },
+    {
+      "date": "2026-09-08",
+      "models": 20,
+      "supportedBenchmarkCells": 219,
+      "missingBenchmarkCells": 161
+    }
+  ],
+  "newEvidenceCount": 10,
+  "newEvidence": [
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 33.3,
+      "unit": "percent",
+      "source": "https://deepmind.google/models/model-cards/gemini-3-7-flash/",
+      "availableFrom": "2026-09-08",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Agents' Last Exam pass rate, exact Claude Sonnet 5 comparison column; not partial-credit score.",
+      "kind": "retained-observation",
+      "sourceType": "model_card",
+      "confidence": "high",
+      "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date.",
+      "id": "16192c32df17da2fe19e",
+      "model": "Claude Sonnet 5",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 34.2,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; reasoning-max; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-04",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "a34383c69636e069",
+      "model": "GPT-6 Astra",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 32.2,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; reasoning-xhigh; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-04",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "86909431afa328d0",
+      "model": "GPT-6 Astra",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 31.6,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; reasoning-high; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-04",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "41a49b50f9a19b5b",
+      "model": "GPT-6 Astra",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 28.3,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; reasoning-none; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-04",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "b956db7ef937d1e0",
+      "model": "GPT-6 Astra",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 29.6,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; reasoning-low; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-04",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "90f5abd228d372f1",
+      "model": "GPT-6 Astra",
+      "component": "agents-last-exam"
+    },
+    {
+      "benchmark": "Humanity’s Last Exam",
+      "score": 57.2,
+      "unit": "percent",
+      "source": "https://openai.com/index/gpt-6-astra/",
+      "availableFrom": "2026-09-08",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Humanity's Last Exam with tools; exact GPT-6 Astra column in vendor evaluation table.",
+      "kind": "retained-observation",
+      "sourceType": "vendor_blog",
+      "confidence": "high",
+      "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date.",
+      "id": "5ee117b3b51653fc0318",
+      "model": "GPT-6 Astra",
+      "component": "humanitys-last-exam"
+    },
+    {
+      "benchmark": "Humanity’s Last Exam",
+      "score": 45.4,
+      "unit": "percent",
+      "source": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/guides/gemini-3-8-flash",
+      "availableFrom": "2026-09-08",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Humanity's Last Exam, exact Gemini 3.8 Flash column in standard developer evaluation table; tool configuration not stated.",
+      "kind": "retained-observation",
+      "sourceType": "model_card",
+      "confidence": "high",
+      "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date.",
+      "id": "e94030ddab33dea03422",
+      "model": "Gemini 3.8 Flash",
+      "component": "humanitys-last-exam"
+    },
+    {
+      "benchmark": "Terminal-Bench 2.1",
+      "score": 85.4,
+      "unit": "percent",
+      "source": "https://artificialanalysis.ai/models/muse-spark-1-3-xhigh",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Artificial Analysis independent evaluation of Muse Spark 1.3 (xhigh).",
+      "kind": "published",
+      "sourceType": "third_party_leaderboard",
+      "confidence": "medium",
+      "modelAvailableFrom": "2026-09-03",
+      "notes": "AA record muse-spark-1-3-xhigh; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date.",
+      "id": "b6ef4621d06f84f5",
+      "model": "Muse Spark 1.3",
+      "component": "terminal-bench-2.1"
+    },
+    {
+      "benchmark": "Agents’ Last Exam",
+      "score": 32.2,
+      "unit": "percent",
+      "source": "https://agents-last-exam.org/api/demo/leaderboard",
+      "availableFrom": "2026-09-09",
+      "retrievedAt": "2026-09-09",
+      "configuration": "Full ALE pass rate; codex; None; 152 split tasks.",
+      "kind": "published",
+      "sourceType": "official_leaderboard",
+      "confidence": "high",
+      "modelAvailableFrom": "2026-09-03",
+      "notes": "Undated API observation; partial-credit avgScore excluded.",
+      "id": "fc03aa5ffccedc4c",
+      "model": "Muse Spark 1.3",
+      "component": "agents-last-exam"
+    }
+  ],
+  "rejectedProductionObservations": [
+    {
+      "model": "Claude Fable 5.1",
+      "component": "toolathlon",
+      "score": 77.8,
+      "reason": "Toolathlon-Verified, with mixed-model fallback; not the configured original Toolathlon.",
+      "source": "https://www.anthropic.com/claude-fable-5-1-mythos-5-1-system-card"
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "toolathlon",
+      "score": 80.6,
+      "reason": "Toolathlon-Verified, not the configured original Toolathlon.",
+      "source": "https://www.anthropic.com/claude-opus-5-system-card"
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "gpqa",
+      "score": 93.7,
+      "reason": "No generic GPQA result verified in the cited system card; GPQA Diamond does not establish generic GPQA.",
+      "source": "https://www.anthropic.com/claude-opus-5-system-card"
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "component": "humanitys-last-exam",
+      "score": 50.4,
+      "reason": "Cited release table assigns 50.4 to Agents Last Exam, not HLE.",
+      "source": "https://openai.com/index/gpt-5-6/"
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "humanitys-last-exam",
+      "score": 55.4,
+      "reason": "Image labels 55.4 HLE with tools, text-only; subset not established as comparable to the configured full HLE component.",
+      "source": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg"
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "toolathlon",
+      "score": 67.1,
+      "reason": "Comparison table labels this Toolathlon Verified, not original Toolathlon.",
+      "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8/blob/main/README.md"
+    }
+  ],
+  "sourceRefresh": {
+    "retrievedAt": "2026-09-09",
+    "modelsChecked": 91,
+    "sourcesChecked": 102,
+    "findings": 1022,
+    "accepted": 0,
+    "failures": [],
+    "skippedConfigurations": [],
+    "rejected": [],
+    "leaderboardCoverage": [
+      {
+        "source": "vals:mmlu_pro",
+        "component": "mmlu-pro",
+        "rows": 138,
+        "matched": 38,
+        "unmatched": [
+          "google/gemini-3.1-pro-preview",
+          "google/gemini-3-pro-preview",
+          "google/gemini-3.6-flash",
+          "anthropic/claude-opus-4-6-thinking",
+          "google/gemini-3-flash-preview",
+          "meta/muse_spark_1_2",
+          "anthropic/claude-opus-4-1-20250805-thinking",
+          "openai/gpt-5.4-2026-03-05",
+          "anthropic/claude-sonnet-4-5-20250929-thinking",
+          "anthropic/claude-opus-4-5-20251101-thinking",
+          "deepseek/deepseek-v4-pro",
+          "anthropic/claude-opus-4-1-20250805",
+          "alibaba/qwen3.5-plus-thinking",
+          "openai/gpt-5-2025-08-07",
+          "openai/gpt-5.1-2025-11-13",
+          "thinkingmachines/inkling",
+          "grok/grok-4.20-0309-reasoning",
+          "google/gemini-3.1-flash-lite-preview",
+          "openai/gpt-5.2-2025-12-11",
+          "anthropic/claude-opus-4-20250514",
+          "zai/glm-5-thinking",
+          "kimi/kimi-k2.5-thinking",
+          "grok/grok-4.3",
+          "google/gemini-3.5-flash-lite",
+          "nvidia/nemotron-3-ultra-550b-a55b",
+          "openai/o3-2025-04-16",
+          "anthropic/claude-opus-4-5-20251101",
+          "thinkingmachines/inkling-small",
+          "grok/grok-4-0709",
+          "alibaba/qwen3-max-2026-01-23",
+          "fireworks/deepseek-v3p2-thinking",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "alibaba/qwen3-max",
+          "minimax/MiniMax-M3",
+          "grok/grok-4-1-fast-reasoning",
+          "alibaba/qwen3.5-flash",
+          "google/gemini-2.5-pro-exp-03-25",
+          "anthropic/claude-sonnet-4-20250514-thinking",
+          "google/gemini-2.5-flash-preview-09-2025",
+          "google/gemini-2.5-flash-preview-09-2025-thinking",
+          "alibaba/qwen3-max-preview",
+          "openai/o1-2024-12-17",
+          "fireworks/deepseek-v3p2",
+          "xiaomi/mimo-v2.5",
+          "anthropic/claude-3-7-sonnet-20250219-thinking",
+          "openai/gpt-5-mini-2025-08-07",
+          "ant/ling-3.0-flash-2607",
+          "grok/grok-3-mini-fast-high-reasoning",
+          "fireworks/qwen3-235b-a22b",
+          "kimi/kimi-k2-thinking",
+          "anthropic/claude-3-7-sonnet-20250219",
+          "openai/o4-mini-2025-04-16",
+          "openai/gpt-4.1-2025-04-14",
+          "grok/grok-3-mini-fast-low-reasoning",
+          "grok/grok-3",
+          "mistralai/mistral-large-2512",
+          "grok/grok-4-fast-reasoning",
+          "fireworks/deepseek-v3-0324",
+          "anthropic/claude-sonnet-4-20250514",
+          "fireworks/llama4-maverick-instruct-basic",
+          "together/moonshotai/Kimi-K2-Instruct",
+          "fireworks/gpt-oss-120b",
+          "google/gemini-2.5-flash-lite-preview-09-2025-thinking",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "openai/o3-mini-2025-01-31",
+          "google/gemini-2.5-flash-lite-preview-09-2025",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "google/gemini-2.0-flash-001",
+          "openai/gpt-4.1-mini-2025-04-14",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "openai/gpt-5-nano-2025-08-07",
+          "grok/grok-2-1212",
+          "mistralai/mistral-medium-3.5",
+          "google/gemini-1.5-pro-002",
+          "mistralai/mistral-medium-2505",
+          "grok/grok-4-1-fast-non-reasoning",
+          "openai/gpt-4o-2024-08-06",
+          "fireworks/deepseek-v3",
+          "openai/gpt-4o-2024-11-20",
+          "fireworks/gpt-oss-20b",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561",
+          "grok/grok-4-fast-non-reasoning",
+          "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+          "mistralai/mistral-large-2411",
+          "together/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561-thinking",
+          "cohere/command-a-03-2025",
+          "poolside/laguna-xs.2",
+          "poolside/laguna-m.1",
+          "mistralai/magistral-medium-2509",
+          "mistralai/mistral-small-2503",
+          "google/gemini-1.5-flash-002",
+          "mistralai/mistral-small-2402",
+          "anthropic/claude-3-5-haiku-20241022",
+          "openai/gpt-4.1-nano-2025-04-14",
+          "openai/gpt-4o-mini-2024-07-18",
+          "mistralai/magistral-small-2509",
+          "ai21labs/jamba-large-1.6",
+          "cohere/command-r-plus",
+          "ai21labs/jamba-mini-1.6"
+        ]
+      },
+      {
+        "source": "vals:aime",
+        "component": "aime-2025",
+        "rows": 96,
+        "matched": 12,
+        "unmatched": [
+          "google/gemini-3.1-pro-preview",
+          "openai/gpt-5.2-2025-12-11",
+          "openai/gpt-5.4-2026-03-05",
+          "google/gemini-3-flash-preview",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "google/gemini-3-pro-preview",
+          "grok/grok-4.20-0309-reasoning",
+          "anthropic/claude-opus-4-6-thinking",
+          "kimi/kimi-k2.5-thinking",
+          "openai/gpt-5.1-2025-11-13",
+          "openai/gpt-5-2025-08-07",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "fireworks/gpt-oss-120b",
+          "alibaba/qwen3.5-flash",
+          "anthropic/claude-opus-4-5-20251101-thinking",
+          "grok/grok-4-1-fast-reasoning",
+          "openai/gpt-5-mini-2025-08-07",
+          "zai/glm-5-thinking",
+          "grok/grok-4-fast-reasoning",
+          "grok/grok-4-0709",
+          "anthropic/claude-sonnet-4-5-20250929-thinking",
+          "fireworks/gpt-oss-20b",
+          "kimi/kimi-k2-thinking",
+          "google/gemini-2.5-pro-exp-03-25",
+          "openai/o3-mini-2025-01-31",
+          "alibaba/qwen3.5-plus-thinking",
+          "fireworks/qwen3-235b-a22b",
+          "openai/o3-2025-04-16",
+          "openai/o4-mini-2025-04-16",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "fireworks/deepseek-v3p2-thinking",
+          "grok/grok-3-mini-fast-high-reasoning",
+          "openai/gpt-5-nano-2025-08-07",
+          "mistralai/magistral-medium-2509",
+          "google/gemini-3.1-flash-lite-preview",
+          "mistralai/magistral-small-2509",
+          "alibaba/qwen3-max",
+          "anthropic/claude-opus-4-1-20250805-thinking",
+          "anthropic/claude-sonnet-4-20250514-thinking",
+          "openai/o1-2024-12-17",
+          "grok/grok-3-mini-fast-low-reasoning",
+          "anthropic/claude-opus-4-5-20251101",
+          "fireworks/deepseek-v3p2",
+          "grok/grok-3",
+          "alibaba/qwen3-max-preview",
+          "together/moonshotai/Kimi-K2-Instruct",
+          "google/gemini-2.5-flash-preview-09-2025-thinking",
+          "openai/gpt-4.1-mini-2025-04-14",
+          "google/gemini-2.5-flash-preview-09-2025",
+          "grok/grok-4-fast-non-reasoning",
+          "fireworks/deepseek-v3-0324",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561-thinking",
+          "anthropic/claude-3-7-sonnet-20250219-thinking",
+          "anthropic/claude-opus-4-1-20250805",
+          "mistralai/mistral-medium-2505",
+          "anthropic/claude-sonnet-4-20250514",
+          "anthropic/claude-opus-4-20250514",
+          "grok/grok-4-1-fast-non-reasoning",
+          "google/gemini-2.5-flash-lite-preview-09-2025-thinking",
+          "mistralai/mistral-large-2512",
+          "openai/gpt-4.1-2025-04-14",
+          "google/gemini-2.0-flash-001",
+          "fireworks/deepseek-v3",
+          "openai/gpt-4.1-nano-2025-04-14",
+          "google/gemini-2.5-flash-lite-preview-09-2025",
+          "anthropic/claude-3-7-sonnet-20250219",
+          "google/gemini-1.5-flash-002",
+          "fireworks/llama4-maverick-instruct-basic",
+          "openai/gpt-4o-2024-08-06",
+          "openai/gpt-4o-mini-2024-07-18",
+          "google/gemini-1.5-pro-002",
+          "cohere/command-a-03-2025",
+          "grok/grok-2-1212",
+          "together/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "openai/gpt-4o-2024-11-20",
+          "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+          "mistralai/mistral-large-2411",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "mistralai/mistral-small-2402",
+          "mistralai/mistral-small-2503",
+          "ai21labs/jamba-mini-1.6",
+          "anthropic/claude-3-5-haiku-20241022",
+          "ai21labs/jamba-large-1.6"
+        ]
+      },
+      {
+        "source": "vals:lcb",
+        "component": "livecodebench-v6",
+        "rows": 143,
+        "matched": 37,
+        "unmatched": [
+          "google/gemini-3.1-pro-preview",
+          "google/gemini-3.6-flash",
+          "deepseek/deepseek-v4-pro",
+          "openai/gpt-5.3-codex",
+          "openai/gpt-5-mini-2025-08-07",
+          "openai/gpt-5.1-2025-11-13",
+          "google/gemini-3-pro-preview",
+          "nvidia/nemotron-3-ultra-550b-a55b",
+          "thinkingmachines/inkling-small",
+          "openai/gpt-5-2025-08-07",
+          "google/gemini-3-flash-preview",
+          "openai/gpt-5.1-codex",
+          "thinkingmachines/inkling",
+          "openai/gpt-5.2-2025-12-11",
+          "alibaba/qwen3.5-plus-thinking",
+          "openai/gpt-5-codex",
+          "anthropic/claude-opus-4-6-thinking",
+          "grok/grok-4.3",
+          "grok/grok-4.20-0309-reasoning",
+          "openai/gpt-5.4-2026-03-05",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "ant/ling-3.0-flash-2607",
+          "openai/o3-2025-04-16",
+          "kimi/kimi-k2.5-thinking",
+          "anthropic/claude-opus-4-5-20251101-thinking",
+          "openai/gpt-5.1-codex-max",
+          "alibaba/qwen3.5-flash",
+          "grok/grok-4-0709",
+          "fireworks/gpt-oss-120b",
+          "openai/o4-mini-2025-04-16",
+          "minimax/MiniMax-M3",
+          "kimi/kimi-k2.7-code",
+          "zai/glm-5-thinking",
+          "xiaomi/mimo-v2.5",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "fireworks/deepseek-v3p2-thinking",
+          "grok/grok-4-1-fast-reasoning",
+          "fireworks/gpt-oss-20b",
+          "google/gemini-3.1-flash-lite-preview",
+          "google/gemini-2.5-pro-preview-03-25",
+          "google/gemini-3.5-flash-lite",
+          "grok/grok-4-fast-reasoning",
+          "alibaba/qwen3-max",
+          "grok/grok-3-mini-fast-high-reasoning",
+          "google/gemini-2.5-flash-preview-09-2025-thinking",
+          "google/gemini-2.5-flash-preview-09-2025",
+          "anthropic/claude-opus-4-5-20251101",
+          "mistralai/magistral-medium-2509",
+          "anthropic/claude-sonnet-4-5-20250929-thinking",
+          "mistralai/magistral-small-2509",
+          "openai/o3-mini-2025-01-31",
+          "google/gemini-2.5-flash-lite-preview-09-2025-thinking",
+          "fireworks/qwen3-235b-a22b",
+          "together/moonshotai/Kimi-K2-Instruct",
+          "openai/gpt-5-nano-2025-08-07",
+          "anthropic/claude-opus-4-20250514-thinking",
+          "fireworks/deepseek-v3p2",
+          "poolside/laguna-m.1",
+          "poolside/laguna-xs.2",
+          "google/gemini-2.5-flash-lite-preview-09-2025",
+          "alibaba/qwen3-max-preview",
+          "anthropic/claude-opus-4-1-20250805-thinking",
+          "grok/grok-3-mini-fast-low-reasoning",
+          "fireworks/deepseek-v3-0324",
+          "anthropic/claude-opus-4-1-20250805",
+          "kimi/kimi-k2-thinking",
+          "anthropic/claude-opus-4-20250514",
+          "anthropic/claude-sonnet-4-20250514-thinking",
+          "grok/grok-code-fast-1",
+          "anthropic/claude-3-7-sonnet-20250219-thinking",
+          "anthropic/claude-sonnet-4-20250514",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561-thinking",
+          "openai/gpt-4.1-mini-2025-04-14",
+          "google/gemini-2.5-flash-preview-04-17",
+          "anthropic/claude-3-7-sonnet-20250219",
+          "mistralai/mistral-large-2512",
+          "openai/gpt-4.1-2025-04-14",
+          "grok/grok-3",
+          "mistralai/devstral-2512",
+          "openai/o1-2024-12-17",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "fireworks/llama4-maverick-instruct-basic",
+          "google/gemini-2.5-flash-preview-04-17-thinking",
+          "grok/grok-4-fast-non-reasoning",
+          "mistralai/mistral-medium-2505",
+          "google/gemini-2.0-flash-001",
+          "openai/gpt-4o-2024-11-20",
+          "mistralai/labs-devstral-small-2512",
+          "openai/gpt-4.1-nano-2025-04-14",
+          "grok/grok-4-1-fast-non-reasoning",
+          "anthropic/claude-3-5-haiku-20241022",
+          "google/gemini-1.5-pro-002",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "grok/grok-2-1212",
+          "together/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "mistralai/mistral-large-2411",
+          "google/gemini-1.5-flash-002",
+          "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561",
+          "cohere/command-a-03-2025",
+          "mistralai/mistral-small-2503",
+          "openai/gpt-4o-mini-2024-07-18",
+          "ai21labs/jamba-large-1.6",
+          "cohere/command-r-plus",
+          "mistralai/mistral-small-2402",
+          "ai21labs/jamba-mini-1.6"
+        ]
+      },
+      {
+        "source": "vals:swebench",
+        "component": "swe-bench-verified",
+        "rows": 88,
+        "matched": 36,
+        "unmatched": [
+          "meta/muse_spark_1_2",
+          "anthropic/claude-opus-4-8-claude-code",
+          "thinkingmachines/inkling-small",
+          "cursor/composer-2.5",
+          "google/gemini-3.6-flash",
+          "google/gemini-3.1-pro-preview",
+          "openai/gpt-5.4-2026-03-05",
+          "anthropic/claude-opus-4-6-thinking",
+          "kimi/kimi-k2.7-code",
+          "openai/gpt-5.3-codex",
+          "thinkingmachines/inkling",
+          "deepseek/deepseek-v4-pro",
+          "openai/gpt-5.5-codex",
+          "anthropic/claude-opus-4-5-20251101-thinking",
+          "google/gemini-3-pro-preview",
+          "openai/gpt-5.5-factory",
+          "openai/gpt-5.2-2025-12-11",
+          "google/gemini-3-flash-preview",
+          "google/gemini-3.5-flash-lite",
+          "minimax/MiniMax-M3",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "alibaba/qwen3.6-max-preview",
+          "grok/grok-4.20-0309-reasoning",
+          "grok/grok-4.3",
+          "zai/glm-5-thinking",
+          "alibaba/qwen3.5-plus-thinking",
+          "xiaomi/mimo-v2.5",
+          "kimi/kimi-k2.5-thinking",
+          "anthropic/claude-sonnet-4-5-20250929-thinking",
+          "alibaba/qwen3.6-27b",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "openai/gpt-5.1-2025-11-13",
+          "openai/gpt-5-2025-08-07",
+          "nvidia/nemotron-3-ultra-550b-a55b",
+          "fireworks/deepseek-v3p2-thinking",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "mistralai/mistral-medium-3.5",
+          "ant/ling-3.0-flash-2607",
+          "alibaba/qwen3.5-flash",
+          "google/gemini-3.1-flash-lite-preview",
+          "mistralai/devstral-2512",
+          "openai/gpt-5-mini-2025-08-07",
+          "kimi/kimi-k2-thinking",
+          "grok/grok-4-0709",
+          "poolside/laguna-m.1",
+          "poolside/laguna-xs.2",
+          "fireworks/nemotron-lightning-3p5-30b-a3b",
+          "grok/grok-4-fast-reasoning",
+          "grok/grok-4-1-fast-reasoning",
+          "mistralai/mistral-large-2512",
+          "fireworks/gpt-oss-120b",
+          "cohere/command-a-03-2025"
+        ]
+      },
+      {
+        "source": "vals:gpqa",
+        "component": "gpqa-diamond",
+        "rows": 138,
+        "matched": 38,
+        "unmatched": [
+          "google/gemini-3.1-pro-preview",
+          "google/gemini-3.6-flash",
+          "minimax/MiniMax-M3",
+          "google/gemini-3-pro-preview",
+          "openai/gpt-5.2-2025-12-11",
+          "openai/gpt-5.4-2026-03-05",
+          "grok/grok-4.3",
+          "anthropic/claude-opus-4-6-thinking",
+          "deepseek/deepseek-v4-pro",
+          "grok/grok-4.20-0309-reasoning",
+          "grok/grok-4-0709",
+          "google/gemini-3-flash-preview",
+          "alibaba/qwen3.5-plus-thinking",
+          "thinkingmachines/inkling",
+          "openai/gpt-5.1-2025-11-13",
+          "nvidia/nemotron-3-ultra-550b-a55b",
+          "anthropic/claude-opus-4-5-20251101-thinking",
+          "openai/gpt-5-2025-08-07",
+          "grok/grok-4-fast-reasoning",
+          "ant/ling-3.0-flash-2607",
+          "alibaba/qwen3-max-2026-01-23",
+          "grok/grok-4-1-fast-reasoning",
+          "openai/o3-2025-04-16",
+          "kimi/kimi-k2.5-thinking",
+          "google/gemini-3.5-flash-lite",
+          "thinkingmachines/inkling-small",
+          "zai/glm-5-thinking",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "alibaba/qwen3.5-flash",
+          "anthropic/claude-sonnet-4-5-20250929-thinking",
+          "google/gemini-2.5-flash-preview-09-2025",
+          "xiaomi/mimo-v2.5",
+          "google/gemini-3.1-flash-lite-preview",
+          "google/gemini-2.5-pro-exp-03-25",
+          "openai/gpt-5-mini-2025-08-07",
+          "fireworks/deepseek-v3p2-thinking",
+          "anthropic/claude-opus-4-5-20251101",
+          "alibaba/qwen3-max",
+          "grok/grok-3-mini-fast-high-reasoning",
+          "fireworks/gpt-oss-120b",
+          "kimi/kimi-k2-thinking",
+          "alibaba/qwen3-max-preview",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "google/gemini-2.5-flash-preview-09-2025-thinking",
+          "anthropic/claude-opus-4-1-20250805-thinking",
+          "fireworks/deepseek-v3p2",
+          "openai/o3-mini-2025-01-31",
+          "anthropic/claude-3-7-sonnet-20250219-thinking",
+          "anthropic/claude-sonnet-4-20250514-thinking",
+          "openai/o4-mini-2025-04-16",
+          "grok/grok-3",
+          "openai/o1-2024-12-17",
+          "grok/grok-3-mini-fast-low-reasoning",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "anthropic/claude-opus-4-20250514",
+          "together/moonshotai/Kimi-K2-Instruct",
+          "google/gemini-2.5-flash-lite-preview-09-2025-thinking",
+          "fireworks/qwen3-235b-a22b",
+          "anthropic/claude-opus-4-1-20250805",
+          "fireworks/llama4-maverick-instruct-basic",
+          "anthropic/claude-sonnet-4-20250514",
+          "fireworks/gpt-oss-20b",
+          "mistralai/mistral-large-2512",
+          "openai/gpt-4.1-mini-2025-04-14",
+          "anthropic/claude-3-7-sonnet-20250219",
+          "openai/gpt-4.1-2025-04-14",
+          "google/gemini-2.0-flash-001",
+          "grok/grok-4-1-fast-non-reasoning",
+          "google/gemini-2.5-flash-lite-preview-09-2025",
+          "openai/gpt-5-nano-2025-08-07",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561-thinking",
+          "mistralai/magistral-medium-2509",
+          "grok/grok-4-fast-non-reasoning",
+          "fireworks/deepseek-v3-0324",
+          "anthropic/claude-3-5-sonnet-20241022",
+          "google/gemini-1.5-pro-002",
+          "mistralai/magistral-small-2509",
+          "google/gemini-2.5-flash-preview-04-17",
+          "poolside/laguna-xs.2",
+          "fireworks/deepseek-v3",
+          "openai/gpt-4o-2024-11-20",
+          "openai/gpt-4.1-nano-2025-04-14",
+          "mistralai/mistral-small-2402",
+          "grok/grok-2-1212",
+          "openai/gpt-4o-2024-05-13",
+          "together/meta-llama/Llama-3.3-70B-Instruct-Turbo",
+          "cohere/command-a-03-2025",
+          "mistralai/mistral-large-2411",
+          "together/langston/nim/nvidia/llama-3.3-nemotron-super-49b-v1-42e84561",
+          "together/meta-llama/Llama-4-Scout-17B-16E-Instruct",
+          "google/gemini-1.5-flash-002",
+          "mistralai/mistral-small-2503",
+          "openai/gpt-4o-mini-2024-07-18",
+          "anthropic/claude-3-5-haiku-20241022",
+          "ai21labs/jamba-large-1.6",
+          "mistralai/mistral-medium-3.5",
+          "ai21labs/jamba-mini-1.6",
+          "cohere/command-r-plus",
+          "openai/gpt-3.5-turbo",
+          "poolside/laguna-m.1"
+        ]
+      },
+      {
+        "source": "vals:terminal-bench-2-1",
+        "component": "terminal-bench-2.1",
+        "rows": 63,
+        "matched": 35,
+        "unmatched": [
+          "google/gemini-3.6-flash",
+          "google/gemini-3.1-pro-preview",
+          "anthropic/claude-opus-4-8-claude-code",
+          "meta/muse_spark_1_2",
+          "kimi/kimi-k2.7-code",
+          "xiaomi/mimo-v2.5",
+          "cursor/composer-2.5",
+          "openai/gpt-5.5-codex",
+          "openai/gpt-5.5-factory",
+          "thinkingmachines/inkling-small",
+          "openai/gpt-5.4-mini-2026-03-17",
+          "google/gemini-3-flash-preview",
+          "minimax/MiniMax-M3",
+          "nvidia/nemotron-3-ultra-550b-a55b",
+          "google/gemini-3.5-flash-lite",
+          "ant/ling-3.0-flash-2607",
+          "deepseek/deepseek-v4-pro",
+          "thinkingmachines/inkling",
+          "grok/grok-4.20-0309-reasoning",
+          "anthropic/claude-haiku-4-5-20251001-thinking",
+          "grok/grok-4.3",
+          "kimi/kimi-k2.5-thinking",
+          "openai/gpt-5.4-nano-2026-03-17",
+          "mistralai/mistral-medium-3.5",
+          "google/gemini-3.1-flash-lite-preview",
+          "poolside/laguna-m.1",
+          "poolside/laguna-xs.2",
+          "fireworks/nemotron-lightning-3p5-30b-a3b"
+        ]
+      }
+    ]
+  },
+  "unresolved": [
+    {
+      "model": "Claude Fable 5.1",
+      "component": "agents-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "terminal-bench-2.1",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Fable 5.1",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Opus 5",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Claude Sonnet 5",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Flash-0731",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "DeepSeek-V4-Pro-Max",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GLM-5.3-Flash",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Luna",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-5.6 Terra",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "GPT-6 Astra",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "agents-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Gemini 3.8 Flash",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Hy4 preview",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Kimi K3",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "agents-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "gpqa-diamond",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Laguna S 2.1",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "agents-last-exam",
+      "dates": [
+        "2026-09-08"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "gpqa",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "humanitys-last-exam",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "ifbench",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "livecodebench-v6",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Muse Spark 1.3",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "mmmu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Flash",
+      "component": "terminal-bench-2.1",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "charxiv-r",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8 Max",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-27B",
+      "component": "toolathlon",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "aime-2025",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "arc-agi-2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "browsecomp",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "deepswe",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "frontiermath-1-3-v2",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "mmlu-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "officeqa-pro",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    },
+    {
+      "model": "Qwen3.8-Flash-Next",
+      "component": "swe-bench-verified",
+      "dates": [
+        "2026-09-08",
+        "2026-09-09"
+      ]
+    }
+  ],
+  "validation": {
+    "testsPassed": 702,
+    "validatorErrors": 0,
+    "validatorWarnings": 0,
+    "replayIdempotent": true,
+    "rostersAndProfilesMatchProduction": true,
+    "currentMatchesLatestHistory": true,
+    "existingSnapshotsUnchanged": true
+  }
+}
