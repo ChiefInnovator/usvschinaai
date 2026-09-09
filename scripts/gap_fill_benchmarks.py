@@ -9,6 +9,7 @@ look up benchmark scores from public sources, validates the response against a
 strict JSON schema, and writes the result back to entry.columns plus an audit
 log line.
 """
+from preconditions import preconditions
 import json
 import os
 import re
@@ -20,7 +21,7 @@ from typing import Any, Dict, FrozenSet, List, Optional, Tuple
 
 import requests
 
-from benchmark_names import benchmark_version_base
+from avg_iq_benchmarks import load_config, selected_value
 
 
 # -----------------------------------------------------------------------------
@@ -52,24 +53,12 @@ DEFAULT_MAX_CALLS = 40
 # sits comfortably inside the 500K-per-minute TPM envelope.
 REQUEST_INTERVAL_SECONDS = 1.5
 
-# The top-tier reference for tiering is the full scraped cohort: top 10 of each
-# country by llm-stats raw leaderboard rank, combined → 20 models total. The
-# tier thresholds below use 80% / 75% / 40% of that 20-model reference as the
-# qualified / Tier 1 / Tier 2 cutoffs, mirroring the original "8/10" framing
-# scaled up to a 20-model reference.
-TOP_COHORT_PER_COUNTRY = 10  # 10 US + 10 CN = 20 total reference set
-QUALIFIED_THRESHOLD = 16     # 16 of 20 (80%) — already qualified, skip
-TIER_1_FLOOR = 15            # 15 of 20 (75%) — one fill from qualifying
-TIER_2_FLOOR = 8             # 8 of 20 (40%) — within reach with several fills
-# Tier 3 = ≤ 7 of 20, permanently off in v1.
 
 POSITIVE_CACHE_TTL_DAYS = 30
 # Note: we deliberately do NOT cache negative results. A null score today
 # might get published tomorrow, and the gap-fill pass's whole point is to
 # discover newly-available scores. Re-querying nulls every run is the
 # correct trade-off (freshness > API cost).
-
-LOCALE_SUFFIXES: Tuple[str, ...] = ("-zh", "-ja", "-ko", "-de", "-fr", "-es", "-en")
 
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 OPENAI_MODELS_URL = "https://api.openai.com/v1/models"
@@ -107,9 +96,7 @@ class GapCandidate:
     model_url: str
     organization: str
     benchmark: str
-    cohort_count: int       # full cohort coverage (out of 20)
-    top_cohort_count: int   # top-tier reference coverage (out of 20)
-    tier: int               # 1, 2, or 3 (3 is permanently off)
+
 
 
 # -----------------------------------------------------------------------------
@@ -117,6 +104,7 @@ class GapCandidate:
 # -----------------------------------------------------------------------------
 
 
+@preconditions()
 def resolve_openai_key() -> Optional[str]:
     """Read OPENAI_API_KEY from the environment.
 
@@ -128,6 +116,7 @@ def resolve_openai_key() -> Optional[str]:
     return key if key else None
 
 
+@preconditions()
 def load_cache() -> Dict[str, Dict[str, Any]]:
     if not CACHE_FILE.exists():
         return {}
@@ -139,18 +128,21 @@ def load_cache() -> Dict[str, Dict[str, Any]]:
         return {}
 
 
+@preconditions(cache='mapping')
 def save_cache(cache: Dict[str, Dict[str, Any]]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, ensure_ascii=False, indent=2, sort_keys=True)
 
 
+@preconditions(entry='mapping')
 def append_audit_entry(entry: Dict[str, Any]) -> None:
     DATA_DIR.mkdir(exist_ok=True)
     with open(AUDIT_FILE, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
 
+@preconditions(entry='mapping', now='datetime')
 def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     """Whether a cached entry is still within its TTL.
 
@@ -172,208 +164,27 @@ def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     return (now - cached_at) < timedelta(days=POSITIVE_CACHE_TTL_DAYS)
 
 
-# -----------------------------------------------------------------------------
-# §5 useless-work filters
-# -----------------------------------------------------------------------------
+@preconditions(combined_entries='sequence')
+def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
+    """Research every missing configured Avg IQ component for every retained model.
 
-
-def _has_value(entry: Any, benchmark: str) -> bool:
-    val = entry.columns.get(benchmark, "")
-    return str(val).strip() not in MISSING_VALUE_MARKERS
-
-
-def origin_lock(benchmark: str, entries: List[Any]) -> Optional[str]:
-    """If every reporter belongs to a single country, return that country."""
-    reporters = [e for e in entries if _has_value(e, benchmark)]
-    if not reporters:
-        return None
-    origins = {e.country for e in reporters}
-    return next(iter(origins)) if len(origins) == 1 else None
-
-
-def is_origin_blocked(model_origin: str, benchmark: str, entries: List[Any]) -> bool:
-    """A gap is blocked if the benchmark is origin-locked to the *other* country."""
-    locked = origin_lock(benchmark, entries)
-    return locked is not None and locked != model_origin
-
-
-def has_locale_suffix(benchmark: str) -> Optional[str]:
-    """Return the locale suffix if the benchmark name ends in one (e.g. '-zh')."""
-    name = benchmark.lower().replace(" ", "")
-    for suffix in LOCALE_SUFFIXES:
-        if name.endswith(suffix):
-            return suffix
-    return None
-
-
-def is_locale_blocked(model_country: str, benchmark: str) -> bool:
-    """Drop -zh benchmarks for non-CN models, -en for non-US models, etc."""
-    suffix = has_locale_suffix(benchmark)
-    if suffix is None:
-        return False
-    if suffix == "-zh":
-        return model_country != "CN"
-    if suffix == "-en":
-        return model_country != "US"
-    # Other suffixes (-ja, -ko, -de, -fr, -es) — no cohort country reliably
-    # speaks them, so skip these benchmarks entirely.
-    return True
-
-
-def vendor_internal_org(benchmark: str, entries: List[Any]) -> Optional[str]:
-    """If every reporter belongs to a single Organization, return it."""
-    reporters = [e for e in entries if _has_value(e, benchmark)]
-    if not reporters:
-        return None
-    orgs = {e.columns.get("Organization", "") for e in reporters if e.columns.get("Organization")}
-    return next(iter(orgs)) if len(orgs) == 1 else None
-
-
-def is_vendor_blocked(entry: Any, benchmark: str, entries: List[Any]) -> bool:
-    vendor = vendor_internal_org(benchmark, entries)
-    return vendor is not None and entry.columns.get("Organization", "") != vendor
-
-
-# -----------------------------------------------------------------------------
-# §6 Tiering
-# -----------------------------------------------------------------------------
-
-
-def get_top_cohort(combined_entries: List[Any]) -> List[Any]:
-    """Return the top-tier reference set: top 10 per country by llm-stats rank.
-
-    The scraper preserves leaderboard order within each country, so this is
-    the first 10 US entries plus the first 10 CN entries — 20 models total
-    when both countries scrape the full top 10.
-
-    The function name is "top cohort" and not "top 10" because the reference
-    is intentionally the full 20-model cohort, not a 10-model subset.
+    Neither participation, country, model coverage nor a reported sibling version
+    makes a missing result ineligible. Exact version/protocol validation still
+    applies to the evidence returned by research.
     """
-    us = [e for e in combined_entries if e.country == "US"][:TOP_COHORT_PER_COUNTRY]
-    cn = [e for e in combined_entries if e.country == "CN"][:TOP_COHORT_PER_COUNTRY]
-    return us + cn
-
-
-def count_cohort_participation(benchmark: str, top_cohort: List[Any]) -> int:
-    return sum(1 for e in top_cohort if _has_value(e, benchmark))
-
-
-def assign_tier(cohort_count: int) -> int:
-    """Map a cohort participation count (out of 20) to a tier.
-
-    Tiers (0 = qualified — skip, 1 = T1, 2 = T2, 3 = T3 — permanently off):
-
-    - **0** (qualified): >= QUALIFIED_THRESHOLD (16/20, 80%)
-    - **1** (one fill from qualifying): >= TIER_1_FLOOR (15/20, 75%)
-    - **2** (within reach): >= TIER_2_FLOOR (8/20, 40%)
-    - **3** (hopeless): below 8/20
-    """
-    if cohort_count >= QUALIFIED_THRESHOLD:
-        return 0
-    if cohort_count >= TIER_1_FLOOR:
-        return 1
-    if cohort_count >= TIER_2_FLOOR:
-        return 2
-    return 3
-
-
-def has_sibling_version_value(entry: Any, benchmark: str, benchmark_headers: List[str]) -> bool:
-    """Whether the model already reports another version of this benchmark.
-
-    On 2026-09-03 the pass filled `DeepSWE` for five models with a value exactly
-    equal to their existing `DeepSWE1.1` — 75.4/75.4, 73.7/73.7, 66.9/66.9,
-    63.4/63.4, 58.7/58.7 — while every model whose two values came from
-    llm-stats directly differed (72.7/73.0, 67.5/69.0, 69.6/70.0, 67.2/67.0).
-    It was copying the sibling, not researching the benchmark, and since both
-    columns are scored the effect was to weight that benchmark twice. Muse Spark
-    1.3 reached #1 partly on the duplicate.
-
-    A model that has run v1.1 and not v1.0 usually has no v1.0 number to find,
-    so the honest outcome is an empty cell.
-    """
-    base = benchmark_version_base(benchmark)
-    for other in benchmark_headers:
-        if other == benchmark:
-            continue
-        if benchmark_version_base(other) == base and _has_value(entry, other):
-            return True
-    return False
-
-
-def build_candidates(
-    combined_entries: List[Any],
-    benchmark_headers: List[str],
-    enabled_tiers: FrozenSet[int] = frozenset({1, 2}),
-) -> List[GapCandidate]:
-    """Build the gap candidate list with §5 filters and §6 tiering applied."""
-    top_cohort = get_top_cohort(combined_entries)
-    top_cohort_names = {(e.name, e.country) for e in top_cohort}
-    candidates: List[GapCandidate] = []
-
-    for benchmark in benchmark_headers:
-        top_cohort_count = count_cohort_participation(benchmark, top_cohort)
-        cohort_count = sum(1 for e in combined_entries if _has_value(e, benchmark))
-        tier = assign_tier(top_cohort_count)
-
-        # §5.5 already-qualified filter
-        if tier == 0:
-            continue
-        # §5.3 hopeless-tier filter
-        if tier not in enabled_tiers:
-            continue
-
-        for entry in combined_entries:
-            if _has_value(entry, benchmark):
-                continue  # not a gap
-
-            # §5.1 origin lock
-            if is_origin_blocked(entry.country, benchmark, combined_entries):
-                continue
-            # §5.2 locale suffix
-            if is_locale_blocked(entry.country, benchmark):
-                continue
-            # §5.4 vendor-internal lock
-            if is_vendor_blocked(entry, benchmark, combined_entries):
-                continue
-            # §5.6 sibling-version lock
-            if has_sibling_version_value(entry, benchmark, benchmark_headers):
-                continue
-
-            candidates.append(
-                GapCandidate(
-                    model_name=entry.name,
-                    model_country=entry.country,
-                    model_url=entry.url,
-                    organization=entry.columns.get("Organization", ""),
-                    benchmark=benchmark,
-                    cohort_count=cohort_count,
-                    top_cohort_count=top_cohort_count,
-                    tier=tier,
-                )
-            )
-
-    # Sort priority within candidates:
-    #   1. tier ascending (T1 first)
-    #   2. fills for top-cohort models first — only those move the threshold count
-    #   3. distance to qualifying ascending (closer first)
-    #   4. top_cohort_count descending (tie-breaker: prefer benchmarks with
-    #      higher coverage within their tier)
-    candidates.sort(
-        key=lambda c: (
-            c.tier,
-            0 if (c.model_name, c.model_country) in top_cohort_names else 1,
-            max(0, QUALIFIED_THRESHOLD - c.top_cohort_count),
-            -c.top_cohort_count,
+    return [
+        GapCandidate(
+            model_name=entry.name, model_country=entry.country,
+            model_url=entry.url, organization=entry.columns.get("Organization", ""),
+            benchmark=component["name"],
         )
-    )
-    return candidates
+        for entry in combined_entries
+        for component in load_config()["benchmarks"]
+        if not selected_value(entry.columns, component["name"])
+    ]
 
 
-# -----------------------------------------------------------------------------
-# §9 OpenAI Responses API
-# -----------------------------------------------------------------------------
-
-
+@preconditions(api_key='text', chain='?sequence')
 def discover_available_model(api_key: str, chain: Optional[List[str]] = None) -> Optional[str]:
     """Walk the model chain and return the first one the account can call.
 
@@ -418,7 +229,7 @@ _SYSTEM_PROMPT = (
     "2. Do not invent scores. Do not average or estimate from neighbouring "
     "benchmarks. Do not quote unverified social-media claims.\n"
     "3. Do not use scores attributed to a different model variant. If only a "
-    "Pro / Flash / High variant has a score and the caller asked about the "
+    "Pro / Flash model variant has a score and the caller asked about the "
     "base model (or vice versa), return null for that benchmark.\n"
     "4. The score must be the same metric and same evaluation protocol that "
     "the benchmark defines. If the source uses a non-standard variant, return "
@@ -437,10 +248,54 @@ _SYSTEM_PROMPT = (
     "the structured `source_url` field. Do NOT put the URL only in the "
     "`notes` field or in markdown link syntax. If you cannot cite a direct "
     "URL, set `score` to null. An uncited score is rejected regardless of "
-    "confidence level."
+    "confidence level.\n"
+    "9. Match the exact requested benchmark version and subset. Never copy a "
+    "score from a sibling version or combine incompatible configurations. "
+    "Effort settings are not different model identities. For each requested benchmark, use the highest verified score across all reasoning effort levels independently; do not require the effort level to match other benchmarks. Preserve exact model release, benchmark version and protocol; reject fallback to a different model. Report the winning effort and source configuration in notes.\n"
+    "10. Search beyond launch summaries: official model cards and PDF system "
+    "cards, benchmark operator current and archived tables, evaluator datasets, "
+    "and other vendors' comparative release tables. Follow citations to the "
+    "numeric result. NVIDIA or other evaluator reports may contain original "
+    "model baselines: use only the exact original-model column, never a "
+    "quantized derivative's score. Check footnotes for fallback models and "
+    "modified datasets. Humanity’s Last Exam is not Agents’ Last Exam. Do not substitute text-only, tool-enabled or revised HLE variants without matching the selected protocol. SWE-bench Verified is not SWE-bench Pro or Lite. Original Toolathlon is not Toolathlon-Verified; "
+    "CharXiv-R means reasoning, not descriptive accuracy. If an image-only "
+    "table cannot be read reliably, return null. Exhaust these source routes "
+    "for still-missing requested benchmarks; do not stop at the launch page.\n"
+    "11. Audit-informed source routes: check llm-stats benchmark leaderboards "
+    "as well as model detail pages, following pagination. Check Vals "
+    "(https://www.vals.ai/benchmarks/) for MMLU-Pro, AIME, LiveCodeBench, "
+    "SWE-bench Verified, GPQA Diamond and Terminal-Bench 2.1. Inspect embedded "
+    "structured results when rendered summaries omit numbers; use the exact "
+    "model row and selected task, not a headline or comparison snippet. An "
+    "archived benchmark can still contain usable results; archived does not "
+    "mean the requested model was never evaluated.\n"
+    "12. Metric checks: Vals AIME 'overall' combines 2024 and 2025; use only "
+    "the 'aime_2025' task. Vals MMLU-Pro uses overall accuracy across 14 "
+    "subjects, not the highest subject. LiveCodeBench must be v6 overall "
+    "code generation, not an easy/medium/hard subset. GPQA Diamond is not "
+    "generic GPQA. On https://agents-last-exam.org/api/demo/leaderboard use "
+    "split='full' and passRate, never avgScore or a sub-split. OfficeQA Pro "
+    "requires full-corpus evaluation, not oracle pages or OfficeQA-Full; "
+    "consult https://arxiv.org/html/2603.08655v1 and retain the harness and "
+    "document-parsing configuration. BrowseComp is not BrowseComp-Plus, "
+    "BrowseComp-zh or DeepSearchQA. Keep original DeepSWE and DeepSWE 1.1 "
+    "separate on the operator's versioned leaderboard.\n"
+    "13. Historical evidence: record any independently verified publication "
+    "date and its supporting citation in notes. Do not use a model release, "
+    "benchmark launch, evaluation-start date or page-wide update date as "
+    "the publication date of an individual result. Dated source revisions "
+    "must actually contain the value. Unknown dates remain unknown. If a "
+    "source model ID includes a release date or preview suffix, verify the "
+    "identity before mapping it; effort suffixes alone do not disqualify it. "
+    "For null results, distinguish no matching row, incompatible metric or "
+    "subset, ambiguous release identity, inaccessible source, and incomplete "
+    "pagination. Never treat an inaccessible or partial table as proof that "
+    "a result does not exist."
 )
 
 
+@preconditions(model_name='text', model_country='text', model_url='text', organization='text', benchmarks='sequence')
 def build_prompt_batch(
     model_name: str,
     model_country: str,
@@ -479,6 +334,8 @@ _RESULT_SCHEMA_PROPERTIES = {
             "vendor_blog",
             "paper",
             "model_card",
+            "system_card",
+            "official_leaderboard",
             "third_party_leaderboard",
             "none",
         ],
@@ -496,6 +353,7 @@ _RESULT_REQUIRED = [
 ]
 
 
+@preconditions(system='text', user='text', model='text', api_key='text', max_output_tokens='positive_int', max_retries='positive_int')
 def query_openai_responses(
     system: str,
     user: str,
@@ -612,6 +470,7 @@ def query_openai_responses(
     return None
 
 
+@preconditions(raw='mapping')
 def extract_json_from_response(raw: Dict[str, Any]) -> Optional[Dict[str, Any]]:
     """Pull the strict JSON object out of an OpenAI Responses API result.
 
@@ -674,6 +533,7 @@ def extract_json_from_response(raw: Dict[str, Any]) -> Optional[Dict[str, Any]]:
 _URL_IN_TEXT = re.compile(r"https?://[^\s\)\]]+")
 
 
+@preconditions()
 def _salvage_url_from_notes(notes: Any) -> Optional[str]:
     if not isinstance(notes, str) or not notes:
         return None
@@ -681,6 +541,7 @@ def _salvage_url_from_notes(notes: Any) -> Optional[str]:
     return match.group(0) if match else None
 
 
+@preconditions(entry='mapping', benchmark='text')
 def _validate_result_entry(entry: Dict[str, Any], benchmark: str) -> Optional[Dict[str, Any]]:
     """Validate a single result-object entry from the batched `results` array.
 
@@ -726,6 +587,8 @@ def _validate_result_entry(entry: Dict[str, Any], benchmark: str) -> Optional[Di
         "vendor_blog",
         "paper",
         "model_card",
+        "system_card",
+        "official_leaderboard",
         "third_party_leaderboard",
         "none",
     ):
@@ -757,6 +620,7 @@ def _validate_result_entry(entry: Dict[str, Any], benchmark: str) -> Optional[Di
     return entry
 
 
+@preconditions(parsed='mapping', expected_benchmarks='sequence')
 def validate_batch_response(
     parsed: Dict[str, Any],
     expected_benchmarks: List[str],
@@ -802,6 +666,7 @@ def validate_batch_response(
 # -----------------------------------------------------------------------------
 
 
+@preconditions(score='json')
 def _format_score(score: Any) -> str:
     """Coerce the LLM-returned score into the same string format used in entry.columns."""
     if isinstance(score, str):
@@ -813,6 +678,7 @@ def _format_score(score: Any) -> str:
     return str(score)
 
 
+@preconditions(combined_entries='sequence', candidate='candidate', validated='mapping', llm_model='text')
 def _apply_fill(
     combined_entries: List[Any],
     candidate: GapCandidate,
@@ -823,20 +689,12 @@ def _apply_fill(
 
     Returns True if a row was successfully updated.
     """
+    notes = (validated.get("notes") or "").lower()
+    if "fallback" in notes or "toolathlon-verified" in notes:
+        return False
     for entry in combined_entries:
         if entry.name != candidate.model_name or entry.country != candidate.model_country:
             continue
-        # Re-check the sibling-version lock here, not only in build_candidates.
-        # Candidates are built before any fill lands, so when a model has BOTH
-        # DeepSWE and DeepSWE 1.1 cached, neither is present at build time and
-        # the lock sees nothing - then the cache writes both. Checking at apply
-        # time catches a sibling filled moments earlier in the same pass.
-        if has_sibling_version_value(entry, candidate.benchmark, list(entry.columns.keys())):
-            print(
-                f"[gap-fill]   -- not filling {candidate.benchmark} for {entry.name}: "
-                f"a sibling version is already reported"
-            )
-            return False
         entry.columns[candidate.benchmark] = _format_score(validated["score"])
         provenance = entry.columns.get("_provenance")
         if not isinstance(provenance, dict):
@@ -847,56 +705,27 @@ def _apply_fill(
             "url": validated.get("source_url", ""),
             "confidence": validated.get("confidence", ""),
             "source_type": validated.get("source_type", ""),
+            "notes": validated.get("notes") or "",
         }
         entry.columns["_provenance"] = provenance
         return True
     return False
 
 
+@preconditions(candidates='sequence')
 def _group_by_model(
     candidates: List[GapCandidate],
-    top_cohort_names: Optional[set] = None,
 ) -> List[Tuple[GapCandidate, List[GapCandidate]]]:
-    """Group candidates by (model_name, model_country) and sort for max-fill.
-
-    Sort priority (budget is spent top-down, so earlier groups fire first):
-      1. Group contains a Tier-1 candidate (closest to qualifying). T1 fills
-         have the highest threshold-moving value per call.
-      2. Group's model is in the top-cohort reference set. Fills for
-         top-cohort models directly increment the qualified-set count; fills
-         for laggard models only pay off on the next scrape's iteration.
-      3. Lowest tier in the group (T1 < T2 < T3).
-      4. Largest group size — more benchmarks per API call = better token
-         amortization.
-
-    The representative entry in each tuple carries the group's model
-    identity; the full candidate list drives the batched prompt.
-    """
+    """Batch all missing components per model, preserving incoming model order."""
     groups: Dict[Tuple[str, str], List[GapCandidate]] = {}
     for cand in candidates:
-        key = (cand.model_name, cand.model_country)
-        groups.setdefault(key, []).append(cand)
-
-    top_cohort_names = top_cohort_names or set()
-    items: List[Tuple[GapCandidate, List[GapCandidate]]] = []
-    for cands in groups.values():
-        items.append((cands[0], cands))
-
-    def _sort_key(item: Tuple[GapCandidate, List[GapCandidate]]) -> Tuple[int, int, int, int]:
-        rep, cands = item
-        has_t1 = 0 if any(c.tier == 1 for c in cands) else 1
-        is_top = 0 if (rep.model_name, rep.model_country) in top_cohort_names else 1
-        min_tier = min(c.tier for c in cands)
-        group_size = -len(cands)  # descending
-        return (has_t1, is_top, min_tier, group_size)
-
-    items.sort(key=_sort_key)
-    return items
+        groups.setdefault((cand.model_name, cand.model_country), []).append(cand)
+    return [(cands[0], cands) for cands in groups.values()]
 
 
+@preconditions(combined_entries='sequence', max_calls='nonnegative_int', min_confidence='enum:high|medium|low', scraper_run_ts='text', skip_pairs='?set', on_batch='?callable')
 def run_gap_filling_pass(
     combined_entries: List[Any],
-    benchmark_headers: List[str],
     *,
     max_calls: int = DEFAULT_MAX_CALLS,
     min_confidence: str = "high",
@@ -939,8 +768,8 @@ def run_gap_filling_pass(
         return 0
     print(f"[gap-fill] using model: {model}")
 
-    candidates = build_candidates(combined_entries, benchmark_headers, enabled_tiers=frozenset({1, 2}))
-    print(f"[gap-fill] {len(candidates)} candidate gaps after §5 filters and §6 tiering")
+    candidates = build_candidates(combined_entries)
+    print(f"[gap-fill] {len(candidates)} missing results across the eighteen configured Avg IQ benchmarks")
     if skip_pairs:
         before = len(candidates)
         candidates = [c for c in candidates if (c.model_name, c.benchmark) not in skip_pairs]
@@ -948,8 +777,7 @@ def run_gap_filling_pass(
     if not candidates:
         return 0
 
-    top_cohort_set = {(e.name, e.country) for e in get_top_cohort(combined_entries)}
-    groups = _group_by_model(candidates, top_cohort_names=top_cohort_set)
+    groups = _group_by_model(candidates)
     print(f"[gap-fill] grouped into {len(groups)} per-model batches")
 
     cache = load_cache()
@@ -981,11 +809,13 @@ def run_gap_filling_pass(
                 cache_hits += 1
                 cached_conf = cache_entry.get("confidence", "low")
                 if min_confidence == "high" and cached_conf != "high":
+                    # An unaccepted cached lead is still a gap. Research it
+                    # again for better evidence instead of suppressing retries.
                     fills_dropped_low_conf += 1
+                else:
+                    if _apply_fill(combined_entries, cand, cache_entry, cache_entry.get("llm_model", model)):
+                        fills_accepted += 1
                     continue
-                if _apply_fill(combined_entries, cand, cache_entry, cache_entry.get("llm_model", model)):
-                    fills_accepted += 1
-                continue
             batch_benchmarks.append(cand.benchmark)
             batch_candidates.append(cand)
 
@@ -997,10 +827,9 @@ def run_gap_filling_pass(
             time.sleep(REQUEST_INTERVAL_SECONDS)
         api_calls += 1
 
-        tier_summary = ",".join(f"T{c.tier}" for c in batch_candidates)
         print(
             f"[gap-fill] [{api_calls}/{max_calls}] {model_name} ({rep.model_country}) "
-            f"→ {len(batch_benchmarks)} benchmarks [{tier_summary}]"
+            f"→ {len(batch_benchmarks)} benchmarks"
         )
 
         # Size max_output_tokens to the batch.

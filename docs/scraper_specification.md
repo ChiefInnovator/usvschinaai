@@ -70,7 +70,6 @@ The scraper operates in three distinct stages, each building upon the previous:
   "avgIq": number,
   "value": number,
   "unified": number,
-  "AIME 2025": "string (raw score)",
   "HMMT 2025": "string (raw score)",
   "GPQA Diamond": "string (raw score)",
   "BrowseComp": "string (raw score)",
@@ -97,7 +96,7 @@ The scraper operates in three distinct stages, each building upon the previous:
 
 **Note**: All benchmark columns are auto-detected; the concrete set may change based on llm-stats table updates.
 
-## 5. Derived Score Calculations (Current — two-pass)
+## 5. Derived Score Calculations (Current — eighteen benchmarks)
 
 All derived scores are computed from raw strings at display/persist time. Scoring
 runs in two passes so that models aren't penalised simply for skipping benchmarks
@@ -127,73 +126,38 @@ The llm-stats leaderboard emits per-category rollup columns (`Reasoning`, `Math`
 columns but excluded from `benchmark_headers` so they don't double-count during
 scoring.
 
-### Sparse benchmark drop
+### Selected benchmark storage
 
-After detail-page enrichment, every benchmark with fewer than `MIN_COHORT_PARTICIPATION = 4` non-missing cells across the 20-model cohort is dropped entirely — removed from `benchmark_headers` AND from every entry's column dict so it doesn't land in `models.json`. This is the floor that keeps the long tail of one-off benchmarks from cluttering the data.
+Only the eighteen configured benchmark columns are persisted. Original sparse
+benchmark filtering is not used for either Avg IQ, Value or gap research.
 
 ### AI gap-filling pass
 
-After the sparse drop and **before Pass 1**, the scraper invokes `run_gap_filling_pass()` from `scripts/gap_fill_benchmarks.py`. This pass uses the OpenAI Responses API (with the `web_search` tool) to research and fill missing benchmark scores for the cohort, focusing on benchmarks that are close to qualifying for Pass 2. Filled scores feed Pass 1 and Pass 2 like any scraped score, but the source provenance (LLM model, source URL, confidence) is recorded per cell in a `_provenance` block on each model row in `models.json`.
+Before scoring, `run_gap_filling_pass()` researches every missing component from the eighteen benchmarks in `data/core_benchmarks.json` for every retained model. It has no participation thresholds, qualification tiers, country/vendor filters or model coverage minimum. All gaps for a model are batched together in incoming model order. Existing configured aliases count as reported; sibling versions do not substitute for a requested result or prevent research.
 
-The gap-filling pass is gated by:
-
-- The `OPENAI_API_KEY` env var (read from `.env` locally or GitHub Actions secret in CI). If unset, the pass is silently skipped and the scraper proceeds to Pass 1 with un-enriched data.
-- The `--no-gap-fill` CLI flag, which disables the pass entirely.
-- The `--gap-fill-max-calls N` CLI flag (default 40), which caps the number of OpenAI calls per scrape run.
-
-See [ai_gap_filling.md](ai_gap_filling.md) for the full specification, including the §5 useless-work filters (origin lock, locale suffix, vendor-internal, hopeless tier), §6 tiering (Tier 1 = one fill from qualifying, Tier 2 = within reach, Tier 3 = permanently off), §10 caching, §11 audit log, and §12 confidence-threshold validation.
+The pass requires `OPENAI_API_KEY`, can be disabled with `--no-gap-fill`, and uses `--gap-fill-max-calls N` (default 40) as an API-call budget. Exact benchmark/model/protocol matching and source validation remain required. See [ai_gap_filling.md](ai_gap_filling.md) for caching, provenance and research behavior.
 
 ### Fresh source federation
 
 The gap-filling pass can only enrich models and benchmark columns that llm-stats already exposed. New launch-day models and launch-page benchmark tables require an upstream ingestion lane. See [fresh_model_statistics_federation.md](fresh_model_statistics_federation.md) for the proposed source-federation layer: provider release adapters, benchmark-owner adapters, evidence logs, reconciliation, provisional rows, and a four-hour fresh-release scan.
 
-### Benchmark range resolution
+### Scoring configuration and calculation
 
-For each benchmark that participates in scoring, the normalization range
-`(min, max)` is chosen by the following precedence:
+The authoritative methodology is [two_pass_scoring.md](two_pass_scoring.md).
+`scripts/scoring.py` implements both paths; `data/core_benchmarks.json` supplies
+the eighteen Avg IQ components and allocations totaling 100%.
 
-1. **Known absolute range.** `BENCHMARK_KNOWN_RANGES` dict, keyed by benchmark
-   name. Currently only `CodeArena: (1000, 2000)` — LMArena Elo with a
-   documented starting score of 1000 and an empirical 2000 ceiling.
-2. **Percentage auto-detect.** If every non-missing cell ends with `%`, the range
-   is `(0, 100)` and raw values pass through unchanged. This applies to GPQA,
-   MMMU-Pro, HLE, AIME2025, and most other benchmarks.
-3. **Cohort min/max fallback.** For unknown-scale benchmarks with no hardcoded
-   range and no `%` suffix, use the observed min/max across the cohort.
+Avg IQ includes all eighteen components at their configured weights. No
+participation filter, half-cohort gate, participation multiplier, or fallback
+can remove or downweight one of these components. Normalization still uses
+known ranges, then percentage detection, then cohort ranges. Avg IQ divides
+by a fixed 1.00 (100%); missing results contribute zero. Value retains its
+original participation rules and reported-only denominator.
 
-The precedence exists to avoid the amplification artifact where min/max scaling
-on a tight cohort (e.g. MMMU-Pro clustered between 75.6 % and 81.2 %) turns a 3-
-point raw gap into a 57-point normalized gap.
-
-### Pass 1 — Initial Top 10 selection
-
-1. For each benchmark with participation ≥ 2, compute a range via
-   `resolve_benchmark_range`, then normalize `(score − min) / (max − min) × 100`.
-2. Weight each benchmark by `participation[b] / max_participation`.
-3. `avgIq_1 = Σ(norm_b × w_b) / Σ(w_b)` per model.
-4. Sort the combined US+CN cohort by Unified (see step 6) and take the top 10
-   as the **Initial Top 10**.
-
-### Pass 2 — Qualified rescoring
-
-1. A benchmark is **qualified** if at least **8 of the Initial Top 10** reported a
-   non-missing value for it. If fewer than 3 benchmarks qualify, the scraper
-   falls back to Pass 1 silently.
-2. For every model (not just the top 10), compute `avgIq_2` as a **flat average**
-   of `norm_b` over qualified benchmarks only. Each benchmark contributes with
-   weight 1 — no participation weighting — so per-model averages only count
-   tests that model actually reported.
-3. `value = avgIq_2 / (Input $/M + Output $/M)` (0 if total cost ≤ 0).
-4. Recompute `min/max_avg_iq` and `min/max_value` across the full cohort from
-   the Pass 2 outputs, then min–max normalize both to 0–100.
-5. `unified = 10 × (0.9 × norm(avgIq_2) + 0.1 × norm(value))`.
-
-Sorting: all leaderboards are ordered by Unified (descending). The values
-written to `models.json` are the Pass 2 outputs.
-
----
-
-## 6. Outputs
+Avg Value uses the same eighteen-benchmark Avg IQ divided by total input and output
+price. Saved scoring version 4 contains only new weights, ranges and bounds,
+without legacy Value inputs. Historical rebuilding removes old benchmark scores
+and regenerates scores from dated evidence while retaining model cohorts.
 
 ### Stage 2 (`--leaderboard-full`)
 
@@ -321,10 +285,10 @@ All open questions have been resolved:
 
 | Decision | Selection |
 | --- | --- |
-| Benchmark handling | Auto-detected, per-benchmark range resolution (known → percentage → cohort fallback), category aggregates excluded, sparse benchmarks dropped at < 4 of 20 cohort. |
+| Benchmark handling | Auto-detected, per-benchmark range resolution (known → percentage → cohort fallback), category aggregates excluded, sparse benchmarks excluded from scoring at < 4 reporting models, with raw data retained. |
 | Cron schedule | Daily via `.github/workflows/daily-scrape.yml`. |
 | Failure notifications | Silent — errors logged to Actions output only, no Slack/email/GitHub alerts. |
-| Two-pass scoring | Implemented with iteration loop (re-derives qualified set from Pass 2 top 10 until stable). See [two_pass_scoring.md](two_pass_scoring.md). |
+| Two-pass scoring | Implemented over the whole scoring cohort with the configured eighteen weights for Avg IQ and Value. See [two_pass_scoring.md](two_pass_scoring.md). |
 | AI gap-filling | Implemented via OpenAI Responses API + `web_search` tool. See [ai_gap_filling.md](ai_gap_filling.md). |
 
 ---
@@ -334,8 +298,19 @@ All open questions have been resolved:
 - Scraper runs autonomously daily without manual intervention.
 - Stage 2 CSV/JSON summaries generated and sorted by Unified.
 - Stage 3 writes a clean `models.json` with no leftover stage files or backups.
-- All scoring math is verified at run time (sparse drop, qualified set, iteration convergence).
+- All scoring math is verified at run time (eligibility, qualified set, configured weights).
 - Historical audit trail preserved (all previous entries intact, gap-fill audit appends to `data/ai_fill_history.jsonl`).
 - Azure Static Web Apps auto-deploys the updated site within 2 minutes of push.
 - Local execution works for testing: `python scripts/scrape_models.py`.
 - The AI gap-filling pass either fills cells, returns honest `null`, or skips entirely — never corrupts existing scraped data.
+
+### Automated source refresh
+
+The daily scraper now refreshes llm-stats details, Artificial Analysis, Epoch,
+original Toolathlon and CharXiv reasoning data before AI gap research. Newly
+accepted evidence is retained with dates and configuration, then the daily
+workflow rescores historical snapshots before generating the existing visuals.
+See [AI gap filling](ai_gap_filling.md#routine-research-workflow) for source
+coverage, failure handling and the limits of automated research.
+
+Shared model records, dated roster references, and full-history recalculation are documented in [Model storage](model_storage.md).

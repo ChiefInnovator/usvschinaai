@@ -16,7 +16,9 @@ current day's slides are kept in social/; git history keeps the rest.
     python scripts/social_publish.py                    # -> social/ (the real thing)
     python scripts/social_publish.py --out /tmp/x       # rehearsal: no history record
 """
+from preconditions import preconditions
 import argparse
+from model_store import load_data
 import json
 import sys
 from datetime import datetime, timezone
@@ -35,15 +37,18 @@ SITE = "https://usvschina.ai"
 PLAN_FILE = "plan.json"
 
 
+@preconditions(date='text', index='int', fmt='text', palette='text')
 def slide_filename(date: str, index: int, fmt: str, palette: str) -> str:
     return f"{date}-{index}-{fmt}-{palette}.png"
 
 
+@preconditions(fmt='text', palette='text')
 def slides_for(fmt: str, palette: str) -> List[Tuple[str, str]]:
     """The day's cover, then the leaderboard as slide 2 (unless it is the cover)."""
     return [(fmt, palette)] + ([("leaderboard", palette)] if fmt != "leaderboard" else [])
 
 
+@preconditions(out_dir='path', keep_date='text')
 def prune(out_dir: Path, keep_date: str) -> List[str]:
     """Delete slides from earlier days. Returns the names removed."""
     removed = []
@@ -54,6 +59,7 @@ def prune(out_dir: Path, keep_date: str) -> List[str]:
     return removed
 
 
+@preconditions(plan='mapping')
 def history_record(plan: Dict[str, Any]) -> Dict[str, Any]:
     rec = {k: plan[k] for k in ("date", "timestamp", "format", "palette")}
     if plan.get("benchmark"):
@@ -61,6 +67,7 @@ def history_record(plan: Dict[str, Any]) -> Dict[str, Any]:
     return rec
 
 
+@preconditions(data='mapping', out_dir='path', api_key='?nonempty', today='?datetime', history='?sequence')
 def publish(data: Dict[str, Any], out_dir: Path = SOCIAL_DIR, api_key: Optional[str] = None,
             today: Optional[datetime] = None,
             history: Optional[List[Dict[str, Any]]] = None) -> Tuple[Dict[str, Any], List[str]]:
@@ -94,6 +101,7 @@ def publish(data: Dict[str, Any], out_dir: Path = SOCIAL_DIR, api_key: Optional[
     return record, removed
 
 
+@preconditions()
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out", default=str(SOCIAL_DIR), help="slide directory (default: social/)")
@@ -101,8 +109,7 @@ def main() -> int:
     args = ap.parse_args()
     out_dir = Path(args.out).resolve()
 
-    with open(args.models_json, "r", encoding="utf-8") as f:
-        data = json.load(f)
+    data = load_data(args.models_json)
     record, removed = publish(data, out_dir)
     if out_dir == SOCIAL_DIR.resolve():
         append_history(history_record(record))

@@ -50,6 +50,9 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: python scripts/check_openai_billing.py --model "${{ github.event.inputs.model }}"
 
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
+
       - name: Run test suite
         run: python -m unittest discover -s tests
 
@@ -71,7 +74,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add models.json current.json data/ai_gap_cache.json data/ai_fill_history.jsonl data/ai_gap_backfill_asked.json
+          git add models.json current.json data/model_catalog.json data/ai_gap_cache.json data/ai_fill_history.jsonl data/ai_gap_backfill_asked.json
           if git diff --cached --quiet; then echo "No changes to commit"; exit 0; fi
           git commit -m "Backfill gap-fill over ${{ github.event.inputs.days }} days (${{ github.event.inputs.model }})"
           # Merge (never rebase) anything pushed to main meanwhile, then push.

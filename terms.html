@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/preconditions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US vs CHINA AI | Terms of Service</title>
@@ -357,6 +358,7 @@
     <script>
     (function() {
         function timeAgo(dateStr) {
+            AppContract.check("timeAgo", arguments, ["?json"]);
             if (!dateStr) return '';
             try {
                 var date = new Date(dateStr);
@@ -376,18 +378,21 @@
         }
 
         function getCountryFlag(country) {
+            AppContract.check("getCountryFlag", arguments, ["?json"]);
             if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
             if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
             return '\u{1F30D}';
         }
 
         function escapeHtml(str) {
+            AppContract.check("escapeHtml", arguments, ["?json"]);
             var div = document.createElement('div');
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
         }
 
         async function loadNewsMarquee() {
+            AppContract.check("loadNewsMarquee", arguments, []);
             var container = document.getElementById('newsMarquee');
             if (!container) return;
 

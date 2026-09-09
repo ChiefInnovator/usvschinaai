@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/preconditions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US vs CHINA AI | About - Methodology & Scoring Explained</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Learn how US vs CHINA AI ranks AI models with a normalized Unified Score (0–1000), two-pass benchmark scoring, and value based on total cost (input + output).">
-    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Score, AI model evaluation, two-pass scoring, GPQA, SWE-bench, CodeArena">
+    <meta name="description" content="Learn how US vs CHINA AI ranks AI models with a normalized Unified Score (0–1000), eighteen-benchmark scoring, and value based on total cost (input + output).">
+    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Score, AI model evaluation, eighteen-benchmark scoring, GPQA Diamond, DeepSWE, FrontierMath">
     <meta name="author" content="US vs CHINA AI">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://usvschina.ai/about.html">
@@ -72,14 +73,14 @@
             "name": "What is the Unified Score?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Unified Score (0–1000) emphasizes capability over cost efficiency: 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). AvgIQ uses two-pass scoring: Pass 1 picks the Initial Top 10 via participation-weighted benchmarks, then Pass 2 rescores every model as a flat average over the benchmarks that at least 8 of those 10 reported. Value is AvgIQ divided by total cost (Input $/M + Output $/M)."
+                "text": "The Unified Score (0–1000) emphasizes capability over cost efficiency: 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value is Avg IQ divided by total cost (Input $/M + Output $/M)."
             }
         },{
             "@type": "Question",
             "name": "What benchmarks are used to measure AI intelligence?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Benchmarks must be reported by at least 4 cohort models to be tracked at all (sparser than that and they're dropped entirely). Within that, the Pass 2 scoring uses only the benchmarks reported by 8 or more of the Initial Top 10. As of April 2026 the qualified set includes CodeArena, GPQA, HLE, BrowseComp, SWE-bench Verified, and Terminal-Bench 2.0 among others. Category-aggregate columns (Reasoning, Math, Coding, etc.) are excluded to prevent double-counting."
+                "text": "The selected benchmarks are Humanity’s Last Exam, SWE-bench Verified, GPQA, MMLU-Pro, Toolathlon, Agents’ Last Exam, DeepSWE, DeepSWE 1.1, LiveCodeBench v6, Terminal-Bench 2.1, BrowseComp, MMMU-Pro, CharXiv-R, ARC-AGI-2, OfficeQA Pro, IFBench, GPQA Diamond, FrontierMath — Tiers 1–3 v2. All eighteen are included regardless of participation. Missing results contribute zero; category aggregates are excluded to avoid double-counting."
             }
         },{
             "@type": "Question",
@@ -283,16 +284,16 @@
                     <div>
                         <h3 class="text-white font-bold mb-2 text-lg">Unified Score (0–1000)</h3>
                         <p class="text-slate-400 mb-4">
-                            Capability-focused (90%) with value efficiency (10%). Capability is computed via a <strong>two-pass</strong> scoring pipeline so that models aren’t penalised for skipping benchmarks their peers chose to publish.
+                            Capability-focused (90%) with value efficiency (10%). Avg IQ combines eighteen selected benchmarks using fixed allocations, with missing results contributing zero.
                         </p>
                         <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-3 border border-purple-500/20">
                             Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                         </div>
                         <ul class="text-slate-300 text-sm space-y-2">
-                            <li><span class="text-purple-200 font-semibold">Pass 1 — Initial Top 10:</span> participation-weighted average across every benchmark to identify the leading 10 models in the cohort.</li>
-                            <li><span class="text-purple-200 font-semibold">Pass 2 — Qualified rescoring:</span> the qualified set is benchmarks reported by ≥ 8 of the Initial Top 10. Every model in the cohort is then rescored as a <em>flat average</em> (not participation-weighted) over the qualified set.</li>
-                            <li><span class="text-purple-200 font-semibold">Per-benchmark normalization:</span> Percentage benchmarks (xx.x%) use their raw 0–100 score directly. Non-percentage benchmarks with a documented range (e.g. CodeArena Elo 1000–2000) use that range. Anything else falls back to cohort min–max. Category aggregates (Reasoning, Math, Coding, …) are excluded entirely.</li>
-                            <li><span class="text-purple-200 font-semibold">Value:</span> AvgIQ / (Input $/M + Output $/M); both AvgIQ and Value are cohort-normalized to 0–100 before blending into Unified.</li>
+                            <li><span class="text-purple-200 font-semibold">Avg IQ:</span> Combine the eighteen benchmark percentages using fixed allocations. The denominator always includes all eighteen, even when results are missing.</li>
+                            <li><span class="text-purple-200 font-semibold">Best verified result:</span> Use the highest score for each exact model and benchmark across all effort levels. Different benchmarks may use different effort levels. Preserve benchmark version, subset and protocol; exclude results that fall back to another model.</li>
+                            <li><span class="text-purple-200 font-semibold">Coverage:</span> No participation filters, participation multipliers or minimum number of reported benchmarks. Missing results receive zero contribution.</li>
+                            <li><span class="text-purple-200 font-semibold">Value:</span> AvgIQ / (Input $/M + Output $/M); models without usable pricing receive zero Value. Both Avg IQ and Value are cohort-normalized to 0–100 before blending into Unified.</li>
                         </ul>
                     </div>
 
@@ -326,12 +327,12 @@
                             <p class="text-slate-400">Cheap output is not “value” if the model cannot solve hard problems.</p>
                         </div>
                         <div>
-                            <div class="font-bold text-white mb-1">2) Value is a multiplier, not a substitute</div>
+                            <div class="font-bold text-white mb-1">2) Value contributes cost efficiency</div>
                             <p class="text-slate-400">A strong model becomes more powerful when it’s also affordable to deploy at scale.</p>
                         </div>
                         <div>
-                            <div class="font-bold text-white mb-1">3) Two-pass scoring keeps comparisons honest</div>
-                            <p class="text-slate-400">Pass 1 picks the Initial Top 10 with participation weighting; Pass 2 then rescores every model as a flat average over only the benchmarks ≥ 8 of those 10 actually reported. Sparse benchmarks (fewer than 4 cohort models reporting) are dropped entirely.</p>
+                            <div class="font-bold text-white mb-1">3) The same eighteen benchmarks apply to every model</div>
+                            <p class="text-slate-400">Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.</p>
                         </div>
                     </div>
 
@@ -358,27 +359,27 @@
                     <span>Benchmarks included</span>
                 </h2>
                 <p class="text-slate-400 mb-4">
-                    Only benchmarks with 2+ model participation are included. All 18 active benchmarks (by participation count):
+                    All eighteen selected benchmarks are included, regardless of how many models report results:
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">CodeArena <span class="text-blue-300 font-semibold">(20)</span></span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA <span class="text-blue-300 font-semibold">(17)</span></span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">AIME 2025 <span class="text-blue-300 font-semibold">(16)</span></span>
-                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">SWE-Bench Verified <span class="text-red-300 font-semibold">(16)</span></span>
-                    <span class="px-3 py-1 bg-red-500/10 border border-red-500/20 rounded-lg text-xs text-slate-200">TerminalBench <span class="text-red-300 font-semibold">(10)</span></span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">HLE <span class="text-purple-300 font-semibold">(9)</span></span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">MMLU <span class="text-purple-300 font-semibold">(8)</span></span>
-                    <span class="px-3 py-1 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs text-slate-200">BrowseComp <span class="text-purple-300 font-semibold">(8)</span></span>
-                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">ARC-AGI v2 <span class="text-yellow-300 font-semibold">(6)</span></span>
-                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">Toolathlon <span class="text-yellow-300 font-semibold">(5)</span></span>
-                    <span class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-xs text-slate-200">TAU2 Retail <span class="text-yellow-300 font-semibold">(5)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">CharXiv-R <span class="text-slate-400 font-semibold">(3)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">MMMU-Pro <span class="text-slate-400 font-semibold">(3)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">ScreenSpot Pro <span class="text-slate-400 font-semibold">(3)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">SimpleQA <span class="text-slate-400 font-semibold">(3)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">MCP Atlas <span class="text-slate-400 font-semibold">(3)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">OSWorld <span class="text-slate-400 font-semibold">(2)</span></span>
-                    <span class="px-3 py-1 bg-slate-700/30 border border-slate-600/30 rounded-lg text-xs text-slate-300">MMMU <span class="text-slate-400 font-semibold">(2)</span></span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">MMLU-Pro</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Humanity’s Last Exam</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">SWE-bench Verified</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Toolathlon</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Agents’ Last Exam</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">DeepSWE</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">DeepSWE 1.1</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">LiveCodeBench v6</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Terminal-Bench 2.1</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">BrowseComp</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">MMMU-Pro</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">CharXiv-R</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">ARC-AGI-2</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">OfficeQA Pro</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">IFBench</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA Diamond</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">FrontierMath — Tiers 1–3 v2</span>
                 </div>
             </div>
 
@@ -389,7 +390,7 @@
                 </h2>
                 <div class="text-slate-300 leading-relaxed space-y-3">
                     <p>
-                        Scores and pricing are sourced from each model's linked reference pages.
+                        The model roster comes only from llm-stats. Missing benchmark results are researched from published, verifiable sources. Historical scores use the current scoring method with evidence available for each snapshot's date; higher results are never applied before their evidence availability date.
                         Vendor pricing can change quickly; this is why the dashboard is presented as an audit at a point in time.
                     </p>
                     <p class="text-slate-500 text-sm">
@@ -422,6 +423,7 @@
     <script>
     (function() {
         function timeAgo(dateStr) {
+            AppContract.check("timeAgo", arguments, ["?json"]);
             if (!dateStr) return '';
             try {
                 var date = new Date(dateStr);
@@ -441,18 +443,21 @@
         }
 
         function getCountryFlag(country) {
+            AppContract.check("getCountryFlag", arguments, ["?json"]);
             if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
             if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
             return '\u{1F30D}';
         }
 
         function escapeHtml(str) {
+            AppContract.check("escapeHtml", arguments, ["?json"]);
             var div = document.createElement('div');
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
         }
 
         async function loadNewsMarquee() {
+            AppContract.check("loadNewsMarquee", arguments, []);
             var container = document.getElementById('newsMarquee');
             if (!container) return;
 

@@ -38,8 +38,8 @@ class PassHookTests(unittest.TestCase):
             def sleep(_):
                 pass
         gf.time = T
-        gf.build_candidates = lambda entries, headers, enabled_tiers=None: [
-            gf.GapCandidate(e.name, e.country, e.url, "Org", b, 1, 1, 1)
+        gf.build_candidates = lambda entries: [
+            gf.GapCandidate(e.name, e.country, e.url, "Org", b)
             for e in entries for b in ("HLE", "GPQA") if e.columns.get(b, "") in ("", "—")]
 
     def tearDown(self):
@@ -51,7 +51,7 @@ class PassHookTests(unittest.TestCase):
 
     def test_skip_pairs_removes_candidates_before_batching(self):
         seen = []
-        gf.run_gap_filling_pass(self._entries(), ["HLE", "GPQA"], max_calls=5,
+        gf.run_gap_filling_pass(self._entries(), max_calls=5,
                                 skip_pairs={("M", "HLE"), ("M", "GPQA")},
                                 on_batch=lambda model, benchmarks: seen.append((model, sorted(benchmarks))))
         self.assertEqual(seen, [("K", ["HLE"])], "M had nothing left to ask; K still asks HLE")
@@ -60,14 +60,23 @@ class PassHookTests(unittest.TestCase):
     def test_on_batch_fires_only_for_validated_answers(self):
         seen = []
         gf.validate_batch_response = lambda parsed, expected: None    # malformed answer
-        gf.run_gap_filling_pass(self._entries(), ["HLE", "GPQA"], max_calls=5,
+        gf.run_gap_filling_pass(self._entries(), max_calls=5,
                                 on_batch=lambda model, benchmarks: seen.append(model))
         self.assertEqual(seen, [], "a malformed answer must not be remembered as asked")
         self.assertEqual(len(self.calls), 2)
 
+    def test_low_confidence_cache_is_researched_again(self):
+        from datetime import datetime, timezone
+        gf.load_cache = lambda: {'M': {'GPQA': {'score': '90%', 'confidence': 'medium',
+            'cached_at': datetime.now(timezone.utc).isoformat()}}}
+        seen = []
+        gf.run_gap_filling_pass(self._entries(), max_calls=5,
+            on_batch=lambda model, benchmarks: seen.append((model, sorted(benchmarks))))
+        self.assertIn(('M', ['GPQA', 'HLE']), seen)
+
     def test_without_hooks_nothing_changes(self):
         seen = []
-        gf.run_gap_filling_pass(self._entries(), ["HLE", "GPQA"], max_calls=5)
+        gf.run_gap_filling_pass(self._entries(), max_calls=5)
         self.assertEqual(seen, [])
         self.assertEqual(len(self.calls), 2)
 

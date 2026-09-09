@@ -22,7 +22,9 @@ verify_*.py
 review_*score.py
 inspect_html.py
 test_multimodal.py
-show_participation_weights.py# OS generated files
+show_participation_weights.py
+
+# OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -90,3 +92,10 @@ out/
 *.bak
 *.backup
 
+
+# Recoverable in-progress model-store transaction (never publish)
+.model-store-pending.json
+
+# Local browser verification artifacts
+.playwright-cli/
+output/playwright/

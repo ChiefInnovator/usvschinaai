@@ -1,0 +1,31 @@
+{
+  "snapshotsReviewed": 233,
+  "snapshotsChanged": 215,
+  "modelsImproved": 19,
+  "cellsFilled": 3526,
+  "cellsUpgraded": 1747,
+  "filledByBenchmark": {
+    "IFBench": 636,
+    "AIME 2025": 193,
+    "LiveCodeBench v6": 900,
+    "BrowseComp": 352,
+    "MMLU-Pro": 1060,
+    "Humanity\u2019s Last Exam": 191,
+    "SWE-bench Verified": 155,
+    "CharXiv-R": 20,
+    "MMMU-Pro": 9,
+    "GPQA Diamond": 6,
+    "Toolathlon": 2,
+    "ARC-AGI-2": 2
+  },
+  "upgradedByBenchmark": {
+    "BrowseComp": 564,
+    "MMMU-Pro": 351,
+    "CharXiv-R": 159,
+    "SWE-bench Verified": 204,
+    "GPQA Diamond": 280,
+    "IFBench": 75,
+    "AIME 2025": 114
+  },
+  "remainingGapPairs": 1028
+}

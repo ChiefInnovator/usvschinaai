@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="js/preconditions.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>US vs CHINA AI | Historical Archives - AI Race Timeline 2026</title>
@@ -64,6 +65,7 @@
     }
     </script>
     
+    <script src="js/model-store.js"></script>
     <script src="https://cdn.tailwindcss.com/3.4.16"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
     <style>
@@ -223,6 +225,7 @@
 
         // Parse numeric value from string
         function parseNumeric(raw) {
+            AppContract.check("parseNumeric", arguments, ["?json"]);
             if (typeof raw === 'number') return raw;
             if (typeof raw !== 'string') return null;
             const num = parseFloat(raw.replace(/[^\d.-]/g, ''));
@@ -231,6 +234,7 @@
 
         // Extract only benchmarks (not metadata columns)
         function extractBenchmarks(row) {
+            AppContract.check("extractBenchmarks", arguments, ["mapping"]);
             const benchmarks = [];
             Object.entries(row || {}).forEach(([key, raw]) => {
                 if (BASE_EXCLUDE_KEYS.has(key)) return;
@@ -251,12 +255,14 @@
 
         // Normalize benchmark name using map
         function normalizeBenchmarkName(key) {
+            AppContract.check("normalizeBenchmarkName", arguments, ["text"]);
             if (BENCHMARK_NAME_MAP[key]) return BENCHMARK_NAME_MAP[key];
             return key.replace(/([a-z])([A-Z])/g, '$1 $2').replace(/(\d+)/g, ' $1').trim();
         }
 
         // Benchmark color mapping (matches About page)
         function getBenchmarkColor(name) {
+            AppContract.check("getBenchmarkColor", arguments, ["text"]);
             const blueGroup = ['AIME 2025', 'HMMT 2025', 'GPQA Diamond'];
             const redGroup = ['ARC-AGI', 'BrowseComp', 'ARC-AGI v2'];
             const purpleGroup = ['HLE', 'MMLU-Pro', 'LiveCodeBench'];
@@ -270,10 +276,12 @@
         }
 
         async function fetchHistory() {
+            AppContract.check("fetchHistory", arguments, []);
             const container = document.getElementById('history-container');
             try {
                 const response = await fetch('models.json');
-                const data = await response.json();
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const data = await ModelStore.expand(await response.json());
                 if (data && Array.isArray(data.history) && data.history.length) {
                     historyData = data.history;
                 } else if (data && Array.isArray(data.models) && data.models.length) {
@@ -314,6 +322,8 @@
         }
 
         function setEntryFilter(index, filter) {
+            AppContract.check("setEntryFilter", arguments, ["index", "enum:top10|all|US|CN"]);
+            AppContract.rosterIndex(index, historyData.length);
             entryFilters[index] = filter;
             renderHistory();
             if (window.lucide && typeof lucide.createIcons === 'function') {
@@ -322,6 +332,8 @@
         }
 
         function sortEntry(index, key) {
+            AppContract.check("sortEntry", arguments, ["index", "enum:rank|name|iq|value|unified"]);
+            AppContract.rosterIndex(index, historyData.length);
             if (!entrySorts[index]) {
                 entrySorts[index] = { key: 'unified', direction: 'desc' };
             }
@@ -339,6 +351,8 @@
         }
 
         function toggleEntry(index) {
+            AppContract.check("toggleEntry", arguments, ["index"]);
+            AppContract.rosterIndex(index, historyData.length);
             expandedEntries[index] = !expandedEntries[index];
             renderHistory();
             if (window.lucide && typeof lucide.createIcons === 'function') {
@@ -347,6 +361,7 @@
         }
 
         function renderHistory() {
+            AppContract.check("renderHistory", arguments, []);
             const container = document.getElementById('history-container');
             if (!historyData || historyData.length === 0) {
                 container.innerHTML = '<div class="text-center text-slate-500 py-12">No historical records found.</div>';
@@ -675,6 +690,7 @@
     <script>
     (function() {
         function timeAgo(dateStr) {
+            AppContract.check("timeAgo", arguments, ["?json"]);
             if (!dateStr) return '';
             try {
                 var date = new Date(dateStr);
@@ -694,18 +710,21 @@
         }
 
         function getCountryFlag(country) {
+            AppContract.check("getCountryFlag", arguments, ["?json"]);
             if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
             if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
             return '\u{1F30D}';
         }
 
         function escapeHtml(str) {
+            AppContract.check("escapeHtml", arguments, ["?json"]);
             var div = document.createElement('div');
             div.appendChild(document.createTextNode(str));
             return div.innerHTML;
         }
 
         async function loadNewsMarquee() {
+            AppContract.check("loadNewsMarquee", arguments, []);
             var container = document.getElementById('newsMarquee');
             if (!container) return;
 

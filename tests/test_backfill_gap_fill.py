@@ -350,8 +350,8 @@ class AskedMemoryTests(unittest.TestCase):
                      ("2026-09-03", _snapshot("2026-09-03T03:00:00+00:00", us, cn))]
         real = bf.gf.build_candidates
 
-        def fake(entries, headers, enabled_tiers=None):
-            return [bf.gf.GapCandidate(e.name, e.country, e.url, "Org", "HLE", 1, 1, 1) for e in entries]
+        def fake(entries):
+            return [bf.gf.GapCandidate(e.name, e.country, e.url, "Org", "HLE") for e in entries]
         bf.gf.build_candidates = fake
         try:
             now = datetime(2026, 9, 4, tzinfo=timezone.utc)

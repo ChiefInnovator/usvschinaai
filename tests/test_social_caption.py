@@ -4,6 +4,7 @@ import json
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
@@ -49,7 +50,8 @@ class SafetyTests(unittest.TestCase):
         sc.CACHE_PATH, sc.LEDGER_PATH = d / "cache.json", d / "ledger.jsonl"
 
     def test_no_key_means_fallback_not_failure(self):
-        cap = sc.generate_caption(FACTS, "new_challenger", 3, api_key="")
+        with patch.dict(sc.os.environ, {"OPENAI_API_KEY": ""}):
+            cap = sc.generate_caption(FACTS, "new_challenger", 3, api_key="")
         self.assertTrue(cap["_source"].startswith("fallback"))
         self.assertIn("GPT-6 Astra", cap["hook"])
         self.assertEqual(len(cap["bullets"]), 3)

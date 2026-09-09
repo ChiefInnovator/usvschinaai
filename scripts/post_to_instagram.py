@@ -10,6 +10,8 @@ Instagram Graph API two-step process:
   1. Create media container: POST /{ig-user-id}/media?image_url=...&caption=...
   2. Publish: POST /{ig-user-id}/media_publish?creation_id=...
 """
+from preconditions import preconditions
+from model_store import load_data
 import json
 import os
 import sys
@@ -20,10 +22,10 @@ import requests
 from dateutil.parser import parse as parse_date
 
 
+@preconditions(models_path='path')
 def load_caption_data(models_path):
     """Extract data for the Instagram caption from models.json."""
-    with open(models_path) as f:
-        data = json.load(f)
+    data = load_data(models_path)
     entry = data["history"][0]
     timestamp = entry.get("timestamp", "")
 
@@ -70,6 +72,7 @@ def load_caption_data(models_path):
     }
 
 
+@preconditions(data='mapping')
 def build_caption(data):
     """Build the Instagram post caption."""
     return (
@@ -96,6 +99,7 @@ def build_caption(data):
 GRAPH_API_BASE = "https://graph.facebook.com/v23.0"
 
 
+@preconditions(resp='response', context='text')
 def _raise_with_body(resp, context):
     """raise_for_status, but print the Graph error JSON first.
 
@@ -108,6 +112,7 @@ def _raise_with_body(resp, context):
     resp.raise_for_status()
 
 
+@preconditions(access_token='nonempty')
 def check_token_expiry(access_token):
     """Warn when the access token expires within 30 days. Soft-fail."""
     try:
@@ -131,6 +136,7 @@ def check_token_expiry(access_token):
         print(f"Token check skipped ({e})")
 
 
+@preconditions(creation_id='nonempty', access_token='nonempty', timeout_seconds='positive')
 def wait_for_container(creation_id, access_token, timeout_seconds=60):
     """Poll the media container until Instagram reports FINISHED.
 
@@ -155,6 +161,7 @@ def wait_for_container(creation_id, access_token, timeout_seconds=60):
     raise RuntimeError(f"Media container {creation_id} not ready after {timeout_seconds}s")
 
 
+@preconditions(image_url='nonempty', caption='text', access_token='nonempty', ig_user_id='nonempty')
 def post_to_instagram(image_url, caption, access_token, ig_user_id):
     """Two-step Instagram Graph API publish."""
     check_token_expiry(access_token)
@@ -197,6 +204,7 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
 
 
 
+@preconditions(image_urls='sequence', caption='text', access_token='nonempty', ig_user_id='nonempty')
 def post_carousel(image_urls, caption, access_token, ig_user_id):
     """Publish a carousel: one child container per slide, then a parent.
 
@@ -258,16 +266,19 @@ DEFAULT_TAG_USERNAME = "richcrane"
 TAG_POSITION = {"x": 0.92, "y": 0.96}
 
 
+@preconditions()
 def tag_username():
     return os.environ.get("IG_TAG_USERNAME", DEFAULT_TAG_USERNAME).strip().lstrip("@")
 
 
+@preconditions()
 def collaborators():
     raw = os.environ.get("IG_COLLABORATORS", "")
     names = [n.strip().lstrip("@") for n in raw.split(",") if n.strip()]
     return names[:3]
 
 
+@preconditions(caption='text', username='?text')
 def with_mention(caption, username=None):
     """Append an @mention once, on its own line, if it is not already there."""
     username = username or tag_username()
@@ -276,6 +287,7 @@ def with_mention(caption, username=None):
     return f"{caption.rstrip()}\n\n@{username}"
 
 
+@preconditions(username='?text')
 def tag_fields(username=None):
     """Extra form fields for an image container so the account is tagged on it."""
     username = username or tag_username()
@@ -284,6 +296,7 @@ def tag_fields(username=None):
     return {"user_tags": json.dumps([{"username": username, **TAG_POSITION}])}
 
 
+@preconditions()
 def collaborator_fields():
     names = collaborators()
     return {"collaborators": json.dumps(names)} if names else {}
@@ -298,6 +311,7 @@ def collaborator_fields():
 # post per UTC day, and the source of truth for "did we post today" is
 # Instagram itself, not repo state: ask the account for its latest media.
 
+@preconditions(access_token='nonempty', ig_user_id='nonempty', now='?datetime')
 def already_posted_today(access_token, ig_user_id, now=None):
     """Return the timestamp of today's post if one exists, else None.
 
@@ -342,6 +356,7 @@ def already_posted_today(access_token, ig_user_id, now=None):
     return today[0].get("timestamp", "")
 
 
+@preconditions(models_path='path', now='?datetime')
 def snapshot_is_today(models_path, now=None):
     """Only publish a board that was scraped today - never re-post stale data."""
     from datetime import datetime, timezone
@@ -360,6 +375,7 @@ def snapshot_is_today(models_path, now=None):
 PLAN_FILE = Path(__file__).resolve().parent.parent / "social" / "plan.json"
 
 
+@preconditions(path='path', now='?datetime')
 def load_plan(path=PLAN_FILE, now=None):
     """Today's carousel plan written by social_publish.py, or None if it is
     missing, unreadable, incomplete, or from another UTC day."""
@@ -376,6 +392,7 @@ def load_plan(path=PLAN_FILE, now=None):
     return plan
 
 
+@preconditions(url='text')
 def _url_ok(url):
     try:
         r = requests.get(url, timeout=15, stream=True)
@@ -385,6 +402,7 @@ def _url_ok(url):
         return False
 
 
+@preconditions(urls='sequence', attempts='positive', delay='nonnegative')
 def wait_for_urls(urls, attempts=8, delay=15):
     """Instagram fetches slides by URL at publish time, so every slide must be
     reachable first. Deploy has finished when this runs; the CDN may lag."""
@@ -397,6 +415,7 @@ def wait_for_urls(urls, attempts=8, delay=15):
     return False
 
 
+@preconditions()
 def main():
     access_token = os.environ.get("INSTAGRAM_ACCESS_TOKEN")
     ig_user_id = os.environ.get("IG_USER_ID")

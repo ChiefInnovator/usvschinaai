@@ -13,6 +13,7 @@ day, and nine of them in a row on the profile grid read as a bot. Formats
 rotate by what happened, and palettes are forbidden from repeating on
 consecutive days, so the grid reads as a designed mosaic.
 """
+from preconditions import preconditions
 import json
 from datetime import datetime, timezone
 from pathlib import Path
@@ -73,12 +74,14 @@ FORMAT_PALETTES = {
 # Facts
 # ---------------------------------------------------------------------------
 
+@preconditions(entry='mapping')
 def _board(entry: Dict[str, Any]) -> List[Dict[str, Any]]:
     rows = [dict(r, origin=team) for team, rs in entry.get("teams", {}).items() for r in rs]
     rows.sort(key=lambda r: -float(r.get("unified", 0)))
     return rows
 
 
+@preconditions(rows='sequence')
 def _totals(rows: List[Dict[str, Any]]) -> Dict[str, float]:
     """Mirror index.html calculateTotals(): sum unified per team over the combined top 10."""
     top = rows[:10]
@@ -88,6 +91,7 @@ def _totals(rows: List[Dict[str, Any]]) -> Dict[str, float]:
     }
 
 
+@preconditions(ts='text')
 def _date(ts: str) -> Optional[str]:
     try:
         return datetime.fromisoformat(ts).astimezone(timezone.utc).date().isoformat()
@@ -95,6 +99,7 @@ def _date(ts: str) -> Optional[str]:
         return None
 
 
+@preconditions(history='sequence')
 def previous_day_entry(history: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     """The newest snapshot from a UTC day before today's - not an earlier run today."""
     if not history:
@@ -106,6 +111,7 @@ def previous_day_entry(history: List[Dict[str, Any]]) -> Optional[Dict[str, Any]
     return None
 
 
+@preconditions(v='json')
 def _num(v) -> Optional[float]:
     try:
         return float(str(v).replace("%", "").replace("$", "").replace(",", ""))
@@ -113,6 +119,7 @@ def _num(v) -> Optional[float]:
         return None
 
 
+@preconditions(data='mapping')
 def build_day_facts(data: Dict[str, Any]) -> Dict[str, Any]:
     """Everything the templates and the caption need, and nothing else.
 
@@ -181,6 +188,7 @@ def build_day_facts(data: Dict[str, Any]) -> Dict[str, Any]:
 # Events -> format
 # ---------------------------------------------------------------------------
 
+@preconditions(facts='mapping')
 def detect_events(facts: Dict[str, Any]) -> List[Tuple[int, str]]:
     """Formats the data justifies today, best first."""
     out: List[Tuple[int, str]] = []
@@ -197,6 +205,7 @@ def detect_events(facts: Dict[str, Any]) -> List[Tuple[int, str]]:
 ROTATION = ["head_to_head", "price_vs_power", "benchmark_day", "leaderboard"]
 
 
+@preconditions(facts='mapping', recent='sequence', today='?datetime')
 def choose_format(facts: Dict[str, Any], recent: List[str], today: Optional[datetime] = None) -> str:
     """Event-driven story if there is one not used in the last NO_REPEAT_DAYS;
     otherwise the next rotation format not used recently; Sundays get the trend."""
@@ -214,6 +223,7 @@ def choose_format(facts: Dict[str, Any], recent: List[str], today: Optional[date
     return min(ROTATION, key=lambda f: (len(recent) - 1 - recent[::-1].index(f)) if f in recent else -1)
 
 
+@preconditions(fmt='text', facts='mapping', recent_palettes='sequence')
 def choose_palette(fmt: str, facts: Dict[str, Any], recent_palettes: List[str]) -> str:
     """The format's palette family, never the same palette as yesterday."""
     options = list(FORMAT_PALETTES[fmt])
@@ -230,6 +240,7 @@ def choose_palette(fmt: str, facts: Dict[str, Any], recent_palettes: List[str]) 
 # History (what was posted on previous days)
 # ---------------------------------------------------------------------------
 
+@preconditions(path='path')
 def read_history(path: Path = SOCIAL_HISTORY) -> List[Dict[str, Any]]:
     if not path.exists():
         return []
@@ -244,12 +255,14 @@ def read_history(path: Path = SOCIAL_HISTORY) -> List[Dict[str, Any]]:
     return out
 
 
+@preconditions(record='mapping', path='path')
 def append_history(record: Dict[str, Any], path: Path = SOCIAL_HISTORY) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "a") as f:
         f.write(json.dumps(record) + "\n")
 
 
+@preconditions(data='mapping', history='?sequence', today='?datetime')
 def plan_today(data: Dict[str, Any], history: Optional[List[Dict[str, Any]]] = None,
                today: Optional[datetime] = None) -> Dict[str, Any]:
     """facts + format + palette for today, in one call."""
@@ -283,11 +296,13 @@ TREND_DAYS = 30
 BENCHMARK_NO_REPEAT = 6
 
 
+@preconditions(r='mapping', b='text')
 def _reported(r: Dict[str, Any], b: str) -> bool:
     v = r.get(b)
     return isinstance(v, str) and v.strip() not in MISSING
 
 
+@preconditions(rows='sequence')
 def qualified_benchmarks(rows: List[Dict[str, Any]]) -> List[str]:
     """Same rule as the scorer: reported by at least half the cohort."""
     headers = set()
@@ -297,6 +312,7 @@ def qualified_benchmarks(rows: List[Dict[str, Any]]) -> List[str]:
     return sorted(b for b in headers if sum(_reported(r, b) for r in rows) >= need)
 
 
+@preconditions(qualified='sequence', recent='sequence', day_index='int')
 def choose_benchmark(qualified: List[str], recent: List[str], day_index: int) -> Optional[str]:
     """Rotate through the qualified set, skipping any featured recently."""
     if not qualified:
@@ -309,6 +325,7 @@ def choose_benchmark(qualified: List[str], recent: List[str], day_index: int) ->
     return order[0]
 
 
+@preconditions(history='sequence', days='int')
 def per_day_series(history: List[Dict[str, Any]], days: int = TREND_DAYS) -> List[Dict[str, Any]]:
     """Latest snapshot per UTC day, oldest first, up to `days` days."""
     byday: Dict[str, Dict[str, Any]] = {}
@@ -323,6 +340,7 @@ def per_day_series(history: List[Dict[str, Any]], days: int = TREND_DAYS) -> Lis
     return out
 
 
+@preconditions(data='mapping', recent_benchmarks='?sequence', today='?datetime')
 def build_chart_facts(data: Dict[str, Any], recent_benchmarks: Optional[List[str]] = None,
                       today: Optional[datetime] = None) -> Dict[str, Any]:
     history = data.get("history") or []

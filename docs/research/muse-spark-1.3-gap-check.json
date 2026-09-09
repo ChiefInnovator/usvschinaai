@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-09-06",
+  "model": "Muse Spark 1.3",
+  "acceptedNewScores": 0,
+  "existingScores": {
+    "DeepSWE 1.1": 75.4,
+    "Terminal-Bench 2.1": 88.8,
+    "GPQA Diamond": 93.8
+  },
+  "unresolved": [
+    "Toolathlon",
+    "Agents’ Last Exam",
+    "BrowseComp",
+    "MMMU-Pro",
+    "CharXiv-R",
+    "ARC-AGI-2",
+    "OfficeQA Pro",
+    "IFBench",
+    "FrontierMath — Tiers 1–3 v2"
+  ],
+  "findings": [
+    {
+      "benchmark": "MMMU-Pro",
+      "score": 82.0,
+      "exactValue": 82.0231213872832,
+      "configuration": "Muse Spark 1.3 (xhigh)",
+      "source": "https://artificialanalysis.ai/models/muse-spark-1-3-xhigh",
+      "accepted": false,
+      "reason": "Existing model evidence uses max; AA max MMMU-Pro is null. Do not combine incompatible configurations."
+    },
+    {
+      "benchmark": "FrontierMath",
+      "score": 39.0,
+      "configuration": "Original April Muse Spark, not Muse Spark 1.3",
+      "source": "https://epoch.ai/data/benchmark_data.zip",
+      "accepted": false,
+      "reason": "Different model release; no exact 1.3 result found."
+    },
+    {
+      "benchmark": "IFBench",
+      "source": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
+      "accepted": false,
+      "reason": "Meta internal IF Index is a different composite, not IFBench; AA IFBench is null for both max and xhigh."
+    },
+    {
+      "benchmark": "Terminal-Bench 2.1",
+      "score": 85.8,
+      "configuration": "Artificial Analysis Muse Spark 1.3 max independent evaluation",
+      "source": "https://artificialanalysis.ai/models/muse-spark-1-3",
+      "accepted": false,
+      "reason": "Already populated from Meta result 88.8; alternate harness result retained here for research only."
+    }
+  ],
+  "sourcesChecked": [
+    "https://research.meta.ai/blog/introducing-muse-spark-1-3",
+    "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
+    "https://llm-stats.com/models/muse-spark-1.3",
+    "https://artificialanalysis.ai/models/muse-spark-1-3",
+    "https://epoch.ai/data/benchmark_data.zip",
+    "https://toolathlon.xyz/docs/leaderboard",
+    "https://charxiv.github.io/data/val_result.csv",
+    "https://arcprize.org/leaderboard"
+  ],
+  "searchScope": "Targeted web searches for all nine missing selected benchmarks; no claim of universal absence.",
+  "supersededBy": "User instructed highest scores across effort settings; MMMU-Pro xhigh is now eligible and ingested by source refresh. Original audit retained as dated research context."
+}

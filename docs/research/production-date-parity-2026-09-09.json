@@ -1,0 +1,9 @@
+{
+  "productionCommit": "c784d75014ecbbb61e8bcad6f04a31da3b80c218",
+  "importedTimestamps": [
+    "2026-09-07T03:40:59+00:00"
+  ],
+  "snapshotCount": 237,
+  "method": "Preserved original production roster and metadata; derived scores use existing accepted catalog evidence and current weights. No production benchmark scores were imported.",
+  "missingProductionTimestamps": []
+}

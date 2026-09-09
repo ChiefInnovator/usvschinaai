@@ -1,0 +1,99 @@
+[
+  {
+    "model": "Claude Fable 5",
+    "component": "gpqa-diamond",
+    "score": 85.9,
+    "publishedAt": null,
+    "sourceUrl": "https://epoch.ai/data/benchmark_data.zip",
+    "sourceType": "official_leaderboard",
+    "confidence": "medium",
+    "configuration": "Epoch AI evaluation of claude-fable-5_max; evaluation started 2026-08-06",
+    "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row claude-fable-5_max."
+  },
+  {
+    "model": "GLM-5.1",
+    "component": "terminal-bench-2.1",
+    "score": 61.8,
+    "publishedAt": null,
+    "sourceUrl": "https://artificialanalysis.ai/models/glm-5-1",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Artificial Analysis independent evaluation of GLM-5.1 (Reasoning).",
+    "notes": "AA record glm-5-1; variant selected by agreement with this model's already-recorded values. AA publishes no per-result evaluation date."
+  },
+  {
+    "model": "GPT-5.4",
+    "component": "terminal-bench-2.1",
+    "score": 78.3,
+    "publishedAt": null,
+    "sourceUrl": "https://artificialanalysis.ai/models/gpt-5-4",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Artificial Analysis independent evaluation of GPT-5.4 (xhigh).",
+    "notes": "AA record gpt-5-4; variant selected by agreement with this model's already-recorded values. AA publishes no per-result evaluation date."
+  },
+  {
+    "model": "Gemini 3.8 Flash",
+    "component": "mmmu-pro",
+    "score": 85.6,
+    "publishedAt": null,
+    "sourceUrl": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Artificial Analysis independent evaluation of Gemini 3.8 Flash (high).",
+    "notes": "AA record gemini-3-8-flash; variant selected by agreement with this model's already-recorded values. AA publishes no per-result evaluation date."
+  },
+  {
+    "model": "Claude Opus 5",
+    "component": "officeqa-pro",
+    "score": 60.9,
+    "sourceUrl": "https://github.com/databricks/officeqa/blob/044ed0bf0a5a414963ab7669990d0904205d88ed/figures/officeqa_pro_agent_harness_performance.png",
+    "sourceType": "official_leaderboard",
+    "confidence": "high",
+    "publishedAt": "2026-08-03",
+    "configuration": "Databricks OfficeQA Pro N=133, Anthropic Agent end-to-end harness over Treasury Bulletin corpus; operator figure explicitly labels Claude Opus 5 at 60.9%.",
+    "notes": "Manually read from operator figure. Distinct from Anthropic extracted-text 66.9% configuration; no transfer from Pro V2."
+  },
+  {
+    "model": "Seed 2.1 Pro",
+    "component": "arc-agi-2",
+    "score": 62.5,
+    "sourceUrl": "https://llm-stats.com/models/seed-2.1-pro",
+    "sourceType": "third_party_leaderboard",
+    "confidence": "medium",
+    "configuration": "Exact model detail-page result and selected benchmark identity; llm-stats normalized percentage. No sibling-version substitution.",
+    "notes": "Fresh retrieval of embedded benchmark record. No dated publication artifact; apply from retrieval only."
+  },
+  {
+    "model": "Kimi K3",
+    "component": "ifbench",
+    "score": 74.4,
+    "publishedAt": "2026-08-29",
+    "sourceUrl": "https://huggingface.co/nvidia/Kimi-K3-NVFP4/blob/b2428a0b83a8b712ff2e1a8448a103d4175341f1/README.md",
+    "sourceType": "model_card",
+    "confidence": "high",
+    "configuration": "NVIDIA evaluation, original Kimi-K3 checkpoint column (native MXFP4 routed experts and BF16 attention), temperature=1.0, top_p=0.95, max generation 65536 tokens. IFBench 0.7440.",
+    "notes": "Original checkpoint baseline, not the NVFP4 derivative. Exact corrected table commit dated 2026-08-29 via Hugging Face commit API."
+  },
+  {
+    "model": "DeepSeek-V4-Flash-0731",
+    "component": "ifbench",
+    "score": 79.2,
+    "publishedAt": "2026-08-26",
+    "sourceUrl": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+    "sourceType": "vendor_blog",
+    "confidence": "high",
+    "configuration": "Qwen launch comparison table, exact DeepSeek-V4-Flash-0731 column and IFBench row (79.2). Source does not state the baseline sampling settings.",
+    "notes": "Verified rendered official blog, dated 2026/08/26. Not a score for DeepSeek-V4-Flash Preview. Independent NVIDIA baseline reports 75.8 in a different documented configuration; values are not averaged or combined."
+  },
+  {
+    "model": "Claude Sonnet 5",
+    "component": "mmmu-pro",
+    "score": 77.3,
+    "sourceUrl": "https://artificialanalysis.ai/models/claude-sonnet-5",
+    "sourceType": "official_leaderboard",
+    "confidence": "high",
+    "configuration": "Artificial Analysis independent evaluation, Claude Sonnet 5 (Adaptive Reasoning, Max Effort); mmmuPro=0.772832369942197.",
+    "notes": "Exact max-effort record, consistent with max-effort model evidence. No fallback variant. No publication date in the result; apply from retrieval."
+  }
+]

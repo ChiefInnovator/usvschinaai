@@ -10,6 +10,7 @@ colours meeting on a pixel boundary, at every size.
 
 Run: python scripts/generate_icons.py
 """
+from preconditions import preconditions
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
@@ -72,6 +73,7 @@ SVG = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="51
 """
 
 
+@preconditions(pixel_size='positive_int')
 def _load_mark_font(pixel_size: int):
     for path in MARK_FONT_CANDIDATES:
         if Path(path).exists():
@@ -82,6 +84,7 @@ def _load_mark_font(pixel_size: int):
     return None
 
 
+@preconditions(size='positive_int')
 def _mark_alpha(size: int):
     """Antialiased alpha mask for the VS, or None if no heavy face is present.
 
@@ -112,6 +115,7 @@ def _mark_alpha(size: int):
     return layer.resize((size, size), Image.LANCZOS)
 
 
+@preconditions(size='positive_int', with_mark='bool')
 def render(size: int, with_mark: bool = True) -> Image.Image:
     """Draw the split at native resolution — never resize an existing raster."""
     img = Image.new("RGBA", (size, size), US_BLUE + (255,))
@@ -126,6 +130,7 @@ def render(size: int, with_mark: bool = True) -> Image.Image:
     return img
 
 
+@preconditions()
 def main() -> None:
     for filename, size in sorted(ICON_SIZES.items()):
         path = REPO_ROOT / filename

@@ -146,58 +146,13 @@ class VersionSiblingTests(unittest.TestCase):
         )
 
 
-class SiblingVersionLockTests(unittest.TestCase):
-    def test_gap_fill_skips_a_benchmark_whose_sibling_is_already_reported(self):
-        try:
-            from gap_fill_benchmarks import has_sibling_version_value
-        except ImportError:
-            self.skipTest("gap_fill_benchmarks needs requests")
-
-        class Entry:
-            def __init__(self, columns):
-                self.columns = columns
-
-        headers = ["DeepSWE", "DeepSWE1.1", "HLE"]
-        has_sibling = Entry({"DeepSWE1.1": "75.4%", "HLE": "60.0%"})
-        self.assertTrue(has_sibling_version_value(has_sibling, "DeepSWE", headers))
-        # No sibling reported -> researching it is legitimate.
-        no_sibling = Entry({"HLE": "60.0%"})
-        self.assertFalse(has_sibling_version_value(no_sibling, "DeepSWE", headers))
-        # An unrelated benchmark is never blocked.
-        self.assertFalse(has_sibling_version_value(has_sibling, "HLE", headers))
-
-
-class ApplyTimeSiblingLockTests(unittest.TestCase):
-    def test_fill_is_refused_when_sibling_landed_earlier_in_the_pass(self):
-        """build_candidates runs before any fill lands. When both DeepSWE and
-        DeepSWE 1.1 are cached, neither is present at build time so the lock
-        sees nothing — then the cache writes both. _apply_fill must re-check.
-        """
-        try:
-            from gap_fill_benchmarks import _apply_fill, GapCandidate
-        except ImportError:
-            self.skipTest("gap_fill_benchmarks needs requests")
-
-        class Entry:
-            def __init__(self, name, country, columns):
-                self.name, self.country, self.columns = name, country, columns
-
-        entry = Entry("Claude Fable 5.1", "US", {"HLE": "65.0%"})
-        entries = [entry]
-
-        def cand(benchmark):
-            return GapCandidate(
-                model_name="Claude Fable 5.1", model_country="US", model_url="",
-                organization="Anthropic", benchmark=benchmark, tier=1,
-                cohort_count=0, top_cohort_count=0,
-            )
-
-        fill = {"score": 67.4, "source_url": "https://example.test", "confidence": "high", "source_type": "model_card"}
-        # First sibling lands normally.
-        self.assertTrue(_apply_fill(entries, cand("DeepSWE 1.1"), fill, "test-model"))
-        self.assertIn("DeepSWE 1.1", entry.columns)
-        # Second sibling must be refused now that the first is present.
-        self.assertFalse(_apply_fill(entries, cand("DeepSWE"), fill, "test-model"))
-        self.assertNotIn("DeepSWE", entry.columns)
-        # An unrelated benchmark is unaffected.
-        self.assertTrue(_apply_fill(entries, cand("GPQA"), fill, "test-model"))
+class ExactVersionFillTests(unittest.TestCase):
+    def test_selected_version_can_be_filled_when_newer_version_exists(self):
+        from types import SimpleNamespace
+        from gap_fill_benchmarks import _apply_fill, GapCandidate
+        entry = SimpleNamespace(name="Model", country="US", columns={"Terminal-Bench4.0": "55%"})
+        candidate = GapCandidate("Model", "US", "", "Org", "Terminal-Bench 2.1")
+        fill = {"score": "70%", "source_url": "https://example.test/tb21", "confidence": "high"}
+        self.assertTrue(_apply_fill([entry], candidate, fill, "test"))
+        self.assertEqual(entry.columns["Terminal-Bench 2.1"], "70%")
+        self.assertEqual(entry.columns["Terminal-Bench4.0"], "55%")

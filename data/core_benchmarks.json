@@ -1,0 +1,1476 @@
+{
+  "version": 28,
+  "scope": "Eighteen Avg IQ benchmark weights proportional to accepted-score participant counts in the recorded reference snapshot; fixed 100% denominator and missing results zero; no participation eligibility filter",
+  "benchmarks": [
+    {
+      "id": "toolathlon",
+      "name": "Toolathlon",
+      "weight": 0.3889514915125296,
+      "aliases": [
+        "Toolathlon"
+      ]
+    },
+    {
+      "id": "agents-last-exam",
+      "name": "Agents’ Last Exam",
+      "weight": 1.4,
+      "aliases": [
+        "Agents' Last Exam",
+        "Agents’ Last Exam"
+      ]
+    },
+    {
+      "id": "deepswe",
+      "name": "DeepSWE",
+      "weight": 0.16669349636251266,
+      "aliases": [
+        "DeepSWE"
+      ]
+    },
+    {
+      "id": "deepswe-1.1",
+      "name": "DeepSWE 1.1",
+      "weight": 13.65464714295311,
+      "aliases": [
+        "DeepSWE 1.1"
+      ]
+    },
+    {
+      "id": "livecodebench-v6",
+      "name": "LiveCodeBench v6",
+      "weight": 0.8939466115103816,
+      "aliases": [
+        "LiveCodeBench v6"
+      ]
+    },
+    {
+      "id": "terminal-bench-2.1",
+      "name": "Terminal-Bench 2.1",
+      "weight": 2.0,
+      "aliases": [
+        "Terminal-Bench 2.1"
+      ]
+    },
+    {
+      "id": "browsecomp",
+      "name": "BrowseComp",
+      "weight": 2.0,
+      "aliases": [
+        "BrowseComp"
+      ]
+    },
+    {
+      "id": "mmmu-pro",
+      "name": "MMMU-Pro",
+      "weight": 1.8,
+      "aliases": [
+        "MMMU-Pro"
+      ]
+    },
+    {
+      "id": "charxiv-r",
+      "name": "CharXiv-R",
+      "weight": 0.19447574575626503,
+      "aliases": [
+        "CharXiv-R"
+      ]
+    },
+    {
+      "id": "arc-agi-2",
+      "name": "ARC-AGI-2",
+      "weight": 16.303557299280293,
+      "aliases": [
+        "ARC-AGI-2",
+        "ARC-AGI v2"
+      ]
+    },
+    {
+      "id": "officeqa-pro",
+      "name": "OfficeQA Pro",
+      "weight": 0.1,
+      "aliases": [
+        "OfficeQA Pro"
+      ]
+    },
+    {
+      "id": "ifbench",
+      "name": "IFBench",
+      "weight": 0.222257995150017,
+      "aliases": [
+        "IFBench"
+      ]
+    },
+    {
+      "id": "gpqa-diamond",
+      "name": "GPQA Diamond",
+      "weight": 17.080453270838543,
+      "aliases": [
+        "GPQA Diamond"
+      ]
+    },
+    {
+      "id": "frontiermath-1-3-v2",
+      "name": "FrontierMath — Tiers 1–3 v2",
+      "weight": 16.195809437265375,
+      "aliases": [
+        "FrontierMath Tiers 1–3 v2",
+        "FrontierMath Tiers 1-3 (v2)"
+      ]
+    },
+    {
+      "id": "gpqa",
+      "name": "GPQA",
+      "weight": 15.749047847812134,
+      "aliases": [
+        "GPQA"
+      ]
+    },
+    {
+      "id": "mmlu-pro",
+      "name": "MMLU-Pro",
+      "weight": 0.9127133196960582,
+      "aliases": [
+        "MMLU-Pro"
+      ]
+    },
+    {
+      "id": "humanitys-last-exam",
+      "name": "Humanity’s Last Exam",
+      "weight": 10.687446341862787,
+      "aliases": [
+        "Humanity’s Last Exam",
+        "Humanity's Last Exam",
+        "HLE"
+      ]
+    },
+    {
+      "id": "swe-bench-verified",
+      "name": "SWE-bench Verified",
+      "weight": 0.25,
+      "aliases": [
+        "SWE-bench Verified",
+        "SWE-Bench Verified"
+      ]
+    }
+  ],
+  "missingContribution": 0,
+  "denominator": 1.0,
+  "participationFiltering": false,
+  "calibration": {
+    "date": "2026-09-06",
+    "target": "User-provided llm-stats 15-model screenshot order",
+    "method": "Minimize rank displacement weighted by 1 + 5 / target rank; 0.1 percentage-point increments; each component at least 0.1%; missing results zero",
+    "report": "docs/research/llm-stats-ranking-calibration.md",
+    "extension": "Added DeepSWE, LiveCodeBench v6, GPQA, MMLU-Pro and AIME 2025 with equal allocations to DeepSWE 1.1; proportionally normalized all allocations. Latest three use the previous-addition allocation pending any different requested weights. Humanity’s Last Exam and SWE-bench Verified added at the same allocation as the recent additions, with proportional normalization.",
+    "adjustmentHistory": [
+      {
+        "date": "2026-09-09",
+        "reason": "Replaces the 10% software adjustment: software benchmarks collectively total 8%, funded proportionally from all other benchmarks using the pre-10% weights.",
+        "softwareBenchmarks": [
+          "deepswe",
+          "deepswe-1.1",
+          "livecodebench-v6",
+          "swe-bench-verified",
+          "terminal-bench-2.1"
+        ],
+        "softwareWeightEach": 1.6,
+        "softwareWeightTotal": 8.0,
+        "donorBenchmarks": [
+          "toolathlon",
+          "agents-last-exam",
+          "browsecomp",
+          "mmmu-pro",
+          "charxiv-r",
+          "arc-agi-2",
+          "officeqa-pro",
+          "ifbench",
+          "gpqa-diamond",
+          "frontiermath-1-3-v2",
+          "gpqa",
+          "mmlu-pro",
+          "aime-2025",
+          "humanitys-last-exam"
+        ],
+        "donorWeightTotal": 92.0,
+        "baselineVersion": 6
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "User requested at least 1% for each benchmark with an accepted GPT-6 Astra score, funded proportionally only by benchmarks without an accepted Astra score. Supersedes the fixed 8% software allocation.",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "benchmarksWithScores": [
+          "agents-last-exam",
+          "arc-agi-2",
+          "browsecomp",
+          "deepswe-1.1",
+          "frontiermath-1-3-v2",
+          "gpqa",
+          "gpqa-diamond",
+          "humanitys-last-exam",
+          "mmmu-pro",
+          "terminal-bench-2.1"
+        ],
+        "raisedBenchmarks": [
+          "agents-last-exam",
+          "browsecomp",
+          "mmmu-pro",
+          "gpqa",
+          "humanitys-last-exam"
+        ],
+        "minimumWeight": 1.0,
+        "donorBenchmarks": [
+          "toolathlon",
+          "deepswe",
+          "livecodebench-v6",
+          "charxiv-r",
+          "officeqa-pro",
+          "ifbench",
+          "mmlu-pro",
+          "aime-2025",
+          "swe-bench-verified"
+        ],
+        "transferredPercentagePoints": 4.540918163674639,
+        "donorMultiplier": 0.551529727172097
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "User requested adding one percentage point to every benchmark with an accepted Muse Spark 1.3 score, funded proportionally by all benchmarks without an accepted Muse Spark 1.3 score.",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Muse Spark 1.3",
+        "benchmarksWithScores": [
+          "agents-last-exam",
+          "deepswe-1.1",
+          "gpqa-diamond",
+          "mmmu-pro",
+          "terminal-bench-2.1"
+        ],
+        "increaseEachPercentagePoints": 1.0,
+        "donorBenchmarks": [
+          "toolathlon",
+          "deepswe",
+          "livecodebench-v6",
+          "browsecomp",
+          "charxiv-r",
+          "arc-agi-2",
+          "officeqa-pro",
+          "ifbench",
+          "frontiermath-1-3-v2",
+          "gpqa",
+          "mmlu-pro",
+          "aime-2025",
+          "humanitys-last-exam",
+          "swe-bench-verified"
+        ],
+        "transferredPercentagePoints": 5.0,
+        "donorMultiplier": 0.9296877631445979
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Set DeepSWE 1.1 to 10%; exhaust the seven benchmarks with no scores for any of Claude Fable 5.1, GPT-6 Astra, or Muse Spark 1.3, then take the remaining increase proportionally from the other ten benchmarks. GPQA Diamond remains unchanged.",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "models": [
+          "Claude Fable 5.1",
+          "GPT-6 Astra",
+          "Muse Spark 1.3"
+        ],
+        "targetBenchmark": "deepswe-1.1",
+        "targetWeight": 10.0,
+        "protectedBenchmarks": [
+          "gpqa-diamond"
+        ],
+        "zeroWeightBenchmarks": [
+          "aime-2025",
+          "charxiv-r",
+          "deepswe",
+          "ifbench",
+          "officeqa-pro",
+          "swe-bench-verified",
+          "toolathlon"
+        ],
+        "weightFreedByZeroing": 4.3242977089189,
+        "donorBenchmarks": [
+          "agents-last-exam",
+          "livecodebench-v6",
+          "terminal-bench-2.1",
+          "browsecomp",
+          "mmmu-pro",
+          "arc-agi-2",
+          "frontiermath-1-3-v2",
+          "gpqa",
+          "mmlu-pro",
+          "humanitys-last-exam"
+        ],
+        "remainingPercentagePoints": 3.0757022910811,
+        "donorMultiplier": 0.9550250966714331
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Remove AIME 2025 from supported benchmarks. Its weight was zero; all remaining weights are unchanged.",
+        "removedBenchmarks": [
+          "aime-2025"
+        ],
+        "benchmarkCount": 18
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "User requested each benchmark weight equal its participant count divided by the sum of participant counts across all configured benchmarks. Applies one reference-snapshot weight set to all history.",
+        "method": "weightPercent = 100 * participantCount / totalBenchmarkParticipants",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "rosterSize": 20,
+        "participantCounts": {
+          "toolathlon": 14,
+          "agents-last-exam": 17,
+          "deepswe": 6,
+          "deepswe-1.1": 20,
+          "livecodebench-v6": 14,
+          "terminal-bench-2.1": 18,
+          "browsecomp": 8,
+          "mmmu-pro": 12,
+          "charxiv-r": 7,
+          "arc-agi-2": 8,
+          "officeqa-pro": 6,
+          "ifbench": 8,
+          "gpqa-diamond": 19,
+          "frontiermath-1-3-v2": 12,
+          "gpqa": 11,
+          "mmlu-pro": 14,
+          "humanitys-last-exam": 13,
+          "swe-bench-verified": 13
+        },
+        "totalBenchmarkParticipants": 220
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Apply approved blend: 90% of all-model participation weights plus 10% of participation weights among GPT-6 Astra, Muse Spark 1.3 and Claude Fable 5.1.",
+        "method": "weightPercent = 90 * allModelParticipantCount / 220 + 10 * threeModelParticipantCount / 22",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "allModelParticipantCounts": {
+          "toolathlon": 14,
+          "agents-last-exam": 17,
+          "deepswe": 6,
+          "deepswe-1.1": 20,
+          "livecodebench-v6": 14,
+          "terminal-bench-2.1": 18,
+          "browsecomp": 8,
+          "mmmu-pro": 12,
+          "charxiv-r": 7,
+          "arc-agi-2": 8,
+          "officeqa-pro": 6,
+          "ifbench": 8,
+          "gpqa-diamond": 19,
+          "frontiermath-1-3-v2": 12,
+          "gpqa": 11,
+          "mmlu-pro": 14,
+          "humanitys-last-exam": 13,
+          "swe-bench-verified": 13
+        },
+        "allModelTotalParticipants": 220,
+        "threeModelParticipantCounts": {
+          "toolathlon": 0,
+          "agents-last-exam": 2,
+          "deepswe": 0,
+          "deepswe-1.1": 3,
+          "livecodebench-v6": 1,
+          "terminal-bench-2.1": 2,
+          "browsecomp": 1,
+          "mmmu-pro": 2,
+          "charxiv-r": 0,
+          "arc-agi-2": 2,
+          "officeqa-pro": 0,
+          "ifbench": 0,
+          "gpqa-diamond": 3,
+          "frontiermath-1-3-v2": 2,
+          "gpqa": 1,
+          "mmlu-pro": 1,
+          "humanitys-last-exam": 2,
+          "swe-bench-verified": 0
+        },
+        "threeModelTotalParticipants": 22,
+        "models": [
+          "GPT-6 Astra",
+          "Muse Spark 1.3",
+          "Claude Fable 5.1"
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Retain 90% of every current benchmark weight and redistribute 10 percentage points in proportion to Muse Spark 1.3 benchmark scores. Apply the same weights to all models and snapshots.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * museBenchmarkScore / 372.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Muse Spark 1.3",
+        "scores": {
+          "agents-last-exam": 32.2,
+          "deepswe-1.1": 75.4,
+          "terminal-bench-2.1": 89.2,
+          "mmmu-pro": 82.0,
+          "gpqa-diamond": 94.1
+        },
+        "totalScore": 372.9
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Retain 90% of every current benchmark weight and redistribute 10 percentage points in proportion to Claude Fable 5.1 benchmark scores. Apply the same weights to all models and snapshots.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * fableBenchmarkScore / 589.2",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Claude Fable 5.1",
+        "scores": {
+          "deepswe-1.1": 67.4,
+          "livecodebench-v6": 90.5,
+          "arc-agi-2": 90.0,
+          "gpqa-diamond": 93.7,
+          "frontiermath-1-3-v2": 90.2,
+          "mmlu-pro": 92.4,
+          "humanitys-last-exam": 65.0
+        },
+        "totalScore": 589.2
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Retain 90% of every current benchmark weight and redistribute 10 percentage points in proportion to GPT-6 Astra benchmark scores. Apply the same weights to all models and snapshots.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * astraBenchmarkScore / 839.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "scores": {
+          "agents-last-exam": 59.3,
+          "deepswe-1.1": 74.1,
+          "terminal-bench-2.1": 89.9,
+          "browsecomp": 91.5,
+          "mmmu-pro": 86.9,
+          "arc-agi-2": 95.0,
+          "gpqa-diamond": 96.3,
+          "frontiermath-1-3-v2": 93.7,
+          "gpqa": 96.0,
+          "humanitys-last-exam": 57.2
+        },
+        "totalScore": 839.9
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Apply a second consecutive Astra blend: retain 90% of every current benchmark weight and redistribute 10 percentage points in proportion to GPT-6 Astra benchmark scores. Apply the same weights to all models and snapshots.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * astraBenchmarkScore / 839.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "scores": {
+          "agents-last-exam": 59.3,
+          "deepswe-1.1": 74.1,
+          "terminal-bench-2.1": 89.9,
+          "browsecomp": 91.5,
+          "mmmu-pro": 86.9,
+          "arc-agi-2": 95.0,
+          "gpqa-diamond": 96.3,
+          "frontiermath-1-3-v2": 93.7,
+          "gpqa": 96.0,
+          "humanitys-last-exam": 57.2
+        },
+        "totalScore": 839.9,
+        "consecutiveAstraBlend": 2
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "User requested repeating the Astra 90/10 score-based blend until Astra ranks first by Unified Score in the latest snapshot. Stopped at first strict lead.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * astraBenchmarkScore / 839.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "scores": {
+          "agents-last-exam": 59.3,
+          "deepswe-1.1": 74.1,
+          "terminal-bench-2.1": 89.9,
+          "browsecomp": 91.5,
+          "mmmu-pro": 86.9,
+          "arc-agi-2": 95.0,
+          "gpqa-diamond": 96.3,
+          "frontiermath-1-3-v2": 93.7,
+          "gpqa": 96.0,
+          "humanitys-last-exam": 57.2
+        },
+        "totalScore": 839.9,
+        "additionalBlends": 12,
+        "consecutiveAstraBlend": 14,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "astraRank": 7,
+            "astraAvgIq": 62.94,
+            "astraUnified": 712.78,
+            "leader": "Kimi K3",
+            "leaderUnified": 901.72
+          },
+          {
+            "additionalBlends": 1,
+            "astraRank": 6,
+            "astraAvgIq": 65.29,
+            "astraUnified": 741.81,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.7
+          },
+          {
+            "additionalBlends": 2,
+            "astraRank": 5,
+            "astraAvgIq": 67.4,
+            "astraUnified": 767.14,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.73
+          },
+          {
+            "additionalBlends": 3,
+            "astraRank": 5,
+            "astraAvgIq": 69.3,
+            "astraUnified": 789.54,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.69
+          },
+          {
+            "additionalBlends": 4,
+            "astraRank": 4,
+            "astraAvgIq": 71.01,
+            "astraUnified": 809.48,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.71
+          },
+          {
+            "additionalBlends": 5,
+            "astraRank": 4,
+            "astraAvgIq": 72.55,
+            "astraUnified": 827.33,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.79
+          },
+          {
+            "additionalBlends": 6,
+            "astraRank": 4,
+            "astraAvgIq": 73.94,
+            "astraUnified": 843.13,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.81
+          },
+          {
+            "additionalBlends": 7,
+            "astraRank": 4,
+            "astraAvgIq": 75.19,
+            "astraUnified": 857.15,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.82
+          },
+          {
+            "additionalBlends": 8,
+            "astraRank": 2,
+            "astraAvgIq": 76.31,
+            "astraUnified": 869.76,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.84
+          },
+          {
+            "additionalBlends": 9,
+            "astraRank": 2,
+            "astraAvgIq": 77.32,
+            "astraUnified": 880.89,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.81
+          },
+          {
+            "additionalBlends": 10,
+            "astraRank": 2,
+            "astraAvgIq": 78.23,
+            "astraUnified": 890.97,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.87
+          },
+          {
+            "additionalBlends": 11,
+            "astraRank": 2,
+            "astraAvgIq": 79.05,
+            "astraUnified": 899.92,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.87
+          },
+          {
+            "additionalBlends": 12,
+            "astraRank": 1,
+            "astraAvgIq": 79.78,
+            "astraUnified": 900.36,
+            "leader": "GPT-6 Astra",
+            "leaderUnified": 900.36
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Repeat the Fable 5.1 score-based 90/10 blend until Fable strictly exceeds Claude Opus 5 by Unified Score in the latest snapshot; stop at first crossover.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * fableBenchmarkScore / 589.2",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Claude Fable 5.1",
+        "comparisonModel": "Claude Opus 5",
+        "scores": {
+          "deepswe-1.1": 67.4,
+          "livecodebench-v6": 90.5,
+          "arc-agi-2": 90.0,
+          "gpqa-diamond": 93.7,
+          "frontiermath-1-3-v2": 90.2,
+          "mmlu-pro": 92.4,
+          "humanitys-last-exam": 65.0
+        },
+        "totalScore": 589.2,
+        "additionalBlends": 46,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "fableRank": 17,
+            "fableAvgIq": 41.92,
+            "fableUnified": 401.11,
+            "opusRank": 6,
+            "opusAvgIq": 70.98,
+            "opusUnified": 785.0
+          },
+          {
+            "additionalBlends": 1,
+            "fableRank": 12,
+            "fableAvgIq": 46.3,
+            "fableUnified": 467.93,
+            "opusRank": 5,
+            "opusAvgIq": 72.43,
+            "opusUnified": 813.19
+          },
+          {
+            "additionalBlends": 2,
+            "fableRank": 10,
+            "fableAvgIq": 50.24,
+            "fableUnified": 524.16,
+            "opusRank": 5,
+            "opusAvgIq": 73.73,
+            "opusUnified": 832.24
+          },
+          {
+            "additionalBlends": 3,
+            "fableRank": 10,
+            "fableAvgIq": 53.79,
+            "fableUnified": 574.16,
+            "opusRank": 4,
+            "opusAvgIq": 74.9,
+            "opusUnified": 849.3
+          },
+          {
+            "additionalBlends": 4,
+            "fableRank": 10,
+            "fableAvgIq": 56.99,
+            "fableUnified": 618.51,
+            "opusRank": 4,
+            "opusAvgIq": 75.95,
+            "opusUnified": 864.35
+          },
+          {
+            "additionalBlends": 5,
+            "fableRank": 8,
+            "fableAvgIq": 59.86,
+            "fableUnified": 658.06,
+            "opusRank": 2,
+            "opusAvgIq": 76.9,
+            "opusUnified": 877.86
+          },
+          {
+            "additionalBlends": 6,
+            "fableRank": 8,
+            "fableAvgIq": 62.45,
+            "fableUnified": 693.19,
+            "opusRank": 2,
+            "opusAvgIq": 77.75,
+            "opusUnified": 889.76
+          },
+          {
+            "additionalBlends": 7,
+            "fableRank": 7,
+            "fableAvgIq": 64.78,
+            "fableUnified": 724.63,
+            "opusRank": 2,
+            "opusAvgIq": 78.52,
+            "opusUnified": 900.46
+          },
+          {
+            "additionalBlends": 8,
+            "fableRank": 6,
+            "fableAvgIq": 66.87,
+            "fableUnified": 744.98,
+            "opusRank": 1,
+            "opusAvgIq": 79.21,
+            "opusUnified": 900.66
+          },
+          {
+            "additionalBlends": 9,
+            "fableRank": 5,
+            "fableAvgIq": 68.76,
+            "fableUnified": 762.53,
+            "opusRank": 1,
+            "opusAvgIq": 79.84,
+            "opusUnified": 900.62
+          },
+          {
+            "additionalBlends": 10,
+            "fableRank": 5,
+            "fableAvgIq": 70.45,
+            "fableUnified": 778.06,
+            "opusRank": 1,
+            "opusAvgIq": 80.4,
+            "opusUnified": 900.62
+          },
+          {
+            "additionalBlends": 11,
+            "fableRank": 5,
+            "fableAvgIq": 71.98,
+            "fableUnified": 791.76,
+            "opusRank": 1,
+            "opusAvgIq": 80.9,
+            "opusUnified": 900.66
+          },
+          {
+            "additionalBlends": 12,
+            "fableRank": 5,
+            "fableAvgIq": 73.36,
+            "fableUnified": 803.86,
+            "opusRank": 1,
+            "opusAvgIq": 81.35,
+            "opusUnified": 900.66
+          },
+          {
+            "additionalBlends": 13,
+            "fableRank": 5,
+            "fableAvgIq": 74.59,
+            "fableUnified": 814.51,
+            "opusRank": 1,
+            "opusAvgIq": 81.76,
+            "opusUnified": 900.67
+          },
+          {
+            "additionalBlends": 14,
+            "fableRank": 5,
+            "fableAvgIq": 75.71,
+            "fableUnified": 823.96,
+            "opusRank": 1,
+            "opusAvgIq": 82.13,
+            "opusUnified": 900.67
+          },
+          {
+            "additionalBlends": 15,
+            "fableRank": 3,
+            "fableAvgIq": 76.71,
+            "fableUnified": 832.37,
+            "opusRank": 1,
+            "opusAvgIq": 82.46,
+            "opusUnified": 900.67
+          },
+          {
+            "additionalBlends": 16,
+            "fableRank": 3,
+            "fableAvgIq": 77.61,
+            "fableUnified": 839.81,
+            "opusRank": 1,
+            "opusAvgIq": 82.76,
+            "opusUnified": 900.66
+          },
+          {
+            "additionalBlends": 17,
+            "fableRank": 2,
+            "fableAvgIq": 78.42,
+            "fableUnified": 846.43,
+            "opusRank": 1,
+            "opusAvgIq": 83.03,
+            "opusUnified": 900.64
+          },
+          {
+            "additionalBlends": 18,
+            "fableRank": 2,
+            "fableAvgIq": 79.15,
+            "fableUnified": 852.38,
+            "opusRank": 1,
+            "opusAvgIq": 83.27,
+            "opusUnified": 900.65
+          },
+          {
+            "additionalBlends": 19,
+            "fableRank": 2,
+            "fableAvgIq": 79.81,
+            "fableUnified": 857.74,
+            "opusRank": 1,
+            "opusAvgIq": 83.48,
+            "opusUnified": 900.67
+          },
+          {
+            "additionalBlends": 20,
+            "fableRank": 2,
+            "fableAvgIq": 80.4,
+            "fableUnified": 862.41,
+            "opusRank": 1,
+            "opusAvgIq": 83.68,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 21,
+            "fableRank": 2,
+            "fableAvgIq": 80.94,
+            "fableUnified": 866.59,
+            "opusRank": 1,
+            "opusAvgIq": 83.86,
+            "opusUnified": 900.63
+          },
+          {
+            "additionalBlends": 22,
+            "fableRank": 2,
+            "fableAvgIq": 81.41,
+            "fableUnified": 870.45,
+            "opusRank": 1,
+            "opusAvgIq": 84.01,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 23,
+            "fableRank": 2,
+            "fableAvgIq": 81.85,
+            "fableUnified": 873.75,
+            "opusRank": 1,
+            "opusAvgIq": 84.16,
+            "opusUnified": 900.64
+          },
+          {
+            "additionalBlends": 24,
+            "fableRank": 2,
+            "fableAvgIq": 82.23,
+            "fableUnified": 876.86,
+            "opusRank": 1,
+            "opusAvgIq": 84.28,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 25,
+            "fableRank": 2,
+            "fableAvgIq": 82.58,
+            "fableUnified": 879.52,
+            "opusRank": 1,
+            "opusAvgIq": 84.4,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 26,
+            "fableRank": 2,
+            "fableAvgIq": 82.9,
+            "fableUnified": 881.99,
+            "opusRank": 1,
+            "opusAvgIq": 84.5,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 27,
+            "fableRank": 2,
+            "fableAvgIq": 83.18,
+            "fableUnified": 884.1,
+            "opusRank": 1,
+            "opusAvgIq": 84.6,
+            "opusUnified": 900.65
+          },
+          {
+            "additionalBlends": 28,
+            "fableRank": 2,
+            "fableAvgIq": 83.44,
+            "fableUnified": 886.1,
+            "opusRank": 1,
+            "opusAvgIq": 84.68,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 29,
+            "fableRank": 2,
+            "fableAvgIq": 83.67,
+            "fableUnified": 887.81,
+            "opusRank": 1,
+            "opusAvgIq": 84.76,
+            "opusUnified": 900.65
+          },
+          {
+            "additionalBlends": 30,
+            "fableRank": 2,
+            "fableAvgIq": 83.87,
+            "fableUnified": 889.36,
+            "opusRank": 1,
+            "opusAvgIq": 84.83,
+            "opusUnified": 900.62
+          },
+          {
+            "additionalBlends": 31,
+            "fableRank": 2,
+            "fableAvgIq": 84.06,
+            "fableUnified": 890.78,
+            "opusRank": 1,
+            "opusAvgIq": 84.89,
+            "opusUnified": 900.64
+          },
+          {
+            "additionalBlends": 32,
+            "fableRank": 2,
+            "fableAvgIq": 84.22,
+            "fableUnified": 892.11,
+            "opusRank": 1,
+            "opusAvgIq": 84.94,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 33,
+            "fableRank": 2,
+            "fableAvgIq": 84.38,
+            "fableUnified": 893.25,
+            "opusRank": 1,
+            "opusAvgIq": 84.99,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 34,
+            "fableRank": 2,
+            "fableAvgIq": 84.51,
+            "fableUnified": 894.21,
+            "opusRank": 1,
+            "opusAvgIq": 85.04,
+            "opusUnified": 900.64
+          },
+          {
+            "additionalBlends": 35,
+            "fableRank": 2,
+            "fableAvgIq": 84.63,
+            "fableUnified": 895.14,
+            "opusRank": 1,
+            "opusAvgIq": 85.08,
+            "opusUnified": 900.64
+          },
+          {
+            "additionalBlends": 36,
+            "fableRank": 2,
+            "fableAvgIq": 84.74,
+            "fableUnified": 896.03,
+            "opusRank": 1,
+            "opusAvgIq": 85.11,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 37,
+            "fableRank": 2,
+            "fableAvgIq": 84.84,
+            "fableUnified": 896.81,
+            "opusRank": 1,
+            "opusAvgIq": 85.14,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 38,
+            "fableRank": 2,
+            "fableAvgIq": 84.93,
+            "fableUnified": 897.47,
+            "opusRank": 1,
+            "opusAvgIq": 85.17,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 39,
+            "fableRank": 2,
+            "fableAvgIq": 85.01,
+            "fableUnified": 898.03,
+            "opusRank": 1,
+            "opusAvgIq": 85.2,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 40,
+            "fableRank": 2,
+            "fableAvgIq": 85.08,
+            "fableUnified": 898.61,
+            "opusRank": 1,
+            "opusAvgIq": 85.22,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 41,
+            "fableRank": 2,
+            "fableAvgIq": 85.15,
+            "fableUnified": 899.0,
+            "opusRank": 1,
+            "opusAvgIq": 85.25,
+            "opusUnified": 900.63
+          },
+          {
+            "additionalBlends": 42,
+            "fableRank": 2,
+            "fableAvgIq": 85.2,
+            "fableUnified": 899.54,
+            "opusRank": 1,
+            "opusAvgIq": 85.26,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 43,
+            "fableRank": 2,
+            "fableAvgIq": 85.26,
+            "fableUnified": 899.9,
+            "opusRank": 1,
+            "opusAvgIq": 85.28,
+            "opusUnified": 900.68
+          },
+          {
+            "additionalBlends": 44,
+            "fableRank": 2,
+            "fableAvgIq": 85.3,
+            "fableUnified": 900.16,
+            "opusRank": 1,
+            "opusAvgIq": 85.3,
+            "opusUnified": 900.66
+          },
+          {
+            "additionalBlends": 45,
+            "fableRank": 2,
+            "fableAvgIq": 85.35,
+            "fableUnified": 900.12,
+            "opusRank": 1,
+            "opusAvgIq": 85.31,
+            "opusUnified": 900.25
+          },
+          {
+            "additionalBlends": 46,
+            "fableRank": 1,
+            "fableAvgIq": 85.38,
+            "fableUnified": 900.16,
+            "opusRank": 2,
+            "opusAvgIq": 85.32,
+            "opusUnified": 900.06
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Repeat the agreed Muse Spark 1.3 score-based 90/10 blend until Muse first ranks in the top 10 by Unified Score in the latest snapshot.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * museBenchmarkScore / 372.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Muse Spark 1.3",
+        "scores": {
+          "agents-last-exam": 32.2,
+          "deepswe-1.1": 75.4,
+          "terminal-bench-2.1": 89.2,
+          "mmmu-pro": 82.0,
+          "gpqa-diamond": 94.1
+        },
+        "totalScore": 372.9,
+        "additionalBlends": 10,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "museRank": 18,
+            "museAvgIq": 23.69,
+            "museUnified": 240.69,
+            "tenthModel": "Claude Sonnet 5",
+            "tenthUnified": 656.01
+          },
+          {
+            "additionalBlends": 1,
+            "museRank": 18,
+            "museAvgIq": 29.44,
+            "museUnified": 297.83,
+            "tenthModel": "Claude Sonnet 5",
+            "tenthUnified": 664.69
+          },
+          {
+            "additionalBlends": 2,
+            "museRank": 17,
+            "museAvgIq": 34.61,
+            "museUnified": 351.94,
+            "tenthModel": "GLM-5.3-Flash",
+            "tenthUnified": 660.86
+          },
+          {
+            "additionalBlends": 3,
+            "museRank": 16,
+            "museAvgIq": 39.26,
+            "museUnified": 403.24,
+            "tenthModel": "GPT-5.6 Luna",
+            "tenthUnified": 663.16
+          },
+          {
+            "additionalBlends": 4,
+            "museRank": 16,
+            "museAvgIq": 43.45,
+            "museUnified": 451.64,
+            "tenthModel": "GPT-5.6 Luna",
+            "tenthUnified": 680.46
+          },
+          {
+            "additionalBlends": 5,
+            "museRank": 16,
+            "museAvgIq": 47.22,
+            "museUnified": 497.16,
+            "tenthModel": "Gemini 3.8 Flash",
+            "tenthUnified": 676.93
+          },
+          {
+            "additionalBlends": 6,
+            "museRank": 16,
+            "museAvgIq": 50.61,
+            "museUnified": 539.77,
+            "tenthModel": "Gemini 3.8 Flash",
+            "tenthUnified": 692.98
+          },
+          {
+            "additionalBlends": 7,
+            "museRank": 16,
+            "museAvgIq": 53.66,
+            "museUnified": 579.52,
+            "tenthModel": "DeepSeek-V4-Flash-0731",
+            "tenthUnified": 700.09
+          },
+          {
+            "additionalBlends": 8,
+            "museRank": 14,
+            "museAvgIq": 56.41,
+            "museUnified": 616.62,
+            "tenthModel": "DeepSeek-V4-Flash-0731",
+            "tenthUnified": 691.28
+          },
+          {
+            "additionalBlends": 9,
+            "museRank": 11,
+            "museAvgIq": 58.89,
+            "museUnified": 651.0,
+            "tenthModel": "DeepSeek-V4-Flash-0731",
+            "tenthUnified": 683.01
+          },
+          {
+            "additionalBlends": 10,
+            "museRank": 10,
+            "museAvgIq": 61.11,
+            "museUnified": 682.85,
+            "tenthModel": "Muse Spark 1.3",
+            "tenthUnified": 682.85
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Repeat the agreed Astra score-based 90/10 blend after the Muse top-10 adjustment until Astra first strictly leads by Unified Score in the latest snapshot.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * astraBenchmarkScore / 839.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "scores": {
+          "agents-last-exam": 59.3,
+          "deepswe-1.1": 74.1,
+          "terminal-bench-2.1": 89.9,
+          "browsecomp": 91.5,
+          "mmmu-pro": 86.9,
+          "arc-agi-2": 95.0,
+          "gpqa-diamond": 96.3,
+          "frontiermath-1-3-v2": 93.7,
+          "gpqa": 96.0,
+          "humanitys-last-exam": 57.2
+        },
+        "totalScore": 839.9,
+        "additionalBlends": 7,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "astraRank": 5,
+            "astraAvgIq": 75.99,
+            "astraUnified": 807.32,
+            "leader": "Claude Opus 5",
+            "leaderUnified": 900.71
+          },
+          {
+            "additionalBlends": 1,
+            "astraRank": 5,
+            "astraAvgIq": 77.03,
+            "astraUnified": 836.44,
+            "leader": "Claude Opus 5",
+            "leaderUnified": 900.73
+          },
+          {
+            "additionalBlends": 2,
+            "astraRank": 4,
+            "astraAvgIq": 77.97,
+            "astraUnified": 855.72,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.63
+          },
+          {
+            "additionalBlends": 3,
+            "astraRank": 3,
+            "astraAvgIq": 78.81,
+            "astraUnified": 868.72,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.61
+          },
+          {
+            "additionalBlends": 4,
+            "astraRank": 2,
+            "astraAvgIq": 79.57,
+            "astraUnified": 880.35,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.67
+          },
+          {
+            "additionalBlends": 5,
+            "astraRank": 2,
+            "astraAvgIq": 80.26,
+            "astraUnified": 890.65,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.69
+          },
+          {
+            "additionalBlends": 6,
+            "astraRank": 2,
+            "astraAvgIq": 80.87,
+            "astraUnified": 899.9,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.73
+          },
+          {
+            "additionalBlends": 7,
+            "astraRank": 1,
+            "astraAvgIq": 81.43,
+            "astraUnified": 900.25,
+            "leader": "GPT-6 Astra",
+            "leaderUnified": 900.25
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Repeat the agreed Fable 5.1 score-based 90/10 blend after the Astra first-place adjustment until Fable first reaches the top five by Unified Score in the latest snapshot.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * fableBenchmarkScore / 589.2",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "Claude Fable 5.1",
+        "scores": {
+          "deepswe-1.1": 67.4,
+          "livecodebench-v6": 90.5,
+          "arc-agi-2": 90.0,
+          "gpqa-diamond": 93.7,
+          "frontiermath-1-3-v2": 90.2,
+          "mmlu-pro": 92.4,
+          "humanitys-last-exam": 65.0
+        },
+        "totalScore": 589.2,
+        "additionalBlends": 8,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "fableRank": 16,
+            "fableUnified": 443.87
+          },
+          {
+            "additionalBlends": 1,
+            "fableRank": 16,
+            "fableUnified": 507.57
+          },
+          {
+            "additionalBlends": 2,
+            "fableRank": 11,
+            "fableUnified": 560.3
+          },
+          {
+            "additionalBlends": 3,
+            "fableRank": 10,
+            "fableUnified": 607.04
+          },
+          {
+            "additionalBlends": 4,
+            "fableRank": 10,
+            "fableUnified": 647.74
+          },
+          {
+            "additionalBlends": 5,
+            "fableRank": 9,
+            "fableUnified": 677.19
+          },
+          {
+            "additionalBlends": 6,
+            "fableRank": 8,
+            "fableUnified": 702.84
+          },
+          {
+            "additionalBlends": 7,
+            "fableRank": 6,
+            "fableUnified": 725.24
+          },
+          {
+            "additionalBlends": 8,
+            "fableRank": 5,
+            "fableUnified": 744.97
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Repeat the agreed Astra score-based 90/10 blend after the Fable top-five adjustment until Astra first strictly leads by Unified Score in the latest snapshot.",
+        "method": "newWeightPercent = 0.9 * previousWeightPercent + 10 * astraBenchmarkScore / 839.9",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00",
+        "model": "GPT-6 Astra",
+        "scores": {
+          "agents-last-exam": 59.3,
+          "deepswe-1.1": 74.1,
+          "terminal-bench-2.1": 89.9,
+          "browsecomp": 91.5,
+          "mmmu-pro": 86.9,
+          "arc-agi-2": 95.0,
+          "gpqa-diamond": 96.3,
+          "frontiermath-1-3-v2": 93.7,
+          "gpqa": 96.0,
+          "humanitys-last-exam": 57.2
+        },
+        "totalScore": 839.9,
+        "additionalBlends": 10,
+        "rankTrace": [
+          {
+            "additionalBlends": 0,
+            "astraRank": 6,
+            "astraUnified": 737.43,
+            "leader": "Claude Opus 5",
+            "leaderUnified": 900.64
+          },
+          {
+            "additionalBlends": 1,
+            "astraRank": 5,
+            "astraUnified": 769.5,
+            "leader": "Claude Opus 5",
+            "leaderUnified": 900.68
+          },
+          {
+            "additionalBlends": 2,
+            "astraRank": 5,
+            "astraUnified": 799.21,
+            "leader": "Claude Opus 5",
+            "leaderUnified": 900.67
+          },
+          {
+            "additionalBlends": 3,
+            "astraRank": 5,
+            "astraUnified": 822.15,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.51
+          },
+          {
+            "additionalBlends": 4,
+            "astraRank": 5,
+            "astraUnified": 837.6,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.54
+          },
+          {
+            "additionalBlends": 5,
+            "astraRank": 5,
+            "astraUnified": 851.55,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.58
+          },
+          {
+            "additionalBlends": 6,
+            "astraRank": 4,
+            "astraUnified": 864.15,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.64
+          },
+          {
+            "additionalBlends": 7,
+            "astraRank": 2,
+            "astraUnified": 875.55,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.68
+          },
+          {
+            "additionalBlends": 8,
+            "astraRank": 2,
+            "astraUnified": 885.75,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.71
+          },
+          {
+            "additionalBlends": 9,
+            "astraRank": 2,
+            "astraUnified": 894.87,
+            "leader": "GPT-5.6 Sol",
+            "leaderUnified": 900.68
+          },
+          {
+            "additionalBlends": 10,
+            "astraRank": 1,
+            "astraUnified": 900.26,
+            "leader": "GPT-6 Astra",
+            "leaderUnified": 900.26
+          }
+        ]
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Retain 30% of existing weights and redistribute 70% to the top six benchmarks from the Astra/Fable table sorted by participation count then average available score.",
+        "method": "newWeightPercent = 0.3 * previousWeightPercent + 70 * averageAvailableScore / 507.3",
+        "scoreBasis": "Mean of available Astra and Fable 5.1 scores; GPQA uses Astra only.",
+        "scores": {
+          "gpqa-diamond": 95.0,
+          "arc-agi-2": 92.5,
+          "frontiermath-1-3-v2": 91.95,
+          "deepswe-1.1": 70.75,
+          "humanitys-last-exam": 61.1,
+          "gpqa": 96.0
+        },
+        "totalScore": 507.3,
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Transfer 1.5 percentage points from the six specified donors to the six specified recipients, proportionally within each group using current app weights. The earlier 11.3459% proposal was not applied.",
+        "method": "donorNew = donorOld * (donorTotal - 1.5) / donorTotal; recipientNew = recipientOld * (recipientTotal + 1.5) / recipientTotal",
+        "transferPercentagePoints": 1.5,
+        "donors": [
+          "agents-last-exam",
+          "browsecomp",
+          "livecodebench-v6",
+          "mmlu-pro",
+          "mmmu-pro",
+          "terminal-bench-2.1"
+        ],
+        "recipients": [
+          "charxiv-r",
+          "deepswe",
+          "ifbench",
+          "officeqa-pro",
+          "swe-bench-verified",
+          "toolathlon"
+        ],
+        "previousDonorTotal": 11.385693965487249,
+        "previousRecipientTotal": 0.00024146726261443165,
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Set SWE-bench Verified to 0.25% and OfficeQA Pro to 0.10%; redistribute the remainder proportionally to existing weights of the five benchmarks with scores for both Astra and Fable 5.1.",
+        "method": "sharedNew = sharedOld + freedPercentagePoints * sharedOld / previousSharedTotal",
+        "targets": {
+          "swe-bench-verified": 0.25,
+          "officeqa-pro": 0.1
+        },
+        "recipients": [
+          "arc-agi-2",
+          "deepswe-1.1",
+          "frontiermath-1-3-v2",
+          "gpqa-diamond",
+          "humanitys-last-exam"
+        ],
+        "freedPercentagePoints": 0.17786273848129008,
+        "previousSharedTotal": 72.865016719438,
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+      }
+    ],
+    "adjustment": {
+      "date": "2026-09-09",
+      "reason": "Set Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%, BrowseComp to 2%, and Agents’ Last Exam to 1.4%; give the full remainder to DeepSWE 1.1.",
+      "targets": {
+        "terminal-bench-2.1": 2.0,
+        "mmmu-pro": 1.8,
+        "browsecomp": 2.0,
+        "agents-last-exam": 1.4
+      },
+      "recipient": "deepswe-1.1",
+      "freedPercentagePoints": 0.8790340342808083,
+      "method": "DeepSWE1.1New = DeepSWE1.1Old + sum(previousDonorWeight - targetDonorWeight)",
+      "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+    }
+  },
+  "effortPolicy": "Highest verified score per exact model and benchmark across effort settings; preserve source effort as provenance, never as an eligibility filter"
+}

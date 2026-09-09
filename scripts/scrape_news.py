@@ -3,6 +3,7 @@
 Fetch AI news about the US-China AI race from NewsData.io.
 Writes news.json to the repository root.
 """
+from preconditions import preconditions
 import hashlib
 import json
 import os
@@ -65,6 +66,7 @@ CN_KEYWORDS = [
 ]
 
 
+@preconditions(api_key='nonempty')
 def fetch_news(api_key):
     """Fetch articles from NewsData.io latest endpoint."""
     params = {
@@ -90,6 +92,7 @@ def fetch_news(api_key):
         return []
 
 
+@preconditions(article='mapping')
 def determine_country(article):
     """Determine if an article is about US, CN, or Both."""
     text = " ".join([
@@ -112,6 +115,7 @@ def determine_country(article):
     return "Both"
 
 
+@preconditions(article='mapping')
 def calculate_relevance(article):
     """Score 0.0-1.0 based on keyword matching.
 
@@ -136,12 +140,14 @@ def calculate_relevance(article):
     return min(score, 1.0)
 
 
+@preconditions(article='mapping')
 def make_article_id(article):
     """Generate a dedup ID from URL + pubDate."""
     raw = (article.get("link") or "") + (article.get("pubDate") or "")
     return hashlib.sha256(raw.encode()).hexdigest()[:16]
 
 
+@preconditions(title='text')
 def clean_headline(title):
     """Truncate and clean headline."""
     if not title:
@@ -152,6 +158,7 @@ def clean_headline(title):
     return title
 
 
+@preconditions(raw='mapping')
 def transform_article(raw):
     """Transform a raw NewsData.io article into our schema."""
     return {
@@ -165,6 +172,7 @@ def transform_article(raw):
     }
 
 
+@preconditions(url='text')
 def normalize_url(url):
     """Dedup key for a URL: host + path, no scheme/www/query/fragment.
 
@@ -178,17 +186,20 @@ def normalize_url(url):
     return u.rstrip("/")
 
 
+@preconditions(url='text')
 def article_domain(url):
     """Bare host of an article URL (for the deny-list suffix match)."""
     host = normalize_url(url).split("/")[0]
     return host
 
 
+@preconditions(url='text')
 def is_denied(url):
     host = article_domain(url)
     return any(host == d or host.endswith("." + d) for d in DENYLIST_DOMAINS)
 
 
+@preconditions(articles='sequence')
 def deduplicate(articles):
     """Remove duplicates by ID, normalized URL, and similar titles."""
     seen_ids = set()
@@ -209,6 +220,7 @@ def deduplicate(articles):
     return unique
 
 
+@preconditions(article='mapping')
 def _parse_published(article):
     """Parse publishedAt to a datetime. Returns None on failure."""
     raw = article.get("publishedAt") or ""
@@ -227,6 +239,7 @@ def _parse_published(article):
     return None
 
 
+@preconditions(article='mapping', cutoff='datetime')
 def _is_fresh(article, cutoff):
     """Whether an article is newer than the age cutoff."""
     dt = _parse_published(article)
@@ -237,6 +250,7 @@ def _is_fresh(article, cutoff):
     return dt >= cutoff
 
 
+@preconditions(new_articles='sequence', news_path='path')
 def merge_with_existing(new_articles, news_path):
     """Merge new articles with existing news.json, keeping top articles.
 
@@ -279,6 +293,7 @@ def merge_with_existing(new_articles, news_path):
     return fresh[:MAX_ARTICLES]
 
 
+@preconditions()
 def main():
     api_key = os.environ.get("NEWSDATA_API_KEY", "")
     if not api_key:
