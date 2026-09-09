@@ -1,6 +1,42 @@
 {
-  "lastUpdated": "2026-09-06T03:38:37.826771+00:00",
+  "lastUpdated": "2026-09-09T03:39:46.642433+00:00",
   "items": [
+    {
+      "id": "af0aed950c337dc1",
+      "headline": "The New York Times is grasping at straws",
+      "url": "https://www.theblaze.com/columns/opinion/the-new-york-times-is-grasping-at-straws",
+      "source": "Blaze Media",
+      "country": "Both",
+      "publishedAt": "2026-09-08 15:00:00",
+      "relevanceScore": 0.77
+    },
+    {
+      "id": "c4871734618c97b3",
+      "headline": "Rivian’s Gambit for Full Autonomy",
+      "url": "https://spectrum.ieee.org/rivian-self-driving",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-09-08 13:00:04",
+      "relevanceScore": 0.56
+    },
+    {
+      "id": "5401e1b7035d3cbe",
+      "headline": "Students are quietly replacing Google with AI",
+      "url": "https://www.earth.com/science/students-ai-physics-searches/",
+      "source": "Earth.com",
+      "country": "US",
+      "publishedAt": "2026-09-06 15:17:48",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "3c41cd86c940cb44",
+      "headline": "G20 AI agenda: US champions light-touch regulation while data center backlash, China rivalry intensify",
+      "url": "https://www.digitimes.com/news/a20260903PD233/g20-regulation-data-ceo-technology.html",
+      "source": "Digitimes",
+      "country": "CN",
+      "publishedAt": "2026-09-05 18:16:00",
+      "relevanceScore": 0.24
+    },
     {
       "id": "c021f8c508611267",
       "headline": "OpenAI Wants to Talk About The Federalist Papers",
@@ -99,33 +135,6 @@
       "country": "Both",
       "publishedAt": "2026-08-26 13:15:00",
       "relevanceScore": 0.54
-    },
-    {
-      "id": "80a8e31bf116acf3",
-      "headline": "Meta goes on trial as Silicon Valley faces a growing backlash",
-      "url": "https://www.theguardian.com/global/2026/aug/25/meta-trial-silicon-valley",
-      "source": "The Guardian",
-      "country": "US",
-      "publishedAt": "2026-08-25 11:21:56",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "442aa8b7e4d44545",
-      "headline": "Nvidia’s Two-Front Gamble: Raising Server Prices While Backstopping a $105 Billion AI Buildout",
-      "url": "https://www.newscase.com/nvidias-two-front-gamble-raising-server-prices-while-backstopping-a-105-billion-ai-buildout/",
-      "source": "Newscase",
-      "country": "US",
-      "publishedAt": "2026-08-23 11:51:05",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "251f1976fb9a8a72",
-      "headline": "‘We are hitting a different chapter’: OpenAI leader warns of threat of ‘persistent’ AI cyber-attacks",
-      "url": "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane",
-      "source": "The Guardian",
-      "country": "US",
-      "publishedAt": "2026-08-23 08:00:27",
-      "relevanceScore": 0.23
     }
   ]
 }
