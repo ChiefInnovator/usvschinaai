@@ -20674,6 +20674,25 @@
           "Latency": "13.5s",
           "KnowledgeCutoff": "-",
           "Multimodal": "No"
+        },
+        "4d9b4728f6b5f494a916": {
+          "model": "DeepSeek-V4-Flash-0731",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-flash-0731",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Flash-0731 by DeepSeek — released Jul 31, 2026; $0.090/M input, $0.018/M cached input, $0.180/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Jul. 2026",
+          "Model": "DeepSeek-V4-Flash-0731",
+          "Country": "🇨🇳",
+          "License": "Open",
+          "Context": "1.0M",
+          "Input$/M": "$0.09",
+          "Output$/M": "$0.18",
+          "Speed": "21c/s",
+          "Parameters(B)": "304",
+          "Latency": "13.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No"
         }
       },
       "benchmarks": {
@@ -35710,6 +35729,25 @@
           "Speed": "9c/s",
           "Parameters(B)": "320",
           "Latency": "7.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
+        },
+        "b1b4b59e3ce1c6dbb69a": {
+          "model": "GLM-5.3-Flash",
+          "organization": "ZAI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "License": "Open",
+          "Context": "1.0M",
+          "Input$/M": "$0.15",
+          "Output$/M": "$0.50",
+          "Speed": "12c/s",
+          "Parameters(B)": "320",
+          "Latency": "8.1s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
         }
@@ -63694,6 +63732,25 @@
           "Latency": "11.1s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes"
+        },
+        "ee2e555baf1d2d3ae2ec": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Gemini 3.8 Flash\nNEW",
+          "Country": "🇺🇸",
+          "License": "Closed",
+          "Context": "1.0M",
+          "Input$/M": "$0.75",
+          "Output$/M": "$3.75",
+          "Speed": "49c/s",
+          "Parameters(B)": "-",
+          "Latency": "13.9s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -81312,6 +81369,25 @@
           "Latency": "6.6s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
+        },
+        "cb8d220636349a08f891": {
+          "model": "Muse Spark 1.3",
+          "organization": "Meta",
+          "link": "https://llm-stats.com/models/muse-spark-1.3",
+          "origin": "US",
+          "description": "Muse Spark 1.3 by Meta — released Sep 2, 2026; $0.100/M input, $0.002/M cached input, $0.200/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Muse Spark 1.3\nNEW",
+          "Country": "🇺🇸",
+          "License": "Closed",
+          "Context": "1.0M",
+          "Input$/M": "$0.10",
+          "Output$/M": "$0.20",
+          "Speed": "7c/s",
+          "Parameters(B)": "-",
+          "Latency": "8.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -92160,6 +92236,25 @@
           "Speed": "26c/s",
           "Parameters(B)": "2400",
           "Latency": "5.5s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
+        },
+        "f511c7c192c35a7f7689": {
+          "model": "Qwen3.8 Max",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "License": "Open",
+          "Context": "1.0M",
+          "Input$/M": "$1.65",
+          "Output$/M": "$4.95",
+          "Speed": "7c/s",
+          "Parameters(B)": "2400",
+          "Latency": "11.0s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
         }
