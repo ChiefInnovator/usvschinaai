@@ -112,6 +112,19 @@ class ContractMechanismTests(unittest.TestCase):
             with self.subTest(args=args,kwargs=kwargs),self.assertRaises((PreconditionError,TypeError)):action(*args,**kwargs)
         self.assertEqual(calls,[1,2])
 
+    def test_json_cycles_reject_before_side_effects_but_shared_values_pass(self):
+        from preconditions import preconditions
+        calls=[]
+        @preconditions(value='json')
+        def consume(value):calls.append(value)
+        cyclic_list=[];cyclic_list.append(cyclic_list)
+        cyclic_dict={};cyclic_dict['self']=cyclic_dict
+        for value in [cyclic_list,cyclic_dict,{'nested':cyclic_list}]:
+            with self.assertRaises(PreconditionError):consume(value)
+        self.assertEqual(calls,[])
+        shared={'score':84.5};consume([shared,shared])
+        self.assertEqual(calls,[[shared,shared]])
+
     def test_guard_rejects_invalid_declaration_and_preserves_optional_defaults(self):
         from preconditions import preconditions, _accepts
         @preconditions(value='?text')

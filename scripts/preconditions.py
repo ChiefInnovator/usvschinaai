@@ -17,7 +17,7 @@ class PreconditionError(ValueError):
     """An argument does not satisfy the called function's input contract."""
 
 
-def _accepts(rule, value):
+def _accepts(rule, value, _seen=None):
     if not isinstance(rule, str) or not rule:
         raise PreconditionError('Precondition rule must be nonempty text')
     if rule.startswith('?'):
@@ -54,9 +54,17 @@ def _accepts(rule, value):
     if rule == 'json':
         if value is None or isinstance(value,(str,bool,int)): return True
         if isinstance(value,float): return math.isfinite(value)
-        if isinstance(value,(list,tuple)): return all(_accepts('json',v) for v in value)
-        if isinstance(value,dict): return all(isinstance(k,str) and _accepts('json',v) for k,v in value.items())
-        return False
+        if not isinstance(value,(list,tuple,dict)): return False
+        seen = set() if _seen is None else _seen
+        identity = id(value)
+        if identity in seen: return False
+        seen.add(identity)
+        try:
+            if isinstance(value,dict):
+                return all(isinstance(k,str) and _accepts('json',v,seen) for k,v in value.items())
+            return all(_accepts('json',v,seen) for v in value)
+        finally:
+            seen.remove(identity)
     raise ValueError('Unknown precondition rule: '+rule)
 
 
