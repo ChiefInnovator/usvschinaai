@@ -121,6 +121,16 @@ class BrowserIntegrationTests(unittest.TestCase):
         self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
         self.assertEqual(self.page.locator('#models-table-body tr').count(),10)
 
+    def test_empty_roster_shows_error_and_retry_recovers(self):
+        empty=json.loads(self.valid['current.json'])
+        empty['history'][0]['teams']={'US':[],'CN':[]}
+        self.failures['current.json']=(200,json.dumps(empty))
+        self.page.goto(self.url+'/index.html')
+        self.page.get_by_role('button',name='Retry',exact=True).wait_for()
+        self.assertEqual(self.page.locator('#page-subtitle').text_content(),'Data temporarily unavailable')
+        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
+        self.assertEqual(self.page.locator('#models-table-body tr').count(),10)
+
     def test_malformed_catalog_json_recovers_with_retry(self):
         self.failures['data/model_catalog.json']=(200,'{broken')
         self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
