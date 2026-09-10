@@ -13,6 +13,7 @@ from preconditions import preconditions
 import argparse
 import html
 from model_store import load_data
+from avg_iq_benchmarks import load_config
 import json
 import sys
 from datetime import datetime
@@ -132,8 +133,14 @@ def fill(fmt: str, palette: str, facts: Dict[str, Any], charts: Dict[str, Any] =
     if fmt == "benchmark_day" and charts:
         top = charts["benchmark_top5"]
         mx = max((x["value"] for x in top), default=1) or 1
+        # Stored score-column keys omit spaces; slides need the display label.
+        bench_name = charts["benchmark"] or "—"
+        for component in load_config()['benchmarks']:
+            if bench_name in [alias.replace(' ', '') for alias in component['aliases']]:
+                bench_name = component['name']
+                break
         vals.update({
-            "bench_name": e(charts["benchmark"] or "—"),
+            "bench_name": e(bench_name),
             "bench_reporters": e(charts["benchmark_reporters"]), "bench_cohort": e(charts["benchmark_cohort"]),
             "bars": "".join(
                 f'<div class="bar"><span class="n display">{i}</span><span class="m">{FLAG[x["origin"]]} {e(x["model"])}</span>'
