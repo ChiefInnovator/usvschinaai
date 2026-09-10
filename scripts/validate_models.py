@@ -13,6 +13,7 @@ Checks (ERROR = fail the run, WARN = print only):
   ERROR  CodeArena Elo outside 800-2500
   ERROR  negative pricing
   ERROR  model row with no Released date (released-only filter regressed)
+  ERROR  empty or missing country roster
   WARN   two rows that are the same model at different versions, or the same
          model listed twice (should have been dropped at scrape time)
   WARN   cohort smaller than 10 per country
@@ -155,6 +156,9 @@ def main() -> int:
                     errors.append(f"{name}: {h} percent value out of range: {raw!r}")
 
     # ---- cohort size --------------------------------------------------------
+    for team_key in ('US', 'CN'):
+        if not entry.get('teams', {}).get(team_key):
+            errors.append(f'cohort {team_key} is empty or missing; refusing to publish')
     for team_key, team_rows in entry.get("teams", {}).items():
         if len(team_rows) < 10:
             warnings.append(f"cohort {team_key} has only {len(team_rows)} models")

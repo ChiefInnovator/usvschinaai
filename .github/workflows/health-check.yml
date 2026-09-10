@@ -41,6 +41,11 @@ jobs:
           from datetime import datetime, timezone, timedelta
           with open("current.json") as f:
               data = json.load(f)
+          teams = data["history"][0].get("teams", {})
+          for country in ("US", "CN"):
+              if not teams.get(country):
+                  print(f"::error::Leaderboard has no {country} models")
+                  sys.exit(1)
           ts = data["history"][0]["timestamp"]
           # Timestamps look like 2026-08-29T07:44:51+00:00 — fromisoformat handles them.
           dt = datetime.fromisoformat(ts)

@@ -345,6 +345,30 @@ def format_table(
 COHORT_POOL_SIZE = 15
 
 
+@preconditions(page='content_page')
+def extract_leaderboard_metadata(page) -> Dict[str, Dict[str, Any]]:
+    """Read model metadata no longer displayed in the leaderboard table."""
+    html = page.content()
+    decoder = json.JSONDecoder()
+    frames = []
+    for match in re.finditer(r'self\.__next_f\.push\(', html):
+        try:
+            frame, _ = decoder.raw_decode(html, match.end())
+        except ValueError:
+            continue
+        if isinstance(frame, list) and len(frame) == 2 and frame[0] == 1 and isinstance(frame[1], str):
+            frames.append(frame[1])
+    payload = ''.join(frames)
+    for match in re.finditer(r'"initialData"\s*:\s*', payload):
+        records, _ = decoder.raw_decode(payload, match.end())
+        if isinstance(records, list):
+            models = {record['model_id']: record for record in records
+                      if isinstance(record, dict) and isinstance(record.get('model_id'), str)}
+            if models:
+                return models
+    raise ValueError('Leaderboard model metadata is missing; refusing to publish this scrape')
+
+
 @preconditions(entries='sequence')
 def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["LeaderboardEntry"]:
     """Drop rows that are older versions of another model in the same cohort.
@@ -455,6 +479,9 @@ def scrape_country_leaderboard(
                  for component in load_config()['benchmarks'] for alias in component['aliases']}
     benchmark_headers = [h for h in all_headers if canonicalize_benchmark_name(h) in supported]
     retained_headers = set(benchmark_headers) | MODEL_FIELDS | {'Rank', 'Input', 'Output', 'Created', 'Description'}
+    metadata = extract_leaderboard_metadata(page) if 'Released' not in all_headers else None
+    metadata_fields = {'Released': 'release_date', 'Input $/M': 'input_price',
+                       'Output $/M': 'output_price', 'Organization': 'organization'}
     
     # Extract rows
     rows = page.query_selector_all("tbody tr")
@@ -522,6 +549,17 @@ def scrape_country_leaderboard(
                     
                 columns[header] = raw_value
         
+        if metadata is not None:
+            model_id = url.rstrip('/').rsplit('/', 1)[-1]
+            record = metadata.get(model_id)
+            if not record or 'release_date' not in record:
+                raise ValueError(f'Missing release metadata for {name}; refusing to publish this scrape')
+            if record.get('organization_country') != origin_code:
+                raise ValueError(f'Country metadata mismatch for {name}; refusing to publish this scrape')
+            for header, field in metadata_fields.items():
+                value = record.get(field)
+                columns[header] = str(value) if value is not None else '—'
+
         # Released-only filter: unreleased preview/checkpoint models show no
         # date in llm-stats' Released column ("-"). They have no pricing and
         # often selective benchmark reporting, so they distort the rankings —
@@ -551,7 +589,10 @@ def scrape_country_leaderboard(
             f"Scoring assumes a cohort of {max_models}."
         )
 
-    return entries, [h for h in all_headers if h in retained_headers], benchmark_headers
+    imported_headers = [h for h in all_headers if h in retained_headers]
+    if metadata is not None:
+        imported_headers += [h for h in metadata_fields if h not in imported_headers]
+    return entries, imported_headers, benchmark_headers
 
 
 @preconditions(page='page')
@@ -786,6 +827,10 @@ def build_history_entry(
 @preconditions(models_path='path', new_entry='mapping')
 def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
     """Prepend new history entry to models.json."""
+    for country in ('US', 'CN'):
+        rows = new_entry.get('teams', {}).get(country)
+        if not isinstance(rows, list) or not rows:
+            raise ValueError(f'Refusing to publish empty or missing {country} roster')
     data = load_data(models_path)
 
     if 'history' not in data:
