@@ -6415,9 +6415,9 @@
     "days": 7,
     "firstDate": "2026-09-03",
     "lastDate": "2026-09-09",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "reason": "Available evidence starts on 2026-09-10; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 7
   },
   {
     "model": "Gemini 3.8 Flash",

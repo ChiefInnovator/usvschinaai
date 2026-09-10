@@ -63894,6 +63894,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "962f790a0d75e20c": {
+            "benchmark": "GPQA Diamond",
+            "score": 95.4,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-09-10",
+            "retrievedAt": "2026-09-10",
+            "configuration": "Epoch AI evaluation of gemini-3.8-flash_high; evaluation started 2026-09-02",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-3.8-flash_high."
           }
         },
         "livecodebench-v6": {
@@ -64041,6 +64055,23 @@
             "sourceType": "model_card",
             "confidence": "high",
             "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "52032045f7301fb1": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 68.4,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-09-10",
+            "retrievedAt": "2026-09-10",
+            "configuration": "Epoch AI evaluation of gemini-3.8-flash_high; evaluation started 2026-09-02",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-3.8-flash_high."
           }
         }
       }

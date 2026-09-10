@@ -29,7 +29,7 @@
       "name": "TEAM USA",
       "flag": "🇺🇸",
       "description": "The Frontier Artisans",
-      "badge": "OVERALL WINNER",
+      "badge": "TIED",
       "color": "blue"
     },
     "china": {
@@ -37,7 +37,7 @@
       "name": "TEAM CHINA",
       "flag": "🇨🇳",
       "description": "The Scaling Giants",
-      "badge": "RUNNER UP",
+      "badge": "TIED",
       "color": "red"
     }
   },
@@ -64,6 +64,64 @@
     }
   ],
   "history": [
+    {
+      "timestamp": "2026-09-10T03:31:50+00:00",
+      "teams": {
+        "US": [],
+        "CN": []
+      },
+      "scoring": {
+        "version": 4,
+        "avgIqWeights": {
+          "Toolathlon": 0.003889514915125296,
+          "Agents'LastExam": 0.013999999999999999,
+          "DeepSWE": 0.0016669349636251266,
+          "DeepSWE1.1": 0.1365464714295311,
+          "LiveCodeBenchv6": 0.008939466115103815,
+          "Terminal-Bench2.1": 0.02,
+          "BrowseComp": 0.02,
+          "MMMU-Pro": 0.018000000000000002,
+          "CharXiv-R": 0.0019447574575626502,
+          "ARC-AGI-2": 0.1630355729928029,
+          "OfficeQAPro": 0.001,
+          "IFBench": 0.00222257995150017,
+          "GPQADiamond": 0.17080453270838544,
+          "FrontierMathTiers1–3v2": 0.16195809437265374,
+          "GPQA": 0.15749047847812134,
+          "MMLU-Pro": 0.009127133196960582,
+          "Humanity’sLastExam": 0.10687446341862787,
+          "SWE-benchVerified": 0.0025
+        },
+        "qualified": [
+          "ARC-AGI-2",
+          "Agents'LastExam",
+          "BrowseComp",
+          "CharXiv-R",
+          "DeepSWE",
+          "DeepSWE1.1",
+          "FrontierMathTiers1–3v2",
+          "GPQA",
+          "GPQADiamond",
+          "Humanity’sLastExam",
+          "IFBench",
+          "LiveCodeBenchv6",
+          "MMLU-Pro",
+          "MMMU-Pro",
+          "OfficeQAPro",
+          "SWE-benchVerified",
+          "Terminal-Bench2.1",
+          "Toolathlon"
+        ],
+        "qualifiedMinReports": 0,
+        "bounds": {
+          "minAvgIq": 0.0,
+          "maxAvgIq": 1.0,
+          "minValue": 0.0,
+          "maxValue": 1.0
+        },
+        "benchmarkRanges": {}
+      }
+    },
     {
       "timestamp": "2026-09-09T03:39:45+00:00",
       "teams": {

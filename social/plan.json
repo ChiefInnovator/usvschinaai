@@ -1,18 +1,16 @@
 {
-  "format": "head_to_head",
+  "date": "2026-09-10",
+  "timestamp": "2026-09-10T03:31:50+00:00",
+  "format": "leaderboard",
   "palette": "midnight",
-  "weight": 1,
-  "date": "2026-09-09",
-  "timestamp": "2026-09-09T03:39:45+00:00",
+  "weight": 0,
   "slides": [
-    "2026-09-09-1-head_to_head-midnight.png",
-    "2026-09-09-2-leaderboard-midnight.png"
+    "2026-09-10-1-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-09-1-head_to_head-midnight.png",
-    "https://usvschina.ai/social/2026-09-09-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-10-1-leaderboard-midnight.png"
   ],
-  "caption": "GPT-6 Astra vs Kimi K3\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 4656 vs Team China 2465\n• 6 US and 4 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
-  "caption_source": "deterministic",
-  "generated_at": "2026-09-09T03:39:45+00:00"
+  "caption": "Today is a tie at 0–0.\n\n• US: 0 points; China: 0 points.\n• The previous US lead was 4656.04 to 2464.62.\n• The top 10 has 0 US models and 0 Chinese models.\n\nDoes the scoreboard reset change how you read the matchup?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #ModelLeaderboard #AIScoreboard #TechTrends",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-09-10T03:32:46.792016+00:00"
 }

@@ -29,7 +29,7 @@
       "name": "TEAM USA",
       "flag": "🇺🇸",
       "description": "The Frontier Artisans",
-      "badge": "OVERALL WINNER",
+      "badge": "TIED",
       "color": "blue"
     },
     "china": {
@@ -37,7 +37,7 @@
       "name": "TEAM CHINA",
       "flag": "🇨🇳",
       "description": "The Scaling Giants",
-      "badge": "RUNNER UP",
+      "badge": "TIED",
       "color": "red"
     }
   },
@@ -65,192 +65,10 @@
   ],
   "history": [
     {
-      "timestamp": "2026-09-09T03:39:45+00:00",
+      "timestamp": "2026-09-10T03:31:50+00:00",
       "teams": {
-        "US": [
-          {
-            "modelId": "09e204192ffe9bfb3992",
-            "profileId": "051e1f5de4c892240334",
-            "avgIq": 30.08,
-            "value": 100.26,
-            "unified": 318.49,
-            "coverage": "5/18",
-            "provisional": false
-          },
-          {
-            "modelId": "4113d50c5ce32af042fe",
-            "profileId": "6b6e652fc52023d38956",
-            "avgIq": 69.11,
-            "value": 2.3,
-            "unified": 721.71,
-            "coverage": "13/18",
-            "provisional": false
-          },
-          {
-            "modelId": "8ff2177f5f388b9c9474",
-            "profileId": "00db8e140e686eb2ee2c",
-            "avgIq": 84.49,
-            "value": 1.41,
-            "unified": 900.13,
-            "coverage": "10/18",
-            "provisional": false
-          },
-          {
-            "modelId": "827d7fc31374fbdd49bc",
-            "profileId": "9d1edf2f08cbc9e67e3d",
-            "avgIq": 63.09,
-            "value": 1.05,
-            "unified": 651.08,
-            "coverage": "7/18",
-            "provisional": false
-          },
-          {
-            "modelId": "1b3752879df84503751c",
-            "profileId": "1c9d2361a568aa560ba0",
-            "avgIq": 78.85,
-            "value": 2.25,
-            "unified": 835.01,
-            "coverage": "16/18",
-            "provisional": false
-          },
-          {
-            "modelId": "c146e8e0f59da4c0c18f",
-            "profileId": "c025debf5936fee78fcc",
-            "avgIq": 69.29,
-            "value": 49.49,
-            "unified": 748.29,
-            "coverage": "13/18",
-            "provisional": false
-          },
-          {
-            "modelId": "bb88df3839ba811faa45",
-            "profileId": "9b9a5b934a73eb3df10a",
-            "avgIq": 7.11,
-            "value": 23.71,
-            "unified": 11.77,
-            "coverage": "3/18",
-            "provisional": false
-          },
-          {
-            "modelId": "3e8493d70f3b80a11cf5",
-            "profileId": "8e4b6bcf7f19bdf3ff63",
-            "avgIq": 75.68,
-            "value": 5.41,
-            "unified": 799.82,
-            "coverage": "15/18",
-            "provisional": false
-          },
-          {
-            "modelId": "e43da5e7a8e3d9626107",
-            "profileId": "8e22241da96f1600a561",
-            "avgIq": 36.53,
-            "value": 8.12,
-            "unified": 345.8,
-            "coverage": "9/18",
-            "provisional": false
-          },
-          {
-            "modelId": "5d10ee934c56e4e34d57",
-            "profileId": "75daa647636f78289410",
-            "avgIq": 47.05,
-            "value": 3.92,
-            "unified": 465.97,
-            "coverage": "14/18",
-            "provisional": false
-          }
-        ],
-        "CN": [
-          {
-            "modelId": "b56379bf82f1c28fab2e",
-            "profileId": "dd8726215b6d8841f2cc",
-            "avgIq": 44.14,
-            "value": 71.19,
-            "unified": 466.96,
-            "coverage": "9/18",
-            "provisional": false
-          },
-          {
-            "modelId": "d33cd77526f9f2073554",
-            "profileId": "84c5b230eaba6d819be1",
-            "avgIq": 75.72,
-            "value": 4.43,
-            "unified": 799.72,
-            "coverage": "18/18",
-            "provisional": false
-          },
-          {
-            "modelId": "32d628655ac1f115b0dd",
-            "profileId": "69c1f91331bedd04e4bf",
-            "avgIq": 61.42,
-            "value": 9.31,
-            "unified": 635.93,
-            "coverage": "13/18",
-            "provisional": false
-          },
-          {
-            "modelId": "27c9865821933f9dafd1",
-            "profileId": "3bf3406ea0c9d5842552",
-            "avgIq": 43.51,
-            "value": 66.94,
-            "unified": 457.5,
-            "coverage": "12/18",
-            "provisional": false
-          },
-          {
-            "modelId": "00304d6b69ead9145b28",
-            "profileId": "b95ea02c16dfbf63c0e4",
-            "avgIq": 47.4,
-            "value": 0.0,
-            "unified": 468.59,
-            "coverage": "11/18",
-            "provisional": false
-          },
-          {
-            "modelId": "088f3a563d79d06df736",
-            "profileId": "6ef70e6174330c05e74f",
-            "avgIq": 41.02,
-            "value": 10.52,
-            "unified": 399.32,
-            "coverage": "10/18",
-            "provisional": false
-          },
-          {
-            "modelId": "8c1207eb630867042536",
-            "profileId": "7b90896f8a332616c8dc",
-            "avgIq": 47.1,
-            "value": 9.06,
-            "unified": 469.31,
-            "coverage": "10/18",
-            "provisional": false
-          },
-          {
-            "modelId": "bc63ad24a5059b476c55",
-            "profileId": "e49354603e3f655e5562",
-            "avgIq": 41.57,
-            "value": 0.0,
-            "unified": 400.81,
-            "coverage": "8/18",
-            "provisional": false
-          },
-          {
-            "modelId": "175a962cb4b24bfdbde0",
-            "profileId": "d482880368d58e244d45",
-            "avgIq": 44.27,
-            "value": 13.02,
-            "unified": 438.44,
-            "coverage": "12/18",
-            "provisional": false
-          },
-          {
-            "modelId": "665dc327ee818c7ccf62",
-            "profileId": "22b565a4a3460af6cb84",
-            "avgIq": 46.63,
-            "value": 194.29,
-            "unified": 559.66,
-            "coverage": "12/18",
-            "provisional": false
-          }
-        ]
+        "US": [],
+        "CN": []
       },
       "scoring": {
         "version": 4,
@@ -296,85 +114,12 @@
         ],
         "qualifiedMinReports": 0,
         "bounds": {
-          "minAvgIq": 7.11,
-          "maxAvgIq": 84.49,
-          "minValue": 1.05,
-          "maxValue": 194.29
+          "minAvgIq": 0.0,
+          "maxAvgIq": 1.0,
+          "minValue": 0.0,
+          "maxValue": 1.0
         },
-        "benchmarkRanges": {
-          "ARC-AGI-2": [
-            0.0,
-            100.0
-          ],
-          "Agents'LastExam": [
-            0.0,
-            100.0
-          ],
-          "BrowseComp": [
-            0.0,
-            100.0
-          ],
-          "CharXiv-R": [
-            0.0,
-            100.0
-          ],
-          "DeepSWE": [
-            0.0,
-            100.0
-          ],
-          "DeepSWE1.1": [
-            0.0,
-            100.0
-          ],
-          "FrontierMathTiers1–3v2": [
-            0.0,
-            100.0
-          ],
-          "GPQA": [
-            0.0,
-            100.0
-          ],
-          "GPQADiamond": [
-            0.0,
-            100.0
-          ],
-          "Humanity’sLastExam": [
-            0.0,
-            100.0
-          ],
-          "IFBench": [
-            0.0,
-            100.0
-          ],
-          "LiveCodeBenchv6": [
-            0.0,
-            100.0
-          ],
-          "MMLU-Pro": [
-            0.0,
-            100.0
-          ],
-          "MMMU-Pro": [
-            0.0,
-            100.0
-          ],
-          "OfficeQAPro": [
-            0.0,
-            100.0
-          ],
-          "SWE-benchVerified": [
-            0.0,
-            100.0
-          ],
-          "Terminal-Bench2.1": [
-            0.0,
-            100.0
-          ],
-          "Toolathlon": [
-            0.0,
-            100.0
-          ]
-        }
+        "benchmarkRanges": {}
       }
     }
   ],

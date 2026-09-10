@@ -3,3 +3,4 @@
 {"date": "2026-09-07", "timestamp": "2026-09-07T03:40:59+00:00", "format": "head_to_head", "palette": "midnight"}
 {"date": "2026-09-08", "timestamp": "2026-09-08T03:39:33+00:00", "format": "price_vs_power", "palette": "newsprint"}
 {"date": "2026-09-09", "timestamp": "2026-09-09T03:39:45+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "Agents'LastExam"}
+{"date": "2026-09-10", "timestamp": "2026-09-10T03:31:50+00:00", "format": "leaderboard", "palette": "midnight"}
