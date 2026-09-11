@@ -1823,6 +1823,20 @@
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
+        },
+        "7adf490ee683d3035d81": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Context": "1M",
+          "Speed": "1c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
         }
       },
       "benchmarks": {
@@ -13587,6 +13601,36 @@
             "modelAvailableFrom": "2026-08-13",
             "notes": "AA record claude-opus-5; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "deepswe": {
+          "ad60af9db440a2a8": {
+            "benchmark": "DeepSWE",
+            "score": 73.7,
+            "unit": "percent",
+            "source": "https://openai.com/index/gpt-6-astra/?video=1222553704",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "DeepSWE v1.1 comparison-table result for Claude Opus 5; the table reports the maximum across effort settings. Published September 3, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13"
+          }
+        },
+        "gpqa": {
+          "60f05aa0e344e667": {
+            "benchmark": "GPQA",
+            "score": 93.7,
+            "unit": "percent",
+            "source": "https://openai.com/index/gpt-6-astra/?video=1222553704",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "GPQA Diamond accuracy for Claude Opus 5 in the comparison table; the table reports the maximum across effort settings. Published September 3, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13"
+          }
         }
       }
     },
@@ -18371,6 +18415,21 @@
             "confidence": "high",
             "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date."
           }
+        },
+        "gpqa": {
+          "7667c40b91c3f86c": {
+            "benchmark": "GPQA",
+            "score": 90.5,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "GPQA Diamond accuracy. Published in Anthropic's Claude Sonnet 5 system card; Claude Sonnet 5 was announced June 30, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
         }
       }
     },
@@ -22057,6 +22116,20 @@
           "Model": "DeepSeek-V4-Pro-0813",
           "Context": "1.0M",
           "Speed": "7c/s",
+          "License": "",
+          "Input$/M": "0.435",
+          "Output$/M": "0.87"
+        },
+        "cb3021acd20fa0d38308": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "4c/s",
           "License": "",
           "Input$/M": "0.435",
           "Output$/M": "0.87"
@@ -35639,6 +35712,21 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
           }
+        },
+        "deepswe": {
+          "0ffa52107dc17ff9": {
+            "benchmark": "DeepSWE",
+            "score": 66.9,
+            "unit": "percent",
+            "source": "https://huggingface.co/zai-org/GLM-5.3",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "DeepSWE v1.1; Z.ai vendor-reported using mini-swe-agent, temperature 0.95, top-p 1.0, 6-hour timeout, and 400K context; model-card benchmark guidance specifies default/max reasoning effort.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
         }
       }
     },
@@ -49184,6 +49272,20 @@
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
+        },
+        "f4961e1351bd9ad30822": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "44c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
@@ -50712,6 +50814,20 @@
           "Model": "GPT-5.6 Sol",
           "Context": "1.1M",
           "Speed": "32c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "30"
+        },
+        "0ee986bd42f93f1c3042": {
+          "model": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "origin": "US",
+          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Sol",
+          "Context": "1.1M",
+          "Speed": "26c/s",
           "License": "",
           "Input$/M": "5",
           "Output$/M": "30"
@@ -52606,6 +52722,21 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          }
+        },
+        "humanitys-last-exam": {
+          "50b6fbf59647ff1c": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 43.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/comparisons/gpt-5-6-terra-vs-gpt-5-6-terra-xhigh",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Artificial Analysis independently reports 43% for GPT-5.6 Terra at max reasoning effort; its HLE protocol uses pass@1 on 2,158 text-only questions. Publication date of this individual score is unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
             "modelAvailableFrom": "2026-07-21"
           }
         }
@@ -61763,6 +61894,21 @@
             "kind": "published",
             "publishedAt": "2026-04-23"
           }
+        },
+        "agents-last-exam": {
+          "03a0ed9bfaedf74d": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 16.4,
+            "unit": "percent",
+            "source": "https://snorkel.ai/leaderboard/agents-last-exam/",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Full-split pass rate for Gemini CLI with Gemini 3.1 Pro at High effort; 32.7% is the separate average-score metric and was not used. Result publication date not independently stated.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-02-20"
+          }
         }
       }
     },
@@ -64255,6 +64401,21 @@
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-3.8-flash_high."
           }
+        },
+        "deepswe": {
+          "b39dd493c90a5022": {
+            "benchmark": "DeepSWE",
+            "score": 74.0,
+            "unit": "percent",
+            "source": "https://deepswe.datacurve.ai/",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "DeepSWE v1.1 Pass@1, high reasoning effort (74% ±1%); the operator changelog records Gemini 3.8 Flash results added on September 1, 2026.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03"
+          }
         }
       }
     },
@@ -65816,6 +65977,20 @@
           "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "No"
+        },
+        "f8b351894715b0ebd556": {
+          "model": "Hy4 preview",
+          "organization": "Tencent",
+          "link": "https://llm-stats.com/models/hy4-preview",
+          "origin": "CN",
+          "description": "Hy4 preview by Tencent — released Aug 28, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-28",
+          "Model": "Hy4 preview",
+          "Context": "-",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "—",
+          "Output$/M": "—"
         }
       },
       "benchmarks": {
@@ -66104,6 +66279,21 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-08-31"
+          }
+        },
+        "humanitys-last-exam": {
+          "6bdd2d2ede04199e": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 43.4,
+            "unit": "percent",
+            "source": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Text-only, tools-off configuration; appendix was committed on 2026-08-28.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-08-31"
           }
         }
@@ -81860,6 +82050,50 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Undated API observation; partial-credit avgScore excluded."
+          },
+          "c24dc2617d3ffc15": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 29.6,
+            "unit": "percent",
+            "source": "https://agents-last-exam.org/api/demo/leaderboard",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Full ALE pass rate; codex; reasoning-max; 152 split tasks.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Undated API observation; partial-credit avgScore excluded."
+          }
+        },
+        "deepswe": {
+          "f1d47cd13f67160e": {
+            "benchmark": "DeepSWE",
+            "score": 75.4,
+            "unit": "percent",
+            "source": "https://research.meta.ai/static/muse-spark-1-3-multimodal-evaluation-methodology",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "DeepSWE v1.1 task pass rate, Muse Spark 1.3 max with mini-swe agent; published September 2, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03"
+          }
+        },
+        "humanitys-last-exam": {
+          "1abe486c158f2e71": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 49.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/articles/muse-spark-1-3",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Artificial Analysis independently reports 49% for Muse Spark 1.3 max; its September 2, 2026 article states max improves by two points over the 47% xhigh result. The article does not provide a more precise decimal.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03"
           }
         }
       }
@@ -91972,6 +92206,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.47"
+        },
+        "8e605ee0761e6b2123bb": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Context": "1M",
+          "Speed": "10c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.47"
         }
       },
       "benchmarks": {
@@ -92540,6 +92788,20 @@
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"
+        },
+        "4086400de735506fa7d5": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $2.00/M input, $0.200/M cached input, $6.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "22c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
         }
       },
       "benchmarks": {
@@ -93059,6 +93321,21 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04"
+          }
+        },
+        "deepswe": {
+          "86a6e0d7ce7bddbb": {
+            "benchmark": "DeepSWE",
+            "score": 57.0,
+            "unit": "percent",
+            "source": "https://deepswe.datacurve.ai/",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Official DeepSWE leaderboard lists exact model ID qwen3.8-max at xhigh effort with a 57% pass rate; publication date for this individual result is unknown.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
             "modelAvailableFrom": "2026-08-04"
           }
         }
@@ -95063,6 +95340,20 @@
           "Latency": "–",
           "KnowledgeCutoff": "Dec. 2025",
           "Multimodal": "Yes"
+        },
+        "810287862ee0a96099cc": {
+          "model": "GPT-5.5 Pro",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.5-pro",
+          "origin": "US",
+          "description": "GPT-5.5 Pro by OpenAI — released Apr 23, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-04-23",
+          "Model": "GPT-5.5 Pro",
+          "Context": "-",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "—",
+          "Output$/M": "—"
         }
       },
       "benchmarks": {
@@ -95126,6 +95417,21 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-09-07"
+          }
+        },
+        "gpqa-diamond": {
+          "2fb834c8bc4b702d": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.6,
+            "unit": "percent",
+            "source": "https://openai.com/index/introducing-gpt-5-5/",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "OpenAI’s evaluation table lists 93.6% for the GPT-5.5 Pro column. Published April 23, 2026; reasoning-effort setting not specified.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
             "modelAvailableFrom": "2026-09-07"
           }
         }
@@ -95416,6 +95722,148 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-04"
+          }
+        }
+      }
+    },
+    "61114fa803c3bbb1e2b2": {
+      "name": "DeepSeek-V4.1-Flash",
+      "profiles": {
+        "b5af6a3dceee51b994a9": {
+          "model": "DeepSeek-V4.1-Flash",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "origin": "CN",
+          "description": "DeepSeek-V4.1-Flash by DeepSeek — released Sep 10, 2026; $0.220/M input, $0.007/M cached input, $0.660/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-10",
+          "Model": "DeepSeek-V4.1-Flash\nNEW",
+          "Context": "1.0M",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "0.22",
+          "Output$/M": "0.66"
+        }
+      },
+      "benchmarks": {
+        "mmmu-pro": {
+          "70892910a7399d40": {
+            "benchmark": "MMMU-Pro",
+            "score": 77.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4.1 Flash (Reasoning, Max Effort).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11",
+            "notes": "AA record deepseek-v4-1-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "agents-last-exam": {
+          "78bbaaf1a9dcb971": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 31.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
+          }
+        },
+        "deepswe-1.1": {
+          "2b5eaf083affbb5f": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 74.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-11"
+          }
+        },
+        "terminal-bench-2.1": {
+          "cbbb3363764504a6": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 90.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
+          },
+          "64cfb91eb6558a98": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 74.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID deepseek/deepseek-v4.1-flash; reasoning_effort=high; max_output_tokens=384000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-11",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "gpqa": {
+          "51a04de3120d87d3": {
+            "benchmark": "GPQA",
+            "score": 90.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
+          }
+        },
+        "humanitys-last-exam": {
+          "ca3c8d6b245684b7": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 36.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
+          }
+        },
+        "gpqa-diamond": {
+          "d9a5cb31d219ccbd": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.9,
+            "unit": "percent",
+            "source": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Instruct model, Pass@1 at reasoning_effort=100; temperature=1.0 and top_p=0.95. Publication date of this individual result is not established in the model card.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-11"
           }
         }
       }

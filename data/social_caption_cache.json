@@ -16,5 +16,23 @@
       "#AIScoreboard",
       "#TechTrends"
     ]
+  },
+  "2026-09-11T03:51:08+00:00|biggest_mover": {
+    "hook": "Claude Sonnet 5 made the day\u2019s biggest move: up 6 places.",
+    "bullets": [
+      "Claude Sonnet 5 entered the top 10 at rank 10.",
+      "US models hold 8 of the top 10 spots.",
+      "The US leads China 5256.63 to 1119.35 on the scoreboard."
+    ],
+    "question": "Is Claude Sonnet 5\u2019s jump a lasting shift or a one-day spike?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#ClaudeSonnet5",
+      "#OpenAI",
+      "#USvsChina",
+      "#AIScoreboard"
+    ]
   }
 }

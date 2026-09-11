@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-10T03:32:42.645963+00:00",
+  "lastUpdated": "2026-09-11T03:52:00.154519+00:00",
   "items": [
+    {
+      "id": "de98a907c4c0e5c9",
+      "headline": "Google signs its biggest rice-methane carbon credit deal with Indian startup Mitti Labs",
+      "url": "https://techcrunch.com/2026/09/10/google-signs-its-biggest-rice-methane-carbon-credit-deal-with-indian-startup-mitti-labs/",
+      "source": "Tech Crunch",
+      "country": "US",
+      "publishedAt": "2026-09-10 13:34:01",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "ddd1bf65061eb169",
+      "headline": "NSA, FBI, CISA Warn of Industrial-Scale AI Model Distillation Attacks",
+      "url": "https://www.esecurityplanet.com/news/news-ai-model-distillation-attacks/",
+      "source": "Esecurity Planet",
+      "country": "Both",
+      "publishedAt": "2026-09-10 12:26:10",
+      "relevanceScore": 0.61
+    },
     {
       "id": "097fba77c53b5ea6",
       "headline": "Anthropic researcher quits over AI fears, warns 'it could kill us all'",
@@ -135,15 +153,6 @@
       "country": "Both",
       "publishedAt": "2026-08-29 00:00:00",
       "relevanceScore": 0.83
-    },
-    {
-      "id": "3e772d37855e81f3",
-      "headline": "For global AI governance, the US and China must cooperate while competing",
-      "url": "https://thehill.com/homenews/6052665-us-china-ai-collaboration/",
-      "source": "The Hill",
-      "country": "Both",
-      "publishedAt": "2026-08-27 16:30:00",
-      "relevanceScore": 0.23
     }
   ]
 }
