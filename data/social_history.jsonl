@@ -5,3 +5,4 @@
 {"date": "2026-09-09", "timestamp": "2026-09-09T03:39:45+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "Agents'LastExam"}
 {"date": "2026-09-10", "timestamp": "2026-09-10T03:31:50+00:00", "format": "leaderboard", "palette": "midnight"}
 {"date": "2026-09-11", "timestamp": "2026-09-11T03:51:08+00:00", "format": "biggest_mover", "palette": "graphite"}
+{"date": "2026-09-12", "timestamp": "2026-09-12T03:46:46+00:00", "format": "new_challenger", "palette": "newsprint"}

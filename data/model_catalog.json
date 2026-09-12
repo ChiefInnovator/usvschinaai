@@ -2057,6 +2057,18 @@
             "modelAvailableFrom": "2026-09-02",
             "notes": "Vals AI leaderboard, updated 2026-09-04.",
             "excludedReason": "Reported configuration mixes model fallback or a distinct benchmark variant; not comparable to the selected component."
+          },
+          "27fa1e14178b4ae7eb7b": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 85.0,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "Retained llm-stats snapshot; configuration not recorded.",
+            "kind": "retained-observation",
+            "sourceType": "third_party_leaderboard",
+            "notes": "Observed in retained snapshot at 2026-09-12T03:46:46+00:00"
           }
         }
       }
@@ -20808,6 +20820,20 @@
           "License": "",
           "Input$/M": "0.06",
           "Output$/M": "0.18"
+        },
+        "66394b07a909ee463cb9": {
+          "model": "DeepSeek-V4-Flash-0731",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-flash-0731",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Flash-0731 by DeepSeek — released Jul 31, 2026; $0.060/M input, $0.015/M cached input, $0.180/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-31",
+          "Model": "DeepSeek-V4-Flash-0731",
+          "Context": "1.0M",
+          "Speed": "28c/s",
+          "License": "",
+          "Input$/M": "0.06",
+          "Output$/M": "0.18"
         }
       },
       "benchmarks": {
@@ -22133,6 +22159,20 @@
           "License": "",
           "Input$/M": "0.435",
           "Output$/M": "0.87"
+        },
+        "28a3c2096b8857fd0fbf": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "22c/s",
+          "License": "",
+          "Input$/M": "0.435",
+          "Output$/M": "0.87"
         }
       },
       "benchmarks": {
@@ -22520,6 +22560,21 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "ifbench": {
+          "8b545ea7dd68fec9": {
+            "benchmark": "IFBench",
+            "score": 76.5,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-nvfp4-DSpark",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "NVIDIA reports 76.53 for the MXFP4 source baseline, explicitly identifying it as DeepSeek-V4-Pro-0813; SGLang, temperature 1.0, top_p 1.0, max reasoning effort, pooled over four runs. NVIDIA's model card is dated 2026-09-09.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
         }
@@ -24256,6 +24311,20 @@
           "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "No"
+        },
+        "2ccaad4e94581d0bdba6": {
+          "model": "DeepSeek-V4-Pro-Max",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-max",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-Max by DeepSeek — released Apr 23, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-04-23",
+          "Model": "DeepSeek-V4-Pro-Max",
+          "Context": "1.0M",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "1.3",
+          "Output$/M": "2.6"
         }
       },
       "benchmarks": {
@@ -24578,6 +24647,22 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-05-10"
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "0a40d435fc023b10": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 45.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/models/deepseek-v4-pro",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "Epoch AI's model scorecard reports 45.3% for DeepSeek-V4-Pro on FrontierMath Tiers 1–3 v2; its configuration listing identifies the max-effort variant. Individual-result publication date unknown.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-05-10"
           }
         }
@@ -49286,6 +49371,20 @@
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
+        },
+        "f2f6411088f2f32c9523": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "49c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
@@ -50828,6 +50927,20 @@
           "Model": "GPT-5.6 Sol",
           "Context": "1.1M",
           "Speed": "26c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "30"
+        },
+        "5200dc237096fe39f195": {
+          "model": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "origin": "US",
+          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Sol",
+          "Context": "1.1M",
+          "Speed": "22c/s",
           "License": "",
           "Input$/M": "5",
           "Output$/M": "30"
@@ -52891,6 +53004,20 @@
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
+        },
+        "b8f947259c0c97419e98": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Context": "1.1M",
+          "Speed": "18c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
         }
       },
       "benchmarks": {
@@ -53318,6 +53445,21 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date."
+          }
+        },
+        "deepswe": {
+          "8129be0dbe9e8af0": {
+            "benchmark": "DeepSWE",
+            "score": 74.1,
+            "unit": "percent",
+            "source": "https://deepswe.datacurve.ai/",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "DeepSWE v1.1 pass@1; mini-swe-agent at xhigh effort. The leaderboard was updated September 3, 2026.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-04"
           }
         }
       }
@@ -92220,6 +92362,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.47"
+        },
+        "bf1a6a612a21ce26609e": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Context": "1M",
+          "Speed": "3c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.47"
         }
       },
       "benchmarks": {
@@ -92799,6 +92955,20 @@
           "Model": "Qwen3.8 Max",
           "Context": "1.0M",
           "Speed": "22c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
+        },
+        "6f10fa0cac9e896fe452": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $2.00/M input, $0.200/M cached input, $6.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "26c/s",
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"
@@ -94326,6 +94496,21 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
           }
+        },
+        "deepswe": {
+          "e7aa5430af63c4da": {
+            "benchmark": "DeepSWE",
+            "score": 58.7,
+            "unit": "percent",
+            "source": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "DeepSWE 1.1; official card reports the best result across Claude Code and mini-SWE-agent harnesses, with the winning configuration mini-SWE-agent.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
         }
       }
     },
@@ -95429,6 +95614,21 @@
             "availableFrom": "2026-09-11",
             "retrievedAt": "2026-09-11",
             "configuration": "OpenAI’s evaluation table lists 93.6% for the GPT-5.5 Pro column. Published April 23, 2026; reasoning-effort setting not specified.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-07"
+          }
+        },
+        "gpqa": {
+          "2d4b0ff33e85f871": {
+            "benchmark": "GPQA",
+            "score": 93.6,
+            "unit": "percent",
+            "source": "https://openai.com/index/introducing-gpt-5-5/",
+            "availableFrom": "2026-09-12",
+            "retrievedAt": "2026-09-12",
+            "configuration": "GPQA Diamond accuracy, published in OpenAI's April 23, 2026 launch post; evaluated at xhigh reasoning effort in a research environment.",
             "kind": "published",
             "sourceType": "vendor_blog",
             "confidence": "high",

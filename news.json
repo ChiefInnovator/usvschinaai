@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-11T03:52:00.154519+00:00",
+  "lastUpdated": "2026-09-12T03:47:37.310948+00:00",
   "items": [
+    {
+      "id": "daea851af6c1e744",
+      "headline": "'Seems Like a Setup': Elon Musk Expresses Skepticism over Viral AI Doom Prediction",
+      "url": "https://www.breitbart.com/tech/2026/09/11/seems-like-a-setup-elon-musk-expresses-skepticism-over-viral-ai-doom-prediction/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-09-11 15:40:52",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "444b6ccf0d55a55d",
+      "headline": "OpenAI seeks antitrust guidance from Congress on coordinating an AI slowdown",
+      "url": "https://completeaitraining.com/news/openai-seeks-antitrust-guidance-from-congress-on/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-09-11 12:14:11",
+      "relevanceScore": 0.3
+    },
     {
       "id": "de98a907c4c0e5c9",
       "headline": "Google signs its biggest rice-methane carbon credit deal with Indian startup Mitti Labs",
@@ -144,15 +162,6 @@
       "country": "US",
       "publishedAt": "2026-09-01 07:53:11",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "0e06cac2cb8a084e",
-      "headline": "DeepSeek down live: Chinese AI app not working properly amid ...",
-      "url": "https://ng.shotoe.com/deepseek-ai-model-st_563171/news/deepseek-down-live-chinese-ai-app-not-working-properly-amid-sn_5076052/",
-      "source": "Shotoe Nigeria",
-      "country": "Both",
-      "publishedAt": "2026-08-29 00:00:00",
-      "relevanceScore": 0.83
     }
   ]
 }

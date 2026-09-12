@@ -1,4 +1,16 @@
 {
+  "Claude Fable 5.1": {
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vals reports 85.02% pass@1 using its Terminus 2 configuration; rounded to one decimal. Individual-result publication date is not independently verified.",
+      "score": "85.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+    }
+  },
   "Claude Opus 5": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -34,24 +46,54 @@
     }
   },
   "DeepSeek-V4-Pro-0813": {
-    "IFBench": {
-      "benchmark": "IFBench",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "NVIDIA reports 76.53 for the explicitly identified DeepSeek-V4-Pro-0813 MXFP4 source baseline; rounded to one decimal. SGLang, temperature 1.0, top_p 1.0, max reasoning effort; pooled over four runs per side.",
+      "notes": "Verified Mercor APEX BrowseComp web-research-harness row for DeepSeek V4 Pro 0813 at max effort; 130 public tasks and 520 evaluation samples, dated 2026-08-28.",
+      "score": "73.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "NVIDIA reports 76.53 for the MXFP4 source baseline, explicitly identifying it as DeepSeek-V4-Pro-0813; SGLang, temperature 1.0, top_p 1.0, max reasoning effort, pooled over four runs. NVIDIA's model card is dated 2026-09-09.",
       "score": "76.5%",
       "source_type": "model_card",
-      "source_url": "https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-NVFP4"
+      "source_url": "https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-nvfp4-DSpark"
     }
   },
   "DeepSeek-V4-Pro-Max": {
-    "LiveCodeBench v6": {
-      "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Epoch AI's model scorecard reports 45.3% for DeepSeek-V4-Pro on FrontierMath Tiers 1–3 v2; its configuration listing identifies the max-effort variant. Individual-result publication date unknown.",
+      "score": "45.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://epoch.ai/models/deepseek-v4-pro"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "LLM Stats lists DeepSeek-V4-Pro-Max at 0.935 on the LiveCodeBench leaderboard, whose displayed protocol is release_v6 pass@1; DeepSeek’s model card independently reports 93.5 Pass@1 for Pro-Max (Think Max).",
+      "notes": "The leaderboard lists DeepSeek V4 Pro at 76.5% and attributes it to an official April 24, 2026 result; effort configuration is not stated on that row.",
+      "score": "76.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://evals.report/benchmarks/ifbench?tab=scores"
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "LLM Stats' release_v6 leaderboard reports 0.935 for DeepSeek-V4-Pro-Max; the vendor model card also reports 93.5 Pass@1 for Pro Max but does not label the LCB release. Individual-result publication date unknown.",
       "score": "93.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://llm-stats.com/benchmarks/livecodebench"
@@ -81,7 +123,59 @@
       "source_url": "https://huggingface.co/zai-org/GLM-5.3"
     }
   },
+  "GLM-5.3-Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE 1.1, self-reported/unverified in the leaderboard; reported for max effort. The official DeepSWE leaderboard independently displays the same model/config rounded to 63% ±4%. Individual-result publication date unavailable.",
+      "score": "63.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/deepswe-1.1"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported specifically on GPQA Diamond: 0.9217 for the original GLM-5.3-Flash-BF16 baseline, not the NVFP4 derivative; temperature 1.0, top_p 0.95, max_new_tokens 327,680. NVIDIA model-card release date: September 9, 2026.",
+      "score": "92.2%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "NVIDIA reports 0.613 for the original GLM-5.3-Flash-BF16 baseline, not the NVFP4 derivative; temperature 1.0, top_p 0.95, max_new_tokens 327,680. NVIDIA model-card release date: September 9, 2026.",
+      "score": "61.3%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "NVIDIA reports 0.7688 for the original GLM-5.3-Flash-BF16 baseline, not the NVFP4 derivative; temperature 1.0, top_p 0.95, max_new_tokens 327,680. NVIDIA model-card release date: September 9, 2026.",
+      "score": "76.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4"
+    }
+  },
   "GPT-5.5 Pro": {
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy, published in OpenAI's April 23, 2026 launch post; evaluated at xhigh reasoning effort in a research environment.",
+      "score": "93.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-11T03:32:26.561650+00:00",
@@ -96,13 +190,13 @@
   "GPT-5.6 Luna": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "BenchmarkList records 82.7% for the exact GPT-5.6 Luna model on CharXiv-R; its row is marked self-reported and dated 2026-07-21.",
+      "notes": "BenchmarkList lists an exact GPT-5.6 Luna CharXiv-R row with the standard Score metric; it labels the result self-reported and dates the entry July 21, 2026.",
       "score": "82.7%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/models/openai-gpt-5-6-luna/"
+      "source_url": "https://benchmarklist.com/models/openai-gpt-5.6-luna/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -118,13 +212,13 @@
   "GPT-5.6 Sol": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis lists GPT-5.6 Sol reasoning-effort variants; the highest matching original Humanity’s Last Exam result is 49.5% at max effort. Publication date of this individual result is unknown.",
+      "notes": "Highest listed matching result: max reasoning effort, 49.5% accuracy; recorded September 2, 2026, with Artificial Analysis named as the underlying source.",
       "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/releases/gpt-5-6-sol"
+      "source_url": "https://benchmarklist.com/models/openai-gpt-5.6-sol/"
     }
   },
   "GPT-5.6 Terra": {
@@ -139,6 +233,18 @@
       "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-5-6-terra-vs-gpt-5-6-terra-xhigh"
     }
   },
+  "GPT-6 Astra": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1 pass@1; mini-swe-agent at xhigh effort. The leaderboard was updated September 3, 2026.",
+      "score": "74.1%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://deepswe.datacurve.ai/"
+    }
+  },
   "Gemini 3.1 Pro": {
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
@@ -150,25 +256,35 @@
       "source_type": "official_leaderboard",
       "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
     },
-    "LiveCodeBench v6": {
-      "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals’ LiveCodeBench v6 overall code-generation result for Gemini 3.1 Pro Preview (02/26); leaderboard snapshot updated April 21, 2026.",
+      "notes": "Third-party leaderboard row identifies Gemini 3.1 Pro Preview and reports 77.1%.",
+      "score": "77.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://loggel.github.io/frontier/benchmarks/ifbench/"
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vals AI result for LiveCodeBench v6 overall code generation: 88.485%, rounded to 88.5%; configuration is Gemini 3.1 Pro Preview.",
       "score": "88.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/livecodebench"
+      "source_url": "https://www.gradually.ai/en/llm-comparison/gemini-3-1-pro-vs-glm-5.3/"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-11T03:32:26.561650+00:00",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals overall MMLU-Pro accuracy for Gemini 3.1 Pro Preview (02/26); leaderboard snapshot updated April 23, 2026.",
+      "notes": "Vals AI MMLU-Pro overall result: 90.987%, rounded to 91.0%; configuration is Gemini 3.1 Pro Preview.",
       "score": "91.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/mmlu-pro"
+      "source_url": "https://www.gradually.ai/en/llm-comparison/gemini-3-1-pro-vs-glm-5.3/"
     }
   },
   "Gemini 3.8 Flash": {
@@ -193,6 +309,16 @@
       "score": "94.9%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/evaluations/gpqa-diamond?models=llama-3-1-instruct-8b"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Highest verified effort-level result: xhigh; Artificial Analysis independently reports 44%, and the individual-result publication date is unknown.",
+      "score": "44.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/comparisons/grok-4-6-vs-grok-4-6-xhigh"
     }
   },
   "Hy4 preview": {
@@ -229,6 +355,28 @@
       "source_url": "https://artificialanalysis.ai/articles/muse-spark-1-3"
     }
   },
+  "Qwen3.8 Flash": {
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "AI IQ model profile reports 79.769 and attributes MMMU-Pro data to Artificial Analysis; configuration and individual-result publication date are not disclosed.",
+      "score": "79.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.aiiq.org/models/qwen3.8-flash/"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1; leaderboard attributes its canonical value to Artificial Analysis, with Vals.ai fallback; effort/config and individual-result publication date are not disclosed.",
+      "score": "86.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.aiiq.org/charts/terminal-bench-2-1-scores/"
+    }
+  },
   "Qwen3.8 Max": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -239,6 +387,18 @@
       "score": "57.0%",
       "source_type": "official_leaderboard",
       "source_url": "https://deepswe.datacurve.ai/"
+    }
+  },
+  "Qwen3.8-Flash-Next": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE 1.1; official card reports the best result across Claude Code and mini-SWE-agent harnesses, with the winning configuration mini-SWE-agent.",
+      "score": "58.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
     }
   }
 }
