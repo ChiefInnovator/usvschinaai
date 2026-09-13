@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-12T03:47:37.310948+00:00",
+  "lastUpdated": "2026-09-13T03:49:15.482157+00:00",
   "items": [
+    {
+      "id": "a8713aef1f701f00",
+      "headline": "Anthropic and OpenAI CEOs call for AI development to slow down, OpenAI to delay IPO",
+      "url": "https://www.nhpr.org/2026-09-12/anthropic-and-openai-ceos-call-for-ai-development-to-slow-down-openai-to-delay-ipo",
+      "source": "Nhpr",
+      "country": "US",
+      "publishedAt": "2026-09-12 09:00:00",
+      "relevanceScore": 0.6
+    },
+    {
+      "id": "1358ae15710891e4",
+      "headline": "Why are the people building the most powerful AI so worried about what it could do?",
+      "url": "https://www.wesanews.org/national-international-news/2026-09-12/why-are-the-people-building-the-most-powerful-ai-so-worried-about-what-it-could-do",
+      "source": "Wesa",
+      "country": "US",
+      "publishedAt": "2026-09-12 09:00:00",
+      "relevanceScore": 0.3
+    },
     {
       "id": "daea851af6c1e744",
       "headline": "'Seems Like a Setup': Elon Musk Expresses Skepticism over Viral AI Doom Prediction",

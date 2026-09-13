@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-12",
-  "timestamp": "2026-09-12T03:46:46+00:00",
-  "format": "new_challenger",
-  "palette": "newsprint",
-  "weight": 3,
+  "date": "2026-09-13",
+  "timestamp": "2026-09-13T03:48:23+00:00",
+  "format": "trend_30d",
+  "palette": "graphite",
+  "weight": 1,
   "slides": [
-    "2026-09-12-1-new_challenger-newsprint.png",
-    "2026-09-12-2-leaderboard-newsprint.png"
+    "2026-09-13-1-trend_30d-graphite.png",
+    "2026-09-13-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-12-1-new_challenger-newsprint.png",
-    "https://usvschina.ai/social/2026-09-12-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-09-13-1-trend_30d-graphite.png",
+    "https://usvschina.ai/social/2026-09-13-2-leaderboard-graphite.png"
   ],
-  "caption": "The US extends its lead as GPT-5.5 Pro enters at No. 7.\n\n• US total rose to 5338.27, while China moved to 1105.52.\n• GPT-6 Astra leads at 900.1; Kimi K3 is China’s top model at No. 5.\n• GPT-5.5 Pro gained 5 places and enters with a 506.5 unified score.\n\nDoes GPT-5.5 Pro at No. 7 change the race, or just deepen the US bench?\n\nLive board: usvschina.ai\n\n#AI #AIModels #USvsChina #OpenAI #GPT55Pro #KimiK3 #LLMLeaderboard",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-09-12T03:47:41.515165+00:00"
+  "caption": "The US keeps the 30-day lead, but China owns the biggest move.\n\n• US leads China 5343.69 to 1151.07, a margin of 4192.6.\n• Kimi K3 is China’s top model at rank 5 with a 705.9 score.\n• GLM-5.3-Flash climbed 11 places to rank 9 with 91.8 value.\n\nIs China closing the gap, or is the leaderboard still one-sided?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #GLM53Flash #AILeaderboard",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-09-13T03:49:19.704914+00:00"
 }

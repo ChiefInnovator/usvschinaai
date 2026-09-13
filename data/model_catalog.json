@@ -18442,6 +18442,21 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
+        },
+        "deepswe": {
+          "aab1066d2f0cb605": {
+            "benchmark": "DeepSWE",
+            "score": 54.0,
+            "unit": "percent",
+            "source": "https://deepswe.datacurve.ai/",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "DeepSWE v1.1 pass@1, max effort; official leaderboard reports 54% ±4%. Result was added July 2, 2026 per the official DeepSWE changelog.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
         }
       }
     },
@@ -22173,6 +22188,20 @@
           "License": "",
           "Input$/M": "0.435",
           "Output$/M": "0.87"
+        },
+        "6f26a2246f973d154c56": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "0c/s",
+          "License": "",
+          "Input$/M": "0.435",
+          "Output$/M": "0.87"
         }
       },
       "benchmarks": {
@@ -22574,6 +22603,21 @@
             "configuration": "NVIDIA reports 76.53 for the MXFP4 source baseline, explicitly identifying it as DeepSeek-V4-Pro-0813; SGLang, temperature 1.0, top_p 1.0, max reasoning effort, pooled over four runs. NVIDIA's model card is dated 2026-09-09.",
             "kind": "published",
             "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "browsecomp": {
+          "6fb10efaed508382": {
+            "benchmark": "BrowseComp",
+            "score": 83.4,
+            "unit": "percent",
+            "source": "https://arxiv.org/html/2606.19348v1",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "Pass@1; DeepSeek-V4-Pro Max reasoning effort. The paper version containing this result was submitted April 26, 2026.",
+            "kind": "published",
+            "sourceType": "paper",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
@@ -36021,6 +36065,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.5"
+        },
+        "dd59e221ac60ff6c26cd": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Context": "1.0M",
+          "Speed": "4c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.5"
         }
       },
       "benchmarks": {
@@ -36456,6 +36514,66 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "deepswe": {
+          "d914206b577886a4": {
+            "benchmark": "DeepSWE",
+            "score": 63.4,
+            "unit": "percent",
+            "source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "Vendor-reported DeepSWE v1.1 result; model card specifies mini-swe-agent, temperature 0.95, top_p 1.0, 6-hour timeout, 400K context, and default reasoning_effort=max. Result independently summarized by llm-stats on August 26, 2026.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "mmmu-pro": {
+          "973af94da9309882": {
+            "benchmark": "MMMU-Pro",
+            "score": 76.9,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.7688. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "ifbench": {
+          "ec9a10257fc28079": {
+            "benchmark": "IFBench",
+            "score": 61.3,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.6130. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "gpqa": {
+          "dc56ca6e722e89bf": {
+            "benchmark": "GPQA",
+            "score": 92.2,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "GPQA Diamond. NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.9217. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
         }
@@ -49385,6 +49503,20 @@
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
+        },
+        "92eb876e1b4300bdaaea": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "53c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
@@ -53015,6 +53147,20 @@
           "Model": "GPT-6 Astra",
           "Context": "1.1M",
           "Speed": "18c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
+        },
+        "1873133d3cabc13e3e47": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Context": "1.1M",
+          "Speed": "16c/s",
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
@@ -65715,6 +65861,21 @@
             "modelAvailableFrom": "2026-08-31",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "humanitys-last-exam": {
+          "d93277682c5a52db": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 44.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/comparisons/grok-4-6-vs-grok-4-6-xhigh",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "Artificial Analysis reports 44.0% for Grok 4.6 (xhigh), the highest verified effort setting shown; the result page was crawled in September 2026.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-31"
+          }
         }
       }
     },
@@ -74711,6 +74872,20 @@
           "Model": "Kimi K3",
           "Context": "1.0M",
           "Speed": "0c/s",
+          "License": "",
+          "Input$/M": "2.85",
+          "Output$/M": "14.25"
+        },
+        "1310e91f07aaed5dadf2": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $3.00/M input, $0.300/M cached input, $15.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Context": "1.0M",
+          "Speed": "3c/s",
           "License": "",
           "Input$/M": "2.85",
           "Output$/M": "14.25"
@@ -92376,6 +92551,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.47"
+        },
+        "c8661356e879d872bfd0": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Context": "1M",
+          "Speed": "9c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.47"
         }
       },
       "benchmarks": {
@@ -92969,6 +93158,20 @@
           "Model": "Qwen3.8 Max",
           "Context": "1.0M",
           "Speed": "26c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
+        },
+        "c4aa1b8a13b20522f479": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $2.00/M input, $0.200/M cached input, $6.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "23c/s",
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"

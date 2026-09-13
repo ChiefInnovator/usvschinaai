@@ -52,5 +52,24 @@
       "#KimiK3",
       "#LLMLeaderboard"
     ]
+  },
+  "2026-09-13T03:48:23+00:00|trend_30d": {
+    "hook": "The US keeps the 30-day lead, but China owns the biggest move.",
+    "bullets": [
+      "US leads China 5343.69 to 1151.07, a margin of 4192.6.",
+      "Kimi K3 is China\u2019s top model at rank 5 with a 705.9 score.",
+      "GLM-5.3-Flash climbed 11 places to rank 9 with 91.8 value."
+    ],
+    "question": "Is China closing the gap, or is the leaderboard still one-sided?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#OpenAI",
+      "#KimiK3",
+      "#GLM53Flash",
+      "#AILeaderboard"
+    ]
   }
 }
