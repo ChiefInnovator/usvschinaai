@@ -2039,6 +2039,19 @@
             "modelAvailableFrom": "2026-09-02",
             "notes": "Claude Fable 5.1 & Mythos 5.1 System Card Section 8.15.1.",
             "excludedReason": "Reported configuration mixes model fallback or a distinct benchmark variant; not comparable to the selected component."
+          },
+          "3fc08117bee74a84": {
+            "benchmark": "OfficeQA Pro",
+            "score": 69.0,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "OfficeQA Pro full-corpus result; published September 1, 2026; reported at max effort.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-02"
           }
         },
         "terminal-bench-2.1": {
@@ -2069,6 +2082,21 @@
             "kind": "retained-observation",
             "sourceType": "third_party_leaderboard",
             "notes": "Observed in retained snapshot at 2026-09-12T03:46:46+00:00"
+          }
+        },
+        "deepswe": {
+          "054d6331c77ce98e": {
+            "benchmark": "DeepSWE",
+            "score": 67.4,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "DeepSWE v1.1 Pass@1; published September 1, 2026; reported at max effort.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-02"
           }
         }
       }
@@ -24707,6 +24735,21 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-05-10"
+          }
+        },
+        "livecodebench-v6": {
+          "90f83e8626560660": {
+            "benchmark": "LiveCodeBench v6",
+            "score": 93.5,
+            "unit": "percent",
+            "source": "https://arxiv.org/html/2606.19348v1",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "Pass@1; the technical report explicitly identifies the evaluation as LiveCodeBench-v6 and reports 93.5 for DeepSeek-V4-Pro Max. Publication date independently verified as April 26, 2026.",
+            "kind": "published",
+            "sourceType": "paper",
+            "confidence": "high",
             "modelAvailableFrom": "2026-05-10"
           }
         }
@@ -49514,6 +49557,20 @@
           "Model": "GPT-5.6 Luna",
           "Context": "1.1M",
           "Speed": "53c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
+        },
+        "3d81dfb55fae94343cba": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "56c/s",
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
@@ -93175,6 +93232,20 @@
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"
+        },
+        "f9f24c09831f7c73f415": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $2.00/M input, $0.200/M cached input, $6.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "21c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
         }
       },
       "benchmarks": {
@@ -96267,6 +96338,57 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-11"
+          }
+        }
+      }
+    },
+    "88ef041406ee2d59a1bb": {
+      "name": "Claude Mythos 5.1",
+      "profiles": {},
+      "benchmarks": {
+        "toolathlon": {
+          "afecf81b2a5aa4bc": {
+            "benchmark": "Toolathlon",
+            "score": 77.8,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "Pass@1 at max effort; joint Fable/Mythos 5.1 capability result. System card published September 1, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-14"
+          }
+        },
+        "arc-agi-2": {
+          "d225d628a373bc91": {
+            "benchmark": "ARC-AGI-2",
+            "score": 90.0,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "Verified ARC-AGI-2 score at max effort; joint Fable/Mythos 5.1 capability result. System card published September 1, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-14"
+          }
+        },
+        "humanitys-last-exam": {
+          "8bed0cdda0cb2900": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 60.9,
+            "unit": "percent",
+            "source": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+            "availableFrom": "2026-09-14",
+            "retrievedAt": "2026-09-14",
+            "configuration": "No-tools accuracy; the shared-weight Fable/Mythos 5.1 capability result. Anthropic’s launch post is dated September 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-14"
           }
         }
       }

@@ -1,6 +1,69 @@
 {
-  "lastUpdated": "2026-09-13T03:49:15.482157+00:00",
+  "lastUpdated": "2026-09-14T03:54:06.072619+00:00",
   "items": [
+    {
+      "id": "1ae1133b173090b1",
+      "headline": "Anthropic CEO warns AI could outpace human control within a year as company prepares for IPO",
+      "url": "https://completeaitraining.com/news/anthropic-ceo-warns-ai-could-outpace-human-control-within-a/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-09-13 15:19:26",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "d5041e0a40e0778f",
+      "headline": "AI leaders back Anthropic call for permanent safety monitors inside frontier labs",
+      "url": "https://completeaitraining.com/news/ai-leaders-back-anthropic-call-for-permanent-safety/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-09-13 14:48:54",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "86cd038c4eff3353",
+      "headline": "Anthropic's Dario Amodei Calls for AI Industry Slow Down, Sam Altman and Elon Musk Signal Agreement",
+      "url": "https://www.breitbart.com/tech/2026/09/13/anthropics-dario-amodei-calls-for-ai-industry-slow-down-sam-altman-and-elon-musk-signal-agreement/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-09-13 14:31:22",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "5161c82eb85affe5",
+      "headline": "Anthropic whistleblower says Congress should let AI companies regulate themselves until a regulatory body is established",
+      "url": "https://www.nbcnews.com/tech/security/anthropic-whistleblower-congress-ai-companies-regulation-rcna597465",
+      "source": "Nbc News",
+      "country": "US",
+      "publishedAt": "2026-09-13 14:28:57",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "989ea36c67ea6935",
+      "headline": "Top AI executives call for a slowdown in model development",
+      "url": "https://completeaitraining.com/news/top-ai-executives-call-for-a-slowdown-in-model-development/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-09-13 14:24:03",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "cde919d57e2022f6",
+      "headline": "Anthropic CEO Dario Amodei: \"For too long the industry lied\" about AI risks",
+      "url": "https://www.aol.com/articles/anthropic-ceo-dario-amodei-too-133542000.html",
+      "source": "Aol.com",
+      "country": "US",
+      "publishedAt": "2026-09-13 13:35:42",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "0db95b196a774fec",
+      "headline": "Anthropic CEO calls for slowing AI development, citing safety worries",
+      "url": "https://www.pennlive.com/nation-world/2026/09/anthropic-ceo-calls-for-slowing-ai-development-citing-safety-worries.html",
+      "source": "Pennlive",
+      "country": "US",
+      "publishedAt": "2026-09-13 12:56:35",
+      "relevanceScore": 0.3
+    },
     {
       "id": "a8713aef1f701f00",
       "headline": "Anthropic and OpenAI CEOs call for AI development to slow down, OpenAI to delay IPO",
@@ -117,69 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-04 17:01:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "2cdb4513afe94961",
-      "headline": "Why AI Agents Break Their Shackles: The Real Story Behind Recent Model Escapes",
-      "url": "https://www.webpronews.com/why-ai-agents-break-their-shackles-the-real-story-behind-recent-model-escapes/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-09-04 12:32:14",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "e5ad2fd31708a25a",
-      "headline": "Snickers made a digital candy bar that claims to fix ChatGPT — I put it to the test",
-      "url": "https://www.tomsguide.com/ai/snickers-made-a-digital-candy-bar-that-claims-to-fix-chatgpt-i-put-it-to-the-test",
-      "source": "Tom's Guide",
-      "country": "Both",
-      "publishedAt": "2026-09-03 14:27:52",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "b9f90567efb0c771",
-      "headline": "Trump Admin Tells Court: Let OpenAI Rip Off The Intercept’s Articles",
-      "url": "https://theintercept.com/2026/09/02/trump-openai-copyright-lawsuit-news-articles/",
-      "source": "The Intercept",
-      "country": "US",
-      "publishedAt": "2026-09-02 18:40:51",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "287f7ac33283d2b7",
-      "headline": "Chinese State Media Accuses Anthropic of AI Double Standards",
-      "url": "https://www.techrepublic.com/article/news-anthropic-ai-double-standards-apac-china/",
-      "source": "Techrepublic",
-      "country": "Both",
-      "publishedAt": "2026-09-01 20:14:31",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "5ae60030e2f2939e",
-      "headline": "The sky’s the limit with connected vehicles",
-      "url": "https://www.computerweekly.com/feature/The-skys-the-limit-with-connected-vehicles",
-      "source": "Techtarget",
-      "country": "CN",
-      "publishedAt": "2026-09-01 10:30:00",
-      "relevanceScore": 0.56
-    },
-    {
-      "id": "23305098a6c78b04",
-      "headline": "Silicon Valley Is Making Its Wildest Promises Ever. This Number From Anthropic Proves It.",
-      "url": "https://slate.com/technology/2026/09/artificial-intelligence-anthropic-spacex-ipo.html?via=rss",
-      "source": "Slate",
-      "country": "US",
-      "publishedAt": "2026-09-01 09:45:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "4606702253476f5a",
-      "headline": "Robots are Learning Fast; Can AI Finally Make Them Autonomous?",
-      "url": "https://www.analyticsinsight.net/artificial-intelligence/robots-are-learning-fast-can-ai-finally-make-them-autonomous",
-      "source": "Analytics And Insight",
-      "country": "US",
-      "publishedAt": "2026-09-01 07:53:11",
-      "relevanceScore": 0.23
     }
   ]
 }

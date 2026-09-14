@@ -71,5 +71,23 @@
       "#GLM53Flash",
       "#AILeaderboard"
     ]
+  },
+  "2026-09-14T03:53:22+00:00|head_to_head": {
+    "hook": "The US leads China by 4196.7 points on the September 14 scoreboard.",
+    "bullets": [
+      "US: 5347.73 total points versus China\u2019s 1151.07.",
+      "US models take 8 of the top 10 spots; China takes 2.",
+      "Kimi K3 is China\u2019s top model at rank 5 with 705.9 points."
+    ],
+    "question": "Is China\u2019s rank 5 showing enough to challenge the US lead?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#KimiK3",
+      "#OpenAI",
+      "#ZhipuAI"
+    ]
   }
 }

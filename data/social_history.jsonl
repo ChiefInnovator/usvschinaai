@@ -7,3 +7,4 @@
 {"date": "2026-09-11", "timestamp": "2026-09-11T03:51:08+00:00", "format": "biggest_mover", "palette": "graphite"}
 {"date": "2026-09-12", "timestamp": "2026-09-12T03:46:46+00:00", "format": "new_challenger", "palette": "newsprint"}
 {"date": "2026-09-13", "timestamp": "2026-09-13T03:48:23+00:00", "format": "trend_30d", "palette": "graphite"}
+{"date": "2026-09-14", "timestamp": "2026-09-14T03:53:22+00:00", "format": "head_to_head", "palette": "newsprint"}

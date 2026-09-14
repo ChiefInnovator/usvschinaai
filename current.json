@@ -65,7 +65,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-09-13T03:48:23+00:00",
+      "timestamp": "2026-09-14T03:53:22+00:00",
       "teams": {
         "US": [
           {
@@ -106,7 +106,7 @@
           },
           {
             "modelId": "c146e8e0f59da4c0c18f",
-            "profileId": "92eb876e1b4300bdaaea",
+            "profileId": "3d81dfb55fae94343cba",
             "avgIq": 69.29,
             "value": 49.49,
             "unified": 612.7,
@@ -125,10 +125,10 @@
           {
             "modelId": "827d7fc31374fbdd49bc",
             "profileId": "7adf490ee683d3035d81",
-            "avgIq": 64.79,
+            "avgIq": 64.97,
             "value": 1.08,
-            "unified": 459.2,
-            "coverage": "8/18",
+            "unified": 463.24,
+            "coverage": "10/18",
             "provisional": false
           },
           {
@@ -180,7 +180,7 @@
           },
           {
             "modelId": "32d628655ac1f115b0dd",
-            "profileId": "c4aa1b8a13b20522f479",
+            "profileId": "f9f24c09831f7c73f415",
             "avgIq": 61.51,
             "value": 9.32,
             "unified": 395.46,
@@ -206,21 +206,21 @@
             "provisional": false
           },
           {
+            "modelId": "088f3a563d79d06df736",
+            "profileId": "2ccaad4e94581d0bdba6",
+            "avgIq": 49.19,
+            "value": 12.61,
+            "unified": 125.1,
+            "coverage": "12/18",
+            "provisional": false
+          },
+          {
             "modelId": "b56379bf82f1c28fab2e",
             "profileId": "c8661356e879d872bfd0",
             "avgIq": 44.14,
             "value": 71.19,
             "unified": 77.3,
             "coverage": "9/18",
-            "provisional": false
-          },
-          {
-            "modelId": "088f3a563d79d06df736",
-            "profileId": "2ccaad4e94581d0bdba6",
-            "avgIq": 48.36,
-            "value": 12.4,
-            "unified": 106.28,
-            "coverage": "11/18",
             "provisional": false
           },
           {
