@@ -130,13 +130,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy from Vals for the exact 0813 model; independently recorded as 92.4% on August 17, 2026. Vals evaluates the 198-question Diamond subset; reasoning-effort setting was not published.",
+      "notes": "GPQA Diamond accuracy from the Vals.ai result listed for the exact DeepSeek V4 Pro 0813 model; reported as 92.42%, rounded to 92.4%. Individual-result publication date unknown.",
       "score": "92.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/gpqa"
+      "source_url": "https://www.publicai.io/model-index/m/deepseek-v4-pro-0813"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -150,12 +150,22 @@
     }
   },
   "DeepSeek-V4-Pro-Max": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize verified semi-private ARC-AGI-2 result for DeepSeek V4 Pro 0813 at Max effort. DeepSeek’s API identifies the current deepseek-v4-pro endpoint as DeepSeek-V4-Pro-0813; the model card defines Pro-Max as its Think Max mode. Published August 13, 2026.",
+      "score": "61.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/deepseek-v4-pro-0813"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
-      "cached_at": "2026-09-13T03:32:47.015043+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "DeepSWE v1.1 leaderboard currently lists `deepseek-v4-pro[max]` at 63%±6%; the displayed model identifier is effort-based rather than the requested hyphenated release name.",
+      "notes": "DeepSWE v1.1 leaderboard row: DeepSeek V4 Pro, max effort; reported as 63% ±6%. The page was updated September 3, 2026; individual-result publication date is not stated.",
       "score": "63.0%",
       "source_type": "official_leaderboard",
       "source_url": "https://deepswe.datacurve.ai/"
@@ -213,6 +223,16 @@
       "score": "66.9%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/zai-org/GLM-5.3"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy for GLM-5.3 (max), independently evaluated by Artificial Analysis. Individual-result publication date is not stated on the source.",
+      "score": "91.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/glm-5-3"
     }
   },
   "GLM-5.3-Flash": {
@@ -277,6 +297,16 @@
       "score": "93.6%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-5-5/"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Epoch AI Inspect result: gpt-5.5-pro_xhigh, IFBench task v2.0.0, verification_code scorer, mean accuracy 78.05% (rounded to 78.1%). Publication date of this individual result is unknown.",
+      "score": "78.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://epoch.ai/data/benchmarks.csv"
     }
   },
   "GPT-5.6 Luna": {
@@ -309,21 +339,41 @@
       "score": "67.3%",
       "source_type": "model_card",
       "source_url": "https://thinkingmachines.ai/model-card/inkling-small/"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "NDCG@10, evaluated as a standalone search agent over the full 89,000-page corpus using Mixedbread's common search-loop harness; tested August 2026. No independently verified publication date for this individual result is stated.",
+      "score": "0.50",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.mixedbread.com/evals/toast-1-officeqa-pro"
     }
   },
   "GPT-5.6 Sol": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 49% for GPT-5.6 Sol (max) on Humanity's Last Exam; max is the highest verified effort located. Individual-result publication date is unknown.",
-      "score": "49.0%",
+      "notes": "GPT-5.6 Sol (max); Artificial Analysis independently evaluates the text-only 2,158-question HLE subset with pass@1 and no multimodal questions. Individual-result publication date not shown.",
+      "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-5-6-sol-vs-gpt-5"
+      "source_url": "https://artificialanalysis.ai/models/gpt-5-6-sol"
     }
   },
   "GPT-5.6 Terra": {
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "CharXiv Reasoning with tools; the comparative vendor table identifies GPT-5.6 Terra at 88.0%. The exact source is a third-party vendor’s comparison table, not an OpenAI result.",
+      "score": "88.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://z.ai/blog/glm-5.3-flash"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-11T03:32:26.561650+00:00",
@@ -360,20 +410,20 @@
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
-      "cached_at": "2026-09-13T03:32:47.015043+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Original DeepSWE pass@1, mini-swe-agent at high effort; the page attributes its data to Datacurve. This is distinct from DeepSWE v1.1; no individual-result publication date is shown.",
+      "notes": "DeepSWE v1.1 result for gemini-3.1-pro-preview at high effort; the benchmark operator records the model’s initial inclusion on June 15, 2026 and a rerun on August 13, 2026.",
       "score": "11.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://benchsift.nxtaigen.com/benchmarks/deepswe"
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Direct Gemini 3.1 Pro Preview model-call result, distinct from Logic's 83.3% agent-wrapped run. Published April 27, 2026.",
+      "notes": "Direct-model run of Gemini 3.1 Pro Preview; published April 27, 2026.",
       "score": "77.1%",
       "source_type": "vendor_blog",
       "source_url": "https://logic.inc/resources/logic-scores-83-3-on-ifbench-beating-every-model-on-the-public-leaderboard"
@@ -390,13 +440,13 @@
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals lists Gemini 3.1 Pro Preview (02/26) at 91.0% overall accuracy across 14 subjects. The individual-result publication date is not stated; the benchmark listing was updated April 23, 2026.",
-      "score": "91.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks"
+      "notes": "Kaggle Open Benchmarks leaderboard row for Gemini 3.1 Pro Preview; the page was last updated August 28, 2026, but an individual-result publication date is not stated.",
+      "score": "91.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.kaggle.com/benchmarks/open-benchmarks/mmlu-pro"
     }
   },
   "Gemini 3.8 Flash": {
@@ -412,22 +462,22 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy for Gemini 3.8 Flash (high). The matching result was published by Artificial Analysis; Gemini 3.8 Flash was released September 2, 2026, per Google's model card: https://deepmind.google/models/model-cards/gemini-3-8-flash/",
+      "notes": "GPQA Diamond, independently run by Artificial Analysis; highest verified Gemini 3.8 Flash setting is high reasoning. The model release was independently reported on September 2, 2026: https://artificialanalysis.ai/articles/gemini-3-8-flash",
       "score": "95.3%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gemini-3-8-flash"
+      "source_url": "https://artificialanalysis.ai/evaluations/gpqa-diamond"
     }
   },
   "Grok 4.6": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-15T03:33:42.102932+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Grok 4.6 at xhigh reasoning effort on the Mercor APEX BrowseComp web-research harness; 130 public tasks and 520 source-evaluation samples; sampled August 28, 2026.",
+      "notes": "Pass@1 using the Mercor APEX BrowseComp web-research harness at xhigh effort; 130 public tasks and 520 source evaluation samples.",
       "score": "84.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"

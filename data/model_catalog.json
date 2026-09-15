@@ -17942,6 +17942,20 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "10"
+        },
+        "5360a691fdc7903a09bb": {
+          "model": "Claude Sonnet 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-06-30",
+          "Model": "Claude Sonnet 5",
+          "Context": "1M",
+          "Speed": "28c/s",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "10"
         }
       },
       "benchmarks": {
@@ -24749,6 +24763,36 @@
             "configuration": "Pass@1; the technical report explicitly identifies the evaluation as LiveCodeBench-v6 and reports 93.5 for DeepSeek-V4-Pro Max. Publication date independently verified as April 26, 2026.",
             "kind": "published",
             "sourceType": "paper",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-05-10"
+          }
+        },
+        "deepswe": {
+          "1e6ede5596ad671f": {
+            "benchmark": "DeepSWE",
+            "score": 63.0,
+            "unit": "percent",
+            "source": "https://deepswe.datacurve.ai/",
+            "availableFrom": "2026-09-15",
+            "retrievedAt": "2026-09-15",
+            "configuration": "DeepSWE v1.1 leaderboard row: DeepSeek V4 Pro, max effort; reported as 63% ±6%. The page was updated September 3, 2026; individual-result publication date is not stated.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-05-10"
+          }
+        },
+        "arc-agi-2": {
+          "dbe9cae8078512d0": {
+            "benchmark": "ARC-AGI-2",
+            "score": 61.3,
+            "unit": "percent",
+            "source": "https://arcprize.org/results/deepseek-v4-pro-0813",
+            "availableFrom": "2026-09-15",
+            "retrievedAt": "2026-09-15",
+            "configuration": "ARC Prize verified semi-private ARC-AGI-2 result for DeepSeek V4 Pro 0813 at Max effort. DeepSeek’s API identifies the current deepseek-v4-pro endpoint as DeepSeek-V4-Pro-0813; the model card defines Pro-Max as its Think Max mode. Published August 13, 2026.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-05-10"
           }
@@ -93243,6 +93287,20 @@
           "Model": "Qwen3.8 Max",
           "Context": "1.0M",
           "Speed": "21c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
+        },
+        "41160b9dcc8e266e3cd4": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $2.00/M input, $0.200/M cached input, $6.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "11c/s",
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"

@@ -89,5 +89,24 @@
       "#OpenAI",
       "#ZhipuAI"
     ]
+  },
+  "2026-09-15T03:50:12+00:00|price_vs_power": {
+    "hook": "US leads the score, while China brings the sharper value play",
+    "bullets": [
+      "US leads China 5,347.73 to 1,151.07 on the scoreboard.",
+      "GPT-6 Astra ranks 1st at 900.3, priced at 10.0 in and 50.0 out.",
+      "GLM-5.3-Flash posts 91.8 value at 0.15 in and 0.5 out."
+    ],
+    "question": "Would you pay more for the top score, or choose the stronger value?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#AIPricing",
+      "#ModelBenchmarks",
+      "#GPT6",
+      "#GLM53Flash"
+    ]
   }
 }

@@ -65,7 +65,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-09-14T03:53:22+00:00",
+      "timestamp": "2026-09-15T03:50:12+00:00",
       "teams": {
         "US": [
           {
@@ -142,7 +142,7 @@
           },
           {
             "modelId": "5d10ee934c56e4e34d57",
-            "profileId": "93089aeaceefefb36a4d",
+            "profileId": "5360a691fdc7903a09bb",
             "avgIq": 61.39,
             "value": 5.12,
             "unified": 388.02,
@@ -180,7 +180,7 @@
           },
           {
             "modelId": "32d628655ac1f115b0dd",
-            "profileId": "f9f24c09831f7c73f415",
+            "profileId": "41160b9dcc8e266e3cd4",
             "avgIq": 61.51,
             "value": 9.32,
             "unified": 395.46,
@@ -197,21 +197,21 @@
             "provisional": false
           },
           {
+            "modelId": "088f3a563d79d06df736",
+            "profileId": "2ccaad4e94581d0bdba6",
+            "avgIq": 59.29,
+            "value": 15.2,
+            "unified": 352.55,
+            "coverage": "14/18",
+            "provisional": false
+          },
+          {
             "modelId": "61114fa803c3bbb1e2b2",
             "profileId": "b5af6a3dceee51b994a9",
             "avgIq": 47.55,
             "value": 54.03,
             "unified": 134.22,
             "coverage": "7/18",
-            "provisional": false
-          },
-          {
-            "modelId": "088f3a563d79d06df736",
-            "profileId": "2ccaad4e94581d0bdba6",
-            "avgIq": 49.19,
-            "value": 12.61,
-            "unified": 125.1,
-            "coverage": "12/18",
             "provisional": false
           },
           {

@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-14T03:54:06.072619+00:00",
+  "lastUpdated": "2026-09-15T03:51:04.491949+00:00",
   "items": [
+    {
+      "id": "37156bdb04f94326",
+      "headline": "OpenAI CEO calls for AI pacing as Trump insists he's not downplaying risk",
+      "url": "https://abcnews.com/Politics/openai-ceo-calls-ai-pacing-trump-insists-downplaying/story?id=136416814",
+      "source": "Abc News",
+      "country": "US",
+      "publishedAt": "2026-09-14 15:44:54",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "3a34f071c20d08f8",
+      "headline": "AI Stocks Stumble Amid Growing Safety Fears",
+      "url": "https://www.morningstar.com/markets/ai-stocks-stumble-amid-growing-safety-fears",
+      "source": "Morningstar",
+      "country": "US",
+      "publishedAt": "2026-09-14 14:47:43",
+      "relevanceScore": 0.3
+    },
     {
       "id": "1ae1133b173090b1",
       "headline": "Anthropic CEO warns AI could outpace human control within a year as company prepares for IPO",
@@ -161,24 +179,6 @@
       "source": "Earth.com",
       "country": "US",
       "publishedAt": "2026-09-06 15:17:48",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "3c41cd86c940cb44",
-      "headline": "G20 AI agenda: US champions light-touch regulation while data center backlash, China rivalry intensify",
-      "url": "https://www.digitimes.com/news/a20260903PD233/g20-regulation-data-ceo-technology.html",
-      "source": "Digitimes",
-      "country": "CN",
-      "publishedAt": "2026-09-05 18:16:00",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "c021f8c508611267",
-      "headline": "OpenAI Wants to Talk About The Federalist Papers",
-      "url": "https://www.theatlantic.com/technology/2026/09/openai-constitution-dean-ball/688524/",
-      "source": "The Atlantic",
-      "country": "US",
-      "publishedAt": "2026-09-04 17:01:00",
       "relevanceScore": 0.3
     }
   ]

@@ -8,3 +8,4 @@
 {"date": "2026-09-12", "timestamp": "2026-09-12T03:46:46+00:00", "format": "new_challenger", "palette": "newsprint"}
 {"date": "2026-09-13", "timestamp": "2026-09-13T03:48:23+00:00", "format": "trend_30d", "palette": "graphite"}
 {"date": "2026-09-14", "timestamp": "2026-09-14T03:53:22+00:00", "format": "head_to_head", "palette": "newsprint"}
+{"date": "2026-09-15", "timestamp": "2026-09-15T03:50:12+00:00", "format": "price_vs_power", "palette": "midnight"}
