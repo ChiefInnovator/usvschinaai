@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-09-15",
+  "retrievedAt": "2026-09-16",
   "modelsChecked": 95,
   "sourcesChecked": 105,
-  "findings": 1001,
-  "accepted": 0,
+  "findings": 817,
+  "accepted": 2,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],

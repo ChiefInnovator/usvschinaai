@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-15T03:51:04.491949+00:00",
+  "lastUpdated": "2026-09-16T03:51:55.885582+00:00",
   "items": [
+    {
+      "id": "8077a68623018e1e",
+      "headline": "OpenAI silent on how rogue agents breached private Vanderbilt tool",
+      "url": "https://www.tennessean.com/story/news/education/university/2026/09/15/openai-rogue-agent-breach-vanderbilt-questions-implications/91764645007/",
+      "source": "The Tennessean",
+      "country": "US",
+      "publishedAt": "2026-09-15 15:05:56",
+      "relevanceScore": 0.38
+    },
     {
       "id": "37156bdb04f94326",
       "headline": "OpenAI CEO calls for AI pacing as Trump insists he's not downplaying risk",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-08 13:00:04",
       "relevanceScore": 0.56
-    },
-    {
-      "id": "5401e1b7035d3cbe",
-      "headline": "Students are quietly replacing Google with AI",
-      "url": "https://www.earth.com/science/students-ai-physics-searches/",
-      "source": "Earth.com",
-      "country": "US",
-      "publishedAt": "2026-09-06 15:17:48",
-      "relevanceScore": 0.3
     }
   ]
 }

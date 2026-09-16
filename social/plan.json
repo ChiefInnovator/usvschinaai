@@ -1,18 +1,19 @@
 {
-  "date": "2026-09-15",
-  "timestamp": "2026-09-15T03:50:12+00:00",
-  "format": "price_vs_power",
-  "palette": "midnight",
+  "date": "2026-09-16",
+  "timestamp": "2026-09-16T03:51:02+00:00",
+  "format": "benchmark_day",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-09-15-1-price_vs_power-midnight.png",
-    "2026-09-15-2-leaderboard-midnight.png"
+    "2026-09-16-1-benchmark_day-graphite.png",
+    "2026-09-16-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-15-1-price_vs_power-midnight.png",
-    "https://usvschina.ai/social/2026-09-15-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-16-1-benchmark_day-graphite.png",
+    "https://usvschina.ai/social/2026-09-16-2-leaderboard-graphite.png"
   ],
-  "caption": "US leads the score, while China brings the sharper value play\n\n• US leads China 5,347.73 to 1,151.07 on the scoreboard.\n• GPT-6 Astra ranks 1st at 900.3, priced at 10.0 in and 50.0 out.\n• GLM-5.3-Flash posts 91.8 value at 0.15 in and 0.5 out.\n\nWould you pay more for the top score, or choose the stronger value?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #AIPricing #ModelBenchmarks #GPT6 #GLM53Flash",
+  "caption": "The US keeps the board lead, but Kimi K3 holds fifth.\n\n• US leads 5,348.16 to China’s 1,151.07 on the daily total.\n• GPT-6 Astra ranks 1st at 900.3, ahead of Claude Opus 5 at 888.0.\n• Kimi K3 is China’s top model at 705.9, ranked 5th overall.\n\nIs Kimi K3 close enough to challenge the US top four?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #AIModels #USvsChinaAI #GPT6Astra #KimiK3 #AILeaderboard",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-15T03:51:08.658392+00:00"
+  "generated_at": "2026-09-16T03:52:00.104342+00:00",
+  "benchmark": "DeepSWE1.1"
 }
