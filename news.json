@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-16T03:51:55.885582+00:00",
+  "lastUpdated": "2026-09-17T03:52:33.126777+00:00",
   "items": [
+    {
+      "id": "306ceb665461b391",
+      "headline": "Sanders: AI regulation needed now to prevent catastrophic results",
+      "url": "https://mountaintimes.info/2026/09/16/sanders-ai-regulation-needed-now-to-prevent-catastrophic-results/",
+      "source": "Mountain Times",
+      "country": "US",
+      "publishedAt": "2026-09-16 14:23:45",
+      "relevanceScore": 0.31
+    },
     {
       "id": "8077a68623018e1e",
       "headline": "OpenAI silent on how rogue agents breached private Vanderbilt tool",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-08 15:00:00",
       "relevanceScore": 0.77
-    },
-    {
-      "id": "c4871734618c97b3",
-      "headline": "Rivian’s Gambit for Full Autonomy",
-      "url": "https://spectrum.ieee.org/rivian-self-driving",
-      "source": "Ieee Spectrum - Robotics",
-      "country": "Both",
-      "publishedAt": "2026-09-08 13:00:04",
-      "relevanceScore": 0.56
     }
   ]
 }

@@ -1837,6 +1837,20 @@
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
+        },
+        "3b69ffcce615be98339e": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Context": "1M",
+          "Speed": "2c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
         }
       },
       "benchmarks": {
@@ -13163,6 +13177,20 @@
           "License": "",
           "Input$/M": "5",
           "Output$/M": "25"
+        },
+        "dee8295bd4ce01ed79e7": {
+          "model": "Claude Opus 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5",
+          "origin": "US",
+          "description": "Claude Opus 5 by Anthropic — released Jul 24, 2026; $5.00/M input, $0.500/M cached input, $25.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-24",
+          "Model": "Claude Opus 5",
+          "Context": "1M",
+          "Speed": "180c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "25"
         }
       },
       "benchmarks": {
@@ -17970,6 +17998,20 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "10"
+        },
+        "88604e9cf0d3e835cc81": {
+          "model": "Claude Sonnet 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-06-30",
+          "Model": "Claude Sonnet 5",
+          "Context": "1M",
+          "Speed": "12c/s",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "10"
         }
       },
       "benchmarks": {
@@ -22251,6 +22293,20 @@
           "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
           "origin": "CN",
           "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "0c/s",
+          "License": "",
+          "Input$/M": "0.435",
+          "Output$/M": "0.87"
+        },
+        "329c082ea311e3cf56ce": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $0.435/M input, $0.004/M cached input, $0.870/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-13",
           "Model": "DeepSeek-V4-Pro-0813",
           "Context": "1.0M",
@@ -35582,6 +35638,20 @@
           "Model": "GLM-5.3",
           "Context": "1.0M",
           "Speed": "48c/s",
+          "License": "",
+          "Input$/M": "1.2",
+          "Output$/M": "4"
+        },
+        "76de84bc7d92223fc1c4": {
+          "model": "GLM-5.3",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-14",
+          "Model": "GLM-5.3",
+          "Context": "1.0M",
+          "Speed": "–",
           "License": "",
           "Input$/M": "1.2",
           "Output$/M": "4"
@@ -49646,6 +49716,20 @@
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
+        },
+        "1b9e0082de5b2bb902a0": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "63c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
@@ -52429,6 +52513,20 @@
           "Model": "GPT-5.6 Terra",
           "Context": "1.1M",
           "Speed": "89c/s",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "12"
+        },
+        "0a12405f46276ff2d674": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Context": "1.1M",
+          "Speed": "84c/s",
           "License": "",
           "Input$/M": "2",
           "Output$/M": "12"
@@ -61913,6 +62011,20 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "12"
+        },
+        "319b9221f441a95d8c9f": {
+          "model": "Gemini 3.1 Pro",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+          "origin": "US",
+          "description": "Gemini 3.1 Pro by Google — released Feb 19, 2026; $2.00/M input and $12.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-02-19",
+          "Model": "Gemini 3.1 Pro",
+          "Context": "1.0M",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "12"
         }
       },
       "benchmarks": {
@@ -65783,6 +65895,20 @@
           "Model": "Grok 4.6",
           "Context": "500k",
           "Speed": "39c/s",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "6"
+        },
+        "e070095e26e7145418b7": {
+          "model": "Grok 4.6",
+          "organization": "xAI",
+          "link": "https://llm-stats.com/models/grok-4.6",
+          "origin": "US",
+          "description": "Grok 4.6 by xAI — released Aug 12, 2026; $2.00/M input, $0.500/M cached input, $6.00/M output; 500K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-12",
+          "Model": "Grok 4.6",
+          "Context": "500k",
+          "Speed": "40c/s",
           "License": "",
           "Input$/M": "2",
           "Output$/M": "6"
@@ -75058,6 +75184,20 @@
           "Model": "Kimi K3",
           "Context": "1.0M",
           "Speed": "3c/s",
+          "License": "",
+          "Input$/M": "2.85",
+          "Output$/M": "14.25"
+        },
+        "b58573c73fff51d57d43": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Context": "1.0M",
+          "Speed": "–",
           "License": "",
           "Input$/M": "2.85",
           "Output$/M": "14.25"
@@ -96354,6 +96494,20 @@
           "description": "DeepSeek-V4.1-Flash by DeepSeek — released Sep 10, 2026; $0.220/M input, $0.007/M cached input, $0.660/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-09-10",
           "Model": "DeepSeek-V4.1-Flash\nNEW",
+          "Context": "1.0M",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "0.22",
+          "Output$/M": "0.66"
+        },
+        "ba299201e1dc4714784f": {
+          "model": "DeepSeek-V4.1-Flash",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-09-10",
+          "Model": "DeepSeek-V4.1-Flash",
           "Context": "1.0M",
           "Speed": "–",
           "License": "",

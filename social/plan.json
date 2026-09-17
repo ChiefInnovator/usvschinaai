@@ -1,19 +1,16 @@
 {
-  "date": "2026-09-16",
-  "timestamp": "2026-09-16T03:51:02+00:00",
-  "format": "benchmark_day",
-  "palette": "graphite",
-  "weight": 1,
+  "date": "2026-09-17",
+  "timestamp": "2026-09-17T03:51:39+00:00",
+  "format": "leaderboard",
+  "palette": "midnight",
+  "weight": 0,
   "slides": [
-    "2026-09-16-1-benchmark_day-graphite.png",
-    "2026-09-16-2-leaderboard-graphite.png"
+    "2026-09-17-1-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-16-1-benchmark_day-graphite.png",
-    "https://usvschina.ai/social/2026-09-16-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-09-17-1-leaderboard-midnight.png"
   ],
-  "caption": "The US keeps the board lead, but Kimi K3 holds fifth.\n\n• US leads 5,348.16 to China’s 1,151.07 on the daily total.\n• GPT-6 Astra ranks 1st at 900.3, ahead of Claude Opus 5 at 888.0.\n• Kimi K3 is China’s top model at 705.9, ranked 5th overall.\n\nIs Kimi K3 close enough to challenge the US top four?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #AIModels #USvsChinaAI #GPT6Astra #KimiK3 #AILeaderboard",
+  "caption": "US leads China by 4197.1 points.\n\n• US totals 5348.16 points; China has 1151.07.\n• Kimi K3 is China’s top model at rank 5 with 705.9.\n• The top 10 includes 8 US models and 2 Chinese models.\n\nIs the gap decisive, or can China’s top model close it?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #KimiK3 #OpenAI #AILeaderboard",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-16T03:52:00.104342+00:00",
-  "benchmark": "DeepSWE1.1"
+  "generated_at": "2026-09-17T03:52:37.414344+00:00"
 }

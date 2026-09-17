@@ -1,10 +1,107 @@
 {
-  "retrievedAt": "2026-09-16",
+  "retrievedAt": "2026-09-17",
   "modelsChecked": 95,
   "sourcesChecked": 105,
-  "findings": 817,
-  "accepted": 2,
-  "failures": [],
+  "findings": 691,
+  "accepted": 0,
+  "failures": [
+    {
+      "source": "llm-stats:GPT-5.1 Medium",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GLM-4.6",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V3.2-Speciale",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Kimi K2 0905",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:MiMo-V2-Flash",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:MiniMax M2.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen3.5-35B-A3B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Kimi K2.6",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen3.6 Plus",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen3.7 Max",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Gemini 3.5 Flash",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Fable 5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Kimi K3",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.2 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.6 Terra",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Seed 2.0 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Muse Spark 1.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GLM-5.3",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Gemini 3.8 Flash",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Muse Spark",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-6 Astra",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V4.1-Flash",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Seed 2.1 Turbo",
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ],
   "skippedConfigurations": [],
   "rejected": [],
   "leaderboardCoverage": [

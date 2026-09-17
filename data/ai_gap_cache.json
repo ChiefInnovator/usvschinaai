@@ -96,6 +96,16 @@
     }
   },
   "Claude Sonnet 5": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize leaderboard result; a third-party transcription attributes the 72.5% row to ARC Prize and records it on August 21, 2026. Effort/harness details and an independently verified publication date for this individual result were not exposed in the crawlable official table.",
+      "score": "72.5%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/leaderboard"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-13T03:32:47.015043+00:00",
@@ -226,13 +236,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy for GLM-5.3 (max), independently evaluated by Artificial Analysis. Individual-result publication date is not stated on the source.",
+      "notes": "Exact benchmark is GPQA Diamond, not generic GPQA. Artificial Analysis's reported GLM-5.3 (max) result is 0.917171717171717; reported as 91.7%. The third-party record identifies the evaluator and max-effort configuration, but does not provide an independently verified publication date for this individual result.",
       "score": "91.7%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/glm-5-3"
+      "source_url": "https://themodelgap.com/models/glm-5-3"
     }
   },
   "GLM-5.3-Flash": {
@@ -352,27 +362,37 @@
     }
   },
   "GPT-5.6 Sol": {
-    "Humanity’s Last Exam": {
-      "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 49% for GPT-5.6 Sol (max); this is the highest directly documented reasoning-effort result found. The source displays a rounded whole-percent value.",
-      "score": "49.0%",
+      "notes": "LLM Stats leaderboard result (0.858, rendered as 85.8%); the board labels this result self-reported. Independently indexed publication date: September 2, 2026.",
+      "score": "85.8%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-5-6-sol-vs-gpt-5"
+      "source_url": "https://llm-stats.com/benchmarks/charxiv-r"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis run: May 2025 text-only, 2,158 questions, no tools, pass@1; highest identified GPT-5.6 Sol setting is max reasoning. Independently verified publication date: September 5, 2026.",
+      "score": "49.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://modelcap.ai/benchmarks/aa-humanitys-last-exam"
     }
   },
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Reported as the CharXiv-R score with tools. The leaderboard attributes it to a Z.ai self-reported comparative source dated 2026-08-26; no reasoning-effort setting is stated.",
+      "notes": "Reported as “CharXiv Reasoning w/ Tools” for GPT-5.6 Terra; published August 26, 2026.",
       "score": "88.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/models/openai-gpt-5.6-terra/"
+      "source_type": "vendor_blog",
+      "source_url": "https://z.ai/blog/glm-5.3-flash"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -440,23 +460,23 @@
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals AI’s overall Code Generation result for Gemini 3.1 Pro Preview (02/26), reported as 88.48% and rounded to 88.5%. Vals identifies this as LiveCodeBench v6; its model page records high reasoning effort via the official Google API. Result publication date is unknown.",
+      "notes": "Vals reports 88.48% for Gemini 3.1 Pro Preview (02/26), rounded to one decimal. The archived benchmark page explicitly identifies v6 and its Code Generation evaluation; effort setting is not specified.",
       "score": "88.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/lcb"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-17T03:33:28.493785+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Kaggle’s Open Benchmarks MMLU-Pro leaderboard lists Gemini 3.1 Pro Preview at 91.3% overall accuracy. The page was last updated August 28, 2026; individual-result publication date is unknown.",
-      "score": "91.3%",
-      "source_type": "official_leaderboard",
-      "source_url": "https://www.kaggle.com/benchmarks/open-benchmarks/mmlu-pro"
+      "notes": "Vals reports Gemini 3.1 Pro Preview (02/26) at 91.0%. Its archived page specifies 5-shot chain-of-thought prompting and an overall score averaged across 14 subjects; effort setting is not specified.",
+      "score": "91.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/mmlu_pro"
     }
   },
   "Gemini 3.8 Flash": {
