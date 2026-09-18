@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-17T03:52:33.126777+00:00",
+  "lastUpdated": "2026-09-18T03:48:42.046907+00:00",
   "items": [
+    {
+      "id": "4468b295444cb0a9",
+      "headline": "Huawei sets out 2027 AI chip plans as it expands challenge to Nvidia",
+      "url": "https://www.techedt.com/huawei-sets-out-2027-ai-chip-plans-as-it-expands-challenge-to-nvidia",
+      "source": "Tech Edition",
+      "country": "CN",
+      "publishedAt": "2026-09-17 15:05:16",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "b84201f769aa2df9",
+      "headline": "Microsoft AI CEO says AI threats are real, and Anthropic is making it worse",
+      "url": "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-09-17 14:00:00",
+      "relevanceScore": 0.38
+    },
     {
       "id": "306ceb665461b391",
       "headline": "Sanders: AI regulation needed now to prevent catastrophic results",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-09 14:27:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "66b2444e82fa73fc",
-      "headline": "Anthropic Researchers Go Public with Fears AI Could 'Kill All Humans' Within a Decade",
-      "url": "https://www.breitbart.com/tech/2026/09/09/anthropic-researchers-go-public-with-fears-ai-could-kill-all-humans-within-a-decade/",
-      "source": "Brietbart",
-      "country": "US",
-      "publishedAt": "2026-09-09 13:59:23",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "af0aed950c337dc1",
-      "headline": "The New York Times is grasping at straws",
-      "url": "https://www.theblaze.com/columns/opinion/the-new-york-times-is-grasping-at-straws",
-      "source": "Blaze Media",
-      "country": "Both",
-      "publishedAt": "2026-09-08 15:00:00",
-      "relevanceScore": 0.77
     }
   ]
 }

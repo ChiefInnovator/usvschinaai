@@ -236,13 +236,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Exact benchmark is GPQA Diamond, not generic GPQA. Artificial Analysis's reported GLM-5.3 (max) result is 0.917171717171717; reported as 91.7%. The third-party record identifies the evaluator and max-effort configuration, but does not provide an independently verified publication date for this individual result.",
+      "notes": "GPQA Diamond accuracy, independently measured by Artificial Analysis for GLM-5.3 (max).",
       "score": "91.7%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://themodelgap.com/models/glm-5-3"
+      "source_url": "https://artificialanalysis.ai/models/glm-5-3"
     }
   },
   "GLM-5.3-Flash": {
@@ -332,13 +332,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-13T03:32:47.015043+00:00",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 39% for GPT-5.6 Luna at max reasoning effort; individual-result publication date is not stated.",
-      "score": "39.0%",
+      "notes": "Accuracy; highest listed effort is max. The llm-stats model record attributes the result to Artificial Analysis, whose underlying API endpoint was inaccessible; no independently verifiable publication date for this individual result was found.",
+      "score": "39.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-5-6-luna-vs-claude-4-5-haiku-reasoning"
+      "source_url": "https://llm-stats.com/models/gpt-5.6-luna"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -374,13 +374,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis run: May 2025 text-only, 2,158 questions, no tools, pass@1; highest identified GPT-5.6 Sol setting is max reasoning. Independently verified publication date: September 5, 2026.",
+      "notes": "AI Atlas reports 49.5% for exact model ID gpt-5.6-sol, best of 12 rows, at reasoning_effort=max. Result publication date is not documented. This is Humanity’s Last Exam, not Agents’ Last Exam.",
       "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://modelcap.ai/benchmarks/aa-humanitys-last-exam"
+      "source_url": "https://www.ai-atlas.co/benchmarks/humanitys-last-exam?model=gpt-5.6-sol"
     }
   },
   "GPT-5.6 Terra": {
@@ -406,10 +406,10 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "OfficeQA Pro v1 (133 questions), full corpus, evaluated with Energent's fixed model-agnostic agent and the benchmark's official scorer; one run per model. Published September 2, 2026.",
+      "notes": "Published September 2, 2026. Original OfficeQA Pro/v1, 133-question full-corpus evaluation; Energent agent held fixed, one run, and answers used the benchmark’s official scorer. Parsing configuration is not fully specified.",
       "score": "60.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.energent.ai/en/highlights/officeqa-v1-to-v2"
@@ -470,13 +470,13 @@
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals reports Gemini 3.1 Pro Preview (02/26) at 91.0%. Its archived page specifies 5-shot chain-of-thought prompting and an overall score averaged across 14 subjects; effort setting is not specified.",
+      "notes": "Vals lists Gemini 3.1 Pro Preview (02/26) at 91.0% on MMLU Pro overall. The exact requested Preview identity is listed, but Vals is a third-party evaluator. The independently verified official model-card publication date is February 19, 2026 (https://deepmind.google/models/model-cards/gemini-3-1-pro/).",
       "score": "91.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/mmlu_pro"
+      "source_url": "https://www.vals.ai/benchmarks"
     }
   },
   "Gemini 3.8 Flash": {
@@ -588,6 +588,16 @@
     }
   },
   "Qwen3.8 Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official QwenCloud model page directly reports “DeepSWE 1.1 at 58.7” for model ID qwen3.8-flash. The associated Qwen3.8-Flash-Next release was published August 26, 2026; no reasoning-effort setting is reported for this result.",
+      "score": "58.7%",
+      "source_type": "vendor_blog",
+      "source_url": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model"
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-09-12T03:31:17.346153+00:00",

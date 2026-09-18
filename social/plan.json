@@ -1,16 +1,18 @@
 {
-  "date": "2026-09-17",
-  "timestamp": "2026-09-17T03:51:39+00:00",
-  "format": "leaderboard",
-  "palette": "midnight",
-  "weight": 0,
+  "date": "2026-09-18",
+  "timestamp": "2026-09-18T03:47:48+00:00",
+  "format": "biggest_mover",
+  "palette": "graphite",
+  "weight": 2,
   "slides": [
-    "2026-09-17-1-leaderboard-midnight.png"
+    "2026-09-18-1-biggest_mover-graphite.png",
+    "2026-09-18-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-17-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-18-1-biggest_mover-graphite.png",
+    "https://usvschina.ai/social/2026-09-18-2-leaderboard-graphite.png"
   ],
-  "caption": "US leads China by 4197.1 points.\n\n• US totals 5348.16 points; China has 1151.07.\n• Kimi K3 is China’s top model at rank 5 with 705.9.\n• The top 10 includes 8 US models and 2 Chinese models.\n\nIs the gap decisive, or can China’s top model close it?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #KimiK3 #OpenAI #AILeaderboard",
+  "caption": "GLM-5.3 made the day’s biggest move: 7 places\n\n• GLM-5.3 climbed 7 places, the largest move on the board.\n• US leads China 5343.4 to 1149.21 on the daily scoreboard.\n• The US margin stands at 4194.2 points, with 8 US models in the top 10.\n\nIs a 7-place jump enough to change your read on GLM-5.3?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #AIBenchmark #USvsChinaAI #GLM53 #ChinaAI #OpenAI #AIModels",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-17T03:52:37.414344+00:00"
+  "generated_at": "2026-09-18T03:48:46.234588+00:00"
 }

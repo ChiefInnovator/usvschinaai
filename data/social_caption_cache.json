@@ -144,5 +144,24 @@
       "#OpenAI",
       "#AILeaderboard"
     ]
+  },
+  "2026-09-18T03:47:48+00:00|biggest_mover": {
+    "hook": "GLM-5.3 made the day\u2019s biggest move: 7 places",
+    "bullets": [
+      "GLM-5.3 climbed 7 places, the largest move on the board.",
+      "US leads China 5343.4 to 1149.21 on the daily scoreboard.",
+      "The US margin stands at 4194.2 points, with 8 US models in the top 10."
+    ],
+    "question": "Is a 7-place jump enough to change your read on GLM-5.3?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIBenchmark",
+      "#USvsChinaAI",
+      "#GLM53",
+      "#ChinaAI",
+      "#OpenAI",
+      "#AIModels"
+    ]
   }
 }
