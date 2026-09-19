@@ -12,3 +12,4 @@
 {"date": "2026-09-16", "timestamp": "2026-09-16T03:51:02+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "DeepSWE1.1"}
 {"date": "2026-09-17", "timestamp": "2026-09-17T03:51:39+00:00", "format": "leaderboard", "palette": "midnight"}
 {"date": "2026-09-18", "timestamp": "2026-09-18T03:47:48+00:00", "format": "biggest_mover", "palette": "graphite"}
+{"date": "2026-09-19", "timestamp": "2026-09-19T03:46:45+00:00", "format": "head_to_head", "palette": "newsprint"}

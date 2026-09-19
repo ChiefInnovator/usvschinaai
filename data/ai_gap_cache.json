@@ -221,6 +221,16 @@
       "score": "90.9%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/raw/main/README.md"
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSeek-V4.1-Flash-Base, 5-shot exact-match evaluation. This is a base-checkpoint result, not an instruct-mode result. The model card documents the value; no independently verified publication date for this individual result is stated.",
+      "score": "74.1%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
     }
   },
   "GLM-5.3": {
@@ -332,13 +342,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Accuracy; highest listed effort is max. The llm-stats model record attributes the result to Artificial Analysis, whose underlying API endpoint was inaccessible; no independently verifiable publication date for this individual result was found.",
+      "notes": "Artificial Analysis independently reports 39% on its rendered page; its underlying current leaderboard record gives 39.48%, rounded to 39.5%, for GPT-5.6 Luna at max reasoning effort. The run is an Artificial Analysis configuration rather than an OpenAI vendor result.",
       "score": "39.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://llm-stats.com/models/gpt-5.6-luna"
+      "source_url": "https://artificialanalysis.ai/models/gpt-5-6-luna"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -364,23 +374,23 @@
   "GPT-5.6 Sol": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "LLM Stats leaderboard result (0.858, rendered as 85.8%); the board labels this result self-reported. Independently indexed publication date: September 2, 2026.",
+      "notes": "BenchmarkList’s GPT-5.6 Sol row reports 85.8% in the main/no-tools score field; its separate Python-enabled value (89.1%) is excluded. Individual-result publication date is unknown; the board says updated September 2, 2026 and last checked August 28, 2026.",
       "score": "85.8%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://llm-stats.com/benchmarks/charxiv-r"
+      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "AI Atlas reports 49.5% for exact model ID gpt-5.6-sol, best of 12 rows, at reasoning_effort=max. Result publication date is not documented. This is Humanity’s Last Exam, not Agents’ Last Exam.",
+      "notes": "Artificial Analysis run: HLE May-2025 text-only, 2,158 items, no tools, pass@1; GPT-5.6 Sol (max), reasoning enabled. Published September 5, 2026, as recorded by the leaderboard.",
       "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.ai-atlas.co/benchmarks/humanitys-last-exam?model=gpt-5.6-sol"
+      "source_url": "https://modelcap.ai/model/openai-gpt-5-6-sol"
     }
   },
   "GPT-5.6 Terra": {
@@ -460,23 +470,23 @@
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals reports 88.48% for Gemini 3.1 Pro Preview (02/26), rounded to one decimal. The archived benchmark page explicitly identifies v6 and its Code Generation evaluation; effort setting is not specified.",
+      "notes": "Vals reports 88.48% for Gemini 3.1 Pro Preview (02/26); this is the v6 overall code-generation result, rounded to one decimal. Vals identifies the model as Google’s Feb. 19, 2026 release and says its suite evaluation was published Feb. 20, 2026, using high reasoning effort.",
       "score": "88.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/lcb"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-18T03:32:32.115679+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals lists Gemini 3.1 Pro Preview (02/26) at 91.0% on MMLU Pro overall. The exact requested Preview identity is listed, but Vals is a third-party evaluator. The independently verified official model-card publication date is February 19, 2026 (https://deepmind.google/models/model-cards/gemini-3-1-pro/).",
+      "notes": "Vals’ model result is 90.99% overall MMLU-Pro accuracy, rounded to one decimal; it is the 14-subject overall score, not a subject maximum. The Vals model update dated Feb. 20, 2026 documents the evaluation suite and high reasoning effort.",
       "score": "91.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks"
+      "source_url": "https://www.vals.ai/models/google_gemini-3.1-pro-preview"
     }
   },
   "Gemini 3.8 Flash": {
@@ -504,23 +514,23 @@
   "Grok 4.6": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1 using the Mercor APEX BrowseComp web-research harness at xhigh effort; 130 public tasks and 520 source evaluation samples.",
+      "notes": "BrowseComp Pass@1 on 130 public tasks, x-high effort; reported error-interval half-width is 5.1 percentage points and the linked evaluator is Mercor.",
       "score": "84.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+      "source_url": "https://benchmarklist.com/models/x-ai-grok-4.6/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-19T03:31:37.210356+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "DeepSWE v1.1 leaderboard, 113-task configuration; highest published Grok 4.6 row is medium effort, 67% ±2%. The board was updated September 3, 2026; no individual-result publication date is documented.",
-      "score": "67.0%",
+      "notes": "DeepSWE 1.1 Pass@1; highest verified effort was medium with mini-SWE-agent (67.48%, four whole-benchmark runs).",
+      "score": "67.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://deepswe.datacurve.ai/"
+      "source_url": "https://benchmarklist.com/benchmarks/deepswe_1_1/"
     },
     "GPQA": {
       "benchmark": "GPQA",

@@ -163,5 +163,24 @@
       "#OpenAI",
       "#AIModels"
     ]
+  },
+  "2026-09-19T03:46:45+00:00|head_to_head": {
+    "hook": "The US keeps the board, but China owns the deepest coverage.",
+    "bullets": [
+      "US leads the total 5379.68 to 1149.21.",
+      "GPT-6 Astra holds rank 1 at 900.3 unified.",
+      "Kimi K3 is China\u2019s top model at rank 5 with 705.5 unified."
+    ],
+    "question": "Does China\u2019s 18/18 coverage make Kimi K3 the stronger benchmark pick?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIBenchmark",
+      "#GPT6",
+      "#KimiK3",
+      "#OpenAI",
+      "#MoonshotAI"
+    ]
   }
 }
