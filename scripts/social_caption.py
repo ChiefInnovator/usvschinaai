@@ -57,7 +57,8 @@ SYSTEM_PROMPT = (
     "no hype words, no emojis in the hook. Use only numbers present in the facts. "
     "Return JSON: hook (<=90 chars, a claim not a description), bullets (exactly 3, "
     "<=110 chars each, each with a number), question (<=100 chars, invites a take), "
-    "hashtags (6 to 8, no spaces, mix broad and specific)."
+    "hashtags (6 to 8, no spaces, mix broad and specific). Do not include URLs or website domains; "
+    "the site link is posted separately in the first comment."
 )
 
 CAPTION_SCHEMA = {
@@ -190,7 +191,7 @@ def generate_caption(facts: Dict[str, Any], fmt: str, weight: int,
 @preconditions(caption='mapping')
 def render_caption(caption: Dict[str, Any]) -> str:
     lines = [caption["hook"], ""] + [f"• {b}" for b in caption["bullets"]] + ["", caption["question"], "",
-             "Live board: usvschina.ai", "", " ".join(t if t.startswith("#") else f"#{t}" for t in caption["hashtags"])]
+             "Live board: link in the first comment.", "", " ".join(t if t.startswith("#") else f"#{t}" for t in caption["hashtags"])]
     return "\n".join(lines)
 
 

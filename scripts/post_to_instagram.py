@@ -6,14 +6,16 @@ Requires environment variables:
   INSTAGRAM_ACCESS_TOKEN - Never-expiring Page Access Token
   IG_USER_ID             - Instagram Business Account ID
 
-Instagram Graph API two-step process:
+Instagram Graph API publishing process:
   1. Create media container: POST /{ig-user-id}/media?image_url=...&caption=...
   2. Publish: POST /{ig-user-id}/media_publish?creation_id=...
+  3. Add the site link: POST /{media-id}/comments (requires instagram_manage_comments)
 """
 from preconditions import preconditions
 from model_store import load_data
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -86,7 +88,7 @@ def build_caption(data):
         f"\n"
         f"\U0001F3C6 #1 Model: {data['top_flag']} {data['top_model']}\n"
         f"\n"
-        f"Full rankings at usvschina.ai\n"
+        f"Full rankings: link in the first comment.\n"
         f"\n"
         f"#AI #ArtificialIntelligence #USvsChinaAI #AIrace "
         f"#MachineLearning #LLM #AIbenchmarks #FrontierAI "
@@ -97,6 +99,34 @@ def build_caption(data):
 # Graph API version. v21.0 (Oct 2024) is at/near its ~2-year sunset window;
 # keep this current when Meta announces deprecations.
 GRAPH_API_BASE = "https://graph.facebook.com/v23.0"
+FIRST_COMMENT = "Live board and full rankings: https://usvschina.ai"
+
+
+@preconditions(caption='text')
+def without_site_link(caption):
+    """Handle site links in older plans and manual caption overrides too."""
+    return re.sub(r"(?i)(?:https?://)?(?:www\.)?usvschina\.ai(?:/[^\s]*)?",
+                  "the link in the first comment", caption)
+
+
+@preconditions(post_id='nonempty', access_token='nonempty')
+def post_first_comment(post_id, access_token):
+    """Comment immediately after publishing; never republish on comment failure."""
+    try:
+        resp = requests.post(
+            f"{GRAPH_API_BASE}/{post_id}/comments",
+            data={"message": FIRST_COMMENT, "access_token": access_token},
+            timeout=30,
+        )
+        _raise_with_body(resp, "first comment")
+        comment_id = resp.json()["id"]
+    except (requests.RequestException, ValueError, KeyError) as exc:
+        raise RuntimeError(
+            f"Post {post_id} is published, but its link comment was not confirmed. "
+            "Check the post's comments before adding the link manually; do not republish."
+        ) from exc
+    print(f"Link comment posted! Comment ID: {comment_id}")
+    return comment_id
 
 
 @preconditions(resp='response', context='text')
@@ -172,7 +202,7 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
         f"{GRAPH_API_BASE}/{ig_user_id}/media",
         data={
             "image_url": image_url,
-            "caption": caption,
+            "caption": without_site_link(caption),
             "access_token": access_token,
             **tag_fields(),
             **collaborator_fields(),
@@ -200,6 +230,7 @@ def post_to_instagram(image_url, caption, access_token, ig_user_id):
     _raise_with_body(publish_resp, "media publish")
     post_id = publish_resp.json()["id"]
     print(f"Published! Post ID: {post_id}")
+    post_first_comment(post_id, access_token)
     return post_id
 
 
@@ -234,7 +265,7 @@ def post_carousel(image_urls, caption, access_token, ig_user_id):
     parent = requests.post(
         f"{GRAPH_API_BASE}/{ig_user_id}/media",
         data={"media_type": "CAROUSEL", "children": ",".join(child_ids),
-              "caption": caption, "access_token": access_token, **collaborator_fields()},
+              "caption": without_site_link(caption), "access_token": access_token, **collaborator_fields()},
         timeout=60,
     )
     _raise_with_body(parent, "carousel container")
@@ -250,6 +281,7 @@ def post_carousel(image_urls, caption, access_token, ig_user_id):
     _raise_with_body(publish, "carousel publish")
     post_id = publish.json()["id"]
     print(f"Published carousel! Post ID: {post_id}")
+    post_first_comment(post_id, access_token)
     return post_id
 
 
