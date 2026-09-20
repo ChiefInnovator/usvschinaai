@@ -123,7 +123,7 @@ class CarouselTests(unittest.TestCase):
         calls = self._capture()
         post_id = pti.post_carousel(["https://x/1.png", "https://x/2.png"], "cap", "tok", "user")
         kinds = [c[0] for c in calls]
-        self.assertEqual(kinds, ["media", "media", "media", "media_publish"])
+        self.assertEqual(kinds, ["media", "media", "media", "media_publish", "comments"])
         self.assertEqual(calls[0][1]["is_carousel_item"], "true")
         self.assertEqual(calls[1][1]["image_url"], "https://x/2.png")
         self.assertEqual(calls[2][1]["media_type"], "CAROUSEL")
@@ -131,6 +131,39 @@ class CarouselTests(unittest.TestCase):
         self.assertEqual(calls[2][1]["caption"], "cap")
         self.assertEqual(calls[3][1]["creation_id"], "c3")
         self.assertEqual(post_id, "c4")
+        self.assertEqual(calls[4][1]["message"], pti.FIRST_COMMENT)
+
+    def test_site_link_moves_to_comment_for_both_formats(self):
+        for carousel in (False, True):
+            with self.subTest(carousel=carousel):
+                calls = self._capture()
+                caption = "Live board: https://usvschina.ai/\n\n#AI @richcrane"
+                if carousel:
+                    pti.post_carousel(["https://x/1.png", "https://x/2.png"], caption, "tok", "user")
+                else:
+                    pti.post_to_instagram("https://x/1.png", caption, "tok", "user")
+                sent_caption = next(data["caption"] for _, data in calls if "caption" in data)
+                self.assertNotIn("usvschina.ai", sent_caption)
+                self.assertIn("#AI @richcrane", sent_caption)
+                self.assertEqual(calls[-1], ("comments", {"message": pti.FIRST_COMMENT, "access_token": "tok"}))
+
+    def test_old_plan_bare_domain_is_removed(self):
+        self.assertEqual(pti.without_site_link("Live board: usvschina.ai"),
+                         "Live board: the link in the first comment")
+
+    def test_comment_failure_reports_published_post_without_republishing(self):
+        from unittest.mock import patch
+        calls = self._capture()
+        post = pti.requests.post
+        def fail_comment(url, **kwargs):
+            if url.endswith("/comments"):
+                self.assertTrue(url.endswith("/c2/comments"))
+                raise pti.requests.Timeout("timeout")
+            return post(url, **kwargs)
+        with patch.object(pti.requests, "post", side_effect=fail_comment):
+            with self.assertRaisesRegex(RuntimeError, "Post c2 is published"):
+                pti.post_to_instagram("https://x/1.png", "cap", "tok", "user")
+        self.assertEqual([kind for kind, _ in calls], ["media", "media_publish"])
 
     def test_rejects_wrong_slide_counts(self):
         self._capture()
