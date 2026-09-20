@@ -182,5 +182,23 @@
       "#OpenAI",
       "#MoonshotAI"
     ]
+  },
+  "2026-09-20T03:46:42+00:00|trend_30d": {
+    "hook": "The US leads the 30-day board by 4230.5 points.",
+    "bullets": [
+      "US models hold 8 of the top 10 spots.",
+      "Kimi K3 is China\u2019s top model at rank 5 with 705.5 points.",
+      "GLM-5.3-Flash ranks 9 with a value score of 91.8."
+    ],
+    "question": "Can China close the gap, or is the board already settled?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#USvsChina",
+      "#OpenAI",
+      "#KimiK3",
+      "#GLM53Flash"
+    ]
   }
 }

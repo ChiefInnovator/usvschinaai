@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-19T03:47:39.628337+00:00",
+  "lastUpdated": "2026-09-20T03:47:36.865535+00:00",
   "items": [
+    {
+      "id": "d9336a6c906fd89c",
+      "headline": "Who is Dario Amodei, the Anthropic CEO pushing independent AI oversight?",
+      "url": "https://www.foxnews.com/politics/anthropic-ceo-pushes-independent-ai-oversight-watchdog-example-shares-roots-industry-insiders",
+      "source": "Fox News",
+      "country": "US",
+      "publishedAt": "2026-09-19 10:24:04",
+      "relevanceScore": 0.6
+    },
+    {
+      "id": "ddf64a20fc700a0a",
+      "headline": "China bogeyman looms large over American firms’ AI doomsday scenario",
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/sep/19/china-ai-foreign-policy-dario-amodei",
+      "source": "The Guardian",
+      "country": "Both",
+      "publishedAt": "2026-09-19 10:00:45",
+      "relevanceScore": 0.23
+    },
     {
       "id": "4468b295444cb0a9",
       "headline": "Huawei sets out 2027 AI chip plans as it expands challenge to Nvidia",
@@ -161,24 +179,6 @@
       "source": "Tech Crunch",
       "country": "US",
       "publishedAt": "2026-09-10 13:34:01",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "ddd1bf65061eb169",
-      "headline": "NSA, FBI, CISA Warn of Industrial-Scale AI Model Distillation Attacks",
-      "url": "https://www.esecurityplanet.com/news/news-ai-model-distillation-attacks/",
-      "source": "Esecurity Planet",
-      "country": "Both",
-      "publishedAt": "2026-09-10 12:26:10",
-      "relevanceScore": 0.61
-    },
-    {
-      "id": "097fba77c53b5ea6",
-      "headline": "Anthropic researcher quits over AI fears, warns 'it could kill us all'",
-      "url": "https://www.mor-tv.com/article/ai-safety-warnings-anthropic-researcher-quits/73652320",
-      "source": "Mor Tv",
-      "country": "Both",
-      "publishedAt": "2026-09-09 14:27:00",
       "relevanceScore": 0.3
     }
   ]

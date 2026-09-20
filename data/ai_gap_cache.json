@@ -140,13 +140,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "cached_at": "2026-09-20T03:33:17.557229+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy from the Vals.ai result listed for the exact DeepSeek V4 Pro 0813 model; reported as 92.42%, rounded to 92.4%. Individual-result publication date unknown.",
-      "score": "92.4%",
+      "notes": "GPQA Diamond accuracy; DeepSeek V4 Pro 0813 evaluated at max reasoning effort. The score is displayed as 92.828%, rounded to 92.8%.",
+      "score": "92.8%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.publicai.io/model-index/m/deepseek-v4-pro-0813"
+      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-pro/"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -251,6 +251,16 @@
       "llm_model": "gpt-5.6-terra",
       "notes": "GPQA Diamond accuracy, independently measured by Artificial Analysis for GLM-5.3 (max).",
       "score": "91.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/glm-5-3"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis result for GLM-5.3 at max reasoning effort; reported configuration: temperature 1, top_p 0.95, and 128K maximum output tokens.",
+      "score": "71.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/glm-5-3"
     }
@@ -384,25 +394,25 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-19T03:31:37.210356+00:00",
+      "cached_at": "2026-09-20T03:33:17.557229+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis run: HLE May-2025 text-only, 2,158 items, no tools, pass@1; GPT-5.6 Sol (max), reasoning enabled. Published September 5, 2026, as recorded by the leaderboard.",
+      "notes": "Artificial Analysis independent result on the full HLE text-only evaluation; highest listed GPT-5.6 Sol effort is max (49.49%, rounded to 49.5%). The result is dated September 17, 2026 on the source.",
       "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://modelcap.ai/model/openai-gpt-5-6-sol"
+      "source_url": "https://www.ai-atlas.co/benchmarks/humanitys-last-exam?model=gpt-5.6-sol"
     }
   },
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-17T03:33:28.493785+00:00",
+      "cached_at": "2026-09-20T03:33:17.557229+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Reported as “CharXiv Reasoning w/ Tools” for GPT-5.6 Terra; published August 26, 2026.",
-      "score": "88.0%",
-      "source_type": "vendor_blog",
-      "source_url": "https://z.ai/blog/glm-5.3-flash"
+      "notes": "Third-party leaderboard row for GPT-5.6 Terra reports 85.9% on CharXiv-R; the row records a source date of 2026-09-02. A separate 88.0% tool-enabled result is not used because it is a different protocol.",
+      "score": "85.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -460,13 +470,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-16T03:33:41.576358+00:00",
+      "cached_at": "2026-09-20T03:33:17.557229+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated Gemini 3.1 Pro Preview at reasoning effort and reports 77.14%, rounded to 77.1%. Individual-result publication date is unknown.",
+      "notes": "Reported for Gemini 3.1 Pro (high) in Thinking Machines Lab’s benchmark table; the post states IFBench was run with its internal harness. Publication date: July 15, 2026.",
       "score": "77.1%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/ifbench"
+      "source_type": "vendor_blog",
+      "source_url": "https://thinkingmachines.ai/news/introducing-inkling/"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",

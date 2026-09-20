@@ -36321,6 +36321,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.5"
+        },
+        "dc60b3fa0e0954898ac9": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Context": "1.0M",
+          "Speed": "1c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.5"
         }
       },
       "benchmarks": {
@@ -93121,6 +93135,20 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.47"
+        },
+        "a21b64e4926288c362cc": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Context": "1M",
+          "Speed": "–",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.47"
         }
       },
       "benchmarks": {
@@ -93799,6 +93827,20 @@
           "Model": "Qwen3.8 Max",
           "Context": "1.0M",
           "Speed": "8c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
+        },
+        "6ce1f4cca371375c9cef": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "7c/s",
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"

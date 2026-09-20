@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-19",
-  "timestamp": "2026-09-19T03:46:45+00:00",
-  "format": "head_to_head",
-  "palette": "newsprint",
+  "date": "2026-09-20",
+  "timestamp": "2026-09-20T03:46:42+00:00",
+  "format": "trend_30d",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-09-19-1-head_to_head-newsprint.png",
-    "2026-09-19-2-leaderboard-newsprint.png"
+    "2026-09-20-1-trend_30d-graphite.png",
+    "2026-09-20-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-19-1-head_to_head-newsprint.png",
-    "https://usvschina.ai/social/2026-09-19-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-09-20-1-trend_30d-graphite.png",
+    "https://usvschina.ai/social/2026-09-20-2-leaderboard-graphite.png"
   ],
-  "caption": "The US keeps the board, but China owns the deepest coverage.\n\n• US leads the total 5379.68 to 1149.21.\n• GPT-6 Astra holds rank 1 at 900.3 unified.\n• Kimi K3 is China’s top model at rank 5 with 705.5 unified.\n\nDoes China’s 18/18 coverage make Kimi K3 the stronger benchmark pick?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #USvsChina #AIBenchmark #GPT6 #KimiK3 #OpenAI #MoonshotAI",
+  "caption": "The US leads the 30-day board by 4230.5 points.\n\n• US models hold 8 of the top 10 spots.\n• Kimi K3 is China’s top model at rank 5 with 705.5 points.\n• GLM-5.3-Flash ranks 9 with a value score of 91.8.\n\nCan China close the gap, or is the board already settled?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #OpenAI #KimiK3 #GLM53Flash",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-19T03:47:43.950425+00:00"
+  "generated_at": "2026-09-20T03:47:41.071099+00:00"
 }
