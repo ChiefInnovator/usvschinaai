@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-20T03:47:36.865535+00:00",
+  "lastUpdated": "2026-09-21T03:51:11.142241+00:00",
   "items": [
+    {
+      "id": "498bbea2b980b098",
+      "headline": "GOP donors say Trump missed the mark with latest AI comments",
+      "url": "https://www.yahoo.com/news/politics/articles/needed-more-empathetic-gop-donors-140000780.html",
+      "source": "Yahoo! News",
+      "country": "Both",
+      "publishedAt": "2026-09-20 14:00:00",
+      "relevanceScore": 0.46
+    },
     {
       "id": "d9336a6c906fd89c",
       "headline": "Who is Dario Amodei, the Anthropic CEO pushing independent AI oversight?",
@@ -170,15 +179,6 @@
       "source": "Complete Ai Training",
       "country": "US",
       "publishedAt": "2026-09-11 12:14:11",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "de98a907c4c0e5c9",
-      "headline": "Google signs its biggest rice-methane carbon credit deal with Indian startup Mitti Labs",
-      "url": "https://techcrunch.com/2026/09/10/google-signs-its-biggest-rice-methane-carbon-credit-deal-with-indian-startup-mitti-labs/",
-      "source": "Tech Crunch",
-      "country": "US",
-      "publishedAt": "2026-09-10 13:34:01",
       "relevanceScore": 0.3
     }
   ]
