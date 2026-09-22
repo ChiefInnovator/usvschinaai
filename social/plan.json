@@ -1,18 +1,19 @@
 {
-  "date": "2026-09-21",
-  "timestamp": "2026-09-21T03:50:41+00:00",
-  "format": "price_vs_power",
-  "palette": "midnight",
+  "date": "2026-09-22",
+  "timestamp": "2026-09-22T03:48:17+00:00",
+  "format": "benchmark_day",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-09-21-1-price_vs_power-midnight.png",
-    "2026-09-21-2-leaderboard-midnight.png"
+    "2026-09-22-1-benchmark_day-graphite.png",
+    "2026-09-22-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-21-1-price_vs_power-midnight.png",
-    "https://usvschina.ai/social/2026-09-21-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-22-1-benchmark_day-graphite.png",
+    "https://usvschina.ai/social/2026-09-22-2-leaderboard-graphite.png"
   ],
-  "caption": "US owns the lead; China is bringing the sharper value plays.\n\n• US leads 5379.68 to 1149.21, with a 4230.5-point margin.\n• Kimi K3 ranks 5th at 705.5, ahead of every Chinese model listed.\n• GLM-5.3-Flash posts 91.8 value at 0.15 input and 0.5 output pricing.\n\nDoes raw score or value matter more when choosing an AI model?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #ModelBenchmarks #KimiK3 #GLM53Flash",
+  "caption": "The US keeps the lead, but Kimi K3 holds fifth overall.\n\n• US leads 5379.87 to 1149.21 in the daily scoreboard.\n• Kimi K3 is CN's top model at rank 5 with a 705.5 unified score.\n• CN has 2 models in the top 10; the US has 8.\n\nIs Kimi K3 close enough to challenge the US top four?\n\nLive board: link in the first comment.\n\n#AI # #ArtificialIntelligence #USvsChinaAI #AIBenchmarks #KimiK3 #OpenAI #MoonshotAI",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-21T03:51:14.362953+00:00"
+  "generated_at": "2026-09-22T03:49:16.525754+00:00",
+  "benchmark": "MMLU-Pro"
 }

@@ -192,13 +192,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond result for the exact DeepSeek V4 Pro (0813) model on Vals; the retrieved evidence does not establish an individual-result publication date or reasoning-effort setting.",
+      "notes": "GPQA Diamond accuracy from Vals AI for the exact 0813 model; the benchmark page is archived and was updated September 1, 2026. No effort configuration is stated in the accessible leaderboard rendering.",
       "score": "92.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/"
+      "source_url": "https://www.vals.ai/benchmarks/gpqa"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -404,13 +404,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 39% for GPT-5.6 Luna (max). This is the highest publicly verified effort setting located; its displayed precision is whole percent. Individual-result publication date unknown.",
-      "score": "39.0%",
+      "notes": "GPT-5.6 Luna at max reasoning effort; Humanity’s Last Exam text-only, no-tools, pass@1. Result publication date is not individually stated on the source.",
+      "score": "39.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/inkling-vs-gpt-5-6-luna"
+      "source_url": "https://artificialanalysis.ai/models/gpt-5-6-luna"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -458,13 +458,13 @@
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Comparative result reported as CharXiv Reasoning; no-tools, effort unspecified. The Google model card was published in September 2026 (no exact day stated).",
+      "notes": "Google DeepMind’s comparison table labels this as “CharXiv Reasoning” with no tools; effort is unspecified. The model card was published September 2, 2026.",
       "score": "85.9%",
       "source_type": "model_card",
-      "source_url": "https://storage.googleapis.com/deepmind-media/Model-Cards/Gemini-3-8-Flash-Model-Card.pdf"
+      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -522,10 +522,10 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated Gemini 3.1 Pro Preview at 77.14% (rounded to 77.1%); reported effort: reasoning, with no explicit budget specified. Result source was collected September 15, 2026; individual-result publication date is unknown.",
+      "notes": "Artificial Analysis independently evaluated the exact Gemini 3.1 Pro Preview reasoning model. Its February 19, 2026 article documents the model evaluation publication date; the IFBench leaderboard reports 77.1%.",
       "score": "77.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/evaluations/ifbench"
@@ -564,13 +564,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy. Epoch AI's model scorecard reports 95%; effort setting and individual-result publication date are not exposed.",
-      "score": "95.0%",
+      "notes": "GPQA Diamond accuracy on Vals AI; high reasoning effort. The Vals benchmark page is archived and states it uses the 198-question Diamond subset.",
+      "score": "94.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://epoch.ai/models/gemini-3-8-flash"
+      "source_url": "https://www.vals.ai/benchmarks/gpqa"
     }
   },
   "Grok 4.6": {

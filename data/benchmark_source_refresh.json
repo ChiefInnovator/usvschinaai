@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-09-21",
-  "modelsChecked": 95,
-  "sourcesChecked": 105,
-  "findings": 819,
-  "accepted": 0,
+  "retrievedAt": "2026-09-22",
+  "modelsChecked": 97,
+  "sourcesChecked": 107,
+  "findings": 818,
+  "accepted": 9,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -401,8 +401,8 @@
     {
       "source": "vals:terminal-bench-2-1",
       "component": "terminal-bench-2.1",
-      "rows": 66,
-      "matched": 37,
+      "rows": 67,
+      "matched": 38,
       "unmatched": [
         "google/gemini-3.6-flash",
         "google/gemini-3.1-pro-preview",

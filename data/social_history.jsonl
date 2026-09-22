@@ -15,3 +15,4 @@
 {"date": "2026-09-19", "timestamp": "2026-09-19T03:46:45+00:00", "format": "head_to_head", "palette": "newsprint"}
 {"date": "2026-09-20", "timestamp": "2026-09-20T03:46:42+00:00", "format": "trend_30d", "palette": "graphite"}
 {"date": "2026-09-21", "timestamp": "2026-09-21T03:50:41+00:00", "format": "price_vs_power", "palette": "midnight"}
+{"date": "2026-09-22", "timestamp": "2026-09-22T03:48:17+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "MMLU-Pro"}

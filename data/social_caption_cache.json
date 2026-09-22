@@ -218,5 +218,23 @@
       "#KimiK3",
       "#GLM53Flash"
     ]
+  },
+  "2026-09-22T03:48:17+00:00|benchmark_day": {
+    "hook": "The US keeps the lead, but Kimi K3 holds fifth overall.",
+    "bullets": [
+      "US leads 5379.87 to 1149.21 in the daily scoreboard.",
+      "Kimi K3 is CN's top model at rank 5 with a 705.5 unified score.",
+      "CN has 2 models in the top 10; the US has 8."
+    ],
+    "question": "Is Kimi K3 close enough to challenge the US top four?",
+    "hashtags": [
+      "#AI",
+      " #ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIBenchmarks",
+      "#KimiK3",
+      "#OpenAI",
+      "#MoonshotAI"
+    ]
   }
 }
