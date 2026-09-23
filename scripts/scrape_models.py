@@ -1354,7 +1354,7 @@ def run_scraper(args):
                     try:
                         run_gap_filling_pass(
                             combined_entries,
-                            max_calls=getattr(args, "gap_fill_max_calls", 40),
+                            max_calls=getattr(args, "gap_fill_max_calls", 10),
                             scraper_run_ts=scrape_run_ts,
                         )
                         if not args.dry_run:
@@ -1596,9 +1596,9 @@ def main():
     parser.add_argument(
         "--gap-fill-max-calls",
         type=int,
-        default=40,
-        help="Maximum number of OpenAI calls per gap-filling pass (default: 40). "
-             "Set low (e.g. 2) for smoke testing."
+        default=10,
+        help="Maximum number of OpenAI calls per gap-filling pass (default: 10). "
+             "0 applies cached fills only; set low (e.g. 2) for smoke testing."
     )
 
     args = parser.parse_args()

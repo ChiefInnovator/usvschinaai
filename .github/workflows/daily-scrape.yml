@@ -32,7 +32,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
       
+      - name: Decide AI research budget
+        id: budget
+        # Paid AI gap-fill (web_search) runs Sundays and on manual dispatch;
+        # other nights apply cached fills only (max_calls=0).
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "7" ]; then
+            echo "max_calls=10" >> "$GITHUB_OUTPUT"
+          else
+            echo "max_calls=0" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Check OpenAI billing
+        if: steps.budget.outputs.max_calls != '0'
         continue-on-error: true
         # Report AI access problems without blocking API-independent source refresh.
         env:
@@ -55,7 +67,7 @@ jobs:
           # Direct-source refresh runs even when AI research is unavailable.
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
-          python scripts/scrape_models.py
+          python scripts/scrape_models.py --gap-fill-max-calls "${{ steps.budget.outputs.max_calls }}"
 
       - name: Rescore retained history from refreshed evidence
         run: python scripts/rescore_history.py --write

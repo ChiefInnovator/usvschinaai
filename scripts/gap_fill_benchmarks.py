@@ -43,7 +43,7 @@ DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.6-terra", "gpt-5.6-sol", "gpt-5.4"]
 # chain-of-thought, so "low" minimizes hidden reasoning tokens which are
 # billed separately from visible output.
 REASONING_EFFORT = "low"
-DEFAULT_MAX_CALLS = 40
+DEFAULT_MAX_CALLS = 10
 
 # Minimum seconds between successive OpenAI calls. Each call consumes ~9K input
 # tokens because the web_search tool injects fetched page content into the
@@ -55,10 +55,12 @@ REQUEST_INTERVAL_SECONDS = 1.5
 
 
 POSITIVE_CACHE_TTL_DAYS = 30
-# Note: we deliberately do NOT cache negative results. A null score today
-# might get published tomorrow, and the gap-fill pass's whole point is to
-# discover newly-available scores. Re-querying nulls every run is the
-# correct trade-off (freshness > API cost).
+# Null answers are cached too, for a shorter window. Re-asking every null on
+# every run cost ~28 web_search calls a night for 0-3 fills. With the weekly
+# 10-call budget, a 20-day window rotates the budget through the other models
+# instead of re-asking the same first ten each week, and still re-checks every
+# null about every three weeks.
+NEGATIVE_CACHE_TTL_DAYS = 20
 
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 OPENAI_MODELS_URL = "https://api.openai.com/v1/models"
@@ -146,11 +148,8 @@ def append_audit_entry(entry: Dict[str, Any]) -> None:
 def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     """Whether a cached entry is still within its TTL.
 
-    Only positive entries (score is not None) are cached at all — we
-    deliberately do NOT cache null/missing results because a vendor may
-    publish the benchmark between runs and we want to re-discover it ASAP.
-    If an old negative entry is still in the file from an earlier version,
-    treat it as expired so it gets re-queried.
+    Positive entries only — null answers never count as a usable fill here;
+    see negative_is_fresh() for the separate skip-re-asking window.
     """
     if entry.get("score") is None:
         return False
@@ -162,6 +161,20 @@ def cache_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     except ValueError:
         return False
     return (now - cached_at) < timedelta(days=POSITIVE_CACHE_TTL_DAYS)
+
+
+@preconditions(entry='mapping', now='datetime')
+def negative_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
+    """Whether a cached null answer is recent enough to skip re-asking."""
+    if entry.get("score") is not None:
+        return False
+    try:
+        cached_at = datetime.fromisoformat(entry.get("cached_at") or "")
+    except ValueError:
+        return False
+    if cached_at.tzinfo is None:
+        cached_at = cached_at.replace(tzinfo=timezone.utc)
+    return (now - cached_at) < timedelta(days=NEGATIVE_CACHE_TTL_DAYS)
 
 
 @preconditions(combined_entries='sequence')
@@ -740,8 +753,8 @@ def run_gap_filling_pass(
     `skip_pairs` is a set of (model_name, benchmark) never to research;
     `on_batch(model_name, benchmarks)` is called once per answered batch.
     Together they let a caller that replays the pass over many days (the
-    history backfill) remember what it has already asked, because null
-    results are deliberately not cached here.
+    history backfill) remember what it has already asked across a window
+    longer than NEGATIVE_CACHE_TTL_DAYS.
 
     **Batching:** candidates are grouped by model and emitted as ONE API call
     per model, asking for all the model's missing benchmarks in a single
@@ -792,19 +805,20 @@ def run_gap_filling_pass(
     # pass — see the RateLimitedOut handler below.
     rate_limited_batches = 0
 
-    for rep, cands in groups:
-        if api_calls >= max_calls:
-            print(f"[gap-fill] hit max_calls={max_calls}; stopping")
-            break
+    negative_hits = 0
+    budget_exhausted = False
 
+    for rep, cands in groups:
         model_name = rep.model_name
-        # Split into cached vs needs-fetch partitions. cache_is_fresh() only
-        # returns True for positive entries, so null scores always fall
-        # through to the batch.
+        # Split into cached vs needs-fetch partitions. Recent null answers
+        # are skipped; expired ones fall through to the batch.
         batch_benchmarks: List[str] = []
         batch_candidates: List[GapCandidate] = []
         for cand in cands:
             cache_entry = cache.get(cand.model_name, {}).get(cand.benchmark)
+            if cache_entry and negative_is_fresh(cache_entry, now):
+                negative_hits += 1
+                continue
             if cache_entry and cache_is_fresh(cache_entry, now):
                 cache_hits += 1
                 cached_conf = cache_entry.get("confidence", "low")
@@ -821,6 +835,14 @@ def run_gap_filling_pass(
 
         if not batch_benchmarks:
             continue  # Every candidate in this group was cache-resolved
+
+        # Checked here, not at the top of the loop, so cached fills still
+        # apply once the budget is spent (max_calls=0 = cache-only run).
+        if api_calls >= max_calls:
+            if not budget_exhausted:
+                print(f"[gap-fill] hit max_calls={max_calls}; applying cached fills only")
+                budget_exhausted = True
+            continue
 
         # Live LLM call for the batch
         if api_calls > 0:
@@ -893,17 +915,19 @@ def run_gap_filling_pass(
         # Apply each validated result to its matching candidate
         for cand in batch_candidates:
             entry = validated_map.get(cand.benchmark)
-            if entry is None:
-                # Model omitted this benchmark from its response. Treat as a
-                # soft null — do NOT cache it, because a vendor may publish
-                # the missing score between now and the next scrape run.
-                print(f"  · {cand.benchmark}: omitted from response")
-                continue
-
-            # Null / missing scores are deliberately NOT cached — see
-            # cache_is_fresh() for the rationale (freshness over cost).
-            if entry["score"] is None:
-                print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
+            # Omitted and null answers are cached as nulls so the next runs
+            # skip them for NEGATIVE_CACHE_TTL_DAYS.
+            if entry is None or entry["score"] is None:
+                if entry is None:
+                    print(f"  · {cand.benchmark}: omitted from response")
+                else:
+                    print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
+                cache.setdefault(cand.model_name, {})[cand.benchmark] = {
+                    "benchmark": cand.benchmark,
+                    "score": None,
+                    "cached_at": now.isoformat(),
+                    "llm_model": model,
+                }
                 continue
 
             # Positive result: cache it so the next scrape can skip the call.
@@ -942,6 +966,7 @@ def run_gap_filling_pass(
 
     print()
     print(f"[gap-fill] cache hits              : {cache_hits}")
+    print(f"[gap-fill] skipped (recent null)   : {negative_hits}")
     print(f"[gap-fill] live API calls          : {api_calls}")
     print(f"[gap-fill] schema failures         : {schema_failures}")
     print(f"[gap-fill] dropped low-confidence  : {fills_dropped_low_conf}")

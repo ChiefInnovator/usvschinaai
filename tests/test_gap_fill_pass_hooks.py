@@ -2,7 +2,7 @@
 """The two hooks the history backfill relies on in gap_fill_benchmarks:
 `skip_pairs` keeps already-researched (model, benchmark) pairs out of the
 batches, and `on_batch` fires once per validated answer so the caller can
-remember what was asked. Null answers are never cached by the pass itself."""
+remember what was asked."""
 import sys
 import unittest
 from pathlib import Path
@@ -73,6 +73,86 @@ class PassHookTests(unittest.TestCase):
         gf.run_gap_filling_pass(self._entries(), max_calls=5,
             on_batch=lambda model, benchmarks: seen.append((model, sorted(benchmarks))))
         self.assertIn(('M', ['GPQA', 'HLE']), seen)
+
+    def test_null_answers_are_cached(self):
+        saved = {}
+        gf.save_cache = lambda cache: saved.update(cache)
+        gf.run_gap_filling_pass(self._entries(), max_calls=5)
+        self.assertEqual(sorted(saved["M"]), ["GPQA", "HLE"])
+        self.assertIsNone(saved["M"]["HLE"]["score"])
+        self.assertIn("cached_at", saved["K"]["HLE"])
+
+    def test_recent_null_is_not_asked_again(self):
+        from datetime import datetime, timezone, timedelta
+        now = datetime.now(timezone.utc)
+        old = (now - timedelta(days=gf.NEGATIVE_CACHE_TTL_DAYS + 1)).isoformat()
+        gf.load_cache = lambda: {'M': {'HLE': {'score': None, 'cached_at': now.isoformat()},
+                                       'GPQA': {'score': None, 'cached_at': old}}}
+        seen = []
+        gf.run_gap_filling_pass(self._entries(), max_calls=5,
+            on_batch=lambda model, benchmarks: seen.append((model, sorted(benchmarks))))
+        self.assertEqual(seen, [('M', ['GPQA']), ('K', ['HLE'])], "fresh null skipped, expired null re-asked")
+
+    def test_zero_budget_still_applies_cached_fills(self):
+        from datetime import datetime, timezone
+        gf.load_cache = lambda: {'K': {'HLE': {'score': '40%', 'confidence': 'high',
+            'cached_at': datetime.now(timezone.utc).isoformat()}}}
+        applied = []
+        saved_apply = gf._apply_fill
+        gf._apply_fill = lambda entries, cand, entry, model: applied.append((cand.model_name, cand.benchmark)) or True
+        try:
+            gf.run_gap_filling_pass(self._entries(), max_calls=0)
+        finally:
+            gf._apply_fill = saved_apply
+        self.assertEqual(self.calls, [])
+        self.assertEqual(applied, [('K', 'HLE')])
+
+    def test_malformed_answer_does_not_cache_nulls(self):
+        saved = {}
+        gf.save_cache = lambda cache: saved.update(cache)
+        gf.validate_batch_response = lambda parsed, expected: None
+        gf.run_gap_filling_pass(self._entries(), max_calls=5)
+        self.assertEqual(saved, {}, "a failed call must not suppress re-asking for the TTL window")
+
+    def test_budget_hit_mid_pass_still_applies_later_cached_fills(self):
+        from datetime import datetime, timezone
+        gf.load_cache = lambda: {'K': {'HLE': {'score': '40%', 'confidence': 'high',
+            'cached_at': datetime.now(timezone.utc).isoformat()}}}
+        applied = []
+        saved_apply = gf._apply_fill
+        gf._apply_fill = lambda entries, cand, entry, model: applied.append(cand.model_name) or True
+        try:
+            gf.run_gap_filling_pass(self._entries(), max_calls=1)
+        finally:
+            gf._apply_fill = saved_apply
+        self.assertEqual(len(self.calls), 1, "M spends the only call")
+        self.assertEqual(applied, ['K'], "K's cached fill applies after the budget is spent")
+
+    def test_negative_is_fresh_edges(self):
+        from datetime import datetime, timezone
+        now = datetime.now(timezone.utc)
+        self.assertFalse(gf.negative_is_fresh({'score': None}, now), "no timestamp -> re-ask")
+        self.assertFalse(gf.negative_is_fresh({'score': None, 'cached_at': 'bad'}, now))
+        self.assertFalse(gf.negative_is_fresh({'score': '50%', 'cached_at': now.isoformat()}, now))
+        self.assertTrue(gf.negative_is_fresh({'score': None, 'cached_at': now.isoformat()}, now))
+        naive = now.replace(tzinfo=None).isoformat()
+        self.assertTrue(gf.negative_is_fresh({'score': None, 'cached_at': naive}, now), "naive timestamp read as UTC")
+
+    def test_null_answer_replaces_unaccepted_low_confidence_lead(self):
+        from datetime import datetime, timezone
+        gf.load_cache = lambda: {'M': {'GPQA': {'score': '90%', 'confidence': 'medium',
+            'cached_at': datetime.now(timezone.utc).isoformat()}}}
+        saved = {}
+        gf.save_cache = lambda cache: saved.update(cache)
+        gf.run_gap_filling_pass(self._entries(), max_calls=5)
+        self.assertIsNone(saved['M']['GPQA']['score'], "research found nothing; the stale lead is dropped")
+
+    def test_scraper_cli_budget_defaults_to_ten_and_accepts_zero(self):
+        src = (Path(__file__).parent.parent / "scripts" / "scrape_models.py").read_text(encoding="utf-8")
+        self.assertIn('getattr(args, "gap_fill_max_calls", 10)', src)
+        self.assertEqual(gf.DEFAULT_MAX_CALLS, 10)
+        gf.run_gap_filling_pass(self._entries(), max_calls=0)
+        self.assertEqual(self.calls, [], "max_calls=0 makes no API calls")
 
     def test_without_hooks_nothing_changes(self):
         seen = []

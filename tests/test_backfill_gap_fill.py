@@ -364,5 +364,8 @@ class AskedMemoryTests(unittest.TestCase):
                      "K": {"HLE": {"score": 1.0, "cached_at": now.isoformat()}}}
             est = bf.estimate_calls(snapshots, {}, cache, set(), now)
             self.assertEqual((est["calls"], est["cached"]), (0, 4))
+            nulls = {"M": {"HLE": {"score": None, "cached_at": now.isoformat()}}}
+            est = bf.estimate_calls(snapshots, {}, nulls, set(), now)
+            self.assertEqual((est["calls"], est["skipped"]), (1, 3), "a recent cached null is not re-bought")
         finally:
             bf.gf.build_candidates = real

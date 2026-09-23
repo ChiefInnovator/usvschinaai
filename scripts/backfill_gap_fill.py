@@ -296,9 +296,8 @@ def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[st
     """Simulate the pass's budget over the window.
 
     One call per (day, model) with at least one candidate that is neither
-    cache-fresh nor already asked; a call marks its pairs asked for the older
-    days that follow, exactly as the live run does. Counting distinct models
-    alone (the earlier estimate) assumed nulls were cached, which they are not.
+    cache-fresh, a recent cached null, nor already asked; a call marks its
+    pairs asked for the older days that follow, exactly as the live run does.
     """
     asked = set(asked_pairs)
     calls = 0
@@ -315,7 +314,7 @@ def estimate_calls(snapshots: List[Tuple[str, Dict[str, Any]]], display: Dict[st
             entry = cache.get(cand.model_name, {}).get(cand.benchmark)
             if entry and gf.cache_is_fresh(entry, now):
                 day_cached += 1
-            elif (cand.model_name, cand.benchmark) in asked:
+            elif (cand.model_name, cand.benchmark) in asked or (entry and gf.negative_is_fresh(entry, now)):
                 day_skipped += 1
             else:
                 batches.setdefault((cand.model_name, cand.model_country), []).append(cand.benchmark)
