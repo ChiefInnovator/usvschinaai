@@ -613,6 +613,7 @@ def main() -> int:
                 gf.run_gap_filling_pass(
                     entries,
                     max_calls=remaining,
+                    new_model_max_calls=0,   # every call counts against --max-calls
                     min_confidence=args.min_confidence,
                     scraper_run_ts=f"backfill:{day}",
                     skip_pairs=asked_pairs,

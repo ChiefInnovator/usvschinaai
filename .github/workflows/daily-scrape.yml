@@ -34,8 +34,9 @@ jobs:
       
       - name: Decide AI research budget
         id: budget
-        # Paid AI gap-fill (web_search) runs Sundays and on manual dispatch;
-        # other nights apply cached fills only (max_calls=0).
+        # Full AI gap-fill (web_search) runs Sundays and on manual dispatch;
+        # other nights research only models first seen in the last 14 days
+        # (their own budget in gap_fill_benchmarks.py) and apply cached fills.
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%u)" = "7" ]; then
             echo "max_calls=10" >> "$GITHUB_OUTPUT"
@@ -44,7 +45,6 @@ jobs:
           fi
 
       - name: Check OpenAI billing
-        if: steps.budget.outputs.max_calls != '0'
         continue-on-error: true
         # Report AI access problems without blocking API-independent source refresh.
         env:

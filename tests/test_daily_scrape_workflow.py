@@ -60,8 +60,9 @@ class BudgetStepTests(unittest.TestCase):
                  ("Decide AI research budget", "Check OpenAI billing", "Run scraper")]
         self.assertEqual(order, sorted(order))
 
-    def test_billing_check_skipped_on_cache_only_nights(self):
-        self.assertIn("if: steps.budget.outputs.max_calls != '0'", step("Check OpenAI billing"))
+    def test_billing_check_runs_every_night(self):
+        # New models are researched nightly, so quota problems must surface nightly.
+        self.assertNotIn("if:", step("Check OpenAI billing"))
 
     def test_scraper_receives_the_budget(self):
         self.assertIn('--gap-fill-max-calls "${{ steps.budget.outputs.max_calls }}"',

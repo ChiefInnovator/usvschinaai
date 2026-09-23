@@ -62,6 +62,13 @@ POSITIVE_CACHE_TTL_DAYS = 30
 # null about every three weeks.
 NEGATIVE_CACHE_TTL_DAYS = 20
 
+# Vendors and leaderboards publish most results in a model's first weeks, so a
+# model first seen in the last NEW_MODEL_DAYS is researched on every run: its
+# nulls are neither skipped nor cached, and it draws on its own nightly budget
+# (NEW_MODEL_MAX_CALLS) so it is asked even on cache-only nights.
+NEW_MODEL_DAYS = 14
+NEW_MODEL_MAX_CALLS = 10
+
 OPENAI_RESPONSES_URL = "https://api.openai.com/v1/responses"
 OPENAI_MODELS_URL = "https://api.openai.com/v1/models"
 
@@ -175,6 +182,32 @@ def negative_is_fresh(entry: Dict[str, Any], now: datetime) -> bool:
     if cached_at.tzinfo is None:
         cached_at = cached_at.replace(tzinfo=timezone.utc)
     return (now - cached_at) < timedelta(days=NEGATIVE_CACHE_TTL_DAYS)
+
+
+@preconditions()
+def load_first_seen() -> Optional[Dict[str, str]]:
+    """Earliest snapshot date per model name, or None if history is unreadable."""
+    try:
+        from ingest_benchmark_findings import model_first_seen
+        return model_first_seen()
+    except Exception as e:
+        print(f"[gap-fill] first-seen dates unavailable ({e}); no model treated as new")
+        return None
+
+
+@preconditions(model_name='text', first_seen='?mapping', now='datetime')
+def is_new_model(model_name: str, first_seen: Optional[Dict[str, str]], now: datetime) -> bool:
+    """First seen within NEW_MODEL_DAYS; a model absent from history is new today."""
+    if first_seen is None:
+        return False
+    day = first_seen.get(model_name)
+    if not day:
+        return True
+    try:
+        seen = datetime.fromisoformat(day[:10]).date()
+    except ValueError:
+        return False
+    return (now.date() - seen) < timedelta(days=NEW_MODEL_DAYS)
 
 
 @preconditions(combined_entries='sequence')
@@ -736,11 +769,12 @@ def _group_by_model(
     return [(cands[0], cands) for cands in groups.values()]
 
 
-@preconditions(combined_entries='sequence', max_calls='nonnegative_int', min_confidence='enum:high|medium|low', scraper_run_ts='text', skip_pairs='?set', on_batch='?callable')
+@preconditions(combined_entries='sequence', max_calls='nonnegative_int', new_model_max_calls='nonnegative_int', min_confidence='enum:high|medium|low', scraper_run_ts='text', skip_pairs='?set', on_batch='?callable')
 def run_gap_filling_pass(
     combined_entries: List[Any],
     *,
     max_calls: int = DEFAULT_MAX_CALLS,
+    new_model_max_calls: int = NEW_MODEL_MAX_CALLS,
     min_confidence: str = "high",
     scraper_run_ts: str = "",
     skip_pairs: Optional[set] = None,
@@ -807,16 +841,19 @@ def run_gap_filling_pass(
 
     negative_hits = 0
     budget_exhausted = False
+    new_model_calls = 0
+    first_seen = load_first_seen()
 
     for rep, cands in groups:
         model_name = rep.model_name
+        new_model = is_new_model(model_name, first_seen, now)
         # Split into cached vs needs-fetch partitions. Recent null answers
-        # are skipped; expired ones fall through to the batch.
+        # are skipped (except for new models); expired ones fall through.
         batch_benchmarks: List[str] = []
         batch_candidates: List[GapCandidate] = []
         for cand in cands:
             cache_entry = cache.get(cand.model_name, {}).get(cand.benchmark)
-            if cache_entry and negative_is_fresh(cache_entry, now):
+            if cache_entry and not new_model and negative_is_fresh(cache_entry, now):
                 negative_hits += 1
                 continue
             if cache_entry and cache_is_fresh(cache_entry, now):
@@ -838,7 +875,10 @@ def run_gap_filling_pass(
 
         # Checked here, not at the top of the loop, so cached fills still
         # apply once the budget is spent (max_calls=0 = cache-only run).
-        if api_calls >= max_calls:
+        # New models spend their own budget first, then the general one.
+        if new_model and new_model_calls < new_model_max_calls:
+            new_model_calls += 1
+        elif api_calls - new_model_calls >= max_calls:
             if not budget_exhausted:
                 print(f"[gap-fill] hit max_calls={max_calls}; applying cached fills only")
                 budget_exhausted = True
@@ -851,7 +891,7 @@ def run_gap_filling_pass(
 
         print(
             f"[gap-fill] [{api_calls}/{max_calls}] {model_name} ({rep.model_country}) "
-            f"→ {len(batch_benchmarks)} benchmarks"
+            f"→ {len(batch_benchmarks)} benchmarks{' (new model)' if new_model else ''}"
         )
 
         # Size max_output_tokens to the batch.
@@ -916,12 +956,15 @@ def run_gap_filling_pass(
         for cand in batch_candidates:
             entry = validated_map.get(cand.benchmark)
             # Omitted and null answers are cached as nulls so the next runs
-            # skip them for NEGATIVE_CACHE_TTL_DAYS.
+            # skip them for NEGATIVE_CACHE_TTL_DAYS; new models are re-asked
+            # every run, so theirs are not cached.
             if entry is None or entry["score"] is None:
                 if entry is None:
                     print(f"  · {cand.benchmark}: omitted from response")
                 else:
                     print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
+                if new_model:
+                    continue
                 cache.setdefault(cand.model_name, {})[cand.benchmark] = {
                     "benchmark": cand.benchmark,
                     "score": None,
@@ -967,7 +1010,7 @@ def run_gap_filling_pass(
     print()
     print(f"[gap-fill] cache hits              : {cache_hits}")
     print(f"[gap-fill] skipped (recent null)   : {negative_hits}")
-    print(f"[gap-fill] live API calls          : {api_calls}")
+    print(f"[gap-fill] live API calls          : {api_calls} ({new_model_calls} for new models)")
     print(f"[gap-fill] schema failures         : {schema_failures}")
     print(f"[gap-fill] dropped low-confidence  : {fills_dropped_low_conf}")
     print(f"[gap-fill] fills accepted          : {fills_accepted}")
