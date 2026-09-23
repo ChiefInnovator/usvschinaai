@@ -22,13 +22,13 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals MMMU-Pro accuracy; published/updated September 1, 2026. The displayed underlying result is 90.64%, rounded to one decimal.",
+      "notes": "Vals AI MMMU-Pro accuracy result, as republished in a leaderboard row for Claude Fable 5.1; Vals describes its protocol as pass@1, temperature 0, with 16,384 maximum output tokens for thinking models. Individual-result publication date unknown.",
       "score": "90.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/mmmu"
+      "source_url": "https://www.benchleader.com/benchmarks/vals_mmmu_pro"
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
@@ -192,13 +192,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-22T03:33:48.406202+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy from Vals AI for the exact 0813 model; the benchmark page is archived and was updated September 1, 2026. No effort configuration is stated in the accessible leaderboard rendering.",
+      "notes": "GPQA Diamond accuracy from Vals, evaluated at max reasoning effort. The Vals model page identifies the exact 0813 model and lists GPQA Diamond; the individual-result publication date is not independently established.",
       "score": "92.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/benchmarks/gpqa"
+      "source_url": "https://www.vals.ai/models/deepseek_deepseek-v4-pro-0813"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -389,6 +389,16 @@
       "score": "78.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://epoch.ai/data/benchmarks.csv"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "LM Market Cap lists an exact GPT-5.5 Pro row at 88.7% resolve rate; individual-result publication date is not stated.",
+      "score": "88.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
     }
   },
   "GPT-5.6 Luna": {
@@ -458,13 +468,13 @@
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-22T03:33:48.406202+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Google DeepMind’s comparison table labels this as “CharXiv Reasoning” with no tools; effort is unspecified. The model card was published September 2, 2026.",
+      "notes": "No-tools CharXiv-R score; the leaderboard also lists 88.0% tool-assisted, which is excluded as a different protocol. The cited result is dated September 2, 2026.",
       "score": "85.9%",
-      "source_type": "model_card",
-      "source_url": "https://deepmind.google/models/model-cards/gemini-3-8-flash/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -478,10 +488,10 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Published September 2, 2026. Original OfficeQA Pro/v1, 133-question full-corpus evaluation; Energent agent held fixed, one run, and answers used the benchmark’s official scorer. Parsing configuration is not fully specified.",
+      "notes": "Full-corpus OfficeQA Pro v1 (133 questions, 697 Treasury Bulletins), using Energent's fixed agent and the official scorer; published September 2, 2026.",
       "score": "60.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.energent.ai/en/highlights/officeqa-v1-to-v2"
@@ -522,13 +532,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-22T03:33:48.406202+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated the exact Gemini 3.1 Pro Preview reasoning model. Its February 19, 2026 article documents the model evaluation publication date; the IFBench leaderboard reports 77.1%.",
+      "notes": "OpenRouter’s public benchmark table attributes 77.1% to Artificial Analysis for the exact Gemini 3.1 Pro Preview identity. Reported configuration is the reasoning model; no specific reasoning-effort budget or individual-result publication date is disclosed.",
       "score": "77.1%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/ifbench"
+      "source_url": "https://openrouter.ai/google/gemini-3.1-pro-preview"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
