@@ -125,6 +125,98 @@
       "source_url": "https://openai.com/index/gpt-6-astra/?video=1222553704"
     }
   },
+  "Claude Opus 5.5": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-23T10:59:34.293161+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    }
+  },
   "Claude Sonnet 5": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
