@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-20",
-  "timestamp": "2026-09-20T03:46:42+00:00",
-  "format": "trend_30d",
-  "palette": "graphite",
-  "weight": 1,
+  "date": "2026-09-23",
+  "timestamp": "2026-09-23T03:46:07+00:00",
+  "format": "new_challenger",
+  "palette": "newsprint",
+  "weight": 3,
   "slides": [
-    "2026-09-20-1-trend_30d-graphite.png",
-    "2026-09-20-2-leaderboard-graphite.png"
+    "2026-09-23-1-new_challenger-newsprint.png",
+    "2026-09-23-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-20-1-trend_30d-graphite.png",
-    "https://usvschina.ai/social/2026-09-20-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-09-23-1-new_challenger-newsprint.png",
+    "https://usvschina.ai/social/2026-09-23-2-leaderboard-newsprint.png"
   ],
-  "caption": "The US leads the 30-day board by 4230.5 points.\n\n• US models hold 8 of the top 10 spots.\n• Kimi K3 is China’s top model at rank 5 with 705.5 points.\n• GLM-5.3-Flash ranks 9 with a value score of 91.8.\n\nCan China close the gap, or is the board already settled?\n\nLive board: usvschina.ai\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #OpenAI #KimiK3 #GLM53Flash",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-20T03:47:41.071099+00:00"
+  "caption": "China adds two new Top 10 entries as the US holds the overall lead.\n\n• US leads 4,348.51 to 2,736.84, a margin of 1,611.7.\n• GLM-5.3 enters at No. 8 with a 628.2 unified score.\n• Qwen3.8 Max debuts at No. 9; China now holds 4 of the Top 10.\n\nDo GLM-5.3 and Qwen3.8 Max change the next matchup?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #LLM #AIModels #USvsChina #GLM53 #Qwen38 #AILeaderboard",
+  "caption_source": "gpt-5.6-terra",
+  "generated_at": "2026-09-23T03:47:07.195703+00:00"
 }

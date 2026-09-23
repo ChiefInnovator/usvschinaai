@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-09-20",
-  "modelsChecked": 95,
-  "sourcesChecked": 105,
-  "findings": 819,
-  "accepted": 0,
+  "retrievedAt": "2026-09-23",
+  "modelsChecked": 100,
+  "sourcesChecked": 110,
+  "findings": 827,
+  "accepted": 9,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -401,8 +401,8 @@
     {
       "source": "vals:terminal-bench-2-1",
       "component": "terminal-bench-2.1",
-      "rows": 66,
-      "matched": 37,
+      "rows": 71,
+      "matched": 41,
       "unmatched": [
         "google/gemini-3.6-flash",
         "google/gemini-3.1-pro-preview",
@@ -420,6 +420,7 @@
         "nvidia/nemotron-3-ultra-550b-a55b",
         "google/gemini-3.5-flash-lite",
         "ant/ling-3.0-flash-2607",
+        "ant/ling-3.0-flash-af-rc3",
         "deepseek/deepseek-v4-pro",
         "thinkingmachines/inkling",
         "grok/grok-4.20-0309-reasoning",

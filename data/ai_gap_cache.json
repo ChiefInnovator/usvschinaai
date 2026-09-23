@@ -10,6 +10,26 @@
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy from Vals; the archived benchmark page is updated September 1, 2026. This is the Diamond subset, not generic GPQA.",
+      "score": "93.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/gpqa"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vals AI MMMU-Pro accuracy result, as republished in a leaderboard row for Claude Fable 5.1; Vals describes its protocol as pass@1, temperature 0, with 16,384 maximum output tokens for thinking models. Individual-result publication date unknown.",
+      "score": "90.6%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.benchleader.com/benchmarks/vals_mmmu_pro"
+    },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
       "cached_at": "2026-09-14T03:35:43.088570+00:00",
@@ -29,6 +49,16 @@
       "score": "85.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1, 108 tasks, three trials, max effort, internal harness; safeguarded Fable configuration with disclosed Opus fallback. System card dated September 1, 2026.",
+      "score": "77.8%",
+      "source_type": "system_card",
+      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     }
   },
   "Claude Mythos 5.1": {
@@ -66,10 +96,10 @@
   "Claude Opus 5": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-14T03:35:43.088570+00:00",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Listed as the no-tools CharXiv-R score for Claude Opus 5; publication date of this individual result is unknown.",
+      "notes": "Reported as the no-tools CharXiv-R score; the public leaderboard row identifies Claude Opus 5 but does not provide a directly verifiable effort configuration.",
       "score": "83.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://benchmarklist.com/models/anthropic-claude-opus-5/"
@@ -127,6 +157,28 @@
       "source_url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf"
     }
   },
+  "DeepSeek-V4-Flash-Vision-Exp": {
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Exact DeepSeek V4 Flash Vision Exp row; the leaderboard dates the result August 26, 2026 and labels its provenance self-reported.",
+      "score": "80.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Exact model row on the full OfficeQA Pro leaderboard; the result publication date is not provided.",
+      "score": "57.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://anotherwrapper.com/tools/llm-pricing/evals/officeqa-pro"
+    }
+  },
   "DeepSeek-V4-Pro-0813": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
@@ -140,13 +192,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy; DeepSeek V4 Pro 0813 evaluated at max reasoning effort. The score is displayed as 92.828%, rounded to 92.8%.",
-      "score": "92.8%",
+      "notes": "GPQA Diamond accuracy from Vals, evaluated at max reasoning effort. The Vals model page identifies the exact 0813 model and lists GPQA Diamond; the individual-result publication date is not independently established.",
+      "score": "92.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/deepseek-v4-pro/"
+      "source_url": "https://www.vals.ai/models/deepseek_deepseek-v4-pro-0813"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -337,6 +389,16 @@
       "score": "78.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://epoch.ai/data/benchmarks.csv"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "LM Market Cap lists an exact GPT-5.5 Pro row at 88.7% resolve rate; individual-result publication date is not stated.",
+      "score": "88.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
     }
   },
   "GPT-5.6 Luna": {
@@ -352,10 +414,10 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-19T03:31:37.210356+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 39% on its rendered page; its underlying current leaderboard record gives 39.48%, rounded to 39.5%, for GPT-5.6 Luna at max reasoning effort. The run is an Artificial Analysis configuration rather than an OpenAI vendor result.",
+      "notes": "GPT-5.6 Luna at max reasoning effort; Humanity’s Last Exam text-only, no-tools, pass@1. Result publication date is not individually stated on the source.",
       "score": "39.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/gpt-5-6-luna"
@@ -394,22 +456,22 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "cached_at": "2026-09-21T03:35:56.500556+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independent result on the full HLE text-only evaluation; highest listed GPT-5.6 Sol effort is max (49.49%, rounded to 49.5%). The result is dated September 17, 2026 on the source.",
+      "notes": "Artificial Analysis result for GPT-5.6 Sol at max reasoning effort; pass@1 on its 2,158-question text-only HLE subset (not the full 2,500-question multimodal revision). Individual-result publication date is not displayed on the direct leaderboard page.",
       "score": "49.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.ai-atlas.co/benchmarks/humanitys-last-exam?model=gpt-5.6-sol"
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
     }
   },
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Third-party leaderboard row for GPT-5.6 Terra reports 85.9% on CharXiv-R; the row records a source date of 2026-09-02. A separate 88.0% tool-enabled result is not used because it is a different protocol.",
+      "notes": "No-tools CharXiv-R score; the leaderboard also lists 88.0% tool-assisted, which is excluded as a different protocol. The cited result is dated September 2, 2026.",
       "score": "85.9%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
@@ -426,10 +488,10 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-18T03:32:32.115679+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Published September 2, 2026. Original OfficeQA Pro/v1, 133-question full-corpus evaluation; Energent agent held fixed, one run, and answers used the benchmark’s official scorer. Parsing configuration is not fully specified.",
+      "notes": "Full-corpus OfficeQA Pro v1 (133 questions, 697 Treasury Bulletins), using Energent's fixed agent and the official scorer; published September 2, 2026.",
       "score": "60.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.energent.ai/en/highlights/officeqa-v1-to-v2"
@@ -470,13 +532,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "cached_at": "2026-09-23T03:34:18.731552+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Reported for Gemini 3.1 Pro (high) in Thinking Machines Lab’s benchmark table; the post states IFBench was run with its internal harness. Publication date: July 15, 2026.",
+      "notes": "OpenRouter’s public benchmark table attributes 77.1% to Artificial Analysis for the exact Gemini 3.1 Pro Preview identity. Reported configuration is the reasoning model; no specific reasoning-effort budget or individual-result publication date is disclosed.",
       "score": "77.1%",
-      "source_type": "vendor_blog",
-      "source_url": "https://thinkingmachines.ai/news/introducing-inkling/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://openrouter.ai/google/gemini-3.1-pro-preview"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
@@ -512,13 +574,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-15T03:33:42.102932+00:00",
+      "cached_at": "2026-09-22T03:33:48.406202+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond, independently run by Artificial Analysis; highest verified Gemini 3.8 Flash setting is high reasoning. The model release was independently reported on September 2, 2026: https://artificialanalysis.ai/articles/gemini-3-8-flash",
-      "score": "95.3%",
+      "notes": "GPQA Diamond accuracy on Vals AI; high reasoning effort. The Vals benchmark page is archived and states it uses the 198-question Diamond subset.",
+      "score": "94.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/gpqa-diamond"
+      "source_url": "https://www.vals.ai/benchmarks/gpqa"
     }
   },
   "Grok 4.6": {

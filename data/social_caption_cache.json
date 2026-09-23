@@ -200,5 +200,60 @@
       "#KimiK3",
       "#GLM53Flash"
     ]
+  },
+  "2026-09-21T03:50:41+00:00|price_vs_power": {
+    "hook": "US owns the lead; China is bringing the sharper value plays.",
+    "bullets": [
+      "US leads 5379.68 to 1149.21, with a 4230.5-point margin.",
+      "Kimi K3 ranks 5th at 705.5, ahead of every Chinese model listed.",
+      "GLM-5.3-Flash posts 91.8 value at 0.15 input and 0.5 output pricing."
+    ],
+    "question": "Does raw score or value matter more when choosing an AI model?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#ModelBenchmarks",
+      "#KimiK3",
+      "#GLM53Flash"
+    ]
+  },
+  "2026-09-22T03:48:17+00:00|benchmark_day": {
+    "hook": "The US keeps the lead, but Kimi K3 holds fifth overall.",
+    "bullets": [
+      "US leads 5379.87 to 1149.21 in the daily scoreboard.",
+      "Kimi K3 is CN's top model at rank 5 with a 705.5 unified score.",
+      "CN has 2 models in the top 10; the US has 8."
+    ],
+    "question": "Is Kimi K3 close enough to challenge the US top four?",
+    "hashtags": [
+      "#AI",
+      " #ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIBenchmarks",
+      "#KimiK3",
+      "#OpenAI",
+      "#MoonshotAI"
+    ]
+  },
+  "2026-09-23T03:46:07+00:00|new_challenger": {
+    "hook": "China adds two new Top 10 entries as the US holds the overall lead.",
+    "bullets": [
+      "US leads 4,348.51 to 2,736.84, a margin of 1,611.7.",
+      "GLM-5.3 enters at No. 8 with a 628.2 unified score.",
+      "Qwen3.8 Max debuts at No. 9; China now holds 4 of the Top 10."
+    ],
+    "question": "Do GLM-5.3 and Qwen3.8 Max change the next matchup?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#LLM",
+      "#AIModels",
+      "#USvsChina",
+      "#GLM53",
+      "#Qwen38",
+      "#AILeaderboard"
+    ]
   }
 }

@@ -1851,6 +1851,38 @@
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
+        },
+        "f286d27a0eadcea23bc4": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Context": "1M",
+          "Speed": "4c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
+        },
+        "785157a52569b29f7786": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "$50.00",
+          "Speed": "4c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "17.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -13219,6 +13251,20 @@
           "License": "",
           "Input$/M": "5",
           "Output$/M": "25"
+        },
+        "0aa496b28d42619868ca": {
+          "model": "Claude Opus 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5",
+          "origin": "US",
+          "description": "Claude Opus 5 by Anthropic — released Jul 24, 2026; $5.00/M input, $0.500/M cached input, $25.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-24",
+          "Model": "Claude Opus 5",
+          "Context": "1M",
+          "Speed": "5c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "25"
         }
       },
       "benchmarks": {
@@ -13302,6 +13348,20 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Full ALE pass rate; claude_code; thinking-low; 152 split tasks.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13",
+            "notes": "Undated API observation; partial-credit avgScore excluded."
+          },
+          "6492490ae0673773": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 32.2,
+            "unit": "percent",
+            "source": "https://agents-last-exam.org/api/demo/leaderboard",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Full ALE pass rate; claude_code; thinking-high; 152 split tasks.",
             "kind": "published",
             "sourceType": "official_leaderboard",
             "confidence": "high",
@@ -18040,6 +18100,24 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "10"
+        },
+        "4de22957b3d936367f73": {
+          "model": "Claude Sonnet 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Jun. 2026",
+          "Model": "Claude Sonnet 5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "$10.00",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "8.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -22342,6 +22420,52 @@
           "License": "",
           "Input$/M": "0.435",
           "Output$/M": "0.87"
+        },
+        "d0758031eae7b9fd3bb1": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $0.435/M input, $0.004/M cached input, $0.870/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "3c/s",
+          "License": "",
+          "Input$/M": "1.3",
+          "Output$/M": "2.6"
+        },
+        "6e815cb55adb1632203c": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Context": "1.0M",
+          "Speed": "1c/s",
+          "License": "",
+          "Input$/M": "1.3",
+          "Output$/M": "2.6"
+        },
+        "26f4a1f07b324cb0ac1b": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$2.60",
+          "Speed": "0c/s",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No"
         }
       },
       "benchmarks": {
@@ -35697,6 +35821,24 @@
           "License": "",
           "Input$/M": "1.2",
           "Output$/M": "4"
+        },
+        "c1f83f69b58f2a6836ab": {
+          "model": "GLM-5.3",
+          "organization": "ZAI",
+          "link": "https://llm-stats.com/models/glm-5.3",
+          "origin": "CN",
+          "description": "GLM-5.3 by Zhipu AI — released Aug 14, 2026; $1.20/M input, $0.120/M cached input, $4.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "GLM-5.3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$4.00",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "753",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No"
         }
       },
       "benchmarks": {
@@ -36335,6 +36477,24 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.5"
+        },
+        "05bda0713c2ae542cc9e": {
+          "model": "GLM-5.3-Flash",
+          "organization": "ZAI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$0.50",
+          "Speed": "1c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "12.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -49815,6 +49975,34 @@
           "License": "",
           "Input$/M": "0.2",
           "Output$/M": "1.2"
+        },
+        "782aa34fd8824439e702": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "64c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
+        },
+        "1b853cb3251330b33925": {
+          "model": "GPT-5.6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-luna",
+          "origin": "US",
+          "description": "GPT-5.6 Luna by OpenAI — released Jul 9, 2026; $0.200/M input, $0.020/M cached input, $1.20/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Luna",
+          "Context": "1.1M",
+          "Speed": "97c/s",
+          "License": "",
+          "Input$/M": "0.2",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
@@ -51402,6 +51590,34 @@
           "License": "",
           "Input$/M": "5",
           "Output$/M": "30"
+        },
+        "7d04e050a9d75153e1a8": {
+          "model": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "origin": "US",
+          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Sol",
+          "Context": "1.1M",
+          "Speed": "66c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "30"
+        },
+        "a1d03e2a9bcede391f37": {
+          "model": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "origin": "US",
+          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Sol",
+          "Context": "1.1M",
+          "Speed": "89c/s",
+          "License": "",
+          "Input$/M": "5",
+          "Output$/M": "30"
         }
       },
       "benchmarks": {
@@ -52657,6 +52873,24 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "12"
+        },
+        "412d726b343a06f38d54": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Jul. 2026",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "$12.00",
+          "Speed": "33c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.6s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -53560,6 +53794,52 @@
           "License": "",
           "Input$/M": "10",
           "Output$/M": "50"
+        },
+        "5e9b5cdad2ad276da21a": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Context": "1.1M",
+          "Speed": "51c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
+        },
+        "dd5ecab75ad47b79428b": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Context": "1.1M",
+          "Speed": "48c/s",
+          "License": "",
+          "Input$/M": "10",
+          "Output$/M": "50"
+        },
+        "1e4bd48c261a6c63a9fe": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "$50.00",
+          "Speed": "35c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "4.2s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -62180,6 +62460,24 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "12"
+        },
+        "443dc366a8d33f960031": {
+          "model": "Gemini 3.1 Pro",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+          "origin": "US",
+          "description": "Gemini 3.1 Pro by Google — released Feb 19, 2026; $2.00/M input and $12.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Feb. 2026",
+          "Model": "Gemini 3.1 Pro",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "$12.00",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jan. 2025",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -64822,6 +65120,38 @@
           "License": "",
           "Input$/M": "0.75",
           "Output$/M": "3.75"
+        },
+        "0bf18e6e69184c3ba383": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Context": "1.0M",
+          "Speed": "159c/s",
+          "License": "",
+          "Input$/M": "0.75",
+          "Output$/M": "3.75"
+        },
+        "9bf1d94535d2c1616753": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "$3.75",
+          "Speed": "164c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "14.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -66111,6 +66441,20 @@
           "License": "",
           "Input$/M": "2",
           "Output$/M": "6"
+        },
+        "940bf6d589709c545698": {
+          "model": "Grok 4.6",
+          "organization": "xAI",
+          "link": "https://llm-stats.com/models/grok-4.6",
+          "origin": "US",
+          "description": "Grok 4.6 by xAI — released Aug 12, 2026; $2.00/M input, $0.500/M cached input, $6.00/M output; 500K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-12",
+          "Model": "Grok 4.6",
+          "Context": "500k",
+          "Speed": "35c/s",
+          "License": "",
+          "Input$/M": "2",
+          "Output$/M": "6"
         }
       },
       "benchmarks": {
@@ -66791,6 +67135,24 @@
           "License": "",
           "Input$/M": "—",
           "Output$/M": "—"
+        },
+        "04afd0b15f2c89613896": {
+          "model": "Hy4 preview",
+          "organization": "Tencent",
+          "link": "https://llm-stats.com/models/hy4-preview",
+          "origin": "CN",
+          "description": "Hy4 preview by Tencent — released Aug 28, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Hy4 preview",
+          "Country": "🇨🇳",
+          "Context": "-",
+          "Output$/M": "-",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "770",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No"
         }
       },
       "benchmarks": {
@@ -75428,6 +75790,38 @@
           "License": "",
           "Input$/M": "2.85",
           "Output$/M": "14.25"
+        },
+        "c22012287d53b63c341a": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Context": "1.0M",
+          "Speed": "2c/s",
+          "License": "",
+          "Input$/M": "2.85",
+          "Output$/M": "14.25"
+        },
+        "867626394dcfd6605f46": {
+          "model": "Kimi K3",
+          "organization": "MoonshotAI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Jul. 2026",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$14.25",
+          "Speed": "3c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "12.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -82673,6 +83067,24 @@
           "Speed": "7c/s",
           "Parameters(B)": "-",
           "Latency": "8.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
+        },
+        "76de051c3a6b8f1356f8": {
+          "model": "Muse Spark 1.3",
+          "organization": "Meta",
+          "link": "https://llm-stats.com/models/muse-spark-1.3",
+          "origin": "US",
+          "description": "Muse Spark 1.3 by Meta — released Sep 2, 2026; $1.25/M input, $0.150/M cached input, $4.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Muse Spark 1.3",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "$4.25",
+          "Speed": "5c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "9.0s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
         }
@@ -93149,6 +93561,38 @@
           "License": "",
           "Input$/M": "0.15",
           "Output$/M": "0.47"
+        },
+        "c853cb3afebbc25cd570": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Context": "1M",
+          "Speed": "61c/s",
+          "License": "",
+          "Input$/M": "0.15",
+          "Output$/M": "0.47"
+        },
+        "8038e5680230e4c9b626": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "$0.47",
+          "Speed": "61c/s",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "5.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -93844,6 +94288,38 @@
           "License": "",
           "Input$/M": "1.65",
           "Output$/M": "4.951"
+        },
+        "64b8d4e07756c24f7c6d": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Context": "1.0M",
+          "Speed": "6c/s",
+          "License": "",
+          "Input$/M": "1.65",
+          "Output$/M": "4.951"
+        },
+        "c951a1ea689e28b0e9f3": {
+          "model": "Qwen3.8 Max",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$4.95",
+          "Speed": "6c/s",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "18.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -94437,6 +94913,24 @@
           "License": "",
           "Input$/M": "0.4",
           "Output$/M": "3"
+        },
+        "06d09b6a6d0507a201a7": {
+          "model": "Qwen3.8-27B",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-27b",
+          "origin": "CN",
+          "description": "Qwen3.8-27B by Alibaba Cloud / Qwen Team — released Aug 14, 2026; $0.400/M input, $0.040/M cached input, $3.00/M output; 262K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8-27B",
+          "Country": "🇨🇳",
+          "Context": "262.1k",
+          "Output$/M": "$3.00",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "27.8",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -94968,6 +95462,24 @@
           "License": "",
           "Input$/M": "—",
           "Output$/M": "—"
+        },
+        "a259ce85c792df401f15": {
+          "model": "Qwen3.8-Flash-Next",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-flash-next",
+          "origin": "CN",
+          "description": "Qwen3.8-Flash-Next by Alibaba Cloud / Qwen Team — released Aug 26, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8-Flash-Next",
+          "Country": "🇨🇳",
+          "Context": "-",
+          "Output$/M": "-",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -96411,6 +96923,24 @@
           "License": "",
           "Input$/M": "—",
           "Output$/M": "—"
+        },
+        "472161b7e454ab7482d6": {
+          "model": "GPT-5.5 Pro",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.5-pro",
+          "origin": "US",
+          "description": "GPT-5.5 Pro by OpenAI — released Apr 23, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Apr. 2026",
+          "Model": "GPT-5.5 Pro",
+          "Country": "🇺🇸",
+          "Context": "-",
+          "Output$/M": "-",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -96842,6 +97372,24 @@
           "License": "",
           "Input$/M": "0.22",
           "Output$/M": "0.66"
+        },
+        "d611e3b16210c9819b8c": {
+          "model": "DeepSeek-V4.1-Flash",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "origin": "CN",
+          "description": "DeepSeek-V4.1-Flash by DeepSeek — released Sep 10, 2026; $0.220/M input, $0.007/M cached input, $0.660/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "DeepSeek-V4.1-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$0.66",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "763.2",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -96985,7 +97533,26 @@
     },
     "88ef041406ee2d59a1bb": {
       "name": "Claude Mythos 5.1",
-      "profiles": {},
+      "profiles": {
+        "0d34c4a6e69ccc0caa0b": {
+          "model": "Claude Mythos 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-mythos-5-1",
+          "origin": "US",
+          "description": "Claude Mythos 5.1 by Anthropic — released Sep 1, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Claude Mythos 5.1",
+          "Country": "🇺🇸",
+          "Context": "-",
+          "Output$/M": "-",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
+        }
+      },
       "benchmarks": {
         "toolathlon": {
           "afecf81b2a5aa4bc": {
@@ -97066,6 +97633,322 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-16"
+          }
+        }
+      }
+    },
+    "dce82c84d29ece4c2f0c": {
+      "name": "Grok 4.7",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "b2331814b9d144c3": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 71.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/grok-4.7",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-22"
+          }
+        },
+        "terminal-bench-2.1": {
+          "bad4097dcea8e6af": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 73.4,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID grok/grok-4.7; reasoning_effort=xhigh.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-22",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "cecc4fa3b7fc0121217c": {
+      "name": "MiMo-V2.6-Pro",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "8701ac6ee32e7932": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 31.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-pro",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-22"
+          }
+        },
+        "deepswe-1.1": {
+          "7a534cae5d56347f": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 71.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-pro",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-22"
+          }
+        },
+        "terminal-bench-2.1": {
+          "e5b1d73046580d73": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 89.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-pro",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-22"
+          },
+          "b80f709318c20a74": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 67.8,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID xiaomi/mimo-v2.6-pro; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "ea0a7dfc3c30203d824c": {
+      "name": "MiMo-V2.6-Flash",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "12fdbd515cd559ee": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 27.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-flash",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-22"
+          }
+        },
+        "deepswe-1.1": {
+          "f674994ac6588de6": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 67.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-flash",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-22"
+          }
+        },
+        "terminal-bench-2.1": {
+          "b5f0ff6976d88dbf": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 87.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.6-flash",
+            "availableFrom": "2026-09-22",
+            "retrievedAt": "2026-09-22",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-22"
+          },
+          "aab29c401c1bb9e8": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 76.4,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID xiaomi/mimo-v2.6-flash; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "bf6872882b4e0722ae12": {
+      "name": "Claude Opus 5.5",
+      "profiles": {
+        "47b3bb0f11ddec389167": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Sep. 2026",
+          "Model": "Claude Opus 5.5\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "$20.00",
+          "Speed": "176c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "9.5s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes"
+        }
+      },
+      "benchmarks": {
+        "deepswe-1.1": {
+          "a54fb9faa275c43f": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 74.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-5-5",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "officeqa-pro": {
+          "8a758acc713f8634": {
+            "benchmark": "OfficeQA Pro",
+            "score": 67.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-5-5",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "terminal-bench-2.1": {
+          "dbeaa3c17f1fc4d7": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 87.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID anthropic/claude-opus-5-5; compute_effort=high; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "57d28ce06e21fd40ae40": {
+      "name": "GPT-6 Sol",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "43d255588e2b0cec": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 56.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-sol",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "deepswe-1.1": {
+          "ef9972b0c619c2b9": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 68.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-sol",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        }
+      }
+    },
+    "822c760d6aa27b46cc0b": {
+      "name": "GPT-6 Luna",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "9b145d49415ad6ed": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 50.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-luna",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "deepswe-1.1": {
+          "88aebdaa756f86b8": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 66.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-luna",
+            "availableFrom": "2026-09-23",
+            "retrievedAt": "2026-09-23",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-23"
           }
         }
       }
