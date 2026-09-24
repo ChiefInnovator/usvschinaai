@@ -17,3 +17,4 @@
 {"ts": "2026-09-21T03:51:20.623020+00:00", "model": "gpt-5.6-luna", "format": "price_vs_power", "input_tokens": 1052, "output_tokens": 320, "cached_tokens": 0, "usd": 0.000594}
 {"ts": "2026-09-22T03:49:21.315716+00:00", "model": "gpt-5.6-luna", "format": "benchmark_day", "input_tokens": 1064, "output_tokens": 136, "cached_tokens": 0, "usd": 0.000376}
 {"ts": "2026-09-23T03:47:12.946721+00:00", "model": "gpt-5.6-terra", "format": "new_challenger", "input_tokens": 1062, "output_tokens": 208, "cached_tokens": 0, "usd": 0.00462}
+{"ts": "2026-09-24T03:37:37.408792+00:00", "model": "gpt-5.6-luna", "format": "biggest_mover", "input_tokens": 1083, "output_tokens": 337, "cached_tokens": 0, "usd": 0.000621}

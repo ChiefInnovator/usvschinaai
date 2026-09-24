@@ -264,6 +264,16 @@
     }
   },
   "DeepSeek-V4.1-Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-24T03:33:29.530635+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Officially published September 10, 2026; this is specifically DeepSWE v1.1, and the changelog does not state effort.",
+      "score": "74.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://api-docs.deepseek.com/updates/"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-11T03:32:26.561650+00:00",
@@ -625,6 +635,18 @@
       "source_url": "https://artificialanalysis.ai/models/comparisons/grok-4-6-vs-grok-4-6-xhigh"
     }
   },
+  "Grok 4.7": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-24T03:33:29.530635+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports 43.1% for Grok 4.7; this is its text-only HLE evaluation over 2,158 questions. The individual-result publication date is not stated.",
+      "score": "43.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+    }
+  },
   "Hy4 preview": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -635,6 +657,18 @@
       "score": "43.4%",
       "source_type": "model_card",
       "source_url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg"
+    }
+  },
+  "MiMo-V2.6-Pro": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-24T03:33:29.530635+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports 49%; the cited comparison page was published September 21, 2026 and does not expose a reasoning-effort setting.",
+      "score": "49.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/comparisons/mimo-v2-6-pro-vs-minimax-m3"
     }
   },
   "Muse Spark 1.3": {

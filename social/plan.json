@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-23",
-  "timestamp": "2026-09-23T03:46:07+00:00",
-  "format": "new_challenger",
-  "palette": "newsprint",
-  "weight": 3,
+  "date": "2026-09-24",
+  "timestamp": "2026-09-24T03:36:33+00:00",
+  "format": "biggest_mover",
+  "palette": "graphite",
+  "weight": 2,
   "slides": [
-    "2026-09-23-1-new_challenger-newsprint.png",
-    "2026-09-23-2-leaderboard-newsprint.png"
+    "2026-09-24-1-biggest_mover-graphite.png",
+    "2026-09-24-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-23-1-new_challenger-newsprint.png",
-    "https://usvschina.ai/social/2026-09-23-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-09-24-1-biggest_mover-graphite.png",
+    "https://usvschina.ai/social/2026-09-24-2-leaderboard-graphite.png"
   ],
-  "caption": "China adds two new Top 10 entries as the US holds the overall lead.\n\n• US leads 4,348.51 to 2,736.84, a margin of 1,611.7.\n• GLM-5.3 enters at No. 8 with a 628.2 unified score.\n• Qwen3.8 Max debuts at No. 9; China now holds 4 of the Top 10.\n\nDo GLM-5.3 and Qwen3.8 Max change the next matchup?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #LLM #AIModels #USvsChina #GLM53 #Qwen38 #AILeaderboard",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-09-23T03:47:07.195703+00:00"
+  "caption": "GLM-5.3-Flash fell 5 places as the US held the top spot\n\n• US models took 8 of the top 10; China placed 2.\n• Kimi K3 led China at rank 5 with a 705.2 unified score.\n• GLM-5.3-Flash dropped 5 places but posted 119.3 value.\n\nWas GLM-5.3-Flash’s value enough to offset a 5-place drop?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #GLM53Flash #KimiK3 #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-09-24T03:37:30.863689+00:00"
 }

@@ -255,5 +255,23 @@
       "#Qwen38",
       "#AILeaderboard"
     ]
+  },
+  "2026-09-24T03:36:33+00:00|biggest_mover": {
+    "hook": "GLM-5.3-Flash fell 5 places as the US held the top spot",
+    "bullets": [
+      "US models took 8 of the top 10; China placed 2.",
+      "Kimi K3 led China at rank 5 with a 705.2 unified score.",
+      "GLM-5.3-Flash dropped 5 places but posted 119.3 value."
+    ],
+    "question": "Was GLM-5.3-Flash\u2019s value enough to offset a 5-place drop?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#USvsChina",
+      "#GLM53Flash",
+      "#KimiK3",
+      "#ModelRankings"
+    ]
   }
 }
