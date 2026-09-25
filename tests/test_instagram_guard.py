@@ -117,6 +117,8 @@ class CarouselTests(unittest.TestCase):
         pti.requests.post = post
         pti.wait_for_container = lambda *a, **k: None
         pti.check_token_expiry = lambda *a, **k: None
+        self.addCleanup(setattr, pti, "graph_get", pti.graph_get)
+        pti.graph_get = lambda *a, **k: {"id": "comment", "text": pti.FIRST_COMMENT}
         return calls
 
     def test_call_sequence(self):
@@ -148,8 +150,8 @@ class CarouselTests(unittest.TestCase):
                 self.assertEqual(calls[-1], ("comments", {"message": pti.FIRST_COMMENT, "access_token": "tok"}))
 
     def test_old_plan_bare_domain_is_removed(self):
-        self.assertEqual(pti.without_site_link("Live board: usvschina.ai"),
-                         "Live board: the link in the first comment")
+        self.assertEqual(pti.without_site_link("Hook\n\nLive board: usvschina.ai\n\n#AI"), "Hook\n\n#AI")
+        self.assertEqual(pti.without_site_link("Hook\n\nLive board: link in the first comment.\n\n#AI"), "Hook\n\n#AI")
 
     def test_comment_failure_reports_published_post_without_republishing(self):
         from unittest.mock import patch
@@ -215,6 +217,8 @@ class TaggingTests(unittest.TestCase):
         self.addCleanup(setattr, pti, "wait_for_container", pti.wait_for_container)
         self.addCleanup(setattr, pti, "check_token_expiry", pti.check_token_expiry)
         pti.requests.post = post; pti.wait_for_container = lambda *a, **k: None; pti.check_token_expiry = lambda *a, **k: None
+        self.addCleanup(setattr, pti, "graph_get", pti.graph_get)
+        pti.graph_get = lambda *a, **k: {"id": "comment", "text": pti.FIRST_COMMENT}
         pti.post_carousel(["https://x/1.png", "https://x/2.png"], "cap", "tok", "user")
         self.assertIn("user_tags", calls[0][1]); self.assertIn("user_tags", calls[1][1])
         self.assertNotIn("user_tags", calls[2][1])
@@ -258,8 +262,11 @@ class PlanTests(unittest.TestCase):
         import os
         calls = []
         for name in ("load_plan", "already_posted_today", "snapshot_is_today", "wait_for_urls",
-                     "post_carousel", "post_to_instagram", "load_caption_data", "build_caption"):
+                     "post_carousel", "post_to_instagram", "load_caption_data", "build_caption",
+                     "require_comment_permission", "repair_recent_comments"):
             self.addCleanup(setattr, pti, name, getattr(pti, name))
+        pti.require_comment_permission = lambda *a: None
+        pti.repair_recent_comments = lambda *a: None
         pti.load_plan = lambda *a, **k: plan
         pti.already_posted_today = lambda *a, **k: None
         pti.snapshot_is_today = lambda *a, **k: True
