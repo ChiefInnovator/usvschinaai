@@ -142,7 +142,7 @@ def main():
     repair_recent_comments(page["access_token"], ig_user_id, args.days)
 
     set_secret("INSTAGRAM_ACCESS_TOKEN", page["access_token"])
-    print(f"Updated INSTAGRAM_ACCESS_TOKEN and IG_USER_ID for {page['name']} (IG {ig_user_id}).")
+    print(f"Updated INSTAGRAM_ACCESS_TOKEN for {page['name']} (IG {ig_user_id}).")
 
 
 if __name__ == "__main__":
