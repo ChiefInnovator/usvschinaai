@@ -88,8 +88,6 @@ def build_caption(data):
         f"\n"
         f"\U0001F3C6 #1 Model: {data['top_flag']} {data['top_model']}\n"
         f"\n"
-        f"Full rankings: link in the first comment.\n"
-        f"\n"
         f"#AI #ArtificialIntelligence #USvsChinaAI #AIrace "
         f"#MachineLearning #LLM #AIbenchmarks #FrontierAI "
         f"#TechCompetition #AIleaderboard"
@@ -102,11 +100,90 @@ GRAPH_API_BASE = "https://graph.facebook.com/v23.0"
 FIRST_COMMENT = "Live board and full rankings: https://usvschina.ai"
 
 
+@preconditions(path="nonempty", access_token="nonempty", params="?mapping")
+def graph_get(path, access_token, params=None):
+    """Keep credentials out of request URLs and exception messages."""
+    resp = requests.get(f"{GRAPH_API_BASE}/{path}", params=params,
+                        headers={"Authorization": f"Bearer {access_token}"}, timeout=30)
+    _raise_with_body(resp, path)
+    return resp.json()
+
+
+@preconditions(path="nonempty", access_token="nonempty", params="?mapping")
+def graph_items(path, access_token, params=None):
+    """Follow cursors without following URLs containing credentials."""
+    params = dict(params or {})
+    seen = set()
+    while True:
+        payload = graph_get(path, access_token, params)
+        yield from payload["data"]
+        paging = payload.get("paging", {})
+        if not paging.get("next"):
+            return
+        after = paging.get("cursors", {}).get("after")
+        if not after or after in seen:
+            raise RuntimeError(f"Invalid pagination for {path}")
+        seen.add(after)
+        params["after"] = after
+
+
+@preconditions(post_id="nonempty", access_token="nonempty", ig_user_id="nonempty")
+def ensure_first_comment(post_id, access_token, ig_user_id):
+    for comment in graph_items(f"{post_id}/comments", access_token,
+                               params={"fields": "id,text,from", "limit": 100}):
+        if (comment.get("text") == FIRST_COMMENT
+                and str(comment.get("from", {}).get("id")) == str(ig_user_id)):
+            print(f"Link comment already exists on post {post_id}: {comment['id']}")
+            return comment["id"]
+    return post_first_comment(post_id, access_token)
+
+
+@preconditions(access_token="nonempty", ig_user_id="nonempty", days="positive")
+def repair_recent_comments(access_token, ig_user_id, days=7):
+    """Recover comments independently of the daily publishing guard."""
+    from datetime import datetime, timedelta, timezone
+    cutoff = max(datetime.now(timezone.utc) - timedelta(days=days),
+                 datetime(2026, 9, 20, tzinfo=timezone.utc))
+    for post in graph_items(f"{ig_user_id}/media", access_token,
+                            params={"fields": "id,timestamp,caption,permalink", "limit": 100}):
+        if parse_date(post["timestamp"]) < cutoff:
+            continue
+        # Only repair this campaign's posts, not unrelated account content.
+        if not re.search(r"usvschina|US vs.*China", post.get("caption", ""), re.I):
+            continue
+        ensure_first_comment(post["id"], access_token, ig_user_id)
+
+
+@preconditions(access_token="nonempty")
+def require_comment_permission(access_token):
+    app_id, app_secret = os.getenv("FB_APP_ID"), os.getenv("FB_APP_SECRET")
+    inspector = f"{app_id}|{app_secret}" if app_id and app_secret else access_token
+    # Never expose an exception URL containing the inspected token.
+    try:
+        resp = requests.get(f"{GRAPH_API_BASE}/debug_token",
+                            params={"input_token": access_token},
+                            headers={"Authorization": f"Bearer {inspector}"}, timeout=30)
+    except requests.RequestException:
+        raise RuntimeError("Token permission inspection could not reach Meta") from None
+    if not resp.ok:
+        raise RuntimeError(f"Token permission inspection failed (HTTP {resp.status_code})")
+    info = resp.json().get("data", {})
+    if not info.get("is_valid"):
+        raise RuntimeError("Instagram token is invalid; refresh authorization before publishing")
+    required = {"instagram_basic", "instagram_content_publish", "instagram_manage_comments",
+                "pages_read_engagement"}
+    missing = required - set(info.get("scopes", []))
+    if missing:
+        raise RuntimeError(f"Instagram token lacks permissions: {', '.join(sorted(missing))}. "
+                           "Reauthorize the Meta app and update INSTAGRAM_ACCESS_TOKEN.")
+
+
 @preconditions(caption='text')
 def without_site_link(caption):
-    """Handle site links in older plans and manual caption overrides too."""
-    return re.sub(r"(?i)(?:https?://)?(?:www\.)?usvschina\.ai(?:/[^\s]*)?",
-                  "the link in the first comment", caption)
+    """Drop site-link and first-comment lines from older plans and manual overrides."""
+    kept = [line for line in caption.split("\n")
+            if not re.search(r"(?i)usvschina\.ai|first comment", line)]
+    return re.sub(r"\n{3,}", "\n\n", "\n".join(kept)).strip()
 
 
 @preconditions(post_id='nonempty', access_token='nonempty')
@@ -120,6 +197,13 @@ def post_first_comment(post_id, access_token):
         )
         _raise_with_body(resp, "first comment")
         comment_id = resp.json()["id"]
+        for attempt in range(3):
+            confirmed = graph_get(comment_id, access_token, {"fields": "id,text"})
+            if confirmed.get("text") == FIRST_COMMENT:
+                break
+            if attempt == 2:
+                raise ValueError("Comment text was not confirmed by readback")
+            time.sleep(2)
     except (requests.RequestException, ValueError, KeyError) as exc:
         raise RuntimeError(
             f"Post {post_id} is published, but its link comment was not confirmed. "
@@ -146,12 +230,10 @@ def _raise_with_body(resp, context):
 def check_token_expiry(access_token):
     """Warn when the access token expires within 30 days. Soft-fail."""
     try:
-        resp = requests.get(
-            f"{GRAPH_API_BASE}/debug_token",
-            params={"input_token": access_token, "access_token": access_token},
-            timeout=30,
-        )
-        info = resp.json().get("data", {})
+        info = graph_get("debug_token", access_token, {"input_token": access_token}).get("data", {})
+        if not info.get("is_valid") or "expires_at" not in info:
+            print("Token expiry could not be confirmed")
+            return
         expires_at = info.get("expires_at")
         if not expires_at:  # 0 / absent = never expires
             print("Token check: no expiry (never-expiring token confirmed)")
@@ -162,8 +244,8 @@ def check_token_expiry(access_token):
             print(f"WARNING: Instagram access token expires in {remaining.days} day(s) — rotate it soon")
         else:
             print(f"Token check: expires in {remaining.days} day(s)")
-    except Exception as e:
-        print(f"Token check skipped ({e})")
+    except Exception:
+        print("Token expiry check failed; expiry is unknown")
 
 
 @preconditions(creation_id='nonempty', access_token='nonempty', timeout_seconds='positive')
@@ -456,6 +538,12 @@ def main():
         print("ERROR: INSTAGRAM_ACCESS_TOKEN and IG_USER_ID must be set")
         sys.exit(1)
 
+    require_comment_permission(access_token)
+    repair_recent_comments(access_token, ig_user_id)
+    if os.environ.get("IG_COMMENTS_ONLY", "").lower() in ("1", "true", "yes"):
+        print("Instagram comment recovery complete; no media published.")
+        return
+
     workspace = Path(__file__).resolve().parent.parent
     models_path = workspace / "models.json"
 
@@ -470,6 +558,8 @@ def main():
         print("IG_FORCE set - bypassing the once-per-day and freshness guards")
     else:
         posted = already_posted_today(access_token, ig_user_id)
+        if posted and posted.startswith("UNKNOWN"):
+            raise RuntimeError("Could not verify existing Instagram posts; refusing to publish")
         if posted:
             print(f"Skipping: already posted today ({posted}). Maximum one post per day.")
             return

@@ -13,6 +13,14 @@ on:
         description: 'Bypass the once-per-day guard (credential testing only)'
         type: boolean
         default: false
+      comments_only:
+        description: 'Repair missing link comments without publishing media'
+        type: boolean
+        default: false
+
+concurrency:
+  group: instagram-publishing
+  cancel-in-progress: false
 
 jobs:
   post-instagram:
@@ -37,30 +45,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests python-dateutil
 
-      - name: Wait for deployment to propagate
-        run: sleep 45
-
-      - name: Verify image is accessible
-        run: |
-          # `|| echo "000"` keeps the substitution from killing the step under
-          # bash -e when curl itself fails (e.g. DNS down) — without it the
-          # graceful image_ready=false path below is unreachable.
-          HTTP_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://usvschina.ai/ig-image.png" || echo "000")
-          if [ "$HTTP_STATUS" != "200" ]; then
-            echo "WARNING: ig-image.png not accessible (HTTP $HTTP_STATUS)"
-            echo "image_ready=false" >> $GITHUB_OUTPUT
-          else
-            echo "Image verified accessible at https://usvschina.ai/ig-image.png"
-            echo "image_ready=true" >> $GITHUB_OUTPUT
-          fi
-        id: verify
-
       - name: Post to Instagram
-        if: steps.verify.outputs.image_ready == 'true'
-        continue-on-error: true
         env:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          FB_APP_ID: ${{ secrets.FB_APP_ID }}
+          FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
+          IG_COMMENTS_ONLY: ${{ inputs.comments_only && '1' || '' }}
           # The script asks Instagram for its latest post and skips if that was
           # today. Only a manual dispatch with force=true bypasses it. It posts
           # the carousel in social/plan.json (written by the daily scrape) and
@@ -70,5 +61,6 @@ jobs:
           if [ -n "$INSTAGRAM_ACCESS_TOKEN" ] && [ -n "$IG_USER_ID" ]; then
             python scripts/post_to_instagram.py
           else
-            echo "Skipping — Instagram credentials not configured"
+            echo "::error::Instagram credentials not configured"
+            exit 1
           fi

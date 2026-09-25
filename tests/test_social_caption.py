@@ -98,7 +98,7 @@ class SafetyTests(unittest.TestCase):
     def test_render_caption_shape(self):
         text = sc.render_caption(sc.fallback_caption(FACTS, "leaderboard"))
         self.assertNotIn("usvschina.ai", text)
-        self.assertIn("link in the first comment", text)
+        self.assertNotIn("first comment", text)
         self.assertEqual(text.count("•"), 3)
         self.assertTrue(text.strip().endswith("#TechNews"))
 
