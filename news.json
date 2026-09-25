@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-09-24T03:37:26.638718+00:00",
+  "lastUpdated": "2026-09-25T03:38:34.577914+00:00",
   "items": [
+    {
+      "id": "14c7f46ef587cc45",
+      "headline": "Weekly Basal Insulin Efsitora: A New Biologics CMC Benchmark",
+      "url": "https://www.pharmtech.com/view/weekly-basal-insulin-efsitora-a-new-biologics-cmc-benchmark",
+      "source": "Pharmtech",
+      "country": "Both",
+      "publishedAt": "2026-09-24 15:03:17",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "8e14a0624853edbb",
+      "headline": "OpenAI agent hacking spree widens to Australia, targeting government website",
+      "url": "https://www.helpnetsecurity.com/2026/09/24/openai-agent-hacking-australia/",
+      "source": "Help Net Security",
+      "country": "US",
+      "publishedAt": "2026-09-24 12:53:34",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "7cd78081d18a1762",
+      "headline": "AI Model Combining Ultrasound and Digital Breast Tomosynthesis Improves Specificity in Breast Cancer Triage",
+      "url": "https://www.newswise.com/articles/ai-model-combining-ultrasound-and-digital-breast-tomosynthesis-improves-specificity-in-breast-cancer-triage/?sc=rsla",
+      "source": "Newswise",
+      "country": "Both",
+      "publishedAt": "2026-09-24 12:05:19",
+      "relevanceScore": 0.32
+    },
     {
       "id": "9e1a819d982a2c84",
       "headline": "Global, tech leaders weigh in on AI development debate",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-13 13:35:42",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "0db95b196a774fec",
-      "headline": "Anthropic CEO calls for slowing AI development, citing safety worries",
-      "url": "https://www.pennlive.com/nation-world/2026/09/anthropic-ceo-calls-for-slowing-ai-development-citing-safety-worries.html",
-      "source": "Pennlive",
-      "country": "US",
-      "publishedAt": "2026-09-13 12:56:35",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "a8713aef1f701f00",
-      "headline": "Anthropic and OpenAI CEOs call for AI development to slow down, OpenAI to delay IPO",
-      "url": "https://www.nhpr.org/2026-09-12/anthropic-and-openai-ceos-call-for-ai-development-to-slow-down-openai-to-delay-ipo",
-      "source": "Nhpr",
-      "country": "US",
-      "publishedAt": "2026-09-12 09:00:00",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "1358ae15710891e4",
-      "headline": "Why are the people building the most powerful AI so worried about what it could do?",
-      "url": "https://www.wesanews.org/national-international-news/2026-09-12/why-are-the-people-building-the-most-powerful-ai-so-worried-about-what-it-could-do",
-      "source": "Wesa",
-      "country": "US",
-      "publishedAt": "2026-09-12 09:00:00",
-      "relevanceScore": 0.3
     }
   ]
 }

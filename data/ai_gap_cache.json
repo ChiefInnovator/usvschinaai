@@ -125,6 +125,28 @@
       "source_url": "https://openai.com/index/gpt-6-astra/?video=1222553704"
     }
   },
+  "Claude Opus 5.5": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Verified semi-private ARC-AGI-2 score at high reasoning effort. The result page is dated September 22, 2026.",
+      "score": "93.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/anthropic-claude-opus-5-5"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "No-tools, text-only HLE result at adaptive thinking and max effort. Publication date of this individual result is unknown.",
+      "score": "64.4%",
+      "source_type": "system_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
+    }
+  },
   "Claude Sonnet 5": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
@@ -519,6 +541,40 @@
       "source_url": "https://deepswe.datacurve.ai/"
     }
   },
+  "GPT-6 Luna": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Verified Semi-Private score at max reasoning; result page published September 22, 2026.",
+      "score": "59.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/openai-gpt-6-luna"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis reports the highest listed GPT-6 Luna reasoning setting, max; its model page does not independently publish an individual-result date.",
+      "score": "39.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gpt-6-luna"
+    }
+  },
+  "GPT-6 Sol": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1 at maximum reasoning effort; OpenAI’s launch post reports the result. Publication date not independently stated on the post.",
+      "score": "68.8%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    }
+  },
   "Gemini 3.1 Pro": {
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
@@ -659,7 +715,29 @@
       "source_url": "https://raw.githubusercontent.com/Tencent-Hunyuan/Hy4-preview/main/assets/benchmark-appendix.jpg"
     }
   },
+  "MiMo-V2.6-Flash": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Xiaomi's technical-report evaluation table reports 67.9% on DeepSWE v1.1 for MiMo-V2.6-Flash; no independently verified publication date for this individual result was found.",
+      "score": "67.9%",
+      "source_type": "paper",
+      "source_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Flash-RL/blob/main/MiMo_V2_6_technical_report.pdf"
+    }
+  },
   "MiMo-V2.6-Pro": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-25T03:32:35.389699+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "MiMo-V2.6-Pro result on DeepSWE v1.1 in Xiaomi's technical report; reported publication date of this individual result is unknown.",
+      "score": "71.9%",
+      "source_type": "paper",
+      "source_url": "https://huggingface.co/XiaomiMiMo/MiMo-V2.6-Pro-RL/resolve/main/MiMo_V2_6_technical_report.pdf?download=true"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-24T03:33:29.530635+00:00",

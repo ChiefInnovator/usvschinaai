@@ -273,5 +273,23 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-09-25T03:37:39+00:00|head_to_head": {
+    "hook": "The US holds the board, but China owns the No. 3 and No. 4 slots.",
+    "bullets": [
+      "US leads 4195.19 to 2595.67, with a 1599.5-point margin.",
+      "GPT-6 Astra ranks No. 1 at 900.3; Kimi K3 follows at No. 3 with 777.7.",
+      "The top 10 split 6 US models to 4 from China; GLM-5.3-Flash rose 5 places."
+    ],
+    "question": "Is the US lead more important than China\u2019s strength near the top?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#USvsChina",
+      "#GPT6Astra",
+      "#KimiK3",
+      "#GLM53Flash"
+    ]
   }
 }

@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-24",
-  "timestamp": "2026-09-24T03:36:33+00:00",
-  "format": "biggest_mover",
-  "palette": "graphite",
-  "weight": 2,
+  "date": "2026-09-25",
+  "timestamp": "2026-09-25T03:37:39+00:00",
+  "format": "head_to_head",
+  "palette": "newsprint",
+  "weight": 1,
   "slides": [
-    "2026-09-24-1-biggest_mover-graphite.png",
-    "2026-09-24-2-leaderboard-graphite.png"
+    "2026-09-25-1-head_to_head-newsprint.png",
+    "2026-09-25-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-24-1-biggest_mover-graphite.png",
-    "https://usvschina.ai/social/2026-09-24-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-09-25-1-head_to_head-newsprint.png",
+    "https://usvschina.ai/social/2026-09-25-2-leaderboard-newsprint.png"
   ],
-  "caption": "GLM-5.3-Flash fell 5 places as the US held the top spot\n\n• US models took 8 of the top 10; China placed 2.\n• Kimi K3 led China at rank 5 with a 705.2 unified score.\n• GLM-5.3-Flash dropped 5 places but posted 119.3 value.\n\nWas GLM-5.3-Flash’s value enough to offset a 5-place drop?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #GLM53Flash #KimiK3 #ModelRankings",
+  "caption": "The US holds the board, but China owns the No. 3 and No. 4 slots.\n\n• US leads 4195.19 to 2595.67, with a 1599.5-point margin.\n• GPT-6 Astra ranks No. 1 at 900.3; Kimi K3 follows at No. 3 with 777.7.\n• The top 10 split 6 US models to 4 from China; GLM-5.3-Flash rose 5 places.\n\nIs the US lead more important than China’s strength near the top?\n\nLive board: link in the first comment.\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #GPT6Astra #KimiK3 #GLM53Flash",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-24T03:37:30.863689+00:00"
+  "generated_at": "2026-09-25T03:38:38.777172+00:00"
 }
