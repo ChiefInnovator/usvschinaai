@@ -5,12 +5,12 @@
   "palette": "midnight",
   "weight": 0,
   "slides": [
-    "2026-09-26-1-leaderboard-midnight.png"
+    "2026-09-26-1-leaderboard-midnight-5603345ebc.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-26-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-26-1-leaderboard-midnight-5603345ebc.png"
   ],
-  "caption": "The US extends its lead, but China still owns the value fight.\n\n• US leads the scoreboard 4526.99 to 1656.89.\n• Kimi K3 is China’s top model at rank 4 with 727.5.\n• GLM-5.3-Flash posts 91.8 value, the day’s strongest efficiency mark.\n\nIs the scoreboard lead or model value the better measure of progress?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #OpenAI #KimiK3 #GLM53Flash",
-  "caption_source": "gpt-5.6-luna",
+  "caption": "Fresh rankings—and Claude Opus 5.5 is now tracked.\n\n• US models hold 7 of the top 10 spots, leading 4526.99 to 1656.89.\n• GPT-6 Astra leads at 900.2; Kimi K3 ranks fourth at 727.5.\n• Claude Opus 5.5 ranks 16th on our 20-model board, with results for 7 of 18 configured benchmarks. Missing results count as zero, which materially lowers its score while coverage is incomplete.\n\nHow should newly released models with incomplete benchmark coverage be compared?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #ClaudeOpus55 #GPT6Astra #KimiK3\n\n@richcrane",
+  "caption_source": "verified-editorial",
   "generated_at": "2026-09-26T04:46:01.412145+00:00"
 }
