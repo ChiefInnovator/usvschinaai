@@ -98826,7 +98826,7 @@
             "source": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence",
             "availableFrom": "2026-09-26",
             "retrievedAt": "2026-09-26",
-            "configuration": "Anthropic documentation directly states 92% accuracy for Claude Opus 5.5 on GPQA Diamond; the page does not specify a different model release or variant.",
+            "configuration": "Anthropic reports 92% on GPQA Diamond across two runs with fallbacks=\"default\". In each run, six biology questions triggered safety checks; Claude Opus 5 answered five through server-side fallback and the remaining refusal was counted as wrong. This is the documented safeguarded configuration, not a no-fallback measurement.",
             "kind": "published",
             "sourceType": "vendor_blog",
             "confidence": "high",
