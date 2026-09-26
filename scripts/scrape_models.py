@@ -421,10 +421,12 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
             continue
         metadata[slug] = dict(name=model['name'], organization_country=country,
                               release_date=min(dates), organization=profile.get('organization'),
+                              release_label=profile.get('created') or min(dates),
                               input_price=profile.get('Input$/M'), output_price=profile.get('Output$/M'))
         print(f"    ++ retained catalog release missing from source: {model['name']}")
     by_slug = {e.url.rstrip('/').rsplit('/', 1)[-1]: e for e in entries}
     candidates = []
+    release_days = {}
     for slug, record in metadata.items():
         if record.get('organization_country') != country:
             continue
@@ -444,17 +446,18 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
                                      f'https://llm-stats.com/models/{slug}', {})
             print(f'    ++ discovered outside displayed table: {name}')
         entry.columns.update({
-            'Released': release_day,
+            'Released': record.get('release_label') or release_day,
             'Organization': record.get('organization') or '',
             'Input $/M': str(record['input_price']) if record.get('input_price') is not None else '—',
             'Output $/M': str(record['output_price']) if record.get('output_price') is not None else '—',
         })
         candidates.append(entry)
+        release_days[entry.url] = release_day
     if not candidates:
         raise ValueError(f'No released {country} models in source dataset')
     # Research has a bounded per-run budget. Newly released models must not
     # sit behind hundreds of older rows (especially retained catalog releases).
-    candidates.sort(key=lambda e: e.columns['Released'], reverse=True)
+    candidates.sort(key=lambda e: release_days[e.url], reverse=True)
     return dedupe_superseded_versions(candidates)
 
 

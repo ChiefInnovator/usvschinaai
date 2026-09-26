@@ -18,12 +18,14 @@ class ModelDiscoveryTests(unittest.TestCase):
     def test_stale_source_cannot_remove_a_known_released_model(self):
         catalog = {'models': {'opus': {'name': 'Claude Opus 5.5',
             'profiles': {'p': {'link': 'https://llm-stats.com/models/claude-opus-5-5',
-                               'origin': 'US', 'organization': 'Anthropic', 'Output$/M': '$20'}},
+                               'origin': 'US', 'organization': 'Anthropic', 'Output$/M': '$20',
+                               'created': 'Sep. 2026'}},
             'benchmarks': {'arc': {'e': {'modelAvailableFrom': '2026-09-23'}}}}}}
         metadata = {'claude-opus-5': record('Claude Opus 5', '2026-07-24')}
         result = discover_released_models([], metadata, 'US', '2026-09-26', catalog)
         self.assertEqual([e.name for e in result], ['Claude Opus 5.5'])
         self.assertEqual(result[0].columns['Output $/M'], '$20')
+        self.assertEqual(result[0].columns['Released'], 'Sep. 2026')
         earlier = discover_released_models([], metadata, 'US', '2026-09-22', catalog)
         self.assertEqual([e.name for e in earlier], ['Claude Opus 5'])
 
