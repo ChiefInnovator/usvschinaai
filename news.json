@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-25T03:38:34.577914+00:00",
+  "lastUpdated": "2026-09-26T03:36:07.251999+00:00",
   "items": [
+    {
+      "id": "45f3e8aa26bcf565",
+      "headline": "Top AI companies call for safety measures while critics warn regulation could stifle innovation",
+      "url": "https://www.foxbusiness.com/technology/top-ai-companies-call-safety-measures-while-critics-warn-regulation-could-stifle-innovation",
+      "source": "Fox Business",
+      "country": "US",
+      "publishedAt": "2026-09-25 14:29:09",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "b832a472c9b11b9b",
+      "headline": "White House Tells OpenAI and Anthropic: America Tests First",
+      "url": "https://www.webpronews.com/white-house-tells-openai-and-anthropic-america-tests-first/",
+      "source": "Webpronews",
+      "country": "US",
+      "publishedAt": "2026-09-25 14:22:15",
+      "relevanceScore": 0.83
+    },
     {
       "id": "14c7f46ef587cc45",
       "headline": "Weekly Basal Insulin Efsitora: A New Biologics CMC Benchmark",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-13 14:28:57",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "989ea36c67ea6935",
-      "headline": "Top AI executives call for a slowdown in model development",
-      "url": "https://completeaitraining.com/news/top-ai-executives-call-for-a-slowdown-in-model-development/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-09-13 14:24:03",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "cde919d57e2022f6",
-      "headline": "Anthropic CEO Dario Amodei: \"For too long the industry lied\" about AI risks",
-      "url": "https://www.aol.com/articles/anthropic-ceo-dario-amodei-too-133542000.html",
-      "source": "Aol.com",
-      "country": "US",
-      "publishedAt": "2026-09-13 13:35:42",
-      "relevanceScore": 0.38
     }
   ]
 }

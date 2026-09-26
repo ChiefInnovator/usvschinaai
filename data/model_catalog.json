@@ -76164,6 +76164,24 @@
           "Latency": "13.5s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
+        },
+        "e5dbf8a56c25baac9e0c": {
+          "model": "Kimi K3",
+          "organization": "MoonshotAI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Jul. 2026",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$14.25",
+          "Speed": "2c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "12.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -94732,6 +94750,24 @@
           "License": "",
           "Parameters(B)": "2400",
           "Latency": "7.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes"
+        },
+        "f8ec0d5e015e49b6aa72": {
+          "model": "Qwen3.8 Max",
+          "organization": "Qwen",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "Aug. 2026",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "$4.95",
+          "Speed": "6c/s",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "18.2s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
         }
