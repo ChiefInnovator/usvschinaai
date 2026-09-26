@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-26T03:36:07.251999+00:00",
+  "lastUpdated": "2026-09-26T04:45:57.088018+00:00",
   "items": [
+    {
+      "id": "d600ac123a897550",
+      "headline": "The case for embracing AI’s inhumanity",
+      "url": "https://www.fastcompany.com/91612364/mustafa-suleyman-essay-meta-muse-jev",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-09-25 16:00:00",
+      "relevanceScore": 0.92
+    },
     {
       "id": "45f3e8aa26bcf565",
       "headline": "Top AI companies call for safety measures while critics warn regulation could stifle innovation",
@@ -170,15 +179,6 @@
       "source": "Brietbart",
       "country": "US",
       "publishedAt": "2026-09-13 14:31:22",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "5161c82eb85affe5",
-      "headline": "Anthropic whistleblower says Congress should let AI companies regulate themselves until a regulatory body is established",
-      "url": "https://www.nbcnews.com/tech/security/anthropic-whistleblower-congress-ai-companies-regulation-rcna597465",
-      "source": "Nbc News",
-      "country": "US",
-      "publishedAt": "2026-09-13 14:28:57",
       "relevanceScore": 0.3
     }
   ]

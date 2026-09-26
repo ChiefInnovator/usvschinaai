@@ -309,5 +309,23 @@
       "#KimiK3",
       "#GLM53Flash"
     ]
+  },
+  "2026-09-26T04:45:01+00:00|leaderboard": {
+    "hook": "The US extends its lead, but China still owns the value fight.",
+    "bullets": [
+      "US leads the scoreboard 4526.99 to 1656.89.",
+      "Kimi K3 is China\u2019s top model at rank 4 with 727.5.",
+      "GLM-5.3-Flash posts 91.8 value, the day\u2019s strongest efficiency mark."
+    ],
+    "question": "Is the scoreboard lead or model value the better measure of progress?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#OpenAI",
+      "#KimiK3",
+      "#GLM53Flash"
+    ]
   }
 }

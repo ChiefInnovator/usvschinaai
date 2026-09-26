@@ -65,6 +65,319 @@
   ],
   "history": [
     {
+      "timestamp": "2026-09-26T04:45:01+00:00",
+      "teams": {
+        "US": [
+          {
+            "modelId": "8ff2177f5f388b9c9474",
+            "profileId": "824946cb0dcfd0970ed9",
+            "avgIq": 84.61,
+            "value": 1.41,
+            "unified": 900.2,
+            "coverage": "11/18",
+            "provisional": false
+          },
+          {
+            "modelId": "3e8493d70f3b80a11cf5",
+            "profileId": "0c8fa6f3b629a6df3e66",
+            "avgIq": 80.28,
+            "value": 5.73,
+            "unified": 818.11,
+            "coverage": "16/18",
+            "provisional": false
+          },
+          {
+            "modelId": "1b3752879df84503751c",
+            "profileId": "bcc8c5fd343267c3306e",
+            "avgIq": 78.85,
+            "value": 2.25,
+            "unified": 787.56,
+            "coverage": "16/18",
+            "provisional": false
+          },
+          {
+            "modelId": "1fbd36e112c0244fe56a",
+            "profileId": "0d2c1799f41663b5d7a7",
+            "avgIq": 66.64,
+            "value": 0.0,
+            "unified": 546.73,
+            "coverage": "6/18",
+            "provisional": false
+          },
+          {
+            "modelId": "827d7fc31374fbdd49bc",
+            "profileId": "8ce05828c5760596c710",
+            "avgIq": 64.97,
+            "value": 1.08,
+            "unified": 513.89,
+            "coverage": "10/18",
+            "provisional": false
+          },
+          {
+            "modelId": "938ef1899e8197948b60",
+            "profileId": "f1bf0be572326d1bf94c",
+            "avgIq": 63.65,
+            "value": 4.55,
+            "unified": 490.4,
+            "coverage": "17/18",
+            "provisional": false
+          },
+          {
+            "modelId": "e43da5e7a8e3d9626107",
+            "profileId": "0749c9090cea70cc8040",
+            "avgIq": 62.29,
+            "value": 13.84,
+            "unified": 470.1,
+            "coverage": "12/18",
+            "provisional": false
+          },
+          {
+            "modelId": "5d10ee934c56e4e34d57",
+            "profileId": "296cf1976bc489afacf9",
+            "avgIq": 61.39,
+            "value": 5.12,
+            "unified": 446.3,
+            "coverage": "16/18",
+            "provisional": false
+          },
+          {
+            "modelId": "59edd73817997d6ccec9",
+            "profileId": "22142ca29a29b70df485",
+            "avgIq": 53.1,
+            "value": 35.4,
+            "unified": 304.56,
+            "coverage": "14/18",
+            "provisional": false
+          },
+          {
+            "modelId": "bf6872882b4e0722ae12",
+            "profileId": "100bc069fa6426cb0a15",
+            "avgIq": 50.29,
+            "value": 2.51,
+            "unified": 226.38,
+            "coverage": "7/18",
+            "provisional": false
+          }
+        ],
+        "CN": [
+          {
+            "modelId": "d33cd77526f9f2073554",
+            "profileId": "6f2481eb480e706befb0",
+            "avgIq": 75.72,
+            "value": 4.43,
+            "unified": 727.53,
+            "coverage": "18/18",
+            "provisional": false
+          },
+          {
+            "modelId": "27c9865821933f9dafd1",
+            "profileId": "b48c83ed7e4a66490ac0",
+            "avgIq": 59.66,
+            "value": 91.78,
+            "unified": 473.04,
+            "coverage": "16/18",
+            "provisional": false
+          },
+          {
+            "modelId": "8c1207eb630867042536",
+            "profileId": "d231e829d5b3ca660002",
+            "avgIq": 61.66,
+            "value": 11.86,
+            "unified": 456.32,
+            "coverage": "12/18",
+            "provisional": false
+          },
+          {
+            "modelId": "32d628655ac1f115b0dd",
+            "profileId": "c26dbd0e2d466fbc1ff2",
+            "avgIq": 61.51,
+            "value": 9.32,
+            "unified": 451.72,
+            "coverage": "14/18",
+            "provisional": false
+          },
+          {
+            "modelId": "088f3a563d79d06df736",
+            "profileId": "2a7dc530671c66bf7e64",
+            "avgIq": 59.29,
+            "value": 15.2,
+            "unified": 412.18,
+            "coverage": "14/18",
+            "provisional": false
+          },
+          {
+            "modelId": "7cc8168d3be894837e46",
+            "profileId": "c5095c45ec7d04280b44",
+            "avgIq": 57.45,
+            "value": 14.73,
+            "unified": 375.56,
+            "coverage": "14/18",
+            "provisional": false
+          },
+          {
+            "modelId": "61114fa803c3bbb1e2b2",
+            "profileId": "b185453d2fc158c0cb38",
+            "avgIq": 48.35,
+            "value": 54.94,
+            "unified": 224.89,
+            "coverage": "9/18",
+            "provisional": false
+          },
+          {
+            "modelId": "b56379bf82f1c28fab2e",
+            "profileId": "4a309a5e60c6d8b2c16e",
+            "avgIq": 44.24,
+            "value": 71.35,
+            "unified": 155.5,
+            "coverage": "10/18",
+            "provisional": false
+          },
+          {
+            "modelId": "00304d6b69ead9145b28",
+            "profileId": "476b97677896aa9820a7",
+            "avgIq": 47.5,
+            "value": 0.0,
+            "unified": 170.38,
+            "coverage": "12/18",
+            "provisional": false
+          },
+          {
+            "modelId": "4ff999a7dc9b4c3f0e85",
+            "profileId": "258a1499ef494bf3fb98",
+            "avgIq": 38.83,
+            "value": 143.82,
+            "unified": 100.02,
+            "coverage": "10/18",
+            "provisional": false
+          }
+        ]
+      },
+      "scoring": {
+        "version": 4,
+        "avgIqWeights": {
+          "Toolathlon": 0.003889514915125296,
+          "Agents'LastExam": 0.013999999999999999,
+          "DeepSWE": 0.0016669349636251266,
+          "DeepSWE1.1": 0.1365464714295311,
+          "LiveCodeBenchv6": 0.008939466115103815,
+          "Terminal-Bench2.1": 0.02,
+          "BrowseComp": 0.02,
+          "MMMU-Pro": 0.018000000000000002,
+          "CharXiv-R": 0.0019447574575626502,
+          "ARC-AGI-2": 0.1630355729928029,
+          "OfficeQAPro": 0.001,
+          "IFBench": 0.00222257995150017,
+          "GPQADiamond": 0.17080453270838544,
+          "FrontierMathTiers1–3v2": 0.16195809437265374,
+          "GPQA": 0.15749047847812134,
+          "MMLU-Pro": 0.009127133196960582,
+          "Humanity’sLastExam": 0.10687446341862787,
+          "SWE-benchVerified": 0.0025
+        },
+        "qualified": [
+          "ARC-AGI-2",
+          "Agents'LastExam",
+          "BrowseComp",
+          "CharXiv-R",
+          "DeepSWE",
+          "DeepSWE1.1",
+          "FrontierMathTiers1–3v2",
+          "GPQA",
+          "GPQADiamond",
+          "Humanity’sLastExam",
+          "IFBench",
+          "LiveCodeBenchv6",
+          "MMLU-Pro",
+          "MMMU-Pro",
+          "OfficeQAPro",
+          "SWE-benchVerified",
+          "Terminal-Bench2.1",
+          "Toolathlon"
+        ],
+        "qualifiedMinReports": 0,
+        "bounds": {
+          "minAvgIq": 38.83,
+          "maxAvgIq": 84.61,
+          "minValue": 1.08,
+          "maxValue": 143.82
+        },
+        "benchmarkRanges": {
+          "ARC-AGI-2": [
+            0.0,
+            100.0
+          ],
+          "Agents'LastExam": [
+            0.0,
+            100.0
+          ],
+          "BrowseComp": [
+            0.0,
+            100.0
+          ],
+          "CharXiv-R": [
+            0.0,
+            100.0
+          ],
+          "DeepSWE": [
+            0.0,
+            100.0
+          ],
+          "DeepSWE1.1": [
+            0.0,
+            100.0
+          ],
+          "FrontierMathTiers1–3v2": [
+            0.0,
+            100.0
+          ],
+          "GPQA": [
+            0.0,
+            100.0
+          ],
+          "GPQADiamond": [
+            0.0,
+            100.0
+          ],
+          "Humanity’sLastExam": [
+            0.0,
+            100.0
+          ],
+          "IFBench": [
+            0.0,
+            100.0
+          ],
+          "LiveCodeBenchv6": [
+            0.0,
+            100.0
+          ],
+          "MMLU-Pro": [
+            0.0,
+            100.0
+          ],
+          "MMMU-Pro": [
+            0.0,
+            100.0
+          ],
+          "OfficeQAPro": [
+            0.0,
+            100.0
+          ],
+          "SWE-benchVerified": [
+            0.0,
+            100.0
+          ],
+          "Terminal-Bench2.1": [
+            0.0,
+            100.0
+          ],
+          "Toolathlon": [
+            0.0,
+            100.0
+          ]
+        }
+      }
+    },
+    {
       "timestamp": "2026-09-26T03:35:11+00:00",
       "teams": {
         "US": [
@@ -152,10 +465,10 @@
           {
             "modelId": "e43da5e7a8e3d9626107",
             "profileId": "9a796eef98a8a4468d20",
-            "avgIq": 47.75,
-            "value": 12.73,
-            "unified": 87.83,
-            "coverage": "11/18",
+            "avgIq": 62.29,
+            "value": 16.61,
+            "unified": 415.33,
+            "coverage": "12/18",
             "provisional": false
           }
         ],
