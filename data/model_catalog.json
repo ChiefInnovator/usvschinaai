@@ -98722,6 +98722,16 @@
           "created": "2026-09-23",
           "Input$/M": "—",
           "Output$/M": "$20.00"
+        },
+        "4d5e312bd619ce7fa00f": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Input$/M": "—",
+          "Output$/M": "$20.00"
         }
       },
       "benchmarks": {
