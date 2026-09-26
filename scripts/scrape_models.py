@@ -452,6 +452,9 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
         candidates.append(entry)
     if not candidates:
         raise ValueError(f'No released {country} models in source dataset')
+    # Research has a bounded per-run budget. Newly released models must not
+    # sit behind hundreds of older rows (especially retained catalog releases).
+    candidates.sort(key=lambda e: e.columns['Released'], reverse=True)
     return dedupe_superseded_versions(candidates)
 
 
