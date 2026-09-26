@@ -501,7 +501,7 @@ def load_plan(path=PLAN_FILE, now=None):
     now = now or datetime.now(timezone.utc)
     if not isinstance(plan, dict) or plan.get("date") != now.strftime("%Y-%m-%d"):
         return None
-    if len(plan.get("urls") or []) < 2 or not plan.get("caption"):
+    if not plan.get("urls") or not plan.get("caption"):
         return None
     return plan
 
@@ -580,7 +580,7 @@ def main():
         print(f"Plan: {plan.get('format')} / {plan.get('palette')} ({len(slides)} slides, "
               f"caption via {plan.get('caption_source', '?')})")
     legacy_ok = os.environ.get("IG_LEGACY_TILE", "").lower() in ("1", "true", "yes")
-    if len(slides) < 2 and not legacy_ok:
+    if not slides and not legacy_ok:
         print("Skipping: no social/plan.json for today. The daily scrape renders it; "
               "the legacy single tile is not posted (IG_LEGACY_TILE=1 to allow).")
         return
@@ -591,13 +591,13 @@ def main():
 
     print(f"Caption:\n{caption}\n")
 
+    if slides and not wait_for_urls(slides):
+        print("ERROR: planned images never became reachable; not posting.")
+        sys.exit(1)
     if len(slides) >= 2:
-        if not wait_for_urls(slides):
-            print("ERROR: carousel slides never became reachable; not posting.")
-            sys.exit(1)
         post_carousel(slides, caption, access_token, ig_user_id)
     else:
-        post_to_instagram(image_url, caption, access_token, ig_user_id)
+        post_to_instagram(slides[0] if slides else image_url, caption, access_token, ig_user_id)
     print("Instagram post complete.")
 
 

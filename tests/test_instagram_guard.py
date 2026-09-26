@@ -252,7 +252,7 @@ class PlanTests(unittest.TestCase):
         now = datetime(2026, 9, 5, 4, tzinfo=timezone.utc)
         with tempfile.TemporaryDirectory() as d:
             self.assertIsNone(pti.load_plan(self._write(d, self._plan(date="2026-09-04")), now))
-            self.assertIsNone(pti.load_plan(self._write(d, self._plan(urls=["one"])), now))
+            self.assertIsNone(pti.load_plan(self._write(d, self._plan(urls=[])), now))
             self.assertIsNone(pti.load_plan(self._write(d, self._plan(caption="")), now))
             (Path(d) / "plan.json").write_text("{nope")
             self.assertIsNone(pti.load_plan(Path(d) / "plan.json", now))
@@ -300,6 +300,19 @@ class PlanTests(unittest.TestCase):
 
     def test_no_plan_posts_nothing(self):
         self.assertEqual(self._run_main(None, {}), [])
+
+    def test_single_image_plan_uses_planned_image_and_caption(self):
+        plan = self._plan(urls=["https://usvschina.ai/social/leaderboard.png"])
+        with tempfile.TemporaryDirectory() as d:
+            self.assertEqual(pti.load_plan(self._write(d, plan),
+                             datetime(2026, 9, 5, 4, tzinfo=timezone.utc)), plan)
+        calls = self._run_main(plan, {})
+        self.assertEqual(calls[0][:2], ("single", plan["urls"][0]))
+        self.assertTrue(calls[0][2].startswith(plan["caption"]))
+
+    def test_unreachable_single_plan_image_aborts_without_posting(self):
+        with self.assertRaises(SystemExit):
+            self._run_main(self._plan(urls=["https://x/image.png"]), {}, wait_ok=False)
 
     def test_legacy_tile_only_when_explicitly_allowed(self):
         calls = self._run_main(None, {"IG_LEGACY_TILE": "1"})
