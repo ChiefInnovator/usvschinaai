@@ -6,7 +6,7 @@ Supports --leaderboard-basic (Stage 1), --leaderboard-full (Stage 2), and full s
 from preconditions import preconditions
 import argparse
 import csv
-from model_store import load_data, save_data
+from model_store import load_data, save_data, read_catalog
 import json
 import os
 import shutil
@@ -392,14 +392,37 @@ def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["Leade
     return kept
 
 
-@preconditions(entries='sequence', metadata='mapping', country='text', today='date')
-def discover_released_models(entries, metadata, country, today):
+@preconditions(entries='sequence', metadata='mapping', country='text', today='date', catalog='?mapping')
+def discover_released_models(entries, metadata, country, today, catalog=None):
     """Complete the candidate pool from the source dataset, not its table page.
 
     Table rows retain their benchmark cells. Missing rows get current metadata
     and are enriched from detail pages and dated catalog evidence before scoring.
     Future/undated releases cannot supersede a released model.
     """
+    metadata = dict(metadata)
+    # The source sometimes serves a dataset older than the catalog. Retain
+    # previously observed releases using dated evidence, never guessed dates.
+    for model in (catalog or {}).get('models', {}).values():
+        profiles = list(model.get('profiles', {}).values())
+        if not profiles:
+            continue
+        profile = profiles[-1]
+        url = profile.get('link', '')
+        if not url.startswith('https://llm-stats.com/models/'):
+            continue
+        slug = url.rstrip('/').rsplit('/', 1)[-1]
+        if slug in metadata or profile.get('origin') != country:
+            continue
+        dates = [obs['modelAvailableFrom']
+                 for observations in model.get('benchmarks', {}).values()
+                 for obs in observations.values() if obs.get('modelAvailableFrom')]
+        if not dates:
+            continue
+        metadata[slug] = dict(name=model['name'], organization_country=country,
+                              release_date=min(dates), organization=profile.get('organization'),
+                              input_price=profile.get('Input$/M'), output_price=profile.get('Output$/M'))
+        print(f"    ++ retained catalog release missing from source: {model['name']}")
     by_slug = {e.url.rstrip('/').rsplit('/', 1)[-1]: e for e in entries}
     candidates = []
     for slug, record in metadata.items():
@@ -621,7 +644,8 @@ def scrape_country_leaderboard(
 
     if stage == 'metadata':
         entries = discover_released_models(
-            candidates, metadata, origin_code, datetime.now(timezone.utc).date().isoformat())
+            candidates, metadata, origin_code, datetime.now(timezone.utc).date().isoformat(),
+            read_catalog())
     else:
         entries = dedupe_superseded_versions(candidates)[:max_models]
     for position, entry in enumerate(entries, 1):
