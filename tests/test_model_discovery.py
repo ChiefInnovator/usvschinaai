@@ -26,7 +26,7 @@ class ModelDiscoveryTests(unittest.TestCase):
         self.assertEqual(result[0].columns['Input $/M'], '4')
 
     def test_full_dataset_has_no_table_or_pool_cutoff(self):
-        metadata = {f'model-{i}': record(f'Family {chr(65+i)}') for i in range(40)}
+        metadata = {f'model-{i}.1': record(f'Family {chr(65+i//26)}{chr(65+i%26)}') for i in range(40)}
         self.assertEqual(len(discover_released_models([], metadata, 'US', '2026-09-26')), 40)
 
     def test_future_undated_and_foreign_models_do_not_replace_released_model(self):

@@ -413,7 +413,7 @@ def discover_released_models(entries, metadata, country, today):
         if release_day > today:
             continue
         name = record.get('name')
-        if not name or not re.fullmatch(r'[A-Za-z0-9_-]+', slug):
+        if not name or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_.-]*', slug):
             raise ValueError('Invalid model identity in leaderboard dataset')
         entry = by_slug.get(slug)
         if entry is None:
@@ -524,6 +524,8 @@ def scrape_country_leaderboard(
     # Extract rows
     rows = page.query_selector_all("tbody tr")
     print(f"  Found {len(rows)} rows")
+    if stage == 'metadata':
+        print(f"  Source dataset: {len(metadata)} models before country/release filtering")
     
     candidates: List[LeaderboardEntry] = []
     # Parse every row rather than stopping at max_models, so that models dropped
@@ -539,6 +541,8 @@ def scrape_country_leaderboard(
         
         name = link_elem.inner_text().strip()
         url = link_elem.get_attribute("href")
+        if stage == 'metadata':
+            print(f"    source row {i + 1}: {name} ({url})")
         if not url.startswith("http"):
             url = f"https://llm-stats.com{url}"
         
