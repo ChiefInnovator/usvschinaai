@@ -338,10 +338,8 @@ def format_table(
     return "\n".join(lines)
 
 
-# Deduplicated, released candidates kept per country through enrichment and
-# scoring. The published top 10 is chosen from this pool at the end (see
-# cohort_selection.select_team), solely by Unified Score. Benchmark coverage
-# never excludes a model. 30 rows are parsed per country.
+# Display limit for basic/full diagnostic exports. Production metadata scraping
+# discovers all released candidates and applies its top-10 limit after scoring.
 COHORT_POOL_SIZE = 15
 
 
@@ -392,6 +390,46 @@ def dedupe_superseded_versions(entries: List["LeaderboardEntry"]) -> List["Leade
         seen_names.add(entry.name)
         kept.append(entry)
     return kept
+
+
+@preconditions(entries='sequence', metadata='mapping', country='text', today='date')
+def discover_released_models(entries, metadata, country, today):
+    """Complete the candidate pool from the source dataset, not its table page.
+
+    Table rows retain their benchmark cells. Missing rows get current metadata
+    and are enriched from detail pages and dated catalog evidence before scoring.
+    Future/undated releases cannot supersede a released model.
+    """
+    by_slug = {e.url.rstrip('/').rsplit('/', 1)[-1]: e for e in entries}
+    candidates = []
+    for slug, record in metadata.items():
+        if record.get('organization_country') != country:
+            continue
+        released = record.get('release_date')
+        if not released:
+            continue
+        # Fail on malformed source dates rather than silently admitting previews.
+        release_day = datetime.strptime(released, '%Y-%m-%d').date().isoformat()
+        if release_day > today:
+            continue
+        name = record.get('name')
+        if not name or not re.fullmatch(r'[A-Za-z0-9_-]+', slug):
+            raise ValueError('Invalid model identity in leaderboard dataset')
+        entry = by_slug.get(slug)
+        if entry is None:
+            entry = LeaderboardEntry(0, name, country,
+                                     f'https://llm-stats.com/models/{slug}', {})
+            print(f'    ++ discovered outside displayed table: {name}')
+        entry.columns.update({
+            'Released': release_day,
+            'Organization': record.get('organization') or '',
+            'Input $/M': str(record['input_price']) if record.get('input_price') is not None else '—',
+            'Output $/M': str(record['output_price']) if record.get('output_price') is not None else '—',
+        })
+        candidates.append(entry)
+    if not candidates:
+        raise ValueError(f'No released {country} models in source dataset')
+    return dedupe_superseded_versions(candidates)
 
 
 @preconditions(page='page', country_name='text', origin_code='text', max_models='int', stage='text')
@@ -479,7 +517,7 @@ def scrape_country_leaderboard(
                  for component in load_config()['benchmarks'] for alias in component['aliases']}
     benchmark_headers = [h for h in all_headers if canonicalize_benchmark_name(h) in supported]
     retained_headers = set(benchmark_headers) | MODEL_FIELDS | {'Rank', 'Input', 'Output', 'Created', 'Description'}
-    metadata = extract_leaderboard_metadata(page) if 'Released' not in all_headers else None
+    metadata = extract_leaderboard_metadata(page) if stage == 'metadata' or 'Released' not in all_headers else None
     metadata_fields = {'Released': 'release_date', 'Input $/M': 'input_price',
                        'Output $/M': 'output_price', 'Organization': 'organization'}
     
@@ -577,12 +615,16 @@ def scrape_country_leaderboard(
             columns=columns
         ))
 
-    entries = dedupe_superseded_versions(candidates)[:max_models]
+    if stage == 'metadata':
+        entries = discover_released_models(
+            candidates, metadata, origin_code, datetime.now(timezone.utc).date().isoformat())
+    else:
+        entries = dedupe_superseded_versions(candidates)[:max_models]
     for position, entry in enumerate(entries, 1):
         entry.rank = position
         print(f"    {position}. {entry.name}")
 
-    if len(entries) < max_models:
+    if stage != 'metadata' and len(entries) < max_models:
         print(
             f"  WARNING: only {len(entries)} of {max_models} models left for "
             f"{origin_code} after filtering ({len(candidates)} rows parsed). "
