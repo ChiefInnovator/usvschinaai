@@ -158,6 +158,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/anthropic-claude-opus-5-5"
     },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; Anthropic-reported at max effort. The model/result was published September 22, 2026.",
+      "score": "74.2%",
+      "source_type": "system_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-26T04:35:45.187716+00:00",
@@ -542,13 +552,13 @@
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "No-tools CharXiv-R score; the leaderboard also lists 88.0% tool-assisted, which is excluded as a different protocol. The cited result is dated September 2, 2026.",
+      "notes": "Google DeepMind reports 85.9% for GPT-5.6 Terra on CharXiv Reasoning (the CharXiv-R reasoning subset), with no tools; its methodology states that GPT-5.6 Terra uses maximum reasoning where available and that this result was self-computed. Individual-result publication date unknown.",
       "score": "85.9%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
+      "source_type": "model_card",
+      "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -562,13 +572,9 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Full-corpus OfficeQA Pro v1 (133 questions, 697 Treasury Bulletins), using Energent's fixed agent and the official scorer; published September 2, 2026.",
-      "score": "60.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://www.energent.ai/en/highlights/officeqa-v1-to-v2"
+      "score": null
     }
   },
   "GPT-6 Astra": {
@@ -711,6 +717,18 @@
       "source_url": "https://www.vals.ai/models/google_gemini-3.1-pro-preview"
     }
   },
+  "Gemini 3.5 Flash-Lite": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently evaluated the reasoning version of Gemini 3.5 Flash-Lite. The individual-result publication date is not stated on the model page.",
+      "score": "18.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite"
+    }
+  },
   "Gemini 3.8 Flash": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
@@ -746,13 +764,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond, Artificial Analysis independent evaluation, High reasoning configuration (95.25%, rounded to 95.3%); source collected September 24, 2026.",
+      "notes": "GPQA Diamond, high reasoning effort; OpenRouter attributes the result to Artificial Analysis.",
       "score": "95.3%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gemini-3-8-flash"
+      "source_url": "https://openrouter.ai/google/gemini-3.8-flash"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -842,23 +860,23 @@
   "IBM Granite 4.2 30B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis evaluation for Granite 4.2 30B’s reasoning variant; independently published result. Publication date for the individual result is not stated.",
+      "notes": "Artificial Analysis leaderboard result for the reasoning configuration. IBM's model card reports 66.41 on generic GPQA, which was not used because it is not explicitly GPQA Diamond.",
       "score": "64.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
+      "source_url": "https://artificialanalysis.ai/evaluations/gpqa-diamond"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated result for the standard no-tools HLE configuration; no individual-result publication date is stated.",
+      "notes": "Artificial Analysis result: May 2025 text-only 2,158-question, no-tools, pass@1 configuration; reasoning enabled. Independently recorded publication date: September 5, 2026.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
     }
   },
   "IBM Granite 4.2 3B": {

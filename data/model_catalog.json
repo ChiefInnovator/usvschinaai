@@ -1938,6 +1938,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "2bf70e0ff51bf215c2e1": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "12c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "16.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -18243,6 +18262,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "8.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
+        },
+        "d0bc560dc3a1eb82ecf9": {
+          "model": "Claude Sonnet 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-06-30",
+          "Model": "Claude Sonnet 5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "10",
+          "Speed": "16c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "9.0s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2"
@@ -36790,6 +36828,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "d927190097bde1a79255": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "9c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "14.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -53296,6 +53353,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "4514a3bb9fb219b89eda": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "51c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "4.9s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -53977,6 +54053,21 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-07-21"
           }
+        },
+        "charxiv-r": {
+          "63ee6174de15d4b8": {
+            "benchmark": "CharXiv-R",
+            "score": 85.9,
+            "unit": "percent",
+            "source": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Google DeepMind reports 85.9% for GPT-5.6 Terra on CharXiv Reasoning (the CharXiv-R reasoning subset), with no tools; its methodology states that GPT-5.6 Terra uses maximum reasoning where available and that this result was self-computed. Individual-result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-07-21"
+          }
         }
       }
     },
@@ -54297,6 +54388,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "3.3s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
+        },
+        "fea2e0dec662d90757a6": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "30c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.1s",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
@@ -65686,6 +65796,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "a6271c92113ef796f9e6": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "230c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "7.6s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -76441,6 +76570,25 @@
           "License": "",
           "Parameters(B)": "2800",
           "Latency": "13.5s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
+        },
+        "af2f18ee3bba8825a2f7": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "5c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "13.3s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
@@ -98732,6 +98880,25 @@
           "created": "2026-09-22",
           "Input$/M": "—",
           "Output$/M": "$20.00"
+        },
+        "dda484fc95dea78a7c96": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "17c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "11.3s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -98839,6 +99006,21 @@
             "configuration": "Anthropic reports 92% on GPQA Diamond across two runs with fallbacks=\"default\". In each run, six biology questions triggered safety checks; Claude Opus 5 answered five through server-side fallback and the remaining refusal was counted as wrong. This is the documented safeguarded configuration, not a no-fallback measurement.",
             "kind": "published",
             "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "deepswe": {
+          "88a4163f19a9a7ca": {
+            "benchmark": "DeepSWE",
+            "score": 74.2,
+            "unit": "percent",
+            "source": "https://www.anthropic.com/claude-opus-5-5-system-card",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "DeepSWE v1.1; Anthropic-reported at max effort. The model/result was published September 22, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-23"
           }
@@ -99444,7 +99626,18 @@
     },
     "254c892c5e95ff9bf2fd": {
       "name": "Inkling",
-      "profiles": {},
+      "profiles": {
+        "ed46d718a3249399636f": {
+          "model": "Inkling",
+          "organization": "Thinking Machines Lab",
+          "link": "https://llm-stats.com/models/inkling",
+          "origin": "US",
+          "description": "Inkling by Thinking Machines Lab — released Jul 21, 2026; $0.950/M input, $0.160/M cached input, $4.05/M output; 524K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-21",
+          "Input$/M": "0.95",
+          "Output$/M": "4.05"
+        }
+      },
       "benchmarks": {
         "gpqa-diamond": {
           "cbef52a3ece641a2": {
@@ -101303,6 +101496,21 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-Distill-Qwen-14B."
+          }
+        },
+        "gpqa": {
+          "f5e65af948a18be9": {
+            "benchmark": "GPQA",
+            "score": 59.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-r1-distill-qwen-14b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
           }
         }
       }
@@ -107367,6 +107575,180 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "30e8a36535608bdcb603": {
+      "name": "IBM Granite 4.2 8B",
+      "profiles": {},
+      "benchmarks": {
+        "livecodebench-v6": {
+          "da96e8c6a8d13b97": {
+            "benchmark": "LiveCodeBench v6",
+            "score": 73.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "terminal-bench-2.1": {
+          "13fb29d113233fff": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 20.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "ifbench": {
+          "7b12c0a9b5afe5a2": {
+            "benchmark": "IFBench",
+            "score": 79.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "gpqa": {
+          "68ac6a69aff69807": {
+            "benchmark": "GPQA",
+            "score": 64.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "mmlu-pro": {
+          "dbd78682e6191acc": {
+            "benchmark": "MMLU-Pro",
+            "score": 74.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "swe-bench-verified": {
+          "2cea29436bad37a0": {
+            "benchmark": "SWE-bench Verified",
+            "score": 47.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/granite-4.2-8b",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        }
+      }
+    },
+    "8a4c0ac6d779a0d05db8": {
+      "name": "Gemini Diffusion",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa": {
+          "c8ef5889afc46fe0": {
+            "benchmark": "GPQA",
+            "score": 40.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-diffusion",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "swe-bench-verified": {
+          "ab45d283b25ca0be": {
+            "benchmark": "SWE-bench Verified",
+            "score": 22.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-diffusion",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        }
+      }
+    },
+    "fe06f98fa228c165cb1b": {
+      "name": "Phi 4 Mini Reasoning",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa": {
+          "2271d8ca12d54c38": {
+            "benchmark": "GPQA",
+            "score": 52.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/phi-4-mini-reasoning",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
+          }
+        }
+      }
+    },
+    "25a83bab31961f19ddd8": {
+      "name": "MiMo-V2-Omni",
+      "profiles": {},
+      "benchmarks": {
+        "swe-bench-verified": {
+          "025fe27b107e8a19": {
+            "benchmark": "SWE-bench Verified",
+            "score": 74.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2-omni",
+            "availableFrom": "2026-09-27",
+            "retrievedAt": "2026-09-27",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27"
           }
         }
       }

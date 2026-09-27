@@ -327,5 +327,24 @@
       "#KimiK3",
       "#GLM53Flash"
     ]
+  },
+  "2026-09-27T03:47:24+00:00|trend_30d": {
+    "hook": "The US still leads, but China closed the 30-day gap",
+    "bullets": [
+      "US leads with 3,742.72 points to China\u2019s 2,108.61.",
+      "China rose from 1,656.89 to 2,108.61; the US fell from 4,526.99.",
+      "The top 10 includes 6 US models and 4 Chinese models."
+    ],
+    "question": "Is China\u2019s 30-day climb enough to change the next scoreboard?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#KimiK3",
+      "#GPT6Astra",
+      "#Qwen",
+      "#ModelRankings"
+    ]
   }
 }

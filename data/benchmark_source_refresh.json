@@ -1,16 +1,52 @@
 {
-  "retrievedAt": "2026-09-26",
-  "modelsChecked": 275,
-  "sourcesChecked": 285,
-  "findings": 1307,
-  "accepted": 484,
+  "retrievedAt": "2026-09-27",
+  "modelsChecked": 276,
+  "sourcesChecked": 286,
+  "findings": 1267,
+  "accepted": 11,
   "failures": [
     {
-      "source": "llm-stats:Qwen3.5-27B",
+      "source": "llm-stats:GPT-5.1 Medium",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GLM-5.3",
+      "source": "llm-stats:MiniMax M2.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V3.2 (Thinking)",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.1 Thinking",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5 Medium",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.4 mini",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Opus 4.7",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Grok 4.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Hy3",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Grok 4.6",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -18,19 +54,27 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:IBM Granite 4.2 8B",
+      "source": "llm-stats:Muse Glimmer-30B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Grok-4.1 Thinking",
+      "source": "llm-stats:Nemotron Content Safety 3.5",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Grok-4.1 Fast Non-Reasoning",
+      "source": "llm-stats:Gemma 4 12B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.1 Codex Mini",
+      "source": "llm-stats:Nemotron 3 Super (120B A12B)",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Grok-4.20 Beta Reasoning",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Haiku 4.5",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -38,36 +82,32 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemma 3n E4B",
+      "source": "llm-stats:Gemma 3n E2B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini Diffusion",
+      "source": "llm-stats:Gemma 3n E2B Instructed LiteRT (Preview)",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Phi 4 Mini Reasoning",
+      "source": "llm-stats:Phi 4 Reasoning Plus",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Granite 3.3 8B Base",
+      "source": "llm-stats:Llama Guard 4 12B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Kimi K2.8 Preview",
+      "source": "llm-stats:Llama 3.2 90B Instruct",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:MiMo-V2-Omni",
+      "source": "llm-stats:Phi-3.5-mini-instruct",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek R1 Distill Qwen 14B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:DeepSeek VL2 Small",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Llama 3.2 11B Instruct",
+      "error": "HTTP Error 502: Bad Gateway"
     }
   ],
   "skippedConfigurations": [],
@@ -421,9 +461,8 @@
       "source": "vals:terminal-bench-2-1",
       "component": "terminal-bench-2.1",
       "rows": 73,
-      "matched": 48,
+      "matched": 49,
       "unmatched": [
-        "openai/gpt-6-sol",
         "google/gemini-3.6-flash",
         "grok/grok-4.7",
         "google/gemini-3.1-pro-preview",
