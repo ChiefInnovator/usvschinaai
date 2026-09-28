@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-27T03:48:19.655839+00:00",
+  "lastUpdated": "2026-09-28T03:49:13.735840+00:00",
   "items": [
+    {
+      "id": "69689377d330f47c",
+      "headline": "AI giants are probing ‘tens of thousands’ of security incidents triggered by rogue AI",
+      "url": "https://www.digitaltrends.com/cool-tech/ai-giants-are-probing-tens-of-thousands-of-security-incidents-triggered-by-unexpected-ai-behavior/",
+      "source": "Digitaltrends",
+      "country": "US",
+      "publishedAt": "2026-09-27 13:26:51",
+      "relevanceScore": 0.68
+    },
     {
       "id": "e90c993dce6ef7d3",
       "headline": "OpenAI and Anthropic want AI rules. Connecticut is already writing them",
@@ -161,24 +170,6 @@
       "source": "Morningstar",
       "country": "US",
       "publishedAt": "2026-09-14 14:47:43",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "1ae1133b173090b1",
-      "headline": "Anthropic CEO warns AI could outpace human control within a year as company prepares for IPO",
-      "url": "https://completeaitraining.com/news/anthropic-ceo-warns-ai-could-outpace-human-control-within-a/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-09-13 15:19:26",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "d5041e0a40e0778f",
-      "headline": "AI leaders back Anthropic call for permanent safety monitors inside frontier labs",
-      "url": "https://completeaitraining.com/news/ai-leaders-back-anthropic-call-for-permanent-safety/",
-      "source": "Complete Ai Training",
-      "country": "US",
-      "publishedAt": "2026-09-13 14:48:54",
       "relevanceScore": 0.3
     }
   ]

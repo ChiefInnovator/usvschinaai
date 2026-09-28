@@ -346,5 +346,24 @@
       "#Qwen",
       "#ModelRankings"
     ]
+  },
+  "2026-09-28T03:48:18+00:00|price_vs_power": {
+    "hook": "The US leads by 1,634.1, but China owns the value fight.",
+    "bullets": [
+      "US leads the scoreboard 3,742.72 to 2,108.61.",
+      "GPT-6 Astra ranks 1st at 900.2, but value is just 1.4.",
+      "GLM-5.3-Flash posts 91.8 value at $0.15 in and $0.5 out."
+    ],
+    "question": "Would you pay more for the leader, or take China\u2019s value play?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#LLM",
+      " #AIpricing",
+      "#ModelBenchmarks",
+      "#AIEconomics"
+    ]
   }
 }

@@ -94,6 +94,16 @@
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Exact Claude Mythos 5.1 leaderboard row. The page was updated September 23, 2026; individual-result publication date is unknown.",
+      "score": "67.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://anotherwrapper.com/tools/llm-pricing/evals/deepswe-1-1"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-14T03:35:43.088570+00:00",
@@ -642,6 +652,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/openai-gpt-6-luna"
     },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1, max reasoning effort. OpenAI published this result on September 22, 2026.",
+      "score": "66.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-25T03:32:35.389699+00:00",
@@ -663,6 +683,26 @@
       "score": "68.8%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independent evaluation; May 2025 text-only 2,158-question subset, no tools, pass@1; GPT-6 Sol at max reasoning effort.",
+      "score": "47.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independent evaluation; GPT-6 Sol at max reasoning effort.",
+      "score": "83.3%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
     }
   },
   "Gemini 3.1 Pro": {
@@ -870,13 +910,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis result: May 2025 text-only 2,158-question, no-tools, pass@1 configuration; reasoning enabled. Independently recorded publication date: September 5, 2026.",
+      "notes": "Artificial Analysis run: hle:may-2025:text-only-2158:no-tools:pass-at-1, reasoning enabled. The independently indexed row records publication on September 5, 2026.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+      "source_url": "https://modelcap.ai/benchmarks/aa-humanitys-last-exam"
     }
   },
   "IBM Granite 4.2 3B": {

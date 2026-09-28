@@ -1957,6 +1957,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "032cc080f0924acd977f": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "12c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "33.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -36847,6 +36866,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "dd7ecc15f534098bee1b": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "8c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "18.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -65815,6 +65853,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "d8cc62bc20ad47019b30": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "227c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "6.5s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -76589,6 +76646,25 @@
           "License": "",
           "Parameters(B)": "2800",
           "Latency": "13.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
+        },
+        "0b2d6cac68ac4c2df37b": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "12.9s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
@@ -98899,6 +98975,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "6065c17aa67016d3b4df": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "10.9s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -99330,6 +99425,21 @@
             "configuration": "ARC Prize Verified Semi-Private score at max reasoning; result page published September 22, 2026.",
             "kind": "published",
             "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-25"
+          }
+        },
+        "deepswe": {
+          "52e34e9f077ab8ae": {
+            "benchmark": "DeepSWE",
+            "score": 66.6,
+            "unit": "percent",
+            "source": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+            "availableFrom": "2026-09-28",
+            "retrievedAt": "2026-09-28",
+            "configuration": "DeepSWE v1.1, max reasoning effort. OpenAI published this result on September 22, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
@@ -107749,6 +107859,42 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-27"
+          }
+        }
+      }
+    },
+    "3ab72d1d5512d608eb48": {
+      "name": "Gemma 3n E4B Instructed",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa": {
+          "7b5b94588de37424": {
+            "benchmark": "GPQA",
+            "score": 23.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemma-3n-e4b-it",
+            "availableFrom": "2026-09-28",
+            "retrievedAt": "2026-09-28",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-28"
+          }
+        },
+        "mmlu-pro": {
+          "797c8d9a9509b17c": {
+            "benchmark": "MMLU-Pro",
+            "score": 50.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemma-3n-e4b-it",
+            "availableFrom": "2026-09-28",
+            "retrievedAt": "2026-09-28",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-28"
           }
         }
       }

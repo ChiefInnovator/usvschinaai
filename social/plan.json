@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-27",
-  "timestamp": "2026-09-27T03:47:24+00:00",
-  "format": "trend_30d",
-  "palette": "newsprint",
+  "date": "2026-09-28",
+  "timestamp": "2026-09-28T03:48:18+00:00",
+  "format": "price_vs_power",
+  "palette": "midnight",
   "weight": 1,
   "slides": [
-    "2026-09-27-1-trend_30d-newsprint.png",
-    "2026-09-27-2-leaderboard-newsprint.png"
+    "2026-09-28-1-price_vs_power-midnight.png",
+    "2026-09-28-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-27-1-trend_30d-newsprint.png",
-    "https://usvschina.ai/social/2026-09-27-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-09-28-1-price_vs_power-midnight.png",
+    "https://usvschina.ai/social/2026-09-28-2-leaderboard-midnight.png"
   ],
-  "caption": "The US still leads, but China closed the 30-day gap\n\n• US leads with 3,742.72 points to China’s 2,108.61.\n• China rose from 1,656.89 to 2,108.61; the US fell from 4,526.99.\n• The top 10 includes 6 US models and 4 Chinese models.\n\nIs China’s 30-day climb enough to change the next scoreboard?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #KimiK3 #GPT6Astra #Qwen #ModelRankings",
+  "caption": "The US leads by 1,634.1, but China owns the value fight.\n\n• US leads the scoreboard 3,742.72 to 2,108.61.\n• GPT-6 Astra ranks 1st at 900.2, but value is just 1.4.\n• GLM-5.3-Flash posts 91.8 value at $0.15 in and $0.5 out.\n\nWould you pay more for the leader, or take China’s value play?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #LLM # #AIpricing #ModelBenchmarks #AIEconomics",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-27T03:48:23.935499+00:00"
+  "generated_at": "2026-09-28T03:49:18.062879+00:00"
 }
