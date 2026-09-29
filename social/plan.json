@@ -1,18 +1,19 @@
 {
-  "date": "2026-09-28",
-  "timestamp": "2026-09-28T03:48:18+00:00",
-  "format": "price_vs_power",
-  "palette": "midnight",
+  "date": "2026-09-29",
+  "timestamp": "2026-09-29T03:45:06+00:00",
+  "format": "benchmark_day",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-09-28-1-price_vs_power-midnight.png",
-    "2026-09-28-2-leaderboard-midnight.png"
+    "2026-09-29-1-benchmark_day-graphite.png",
+    "2026-09-29-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-28-1-price_vs_power-midnight.png",
-    "https://usvschina.ai/social/2026-09-28-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-09-29-1-benchmark_day-graphite.png",
+    "https://usvschina.ai/social/2026-09-29-2-leaderboard-graphite.png"
   ],
-  "caption": "The US leads by 1,634.1, but China owns the value fight.\n\n• US leads the scoreboard 3,742.72 to 2,108.61.\n• GPT-6 Astra ranks 1st at 900.2, but value is just 1.4.\n• GLM-5.3-Flash posts 91.8 value at $0.15 in and $0.5 out.\n\nWould you pay more for the leader, or take China’s value play?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #LLM # #AIpricing #ModelBenchmarks #AIEconomics",
+  "caption": "The US holds the lead, but Kimi K3 is the closest challenger.\n\n• US leads 3742.72 to China’s 2108.61, a margin of 1634.1.\n• GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.\n• China places 4 models in the top 10; the US places 6.\n\nIs Kimi K3 close enough at rank 3 to change the race?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #KimiK3 #GPT6Astra #AILeaderboard",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-09-28T03:49:18.062879+00:00"
+  "generated_at": "2026-09-29T03:46:07.635370+00:00",
+  "benchmark": "BrowseComp"
 }

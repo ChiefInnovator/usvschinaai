@@ -1976,6 +1976,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "fff8ed96fcddd17cb4e5": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "22c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "43.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -22719,6 +22738,25 @@
           "Context": "1.0M",
           "Output$/M": "2.6",
           "Speed": "30c/s",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3"
+        },
+        "7e27bd0b9460312c4292": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "32c/s",
           "License": "",
           "Parameters(B)": "1600",
           "Latency": "–",
@@ -65872,6 +65910,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "ef0690e128fa8d0cb935": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "227c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.3s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -76668,6 +76725,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
+        },
+        "861c602605114d8d08de": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "13.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
         }
       },
       "benchmarks": {
@@ -83951,6 +84027,25 @@
           "Latency": "11.9s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
+        },
+        "c24265f71a500db965f6": {
+          "model": "Muse Spark 1.3",
+          "organization": "Meta",
+          "link": "https://llm-stats.com/models/muse-spark-1.3",
+          "origin": "US",
+          "description": "Muse Spark 1.3 by Meta — released Sep 2, 2026; $1.25/M input, $0.150/M cached input, $4.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Muse Spark 1.3",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "4.25",
+          "Speed": "4c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "10.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.25"
         }
       },
       "benchmarks": {
@@ -94494,6 +94589,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "f3d604bca4113d53b7d6": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "0.47",
+          "Speed": "3c/s",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "4.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -95291,6 +95405,25 @@
           "License": "",
           "Parameters(B)": "2400",
           "Latency": "8.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.65"
+        },
+        "c3f80e4278aa6be5b22b": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "4.951",
+          "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "8.7s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "1.65"
@@ -98994,6 +99127,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "2e83e522af899f5d00bb": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "10.9s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -99073,6 +99225,20 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-23"
+          },
+          "865519ebeacdb59e": {
+            "benchmark": "ARC-AGI-2",
+            "score": 91.7,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Epoch AI evaluation of claude-opus-5-5_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-opus-5-5_max."
           }
         },
         "humanitys-last-exam": {
@@ -99257,6 +99423,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
+        },
+        "arc-agi-2": {
+          "82c2f1e0e60b5ed1": {
+            "benchmark": "ARC-AGI-2",
+            "score": 89.6,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Epoch AI evaluation of gpt-6-sol_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-29",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6-sol_max."
+          }
         }
       }
     },
@@ -99427,6 +99609,20 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
+          },
+          "994074934f93b5fc": {
+            "benchmark": "ARC-AGI-2",
+            "score": 59.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Epoch AI evaluation of gpt-6-luna_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6-luna_max."
           }
         },
         "deepswe": {
@@ -99440,6 +99636,21 @@
             "configuration": "DeepSWE v1.1, max reasoning effort. OpenAI published this result on September 22, 2026.",
             "kind": "published",
             "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-25"
+          }
+        },
+        "humanitys-last-exam": {
+          "75d85632ac707006": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 39.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Artificial Analysis independently reports 39.0% for GPT-6 Luna at max reasoning effort. Result publication date is not independently verified from the cited comparison page.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
@@ -107895,6 +108106,74 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-28"
+          }
+        }
+      }
+    },
+    "96e3cd24328c4bf62746": {
+      "name": "Claude Sonnet 5.5",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "9293f9a11906683d": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 71.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-5-5",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-29"
+          }
+        },
+        "officeqa-pro": {
+          "9a5ca7923d792b9e": {
+            "benchmark": "OfficeQA Pro",
+            "score": 65.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-5-5",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-29"
+          }
+        },
+        "terminal-bench-2.1": {
+          "c2bbdf1473d66303": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 83.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-2-1",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Vals Terminal-Bench 2.1; version 2.1; overall accuracy; exact ID anthropic/claude-sonnet-5-5; compute_effort=high; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-29",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "humanitys-last-exam": {
+          "dea95824b45aa07c": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 64.5,
+            "unit": "percent",
+            "source": "https://www.anthropic.com/claude-sonnet-5-5",
+            "availableFrom": "2026-09-29",
+            "retrievedAt": "2026-09-29",
+            "configuration": "Anthropic reports 64.5% with tools. The cited launch post is dated September 28, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-29"
           }
         }
       }

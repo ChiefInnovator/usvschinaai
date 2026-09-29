@@ -241,6 +241,18 @@
       "source_url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf"
     }
   },
+  "Claude Sonnet 5.5": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-29T03:40:21.703140+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Anthropic reports 64.5% with tools. The cited launch post is dated September 28, 2026.",
+      "score": "64.5%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5"
+    }
+  },
   "DeepSeek-V4-Flash-Vision-Exp": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
@@ -664,13 +676,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-25T03:32:35.389699+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-29T03:40:21.703140+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports the highest listed GPT-6 Luna reasoning setting, max; its model page does not independently publish an individual-result date.",
+      "notes": "Artificial Analysis independently reports 39.0% for GPT-6 Luna at max reasoning effort. Result publication date is not independently verified from the cited comparison page.",
       "score": "39.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gpt-6-luna"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra"
     }
   },
   "GPT-6 Sol": {

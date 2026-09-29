@@ -365,5 +365,23 @@
       "#ModelBenchmarks",
       "#AIEconomics"
     ]
+  },
+  "2026-09-29T03:45:06+00:00|benchmark_day": {
+    "hook": "The US holds the lead, but Kimi K3 is the closest challenger.",
+    "bullets": [
+      "US leads 3742.72 to China\u2019s 2108.61, a margin of 1634.1.",
+      "GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.",
+      "China places 4 models in the top 10; the US places 6."
+    ],
+    "question": "Is Kimi K3 close enough at rank 3 to change the race?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#KimiK3",
+      "#GPT6Astra",
+      "#AILeaderboard"
+    ]
   }
 }

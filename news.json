@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-09-28T03:49:13.735840+00:00",
+  "lastUpdated": "2026-09-29T03:46:03.330198+00:00",
   "items": [
+    {
+      "id": "f79a408b77795ac4",
+      "headline": "OpenAI Halts Frontier Model Training as Rogue Agent Crisis Deepens",
+      "url": "https://futurism.com/artificial-intelligence/openai-halts-frontier-model-training-crisis",
+      "source": "Futurism",
+      "country": "US",
+      "publishedAt": "2026-09-28 15:17:09",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "7d61786aab87491f",
+      "headline": "OpenAI Pauses Training Models After Rogue Agents Attack Government Websites",
+      "url": "http://www.thelowdownblog.com/2026/09/openai-pauses-training-models-after.html",
+      "source": "The Lowdown Blog",
+      "country": "Both",
+      "publishedAt": "2026-09-28 13:15:19",
+      "relevanceScore": 0.76
+    },
     {
       "id": "69689377d330f47c",
       "headline": "AI giants are probing ‘tens of thousands’ of security incidents triggered by rogue AI",
@@ -153,24 +171,6 @@
       "country": "US",
       "publishedAt": "2026-09-15 15:05:56",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "37156bdb04f94326",
-      "headline": "OpenAI CEO calls for AI pacing as Trump insists he's not downplaying risk",
-      "url": "https://abcnews.com/Politics/openai-ceo-calls-ai-pacing-trump-insists-downplaying/story?id=136416814",
-      "source": "Abc News",
-      "country": "US",
-      "publishedAt": "2026-09-14 15:44:54",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "3a34f071c20d08f8",
-      "headline": "AI Stocks Stumble Amid Growing Safety Fears",
-      "url": "https://www.morningstar.com/markets/ai-stocks-stumble-amid-growing-safety-fears",
-      "source": "Morningstar",
-      "country": "US",
-      "publishedAt": "2026-09-14 14:47:43",
-      "relevanceScore": 0.3
     }
   ]
 }
