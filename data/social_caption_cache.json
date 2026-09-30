@@ -383,5 +383,24 @@
       "#GPT6Astra",
       "#AILeaderboard"
     ]
+  },
+  "2026-09-30T03:45:37+00:00|new_challenger": {
+    "hook": "Claude Opus 5.5 enters at No. 5 as the US leads by 2605.2",
+    "bullets": [
+      "Claude Opus 5.5 jumped 9 places to No. 5 with a 519.3 unified score.",
+      "The US holds 7 of the top 10 models; China has 3.",
+      "Kimi K3 is China\u2019s top entry at No. 3, scoring 727.5 across 18/18 coverage."
+    ],
+    "question": "Does Claude Opus 5.5\u2019s No. 5 debut change your view of the top tier?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#LLM",
+      "#ClaudeOpus",
+      "#Anthropic",
+      "#OpenAI",
+      "#KimiK3",
+      "#AILeaderboard"
+    ]
   }
 }

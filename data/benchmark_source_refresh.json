@@ -1,36 +1,28 @@
 {
-  "retrievedAt": "2026-09-29",
+  "retrievedAt": "2026-09-30",
   "modelsChecked": 277,
   "sourcesChecked": 287,
-  "findings": 1271,
+  "findings": 1258,
   "accepted": 6,
   "failures": [
     {
-      "source": "llm-stats:Gemini 3 Flash",
+      "source": "llm-stats:Claude Opus 4.5",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 2.5 Pro",
+      "source": "llm-stats:MiniMax M2.1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V3.2 (Non-thinking)",
+      "source": "llm-stats:GPT-5 High",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:ERNIE 4.5",
+      "source": "llm-stats:GPT-5.5",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 4.6",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.4 mini",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2.6",
+      "source": "llm-stats:GLM-5.2",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -38,23 +30,23 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 5",
+      "source": "llm-stats:Qwen3.8 Max",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Qwen3.8 Flash",
+      "source": "llm-stats:Claude Opus 5",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.6 Luna",
+      "source": "llm-stats:Muse Spark 1.1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Laguna S 2.1",
+      "source": "llm-stats:Qwen3.8-27B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V4.1-Flash",
+      "source": "llm-stats:GPT-6 Astra",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -62,7 +54,7 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Nemotron Content Safety 3.5",
+      "source": "llm-stats:LFM2.5-2.6B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -70,11 +62,35 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.5 Instant",
+      "source": "llm-stats:Gemma 4 26B-A4B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.4 nano",
+      "source": "llm-stats:Nova 2 Lite",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Gemini 2.5 Pro Preview 06-05",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Phi 4 Reasoning",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Phi 4",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Llama 3.2 3B Instruct",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Phi-3.5-vision-instruct",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:QwQ-32B-Preview",
       "error": "HTTP Error 403: Forbidden"
     }
   ],
@@ -429,8 +445,9 @@
       "source": "vals:terminal-bench-2-1",
       "component": "terminal-bench-2.1",
       "rows": 75,
-      "matched": 50,
+      "matched": 49,
       "unmatched": [
+        "openai/gpt-6-sol",
         "google/gemini-3.6-flash",
         "grok/grok-4.7",
         "google/gemini-3.1-pro-preview",

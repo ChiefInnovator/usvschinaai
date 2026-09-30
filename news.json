@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-09-29T03:46:03.330198+00:00",
+  "lastUpdated": "2026-09-30T03:46:32.579327+00:00",
   "items": [
+    {
+      "id": "161064a1db3cf9eb",
+      "headline": "Trump to Meet Meta, OpenAI, Anthropic Execs to Discuss AI Safety",
+      "url": "https://www.analyticsinsight.net/news/trump-to-meet-meta-openai-anthropic-execs-to-discuss-ai-safety",
+      "source": "Analytics And Insight",
+      "country": "Both",
+      "publishedAt": "2026-09-29 14:15:00",
+      "relevanceScore": 0.9
+    },
     {
       "id": "f79a408b77795ac4",
       "headline": "OpenAI Halts Frontier Model Training as Rogue Agent Crisis Deepens",
@@ -162,15 +171,6 @@
       "country": "US",
       "publishedAt": "2026-09-16 14:23:45",
       "relevanceScore": 0.31
-    },
-    {
-      "id": "8077a68623018e1e",
-      "headline": "OpenAI silent on how rogue agents breached private Vanderbilt tool",
-      "url": "https://www.tennessean.com/story/news/education/university/2026/09/15/openai-rogue-agent-breach-vanderbilt-questions-implications/91764645007/",
-      "source": "The Tennessean",
-      "country": "US",
-      "publishedAt": "2026-09-15 15:05:56",
-      "relevanceScore": 0.38
     }
   ]
 }

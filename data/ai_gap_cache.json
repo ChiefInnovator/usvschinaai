@@ -912,23 +912,23 @@
   "IBM Granite 4.2 30B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-27T03:39:35.911131+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-30T03:40:56.509052+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis leaderboard result for the reasoning configuration. IBM's model card reports 66.41 on generic GPQA, which was not used because it is not explicitly GPQA Diamond.",
-      "score": "64.4%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/gpqa-diamond"
+      "notes": "IBM reports 66.41% in thinking mode using the NeMo Evaluator harness. The IBM Granite 4.2 release publication is dated August 25, 2026.",
+      "score": "66.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.2-30b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "cached_at": "2026-09-30T03:40:56.509052+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis run: hle:may-2025:text-only-2158:no-tools:pass-at-1, reasoning enabled. The independently indexed row records publication on September 5, 2026.",
+      "notes": "Artificial Analysis independently reports 11.17% on Humanity’s Last Exam for its reasoning configuration; reported as 11.2% after required one-decimal formatting.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://modelcap.ai/benchmarks/aa-humanitys-last-exam"
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
     }
   },
   "IBM Granite 4.2 3B": {
@@ -971,6 +971,18 @@
       "score": "13.9%",
       "source_type": "vendor_blog",
       "source_url": "https://ifm.ai/blog/k2/"
+    }
+  },
+  "IBM Granite 4.2 8B": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-09-30T03:40:56.509052+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "IBM’s model card reports GPQA 64.14 for the 8B Dense model; LLM Stats labels its GPQA metric as Diamond accuracy. Reported at one decimal place.",
+      "score": "64.1%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.2-8b"
     }
   },
   "Inkling": {
