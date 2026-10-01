@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-09-30T03:46:32.579327+00:00",
+  "lastUpdated": "2026-10-01T03:50:35.652121+00:00",
   "items": [
+    {
+      "id": "643b9960861c8c73",
+      "headline": "Nvidia postpones Skynet?",
+      "url": "https://investinglive.com/education/nvidia-postpones-skynet/",
+      "source": "Forexlive",
+      "country": "Both",
+      "publishedAt": "2026-09-30 15:21:29",
+      "relevanceScore": 0.54
+    },
+    {
+      "id": "558bacaaf03440a2",
+      "headline": "AI is now ‘super intelligence,’ but federal oversight is still missing",
+      "url": "https://www.techtarget.com/ai/news/366651554/AI-is-now-super-intelligence-but-federal-oversight-is-still-missing",
+      "source": "Techtarget",
+      "country": "Both",
+      "publishedAt": "2026-09-30 13:01:00",
+      "relevanceScore": 0.61
+    },
+    {
+      "id": "f20914732bd9cb22",
+      "headline": "US Wants to Break Taiwan Dependence — But Here's Why Taipei Will Remain 'Central' Character in the AI Chips Story",
+      "url": "https://www.benzinga.com/markets/tech/26/09/62074352/us-taiwan-ai-chips-dependence-taipei-central-role-ai-semiconductors",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-09-30 11:30:06",
+      "relevanceScore": 0.24
+    },
     {
       "id": "161064a1db3cf9eb",
       "headline": "Trump to Meet Meta, OpenAI, Anthropic Execs to Discuss AI Safety",
@@ -153,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-09-17 15:05:16",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "b84201f769aa2df9",
-      "headline": "Microsoft AI CEO says AI threats are real, and Anthropic is making it worse",
-      "url": "https://www.theverge.com/podcast/996412/microsoft-ai-ceo-mustafa-suleyman-regulation-safety-anthropic-claude",
-      "source": "The Verge",
-      "country": "US",
-      "publishedAt": "2026-09-17 14:00:00",
-      "relevanceScore": 0.38
-    },
-    {
-      "id": "306ceb665461b391",
-      "headline": "Sanders: AI regulation needed now to prevent catastrophic results",
-      "url": "https://mountaintimes.info/2026/09/16/sanders-ai-regulation-needed-now-to-prevent-catastrophic-results/",
-      "source": "Mountain Times",
-      "country": "US",
-      "publishedAt": "2026-09-16 14:23:45",
-      "relevanceScore": 0.31
     }
   ]
 }

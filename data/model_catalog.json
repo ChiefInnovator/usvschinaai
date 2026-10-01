@@ -2014,6 +2014,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "41785c502bb309ea03ac": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "40.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -22801,6 +22820,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "No",
           "Input$/M": "1.3"
+        },
+        "8ca020f9bab8ac7cb81d": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3"
         }
       },
       "benchmarks": {
@@ -36996,6 +37034,25 @@
           "License": "",
           "Parameters(B)": "320",
           "Latency": "16.2s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "8513e585b31d53a5c487": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "5c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "15.4s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
@@ -53543,6 +53600,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "bf705d3e444687db5315": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "48c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.7s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -54597,6 +54673,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "5.2s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
+        },
+        "e6d7d4759a41bc75c6aa": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "31c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.1s",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
@@ -66062,6 +66157,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "1712592ee3eddcf8c21f": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "130c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -76893,6 +77007,25 @@
           "License": "",
           "Parameters(B)": "2800",
           "Latency": "13.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
+        },
+        "97c848fb4139bd8a178c": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "4c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "14.2s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
@@ -94760,6 +94893,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "00f6b461f39b88f0c82c": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "0.47",
+          "Speed": "147c/s",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "1.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -95595,6 +95747,25 @@
           "License": "",
           "Parameters(B)": "2400",
           "Latency": "11.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.65"
+        },
+        "538503dcbff9af034a42": {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "4.951",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "12.7s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "1.65"
@@ -99374,6 +99545,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "353fbe39779c36c959cc": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "14c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "11.5s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -99735,6 +99925,25 @@
           "Latency": "–",
           "KnowledgeCutoff": "May 2026",
           "Multimodal": "Yes"
+        },
+        "37413a7ddbe2514606f9": {
+          "model": "GPT-6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-luna",
+          "origin": "US",
+          "description": "GPT-6 Luna by OpenAI — released Sep 22, 2026; $0.100/M input, $0.010/M cached input, $0.500/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "GPT-6 Luna",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "0.5",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.1"
         }
       },
       "benchmarks": {
@@ -99924,6 +100133,54 @@
             "configuration": "Artificial Analysis independently reports 39.0% for GPT-6 Luna at max reasoning effort. Result publication date is not independently verified from the cited comparison page.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-25"
+          }
+        },
+        "gpqa-diamond": {
+          "923dba0ad691da5c": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.5,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "Epoch AI evaluation of gpt-6-luna_max; evaluation started 2026-09-22",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-6-luna_max."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "1d142474a6e77bb8": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 78.9,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "Epoch AI evaluation of gpt-6-luna_max; evaluation started 2026-09-22",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-6-luna_max."
+          }
+        },
+        "gpqa": {
+          "7189622219053a9d": {
+            "benchmark": "GPQA",
+            "score": 90.9,
+            "unit": "percent",
+            "source": "https://gpqa.ai/changes/",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "GPQA Diamond original 198-question score; GPT 6 Luna, mean@1, max effort. The source reports 90.91%; publication date of this individual result is unknown (table states data through September 29, 2026).",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
@@ -108552,6 +108809,39 @@
             "confidence": "medium",
             "benchmarkAvailableFrom": "2026-06-15",
             "modelAvailableFrom": "2026-09-30"
+          }
+        },
+        "gpqa-diamond": {
+          "390484efb467cd6b": {
+            "benchmark": "GPQA Diamond",
+            "score": 95.4,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "Epoch AI evaluation of gpt-6.1-sol_max; evaluation started 2026-09-29",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-01",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-6.1-sol_max."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "8f1d7b9f8973c59b": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 93.7,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "Epoch AI evaluation of gpt-6.1-sol_max; evaluation started 2026-09-29",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-10-01",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-6.1-sol_max."
           }
         }
       }

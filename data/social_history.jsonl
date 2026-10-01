@@ -25,3 +25,4 @@
 {"date": "2026-09-28", "timestamp": "2026-09-28T03:48:18+00:00", "format": "price_vs_power", "palette": "midnight"}
 {"date": "2026-09-29", "timestamp": "2026-09-29T03:45:06+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "BrowseComp"}
 {"date": "2026-09-30", "timestamp": "2026-09-30T03:45:37+00:00", "format": "new_challenger", "palette": "newsprint"}
+{"date": "2026-10-01", "timestamp": "2026-10-01T03:49:53+00:00", "format": "head_to_head", "palette": "midnight"}

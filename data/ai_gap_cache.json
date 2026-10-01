@@ -178,6 +178,16 @@
       "source_type": "system_card",
       "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-01T03:45:23.417125+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond result for Claude Opus 5.5 at max effort; the leaderboard lists 90.6%. Publication date of the individual result is not independently established.",
+      "score": "90.6%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.benchleader.com/benchmarks/gpqa_diamond"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-26T04:35:45.187716+00:00",
@@ -200,10 +210,10 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-01T03:45:23.417125+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis MMMU-Pro leaderboard row for Claude Opus 5.5 (thinking); this is the highest displayed effort-specific score.",
+      "notes": "Artificial Analysis MMMU-Pro leaderboard result for Claude Opus 5.5 at max/adaptive reasoning; listed as 87.7% in the September 28, 2026 leaderboard data.",
       "score": "87.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.benchleader.com/benchmarks/aa_mmmu_pro"
@@ -674,6 +684,16 @@
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-01T03:45:23.417125+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond original 198-question score; GPT 6 Luna, mean@1, max effort. The source reports 90.91%; publication date of this individual result is unknown (table states data through September 29, 2026).",
+      "score": "90.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://gpqa.ai/changes/"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-29T03:40:21.703140+00:00",
@@ -922,13 +942,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-30T03:40:56.509052+00:00",
+      "cached_at": "2026-10-01T03:45:23.417125+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 11.17% on Humanity’s Last Exam for its reasoning configuration; reported as 11.2% after required one-decimal formatting.",
+      "notes": "Artificial Analysis text-only, no-tools HLE evaluation, pass@1; the public result is attributed to Granite 4.2 30B with reasoning enabled. Independently reported publication date: September 5, 2026.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
     }
   },
   "IBM Granite 4.2 3B": {

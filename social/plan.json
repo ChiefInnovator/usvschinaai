@@ -1,18 +1,18 @@
 {
-  "date": "2026-09-30",
-  "timestamp": "2026-09-30T03:45:37+00:00",
-  "format": "new_challenger",
-  "palette": "newsprint",
-  "weight": 3,
+  "date": "2026-10-01",
+  "timestamp": "2026-10-01T03:49:53+00:00",
+  "format": "head_to_head",
+  "palette": "midnight",
+  "weight": 1,
   "slides": [
-    "2026-09-30-1-new_challenger-newsprint.png",
-    "2026-09-30-2-leaderboard-newsprint.png"
+    "2026-10-01-1-head_to_head-midnight.png",
+    "2026-10-01-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-30-1-new_challenger-newsprint.png",
-    "https://usvschina.ai/social/2026-09-30-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-01-1-head_to_head-midnight.png",
+    "https://usvschina.ai/social/2026-10-01-2-leaderboard-midnight.png"
   ],
-  "caption": "Claude Opus 5.5 enters at No. 5 as the US leads by 2605.2\n\n• Claude Opus 5.5 jumped 9 places to No. 5 with a 519.3 unified score.\n• The US holds 7 of the top 10 models; China has 3.\n• Kimi K3 is China’s top entry at No. 3, scoring 727.5 across 18/18 coverage.\n\nDoes Claude Opus 5.5’s No. 5 debut change your view of the top tier?\n\n#AI #ArtificialIntelligence #LLM #ClaudeOpus #Anthropic #OpenAI #KimiK3 #AILeaderboard",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-09-30T03:46:36.840334+00:00"
+  "caption": "US leads the scoreboard by 3,708.7 points\n\n• US totals 4,909.28 points; China totals 1,200.57.\n• GPT-6 Astra ranks 1st at 900.2, ahead of Kimi K3 at 727.5.\n• The US holds 8 of the top 10 spots; China holds 2.\n\nDoes Kimi K3 have a path to the top spot?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #GPT6 #KimiK3 #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-10-01T03:50:39.204798+00:00"
 }

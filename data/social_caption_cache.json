@@ -402,5 +402,23 @@
       "#KimiK3",
       "#AILeaderboard"
     ]
+  },
+  "2026-10-01T03:49:53+00:00|head_to_head": {
+    "hook": "US leads the scoreboard by 3,708.7 points",
+    "bullets": [
+      "US totals 4,909.28 points; China totals 1,200.57.",
+      "GPT-6 Astra ranks 1st at 900.2, ahead of Kimi K3 at 727.5.",
+      "The US holds 8 of the top 10 spots; China holds 2."
+    ],
+    "question": "Does Kimi K3 have a path to the top spot?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#GPT6",
+      "#KimiK3",
+      "#ModelRankings"
+    ]
   }
 }
