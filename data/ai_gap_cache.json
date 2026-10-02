@@ -210,13 +210,13 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-10-01T03:45:23.417125+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis MMMU-Pro leaderboard result for Claude Opus 5.5 at max/adaptive reasoning; listed as 87.7% in the September 28, 2026 leaderboard data.",
+      "notes": "Artificial Analysis result for Claude Opus 5.5, Adaptive Reasoning, max effort, default fallback. Independently verified publication date: September 22, 2026.",
       "score": "87.7%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.benchleader.com/benchmarks/aa_mmmu_pro"
+      "source_url": "https://artificialanalysis.ai/models/claude-opus-5-5"
     }
   },
   "Claude Sonnet 5": {
@@ -252,6 +252,16 @@
     }
   },
   "Claude Sonnet 5.5": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; adaptive thinking at max effort; average over five trials. The system card was published September 28, 2026.",
+      "score": "71.0%",
+      "source_type": "system_card",
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-29T03:40:21.703140+00:00",
@@ -735,6 +745,28 @@
       "score": "83.3%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
+    }
+  },
+  "GPT-6.1 Sol": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; highest vendor-published effort result, High. The underlying OpenAI launch result was published September 29, 2026.",
+      "score": "75.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis result for GPT-6.1 Sol at Max reasoning effort. The comparison page does not provide an independently verifiable publication date for this individual result.",
+      "score": "53.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol"
     }
   },
   "Gemini 3.1 Pro": {

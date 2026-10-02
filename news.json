@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-01T03:50:35.652121+00:00",
+  "lastUpdated": "2026-10-02T03:44:52.809327+00:00",
   "items": [
+    {
+      "id": "77f9e332626798b5",
+      "headline": "The Real Existential Risk Is AI CEOs Avoiding Oversight: \"Alternative Nobel\" Winner Timnit Gebru",
+      "url": "http://www.democracynow.org/2026/10/1/timnit_gebru_ai",
+      "source": "Democracy Now!",
+      "country": "US",
+      "publishedAt": "2026-10-01 12:14:25",
+      "relevanceScore": 0.46
+    },
     {
       "id": "643b9960861c8c73",
       "headline": "Nvidia postpones Skynet?",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-19 10:00:45",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "4468b295444cb0a9",
-      "headline": "Huawei sets out 2027 AI chip plans as it expands challenge to Nvidia",
-      "url": "https://www.techedt.com/huawei-sets-out-2027-ai-chip-plans-as-it-expands-challenge-to-nvidia",
-      "source": "Tech Edition",
-      "country": "CN",
-      "publishedAt": "2026-09-17 15:05:16",
-      "relevanceScore": 0.24
     }
   ]
 }
