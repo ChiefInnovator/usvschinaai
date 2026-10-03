@@ -180,13 +180,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-10-01T03:45:23.417125+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond result for Claude Opus 5.5 at max effort; the leaderboard lists 90.6%. Publication date of the individual result is not independently established.",
-      "score": "90.6%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://www.benchleader.com/benchmarks/gpqa_diamond"
+      "notes": "Anthropic reports 92% accuracy for Claude Opus 5.5 on GPQA Diamond; the documentation does not provide a separately dated publication date for this individual result.",
+      "score": "92.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence"
     },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
@@ -261,6 +261,16 @@
       "score": "71.0%",
       "source_type": "system_card",
       "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Epoch AI reports GPQA Diamond at 96%; the displayed model-page result does not state the underlying effort configuration or an individual-result publication date.",
+      "score": "96.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://epoch.ai/models/claude-sonnet-5-5"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -974,35 +984,35 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-01T03:45:23.417125+00:00",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis text-only, no-tools HLE evaluation, pass@1; the public result is attributed to Granite 4.2 30B with reasoning enabled. Independently reported publication date: September 5, 2026.",
+      "notes": "Artificial Analysis reasoning-model result; HLE May-2025 text-only, 2,158-question, no-tools, pass@1 configuration. Individual-result publication date is unknown.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
     }
   },
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table explicitly labels this as GPQA Diamond and lists IBM Granite 4.2-3B at 55.9%; configuration and reasoning effort are undisclosed.",
+      "notes": "Artificial Analysis independent GPQA Diamond evaluation for Granite 4.2 3B; individual-result publication date is not stated. IBM's 54.80% generic GPQA result was not used because it is not explicitly GPQA Diamond.",
       "score": "55.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table labels the metric HLE and lists IBM Granite 4.2-3B at 6.6%; configuration and tool setting are undisclosed.",
+      "notes": "Artificial Analysis independent Humanity's Last Exam evaluation for Granite 4.2 3B; individual-result publication date is not stated.",
       "score": "6.6%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
@@ -1016,13 +1026,13 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table lists IBM Granite 4.2-3B at 13.9; the evaluation configuration and reasoning-effort setting are not disclosed.",
+      "notes": "Artificial Analysis independent run for Granite 4.2 3B; individual-result publication date is not stated. IBM's launch table reports NA for its own 3B Terminal-Bench 2.1 evaluation.",
       "score": "13.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
     }
   },
   "IBM Granite 4.2 8B": {
@@ -1035,6 +1045,16 @@
       "score": "64.1%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/ibm-granite/granite-4.2-8b"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently evaluated the reasoning model on its text-only HLE protocol; score is pass@1 over its 2,158-question text-only subset. Individual-result publication date is unknown.",
+      "score": "9.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-8b/"
     }
   },
   "Inkling": {

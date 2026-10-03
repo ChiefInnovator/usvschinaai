@@ -438,5 +438,23 @@
       " #KimiK3",
       "#AIBenchmark"
     ]
+  },
+  "2026-10-03T03:51:53+00:00|biggest_mover": {
+    "hook": "Claude Opus 5.5 made the day\u2019s biggest move, climbing 3 places.",
+    "bullets": [
+      "Claude Opus 5.5 now ranks 3rd with a unified score of 804.6.",
+      "The US leads China 5194.55 to 1200.57 on the scoreboard.",
+      "Kimi K3 remains China\u2019s top model at rank 4 with 727.5."
+    ],
+    "question": "Is Claude Opus 5.5 ready to challenge the top 2?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#ClaudeOpus",
+      "#OpenAI",
+      "#KimiK3",
+      "#AIModels"
+    ]
   }
 }
