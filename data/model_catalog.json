@@ -2071,6 +2071,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "f41874db01247bf47fba": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "34.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -37132,6 +37151,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "b63f1a447ec3597d7b02": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "5c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "15.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -66347,6 +66385,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "4638554bfa4a819df808": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "83c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "6.3s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -66696,6 +66753,21 @@
             "configuration": "ARC Prize Verified result, High reasoning configuration; published September 2, 2026.",
             "kind": "published",
             "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03"
+          }
+        },
+        "gpqa": {
+          "cf2d2ce7d9bd64cd": {
+            "benchmark": "GPQA",
+            "score": 95.3,
+            "unit": "percent",
+            "source": "https://openai.com/index/gpt-6-astra/",
+            "availableFrom": "2026-10-04",
+            "retrievedAt": "2026-10-04",
+            "configuration": "GPQA Diamond accuracy. The OpenAI comparison table’s exact Gemini 3.8 Flash column reports 95.3%; no effort setting is specified. Independently archived as published on 2026-09-03: https://localsonly.run/runs/research-gemini-3.8-flash-published-reference-gpqa-diamond-1.0",
+            "kind": "published",
+            "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-03"
           }
@@ -77235,6 +77307,25 @@
           "License": "",
           "Parameters(B)": "2800",
           "Latency": "12.1s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
+        },
+        "a4bde0fd8b05c4fdc802": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "12.3s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
@@ -99865,6 +99956,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "11.6s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
+        },
+        "91022c4f78b1e15ca8c5": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "8c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "11.5s",
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"

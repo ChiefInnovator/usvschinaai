@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-03",
-  "timestamp": "2026-10-03T03:51:53+00:00",
-  "format": "biggest_mover",
-  "palette": "sunrise",
-  "weight": 2,
+  "date": "2026-10-04",
+  "timestamp": "2026-10-04T04:48:33+00:00",
+  "format": "trend_30d",
+  "palette": "newsprint",
+  "weight": 1,
   "slides": [
-    "2026-10-03-1-biggest_mover-sunrise.png",
-    "2026-10-03-2-leaderboard-sunrise.png"
+    "2026-10-04-1-trend_30d-newsprint.png",
+    "2026-10-04-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-03-1-biggest_mover-sunrise.png",
-    "https://usvschina.ai/social/2026-10-03-2-leaderboard-sunrise.png"
+    "https://usvschina.ai/social/2026-10-04-1-trend_30d-newsprint.png",
+    "https://usvschina.ai/social/2026-10-04-2-leaderboard-newsprint.png"
   ],
-  "caption": "Claude Opus 5.5 made the day’s biggest move, climbing 3 places.\n\n• Claude Opus 5.5 now ranks 3rd with a unified score of 804.6.\n• The US leads China 5194.55 to 1200.57 on the scoreboard.\n• Kimi K3 remains China’s top model at rank 4 with 727.5.\n\nIs Claude Opus 5.5 ready to challenge the top 2?\n\n#AI #ArtificialIntelligence #USvsChinaAI #ClaudeOpus #OpenAI #KimiK3 #AIModels",
+  "caption": "US leads the 30-day scoreboard by 4291.4 points\n\n• US totals 5491.95 versus China’s 1200.57.\n• US models take 8 of the top 10 spots; China takes 2.\n• Gemini 3.8 Flash made the biggest move, climbing 6 places.\n\nIs the gap widening, or is China’s depth being undervalued?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #ModelRankings",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-03T03:52:25.593506+00:00"
+  "generated_at": "2026-10-04T04:49:22.398967+00:00"
 }

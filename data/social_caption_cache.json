@@ -456,5 +456,23 @@
       "#KimiK3",
       "#AIModels"
     ]
+  },
+  "2026-10-04T04:48:33+00:00|trend_30d": {
+    "hook": "US leads the 30-day scoreboard by 4291.4 points",
+    "bullets": [
+      "US totals 5491.95 versus China\u2019s 1200.57.",
+      "US models take 8 of the top 10 spots; China takes 2.",
+      "Gemini 3.8 Flash made the biggest move, climbing 6 places."
+    ],
+    "question": "Is the gap widening, or is China\u2019s depth being undervalued?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#OpenAI",
+      "#KimiK3",
+      "#ModelRankings"
+    ]
   }
 }

@@ -28,3 +28,4 @@
 {"date": "2026-10-01", "timestamp": "2026-10-01T03:49:53+00:00", "format": "head_to_head", "palette": "midnight"}
 {"date": "2026-10-02", "timestamp": "2026-10-02T03:43:55+00:00", "format": "leaderboard", "palette": "graphite"}
 {"date": "2026-10-03", "timestamp": "2026-10-03T03:51:53+00:00", "format": "biggest_mover", "palette": "sunrise"}
+{"date": "2026-10-04", "timestamp": "2026-10-04T04:48:33+00:00", "format": "trend_30d", "palette": "newsprint"}
