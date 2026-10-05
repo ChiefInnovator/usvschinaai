@@ -474,5 +474,24 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-05T03:52:22+00:00|price_vs_power": {
+    "hook": "US leads the scoreboard, but China owns the sharper value plays.",
+    "bullets": [
+      "US leads 5491.95 to 1200.57, a 4291.4-point margin.",
+      "GPT-6 Astra ranks 1st at 900.2, but returns 1.4 value.",
+      "GLM-5.3-Flash delivers 91.8 value at rank 10 with 473.0 power."
+    ],
+    "question": "Would you take the top score or the better price-to-power tradeoff?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#ModelBenchmark",
+      "#AIValue",
+      "#GPT6",
+      "#GLM53Flash"
+    ]
   }
 }

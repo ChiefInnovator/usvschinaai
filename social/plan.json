@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-04",
-  "timestamp": "2026-10-04T04:48:33+00:00",
-  "format": "trend_30d",
-  "palette": "newsprint",
+  "date": "2026-10-05",
+  "timestamp": "2026-10-05T03:52:22+00:00",
+  "format": "price_vs_power",
+  "palette": "midnight",
   "weight": 1,
   "slides": [
-    "2026-10-04-1-trend_30d-newsprint.png",
-    "2026-10-04-2-leaderboard-newsprint.png"
+    "2026-10-05-1-price_vs_power-midnight.png",
+    "2026-10-05-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-04-1-trend_30d-newsprint.png",
-    "https://usvschina.ai/social/2026-10-04-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-05-1-price_vs_power-midnight.png",
+    "https://usvschina.ai/social/2026-10-05-2-leaderboard-midnight.png"
   ],
-  "caption": "US leads the 30-day scoreboard by 4291.4 points\n\n• US totals 5491.95 versus China’s 1200.57.\n• US models take 8 of the top 10 spots; China takes 2.\n• Gemini 3.8 Flash made the biggest move, climbing 6 places.\n\nIs the gap widening, or is China’s depth being undervalued?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #ModelRankings",
+  "caption": "US leads the scoreboard, but China owns the sharper value plays.\n\n• US leads 5491.95 to 1200.57, a 4291.4-point margin.\n• GPT-6 Astra ranks 1st at 900.2, but returns 1.4 value.\n• GLM-5.3-Flash delivers 91.8 value at rank 10 with 473.0 power.\n\nWould you take the top score or the better price-to-power tradeoff?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #ModelBenchmark #AIValue #GPT6 #GLM53Flash",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-04T04:49:22.398967+00:00"
+  "generated_at": "2026-10-05T03:53:24.334949+00:00"
 }

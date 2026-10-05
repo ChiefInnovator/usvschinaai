@@ -1,12 +1,16 @@
 {
-  "retrievedAt": "2026-10-04",
+  "retrievedAt": "2026-10-05",
   "modelsChecked": 277,
   "sourcesChecked": 287,
-  "findings": 1073,
+  "findings": 1079,
   "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:Gemini 3 Flash",
+      "source": "llm-stats:Gemini 2.5 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Kimi K2 0905",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -14,40 +18,24 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.4 mini",
+      "source": "llm-stats:GPT-5.1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Fable 5",
+      "source": "llm-stats:DeepSeek-V4-Flash-0731",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 3.8 Flash Cyber",
+      "source": "llm-stats:Hy4 preview",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:IBM Granite 4.2 30B",
+      "source": "llm-stats:GPT-5.4 nano",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.6 Cyber",
+      "source": "llm-stats:Phi-3.5-vision-instruct",
       "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Gemini 2.5 Pro Preview 06-05",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Phi 4 Reasoning",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Gemma 3 27B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:lcb",
@@ -60,6 +48,10 @@
     {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
+    },
+    {
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:swebench",

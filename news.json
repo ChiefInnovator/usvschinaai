@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-04T04:49:18.475355+00:00",
+  "lastUpdated": "2026-10-05T03:53:20.018958+00:00",
   "items": [
+    {
+      "id": "44d5dc2b147583d0",
+      "headline": "DeepSeek down live: Chinese AI app not working properly amid ...",
+      "url": "https://ng.shotoe.com/deepseek-ai-model-st_563171/news/deepseek-down-live-chinese-ai-app-not-working-properly-amid-sn_5076052/",
+      "source": "Shotoe Nigeria",
+      "country": "Both",
+      "publishedAt": "2026-10-04 00:00:00",
+      "relevanceScore": 0.83
+    },
+    {
+      "id": "d6e1cc06e9cf1df5",
+      "headline": "Sen. Rounds, Anthropic leaders talk AI’s future at South Dakota Mines",
+      "url": "https://www.kotatv.com/2026/10/03/sen-rounds-anthropic-leaders-talk-ais-future-south-dakota-mines/",
+      "source": "Https://www.kotatv.com",
+      "country": "US",
+      "publishedAt": "2026-10-03 18:30:00",
+      "relevanceScore": 0.3
+    },
     {
       "id": "6d38abc270454e5c",
       "headline": "US officials probe Nvidia as restricted AI chips reach China",
@@ -162,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-21 14:37:42",
       "relevanceScore": 0.23
-    },
-    {
-      "id": "498bbea2b980b098",
-      "headline": "GOP donors say Trump missed the mark with latest AI comments",
-      "url": "https://www.yahoo.com/news/politics/articles/needed-more-empathetic-gop-donors-140000780.html",
-      "source": "Yahoo! News",
-      "country": "Both",
-      "publishedAt": "2026-09-20 14:00:00",
-      "relevanceScore": 0.46
     }
   ]
 }
