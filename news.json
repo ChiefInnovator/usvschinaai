@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-10-05T03:53:20.018958+00:00",
+  "lastUpdated": "2026-10-06T03:45:45.332091+00:00",
   "items": [
+    {
+      "id": "52123d5e46081b18",
+      "headline": "OpenAI's Sam Altman Says Some AI Misuse Should Be Accepted",
+      "url": "https://industrywired.com/artificial-intelligence/openais-sam-altman-says-some-ai-misuse-should-be-accepted-12626335",
+      "source": "Industry Wired",
+      "country": "Both",
+      "publishedAt": "2026-10-05 14:00:37",
+      "relevanceScore": 0.61
+    },
+    {
+      "id": "55aea0d63125b9c0",
+      "headline": "Threat summer 2026: Editors discuss top cyber incidents",
+      "url": "https://www.techtarget.com/cybersecurity/video/Threat-summer-2026-Editors-discuss-top-cyber-incidents",
+      "source": "Techtarget",
+      "country": "Both",
+      "publishedAt": "2026-10-05 13:15:00",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "89aadc4b1f3bfeb2",
+      "headline": "Hirundo Releases Westernized Qwen, Cutting Censored and CCP-Aligned Answers From 89.8% to 2.8% in the Leading...",
+      "url": "https://www.financialcontent.com/article/bizwire-2026-10-5-hirundo-releases-westernized-qwen-cutting-censored-and-ccp-aligned-answers-from-898-to-28-in-the-leading-chinese-ai-model",
+      "source": "Financialcontent",
+      "country": "CN",
+      "publishedAt": "2026-10-05 13:01:00",
+      "relevanceScore": 0.84
+    },
     {
       "id": "44d5dc2b147583d0",
       "headline": "DeepSeek down live: Chinese AI app not working properly amid ...",
@@ -153,33 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-24 12:53:34",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "7cd78081d18a1762",
-      "headline": "AI Model Combining Ultrasound and Digital Breast Tomosynthesis Improves Specificity in Breast Cancer Triage",
-      "url": "https://www.newswise.com/articles/ai-model-combining-ultrasound-and-digital-breast-tomosynthesis-improves-specificity-in-breast-cancer-triage/?sc=rsla",
-      "source": "Newswise",
-      "country": "Both",
-      "publishedAt": "2026-09-24 12:05:19",
-      "relevanceScore": 0.32
-    },
-    {
-      "id": "9e1a819d982a2c84",
-      "headline": "Global, tech leaders weigh in on AI development debate",
-      "url": "https://www.techtarget.com/ai/video/Global-tech-leaders-weigh-in-on-AI-development-debate",
-      "source": "Techtarget",
-      "country": "Both",
-      "publishedAt": "2026-09-21 15:06:00",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "d25dd8fc9037e0ce",
-      "headline": "Is this Team Humanity’s last chance to stand up to AI?",
-      "url": "https://www.heraldstandard.com/uncategorized/2026/sep/21/is-this-team-humanitys-last-chance-to-stand-up-to-ai/",
-      "source": "Herald Standard",
-      "country": "US",
-      "publishedAt": "2026-09-21 14:37:42",
-      "relevanceScore": 0.23
     }
   ]
 }

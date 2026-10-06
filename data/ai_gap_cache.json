@@ -168,6 +168,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/anthropic-claude-opus-5-5"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Mercor APEX BrowseComp web-research harness; max effort; 130 public tasks and 517 evaluation samples. Independently published result dated October 3, 2026.",
+      "score": "88.5%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-27T03:39:35.911131+00:00",
@@ -768,6 +778,16 @@
     }
   },
   "GPT-6.1 Sol": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1 on the 130 public BrowseComp tasks; GPT-6.1 Sol Max. Result publication date is unknown.",
+      "score": "95.4%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-10-02T03:39:50.266525+00:00",
@@ -787,6 +807,16 @@
       "score": "53.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/gpt-6-1-sol/"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "MMMU-Pro overall score, independently evaluated by Artificial Analysis; max reasoning mode. Result publication date is unknown.",
+      "score": "86.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
     }
   },
   "Gemini 3.1 Pro": {
@@ -1016,43 +1046,43 @@
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independent GPQA Diamond evaluation for Granite 4.2 3B; individual-result publication date is not stated. IBM's 54.80% generic GPQA result was not used because it is not explicitly GPQA Diamond.",
+      "notes": "IFM's comparative model-card table explicitly labels this as GPQA Diamond and lists Granite 4.2-3B at 55.9%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
       "score": "55.9%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independent Humanity's Last Exam evaluation for Granite 4.2 3B; individual-result publication date is not stated.",
+      "notes": "IFM's comparative model-card table lists HLE for Granite 4.2-3B at 6.6%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
       "score": "6.6%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table explicitly labels this SWE-bench Verified result and lists IBM Granite 4.2-3B at 32.2%; harness configuration and reasoning effort are undisclosed.",
+      "notes": "IFM's comparative model-card table explicitly labels this as SWE-bench Verified and lists Granite 4.2-3B at 32.2%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
       "score": "32.2%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independent run for Granite 4.2 3B; individual-result publication date is not stated. IBM's launch table reports NA for its own 3B Terminal-Bench 2.1 evaluation.",
+      "notes": "IFM's comparative model-card table lists Granite 4.2-3B at 13.9%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
       "score": "13.9%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
     }
   },
   "IBM Granite 4.2 8B": {

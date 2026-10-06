@@ -493,5 +493,23 @@
       "#GPT6",
       "#GLM53Flash"
     ]
+  },
+  "2026-10-06T03:44:47+00:00|benchmark_day": {
+    "hook": "The US keeps the scoreboard lead, but China owns two top-five spots.",
+    "bullets": [
+      "US leads 5276.86 to 1383.51, with a 3893.3-point margin.",
+      "GPT-6 Astra holds rank 1 at 900.3 unified.",
+      "Kimi K3 is China\u2019s top model at rank 5 with 704.8 unified."
+    ],
+    "question": "Is the gap decisive, or are China\u2019s top models closing in?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIBenchmarks",
+      "#GPT6",
+      "#KimiK3",
+      "#GLM53Flash"
+    ]
   }
 }

@@ -1,41 +1,41 @@
 {
-  "retrievedAt": "2026-10-05",
+  "retrievedAt": "2026-10-06",
   "modelsChecked": 277,
   "sourcesChecked": 287,
-  "findings": 1079,
-  "accepted": 0,
+  "findings": 1081,
+  "accepted": 5,
   "failures": [
     {
-      "source": "llm-stats:Gemini 2.5 Pro",
+      "source": "llm-stats:Qwen3.7 Max",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Kimi K2 0905",
+      "source": "llm-stats:Gemini 3.5 Flash",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:MiMo-V2-Flash",
+      "source": "llm-stats:Claude Mythos Preview",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.1",
+      "source": "llm-stats:Muse Spark",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V4-Flash-0731",
+      "source": "llm-stats:Gemma 3n E4B Instructed LiteRT Preview",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Hy4 preview",
+      "source": "llm-stats:Step3-VL-10B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.4 nano",
+      "source": "llm-stats:Qwen2.5-Coder 32B Instruct",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Phi-3.5-vision-instruct",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:lcb",
@@ -46,16 +46,12 @@
       "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
     },
     {
-      "source": "vals:gpqa",
-      "error": "Vals benchmark identity or payload changed: gpqa"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
-    },
-    {
       "source": "vals:swebench",
       "error": "Vals benchmark identity or payload changed: swebench"
+    },
+    {
+      "source": "vals:gpqa",
+      "error": "Vals benchmark identity or payload changed: gpqa"
     }
   ],
   "skippedConfigurations": [],

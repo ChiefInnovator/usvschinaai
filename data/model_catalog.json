@@ -2109,6 +2109,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "67bb68818ab86492eafd": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "13.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -22915,6 +22934,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "No",
           "Input$/M": "1.3"
+        },
+        "03a2015af8bfdb0245d8": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3"
         }
       },
       "benchmarks": {
@@ -37704,6 +37742,22 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "arc-agi-2": {
+          "d1f612915954e04e": {
+            "benchmark": "ARC-AGI-2",
+            "score": 65.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Epoch AI evaluation of glm-5.3-flash_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row glm-5.3-flash_max."
           }
         }
       }
@@ -53790,6 +53844,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "1c8e2f845193ee8eb73f": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "42c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "8.7s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -66461,6 +66534,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "f841e1cb7a4ec08e34fd": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "85c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "6.2s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -66812,6 +66904,20 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-03"
+          },
+          "2249da2549335657": {
+            "benchmark": "ARC-AGI-2",
+            "score": 89.2,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Epoch AI evaluation of gemini-3.8-flash_high; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gemini-3.8-flash_high."
           }
         },
         "gpqa": {
@@ -95326,6 +95432,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "7d38c3129169de3bc227": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "0.47",
+          "Speed": "12c/s",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "12.5s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -96813,6 +96938,25 @@
           "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes"
+        },
+        "dba179c13bb823b94ff0": {
+          "model": "Qwen3.8-27B",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-27b",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-14",
+          "Model": "Qwen3.8-27B",
+          "Country": "🇨🇳",
+          "Context": "262.1k",
+          "Output$/M": "3",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "27.8",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.4"
         }
       },
       "benchmarks": {
@@ -97286,6 +97430,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
+          }
+        },
+        "arc-agi-2": {
+          "9d69f0b50381863b": {
+            "benchmark": "ARC-AGI-2",
+            "score": 42.4,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Epoch AI evaluation of qwen3.8-27b_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row qwen3.8-27b_xhigh."
           }
         }
       }
@@ -100196,6 +100356,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-23",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-opus-5-5_xhigh."
+          },
+          "70648d773a6005aa": {
+            "benchmark": "ARC-AGI-2",
+            "score": 93.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Epoch AI evaluation of claude-opus-5-5_high; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-opus-5-5_high."
           }
         },
         "humanitys-last-exam": {
@@ -109363,7 +109537,27 @@
     },
     "86814cd08ec3ac720e22": {
       "name": "GPT-6.1 Sol",
-      "profiles": {},
+      "profiles": {
+        "c5638b173a5ba23d4949": {
+          "model": "GPT-6.1 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6.1-sol",
+          "origin": "US",
+          "description": "GPT-6.1 Sol by OpenAI — released Sep 29, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-29",
+          "Model": "GPT-6.1 Sol",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "10",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
+        }
+      },
       "benchmarks": {
         "deepswe-1.1": {
           "c48950cf1c712b5a": {
@@ -109427,6 +109621,52 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-02"
+          }
+        },
+        "arc-agi-2": {
+          "0c3330d906a0e707": {
+            "benchmark": "ARC-AGI-2",
+            "score": 94.2,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Epoch AI evaluation of gpt-6.1-sol_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-06",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6.1-sol_max."
+          }
+        },
+        "browsecomp": {
+          "85b0fb3e553cc093": {
+            "benchmark": "BrowseComp",
+            "score": 95.4,
+            "unit": "percent",
+            "source": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "Pass@1 on the 130 public BrowseComp tasks; GPT-6.1 Sol Max. Result publication date is unknown.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06"
+          }
+        },
+        "mmmu-pro": {
+          "94b0a5a29ef0c667": {
+            "benchmark": "MMMU-Pro",
+            "score": 86.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/evaluations/mmmu-pro",
+            "availableFrom": "2026-10-06",
+            "retrievedAt": "2026-10-06",
+            "configuration": "MMMU-Pro overall score, independently evaluated by Artificial Analysis; max reasoning mode. Result publication date is unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06"
           }
         }
       }

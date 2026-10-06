@@ -1,18 +1,19 @@
 {
-  "date": "2026-10-05",
-  "timestamp": "2026-10-05T03:52:22+00:00",
-  "format": "price_vs_power",
-  "palette": "midnight",
+  "date": "2026-10-06",
+  "timestamp": "2026-10-06T03:44:47+00:00",
+  "format": "benchmark_day",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-10-05-1-price_vs_power-midnight.png",
-    "2026-10-05-2-leaderboard-midnight.png"
+    "2026-10-06-1-benchmark_day-graphite.png",
+    "2026-10-06-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-05-1-price_vs_power-midnight.png",
-    "https://usvschina.ai/social/2026-10-05-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-10-06-1-benchmark_day-graphite.png",
+    "https://usvschina.ai/social/2026-10-06-2-leaderboard-graphite.png"
   ],
-  "caption": "US leads the scoreboard, but China owns the sharper value plays.\n\n• US leads 5491.95 to 1200.57, a 4291.4-point margin.\n• GPT-6 Astra ranks 1st at 900.2, but returns 1.4 value.\n• GLM-5.3-Flash delivers 91.8 value at rank 10 with 473.0 power.\n\nWould you take the top score or the better price-to-power tradeoff?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #ModelBenchmark #AIValue #GPT6 #GLM53Flash",
+  "caption": "The US keeps the scoreboard lead, but China owns two top-five spots.\n\n• US leads 5276.86 to 1383.51, with a 3893.3-point margin.\n• GPT-6 Astra holds rank 1 at 900.3 unified.\n• Kimi K3 is China’s top model at rank 5 with 704.8 unified.\n\nIs the gap decisive, or are China’s top models closing in?\n\n#AI #ArtificialIntelligence #USvsChina #AIBenchmarks #GPT6 #KimiK3 #GLM53Flash",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-05T03:53:24.334949+00:00"
+  "generated_at": "2026-10-06T03:45:49.681604+00:00",
+  "benchmark": "Toolathlon"
 }
