@@ -31,3 +31,4 @@
 {"ts": "2026-10-04T04:49:28.406128+00:00", "model": "gpt-5.6-luna", "format": "trend_30d", "input_tokens": 1063, "output_tokens": 215, "cached_tokens": 0, "usd": 0.000471}
 {"ts": "2026-10-05T03:53:30.838917+00:00", "model": "gpt-5.6-luna", "format": "price_vs_power", "input_tokens": 1050, "output_tokens": 196, "cached_tokens": 0, "usd": 0.000445}
 {"ts": "2026-10-06T03:45:56.128472+00:00", "model": "gpt-5.6-luna", "format": "benchmark_day", "input_tokens": 1062, "output_tokens": 216, "cached_tokens": 0, "usd": 0.000472}
+{"ts": "2026-10-07T03:49:04.645367+00:00", "model": "gpt-5.6-luna", "format": "head_to_head", "input_tokens": 1050, "output_tokens": 145, "cached_tokens": 0, "usd": 0.000384}

@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-06T03:45:45.332091+00:00",
+  "lastUpdated": "2026-10-07T03:48:55.163800+00:00",
   "items": [
+    {
+      "id": "ca413c0899c8aa23",
+      "headline": "Asos app users receive threatening messages after hack",
+      "url": "https://www.computerweekly.com/news/366651685/Asos-app-users-receive-threatening-messages-after-hack",
+      "source": "Computerweekly News",
+      "country": "Both",
+      "publishedAt": "2026-10-06 13:27:00",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "dc943b18ce77aa57",
+      "headline": "Final Phase Of Google September 2026 Spam Update Rollout Oct 4-6?",
+      "url": "https://www.seroundtable.com/google-september-2026-spam-update-phase-3-42239.html",
+      "source": "Search Engine Roundtable",
+      "country": "US",
+      "publishedAt": "2026-10-06 11:55:00",
+      "relevanceScore": 0.3
+    },
     {
       "id": "52123d5e46081b18",
       "headline": "OpenAI's Sam Altman Says Some AI Misuse Should Be Accepted",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-25 14:22:15",
       "relevanceScore": 0.83
-    },
-    {
-      "id": "14c7f46ef587cc45",
-      "headline": "Weekly Basal Insulin Efsitora: A New Biologics CMC Benchmark",
-      "url": "https://www.pharmtech.com/view/weekly-basal-insulin-efsitora-a-new-biologics-cmc-benchmark",
-      "source": "Pharmtech",
-      "country": "Both",
-      "publishedAt": "2026-09-24 15:03:17",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "8e14a0624853edbb",
-      "headline": "OpenAI agent hacking spree widens to Australia, targeting government website",
-      "url": "https://www.helpnetsecurity.com/2026/09/24/openai-agent-hacking-australia/",
-      "source": "Help Net Security",
-      "country": "US",
-      "publishedAt": "2026-09-24 12:53:34",
-      "relevanceScore": 0.3
     }
   ]
 }

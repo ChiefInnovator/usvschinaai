@@ -1,12 +1,24 @@
 {
-  "retrievedAt": "2026-10-06",
+  "retrievedAt": "2026-10-07",
   "modelsChecked": 277,
   "sourcesChecked": 287,
-  "findings": 1081,
-  "accepted": 5,
+  "findings": 1069,
+  "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:Qwen3.7 Max",
+      "source": "llm-stats:Gemini 3 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V3.2 (Non-thinking)",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:ERNIE 4.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Opus 4.8",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -14,11 +26,19 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Mythos Preview",
+      "source": "llm-stats:GPT-6 Luna",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Muse Spark",
+      "source": "llm-stats:IBM Granite 4.2 8B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.4 nano",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Nova 2 Omni",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -26,32 +46,32 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Step3-VL-10B",
+      "source": "llm-stats:Qwen3-Next-80B-A3B-Base",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Qwen2.5-Coder 32B Instruct",
+      "source": "llm-stats:Qwen2.5-Omni-7B",
       "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:lcb",
       "error": "Vals benchmark identity or payload changed: lcb"
     },
     {
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
+    },
+    {
       "source": "vals:terminal-bench-2-1",
       "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
     },
     {
-      "source": "vals:swebench",
-      "error": "Vals benchmark identity or payload changed: swebench"
-    },
-    {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
+    },
+    {
+      "source": "vals:swebench",
+      "error": "Vals benchmark identity or payload changed: swebench"
     }
   ],
   "skippedConfigurations": [],
