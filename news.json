@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-07T03:48:55.163800+00:00",
+  "lastUpdated": "2026-10-08T03:49:13.599128+00:00",
   "items": [
+    {
+      "id": "0ddfeaf67e3d29a4",
+      "headline": "Huge companies have dominated AI. Two startups with an entirely different approach think they can do better",
+      "url": "https://www.cnn.com/2026/10/07/business/mistral-ai-open-weight",
+      "source": "Cnn",
+      "country": "Both",
+      "publishedAt": "2026-10-07 15:11:03",
+      "relevanceScore": 0.6
+    },
+    {
+      "id": "18c1fbe832485392",
+      "headline": "Bloom raises $3.6M to become the Alibaba of American manufacturing",
+      "url": "https://techcrunch.com/2026/10/07/bloom-raises-3-6m-to-become-the-alibaba-of-american-manufacturing/",
+      "source": "Tech Crunch",
+      "country": "Both",
+      "publishedAt": "2026-10-07 15:00:00",
+      "relevanceScore": 0.3
+    },
     {
       "id": "ca413c0899c8aa23",
       "headline": "Asos app users receive threatening messages after hack",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-25 16:00:00",
       "relevanceScore": 0.92
-    },
-    {
-      "id": "45f3e8aa26bcf565",
-      "headline": "Top AI companies call for safety measures while critics warn regulation could stifle innovation",
-      "url": "https://www.foxbusiness.com/technology/top-ai-companies-call-safety-measures-while-critics-warn-regulation-could-stifle-innovation",
-      "source": "Fox Business",
-      "country": "US",
-      "publishedAt": "2026-09-25 14:29:09",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "b832a472c9b11b9b",
-      "headline": "White House Tells OpenAI and Anthropic: America Tests First",
-      "url": "https://www.webpronews.com/white-house-tells-openai-and-anthropic-america-tests-first/",
-      "source": "Webpronews",
-      "country": "US",
-      "publishedAt": "2026-09-25 14:22:15",
-      "relevanceScore": 0.83
     }
   ]
 }
