@@ -2166,6 +2166,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "4d975165528f7a73310f": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "17c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "926ms",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -37322,6 +37341,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "017bf907bb3d5551caf1": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "16.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -53974,6 +54012,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "8.2s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
+        },
+        "ff986f963449f27caa64": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "43c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "7.0s",
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
@@ -77730,6 +77787,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2.85"
+        },
+        "214babc0663e12236866": {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "27c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "10.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85"
         }
       },
       "benchmarks": {
@@ -100582,6 +100658,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "6acbc4e69e618040d9e6": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "16c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "10.4s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -110014,6 +110109,21 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-06"
           }
+        },
+        "gpqa": {
+          "9043a4d22d21bc9b": {
+            "benchmark": "GPQA",
+            "score": 95.4,
+            "unit": "percent",
+            "source": "https://benchmarkregistry.org/benchmarks/gpqa/diamond-epoch-ai?result=0372e7e45f6003b4a7cd3437259ffe1ed26b0f5222b4c1d5ece38a88b108a4f5&view=history",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "GPQA Diamond accuracy, Epoch AI harness, max reasoning effort. Evaluated September 29, 2026; independently published in the benchmark registry on October 7, 2026.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06"
+          }
         }
       }
     },
@@ -110101,6 +110211,73 @@
             "confidence": "medium",
             "benchmarkAvailableFrom": "2026-06-15",
             "modelAvailableFrom": "2026-10-08"
+          }
+        }
+      }
+    },
+    "8028780d46c48094081a": {
+      "name": "Ember-1",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "31c58073c95ee82f": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 75.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ember-1",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-10-09"
+          }
+        },
+        "terminal-bench-2.1": {
+          "7a73f8050bf47b7b": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 82.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ember-1",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-09"
+          }
+        },
+        "swe-bench-verified": {
+          "6c8afdaeff8da3e1": {
+            "benchmark": "SWE-bench Verified",
+            "score": 92.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ember-1",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-09"
+          }
+        },
+        "deepswe": {
+          "1dc46bae4cb20f80": {
+            "benchmark": "DeepSWE",
+            "score": 75.2,
+            "unit": "percent",
+            "source": "https://fireworks.ai/blog/ember-1",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "DeepSWE 1.1, 113 tasks; published September 23, 2026 in Fireworks' benchmark table.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-09"
           }
         }
       }

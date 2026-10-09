@@ -65,7 +65,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-10-08T03:48:14+00:00",
+      "timestamp": "2026-10-09T03:50:19+00:00",
       "teams": {
         "US": [
           {
@@ -79,7 +79,7 @@
           },
           {
             "modelId": "3e8493d70f3b80a11cf5",
-            "profileId": "df33ba2a1544007984d1",
+            "profileId": "ff986f963449f27caa64",
             "avgIq": 80.45,
             "value": 5.75,
             "unified": 811.34,
@@ -88,7 +88,7 @@
           },
           {
             "modelId": "bf6872882b4e0722ae12",
-            "profileId": "1e7a6a848da366c5699b",
+            "profileId": "6acbc4e69e618040d9e6",
             "avgIq": 79.68,
             "value": 3.32,
             "unified": 792.04,
@@ -102,6 +102,15 @@
             "value": 17.18,
             "unified": 751.35,
             "coverage": "13/18",
+            "provisional": false
+          },
+          {
+            "modelId": "86814cd08ec3ac720e22",
+            "profileId": "c5638b173a5ba23d4949",
+            "avgIq": 75.7,
+            "value": 6.31,
+            "unified": 706.09,
+            "coverage": "8/18",
             "provisional": false
           },
           {
@@ -124,7 +133,7 @@
           },
           {
             "modelId": "827d7fc31374fbdd49bc",
-            "profileId": "1ddd23a9f1cba09d7a72",
+            "profileId": "4d975165528f7a73310f",
             "avgIq": 64.97,
             "value": 1.08,
             "unified": 462.15,
@@ -141,15 +150,6 @@
             "provisional": false
           },
           {
-            "modelId": "86814cd08ec3ac720e22",
-            "profileId": "c5638b173a5ba23d4949",
-            "avgIq": 60.68,
-            "value": 5.06,
-            "unified": 370.02,
-            "coverage": "7/18",
-            "provisional": false
-          },
-          {
             "modelId": "59edd73817997d6ccec9",
             "profileId": "22142ca29a29b70df485",
             "avgIq": 53.1,
@@ -162,7 +162,7 @@
         "CN": [
           {
             "modelId": "27c9865821933f9dafd1",
-            "profileId": "64d18da72a77f9069c67",
+            "profileId": "017bf907bb3d5551caf1",
             "avgIq": 70.39,
             "value": 108.29,
             "unified": 678.76,
@@ -171,7 +171,7 @@
           },
           {
             "modelId": "d33cd77526f9f2073554",
-            "profileId": "d6cd65d3128575c8d6dc",
+            "profileId": "214babc0663e12236866",
             "avgIq": 75.72,
             "value": 4.43,
             "unified": 704.75,
@@ -198,7 +198,7 @@
           },
           {
             "modelId": "088f3a563d79d06df736",
-            "profileId": "2a7dc530671c66bf7e64",
+            "profileId": "e52fe012efd04585e3f6",
             "avgIq": 59.29,
             "value": 15.2,
             "unified": 348.21,

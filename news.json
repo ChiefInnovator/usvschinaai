@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-08T03:49:13.599128+00:00",
+  "lastUpdated": "2026-10-09T03:51:01.578648+00:00",
   "items": [
+    {
+      "id": "482d39f6949955ce",
+      "headline": "How is America feeling about the AI boom? This new poll reveals the data",
+      "url": "https://www.fastcompany.com/91620704/how-america-feeling-about-ai-boom-new-poll-reveals-data",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-10-08 12:45:42",
+      "relevanceScore": 0.24
+    },
     {
       "id": "0ddfeaf67e3d29a4",
       "headline": "Huge companies have dominated AI. Two startups with an entirely different approach think they can do better",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-26 09:00:21",
       "relevanceScore": 0.6
-    },
-    {
-      "id": "d600ac123a897550",
-      "headline": "The case for embracing AI’s inhumanity",
-      "url": "https://www.fastcompany.com/91612364/mustafa-suleyman-essay-meta-muse-jev",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-09-25 16:00:00",
-      "relevanceScore": 0.92
     }
   ]
 }

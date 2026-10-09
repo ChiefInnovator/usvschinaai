@@ -463,6 +463,18 @@
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
     }
   },
+  "Ember-1": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE 1.1, 113 tasks; published September 23, 2026 in Fireworks' benchmark table.",
+      "score": "75.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://fireworks.ai/blog/ember-1"
+    }
+  },
   "GLM-5.3": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -820,6 +832,16 @@
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy, Epoch AI harness, max reasoning effort. Evaluated September 29, 2026; independently published in the benchmark registry on October 7, 2026.",
+      "score": "95.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarkregistry.org/benchmarks/gpqa/diamond-epoch-ai?result=0372e7e45f6003b4a7cd3437259ffe1ed26b0f5222b4c1d5ece38a88b108a4f5&view=history"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-10-08T03:43:47.819306+00:00",
@@ -830,6 +852,16 @@
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/gpt-6-1-sol"
     },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "MMLU-Pro Original overall accuracy, Mercor single-shot configuration, max reasoning effort. Independently published October 7, 2026.",
+      "score": "91.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarkregistry.org/benchmarks/mmlu-pro/original-mercor?result=98dc48a8a13fa5d78411b22ee1108b50e86c3d4a4b8b842c6938a77d6016f408&view=history"
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-10-06T03:40:47.994022+00:00",
@@ -839,6 +871,16 @@
       "score": "86.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Resolved-tasks score using Mercor mini-swe-agent with 1,000 steps and a 3-hour limit, max reasoning effort. Independently published October 7, 2026.",
+      "score": "87.3%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarkregistry.org/benchmarks/swe-bench/verified-mercor-mini-swe-agent?result=9a4395e290c91b755851937fd27cedf024cd40738a58fa340184765aec14a3ad&view=history"
     }
   },
   "Gemini 3.1 Pro": {
@@ -980,13 +1022,23 @@
   "Gemini 4 Argon": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-08T03:43:47.819306+00:00",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis lists Gemini 4 Argon (High) at 57%; High is the reported reasoning-effort configuration. The individual-result publication date is unknown.",
+      "notes": "Artificial Analysis independently reports 57.09% for Gemini 4 Argon (High); no individual-result publication date is stated.",
       "score": "57.1%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-astra-low"
+      "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vals lists Gemini 4 Argon at 57.68% with the Terminus 2 harness; individual-result publication date is not stated.",
+      "score": "57.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
     }
   },
   "Grok 4.6": {

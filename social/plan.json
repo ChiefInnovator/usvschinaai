@@ -1,16 +1,18 @@
 {
-  "date": "2026-10-08",
-  "timestamp": "2026-10-08T03:48:14+00:00",
-  "format": "leaderboard",
-  "palette": "midnight",
-  "weight": 0,
+  "date": "2026-10-09",
+  "timestamp": "2026-10-09T03:50:19+00:00",
+  "format": "new_challenger",
+  "palette": "graphite",
+  "weight": 3,
   "slides": [
-    "2026-10-08-1-leaderboard-midnight.png"
+    "2026-10-09-1-new_challenger-graphite.png",
+    "2026-10-09-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-08-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-10-09-1-new_challenger-graphite.png",
+    "https://usvschina.ai/social/2026-10-09-2-leaderboard-graphite.png"
   ],
-  "caption": "The US keeps the scoreboard by 3893.3 points.\n\n• US leads with 5276.86 points to China’s 1383.51.\n• GPT-6 Astra ranks 1st at 900.3, ahead of Kimi K3 at 704.8.\n• The US holds 8 of the top 10 spots; China holds 2.\n\nIs China’s 2-model top 10 presence enough to change the race?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #AILeaderboard",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-08T03:49:18.025320+00:00"
+  "caption": "GPT-6.1 Sol enters at No. 5 as the US lead reaches 4,163.6.\n\n• GPT-6.1 Sol climbed 8 places to No. 5 with a 706.1 unified score.\n• GPT-6 Astra holds No. 1 at 900.3, ahead of Kimi K3 at No. 6 and 704.8.\n• The US has 8 of the top 10 models; China holds 2.\n\nDoes GPT-6.1 Sol at No. 5 change your read on the US-China race?\n\n#AI #ArtificialIntelligence #LLM #AIModels #OpenAI #MoonshotAI #GPT61Sol #USvsChinaAI",
+  "caption_source": "gpt-5.6-terra",
+  "generated_at": "2026-10-09T03:51:05.180180+00:00"
 }

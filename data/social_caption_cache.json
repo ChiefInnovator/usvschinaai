@@ -547,5 +547,24 @@
       "#KimiK3",
       "#AILeaderboard"
     ]
+  },
+  "2026-10-09T03:50:19+00:00|new_challenger": {
+    "hook": "GPT-6.1 Sol enters at No. 5 as the US lead reaches 4,163.6.",
+    "bullets": [
+      "GPT-6.1 Sol climbed 8 places to No. 5 with a 706.1 unified score.",
+      "GPT-6 Astra holds No. 1 at 900.3, ahead of Kimi K3 at No. 6 and 704.8.",
+      "The US has 8 of the top 10 models; China holds 2."
+    ],
+    "question": "Does GPT-6.1 Sol at No. 5 change your read on the US-China race?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#LLM",
+      "#AIModels",
+      "#OpenAI",
+      "#MoonshotAI",
+      "#GPT61Sol",
+      "#USvsChinaAI"
+    ]
   }
 }
