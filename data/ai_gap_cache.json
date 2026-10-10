@@ -286,13 +286,13 @@
   "Claude Sonnet 5.5": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-04T04:40:56.972317+00:00",
+      "cached_at": "2026-10-10T03:42:37.132402+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1; max effort; 504 source-evaluation samples across 130 public BrowseComp tasks, with ±5.0 percentage-point published half-width. The result is attributed there to Mercor's BrowseComp evaluation.",
+      "notes": "Mercor APEX BrowseComp web-research harness, max effort, Pass@1; 504 source-evaluation samples across 130 public tasks. Result dated October 3, 2026.",
       "score": "86.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/models/anthropic-claude-sonnet-5.5/"
+      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -473,6 +473,16 @@
       "score": "75.2%",
       "source_type": "vendor_blog",
       "source_url": "https://fireworks.ai/blog/ember-1"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-10T03:42:37.132402+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Original 198-question GPQA Diamond score; mean@1, max effort. The source's table also shows its separate 189-question cleaned score (95.24%), which was not used. Individual-result publication date is unknown.",
+      "score": "91.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://gpqa.ai/changes/"
     }
   },
   "GLM-5.3": {
@@ -1032,10 +1042,10 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "cached_at": "2026-10-10T03:42:37.132402+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals lists Gemini 4 Argon at 57.68% with the Terminus 2 harness; individual-result publication date is not stated.",
+      "notes": "Vals lists Gemini 4 Argon at 57.68% using the Terminus 2 harness; rounded to one decimal. Publication date for this individual result is unknown.",
       "score": "57.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"

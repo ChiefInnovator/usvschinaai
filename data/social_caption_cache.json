@@ -566,5 +566,23 @@
       "#GPT61Sol",
       "#USvsChinaAI"
     ]
+  },
+  "2026-10-10T03:46:49+00:00|biggest_mover": {
+    "hook": "DeepSeek-V4.1-Flash made the day\u2019s biggest move: up 5 places.",
+    "bullets": [
+      "US leads the scoreboard 5547.09 to 1383.51.",
+      "Kimi K3 is China\u2019s top model at rank 6 with a 704.8 score.",
+      "The top 10 includes 8 US models and 2 Chinese models."
+    ],
+    "question": "Is DeepSeek-V4.1-Flash the model to watch next?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#USvsChinaAI",
+      "#DeepSeek",
+      "#KimiK3",
+      "#ModelRankings"
+    ]
   }
 }

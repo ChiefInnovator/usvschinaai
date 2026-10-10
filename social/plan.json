@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-09",
-  "timestamp": "2026-10-09T03:50:19+00:00",
-  "format": "new_challenger",
-  "palette": "graphite",
-  "weight": 3,
+  "date": "2026-10-10",
+  "timestamp": "2026-10-10T03:46:49+00:00",
+  "format": "biggest_mover",
+  "palette": "sunrise",
+  "weight": 2,
   "slides": [
-    "2026-10-09-1-new_challenger-graphite.png",
-    "2026-10-09-2-leaderboard-graphite.png"
+    "2026-10-10-1-biggest_mover-sunrise.png",
+    "2026-10-10-2-leaderboard-sunrise.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-09-1-new_challenger-graphite.png",
-    "https://usvschina.ai/social/2026-10-09-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-10-1-biggest_mover-sunrise.png",
+    "https://usvschina.ai/social/2026-10-10-2-leaderboard-sunrise.png"
   ],
-  "caption": "GPT-6.1 Sol enters at No. 5 as the US lead reaches 4,163.6.\n\n• GPT-6.1 Sol climbed 8 places to No. 5 with a 706.1 unified score.\n• GPT-6 Astra holds No. 1 at 900.3, ahead of Kimi K3 at No. 6 and 704.8.\n• The US has 8 of the top 10 models; China holds 2.\n\nDoes GPT-6.1 Sol at No. 5 change your read on the US-China race?\n\n#AI #ArtificialIntelligence #LLM #AIModels #OpenAI #MoonshotAI #GPT61Sol #USvsChinaAI",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-10-09T03:51:05.180180+00:00"
+  "caption": "DeepSeek-V4.1-Flash made the day’s biggest move: up 5 places.\n\n• US leads the scoreboard 5547.09 to 1383.51.\n• Kimi K3 is China’s top model at rank 6 with a 704.8 score.\n• The top 10 includes 8 US models and 2 Chinese models.\n\nIs DeepSeek-V4.1-Flash the model to watch next?\n\n#AI #ArtificialIntelligence #AIModels #USvsChinaAI #DeepSeek #KimiK3 #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-10-10T03:47:49.613832+00:00"
 }

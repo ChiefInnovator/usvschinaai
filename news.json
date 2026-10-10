@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-09T03:51:01.578648+00:00",
+  "lastUpdated": "2026-10-10T03:47:45.241491+00:00",
   "items": [
+    {
+      "id": "fbdf5271337997c2",
+      "headline": "High-severity NVIDIA vulnerability lets unauthenticated attackers crash GPU monitoring",
+      "url": "https://www.helpnetsecurity.com/2026/10/09/nvidia-dcgm-exporter-vulnerability-cve-2026-47483/",
+      "source": "Help Net Security",
+      "country": "Both",
+      "publishedAt": "2026-10-09 12:26:42",
+      "relevanceScore": 0.24
+    },
     {
       "id": "482d39f6949955ce",
       "headline": "How is America feeling about the AI boom? This new poll reveals the data",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-27 13:26:51",
       "relevanceScore": 0.68
-    },
-    {
-      "id": "e90c993dce6ef7d3",
-      "headline": "OpenAI and Anthropic want AI rules. Connecticut is already writing them",
-      "url": "https://www.ctinsider.com/connecticut/article/connecticut-ai-laws-regulation-what-comes-next-22434988.php",
-      "source": "Ct Insider",
-      "country": "Both",
-      "publishedAt": "2026-09-26 09:00:21",
-      "relevanceScore": 0.6
     }
   ]
 }
