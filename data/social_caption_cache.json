@@ -584,5 +584,24 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-11T03:53:02+00:00|trend_30d": {
+    "hook": "The US leads China by 4163.6 points after 30 days.",
+    "bullets": [
+      "US models hold 8 of the top 10 spots.",
+      "Kimi K3 is China\u2019s top model at rank 6 with 704.8 points.",
+      "GLM-5.3-Flash ranks 7 with a value score of 108.3."
+    ],
+    "question": "Can China close a 4163.6-point gap with 2 models in the top 10?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#OpenAI",
+      "#KimiK3",
+      "#GLM5",
+      "#AILeaderboard"
+    ]
   }
 }

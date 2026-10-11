@@ -116,6 +116,30 @@
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     },
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
       "cached_at": "2026-10-05T03:48:07.418891+00:00",
@@ -126,6 +150,24 @@
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-14T03:35:43.088570+00:00",
@@ -135,6 +177,48 @@
       "score": "60.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
@@ -192,13 +276,15 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-06T03:40:47.994022+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor APEX BrowseComp web-research harness; max effort; 130 public tasks and 517 evaluation samples. Independently published result dated October 3, 2026.",
-      "score": "88.5%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -240,6 +326,24 @@
       "source_type": "system_card",
       "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
     },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-10-02T03:39:50.266525+00:00",
@@ -249,6 +353,18 @@
       "score": "87.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/claude-opus-5-5"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "Claude Sonnet 5": {
@@ -286,13 +402,13 @@
   "Claude Sonnet 5.5": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-10T03:42:37.132402+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor APEX BrowseComp web-research harness, max effort, Pass@1; 504 source-evaluation samples across 130 public tasks. Result dated October 3, 2026.",
+      "notes": "Pass@1 on Mercor’s 130-public-task BrowseComp leaderboard; 504/520 evaluation samples, max effort, sampled October 3, 2026.",
       "score": "86.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -758,6 +874,18 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/openai-gpt-6-luna"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-28T03:43:59.635724+00:00",
@@ -787,6 +915,48 @@
       "score": "39.0%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "GPT-6 Sol": {
@@ -1042,10 +1212,10 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-10T03:42:37.132402+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals lists Gemini 4 Argon at 57.68% using the Terminus 2 harness; rounded to one decimal. Publication date for this individual result is unknown.",
+      "notes": "Vals AI archived leaderboard row for Gemini 4 Argon using the Terminus 2 harness; pass@1. Publication date of this individual result is unknown.",
       "score": "57.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
@@ -1142,43 +1312,43 @@
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative model-card table explicitly labels this as GPQA Diamond and lists Granite 4.2-3B at 55.9%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
+      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. The table labels the task GPQA Diamond, but does not provide complete run configuration. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
       "score": "55.9%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
+      "source_type": "vendor_blog",
+      "source_url": "https://ifm.ai/blog/k2/"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative model-card table lists HLE for Granite 4.2-3B at 6.6%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
+      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column, labeled HLE. The table does not fully specify the HLE run configuration, so this is reported with medium confidence. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
       "score": "6.6%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
+      "source_type": "vendor_blog",
+      "source_url": "https://ifm.ai/blog/k2/"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative model-card table explicitly labels this as SWE-bench Verified and lists Granite 4.2-3B at 32.2%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
+      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. IBM's primary model card lists SWE-bench Verified as NA for 3B, so this is an independently reported comparative baseline; harness details are not fully specified. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
       "score": "32.2%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
+      "source_type": "vendor_blog",
+      "source_url": "https://ifm.ai/blog/k2/"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative model-card table lists Granite 4.2-3B at 13.9%; the table cautions that baseline protocols may differ. Publication date independently verified as September 2026 from the associated IFM release material.",
+      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. IBM's primary model card lists this result as NA, so this is an independently reported comparative baseline; harness details are not fully specified. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
       "score": "13.9%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/IFM/K2-Horizon-3.7B-GGUF?hardware=apple-m3-ultra-512gb"
+      "source_type": "vendor_blog",
+      "source_url": "https://ifm.ai/blog/k2/"
     }
   },
   "IBM Granite 4.2 8B": {
@@ -1233,6 +1403,32 @@
       "score": "29.7%",
       "source_type": "model_card",
       "source_url": "https://thinkingmachines.ai/model-card/inkling/"
+    }
+  },
+  "Inkling-Small": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "LFM2.5-2.6B": {
