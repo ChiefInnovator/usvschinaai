@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-11T03:53:43.808883+00:00",
+  "lastUpdated": "2026-10-12T03:58:11.451321+00:00",
   "items": [
+    {
+      "id": "1181649bf8cea06d",
+      "headline": "The list of AI insiders sounding the alarm on their own companies keeps growing",
+      "url": "https://www.fastcompany.com/91621115/the-growing-list-of-ai-insiders-sounding-the-alarm-on-their-own-companies?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-10-11 11:11:00",
+      "relevanceScore": 0.76
+    },
+    {
+      "id": "c6015f7c6b63bdf6",
+      "headline": "Ex-OpenAI researchers say they were fired for raising safety concerns",
+      "url": "https://completeaitraining.com/news/ex-openai-researchers-say-they-were-fired-for-raising/",
+      "source": "Complete Ai Training",
+      "country": "US",
+      "publishedAt": "2026-10-10 20:03:13",
+      "relevanceScore": 0.3
+    },
     {
       "id": "fbdf5271337997c2",
       "headline": "High-severity NVIDIA vulnerability lets unauthenticated attackers crash GPU monitoring",
@@ -162,24 +180,6 @@
       "country": "US",
       "publishedAt": "2026-09-28 15:17:09",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "7d61786aab87491f",
-      "headline": "OpenAI Pauses Training Models After Rogue Agents Attack Government Websites",
-      "url": "http://www.thelowdownblog.com/2026/09/openai-pauses-training-models-after.html",
-      "source": "The Lowdown Blog",
-      "country": "Both",
-      "publishedAt": "2026-09-28 13:15:19",
-      "relevanceScore": 0.76
-    },
-    {
-      "id": "69689377d330f47c",
-      "headline": "AI giants are probing ‘tens of thousands’ of security incidents triggered by rogue AI",
-      "url": "https://www.digitaltrends.com/cool-tech/ai-giants-are-probing-tens-of-thousands-of-security-incidents-triggered-by-unexpected-ai-behavior/",
-      "source": "Digitaltrends",
-      "country": "US",
-      "publishedAt": "2026-09-27 13:26:51",
-      "relevanceScore": 0.68
     }
   ]
 }

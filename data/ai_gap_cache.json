@@ -84,6 +84,16 @@
     }
   },
   "Claude Haiku 5.5": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Mercor independent mini-swe-agent run, max effort, Pass@1; 95% interval ±7.7 percentage points. This was the only located Haiku 5.5 result. Publication date is unknown/undated.",
+      "score": "59.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://deepswe.dev/"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-10-08T03:43:47.819306+00:00",
@@ -402,13 +412,13 @@
   "Claude Sonnet 5.5": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1 on Mercor’s 130-public-task BrowseComp leaderboard; 504/520 evaluation samples, max effort, sampled October 3, 2026.",
+      "notes": "BrowseComp Pass@1, max effort; 504/520 source evaluation samples, reported ±5.0 percentage points. The listed verified-result date is October 3, 2026.",
       "score": "86.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/"
+      "source_url": "https://benchmarklist.com/models/anthropic-claude-sonnet-5.5/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -422,13 +432,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Epoch AI reports GPQA Diamond at 96%; the displayed model-page result does not state the underlying effort configuration or an individual-result publication date.",
-      "score": "96.0%",
+      "notes": "GPQA Diamond accuracy for model ID claude-sonnet-5-5_max. The associated record identifies an evaluation run starting September 29, 2026; a result-publication date was not verified.",
+      "score": "95.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://epoch.ai/models/claude-sonnet-5-5"
+      "source_url": "https://epoch.ai/benchmarks/gpqa-diamond"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -592,10 +602,10 @@
     },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-10-10T03:42:37.132402+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Original 198-question GPQA Diamond score; mean@1, max effort. The source's table also shows its separate 189-question cleaned score (95.24%), which was not used. Individual-result publication date is unknown.",
+      "notes": "Original 198-question GPQA Diamond result; mean@1, max effort. The page reports 91.92% original and 95.24% on its incompatible 189-question Clean overlay. Individual-result publication date unknown.",
       "score": "91.9%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://gpqa.ai/changes/"
@@ -1200,22 +1210,32 @@
     }
   },
   "Gemini 4 Argon": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; Google self-computed with a mini-swe agent harness at highest thinking. The result table is stated as current as of October 2026; individual-result publication date unknown.",
+      "score": "77.9%",
+      "source_type": "system_card",
+      "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 57.09% for Gemini 4 Argon (High); no individual-result publication date is stated.",
+      "notes": "Artificial Analysis independently reports 57.09% for Gemini 4 Argon at High reasoning effort; rounded to one decimal. Individual-result publication date unknown.",
       "score": "57.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals AI archived leaderboard row for Gemini 4 Argon using the Terminus 2 harness; pass@1. Publication date of this individual result is unknown.",
+      "notes": "Vals archived leaderboard reports 57.68% pass@1 with the Terminus 2 harness; rounded to one decimal. Individual-result publication date unknown.",
       "score": "57.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
@@ -1300,35 +1320,35 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-08T03:43:47.819306+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis leaderboard mirror lists the exact Granite 4.2 30B reasoning model at 11.2%; the associated result configuration is text-only, no-tools, pass@1.",
+      "notes": "Artificial Analysis result for the reasoning variant; independently mirrored as the no-tools HLE evaluation, with publication recorded as September 5, 2026.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://modelcap.ai/benchmarks/aa-humanitys-last-exam"
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
     }
   },
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. The table labels the task GPQA Diamond, but does not provide complete run configuration. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
+      "notes": "Artificial Analysis independently evaluated Granite 4.2 3B on GPQA Diamond; result publication date is not individually documented.",
       "score": "55.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column, labeled HLE. The table does not fully specify the HLE run configuration, so this is reported with medium confidence. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
+      "notes": "Artificial Analysis independently evaluated Granite 4.2 3B on Humanity’s Last Exam; result publication date is not individually documented.",
       "score": "6.6%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",

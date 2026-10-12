@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-11",
-  "timestamp": "2026-10-11T03:53:02+00:00",
-  "format": "trend_30d",
-  "palette": "newsprint",
+  "date": "2026-10-12",
+  "timestamp": "2026-10-12T03:57:30+00:00",
+  "format": "price_vs_power",
+  "palette": "midnight",
   "weight": 1,
   "slides": [
-    "2026-10-11-1-trend_30d-newsprint.png",
-    "2026-10-11-2-leaderboard-newsprint.png"
+    "2026-10-12-1-price_vs_power-midnight.png",
+    "2026-10-12-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-11-1-trend_30d-newsprint.png",
-    "https://usvschina.ai/social/2026-10-11-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-12-1-price_vs_power-midnight.png",
+    "https://usvschina.ai/social/2026-10-12-2-leaderboard-midnight.png"
   ],
-  "caption": "The US leads China by 4163.6 points after 30 days.\n\n• US models hold 8 of the top 10 spots.\n• Kimi K3 is China’s top model at rank 6 with 704.8 points.\n• GLM-5.3-Flash ranks 7 with a value score of 108.3.\n\nCan China close a 4163.6-point gap with 2 models in the top 10?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #GLM5 #AILeaderboard",
+  "caption": "US holds the scoreboard lead, but China owns the sharper value plays.\n\n• US leads 5,547.09 to 1,383.51, a 4,163.6-point margin.\n• Kimi K3 ranks 6th at 704.8, just behind GPT-6.1 Sol at 706.1.\n• GLM-5.3-Flash posts 108.3 value, versus Gemini 3.8 Flash at 17.2.\n\nDoes raw score matter more than value when the gap is this wide?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #LLMs #ModelBenchmarks #PricePerformance",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-11T03:53:47.433172+00:00"
+  "generated_at": "2026-10-12T03:58:15.043496+00:00"
 }

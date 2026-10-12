@@ -603,5 +603,23 @@
       "#GLM5",
       "#AILeaderboard"
     ]
+  },
+  "2026-10-12T03:57:30+00:00|price_vs_power": {
+    "hook": "US holds the scoreboard lead, but China owns the sharper value plays.",
+    "bullets": [
+      "US leads 5,547.09 to 1,383.51, a 4,163.6-point margin.",
+      "Kimi K3 ranks 6th at 704.8, just behind GPT-6.1 Sol at 706.1.",
+      "GLM-5.3-Flash posts 108.3 value, versus Gemini 3.8 Flash at 17.2."
+    ],
+    "question": "Does raw score matter more than value when the gap is this wide?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#LLMs",
+      "#ModelBenchmarks",
+      "#PricePerformance"
+    ]
   }
 }
