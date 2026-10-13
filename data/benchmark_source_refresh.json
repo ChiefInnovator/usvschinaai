@@ -1,101 +1,97 @@
 {
-  "retrievedAt": "2026-10-12",
-  "modelsChecked": 281,
-  "sourcesChecked": 291,
-  "findings": 1062,
+  "retrievedAt": "2026-10-13",
+  "modelsChecked": 280,
+  "sourcesChecked": 290,
+  "findings": 896,
   "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:Claude Opus 4",
+      "source": "llm-stats:Kimi K2 0905",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 4",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Gemini 2.5 Pro",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Claude Opus 4.6",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Kimi K2.6",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:ERNIE 4.5",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:DeepSeek-V4-Flash-Max",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:MiniMax M2.5",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Grok 4.5",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Claude Opus 5",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:DeepSeek-V4-Pro-0813",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Gemini 3.7 Flash",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:GPT-6 Astra",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Claude Fable 5.1",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Claude Mythos 5.1",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Inkling",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:MAI-Code-1.1-Flash",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Claude Sonnet 5.5",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Nova 2 Sonic",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:MAI-Thinking-1",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:GPT OSS 120B",
+      "error": "The read operation timed out"
     },
     {
-      "source": "llm-stats:Nemotron 3 Nano (30B A3B)",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Nova 2 Pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Grok-4.1 Fast Non-Reasoning",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Llama 3.1 Nemotron Ultra 253B v1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:MiMo-V2.6-Flash",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3 VL 8B Instruct",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2-Instruct-0905",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vals:lcb",
-      "error": "Vals benchmark identity or payload changed: lcb"
+      "source": "llm-stats:GPT OSS 20B",
+      "error": "The read operation timed out"
     },
     {
       "source": "vals:mmlu_pro",
       "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
-      "source": "vals:terminal-bench-2-1",
-      "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
+      "source": "vals:lcb",
+      "error": "Vals benchmark identity or payload changed: lcb"
+    },
+    {
+      "source": "vals:swebench",
+      "error": "Vals benchmark identity or payload changed: swebench"
     },
     {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
     },
     {
-      "source": "vals:swebench",
-      "error": "Vals benchmark identity or payload changed: swebench"
+      "source": "vals:terminal-bench-2-1",
+      "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
+    },
+    {
+      "source": "llm-stats:Kimi K2.8 Preview",
+      "error": "The read operation timed out"
+    },
+    {
+      "source": "llm-stats:MiniCPM-SALA",
+      "error": "The read operation timed out"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V3.2",
+      "error": "The read operation timed out"
+    },
+    {
+      "source": "llm-stats:Qwen2.5 VL 7B Instruct",
+      "error": "The read operation timed out"
+    },
+    {
+      "source": "epoch",
+      "error": "[Errno 104] Connection reset by peer"
     }
   ],
   "skippedConfigurations": [],

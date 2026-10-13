@@ -621,5 +621,23 @@
       "#ModelBenchmarks",
       "#PricePerformance"
     ]
+  },
+  "2026-10-13T04:12:14+00:00|head_to_head": {
+    "hook": "The US leads China by 4,163.6 points on October 13.",
+    "bullets": [
+      "US total: 5,547.09 points, with 8 models in the top 10.",
+      "China total: 1,383.51 points, with 2 models in the top 10.",
+      "Kimi K3 is China\u2019s top model at rank 6 with 704.8 points.\u00a0"
+    ],
+    "question": "Can China close the 4,163.6-point gap?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIBenchmarks",
+      "#KimiK3",
+      "#GPT6Astra",
+      "#ModelRankings"
+    ]
   }
 }

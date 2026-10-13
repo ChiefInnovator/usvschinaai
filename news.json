@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-12T03:58:11.451321+00:00",
+  "lastUpdated": "2026-10-13T04:13:10.185750+00:00",
   "items": [
+    {
+      "id": "51e93abc3c68902f",
+      "headline": "Silicon Valley responds to Trump’s hands-off approach to AI regulation at Tech Week",
+      "url": "https://www.fastcompany.com/91622221/silicon-valley-responds-trumps-hands-off-approach-ai-regulation-tech-week?partner=rss",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-10-12 14:41:00",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "453cedd3fa2d16a6",
+      "headline": "DeepSeek to lead funding round for robotics AI startup Winverse at $400 mln - report",
+      "url": "https://www.investing.com/news/stock-market-news/deepseek-to-lead-funding-round-for-robotics-ai-startup-winverse-at-400-mln--report-93CH-4944293",
+      "source": "Investing Us",
+      "country": "CN",
+      "publishedAt": "2026-10-12 12:15:07",
+      "relevanceScore": 0.6
+    },
     {
       "id": "1181649bf8cea06d",
       "headline": "The list of AI insiders sounding the alarm on their own companies keeps growing",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-30 11:30:06",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "161064a1db3cf9eb",
-      "headline": "Trump to Meet Meta, OpenAI, Anthropic Execs to Discuss AI Safety",
-      "url": "https://www.analyticsinsight.net/news/trump-to-meet-meta-openai-anthropic-execs-to-discuss-ai-safety",
-      "source": "Analytics And Insight",
-      "country": "Both",
-      "publishedAt": "2026-09-29 14:15:00",
-      "relevanceScore": 0.9
-    },
-    {
-      "id": "f79a408b77795ac4",
-      "headline": "OpenAI Halts Frontier Model Training as Rogue Agent Crisis Deepens",
-      "url": "https://futurism.com/artificial-intelligence/openai-halts-frontier-model-training-crisis",
-      "source": "Futurism",
-      "country": "US",
-      "publishedAt": "2026-09-28 15:17:09",
-      "relevanceScore": 0.3
     }
   ]
 }

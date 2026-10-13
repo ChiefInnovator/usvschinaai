@@ -1034,13 +1034,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-08T03:43:47.819306+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 53% for GPT-6.1 Sol at max reasoning effort; publication date of this individual result is unknown.",
+      "notes": "Artificial Analysis reports 53% for GPT-6.1 Sol (Max); the page does not provide a separately verifiable publication date for this individual result.",
       "score": "53.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gpt-6-1-sol"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
@@ -1222,10 +1222,10 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 57.09% for Gemini 4 Argon at High reasoning effort; rounded to one decimal. Individual-result publication date unknown.",
+      "notes": "Artificial Analysis independently reports Gemini 4 Argon at High reasoning effort on Humanity's Last Exam; reported value is rounded to one decimal place. Individual-result publication date is not established.",
       "score": "57.1%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
@@ -1320,55 +1320,55 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis result for the reasoning variant; independently mirrored as the no-tools HLE evaluation, with publication recorded as September 5, 2026.",
+      "notes": "Artificial Analysis independently reports 11.2% for its no-tools Humanity’s Last Exam evaluation of the exact Granite 4.2 30B model. Publication date of this individual result is unknown.",
       "score": "11.2%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
+      "source_type": "official_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
     }
   },
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated Granite 4.2 3B on GPQA Diamond; result publication date is not individually documented.",
+      "notes": "Third-party ledger identifies this as a 55.9% Artificial Analysis GPQA Diamond run. The individual-result publication date is unknown; the ledger attributes the result to September 28, 2026. IBM's 54.80 result is generic GPQA, not GPQA Diamond, and was not substituted.",
       "score": "55.9%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
+      "source_url": "https://verdictpal.com/models/granite-4-2-3b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated Granite 4.2 3B on Humanity’s Last Exam; result publication date is not individually documented.",
+      "notes": "Third-party ledger reports a 6.6% Artificial Analysis Humanity’s Last Exam result. The individual-result publication date is unknown; the ledger attributes the result to September 28, 2026.",
       "score": "6.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-3b"
+      "source_url": "https://verdictpal.com/models/granite-4-2-3b"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. IBM's primary model card lists SWE-bench Verified as NA for 3B, so this is an independently reported comparative baseline; harness details are not fully specified. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
+      "notes": "Third-party ledger reports 32.2% for this exact model and benchmark. It attributes the figure to a cited publisher table read on October 2, 2026; the individual-result publication date is unknown. IBM's own model card lists its 3B SWE-bench Verified cell as NA, so the 8B/30B IBM scores were not used.",
       "score": "32.2%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.publicai.io/model-index/m/granite-4-2-3b"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-11T03:45:26.737114+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM comparative table's exact IBM Granite 4.2-3B column. IBM's primary model card lists this result as NA, so this is an independently reported comparative baseline; harness details are not fully specified. IBM independently announced Granite 4.2 on August 25, 2026: https://research.ibm.com/blog/introducing-granite-4-2",
+      "notes": "Third-party ledger reports an Artificial Analysis Terminal-Bench 2.1 run of 13.86%, rounded to 13.9%. The individual-result publication date is unknown; the page is dated October 12, 2026. IBM's launch model card separately lists its own 3B cell as NA, so this is not an IBM-reported result.",
       "score": "13.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.benchleader.com/models/granite-4-2-3b"
     }
   },
   "IBM Granite 4.2 8B": {
