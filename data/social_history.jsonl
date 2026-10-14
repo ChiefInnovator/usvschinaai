@@ -38,3 +38,4 @@
 {"date": "2026-10-11", "timestamp": "2026-10-11T03:53:02+00:00", "format": "trend_30d", "palette": "newsprint"}
 {"date": "2026-10-12", "timestamp": "2026-10-12T03:57:30+00:00", "format": "price_vs_power", "palette": "midnight"}
 {"date": "2026-10-13", "timestamp": "2026-10-13T04:12:14+00:00", "format": "head_to_head", "palette": "newsprint"}
+{"date": "2026-10-14", "timestamp": "2026-10-14T03:41:14+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "Humanity\u2019sLastExam"}

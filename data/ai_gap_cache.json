@@ -1034,13 +1034,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-13T04:07:51.393943+00:00",
+      "cached_at": "2026-10-14T03:37:11.765234+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 53% for GPT-6.1 Sol (Max); the page does not provide a separately verifiable publication date for this individual result.",
+      "notes": "Artificial Analysis reports 53% for GPT-6.1 Sol at max reasoning effort, higher than its 51% high-effort result. Individual-result publication date is not stated on the source.",
       "score": "53.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
@@ -1222,13 +1222,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-13T04:07:51.393943+00:00",
+      "cached_at": "2026-10-14T03:37:11.765234+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports Gemini 4 Argon at High reasoning effort on Humanity's Last Exam; reported value is rounded to one decimal place. Individual-result publication date is not established.",
-      "score": "57.1%",
+      "notes": "Artificial Analysis reports Humanity’s Last Exam at the High reasoning setting; the source page does not provide an individual-result publication date.",
+      "score": "57.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-astra-low"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -1320,13 +1320,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-13T04:07:51.393943+00:00",
+      "cached_at": "2026-10-14T03:37:11.765234+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports 11.2% for its no-tools Humanity’s Last Exam evaluation of the exact Granite 4.2 30B model. Publication date of this individual result is unknown.",
+      "notes": "Artificial Analysis lists the reasoning variant of Granite 4.2 30B at 11.2% on Humanity’s Last Exam. The run is identified as text-only/no-tools in the evaluator’s published result metadata; no separate effort-level result is shown.",
       "score": "11.2%",
-      "source_type": "official_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
     }
   },
   "IBM Granite 4.2 3B": {

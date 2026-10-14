@@ -65,7 +65,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-10-13T04:12:14+00:00",
+      "timestamp": "2026-10-14T03:41:14+00:00",
       "teams": {
         "US": [
           {
@@ -162,7 +162,7 @@
         "CN": [
           {
             "modelId": "27c9865821933f9dafd1",
-            "profileId": "636763a081c02ebd9130",
+            "profileId": "854a94d914a240454d20",
             "avgIq": 70.39,
             "value": 108.29,
             "unified": 678.76,
@@ -216,7 +216,7 @@
           },
           {
             "modelId": "7cc8168d3be894837e46",
-            "profileId": "6f2dbb7b1bd19f8f7e17",
+            "profileId": "97de9efd9b2b2d243e43",
             "avgIq": 57.45,
             "value": 14.73,
             "unified": 306.64,

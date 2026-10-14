@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-13T04:13:10.185750+00:00",
+  "lastUpdated": "2026-10-14T03:41:43.849785+00:00",
   "items": [
+    {
+      "id": "b0f011b681ab7c9d",
+      "headline": "Watch Meta's New Muse Wonder AI Model; LVMH Slumps After China Backlash",
+      "url": "https://www.bundle.app/en/finance/watch-metas-new-muse-wonder-ai-model-lvmh-slumps-after-china-backlash-1A266728-D038-5C3E-BCA8-4182C4DD50F0",
+      "source": "Bundle",
+      "country": "Both",
+      "publishedAt": "2026-10-13 08:12:12",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "476f77fc2056baa1",
+      "headline": "Top News Today: Korean Chip Stocks, Young VC Leadership, AI Jobs, Bitcoin, Claude Security",
+      "url": "https://www.analyticsinsight.net/tech-news/top-news-today-korean-chip-stocks-young-vc-leadership-ai-jobs-bitcoin-claude-security",
+      "source": "Analytics And Insight",
+      "country": "Both",
+      "publishedAt": "2026-10-13 07:17:30",
+      "relevanceScore": 0.45
+    },
     {
       "id": "51e93abc3c68902f",
       "headline": "Silicon Valley responds to Trump’s hands-off approach to AI regulation at Tech Week",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-09-30 15:21:29",
       "relevanceScore": 0.54
-    },
-    {
-      "id": "558bacaaf03440a2",
-      "headline": "AI is now ‘super intelligence,’ but federal oversight is still missing",
-      "url": "https://www.techtarget.com/ai/news/366651554/AI-is-now-super-intelligence-but-federal-oversight-is-still-missing",
-      "source": "Techtarget",
-      "country": "Both",
-      "publishedAt": "2026-09-30 13:01:00",
-      "relevanceScore": 0.61
-    },
-    {
-      "id": "f20914732bd9cb22",
-      "headline": "US Wants to Break Taiwan Dependence — But Here's Why Taipei Will Remain 'Central' Character in the AI Chips Story",
-      "url": "https://www.benzinga.com/markets/tech/26/09/62074352/us-taiwan-ai-chips-dependence-taipei-central-role-ai-semiconductors",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-09-30 11:30:06",
-      "relevanceScore": 0.24
     }
   ]
 }
