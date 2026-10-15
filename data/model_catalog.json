@@ -23048,6 +23048,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "No",
           "Input$/M": "1.3"
+        },
+        "2d743471ea0a3026c593": {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "2c/s",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3"
         }
       },
       "benchmarks": {
@@ -37490,6 +37509,25 @@
           "License": "",
           "Parameters(B)": "320",
           "Latency": "10.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "3c9383d24e99cbb7f156": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "11.6s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
@@ -54224,6 +54262,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "8715a50e0ba00a3b5ad5": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "26c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "7.6s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -67016,6 +67073,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "9.1s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "400d88996a8eaead6437": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "127c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "6.6s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -96088,6 +96164,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "783d568b73faf73ebfb7": {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "0.47",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -100439,6 +100534,22 @@
             "modelAvailableFrom": "2026-09-11",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row deepseek-v4.1-flash_max."
           }
+        },
+        "arc-agi-2": {
+          "c4ef2761f69532e9": {
+            "benchmark": "ARC-AGI-2",
+            "score": 72.9,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-15",
+            "retrievedAt": "2026-10-15",
+            "configuration": "Epoch AI evaluation of deepseek-v4.1-flash_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row deepseek-v4.1-flash_max."
+          }
         }
       }
     },
@@ -101516,6 +101627,16 @@
           "KnowledgeCutoff": "May 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.1"
+        },
+        "8fcc2f531c31cd7cd6da": {
+          "model": "GPT-6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-luna",
+          "origin": "US",
+          "description": "GPT-6 Luna by OpenAI — released Sep 22, 2026; $0.100/M input, $0.010/M cached input, $0.500/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Input$/M": "0.1",
+          "Output$/M": "0.5"
         }
       },
       "benchmarks": {
@@ -110704,6 +110825,23 @@
             "modelAvailableFrom": "2026-10-14",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-4-argon_high."
           }
+        },
+        "frontiermath-1-3-v2": {
+          "d7750817cfffe0a7": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 86.0,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-15",
+            "retrievedAt": "2026-10-15",
+            "configuration": "Epoch AI evaluation of gemini-4-argon_high; evaluation started 2026-10-13",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-10-15",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-4-argon_high."
+          }
         }
       }
     },
@@ -110770,6 +110908,50 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-09"
+          }
+        }
+      }
+    },
+    "71338596bb8831c1c17c": {
+      "name": "Muse Wonder Full",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "86980f96cfda00f3": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 79.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/muse-wonder-full",
+            "availableFrom": "2026-10-15",
+            "retrievedAt": "2026-10-15",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-10-15"
+          }
+        }
+      }
+    },
+    "69b9a71b6f6da5038f35": {
+      "name": "Muse Wonder",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "aa1b28cf32e95265": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 78.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/muse-wonder",
+            "availableFrom": "2026-10-15",
+            "retrievedAt": "2026-10-15",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-10-15"
           }
         }
       }

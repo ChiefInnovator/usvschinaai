@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-14T03:41:43.849785+00:00",
+  "lastUpdated": "2026-10-15T03:43:07.072382+00:00",
   "items": [
+    {
+      "id": "168a1bc56d6e0749",
+      "headline": "Alibaba AI models cleared for use in Apple Intelligence in China just in time for the iPhone Duo launch",
+      "url": "https://www.engadget.com/2286617/alibaba-ai-models-cleared-for-use-in-apple-intelligence-in-china-just-in-time-for-the-iphone-duo-launch/",
+      "source": "Engadget",
+      "country": "CN",
+      "publishedAt": "2026-10-14 15:36:33",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "f813be7335beeb50",
+      "headline": "Himax WiseEye Ultralow Power AI Adopted in Alibaba’s Latest Qwen Glasses",
+      "url": "https://nynewscast.com/himax-wiseeye-ultralow-power-ai-adopted-in-alibabas-latest-qwen-glasses-265543/",
+      "source": "Nynewscast",
+      "country": "CN",
+      "publishedAt": "2026-10-14 10:11:00",
+      "relevanceScore": 0.6
+    },
     {
       "id": "b0f011b681ab7c9d",
       "headline": "Watch Meta's New Muse Wonder AI Model; LVMH Slumps After China Backlash",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-10-03 02:43:13",
       "relevanceScore": 0.32
-    },
-    {
-      "id": "77f9e332626798b5",
-      "headline": "The Real Existential Risk Is AI CEOs Avoiding Oversight: \"Alternative Nobel\" Winner Timnit Gebru",
-      "url": "http://www.democracynow.org/2026/10/1/timnit_gebru_ai",
-      "source": "Democracy Now!",
-      "country": "US",
-      "publishedAt": "2026-10-01 12:14:25",
-      "relevanceScore": 0.46
-    },
-    {
-      "id": "643b9960861c8c73",
-      "headline": "Nvidia postpones Skynet?",
-      "url": "https://investinglive.com/education/nvidia-postpones-skynet/",
-      "source": "Forexlive",
-      "country": "Both",
-      "publishedAt": "2026-09-30 15:21:29",
-      "relevanceScore": 0.54
     }
   ]
 }

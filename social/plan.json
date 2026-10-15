@@ -1,19 +1,18 @@
 {
-  "date": "2026-10-14",
-  "timestamp": "2026-10-14T03:41:14+00:00",
-  "format": "benchmark_day",
-  "palette": "graphite",
-  "weight": 1,
+  "date": "2026-10-15",
+  "timestamp": "2026-10-15T03:42:06+00:00",
+  "format": "new_challenger",
+  "palette": "newsprint",
+  "weight": 3,
   "slides": [
-    "2026-10-14-1-benchmark_day-graphite.png",
-    "2026-10-14-2-leaderboard-graphite.png"
+    "2026-10-15-1-new_challenger-newsprint.png",
+    "2026-10-15-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-14-1-benchmark_day-graphite.png",
-    "https://usvschina.ai/social/2026-10-14-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-15-1-new_challenger-newsprint.png",
+    "https://usvschina.ai/social/2026-10-15-2-leaderboard-newsprint.png"
   ],
-  "caption": "The US leads China by 4163.6 points on October 14.\n\n• US models hold 8 of the top 10 spots.\n• GPT-6 Astra leads at 900.3 unified points.\n• Kimi K3 is China’s top model at rank 6 with 704.8 points.\n\nIs the US lead too wide to close, or can China’s depth change the race?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIBenchmarks #GPT6Astra #KimiK3 #ModelRankings",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-14T03:41:46.817099+00:00",
-  "benchmark": "Humanity’sLastExam"
+  "caption": "DeepSeek-V4.1-Flash climbs 5 places into the top 10.\n\n• US leads 5084.94 to 2054.78, a 3030.2 margin.\n• DeepSeek-V4.1-Flash lands at No. 8 with a 671.3 unified score.\n• China holds 3 top-10 spots; Kimi K3 leads at No. 6 with 704.8.\n\nDoes DeepSeek-V4.1-Flash’s 5-place climb change the China side of the race?\n\n#AI #ArtificialIntelligence #AIModels #DeepSeek #USvsChina #ChinaAI #ModelRankings",
+  "caption_source": "gpt-5.6-terra",
+  "generated_at": "2026-10-15T03:43:11.447953+00:00"
 }

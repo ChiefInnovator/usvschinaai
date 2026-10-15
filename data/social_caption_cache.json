@@ -657,5 +657,23 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-15T03:42:06+00:00|new_challenger": {
+    "hook": "DeepSeek-V4.1-Flash climbs 5 places into the top 10.",
+    "bullets": [
+      "US leads 5084.94 to 2054.78, a 3030.2 margin.",
+      "DeepSeek-V4.1-Flash lands at No. 8 with a 671.3 unified score.",
+      "China holds 3 top-10 spots; Kimi K3 leads at No. 6 with 704.8."
+    ],
+    "question": "Does DeepSeek-V4.1-Flash\u2019s 5-place climb change the China side of the race?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#DeepSeek",
+      "#USvsChina",
+      "#ChinaAI",
+      "#ModelRankings"
+    ]
   }
 }
