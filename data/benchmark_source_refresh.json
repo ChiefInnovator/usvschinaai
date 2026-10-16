@@ -1,32 +1,36 @@
 {
-  "retrievedAt": "2026-10-15",
-  "modelsChecked": 282,
-  "sourcesChecked": 292,
-  "findings": 1111,
-  "accepted": 4,
+  "retrievedAt": "2026-10-16",
+  "modelsChecked": 280,
+  "sourcesChecked": 290,
+  "findings": 1089,
+  "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:Claude Fable 5.1",
+      "source": "llm-stats:MiniMax M2.1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-6 Astra",
+      "source": "llm-stats:DeepSeek-V4-Flash-0731",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 4 Argon",
+      "source": "llm-stats:Gemini 3.8 Flash",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Phi-3.5-MoE-instruct",
+      "source": "llm-stats:Inkling-Small",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemma 2 9B",
+      "source": "llm-stats:Ember-1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:MiniCPM-SALA",
+      "source": "llm-stats:Grok-4.20 Multi-Agent Beta",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Nova 2 Lite",
       "error": "HTTP Error 403: Forbidden"
     },
     {

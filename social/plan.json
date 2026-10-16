@@ -1,18 +1,16 @@
 {
-  "date": "2026-10-15",
-  "timestamp": "2026-10-15T03:42:06+00:00",
-  "format": "new_challenger",
-  "palette": "newsprint",
-  "weight": 3,
+  "date": "2026-10-16",
+  "timestamp": "2026-10-16T03:41:50+00:00",
+  "format": "leaderboard",
+  "palette": "midnight",
+  "weight": 0,
   "slides": [
-    "2026-10-15-1-new_challenger-newsprint.png",
-    "2026-10-15-2-leaderboard-newsprint.png"
+    "2026-10-16-1-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-15-1-new_challenger-newsprint.png",
-    "https://usvschina.ai/social/2026-10-15-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-16-1-leaderboard-midnight.png"
   ],
-  "caption": "DeepSeek-V4.1-Flash climbs 5 places into the top 10.\n\n• US leads 5084.94 to 2054.78, a 3030.2 margin.\n• DeepSeek-V4.1-Flash lands at No. 8 with a 671.3 unified score.\n• China holds 3 top-10 spots; Kimi K3 leads at No. 6 with 704.8.\n\nDoes DeepSeek-V4.1-Flash’s 5-place climb change the China side of the race?\n\n#AI #ArtificialIntelligence #AIModels #DeepSeek #USvsChina #ChinaAI #ModelRankings",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-10-15T03:43:11.447953+00:00"
+  "caption": "US leads China by 3030.2 points.\n\n• US holds 7 of the top 10 spots; China holds 3.\n• GPT-6 Astra leads at 900.3, ahead of GPT-5.6 Terra at 811.3.\n• Kimi K3 is China’s top model at 704.8, ranked 6th overall.\n\nIs the US lead decisive, or does China’s top-10 presence narrow the gap?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AILeaderboard #GPT6Astra #KimiK3 #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-10-16T03:42:51.416064+00:00"
 }

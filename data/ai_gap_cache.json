@@ -1220,6 +1220,16 @@
     }
   },
   "Gemini 4 Argon": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize’s verified-results table reports 91.3% for Gemini 4 Argon at High reasoning on ARC-AGI-2 Semi-Private. Result page published October 13, 2026.",
+      "score": "91.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/google-gemini-4-argon"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-10-12T03:52:58.338227+00:00",
@@ -1232,13 +1242,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-15T03:37:56.276667+00:00",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 57% for Gemini 4 Argon at High reasoning effort; its public comparison page rounds the displayed value to a whole percentage.",
-      "score": "57.0%",
+      "notes": "Artificial Analysis reports 57% (display-rounded; recorded as 57.1%) for Gemini 4 Argon (High) on Humanity’s Last Exam. This is the highest publicly documented reasoning setting found.",
+      "score": "57.1%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-claude-opus-5-5-high"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-astra"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -1330,10 +1340,10 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-14T03:37:11.765234+00:00",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis lists the reasoning variant of Granite 4.2 30B at 11.2% on Humanity’s Last Exam. The run is identified as text-only/no-tools in the evaluator’s published result metadata; no separate effort-level result is shown.",
+      "notes": "Artificial Analysis independently reports the exact Granite 4.2 30B model on Humanity’s Last Exam; the displayed result is 11.2%.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
@@ -1372,13 +1382,13 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-13T04:07:51.393943+00:00",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Third-party ledger reports an Artificial Analysis Terminal-Bench 2.1 run of 13.86%, rounded to 13.9%. The individual-result publication date is unknown; the page is dated October 12, 2026. IBM's launch model card separately lists its own 3B cell as NA, so this is not an IBM-reported result.",
+      "notes": "Artificial Analysis independently evaluates Terminal-Bench 2.1 with Terminus 2, reporting pass@1 averaged over three repeats; the model row’s publication date is unknown.",
       "score": "13.9%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.benchleader.com/models/granite-4-2-3b"
+      "source_url": "https://artificialanalysis.ai/evaluations/terminalbench-2-1"
     }
   },
   "IBM Granite 4.2 8B": {
