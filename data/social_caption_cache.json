@@ -693,5 +693,24 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-17T03:38:50+00:00|price_vs_power": {
+    "hook": "US leads the board, but China is winning the value fight",
+    "bullets": [
+      "US leads 5084.94 to 2054.78, with a 3030.2-point margin.",
+      "GPT-6 Astra ranks 1st at 900.3; Kimi K3 is China\u2019s best at 704.8.",
+      "GLM-5.3-Flash posts 108.3 value, versus Astra\u2019s 1.4."
+    ],
+    "question": "Would you take higher power or better value for your next model?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIEval",
+      " #LLM",
+      " #ModelPricing",
+      " #OpenAI",
+      " #DeepSeek"
+    ]
   }
 }

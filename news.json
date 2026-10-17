@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-10-16T03:42:47.050575+00:00",
+  "lastUpdated": "2026-10-17T03:39:32.376659+00:00",
   "items": [
+    {
+      "id": "b19726c707ce6a89",
+      "headline": "China Now Requires An Export License For All New Large AI Models, Potentially Affecting Moonshot’s Unreleased Kimi...",
+      "url": "https://wccftech.com/china-now-requires-an-export-license-for-all-new-large-ai-models-potentially-affecting-moonshots-unreleased-kimi-k3-1-as-taiwan-criminalizes-smuggling-of-advanced-chips-to-china/",
+      "source": "Wccftech",
+      "country": "CN",
+      "publishedAt": "2026-10-16 14:17:02",
+      "relevanceScore": 0.48
+    },
+    {
+      "id": "ca7f8b83d682734b",
+      "headline": "Why Westchester businesses require federal regulation for AI | Opinion",
+      "url": "https://www.lohud.com/story/opinion/2026/10/16/westchester-ny-businesses-ai-regulation/92269316007/",
+      "source": "The Journal News",
+      "country": "Both",
+      "publishedAt": "2026-10-16 13:57:35",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "a683203051bee918",
+      "headline": "Meta Drops Its Biggest Open-Weight AI Model Yet — and Apple Helped It Run on Two Mac Studios",
+      "url": "https://thecherrycreeknews.com/meta-drops-its-biggest-open-weight-ai-model-yet-and-apple-helped-it-run-on-two-mac-studios/",
+      "source": "The Cherry Creek News",
+      "country": "US",
+      "publishedAt": "2026-10-16 13:02:18",
+      "relevanceScore": 0.54
+    },
     {
       "id": "168a1bc56d6e0749",
       "headline": "Alibaba AI models cleared for use in Apple Intelligence in China just in time for the iPhone Duo launch",
@@ -153,33 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-10-05 13:01:00",
       "relevanceScore": 0.84
-    },
-    {
-      "id": "44d5dc2b147583d0",
-      "headline": "DeepSeek down live: Chinese AI app not working properly amid ...",
-      "url": "https://ng.shotoe.com/deepseek-ai-model-st_563171/news/deepseek-down-live-chinese-ai-app-not-working-properly-amid-sn_5076052/",
-      "source": "Shotoe Nigeria",
-      "country": "Both",
-      "publishedAt": "2026-10-04 00:00:00",
-      "relevanceScore": 0.83
-    },
-    {
-      "id": "d6e1cc06e9cf1df5",
-      "headline": "Sen. Rounds, Anthropic leaders talk AI’s future at South Dakota Mines",
-      "url": "https://www.kotatv.com/2026/10/03/sen-rounds-anthropic-leaders-talk-ais-future-south-dakota-mines/",
-      "source": "Https://www.kotatv.com",
-      "country": "US",
-      "publishedAt": "2026-10-03 18:30:00",
-      "relevanceScore": 0.3
-    },
-    {
-      "id": "6d38abc270454e5c",
-      "headline": "US officials probe Nvidia as restricted AI chips reach China",
-      "url": "https://completeaitraining.com/news/us-officials-probe-nvidia-as-restricted-ai-chips-reach-china/",
-      "source": "Complete Ai Training",
-      "country": "CN",
-      "publishedAt": "2026-10-03 02:43:13",
-      "relevanceScore": 0.32
     }
   ]
 }

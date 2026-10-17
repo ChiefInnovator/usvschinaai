@@ -1034,13 +1034,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-14T03:37:11.765234+00:00",
+      "cached_at": "2026-10-17T03:35:02.937453+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 53% for GPT-6.1 Sol at max reasoning effort, higher than its 51% high-effort result. Individual-result publication date is not stated on the source.",
+      "notes": "Artificial Analysis independently measured result; highest displayed GPT-6.1 Sol effort is max. The model was introduced by OpenAI on September 29, 2026.",
       "score": "53.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-high-vs-gpt-6-1-sol"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
@@ -1074,13 +1074,13 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-15T03:37:56.276667+00:00",
+      "cached_at": "2026-10-17T03:35:02.937453+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor's Terminal-Bench 2.1 leaderboard reports pass@1 for GPT-6.1 Sol at max effort; the individual-result publication date is not stated.",
-      "score": "85.4%",
+      "notes": "Fidian direct run; GPT-6.1 Sol at max reasoning effort, TB-2.1 pass@1. The model was introduced by OpenAI on September 29, 2026.",
+      "score": "84.6%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-terminal-bench-2-1-leaderboard/"
+      "source_url": "https://fidian.ai/leaderboard/"
     }
   },
   "Gemini 3.1 Pro": {
