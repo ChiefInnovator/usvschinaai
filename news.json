@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-17T03:39:32.376659+00:00",
+  "lastUpdated": "2026-10-18T03:45:55.646406+00:00",
   "items": [
+    {
+      "id": "9061281ad88ba8b4",
+      "headline": "Riding the AI Wave With A Disciplined Approach To AMD",
+      "url": "https://etf-alerts.com/riding-the-ai-wave-with-a-disciplined-approach-to-amd/",
+      "source": "Etf Alerts",
+      "country": "US",
+      "publishedAt": "2026-10-17 14:39:09",
+      "relevanceScore": 0.38
+    },
+    {
+      "id": "ae0952419cd62b63",
+      "headline": "Smuggling Nvidia Chips Into China Is About to Become a Crime in Taiwan",
+      "url": "https://247wallst.com/investing/2026/10/17/smuggling-nvidia-chips-into-china-is-about-to-become-a-crime-in-taiwan/",
+      "source": "24/7 Wall St",
+      "country": "CN",
+      "publishedAt": "2026-10-17 12:20:27",
+      "relevanceScore": 0.4
+    },
     {
       "id": "b19726c707ce6a89",
       "headline": "China Now Requires An Export License For All New Large AI Models, Potentially Affecting Moonshot’s Unreleased Kimi...",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-10-05 14:00:37",
       "relevanceScore": 0.61
-    },
-    {
-      "id": "55aea0d63125b9c0",
-      "headline": "Threat summer 2026: Editors discuss top cyber incidents",
-      "url": "https://www.techtarget.com/cybersecurity/video/Threat-summer-2026-Editors-discuss-top-cyber-incidents",
-      "source": "Techtarget",
-      "country": "Both",
-      "publishedAt": "2026-10-05 13:15:00",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "89aadc4b1f3bfeb2",
-      "headline": "Hirundo Releases Westernized Qwen, Cutting Censored and CCP-Aligned Answers From 89.8% to 2.8% in the Leading...",
-      "url": "https://www.financialcontent.com/article/bizwire-2026-10-5-hirundo-releases-westernized-qwen-cutting-censored-and-ccp-aligned-answers-from-898-to-28-in-the-leading-chinese-ai-model",
-      "source": "Financialcontent",
-      "country": "CN",
-      "publishedAt": "2026-10-05 13:01:00",
-      "relevanceScore": 0.84
     }
   ]
 }

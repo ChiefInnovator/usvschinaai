@@ -712,5 +712,24 @@
       " #OpenAI",
       " #DeepSeek"
     ]
+  },
+  "2026-10-18T03:44:58+00:00|trend_30d": {
+    "hook": "The US leads China by 3034.6 points after 30 days.",
+    "bullets": [
+      "US models hold 7 of the top 10 spots.",
+      "Kimi K3 is China\u2019s top model at rank 6 with 704.7 points.",
+      "Claude Fable 5.1 moved up 1 place to rank 10."
+    ],
+    "question": "Can China close a 3034.6-point gap, or is the lead settled?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#GPT6",
+      "#KimiK3",
+      "#DeepSeek",
+      "#AILeaderboard"
+    ]
   }
 }

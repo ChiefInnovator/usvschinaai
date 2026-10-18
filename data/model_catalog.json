@@ -2446,6 +2446,36 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-02"
           }
+        },
+        "mmmu-pro": {
+          "53e6c76bf2939057": {
+            "benchmark": "MMMU-Pro",
+            "score": 90.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/home?src=polymer.co",
+            "availableFrom": "2026-10-18",
+            "retrievedAt": "2026-10-18",
+            "configuration": "Vals reported 90.64% for Claude Fable 5.1 on MMMU Pro; its release evaluation used max reasoning effort and temperature 1.0. The page does not provide an individual-result publication date.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-02"
+          }
+        },
+        "swe-bench-verified": {
+          "f1b880466d6257aa": {
+            "benchmark": "SWE-bench Verified",
+            "score": 96.6,
+            "unit": "percent",
+            "source": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/",
+            "availableFrom": "2026-10-18",
+            "retrievedAt": "2026-10-18",
+            "configuration": "Mercor’s SWE-bench Verified leaderboard reports Pass@1 of 96.6% for Fable 5.1 Max; the page also lists 92.1% at High effort. The page does not provide an individual-result publication date.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-02"
+          }
         }
       }
     },
@@ -37582,6 +37612,25 @@
           "Context": "1.0M",
           "Output$/M": "0.5",
           "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "9.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "ed8417749582c346623c": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "10c/s",
           "License": "",
           "Parameters(B)": "320",
           "Latency": "9.6s",
@@ -110813,6 +110862,21 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-10-10",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-haiku-5-5_max."
+          }
+        },
+        "arc-agi-2": {
+          "aeb2308e9036ca3a": {
+            "benchmark": "ARC-AGI-2",
+            "score": 61.3,
+            "unit": "percent",
+            "source": "https://arcprize.org/results/anthropic-claude-haiku-5-5",
+            "availableFrom": "2026-10-18",
+            "retrievedAt": "2026-10-18",
+            "configuration": "ARC Prize Verified leaderboard; XHigh reasoning, the highest verified ARC-AGI-2 result. The individual-result publication date is not displayed.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-18"
           }
         }
       }
