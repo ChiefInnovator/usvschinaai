@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-18",
-  "timestamp": "2026-10-18T03:44:58+00:00",
-  "format": "trend_30d",
-  "palette": "graphite",
+  "date": "2026-10-19",
+  "timestamp": "2026-10-19T03:45:56+00:00",
+  "format": "head_to_head",
+  "palette": "newsprint",
   "weight": 1,
   "slides": [
-    "2026-10-18-1-trend_30d-graphite.png",
-    "2026-10-18-2-leaderboard-graphite.png"
+    "2026-10-19-1-head_to_head-newsprint.png",
+    "2026-10-19-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-18-1-trend_30d-graphite.png",
-    "https://usvschina.ai/social/2026-10-18-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-19-1-head_to_head-newsprint.png",
+    "https://usvschina.ai/social/2026-10-19-2-leaderboard-newsprint.png"
   ],
-  "caption": "The US leads China by 3034.6 points after 30 days.\n\n• US models hold 7 of the top 10 spots.\n• Kimi K3 is China’s top model at rank 6 with 704.7 points.\n• Claude Fable 5.1 moved up 1 place to rank 10.\n\nCan China close a 3034.6-point gap, or is the lead settled?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #GPT6 #KimiK3 #DeepSeek #AILeaderboard",
+  "caption": "US leads China by 3034.6 points on October 19\n\n• US totals 5089.32 points; China totals 2054.74.\n• GPT-6 Astra ranks 1st at 900.2; Kimi K3 leads China at 704.7.\n• The top 10 include 7 US models and 3 Chinese models.\n\nDoes China’s 3-model top 10 presence signal a narrowing gap?\n\n#AI #ArtificialIntelligence #USvsChina #AIBenchmarks #OpenAI #MoonshotAI #ModelRankings",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-18T03:46:00.051367+00:00"
+  "generated_at": "2026-10-19T03:46:43.183515+00:00"
 }

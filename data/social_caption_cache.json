@@ -731,5 +731,23 @@
       "#DeepSeek",
       "#AILeaderboard"
     ]
+  },
+  "2026-10-19T03:45:56+00:00|head_to_head": {
+    "hook": "US leads China by 3034.6 points on October 19",
+    "bullets": [
+      "US totals 5089.32 points; China totals 2054.74.",
+      "GPT-6 Astra ranks 1st at 900.2; Kimi K3 leads China at 704.7.",
+      "The top 10 include 7 US models and 3 Chinese models."
+    ],
+    "question": "Does China\u2019s 3-model top 10 presence signal a narrowing gap?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIBenchmarks",
+      "#OpenAI",
+      "#MoonshotAI",
+      "#ModelRankings"
+    ]
   }
 }
