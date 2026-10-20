@@ -1,16 +1,32 @@
 {
-  "retrievedAt": "2026-10-19",
-  "modelsChecked": 283,
-  "sourcesChecked": 293,
-  "findings": 1099,
-  "accepted": 0,
+  "retrievedAt": "2026-10-20",
+  "modelsChecked": 288,
+  "sourcesChecked": 298,
+  "findings": 1028,
+  "accepted": 32,
   "failures": [
     {
-      "source": "llm-stats:Claude Sonnet 4.5",
+      "source": "llm-stats:Gemini 3 Flash",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Kimi K2-Thinking-0905",
+      "source": "llm-stats:Claude Opus 4.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Gemini 2.5 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Sonnet 4",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GLM-4.6",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V3.2 (Non-thinking)",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -18,11 +34,87 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Qwen3.5-9B",
+      "source": "llm-stats:GPT-5.2 Codex",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Step3-VL-10B",
+      "source": "llm-stats:Kimi K2.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5 High",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Sonnet 4.6",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Kimi K2.6",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Mythos Preview",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Hy3",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Seed 2.0 Pro",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Opus 5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V4-Flash-0731",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Hy4 preview",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Laguna S 2.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Claude Opus 5.5",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-6.1 Sol",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-Rosalind",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:LFM2.5-VL-3B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Muse Glimmer-30B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Nemotron 3.5 Lightning (30B A3B)",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:LFM2.5-2.6B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Laguna XS 2.1",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.5 Instant",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -30,8 +122,28 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Qwen3-Next-80B-A3B-Thinking",
+      "source": "llm-stats:Qwen3 VL 30B A3B Instruct",
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen3-Next-80B-A3B-Instruct",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen2.5-Omni-7B",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen2.5 72B Instruct",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:Qwen2.5-Coder 7B Instruct",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:lcb",
@@ -42,16 +154,12 @@
       "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
     },
     {
-      "source": "vals:swebench",
-      "error": "Vals benchmark identity or payload changed: swebench"
-    },
-    {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
     },
     {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
+      "source": "vals:swebench",
+      "error": "Vals benchmark identity or payload changed: swebench"
     }
   ],
   "skippedConfigurations": [],

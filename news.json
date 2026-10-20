@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-19T03:46:39.454480+00:00",
+  "lastUpdated": "2026-10-20T03:42:33.522908+00:00",
   "items": [
+    {
+      "id": "b5d0982340f6e1c5",
+      "headline": "Anthropic Hands a Growing Slice of Itself to the Public — and China Wants to Lock Down Its Best AI Models",
+      "url": "https://thecherrycreeknews.com/anthropic-public-benefit-fund-china-ai-model-export-controls/",
+      "source": "The Cherry Creek News",
+      "country": "Both",
+      "publishedAt": "2026-10-19 13:03:20",
+      "relevanceScore": 0.69
+    },
     {
       "id": "d8e717c285942f28",
       "headline": "Saudi OpenAI Employee's Arrest Revives Fears US Tech Companies Are Hiring Spies",
@@ -170,15 +179,6 @@
       "source": "Help Net Security",
       "country": "Both",
       "publishedAt": "2026-10-09 12:26:42",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "482d39f6949955ce",
-      "headline": "How is America feeling about the AI boom? This new poll reveals the data",
-      "url": "https://www.fastcompany.com/91620704/how-america-feeling-about-ai-boom-new-poll-reveals-data",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-10-08 12:45:42",
       "relevanceScore": 0.24
     }
   ]

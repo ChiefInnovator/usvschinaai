@@ -1,18 +1,19 @@
 {
-  "date": "2026-10-19",
-  "timestamp": "2026-10-19T03:45:56+00:00",
-  "format": "head_to_head",
-  "palette": "newsprint",
+  "date": "2026-10-20",
+  "timestamp": "2026-10-20T03:41:51+00:00",
+  "format": "benchmark_day",
+  "palette": "graphite",
   "weight": 1,
   "slides": [
-    "2026-10-19-1-head_to_head-newsprint.png",
-    "2026-10-19-2-leaderboard-newsprint.png"
+    "2026-10-20-1-benchmark_day-graphite.png",
+    "2026-10-20-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-19-1-head_to_head-newsprint.png",
-    "https://usvschina.ai/social/2026-10-19-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-20-1-benchmark_day-graphite.png",
+    "https://usvschina.ai/social/2026-10-20-2-leaderboard-graphite.png"
   ],
-  "caption": "US leads China by 3034.6 points on October 19\n\n• US totals 5089.32 points; China totals 2054.74.\n• GPT-6 Astra ranks 1st at 900.2; Kimi K3 leads China at 704.7.\n• The top 10 include 7 US models and 3 Chinese models.\n\nDoes China’s 3-model top 10 presence signal a narrowing gap?\n\n#AI #ArtificialIntelligence #USvsChina #AIBenchmarks #OpenAI #MoonshotAI #ModelRankings",
+  "caption": "The US leads, but China’s Kimi K3 is only 1 place from the top five.\n\n• US leads the scoreboard 5766.8 to 1423.0, a 4343.8-point margin.\n• GPT-6 Astra holds rank 1 at 900.2; Kimi K3 is China’s best at rank 6.\n• The US has 8 models in the top 10; China has 2, including GLM-5.3-Flash at rank 7.\n\nIs Kimi K3 close enough to challenge the US top five?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #AILeaderboard #KimiK3 #GPT6Astra #ModelBenchmarks",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-19T03:46:43.183515+00:00"
+  "generated_at": "2026-10-20T03:42:37.365430+00:00",
+  "benchmark": "ARC-AGI-2"
 }

@@ -749,5 +749,24 @@
       "#MoonshotAI",
       "#ModelRankings"
     ]
+  },
+  "2026-10-20T03:41:51+00:00|benchmark_day": {
+    "hook": "The US leads, but China\u2019s Kimi K3 is only 1 place from the top five.",
+    "bullets": [
+      "US leads the scoreboard 5766.8 to 1423.0, a 4343.8-point margin.",
+      "GPT-6 Astra holds rank 1 at 900.2; Kimi K3 is China\u2019s best at rank 6.",
+      "The US has 8 models in the top 10; China has 2, including GLM-5.3-Flash at rank 7."
+    ],
+    "question": "Is Kimi K3 close enough to challenge the US top five?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#AILeaderboard",
+      "#KimiK3",
+      "#GPT6Astra",
+      "#ModelBenchmarks"
+    ]
   }
 }
