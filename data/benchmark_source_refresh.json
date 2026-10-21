@@ -1,144 +1,36 @@
 {
-  "retrievedAt": "2026-10-20",
-  "modelsChecked": 288,
-  "sourcesChecked": 298,
-  "findings": 1028,
-  "accepted": 32,
+  "retrievedAt": "2026-10-21",
+  "modelsChecked": 282,
+  "sourcesChecked": 292,
+  "findings": 1107,
+  "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:Gemini 3 Flash",
+      "source": "llm-stats:GPT-5.1 High",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Opus 4.1",
+      "source": "llm-stats:DeepSeek-V4-Flash-Max",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 2.5 Pro",
+      "source": "llm-stats:Ember-1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 4",
+      "source": "llm-stats:IBM Granite 4.2 8B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GLM-4.6",
+      "source": "llm-stats:IBM Granite 4.2 3B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V3.2 (Non-thinking)",
+      "source": "llm-stats:Gemma 4 E4B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V3.2-Exp",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.2 Codex",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5 High",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Claude Sonnet 4.6",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2.6",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Claude Mythos Preview",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Hy3",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Seed 2.0 Pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Claude Opus 5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:DeepSeek-V4-Flash-0731",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Hy4 preview",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Laguna S 2.1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Claude Opus 5.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-6.1 Sol",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-Rosalind",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:LFM2.5-VL-3B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Muse Glimmer-30B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Nemotron 3.5 Lightning (30B A3B)",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:LFM2.5-2.6B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Laguna XS 2.1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.5 Instant",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3 VL 235B A22B Thinking",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3 VL 30B A3B Instruct",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3-Next-80B-A3B-Instruct",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen2.5-Omni-7B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen2.5 72B Instruct",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen2.5-Coder 7B Instruct",
+      "source": "llm-stats:Grok-4.1 Thinking",
       "error": "HTTP Error 403: Forbidden"
     },
     {

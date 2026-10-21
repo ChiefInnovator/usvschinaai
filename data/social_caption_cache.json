@@ -768,5 +768,23 @@
       "#GPT6Astra",
       "#ModelBenchmarks"
     ]
+  },
+  "2026-10-21T03:42:16+00:00|leaderboard": {
+    "hook": "The US holds the top five\u2014and 8 of the top 10.",
+    "bullets": [
+      "US leads China 5766.8 to 1423.0, a 4343.8-point margin.",
+      "GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.",
+      "Kimi K3 is China\u2019s top model at 727.5, just 1.0 behind GPT-6.1 Sol."
+    ],
+    "question": "Does Kimi K3 have the best shot at breaking the US top five?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIBenchmark",
+      "#USvsChinaAI",
+      "#OpenAI",
+      "#KimiK3",
+      "#AIModels"
+    ]
   }
 }

@@ -65,7 +65,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-10-20T03:41:51+00:00",
+      "timestamp": "2026-10-21T03:42:16+00:00",
       "teams": {
         "US": [
           {
@@ -79,7 +79,7 @@
           },
           {
             "modelId": "3e8493d70f3b80a11cf5",
-            "profileId": "1bfb721706d7668f6731",
+            "profileId": "59691aafb1e3c5bdb5c0",
             "avgIq": 80.45,
             "value": 5.75,
             "unified": 821.38,
@@ -88,7 +88,7 @@
           },
           {
             "modelId": "bf6872882b4e0722ae12",
-            "profileId": "37adf72a426e6a23ba41",
+            "profileId": "16fafe8522df4fab32c0",
             "avgIq": 79.68,
             "value": 3.32,
             "unified": 804.58,
@@ -97,7 +97,7 @@
           },
           {
             "modelId": "e43da5e7a8e3d9626107",
-            "profileId": "9249d8706e2507e7c987",
+            "profileId": "1db40c3238e2dbeb7414",
             "avgIq": 77.3,
             "value": 17.18,
             "unified": 767.48,
@@ -115,7 +115,7 @@
           },
           {
             "modelId": "822c760d6aa27b46cc0b",
-            "profileId": "8fcc2f531c31cd7cd6da",
+            "profileId": "37413a7ddbe2514606f9",
             "avgIq": 67.77,
             "value": 112.94,
             "unified": 647.22,
@@ -151,10 +151,10 @@
           },
           {
             "modelId": "a276059f28b67f49e058",
-            "profileId": "e4e5d058b3f9cc960c2a",
+            "profileId": "d549dca5406f975f5aec",
             "avgIq": 56.6,
-            "value": 4.72,
-            "unified": 351.85,
+            "value": 0.0,
+            "unified": 349.32,
             "coverage": "6/18",
             "provisional": false
           }
@@ -162,7 +162,7 @@
         "CN": [
           {
             "modelId": "27c9865821933f9dafd1",
-            "profileId": "91f07622d064c37a567a",
+            "profileId": "d27aece05e469eaaeb8c",
             "avgIq": 70.39,
             "value": 108.29,
             "unified": 695.49,
@@ -207,7 +207,7 @@
           },
           {
             "modelId": "7cc8168d3be894837e46",
-            "profileId": "c0c97abf1c28eed665ec",
+            "profileId": "8ca020f9bab8ac7cb81d",
             "avgIq": 57.45,
             "value": 14.73,
             "unified": 375.54,

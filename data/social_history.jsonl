@@ -45,3 +45,4 @@
 {"date": "2026-10-18", "timestamp": "2026-10-18T03:44:58+00:00", "format": "trend_30d", "palette": "graphite"}
 {"date": "2026-10-19", "timestamp": "2026-10-19T03:45:56+00:00", "format": "head_to_head", "palette": "newsprint"}
 {"date": "2026-10-20", "timestamp": "2026-10-20T03:41:51+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "ARC-AGI-2"}
+{"date": "2026-10-21", "timestamp": "2026-10-21T03:42:16+00:00", "format": "leaderboard", "palette": "midnight"}

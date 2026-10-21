@@ -1428,10 +1428,10 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-16T03:37:41.100928+00:00",
+      "cached_at": "2026-10-21T03:38:30.863112+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports the exact Granite 4.2 30B model on Humanity’s Last Exam; the displayed result is 11.2%.",
+      "notes": "Artificial Analysis independently evaluated the reasoning configuration; its HLE methodology uses 2,158 items, pass@1, and an equality-checker LLM.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
