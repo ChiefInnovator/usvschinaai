@@ -1,16 +1,18 @@
 {
-  "date": "2026-10-21",
-  "timestamp": "2026-10-21T03:42:16+00:00",
-  "format": "leaderboard",
-  "palette": "midnight",
-  "weight": 0,
+  "date": "2026-10-22",
+  "timestamp": "2026-10-22T03:42:08+00:00",
+  "format": "new_challenger",
+  "palette": "graphite",
+  "weight": 3,
   "slides": [
-    "2026-10-21-1-leaderboard-midnight.png"
+    "2026-10-22-1-new_challenger-graphite.png",
+    "2026-10-22-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-21-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-10-22-1-new_challenger-graphite.png",
+    "https://usvschina.ai/social/2026-10-22-2-leaderboard-graphite.png"
   ],
-  "caption": "The US holds the top five—and 8 of the top 10.\n\n• US leads China 5766.8 to 1423.0, a 4343.8-point margin.\n• GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.\n• Kimi K3 is China’s top model at 727.5, just 1.0 behind GPT-6.1 Sol.\n\nDoes Kimi K3 have the best shot at breaking the US top five?\n\n#AI #ArtificialIntelligence #AIBenchmark #USvsChinaAI #OpenAI #KimiK3 #AIModels",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-21T03:43:03.548191+00:00"
+  "caption": "DeepSeek-V4.1-Flash debuts at No. 8 as the US leads by 3,034.6\n\n• DeepSeek-V4.1-Flash posts 671.3 unified and 71.2 IQ in its first top 10 appearance.\n• China now has 3 models in the top 10, led by Kimi K3 at No. 6 with 704.7.\n• GLM-5.3-Flash delivers 108.3 value at No. 7, against a 0.15 input price.\n\nDoes DeepSeek-V4.1-Flash have the profile to climb past No. 8?\n\n#AI #AIModels #DeepSeek #DeepSeekV41Flash #USvsChina #LLM #AILeaderboard #ModelRankings",
+  "caption_source": "gpt-5.6-terra",
+  "generated_at": "2026-10-22T03:42:54.835191+00:00"
 }

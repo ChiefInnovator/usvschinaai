@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-21T03:42:59.823723+00:00",
+  "lastUpdated": "2026-10-22T03:42:51.227232+00:00",
   "items": [
+    {
+      "id": "83d77a3f1cd140d7",
+      "headline": "Nvidia's Huang urges Europe to go all in on AI",
+      "url": "https://thepeninsulaqatar.com/article/21/10/2026/nvidias-huang-urges-europe-to-go-all-in-on-ai",
+      "source": "The Peninsula Qatar",
+      "country": "Both",
+      "publishedAt": "2026-10-21 13:32:20",
+      "relevanceScore": 0.24
+    },
     {
       "id": "777e4261c2d9f67a",
       "headline": "IT Security News Hourly Summary 2026-10-20 16h : 41 posts",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-10-13 08:12:12",
       "relevanceScore": 0.46
-    },
-    {
-      "id": "476f77fc2056baa1",
-      "headline": "Top News Today: Korean Chip Stocks, Young VC Leadership, AI Jobs, Bitcoin, Claude Security",
-      "url": "https://www.analyticsinsight.net/tech-news/top-news-today-korean-chip-stocks-young-vc-leadership-ai-jobs-bitcoin-claude-security",
-      "source": "Analytics And Insight",
-      "country": "Both",
-      "publishedAt": "2026-10-13 07:17:30",
-      "relevanceScore": 0.45
     }
   ]
 }

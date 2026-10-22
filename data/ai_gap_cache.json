@@ -1,4 +1,16 @@
 {
+  "Beam 1.0": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official Reflection model card; BF16 is the highest listed numeric variant (FP8 90.3%, NVFP4 89.3%), evaluated at temperature 0.7 and top_p 0.99. No independently verified publication date for this individual result was found.",
+      "score": "90.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+    }
+  },
   "Claude Fable 5.1": {
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
@@ -1328,6 +1340,16 @@
       "source_type": "system_card",
       "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon"
     },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported as GPQA Diamond, attributed on the model page to Epoch AI; the displayed score is rounded to 96%. The page identifies the model as Gemini 4 Argon and records its September 30, 2026 release.",
+      "score": "96.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://themodelindex.org/models/gemini-4-argon/"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-10-19T03:41:09.939226+00:00",
@@ -1340,10 +1362,10 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-19T03:41:09.939226+00:00",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals archived leaderboard; pass@1 using the Terminus 2 harness. The row identifies Gemini 4 Argon and reports 57.68%, rounded to 57.7%. The page was updated September 28, 2026; publication date of the individual row is not independently stated.",
+      "notes": "Vals AI reports Gemini 4 Argon at 57.68% with the Terminus 2 harness; its methodology specifies pass@1. The Vals model update records an evaluation publication date of September 30, 2026, with reasoning effort high.",
       "score": "57.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
@@ -1707,6 +1729,28 @@
       "score": null
     }
   },
+  "Mercury 3": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official benchmark chart reports DeepSWE v1 = 46.31%, rounded to 46.3%. Published October 19, 2026.",
+      "score": "46.3%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official benchmark chart reports GPQA Diamond = 89.23%, rounded to 89.2%. Published October 19, 2026.",
+      "score": "89.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+    }
+  },
   "MiMo-V2.6-Flash": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1845,30 +1889,40 @@
       "score": "89.0%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis reports 44% for Muse Spark Open (xhigh). This is an independently evaluated standard HLE result; the page does not state an individual-result publication date.",
+      "score": "44.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/comparisons/muse-spark-open-vs-mimo-v2-6-flash"
     }
   },
   "Muse Wonder": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports Muse Wonder (Max) at 50% on its standard no-tools Humanity’s Last Exam evaluation; its comparison table rounds the displayed value to 50.1% in detailed reporting. Individual-result publication date was not independently verified.",
-      "score": "50.1%",
+      "notes": "Artificial Analysis independently reports 50% for Muse Wonder (Max). The model-specific evaluation-result publication date is not stated; this is not a tool-enabled or HLE Diamond result.",
+      "score": "50.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/muse-wonder/"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/reflection-beam-vs-muse-wonder"
     }
   },
   "Muse Wonder Full": {
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-19T03:41:09.939226+00:00",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently reports Muse Wonder Full (Max) at 54%; source publication date for this individual result is unknown.",
+      "notes": "Artificial Analysis reports 54% for Muse Wonder Full (Max); the page does not provide a publication date for this individual result.",
       "score": "54.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/muse-wonder-full"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/muse-wonder-full-vs-claude-sonnet-5-5"
     }
   },
   "Nemotron 3.5 Bolt (74B A9B 24GB)": {

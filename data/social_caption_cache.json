@@ -786,5 +786,24 @@
       "#KimiK3",
       "#AIModels"
     ]
+  },
+  "2026-10-22T03:42:08+00:00|new_challenger": {
+    "hook": "DeepSeek-V4.1-Flash debuts at No. 8 as the US leads by 3,034.6",
+    "bullets": [
+      "DeepSeek-V4.1-Flash posts 671.3 unified and 71.2 IQ in its first top 10 appearance.",
+      "China now has 3 models in the top 10, led by Kimi K3 at No. 6 with 704.7.",
+      "GLM-5.3-Flash delivers 108.3 value at No. 7, against a 0.15 input price."
+    ],
+    "question": "Does DeepSeek-V4.1-Flash have the profile to climb past No. 8?",
+    "hashtags": [
+      "#AI",
+      "#AIModels",
+      "#DeepSeek",
+      "#DeepSeekV41Flash",
+      "#USvsChina",
+      "#LLM",
+      "#AILeaderboard",
+      "#ModelRankings"
+    ]
   }
 }
