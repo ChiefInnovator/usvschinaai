@@ -47,3 +47,4 @@
 {"date": "2026-10-20", "timestamp": "2026-10-20T03:41:51+00:00", "format": "benchmark_day", "palette": "graphite", "benchmark": "ARC-AGI-2"}
 {"date": "2026-10-21", "timestamp": "2026-10-21T03:42:16+00:00", "format": "leaderboard", "palette": "midnight"}
 {"date": "2026-10-22", "timestamp": "2026-10-22T03:42:08+00:00", "format": "new_challenger", "palette": "graphite"}
+{"date": "2026-10-23", "timestamp": "2026-10-23T03:44:41+00:00", "format": "price_vs_power", "palette": "midnight"}

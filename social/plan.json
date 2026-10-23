@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-22",
-  "timestamp": "2026-10-22T03:42:08+00:00",
-  "format": "new_challenger",
-  "palette": "graphite",
-  "weight": 3,
+  "date": "2026-10-23",
+  "timestamp": "2026-10-23T03:44:41+00:00",
+  "format": "price_vs_power",
+  "palette": "midnight",
+  "weight": 1,
   "slides": [
-    "2026-10-22-1-new_challenger-graphite.png",
-    "2026-10-22-2-leaderboard-graphite.png"
+    "2026-10-23-1-price_vs_power-midnight.png",
+    "2026-10-23-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-22-1-new_challenger-graphite.png",
-    "https://usvschina.ai/social/2026-10-22-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-23-1-price_vs_power-midnight.png",
+    "https://usvschina.ai/social/2026-10-23-2-leaderboard-midnight.png"
   ],
-  "caption": "DeepSeek-V4.1-Flash debuts at No. 8 as the US leads by 3,034.6\n\n• DeepSeek-V4.1-Flash posts 671.3 unified and 71.2 IQ in its first top 10 appearance.\n• China now has 3 models in the top 10, led by Kimi K3 at No. 6 with 704.7.\n• GLM-5.3-Flash delivers 108.3 value at No. 7, against a 0.15 input price.\n\nDoes DeepSeek-V4.1-Flash have the profile to climb past No. 8?\n\n#AI #AIModels #DeepSeek #DeepSeekV41Flash #USvsChina #LLM #AILeaderboard #ModelRankings",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-10-22T03:42:54.835191+00:00"
+  "caption": "Team USA leads by 4344\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 5767 vs Team China 1423\n• 8 US and 2 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
+  "caption_source": "fallback:JSONDecodeError",
+  "generated_at": "2026-10-23T03:45:44.557025+00:00"
 }

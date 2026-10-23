@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-22T03:42:51.227232+00:00",
+  "lastUpdated": "2026-10-23T03:45:39.946978+00:00",
   "items": [
+    {
+      "id": "7f4a3c9094e4ac06",
+      "headline": "DeepSeek’s V4.1-Flash-1017 Model Just Built An Exploit That Escapes Chrome’s Sandbox, As The AI-Driven Assault On...",
+      "url": "https://wccftech.com/deepseeks-v4-1-flash-1017-model-just-built-an-exploit-that-escapes-chromes-sandbox-as-the-ai-driven-assault-on-the-open-web-goes-on-an-overdrive/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-10-22 15:30:51",
+      "relevanceScore": 0.98
+    },
     {
       "id": "83d77a3f1cd140d7",
       "headline": "Nvidia's Huang urges Europe to go all in on AI",
@@ -171,15 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-10-14 10:11:00",
       "relevanceScore": 0.6
-    },
-    {
-      "id": "b0f011b681ab7c9d",
-      "headline": "Watch Meta's New Muse Wonder AI Model; LVMH Slumps After China Backlash",
-      "url": "https://www.bundle.app/en/finance/watch-metas-new-muse-wonder-ai-model-lvmh-slumps-after-china-backlash-1A266728-D038-5C3E-BCA8-4182C4DD50F0",
-      "source": "Bundle",
-      "country": "Both",
-      "publishedAt": "2026-10-13 08:12:12",
-      "relevanceScore": 0.46
     }
   ]
 }
