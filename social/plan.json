@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-23",
-  "timestamp": "2026-10-23T03:44:41+00:00",
-  "format": "price_vs_power",
-  "palette": "midnight",
+  "date": "2026-10-24",
+  "timestamp": "2026-10-24T03:40:42+00:00",
+  "format": "head_to_head",
+  "palette": "newsprint",
   "weight": 1,
   "slides": [
-    "2026-10-23-1-price_vs_power-midnight.png",
-    "2026-10-23-2-leaderboard-midnight.png"
+    "2026-10-24-1-head_to_head-newsprint.png",
+    "2026-10-24-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-23-1-price_vs_power-midnight.png",
-    "https://usvschina.ai/social/2026-10-23-2-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-10-24-1-head_to_head-newsprint.png",
+    "https://usvschina.ai/social/2026-10-24-2-leaderboard-newsprint.png"
   ],
-  "caption": "Team USA leads by 4344\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 5767 vs Team China 1423\n• 8 US and 2 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
-  "caption_source": "fallback:JSONDecodeError",
-  "generated_at": "2026-10-23T03:45:44.557025+00:00"
+  "caption": "The US keeps the lead, but China owns the closest race in the top 10.\n\n• US leads 5766.8 to 1423.0, a margin of 4343.8.\n• GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.\n• Kimi K3 is 6th at 727.5; China places 2 models in the top 10.\n\nCan Kimi K3 break into the top 5 next?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #ModelRankings",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-10-24T03:41:45.702005+00:00"
 }

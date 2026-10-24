@@ -126,13 +126,13 @@
     },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "cached_at": "2026-10-24T03:36:58.139789+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor independent mini-swe-agent run, max effort, Pass@1; 500-step, two-hour, three-pass configuration. Result publication date is not displayed.",
+      "notes": "Independent Mercor run using mini-swe-agent at max effort; pass@1, reported with ±7.7 percentage points. The tracker does not publish an individual-result date.",
       "score": "59.9%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/"
+      "source_url": "https://www.deepswe.dev/"
     },
     "GPQA": {
       "benchmark": "GPQA",
@@ -1372,10 +1372,10 @@
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-22T03:37:59.261683+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-24T03:36:58.139789+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Vals AI reports Gemini 4 Argon at 57.68% with the Terminus 2 harness; its methodology specifies pass@1. The Vals model update records an evaluation publication date of September 30, 2026, with reasoning effort high.",
+      "notes": "Vals row for Gemini 4 Argon using the Terminus 2 harness; pass@1. Individual-result publication date unknown.",
       "score": "57.7%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
