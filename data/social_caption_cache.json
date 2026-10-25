@@ -823,5 +823,23 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-25T03:49:03+00:00|biggest_mover": {
+    "hook": "Gemini 4 Argon made the day\u2019s biggest move: 5 places.",
+    "bullets": [
+      "US leads the scoreboard 5878.27 to 1423.0.",
+      "The US-CN margin stands at 4455.3 points.",
+      "US models hold 8 of the top 10 spots; China holds 2."
+    ],
+    "question": "Is a 5-place jump enough to change your model shortlist?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChinaAI",
+      "#AIModels",
+      "#Gemini4Argon",
+      "#ModelRankings",
+      "#AIBenchmark"
+    ]
   }
 }

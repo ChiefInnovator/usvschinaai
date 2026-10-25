@@ -1,64 +1,32 @@
 {
-  "retrievedAt": "2026-10-24",
-  "modelsChecked": 282,
-  "sourcesChecked": 292,
-  "findings": 1032,
+  "retrievedAt": "2026-10-25",
+  "modelsChecked": 289,
+  "sourcesChecked": 299,
+  "findings": 1136,
   "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:MiniMax M2",
+      "source": "llm-stats:Gemini 2.5 Pro",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:ERNIE 4.5",
+      "source": "llm-stats:GPT-5.2 Codex",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Qwen3.5-35B-A3B",
+      "source": "llm-stats:DeepSeek-V4-Pro-Max",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:MiniMax M2.7",
+      "source": "llm-stats:DeepSeek-V4-Flash-0731",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:GPT-5.2 Pro",
+      "source": "llm-stats:DeepSeek-V4-Flash-Vision-Exp",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Hy3",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Seed 2.1 Pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3.8 Flash",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3.8-27B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:DeepSeek-V4.1-Flash",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Ember-1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Gemini 3.8 Flash Cyber",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.6 Cyber",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:LFM2.5-2.6B",
+      "source": "llm-stats:Gemini 4 Argon",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -66,68 +34,12 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Nova 2 Pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Grok-4.1 Fast Non-Reasoning",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Grok Code Fast 1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Gemma 3n E4B Instructed LiteRT Preview",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Llama 4 Scout",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Gemma 3 27B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3.8 Omni Flash",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:MiMo-V2.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Seed 2.0 Lite",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:LongCat-Flash-Lite",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Step3-VL-10B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:LongCat-Flash-Thinking-2601",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2-Instruct-0905",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GLM-4.5V",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Kimi K2 Base",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
       "source": "vals:lcb",
       "error": "Vals benchmark identity or payload changed: lcb"
+    },
+    {
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:terminal-bench-2-1",
@@ -136,10 +48,6 @@
     {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:swebench",

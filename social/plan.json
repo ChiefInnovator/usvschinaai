@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-24",
-  "timestamp": "2026-10-24T03:40:42+00:00",
-  "format": "head_to_head",
-  "palette": "newsprint",
-  "weight": 1,
+  "date": "2026-10-25",
+  "timestamp": "2026-10-25T03:49:03+00:00",
+  "format": "biggest_mover",
+  "palette": "graphite",
+  "weight": 2,
   "slides": [
-    "2026-10-24-1-head_to_head-newsprint.png",
-    "2026-10-24-2-leaderboard-newsprint.png"
+    "2026-10-25-1-biggest_mover-graphite.png",
+    "2026-10-25-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-24-1-head_to_head-newsprint.png",
-    "https://usvschina.ai/social/2026-10-24-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-10-25-1-biggest_mover-graphite.png",
+    "https://usvschina.ai/social/2026-10-25-2-leaderboard-graphite.png"
   ],
-  "caption": "The US keeps the lead, but China owns the closest race in the top 10.\n\n• US leads 5766.8 to 1423.0, a margin of 4343.8.\n• GPT-6 Astra ranks 1st at 900.2, ahead of GPT-5.6 Terra at 821.4.\n• Kimi K3 is 6th at 727.5; China places 2 models in the top 10.\n\nCan Kimi K3 break into the top 5 next?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #OpenAI #KimiK3 #ModelRankings",
+  "caption": "Gemini 4 Argon made the day’s biggest move: 5 places.\n\n• US leads the scoreboard 5878.27 to 1423.0.\n• The US-CN margin stands at 4455.3 points.\n• US models hold 8 of the top 10 spots; China holds 2.\n\nIs a 5-place jump enough to change your model shortlist?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #Gemini4Argon #ModelRankings #AIBenchmark",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-24T03:41:45.702005+00:00"
+  "generated_at": "2026-10-25T03:50:06.542800+00:00"
 }

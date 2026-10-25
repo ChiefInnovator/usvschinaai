@@ -37751,6 +37751,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "cd088ebc6e89a0aa356e": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "12c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "9.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -54555,6 +54574,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "4.9s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
+        },
+        "e79d65d235648bc8fc6b": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "46c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.9s",
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
@@ -101590,6 +101628,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "4be791c16594b6b10596": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "293c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.6s",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -111047,6 +111104,21 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-10-06"
           }
+        },
+        "humanitys-last-exam": {
+          "c5ea6a82d51af980": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 52.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+            "availableFrom": "2026-10-25",
+            "retrievedAt": "2026-10-25",
+            "configuration": "Artificial Analysis independently reports 52.9% for GPT-6.1 Sol at max reasoning effort on its text-only, no-tools HLE evaluation (2,158 questions); individual-result publication date is not displayed.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06"
+          }
         }
       }
     },
@@ -111220,6 +111292,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "—"
+        },
+        "0e853b6be4fcfdb150b0": {
+          "model": "Gemini 4 Argon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-argon",
+          "origin": "US",
+          "description": "Gemini 4 Argon by Google — released Sep 30, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-30",
+          "Model": "Gemini 4 Argon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -111340,6 +111431,21 @@
             "availableFrom": "2026-10-24",
             "retrievedAt": "2026-10-24",
             "configuration": "Vals row for Gemini 4 Argon using the Terminus 2 harness; pass@1. Individual-result publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-16"
+          }
+        },
+        "humanitys-last-exam": {
+          "df02d312f5c7f406": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 57.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-argon",
+            "availableFrom": "2026-10-25",
+            "retrievedAt": "2026-10-25",
+            "configuration": "Artificial Analysis independently evaluated Gemini 4 Argon at high reasoning effort; its displayed HLE result is 57%. Publication date of the individual result is not stated.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "high",
@@ -112301,6 +112407,21 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-22"
+          }
+        },
+        "arc-agi-2": {
+          "f07e2a593a32cd3c": {
+            "benchmark": "ARC-AGI-2",
+            "score": 23.5,
+            "unit": "percent",
+            "source": "https://arcprize.org/results/reflection-beam-1-0",
+            "availableFrom": "2026-10-25",
+            "retrievedAt": "2026-10-25",
+            "configuration": "ARC Prize Semi-Private result at XHigh reasoning; published October 16, 2026.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-25"
           }
         }
       }

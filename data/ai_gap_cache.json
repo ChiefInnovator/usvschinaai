@@ -1,5 +1,15 @@
 {
   "Beam 1.0": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Semi-Private result at XHigh reasoning; published October 16, 2026.",
+      "score": "23.5%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/reflection-beam-1-0"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-10-22T03:37:59.261683+00:00",
@@ -104,13 +114,9 @@
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
-      "confidence": "high",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1, 108 tasks, three trials, max effort, internal harness; safeguarded Fable configuration with disclosed Opus fallback. System card dated September 1, 2026.",
-      "score": "77.8%",
-      "source_type": "system_card",
-      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
+      "score": null
     }
   },
   "Claude Haiku 5.5": {
@@ -1108,6 +1114,12 @@
     }
   },
   "GPT-6.1 Sol": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "BrowseComp": {
       "benchmark": "BrowseComp",
       "cached_at": "2026-10-06T03:40:47.994022+00:00",
@@ -1117,6 +1129,12 @@
       "score": "95.4%",
       "source_type": "official_leaderboard",
       "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/"
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1140,23 +1158,31 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-17T03:35:02.937453+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently measured result; highest displayed GPT-6.1 Sol effort is max. The model was introduced by OpenAI on September 29, 2026.",
-      "score": "53.0%",
+      "notes": "Artificial Analysis independently reports 52.9% for GPT-6.1 Sol at max reasoning effort on its text-only, no-tools HLE evaluation (2,158 questions); individual-result publication date is not displayed.",
+      "score": "52.9%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-1-sol-vs-gpt-6-sol"
+      "source_url": "https://artificialanalysis.ai/models/gpt-6-1-sol"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-10-09T03:45:43.808678+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "MMLU-Pro Original overall accuracy, Mercor single-shot configuration, max reasoning effort. Independently published October 7, 2026.",
-      "score": "91.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarkregistry.org/benchmarks/mmlu-pro/original-mercor?result=98dc48a8a13fa5d78411b22ee1108b50e86c3d4a4b8b842c6938a77d6016f408&view=history"
+      "score": null
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
@@ -1168,25 +1194,29 @@
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
     },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-10-19T03:41:09.939226+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor open-source benchmark rerun, reported as GPT-6.1 Sol at max effort using mini-swe-agent with a 1,000-step/3-hour configuration. The cited leaderboard snapshot is dated October 15, 2026; publication date of the individual run is unknown.",
-      "score": "87.3%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://atlas.kevinhu.io/benchmarks/swe-bench-verified"
+      "score": null
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-17T03:35:02.937453+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Fidian direct run; GPT-6.1 Sol at max reasoning effort, TB-2.1 pass@1. The model was introduced by OpenAI on September 29, 2026.",
-      "score": "84.6%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://fidian.ai/leaderboard/"
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "Gemini 3.1 Pro": {
@@ -1282,13 +1312,13 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor’s BrowseComp leaderboard lists Gemini 3.8 Flash at High effort; page publication date is unknown.",
+      "notes": "Mercor APEX web-research harness at high effort: Pass@1 on 130 public BrowseComp tasks from 519 samples; record dated 2026-10-03 (publication date not independently verified).",
       "score": "83.1%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/sample-task/"
+      "source_url": "https://benchmarklist.com/models/google-gemini-3.8-flash/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1340,6 +1370,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/google-gemini-4-argon"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Mercor APEX BrowseComp web-research harness, high thinking; pass@1 on 130 public tasks (520 samples). Result publication recorded as 2026-10-03.",
+      "score": "90.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-10-12T03:52:58.338227+00:00",
@@ -1362,13 +1402,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-19T03:41:09.939226+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 57% for Gemini 4 Argon (High); formatted as 57.0%. This is its independently evaluated High-effort configuration. Publication date of the individual result is not independently stated.",
+      "notes": "Artificial Analysis independently evaluated Gemini 4 Argon at high reasoning effort; its displayed HLE result is 57%. Publication date of the individual result is not stated.",
       "score": "57.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/gemini-4-argon-vs-gpt-6-astra"
+      "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -1460,10 +1500,10 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-21T03:38:30.863112+00:00",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated the reasoning configuration; its HLE methodology uses 2,158 items, pass@1, and an equality-checker LLM.",
+      "notes": "Artificial Analysis independently reports 11.2% for its text-only Humanity’s Last Exam evaluation of Granite 4.2 30B. Publication date of this individual result was not independently verified.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
