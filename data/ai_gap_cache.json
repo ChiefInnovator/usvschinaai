@@ -130,6 +130,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/anthropic-claude-haiku-5-5"
     },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-26T03:43:03.464204+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1, reported at medium effort. The result record is dated October 19, 2026.",
+      "score": "51.6%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/model-data/anthropic-claude-haiku-5.5.json"
+    },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
       "cached_at": "2026-10-24T03:36:58.139789+00:00",
@@ -169,6 +179,16 @@
       "score": "45.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-26T03:43:03.464204+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Overall IFBench score, reported at medium effort. The result record is dated October 19, 2026.",
+      "score": "54.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/model-data/anthropic-claude-haiku-5.5.json"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -1972,15 +1992,25 @@
     }
   },
   "Muse Wonder": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-26T03:43:03.464204+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Full-release passRate; Muse Code harness, High effort. The operator leaderboard identifies the row as Muse Wonder 1.0; individual-result publication date is unknown.",
+      "score": "36.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "cached_at": "2026-10-26T03:43:03.464204+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 50% for Muse Wonder (Max); Max is the reported reasoning-effort configuration. The individual-result publication date is not stated.",
+      "notes": "Artificial Analysis reports Muse Wonder (Max) at 50%; individual-result publication date is unknown.",
       "score": "50.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/muse-wonder"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/muse-wonder-vs-kimi-k3"
     }
   },
   "Muse Wonder Full": {

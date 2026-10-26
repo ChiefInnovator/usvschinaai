@@ -1,18 +1,19 @@
 {
-  "date": "2026-10-25",
-  "timestamp": "2026-10-25T03:49:03+00:00",
-  "format": "biggest_mover",
-  "palette": "graphite",
-  "weight": 2,
+  "date": "2026-10-26",
+  "timestamp": "2026-10-26T03:47:36+00:00",
+  "format": "benchmark_day",
+  "palette": "newsprint",
+  "weight": 1,
   "slides": [
-    "2026-10-25-1-biggest_mover-graphite.png",
-    "2026-10-25-2-leaderboard-graphite.png"
+    "2026-10-26-1-benchmark_day-newsprint.png",
+    "2026-10-26-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-25-1-biggest_mover-graphite.png",
-    "https://usvschina.ai/social/2026-10-25-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-26-1-benchmark_day-newsprint.png",
+    "https://usvschina.ai/social/2026-10-26-2-leaderboard-newsprint.png"
   ],
-  "caption": "Gemini 4 Argon made the day’s biggest move: 5 places.\n\n• US leads the scoreboard 5878.27 to 1423.0.\n• The US-CN margin stands at 4455.3 points.\n• US models hold 8 of the top 10 spots; China holds 2.\n\nIs a 5-place jump enough to change your model shortlist?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #Gemini4Argon #ModelRankings #AIBenchmark",
+  "caption": "The US keeps the top spot, with China’s best model at rank 6.\n\n• US leads 5878.27 to 1423.0, a margin of 4455.3 points.\n• GPT-6 Astra holds rank 1 at 900.2 unified and 84.6 IQ.\n• Kimi K3 is China’s top model: rank 6, with 727.5 unified.\n\nIs Kimi K3 close enough at rank 6 to shift the next matchup?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #GPT6 #KimiK3 #ModelRankings",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-25T03:50:06.542800+00:00"
+  "generated_at": "2026-10-26T03:48:39.320144+00:00",
+  "benchmark": "GPQA"
 }

@@ -50,3 +50,4 @@
 {"date": "2026-10-23", "timestamp": "2026-10-23T03:44:41+00:00", "format": "price_vs_power", "palette": "midnight"}
 {"date": "2026-10-24", "timestamp": "2026-10-24T03:40:42+00:00", "format": "head_to_head", "palette": "newsprint"}
 {"date": "2026-10-25", "timestamp": "2026-10-25T03:49:03+00:00", "format": "biggest_mover", "palette": "graphite"}
+{"date": "2026-10-26", "timestamp": "2026-10-26T03:47:36+00:00", "format": "benchmark_day", "palette": "newsprint", "benchmark": "GPQA"}

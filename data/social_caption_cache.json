@@ -841,5 +841,23 @@
       "#ModelRankings",
       "#AIBenchmark"
     ]
+  },
+  "2026-10-26T03:47:36+00:00|benchmark_day": {
+    "hook": "The US keeps the top spot, with China\u2019s best model at rank 6.",
+    "bullets": [
+      "US leads 5878.27 to 1423.0, a margin of 4455.3 points.",
+      "GPT-6 Astra holds rank 1 at 900.2 unified and 84.6 IQ.",
+      "Kimi K3 is China\u2019s top model: rank 6, with 727.5 unified."
+    ],
+    "question": "Is Kimi K3 close enough at rank 6 to shift the next matchup?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#GPT6",
+      "#KimiK3",
+      "#ModelRankings"
+    ]
   }
 }

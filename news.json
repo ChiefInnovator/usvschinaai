@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-25T03:50:02.127348+00:00",
+  "lastUpdated": "2026-10-26T03:48:34.830808+00:00",
   "items": [
+    {
+      "id": "7158d81995179ed8",
+      "headline": "Chamath Palihapitiya Takes Dig at Claude as Economist Warns of AI Bubble: ‘AI Moves in Mysterious Ways’",
+      "url": "https://www.benzinga.com/markets/tech/26/10/62579263/chamath-palihapitiya-takes-dig-at-claude-as-economist-warns-of-ai-bubble-ai-moves-in-mysterious-ways",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-10-25 06:37:11",
+      "relevanceScore": 0.3
+    },
     {
       "id": "7f4a3c9094e4ac06",
       "headline": "DeepSeek’s V4.1-Flash-1017 Model Just Built An Exploit That Escapes Chrome’s Sandbox, As The AI-Driven Assault On...",
@@ -171,15 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-10-14 15:36:33",
       "relevanceScore": 0.46
-    },
-    {
-      "id": "f813be7335beeb50",
-      "headline": "Himax WiseEye Ultralow Power AI Adopted in Alibaba’s Latest Qwen Glasses",
-      "url": "https://nynewscast.com/himax-wiseeye-ultralow-power-ai-adopted-in-alibabas-latest-qwen-glasses-265543/",
-      "source": "Nynewscast",
-      "country": "CN",
-      "publishedAt": "2026-10-14 10:11:00",
-      "relevanceScore": 0.6
     }
   ]
 }
