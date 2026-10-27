@@ -54615,6 +54615,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "4f7c8abf81c04efd93fb": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "53c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.4s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -111915,6 +111934,21 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-23"
+          }
+        },
+        "humanitys-last-exam": {
+          "41d12edc8840ae1e": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 61.0,
+            "unit": "percent",
+            "source": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
+            "availableFrom": "2026-10-27",
+            "retrievedAt": "2026-10-27",
+            "configuration": "HLE with tools, xhigh reasoning effort; Meta reports use of the full 2,500-question dataset under its stated HLE protocol. Result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-27"
           }
         }
       }

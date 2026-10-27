@@ -859,5 +859,23 @@
       "#KimiK3",
       "#ModelRankings"
     ]
+  },
+  "2026-10-27T03:51:39+00:00|leaderboard": {
+    "hook": "The US holds the top five; China\u2019s best model sits at No. 6.",
+    "bullets": [
+      "US leads 5215.79 to 2054.74, a 3161.1-point margin.",
+      "GPT-6 Astra ranks No. 1 at 900.2, ahead of GPT-6.1 Sol at 832.5.",
+      "Kimi K3 leads China at No. 6; DeepSeek-V4.1-Flash debuts at No. 8."
+    ],
+    "question": "Does China\u2019s No. 6 finish signal a gap\u2014or a narrowing race?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#ModelLeaderboard",
+      "#KimiK3",
+      "#DeepSeek"
+    ]
   }
 }

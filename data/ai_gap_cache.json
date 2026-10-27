@@ -142,10 +142,10 @@
     },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
-      "cached_at": "2026-10-24T03:36:58.139789+00:00",
+      "cached_at": "2026-10-27T03:46:59.717021+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Independent Mercor run using mini-swe-agent at max effort; pass@1, reported with ±7.7 percentage points. The tracker does not publish an individual-result date.",
+      "notes": "Mercor independent mini-swe-agent run, max effort, Pass@1; the tracker records no publication date for the Mercor result. Anthropic’s system card did not publish a DeepSWE 1.1 score.",
       "score": "59.9%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://www.deepswe.dev/"
@@ -1392,13 +1392,13 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "cached_at": "2026-10-27T03:46:59.717021+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Mercor APEX BrowseComp web-research harness, high thinking; pass@1 on 130 public tasks (520 samples). Result publication recorded as 2026-10-03.",
+      "notes": "Verified BrowseComp public-tasks pass@1 result, 520 samples, high thinking; reported uncertainty is ±3.9 percentage points. Result row dated October 3, 2026. Gemini 4 Argon’s independently verified official publication date is September 30, 2026.",
       "score": "90.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+      "source_url": "https://benchmarklist.com/models/google-gemini-4-argon/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1972,13 +1972,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-22T03:37:59.261683+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-27T03:46:59.717021+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports 44% for Muse Spark Open (xhigh). This is an independently evaluated standard HLE result; the page does not state an individual-result publication date.",
-      "score": "44.0%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/muse-spark-open-vs-mimo-v2-6-flash"
+      "notes": "HLE with tools, xhigh reasoning effort; Meta reports use of the full 2,500-question dataset under its stated HLE protocol. Result publication date unknown.",
+      "score": "61.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
@@ -2004,13 +2004,13 @@
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-10-26T03:43:03.464204+00:00",
+      "cached_at": "2026-10-27T03:46:59.717021+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports Muse Wonder (Max) at 50%; individual-result publication date is unknown.",
+      "notes": "Artificial Analysis independently reports 50% for Muse Wonder (Max); its result table does not provide an individual-result publication date.",
       "score": "50.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/comparisons/muse-wonder-vs-kimi-k3"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/reflection-beam-vs-muse-wonder"
     }
   },
   "Muse Wonder Full": {

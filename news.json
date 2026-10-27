@@ -1,6 +1,51 @@
 {
-  "lastUpdated": "2026-10-26T03:48:34.830808+00:00",
+  "lastUpdated": "2026-10-27T03:52:24.317097+00:00",
   "items": [
+    {
+      "id": "d241e01e2e39f8ac",
+      "headline": "Anthropic files papers to sell shares to the public for first time",
+      "url": "https://www.mor-tv.com/article/anthropic-claude-files-to-sell-shares-publicly/74248591",
+      "source": "Mor Tv",
+      "country": "Both",
+      "publishedAt": "2026-10-26 15:38:00",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "e3e23899545ee6d1",
+      "headline": "The U.S. and China AI rivalry is intensifying with the formation of these AI blocs",
+      "url": "https://www.fastcompany.com/91629784/u-s-china-ai-rivalry-intensifying-formation-ai-blocs",
+      "source": "Fast Company",
+      "country": "Both",
+      "publishedAt": "2026-10-26 14:46:23",
+      "relevanceScore": 0.63
+    },
+    {
+      "id": "3084836856587bda",
+      "headline": "Anthropic files for an IPO that could top SpaceX’s record debut",
+      "url": "https://apnews.com/article/anthropic-ipo-shares-public-ca2f4c282bef3201a392e59e3df2300c",
+      "source": "Apnews",
+      "country": "US",
+      "publishedAt": "2026-10-26 13:07:32",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "302c3a62588b7eb0",
+      "headline": "Anthropic files for potentially the biggest IPO ever even as CEO warns of risk to humanity from AI",
+      "url": "https://kstp.com/ap-top-news/ap-top-news-business/anthropic-files-for-potentially-the-biggest-ipo-ever-even-as-ceo-warns-of-risk-to-humanity-from-ai/",
+      "source": "Kstp Television",
+      "country": "US",
+      "publishedAt": "2026-10-26 13:05:25",
+      "relevanceScore": 0.53
+    },
+    {
+      "id": "5f1b9193cb0b8213",
+      "headline": "Anthropic files for potentially the biggest IPO ever as CEO warns of risk to humanity from AI",
+      "url": "https://www.kob.com/ap-top-news/anthropic-files-for-potentially-the-biggest-ipo-ever-as-ceo-warns-of-risk-to-humanity-from-ai/",
+      "source": "Kob 4",
+      "country": "US",
+      "publishedAt": "2026-10-26 13:05:25",
+      "relevanceScore": 0.53
+    },
     {
       "id": "7158d81995179ed8",
       "headline": "Chamath Palihapitiya Takes Dig at Claude as Economist Warns of AI Bubble: ‘AI Moves in Mysterious Ways’",
@@ -135,51 +180,6 @@
       "country": "US",
       "publishedAt": "2026-10-17 14:39:09",
       "relevanceScore": 0.38
-    },
-    {
-      "id": "ae0952419cd62b63",
-      "headline": "Smuggling Nvidia Chips Into China Is About to Become a Crime in Taiwan",
-      "url": "https://247wallst.com/investing/2026/10/17/smuggling-nvidia-chips-into-china-is-about-to-become-a-crime-in-taiwan/",
-      "source": "24/7 Wall St",
-      "country": "CN",
-      "publishedAt": "2026-10-17 12:20:27",
-      "relevanceScore": 0.4
-    },
-    {
-      "id": "b19726c707ce6a89",
-      "headline": "China Now Requires An Export License For All New Large AI Models, Potentially Affecting Moonshot’s Unreleased Kimi...",
-      "url": "https://wccftech.com/china-now-requires-an-export-license-for-all-new-large-ai-models-potentially-affecting-moonshots-unreleased-kimi-k3-1-as-taiwan-criminalizes-smuggling-of-advanced-chips-to-china/",
-      "source": "Wccftech",
-      "country": "CN",
-      "publishedAt": "2026-10-16 14:17:02",
-      "relevanceScore": 0.48
-    },
-    {
-      "id": "ca7f8b83d682734b",
-      "headline": "Why Westchester businesses require federal regulation for AI | Opinion",
-      "url": "https://www.lohud.com/story/opinion/2026/10/16/westchester-ny-businesses-ai-regulation/92269316007/",
-      "source": "The Journal News",
-      "country": "Both",
-      "publishedAt": "2026-10-16 13:57:35",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "a683203051bee918",
-      "headline": "Meta Drops Its Biggest Open-Weight AI Model Yet — and Apple Helped It Run on Two Mac Studios",
-      "url": "https://thecherrycreeknews.com/meta-drops-its-biggest-open-weight-ai-model-yet-and-apple-helped-it-run-on-two-mac-studios/",
-      "source": "The Cherry Creek News",
-      "country": "US",
-      "publishedAt": "2026-10-16 13:02:18",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "168a1bc56d6e0749",
-      "headline": "Alibaba AI models cleared for use in Apple Intelligence in China just in time for the iPhone Duo launch",
-      "url": "https://www.engadget.com/2286617/alibaba-ai-models-cleared-for-use-in-apple-intelligence-in-china-just-in-time-for-the-iphone-duo-launch/",
-      "source": "Engadget",
-      "country": "CN",
-      "publishedAt": "2026-10-14 15:36:33",
-      "relevanceScore": 0.46
     }
   ]
 }
