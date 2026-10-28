@@ -54634,6 +54634,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "bc12bf3fa94914c3493c": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "48c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.4s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -55764,6 +55783,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "–",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
+        },
+        "a27cd19e90c793e4fd5d": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "19c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "7.5s",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
@@ -67502,6 +67540,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "5.5s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "6c5d2573f8ac6944ff39": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "87c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "5.8s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -101704,6 +101761,25 @@
           "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "4"
+        },
+        "bd209ba8a0338b51cb1d": {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "20",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "4"
         }
       },
       "benchmarks": {
@@ -111021,6 +111097,25 @@
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "771512a76c4999c976b7": {
+          "model": "GPT-6.1 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6.1-sol",
+          "origin": "US",
+          "description": "GPT-6.1 Sol by OpenAI — released Sep 29, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-29",
+          "Model": "GPT-6.1 Sol",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "10",
+          "Speed": "46c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "2.6s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -111676,6 +111771,21 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-26"
+          }
+        },
+        "humanitys-last-exam": {
+          "2eb088b63eb311cf": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 50.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-wonder",
+            "availableFrom": "2026-10-28",
+            "retrievedAt": "2026-10-28",
+            "configuration": "Artificial Analysis independently reports the Muse Wonder max-effort result; individual-result publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-28"
           }
         }
       }

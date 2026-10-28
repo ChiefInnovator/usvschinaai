@@ -877,5 +877,24 @@
       "#KimiK3",
       "#DeepSeek"
     ]
+  },
+  "2026-10-28T03:36:18+00:00|new_challenger": {
+    "hook": "GPT-5.5 Pro enters at No. 10 as the US holds an 8\u20132 top-10 edge.",
+    "bullets": [
+      "GPT-5.5 Pro debuts at No. 10 with a 546.7 unified score.",
+      "The US leads 5,878.27 to 1,423.0, a margin of 4,455.3.",
+      "Kimi K3 is China\u2019s first model at No. 6, scoring 727.5 across 18/18 coverage."
+    ],
+    "question": "Does GPT-5.5 Pro at No. 10 change the read on the US bench?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#LLM",
+      "#OpenAI",
+      "#GPT55Pro",
+      "#USvsChina",
+      "#AILeaderboard"
+    ]
   }
 }

@@ -1,16 +1,18 @@
 {
-  "date": "2026-10-27",
-  "timestamp": "2026-10-27T03:51:39+00:00",
-  "format": "leaderboard",
-  "palette": "midnight",
-  "weight": 0,
+  "date": "2026-10-28",
+  "timestamp": "2026-10-28T03:36:18+00:00",
+  "format": "new_challenger",
+  "palette": "graphite",
+  "weight": 3,
   "slides": [
-    "2026-10-27-1-leaderboard-midnight.png"
+    "2026-10-28-1-new_challenger-graphite.png",
+    "2026-10-28-2-leaderboard-graphite.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-27-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-10-28-1-new_challenger-graphite.png",
+    "https://usvschina.ai/social/2026-10-28-2-leaderboard-graphite.png"
   ],
-  "caption": "The US holds the top five; China’s best model sits at No. 6.\n\n• US leads 5215.79 to 2054.74, a 3161.1-point margin.\n• GPT-6 Astra ranks No. 1 at 900.2, ahead of GPT-6.1 Sol at 832.5.\n• Kimi K3 leads China at No. 6; DeepSeek-V4.1-Flash debuts at No. 8.\n\nDoes China’s No. 6 finish signal a gap—or a narrowing race?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #ModelLeaderboard #KimiK3 #DeepSeek",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-27T03:52:27.968238+00:00"
+  "caption": "GPT-5.5 Pro enters at No. 10 as the US holds an 8–2 top-10 edge.\n\n• GPT-5.5 Pro debuts at No. 10 with a 546.7 unified score.\n• The US leads 5,878.27 to 1,423.0, a margin of 4,455.3.\n• Kimi K3 is China’s first model at No. 6, scoring 727.5 across 18/18 coverage.\n\nDoes GPT-5.5 Pro at No. 10 change the read on the US bench?\n\n#AI #ArtificialIntelligence #AIModels #LLM #OpenAI #GPT55Pro #USvsChina #AILeaderboard",
+  "caption_source": "gpt-5.6-terra",
+  "generated_at": "2026-10-28T03:37:05.588682+00:00"
 }
