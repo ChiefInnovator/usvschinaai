@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-28T03:37:01.860534+00:00",
+  "lastUpdated": "2026-10-29T03:37:44.078474+00:00",
   "items": [
+    {
+      "id": "f9ca808f9cbcc63c",
+      "headline": "NVIDIA GeForce RTX 5080 Prices Soar Past $2,000 At US Retailers, As Newegg’s Own Inventory Runs Dry",
+      "url": "https://wccftech.com/nvidia-geforce-rtx-5080-prices-soar-past-2000-at-us-retailers-as-neweggs-own-inventory-runs-dry/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-10-28 13:30:31",
+      "relevanceScore": 0.24
+    },
     {
       "id": "d241e01e2e39f8ac",
       "headline": "Anthropic files papers to sell shares to the public for first time",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-10-17 20:30:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "9061281ad88ba8b4",
-      "headline": "Riding the AI Wave With A Disciplined Approach To AMD",
-      "url": "https://etf-alerts.com/riding-the-ai-wave-with-a-disciplined-approach-to-amd/",
-      "source": "Etf Alerts",
-      "country": "US",
-      "publishedAt": "2026-10-17 14:39:09",
-      "relevanceScore": 0.38
     }
   ]
 }

@@ -54653,6 +54653,25 @@
           "KnowledgeCutoff": "Feb. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "7271a115f1809e9a637f": {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "66c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.4s",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -67559,6 +67578,25 @@
           "License": "",
           "Parameters(B)": "-",
           "Latency": "5.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "ba6ec272b29456dde7ec": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -111073,6 +111111,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-30"
           }
+        },
+        "arc-agi-2": {
+          "52a0b5229802ed20": {
+            "benchmark": "ARC-AGI-2",
+            "score": 83.9,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-29",
+            "retrievedAt": "2026-10-29",
+            "configuration": "Epoch AI evaluation of claude-sonnet-5-5_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-30",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-sonnet-5-5_xhigh."
+          }
         }
       }
     },
@@ -112619,6 +112673,20 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-25"
+          },
+          "8d9f82923d24fbd1": {
+            "benchmark": "ARC-AGI-2",
+            "score": 23.5,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-29",
+            "retrievedAt": "2026-10-29",
+            "configuration": "Epoch AI evaluation of beam-1.0_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-29",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row beam-1.0_xhigh."
           }
         }
       }

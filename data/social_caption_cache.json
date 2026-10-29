@@ -896,5 +896,24 @@
       "#USvsChina",
       "#AILeaderboard"
     ]
+  },
+  "2026-10-29T03:36:45+00:00|price_vs_power": {
+    "hook": "The US leads the board, but China is closing the price gap.",
+    "bullets": [
+      "US leads 5215.79 to 2054.74, with 7 models in the top 10.",
+      "GPT-6 Astra ranks 1st at 900.2; Kimi K3 is China\u2019s best at 704.7.",
+      "GLM-5.3-Flash posts 108.3 value, while GPT-6 Luna leads at 112.9."
+    ],
+    "question": "Is the price advantage starting to outweigh the power gap?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#ModelBenchmarks",
+      "#AIEconomics",
+      "#DeepSeek",
+      "#OpenAI"
+    ]
   }
 }

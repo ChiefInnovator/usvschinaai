@@ -1,18 +1,18 @@
 {
-  "date": "2026-10-28",
-  "timestamp": "2026-10-28T03:36:18+00:00",
-  "format": "new_challenger",
-  "palette": "graphite",
-  "weight": 3,
+  "date": "2026-10-29",
+  "timestamp": "2026-10-29T03:36:45+00:00",
+  "format": "price_vs_power",
+  "palette": "midnight",
+  "weight": 1,
   "slides": [
-    "2026-10-28-1-new_challenger-graphite.png",
-    "2026-10-28-2-leaderboard-graphite.png"
+    "2026-10-29-1-price_vs_power-midnight.png",
+    "2026-10-29-2-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-28-1-new_challenger-graphite.png",
-    "https://usvschina.ai/social/2026-10-28-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-10-29-1-price_vs_power-midnight.png",
+    "https://usvschina.ai/social/2026-10-29-2-leaderboard-midnight.png"
   ],
-  "caption": "GPT-5.5 Pro enters at No. 10 as the US holds an 8–2 top-10 edge.\n\n• GPT-5.5 Pro debuts at No. 10 with a 546.7 unified score.\n• The US leads 5,878.27 to 1,423.0, a margin of 4,455.3.\n• Kimi K3 is China’s first model at No. 6, scoring 727.5 across 18/18 coverage.\n\nDoes GPT-5.5 Pro at No. 10 change the read on the US bench?\n\n#AI #ArtificialIntelligence #AIModels #LLM #OpenAI #GPT55Pro #USvsChina #AILeaderboard",
-  "caption_source": "gpt-5.6-terra",
-  "generated_at": "2026-10-28T03:37:05.588682+00:00"
+  "caption": "The US leads the board, but China is closing the price gap.\n\n• US leads 5215.79 to 2054.74, with 7 models in the top 10.\n• GPT-6 Astra ranks 1st at 900.2; Kimi K3 is China’s best at 704.7.\n• GLM-5.3-Flash posts 108.3 value, while GPT-6 Luna leads at 112.9.\n\nIs the price advantage starting to outweigh the power gap?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #ModelBenchmarks #AIEconomics #DeepSeek #OpenAI",
+  "caption_source": "gpt-5.6-luna",
+  "generated_at": "2026-10-29T03:37:48.573363+00:00"
 }
