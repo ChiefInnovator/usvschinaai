@@ -915,5 +915,23 @@
       "#DeepSeek",
       "#OpenAI"
     ]
+  },
+  "2026-10-30T03:36:35+00:00|head_to_head": {
+    "hook": "The US keeps the lead, but China owns the cheaper middle of the table.",
+    "bullets": [
+      "US leads 4903.86 to 2054.74, a margin of 2849.1.",
+      "GPT-6 Astra ranks 1st at 900.2; Kimi K3 is China\u2019s best at 704.7.",
+      "The top 10 split 7 US models to 3 Chinese models."
+    ],
+    "question": "Is China\u2019s value edge enough to narrow the scoreboard gap?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIBenchmarks",
+      "#KimiK3",
+      "#GPT6Astra",
+      "#AIModels"
+    ]
   }
 }

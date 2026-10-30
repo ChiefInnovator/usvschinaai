@@ -53,3 +53,4 @@
 {"ts": "2026-10-27T03:52:31.969919+00:00", "model": "gpt-5.6-luna", "format": "leaderboard", "input_tokens": 1086, "output_tokens": 160, "cached_tokens": 0, "usd": 0.000409}
 {"ts": "2026-10-28T03:37:10.708941+00:00", "model": "gpt-5.6-terra", "format": "new_challenger", "input_tokens": 1070, "output_tokens": 169, "cached_tokens": 0, "usd": 0.004168}
 {"ts": "2026-10-29T03:37:57.152486+00:00", "model": "gpt-5.6-luna", "format": "price_vs_power", "input_tokens": 1087, "output_tokens": 313, "cached_tokens": 0, "usd": 0.000593}
+{"ts": "2026-10-30T03:37:43.726616+00:00", "model": "gpt-5.6-luna", "format": "head_to_head", "input_tokens": 1071, "output_tokens": 144, "cached_tokens": 0, "usd": 0.000387}

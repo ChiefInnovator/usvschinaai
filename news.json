@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-29T03:37:44.078474+00:00",
+  "lastUpdated": "2026-10-30T03:37:33.733660+00:00",
   "items": [
+    {
+      "id": "0cc794b6f9fa424e",
+      "headline": "Nvidia CEO reportedly targeted by Chinese spy",
+      "url": "https://www.theguardian.com/technology/2026/oct/29/nvidia-ceo-targeted-chinese-spy",
+      "source": "The Guardian",
+      "country": "Both",
+      "publishedAt": "2026-10-29 15:23:48",
+      "relevanceScore": 0.24
+    },
     {
       "id": "f9ca808f9cbcc63c",
       "headline": "NVIDIA GeForce RTX 5080 Prices Soar Past $2,000 At US Retailers, As Newegg’s Own Inventory Runs Dry",
@@ -171,15 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-10-18 00:00:00",
       "relevanceScore": 0.6
-    },
-    {
-      "id": "f621c7f6b422d131",
-      "headline": "9 Cheaper Android Phones That Outshine The Google Pixel 11 Pro In Value",
-      "url": "https://www.slashgear.com/2286158/cheaper-android-phones-that-outshine-google-pixel-11-pro-value/",
-      "source": "Slashgear",
-      "country": "US",
-      "publishedAt": "2026-10-17 20:30:00",
-      "relevanceScore": 0.3
     }
   ]
 }
