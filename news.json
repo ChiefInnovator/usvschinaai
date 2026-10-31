@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-10-30T03:37:33.733660+00:00",
+  "lastUpdated": "2026-10-31T03:31:48.981940+00:00",
   "items": [
+    {
+      "id": "c75305816c5d8bb2",
+      "headline": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
+      "url": "https://www.securityweek.com/in-other-news-anthropic-breach-dispute-uefi-flaw-hits-most-servers-cloudflare-ai-data-leak/",
+      "source": "Securityweek",
+      "country": "US",
+      "publishedAt": "2026-10-30 14:41:35",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "ca2a5d0ac900589c",
+      "headline": "Nvidia Facing Questions As Suspected Chinese Intelligence Asset Got Close to Jensen Huang",
+      "url": "https://247wallst.com/investing/2026/10/30/nvidia-facing-questions-as-suspected-chinese-intelligence-asset-got-close-to-jensen-huang/",
+      "source": "24/7 Wall St",
+      "country": "CN",
+      "publishedAt": "2026-10-30 12:32:59",
+      "relevanceScore": 0.24
+    },
     {
       "id": "0cc794b6f9fa424e",
       "headline": "Nvidia CEO reportedly targeted by Chinese spy",
@@ -160,24 +178,6 @@
       "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/deepseek-ai-shakes-american-swagger-and-upends-assumptions-sn_5074709/",
       "source": "Shotoe Nigeria",
       "country": "Both",
-      "publishedAt": "2026-10-18 00:00:00",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "5d789c36d64faae3",
-      "headline": "Chinese AI App DeepSeek Soars in Popularity, Startling Rivals",
-      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/chinese-ai-app-deepseek-soars-in-popularity-startling-rivals-sn_5074335/",
-      "source": "Shotoe Nigeria",
-      "country": "CN",
-      "publishedAt": "2026-10-18 00:00:00",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "5045c10f99c4c1d3",
-      "headline": "DeepSeek's Popular AI App Is Explicitly Sending US Data to China",
-      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/deepseeks-popular-ai-app-is-explicitly-sending-us-data-to-china-sn_5075411/",
-      "source": "Shotoe Nigeria",
-      "country": "CN",
       "publishedAt": "2026-10-18 00:00:00",
       "relevanceScore": 0.6
     }

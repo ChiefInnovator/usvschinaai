@@ -37789,6 +37789,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "f132af32fb47f57e9771": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "13c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "6.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -112424,7 +112443,27 @@
     },
     "5a14beb8aa3e7cb2f50a": {
       "name": "DeepSeek-V4.1-Flash-1017",
-      "profiles": {},
+      "profiles": {
+        "b5c86192a914dc5e209f": {
+          "model": "DeepSeek-V4.1-Flash-1017",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-10-17",
+          "Model": "DeepSeek-V4.1-Flash-1017",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "1.2",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "763.2",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.3"
+        }
+      },
       "benchmarks": {
         "agents-last-exam": {
           "82b538ee94a7e6ca": {
@@ -112503,6 +112542,22 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-10-23",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row deepseek-v4.1-flash-1017_max."
+          }
+        },
+        "arc-agi-2": {
+          "7ee15af6af8c6ec6": {
+            "benchmark": "ARC-AGI-2",
+            "score": 78.1,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Epoch AI evaluation of deepseek-v4.1-flash-1017_max; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row deepseek-v4.1-flash-1017_max."
           }
         }
       }
@@ -112883,6 +112938,171 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-30"
+          }
+        }
+      }
+    },
+    "14129772743e34008531": {
+      "name": "Qwen3.8 Max (0902)",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "4646f4691a6b2870": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Epoch AI evaluation of qwen3.8-max-0902_xhigh; evaluation started 2026-09-02",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3.8-max-0902_xhigh."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "137aa00986e1c5bf": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 65.6,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Epoch AI evaluation of qwen3.8-max-0902_xhigh; evaluation started 2026-09-02",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.8-max-0902_xhigh."
+          }
+        }
+      }
+    },
+    "58b929989c4223f56401": {
+      "name": "Kimi K3.1 Pro",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "9e4c08694ed13c01": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 43.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "deepswe": {
+          "2ce55f9c6d812d8d": {
+            "benchmark": "DeepSWE",
+            "score": 75.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "browsecomp": {
+          "1338f1bad8c4b19f": {
+            "benchmark": "BrowseComp",
+            "score": 92.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "mmmu-pro": {
+          "90c43e735a20e9d8": {
+            "benchmark": "MMMU-Pro",
+            "score": 84.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "charxiv-r": {
+          "3fbfd421fdd6f21d": {
+            "benchmark": "CharXiv-R",
+            "score": 89.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "officeqa-pro": {
+          "5fc31cb7de46a6fa": {
+            "benchmark": "OfficeQA Pro",
+            "score": 67.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "gpqa": {
+          "79e5480072689ed2": {
+            "benchmark": "GPQA",
+            "score": 94.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          }
+        },
+        "humanitys-last-exam": {
+          "1c0ab96be3deb7a8": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 51.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3.1-pro",
+            "availableFrom": "2026-10-31",
+            "retrievedAt": "2026-10-31",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
           }
         }
       }

@@ -933,5 +933,23 @@
       "#GPT6Astra",
       "#AIModels"
     ]
+  },
+  "2026-10-31T03:30:49+00:00|benchmark_day": {
+    "hook": "The US leads China by 3961.2 points on October 31.",
+    "bullets": [
+      "GPT-6 Astra holds rank 1 with a 900.2 unified score.",
+      "Kimi K3 is China\u2019s top model at rank 5 with 704.7 points.",
+      "Gemini 4 Argon enters the top 10 at rank 10 with 440.8."
+    ],
+    "question": "Can China close the gap, or is the US lead widening?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#USvsChina",
+      "#AIModels",
+      "#GPT6Astra",
+      "#KimiK3",
+      "#AILeaderboard"
+    ]
   }
 }
