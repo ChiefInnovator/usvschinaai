@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-10-31T03:31:48.981940+00:00",
+  "lastUpdated": "2026-11-01T03:37:32.919906+00:00",
   "items": [
+    {
+      "id": "0223b6c6a01926cf",
+      "headline": "Your electricity bill is skyrocketing — and techbros are to blame",
+      "url": "https://www.alternet.org/alternet-exclusives/ai-data-centers-increasing-electricity-bills/",
+      "source": "Alternet.org",
+      "country": "Both",
+      "publishedAt": "2026-10-31 11:02:41",
+      "relevanceScore": 0.77
+    },
     {
       "id": "c75305816c5d8bb2",
       "headline": "In Other News: Anthropic Breach Dispute, UEFI Flaw Hits Most Servers, Cloudflare AI Data Leak",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-10-18 04:34:00",
       "relevanceScore": 0.53
-    },
-    {
-      "id": "3f3b78c3727825a5",
-      "headline": "DeepSeek AI shakes American swagger and upends assumptions",
-      "url": "https://ng.shotoe.com/deepseek-ai-app-st_562899/news/deepseek-ai-shakes-american-swagger-and-upends-assumptions-sn_5074709/",
-      "source": "Shotoe Nigeria",
-      "country": "Both",
-      "publishedAt": "2026-10-18 00:00:00",
-      "relevanceScore": 0.6
     }
   ]
 }

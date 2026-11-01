@@ -1,19 +1,18 @@
 {
-  "date": "2026-10-31",
-  "timestamp": "2026-10-31T03:30:49+00:00",
-  "format": "benchmark_day",
-  "palette": "graphite",
+  "date": "2026-11-01",
+  "timestamp": "2026-11-01T03:37:01+00:00",
+  "format": "trend_30d",
+  "palette": "newsprint",
   "weight": 1,
   "slides": [
-    "2026-10-31-1-benchmark_day-graphite.png",
-    "2026-10-31-2-leaderboard-graphite.png"
+    "2026-11-01-1-trend_30d-newsprint.png",
+    "2026-11-01-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-10-31-1-benchmark_day-graphite.png",
-    "https://usvschina.ai/social/2026-10-31-2-leaderboard-graphite.png"
+    "https://usvschina.ai/social/2026-11-01-1-trend_30d-newsprint.png",
+    "https://usvschina.ai/social/2026-11-01-2-leaderboard-newsprint.png"
   ],
-  "caption": "The US leads China by 3961.2 points on October 31.\n\n• GPT-6 Astra holds rank 1 with a 900.2 unified score.\n• Kimi K3 is China’s top model at rank 5 with 704.7 points.\n• Gemini 4 Argon enters the top 10 at rank 10 with 440.8.\n\nCan China close the gap, or is the US lead widening?\n\n#AI #ArtificialIntelligence #USvsChina #AIModels #GPT6Astra #KimiK3 #AILeaderboard",
+  "caption": "The US widened its 30-day lead while China held its ground.\n\n• US total: 5715.17, up from 5344.69 over 30 days.\n• China stayed at 1383.48, leaving a 4331.7-point gap.\n• US models took 8 of the top 10 spots; China took 2.\n\nIs the widening gap a real shift or a scoreboard artifact?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #OpenAI #MoonshotAI #AILeaderboard",
   "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-10-31T03:31:53.547935+00:00",
-  "benchmark": "GPQADiamond"
+  "generated_at": "2026-11-01T03:37:36.096080+00:00"
 }

@@ -112462,6 +112462,16 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.3"
+        },
+        "d66126796fc4927c7bbd": {
+          "model": "DeepSeek-V4.1-Flash-1017",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-10-17",
+          "Input$/M": "0.3",
+          "Output$/M": "1.2"
         }
       },
       "benchmarks": {
