@@ -13,11 +13,19 @@ module.exports = async ({ github, context, core }) => {
   const description = target === 'main'
     ? 'main accepts only same-repository develop pull requests'
     : 'develop accepts only same-repository feature pull requests';
-  await github.rest.repos.createCommitStatus({
+  try {
+    await github.rest.repos.createCommitStatus({
     owner, repo, sha: pr.head.sha,
     context: `Branch source policy / ${target}`,
     state: valid ? 'success' : 'failure', description,
     target_url: `https://github.com/${repository}/actions/runs/${context.runId}`,
-  });
+    });
+  } catch (error) {
+    // New fork SHAs may not exist in this repository. Fail closed; never leave
+    // an accepted source without its mandatory exact-head status.
+    if (valid) throw error;
+    core.setFailed(`${description}; status could not be posted for the disallowed source`);
+    return;
+  }
   if (!valid) core.setFailed(description);
 };

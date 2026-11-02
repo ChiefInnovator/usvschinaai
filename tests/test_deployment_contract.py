@@ -66,6 +66,13 @@ class DeploymentContractTests(unittest.TestCase):
         self.assertIn('"$CURRENT" = "$CANDIDATE_SHA"', self.delivery)
         self.assertIn("if: steps.current.outputs.eligible == 'true'", self.delivery)
 
+    def test_cache_invalidation_ignores_successful_preview_runs(self):
+        cache = (WORKFLOWS / 'bust-cache.yml').read_text()
+        self.assertIn("github.event.workflow_run.conclusion == 'success'", cache)
+        self.assertIn("github.event.workflow_run.head_branch == 'main'", cache)
+        self.assertIn("github.event.workflow_run.event == 'push'", cache)
+        self.assertIn("github.event.workflow_run.event == 'workflow_dispatch'", cache)
+
     def test_writers_prepare_and_verify_after_generators_before_commit(self):
         for filename, generator in (('daily-scrape.yml', 'python scripts/scrape_news.py'),
                                     ('backfill-gap-fill.yml', 'python scripts/rescore_history.py --write')):

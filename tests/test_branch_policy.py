@@ -13,18 +13,21 @@ class BranchPolicyTests(unittest.TestCase):
         const check = require('./.github/scripts/branch-policy.cjs');
         (async () => {
           const results = [];
-          for (const [base, head, sourceRepo] of JSON.parse(process.argv[1])) {
+          for (const [base, head, sourceRepo, statusError] of JSON.parse(process.argv[1])) {
             let status, failed = false;
             const github = {rest: {
               pulls: {get: async () => ({data: {
                 base: {ref: base, repo: {full_name: 'owner/repo'}},
                 head: {ref: head, sha: 'exact-head', repo: sourceRepo ? {full_name: sourceRepo} : null},
               }})},
-              repos: {createCommitStatus: async value => {status = value;}},
+              repos: {createCommitStatus: async value => {
+                if (statusError) throw new Error('SHA not found');
+                status = value;
+              }},
             }};
             await check({github, context: {repo: {owner:'owner',repo:'repo'},issue:{number:42},runId:7},
               core: {setFailed: () => {failed = true;}}});
-            results.push({status, failed});
+            results.push({status: status || null, failed});
           }
           console.log(JSON.stringify(results));
         })().catch(e => {console.error(e); process.exit(1);});
@@ -42,12 +45,18 @@ class BranchPolicyTests(unittest.TestCase):
             ('develop', '', 'owner/repo', False),
             ('develop', 'feature/work', 'fork/repo', False),
             ('develop', 'feature/work', None, False),
+            ('develop', 'feature/work', 'fork/repo', False, True),
         ]
-        result = subprocess.run(['node', '-e', harness, json.dumps([c[:3] for c in cases])],
+        inputs = [list(c[:3]) + [len(c) > 4 and c[4]] for c in cases]
+        result = subprocess.run(['node', '-e', harness, json.dumps(inputs)],
                                 cwd=ROOT, capture_output=True, text=True, check=True)
         for case, actual in zip(cases, json.loads(result.stdout), strict=True):
             with self.subTest(case=case):
-                base, _, _, valid = case
+                base, _, _, valid = case[:4]
+                if len(case) > 4 and case[4]:
+                    self.assertTrue(actual['failed'])
+                    self.assertIsNone(actual['status'])
+                    continue
                 self.assertEqual(actual['status']['state'], 'success' if valid else 'failure')
                 self.assertEqual(actual['failed'], not valid)
                 self.assertEqual(actual['status']['sha'], 'exact-head')
