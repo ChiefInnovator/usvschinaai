@@ -65,7 +65,7 @@ class BranchPolicyTests(unittest.TestCase):
     def test_gate_executes_only_trusted_base_and_writers_open_develop_prs(self):
         gate = (ROOT / '.github/workflows/branch-policy.yml').read_text()
         self.assertIn('pull_request_target:', gate)
-        self.assertIn('ref: ${{ github.event.pull_request.base.sha }}', gate)
+        self.assertIn('ref: refs/heads/${{ github.event.pull_request.base.ref }}', gate)
         self.assertIn('persist-credentials: false', gate)
         self.assertNotIn('secrets.', gate)
         self.assertNotIn('pull_request.head', gate)
