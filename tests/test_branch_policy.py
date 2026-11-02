@@ -72,6 +72,12 @@ class BranchPolicyTests(unittest.TestCase):
         for filename in ('daily-scrape.yml', 'backfill-gap-fill.yml'):
             text = (ROOT / '.github/workflows' / filename).read_text()
             self.assertIn('ref: develop', text)
+            self.assertIn('persist-credentials: false', text)
+            self.assertIn('contents: read', text)
+            self.assertNotIn('token: ${{ secrets.PAT_TOKEN }}', text)
+            self.assertIn('git fetch origin develop', text)
+            self.assertIn('"$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)"', text)
+            self.assertLess(text.index('git fetch origin develop'), text.index('git commit'))
             self.assertIn('--base develop', text)
             self.assertIn('git push origin "HEAD:refs/heads/$BRANCH"', text)
             self.assertNotIn('git pull', text)

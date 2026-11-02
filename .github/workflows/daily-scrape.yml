@@ -8,8 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
   
 concurrency:
   group: data-writer
@@ -26,7 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: develop
-          token: ${{ secrets.PAT_TOKEN }}
+          persist-credentials: false
           fetch-depth: 0
       
       - name: Set up Python
@@ -136,8 +135,6 @@ jobs:
         run: |
           git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
           git config --local user.name "${{ github.repository_owner }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       
       - name: Check for changes
         id: changes
@@ -167,6 +164,13 @@ jobs:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         if: steps.changes.outputs.has_changes == 'true'
         run: |
+          # Only this final step can access the write-capable token.
+          gh auth setup-git
+          git fetch origin develop
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            echo '::error::develop advanced during generation; rerun against its latest state.'
+            exit 1
+          fi
           git add models.json
           git add current.json 2>/dev/null || true
           git add data/scoring_revision.json data/site_summary.json data/publication.json
