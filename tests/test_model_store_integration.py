@@ -146,3 +146,71 @@ class StoreIntegrationTests(unittest.TestCase):
             expected=copy.deepcopy(data)
             replay(data,evidence)
             self.assertEqual(data,expected)
+
+
+class LegacyJournalSafetyTests(unittest.TestCase):
+    def transaction(self, root):
+        path = root / 'models.json'
+        history = store.save_data(fixture(), path)
+        return {'historyFile': 'models.json', 'catalog': store.read_catalog(root / 'data/model_catalog.json'),
+                'history': history, 'current': {**history, 'history': history['history'][:1]}}
+
+    def test_invalid_destinations_and_payloads_reject_before_first_write(self):
+        for invalid in ('AGENTS.md', '.env', 'arbitrary.json', 'shape', 'catalog', 'history', 'current', 'reference'):
+            with self.subTest(invalid=invalid), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                transaction = self.transaction(root)
+                if invalid in ('AGENTS.md', '.env', 'arbitrary.json'):
+                    transaction['historyFile'] = invalid
+                    (root / invalid).write_text('protected')
+                elif invalid == 'shape':
+                    transaction['extra'] = 'unknown'
+                elif invalid == 'catalog':
+                    transaction['catalog'] = []
+                elif invalid == 'history':
+                    transaction['history']['history'] = 'invalid'
+                elif invalid == 'current':
+                    transaction['current']['history'] = []
+                else:
+                    transaction['history']['history'][0]['teams']['US'][0]['profileId'] = 'missing'
+                pending = root / '.model-store-pending.json'
+                pending.write_text(json.dumps(transaction))
+                with patch.object(store, 'atomic_json') as write, self.assertRaises(ValueError):
+                    store.recover_pending(root)
+                write.assert_not_called()
+                self.assertTrue(pending.exists())
+                if invalid in ('AGENTS.md', '.env', 'arbitrary.json'):
+                    self.assertEqual((root / invalid).read_text(), 'protected')
+
+    def test_journal_destination_and_data_ancestor_symlinks_reject_before_first_write(self):
+        for linked in ('.model-store-pending.json', 'models.json', 'current.json', 'data/model_catalog.json', 'data'):
+            with self.subTest(linked=linked), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                transaction = self.transaction(root)
+                pending = root / '.model-store-pending.json'
+                pending.write_text(json.dumps(transaction))
+                target = root / linked
+                outside = root / 'outside'
+                if target.is_dir():
+                    target.rename(outside)
+                else:
+                    outside.write_bytes(target.read_bytes())
+                    target.unlink()
+                target.symlink_to(outside, target_is_directory=outside.is_dir())
+                with patch.object(store, 'atomic_json') as write, self.assertRaisesRegex(ValueError, 'symlink'):
+                    store.recover_pending(root)
+                write.assert_not_called()
+
+    def test_publication_rejects_legacy_path_overwrite_before_staging(self):
+        import prepare_publication
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            transaction = self.transaction(root)
+            transaction['historyFile'] = 'AGENTS.md'
+            (root / 'AGENTS.md').write_text('protected guidance')
+            (root / '.model-store-pending.json').write_text(json.dumps(transaction))
+            with patch.object(store, 'atomic_json') as write, patch.object(prepare_publication.subprocess, 'run') as stage, self.assertRaises(ValueError):
+                prepare_publication.prepare(root, write=True)
+            write.assert_not_called()
+            stage.assert_not_called()
+            self.assertEqual((root / 'AGENTS.md').read_text(), 'protected guidance')

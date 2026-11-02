@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Produce today's Instagram carousel from the day's data.
 
-Runs inside the daily scrape, which already has Playwright and the OpenAI key:
+Optional standalone AI-caption path. Routine daily publication instead uses
+prepare_publication.py and deterministic captions, with no caption API call.
+When invoked explicitly, this tool performs:
 
   1. social_formats.plan_today picks the format and palette (no repeats),
   2. social_render draws the cover slide and the leaderboard slide into social/,
-  3. social_caption writes the caption (gpt-5.6-luna, terra on high-weight days),
+  3. social_caption writes the caption (GPT-6 Luna, GPT-6.1 Terra on weighty days),
   4. social/plan.json records slides, URLs and caption for post_to_instagram.py,
   5. data/social_history.jsonl gets the day's record so tomorrow rotates away.
 

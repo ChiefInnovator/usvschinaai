@@ -4,6 +4,26 @@
   },
   "routes": [
     {
+      "route": "/data/publication.json",
+      "headers": { "cache-control": "no-cache, must-revalidate" }
+    },
+    {
+      "route": "/data/*.json",
+      "headers": { "cache-control": "no-cache, must-revalidate" }
+    },
+    {
+      "route": "/*.json",
+      "headers": { "cache-control": "no-cache, must-revalidate" }
+    },
+    {
+      "route": "/assets/*",
+      "headers": { "cache-control": "public, max-age=0, must-revalidate" }
+    },
+    {
+      "route": "/sw.js",
+      "headers": { "cache-control": "no-cache, must-revalidate" }
+    },
+    {
       "route": "/favicon-*.png",
       "headers": { "cache-control": "public, max-age=604800" }
     },

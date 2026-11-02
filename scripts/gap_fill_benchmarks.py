@@ -22,22 +22,18 @@ from typing import Any, Dict, FrozenSet, List, Optional, Tuple
 import requests
 
 from avg_iq_benchmarks import load_config, selected_value
+from ai_models import RESEARCH_MODEL_CHAIN
 
 
 # -----------------------------------------------------------------------------
 # Constants from the spec
 # -----------------------------------------------------------------------------
 
-# Default model chain — `gpt-5.6-terra` as the primary research model: a
-# generation newer than gpt-5.4 and cheaper ($2.00/$12.00 per M vs
-# $2.50/$15.00), and it supports everything this pass needs (Responses API,
-# the web_search tool, json_schema structured outputs, reasoning effort).
-# `gpt-5.6-sol` is the stronger fallback and `gpt-5.4` the last resort if the
-# 5.6 line isn't available on the account. Not using gpt-5.6-luna despite it
-# being ~10x cheaper: it is the weakest tier, and a hallucinated benchmark
-# score gets published as fact, which is worse than leaving the cell empty.
-# Override with AI_GAP_FILL_MODEL.
-DEFAULT_MODEL_CHAIN: List[str] = ["gpt-5.6-terra", "gpt-5.6-sol", "gpt-5.4"]
+# The balanced current model handles evidence research; the availability
+# fallback is cheaper, not a hidden upgrade to a more expensive flagship.
+# Preserve exact-model, protocol, citation and confidence validation regardless
+# of which model runs. Explicit AI_GAP_FILL_MODEL overrides remain supported.
+DEFAULT_MODEL_CHAIN: List[str] = list(RESEARCH_MODEL_CHAIN)
 
 # Reasoning tier for the Responses API. Research tasks don't need deep
 # chain-of-thought, so "low" minimizes hidden reasoning tokens which are
@@ -797,23 +793,14 @@ def run_gap_filling_pass(
     benchmark approach.
     """
     api_key = resolve_openai_key()
-    if not api_key:
-        print("\n[gap-fill] OPENAI_API_KEY not set; skipping gap-filling pass.")
-        print("           Set it in .env (local) or via the OPENAI_API_KEY GitHub Actions secret (CI).")
-        return 0
-
     print("\n--- Gap-Filling Pass ---")
-
     model = os.environ.get("AI_GAP_FILL_MODEL")
     if model:
         chain = [model] + [m for m in DEFAULT_MODEL_CHAIN if m != model]
     else:
         chain = DEFAULT_MODEL_CHAIN
-    model = discover_available_model(api_key, chain=chain)
-    if not model:
-        print("[gap-fill] no usable model in chain; skipping pass.")
-        return 0
-    print(f"[gap-fill] using model: {model}")
+    model = chain[0]
+    model_discovered = False
 
     candidates = build_candidates(combined_entries)
     print(f"[gap-fill] {len(candidates)} missing results across the eighteen configured Avg IQ benchmarks")
@@ -864,7 +851,7 @@ def run_gap_filling_pass(
                     # again for better evidence instead of suppressing retries.
                     fills_dropped_low_conf += 1
                 else:
-                    if _apply_fill(combined_entries, cand, cache_entry, cache_entry.get("llm_model", model)):
+                    if _apply_fill(combined_entries, cand, cache_entry, cache_entry.get("llm_model", model or chain[0])):
                         fills_accepted += 1
                     continue
             batch_benchmarks.append(cand.benchmark)
@@ -874,15 +861,29 @@ def run_gap_filling_pass(
             continue  # Every candidate in this group was cache-resolved
 
         # Checked here, not at the top of the loop, so cached fills still
-        # apply once the budget is spent (max_calls=0 = cache-only run).
+        # apply once live-call budgets are spent. New models have a separate cap.
         # New models spend their own budget first, then the general one.
-        if new_model and new_model_calls < new_model_max_calls:
-            new_model_calls += 1
-        elif api_calls - new_model_calls >= max_calls:
+        use_new_budget = new_model and new_model_calls < new_model_max_calls
+        if not use_new_budget and api_calls - new_model_calls >= max_calls:
             if not budget_exhausted:
                 print(f"[gap-fill] hit max_calls={max_calls}; applying cached fills only")
                 budget_exhausted = True
             continue
+
+        # Cached fills work without a key or a model-list request. Resolve
+        # access only once an uncached batch has a live-call budget.
+        if not api_key:
+            print('[gap-fill] No API key; retaining cached fills and leaving this batch unresolved')
+            continue
+        if not model_discovered:
+            model = discover_available_model(api_key, chain=chain)
+            model_discovered = True
+            if model:
+                print(f'[gap-fill] using model: {model}')
+        if not model:
+            continue
+        if use_new_budget:
+            new_model_calls += 1
 
         # Live LLM call for the batch
         if api_calls > 0:

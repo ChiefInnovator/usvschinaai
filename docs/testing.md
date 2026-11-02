@@ -1,14 +1,18 @@
 # Application tests and preconditions
 
-Run every test, including dependency freshness, with:
+Build the locally pinned frontend assets, then run the tests and publication checks:
 
 ```sh
+npm ci --ignore-scripts
+npm run build:assets
 .venv/bin/python -m playwright install chromium
 CHECK_LATEST=1 .venv/bin/python -m unittest discover -s tests -v
 .venv/bin/python scripts/validate_models.py
+.venv/bin/python scripts/prepare_publication.py
+npm run build
 ```
 
-On Linux CI, install Chromium system dependencies with `python -m playwright install --with-deps chromium`. The tests and backfill workflows now install the browser before running the suite. Browser tests use the real application HTML and Chart.js in Chromium, temporary deterministic roster data, and injected transport failures. They do not research models or publish posts. The two pinned frontend scripts are downloaded for browser testing; network failure is a test failure, not a skip.
+On Linux CI, install Chromium system dependencies with `python -m playwright install --with-deps chromium`. The tests and backfill workflows now install the browser before running the suite. Browser tests use the real application HTML and Chart.js in Chromium, temporary deterministic roster data, and injected transport failures. They do not research models or publish posts. Browser fixtures use the same compiled local CSS/vendor assets as the deployment build; no CDN download is required to render the interface.
 
 ## Coverage added
 
@@ -34,3 +38,27 @@ Evidence validation remains a separate semantic gate: a well-typed finding still
 A read-only full-history replay of 234 snapshots took about 14.0 seconds before this work and 8.4 seconds after indexing evidence by model, caching benchmark-name canonicalization, and avoiding expensive argument binding in the common positional-call path. Both measurements used the same retained data; all recalculated output was identical. These are local measurements, not CI timing thresholds.
 
 Regression tests require building the evidence index once per replay and verify repeatable outputs. The graph now uses already-calculated roster scores directly; a browser regression test verifies it does not hydrate the entire benchmark catalog when rendering the trend.
+
+
+## Publication, build and offline regressions
+
+`prepare_publication.py` independently replays all historical dates in scratch
+space and rejects stale canonical JSON, revision stamps, summary or artifact
+hashes. `--write` is the explicit preparation command after any algorithm change;
+it also stages image/social rendering before recoverable installation. Tests
+cover source-dependency mutations, missing/forged stamps, exact historical
+identity/pricing, interruption recovery and failure before installation.
+
+The homepage/archives tests verify summary-first loading, actual Chart.js output,
+390px rank/model/Unified visibility, keyboard sorting/filter state, Back/URL
+restoration, exact date/intraday lookup, evidence retry and mixed-generation
+rejection. Build tests verify public exclusions and shell integrity. Worker tests
+verify that an interrupted update cannot replace the previous complete offline
+cache. Deployment contract checks require successful verification and the same
+artifact throughout delivery. `BUILT_SITE_DIR=dist` enables checks against the
+actual local deployment artifact where supported by the test suite.
+
+The baseline before these changes was 788 tests, one skipped, no failures, and
+zero model-validation errors/warnings. Subsequent results are recorded in the
+Goldfish implementation report; a passing local run is not proof of live Azure
+or social publishing acceptance.

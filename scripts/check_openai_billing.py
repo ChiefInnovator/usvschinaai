@@ -23,15 +23,19 @@ import os
 import sys
 import urllib.error
 import urllib.request
+from ai_models import ECONOMY_MODEL, RESEARCH_MODEL
 
 RESPONSES_URL = "https://api.openai.com/v1/responses"
-DEFAULT_MODEL = "gpt-5.6-terra"
+DEFAULT_MODEL = ECONOMY_MODEL
 
 
 @preconditions(api_key='text', model='text')
 def check(api_key: str, model: str) -> tuple[bool, str]:
     """Smallest possible billable call — enough to prove quota exists."""
-    body = json.dumps({"model": model, "input": "ping", "max_output_tokens": 16}).encode()
+    payload = {"model": model, "input": "Reply OK", "max_output_tokens": 16, "store": False}
+    if model in (ECONOMY_MODEL, RESEARCH_MODEL):
+        payload['reasoning'] = {'effort': 'none'}
+    body = json.dumps(payload).encode()
     req = urllib.request.Request(
         RESPONSES_URL,
         data=body,

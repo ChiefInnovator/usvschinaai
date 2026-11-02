@@ -38,3 +38,29 @@ Model and profile references fail loudly if missing. Tests verify deduplication,
 The migration command is `python scripts/model_store.py`. It retains all existing snapshots, imports dated benchmark evidence, and conservatively records any additional retained benchmark values at their first observed snapshot date. Git is the rollback source; no legacy score archive is created.
 
 Writes use a durable `.model-store-pending.json` transaction. The next Python read finishes an interrupted catalog/history/current update and removes the journal. See [Testing and preconditions](testing.md) for recovery, integration, and caller-contract tests.
+
+
+## Scoring revisions and complete publication
+
+Every algorithm change requires a full rescore of all retained dates. Use
+`python scripts/prepare_publication.py --write`, then run the same command without
+`--write` to independently verify replay. Historical dates, roster/model/profile
+identity and prices are preserved; current and historical results share the new
+scoring revision. The revision inventories configuration, pins and transitive
+local scoring dependencies. It does not substitute for replay.
+
+`data/site_summary.json` is a generated lightweight public projection;
+`data/scoring_revision.json` records the algorithm fingerprint;
+`data/publication.json` certifies artifact hashes and the data generation.
+Preparation uses a complete copied script tree in a fresh subprocess so root
+constants and configuration caches cannot read the live checkout by accident.
+Scores, gap audit, summary and snapshot-time image/social outputs are staged and
+validated together before installation. It uses deterministic captions and never
+researches or posts remotely. Verification checks installed image digests rather
+than comparing PNG rendering across operating systems.
+
+`.publication-pending.json` is the durable installation intent. Recovery verifies
+paths and bytes, installs data/images, writes the publication manifest last and
+removes the journal. A failed render before installation leaves the old publication
+untouched. Do not deploy while either writer journal exists. Git remains the
+rollback source; restore a complete verified artifact for immediate site rollback.

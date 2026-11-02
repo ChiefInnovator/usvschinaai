@@ -164,3 +164,20 @@ selected benchmark. SWE-bench Verified is distinct from SWE-bench Pro, Lite and
 full SWE-bench. Both additions use the same allocation as the recent additions.
 
 Shared model records, dated roster references, and full-history recalculation are documented in [Model storage](model_storage.md).
+
+
+## Algorithm changes always rescore all history
+
+Every scoring algorithm change must replay every retained snapshot before
+publication, even if a changed rule happens to produce the same numeric results.
+This includes selection/weights, normalization, missing-result handling, Value
+and evidence applicability. Preserve historical roster membership, dates and
+price profiles. Historical results are recalculated under the current algorithm;
+they are not an immutable record of originally published scores.
+
+Use `python scripts/prepare_publication.py --write` to stage full replay and all
+dependent public outputs. Run `python scripts/prepare_publication.py` to verify
+against an independent replay before building/deploying. The scoring source
+fingerprint and publication generation prevent mixed-revision results from being
+published or combined by a browser. No formula or weight change is introduced by
+the interface/publication improvements themselves.

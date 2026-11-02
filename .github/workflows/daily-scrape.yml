@@ -13,6 +13,8 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    env:
+      AI_GAP_FILL_MODEL: gpt-6.1-terra
     
     steps:
       - name: Checkout repository
@@ -21,12 +23,18 @@ jobs:
           fetch-depth: 0
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.14'
           cache: 'pip'
           cache-dependency-path: 'scripts/requirements.txt'
       
+      - name: Set up frontend build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -49,7 +57,12 @@ jobs:
         # Report AI access problems without blocking API-independent source refresh.
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/check_openai_billing.py
+        run: python scripts/check_openai_billing.py --model gpt-6-luna
+
+      - name: Build pinned local frontend assets
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run build:assets
 
       - name: Install Playwright browsers
         run: |
@@ -86,21 +99,6 @@ jobs:
         run: |
           python scripts/scrape_news.py
 
-      - name: Generate OG and IG images
-        continue-on-error: true
-        run: |
-          python scripts/generate_og_image.py
-
-      # Today's Instagram carousel: format + palette rotation, two slides in
-      # social/, caption (luna; terra on high-weight days), social/plan.json.
-      # post_to_instagram.py refuses to post without today's plan.
-      - name: Render social slides and caption
-        continue-on-error: true
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          python scripts/social_publish.py
-
       - name: Update sitemap lastmod dates
         run: |
           TODAY=$(date -u +'%Y-%m-%d')
@@ -120,6 +118,12 @@ jobs:
               f.write(content)
           print(f'Updated sitemap lastmod to {today}')
           "
+
+      - name: Prepare and verify complete publication
+        # Snapshot-time deterministic rendering; never posts or researches.
+        run: |
+          python scripts/prepare_publication.py --write
+          python scripts/prepare_publication.py
 
       - name: Configure git
         run: |
@@ -149,18 +153,19 @@ jobs:
           git ls-files --others --exclude-standard | grep -q 'data/ai_gap_cache.json' && CHANGES=true
           git ls-files --others --exclude-standard | grep -q 'data/ai_fill_history.jsonl' && CHANGES=true
           git status --porcelain social/ data/social_history.jsonl data/social_caption_cache.json data/social_cost.jsonl | grep -q . && CHANGES=true
-          echo "has_changes=$CHANGES" >> $GITHUB_OUTPUT
+          echo "has_changes=$CHANGES" >> "$GITHUB_OUTPUT"
 
       - name: Commit and push changes
         if: steps.changes.outputs.has_changes == 'true'
         run: |
           git add models.json
           git add current.json 2>/dev/null || true
+          git add data/scoring_revision.json data/site_summary.json data/publication.json
           git add news.json 2>/dev/null || true
           git add og-image.png 2>/dev/null || true
           git add ig-image.png 2>/dev/null || true
           git add sitemap.xml 2>/dev/null || true
-          git add *.html 2>/dev/null || true
+          git add -- *.html 2>/dev/null || true
           # AI gap-fill cache + audit log are committed so the next run benefits
           # from prior verified positive responses and the
           # audit history is visible in git log.

@@ -1,0 +1,5408 @@
+{
+  "schemaVersion": 1,
+  "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+  "generationId": "5af9861d1b948c01a9fd51383e95fe75d314e3411a6f2a638949bb973498db1e",
+  "catalogFingerprint": "26b7a358ee566fc7ceca2008d576e06bca35773300adce97f34ac98b6f5d8eb4",
+  "metadata": {
+    "title": "US vs CHINA AI",
+    "footerText": "Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.",
+    "avgIqBenchmarks": [
+      "Toolathlon",
+      "Agents’ Last Exam",
+      "DeepSWE",
+      "DeepSWE 1.1",
+      "LiveCodeBench v6",
+      "Terminal-Bench 2.1",
+      "BrowseComp",
+      "MMMU-Pro",
+      "CharXiv-R",
+      "ARC-AGI-2",
+      "OfficeQA Pro",
+      "IFBench",
+      "GPQA Diamond",
+      "FrontierMath — Tiers 1–3 v2",
+      "GPQA",
+      "MMLU-Pro",
+      "Humanity’s Last Exam",
+      "SWE-bench Verified"
+    ]
+  },
+  "teams": {
+    "usa": {
+      "id": "usa",
+      "name": "TEAM USA",
+      "flag": "🇺🇸",
+      "description": "The Frontier Artisans",
+      "badge": "OVERALL WINNER",
+      "color": "blue"
+    },
+    "china": {
+      "id": "china",
+      "name": "TEAM CHINA",
+      "flag": "🇨🇳",
+      "description": "The Scaling Giants",
+      "badge": "RUNNER UP",
+      "color": "red"
+    }
+  },
+  "columns": [
+    {
+      "key": "rank",
+      "label": "Rank"
+    },
+    {
+      "key": "name",
+      "label": "Model Name"
+    },
+    {
+      "key": "iq",
+      "label": "IQ Index"
+    },
+    {
+      "key": "value",
+      "label": "Value Index"
+    },
+    {
+      "key": "unified",
+      "label": "Unified Power Score"
+    }
+  ],
+  "benchmarks": [
+    {
+      "id": "toolathlon",
+      "name": "Toolathlon",
+      "column": "Toolathlon",
+      "weight": 0.3889514915125296
+    },
+    {
+      "id": "agents-last-exam",
+      "name": "Agents’ Last Exam",
+      "column": "Agents'LastExam",
+      "weight": 1.4
+    },
+    {
+      "id": "deepswe",
+      "name": "DeepSWE",
+      "column": "DeepSWE",
+      "weight": 0.16669349636251266
+    },
+    {
+      "id": "deepswe-1.1",
+      "name": "DeepSWE 1.1",
+      "column": "DeepSWE1.1",
+      "weight": 13.65464714295311
+    },
+    {
+      "id": "livecodebench-v6",
+      "name": "LiveCodeBench v6",
+      "column": "LiveCodeBenchv6",
+      "weight": 0.8939466115103816
+    },
+    {
+      "id": "terminal-bench-2.1",
+      "name": "Terminal-Bench 2.1",
+      "column": "Terminal-Bench2.1",
+      "weight": 2.0
+    },
+    {
+      "id": "browsecomp",
+      "name": "BrowseComp",
+      "column": "BrowseComp",
+      "weight": 2.0
+    },
+    {
+      "id": "mmmu-pro",
+      "name": "MMMU-Pro",
+      "column": "MMMU-Pro",
+      "weight": 1.8
+    },
+    {
+      "id": "charxiv-r",
+      "name": "CharXiv-R",
+      "column": "CharXiv-R",
+      "weight": 0.19447574575626503
+    },
+    {
+      "id": "arc-agi-2",
+      "name": "ARC-AGI-2",
+      "column": "ARC-AGI-2",
+      "weight": 16.303557299280293
+    },
+    {
+      "id": "officeqa-pro",
+      "name": "OfficeQA Pro",
+      "column": "OfficeQAPro",
+      "weight": 0.1
+    },
+    {
+      "id": "ifbench",
+      "name": "IFBench",
+      "column": "IFBench",
+      "weight": 0.222257995150017
+    },
+    {
+      "id": "gpqa-diamond",
+      "name": "GPQA Diamond",
+      "column": "GPQADiamond",
+      "weight": 17.080453270838543
+    },
+    {
+      "id": "frontiermath-1-3-v2",
+      "name": "FrontierMath — Tiers 1–3 v2",
+      "column": "FrontierMathTiers1–3v2",
+      "weight": 16.195809437265375
+    },
+    {
+      "id": "gpqa",
+      "name": "GPQA",
+      "column": "GPQA",
+      "weight": 15.749047847812134
+    },
+    {
+      "id": "mmlu-pro",
+      "name": "MMLU-Pro",
+      "column": "MMLU-Pro",
+      "weight": 0.9127133196960582
+    },
+    {
+      "id": "humanitys-last-exam",
+      "name": "Humanity’s Last Exam",
+      "column": "Humanity’sLastExam",
+      "weight": 10.687446341862787
+    },
+    {
+      "id": "swe-bench-verified",
+      "name": "SWE-bench Verified",
+      "column": "SWE-benchVerified",
+      "weight": 0.25
+    }
+  ],
+  "current": {
+    "timestamp": "2026-09-26T04:45:01+00:00",
+    "scoring": {
+      "version": 4,
+      "avgIqWeights": {
+        "Toolathlon": 0.003889514915125296,
+        "Agents'LastExam": 0.013999999999999999,
+        "DeepSWE": 0.0016669349636251266,
+        "DeepSWE1.1": 0.1365464714295311,
+        "LiveCodeBenchv6": 0.008939466115103815,
+        "Terminal-Bench2.1": 0.02,
+        "BrowseComp": 0.02,
+        "MMMU-Pro": 0.018000000000000002,
+        "CharXiv-R": 0.0019447574575626502,
+        "ARC-AGI-2": 0.1630355729928029,
+        "OfficeQAPro": 0.001,
+        "IFBench": 0.00222257995150017,
+        "GPQADiamond": 0.17080453270838544,
+        "FrontierMathTiers1–3v2": 0.16195809437265374,
+        "GPQA": 0.15749047847812134,
+        "MMLU-Pro": 0.009127133196960582,
+        "Humanity’sLastExam": 0.10687446341862787,
+        "SWE-benchVerified": 0.0025
+      },
+      "qualified": [
+        "ARC-AGI-2",
+        "Agents'LastExam",
+        "BrowseComp",
+        "CharXiv-R",
+        "DeepSWE",
+        "DeepSWE1.1",
+        "FrontierMathTiers1–3v2",
+        "GPQA",
+        "GPQADiamond",
+        "Humanity’sLastExam",
+        "IFBench",
+        "LiveCodeBenchv6",
+        "MMLU-Pro",
+        "MMMU-Pro",
+        "OfficeQAPro",
+        "SWE-benchVerified",
+        "Terminal-Bench2.1",
+        "Toolathlon"
+      ],
+      "qualifiedMinReports": 0,
+      "bounds": {
+        "minAvgIq": 38.83,
+        "maxAvgIq": 84.61,
+        "minValue": 1.08,
+        "maxValue": 143.82
+      },
+      "benchmarkRanges": {
+        "ARC-AGI-2": [
+          0.0,
+          100.0
+        ],
+        "Agents'LastExam": [
+          0.0,
+          100.0
+        ],
+        "BrowseComp": [
+          0.0,
+          100.0
+        ],
+        "CharXiv-R": [
+          0.0,
+          100.0
+        ],
+        "DeepSWE": [
+          0.0,
+          100.0
+        ],
+        "DeepSWE1.1": [
+          0.0,
+          100.0
+        ],
+        "FrontierMathTiers1–3v2": [
+          0.0,
+          100.0
+        ],
+        "GPQA": [
+          0.0,
+          100.0
+        ],
+        "GPQADiamond": [
+          0.0,
+          100.0
+        ],
+        "Humanity’sLastExam": [
+          0.0,
+          100.0
+        ],
+        "IFBench": [
+          0.0,
+          100.0
+        ],
+        "LiveCodeBenchv6": [
+          0.0,
+          100.0
+        ],
+        "MMLU-Pro": [
+          0.0,
+          100.0
+        ],
+        "MMMU-Pro": [
+          0.0,
+          100.0
+        ],
+        "OfficeQAPro": [
+          0.0,
+          100.0
+        ],
+        "SWE-benchVerified": [
+          0.0,
+          100.0
+        ],
+        "Terminal-Bench2.1": [
+          0.0,
+          100.0
+        ],
+        "Toolathlon": [
+          0.0,
+          100.0
+        ]
+      },
+      "revision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4"
+    },
+    "teams": {
+      "US": [
+        {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "46c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "3.3s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10",
+          "modelId": "8ff2177f5f388b9c9474",
+          "profileId": "824946cb0dcfd0970ed9",
+          "value": 1.41,
+          "coverage": "11/18",
+          "avgIq": 84.61,
+          "unified": 900.2,
+          "provisional": false
+        },
+        {
+          "model": "GPT-5.6 Terra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "origin": "US",
+          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Terra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "12",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "2",
+          "modelId": "3e8493d70f3b80a11cf5",
+          "profileId": "0c8fa6f3b629a6df3e66",
+          "value": 5.73,
+          "coverage": "16/18",
+          "avgIq": 80.28,
+          "unified": 818.11,
+          "provisional": false
+        },
+        {
+          "model": "GPT-5.6 Sol",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "origin": "US",
+          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-09",
+          "Model": "GPT-5.6 Sol",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "30",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Feb. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "5",
+          "modelId": "1b3752879df84503751c",
+          "profileId": "bcc8c5fd343267c3306e",
+          "value": 2.25,
+          "coverage": "16/18",
+          "avgIq": 78.85,
+          "unified": 787.56,
+          "provisional": false
+        },
+        {
+          "model": "GPT-5.5 Pro",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.5-pro",
+          "origin": "US",
+          "description": "GPT-5.5 Pro by OpenAI — released Apr 23, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-04-23",
+          "Model": "GPT-5.5 Pro",
+          "Country": "🇺🇸",
+          "Context": "-",
+          "Output$/M": "—",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes",
+          "Input$/M": "—",
+          "modelId": "1fbd36e112c0244fe56a",
+          "profileId": "0d2c1799f41663b5d7a7",
+          "value": 0.0,
+          "coverage": "6/18",
+          "avgIq": 66.64,
+          "unified": 546.73,
+          "provisional": false
+        },
+        {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "3c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "16.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10",
+          "modelId": "827d7fc31374fbdd49bc",
+          "profileId": "8ce05828c5760596c710",
+          "value": 1.08,
+          "coverage": "10/18",
+          "avgIq": 64.97,
+          "unified": 513.89,
+          "provisional": false
+        },
+        {
+          "model": "Gemini 3.1 Pro",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+          "origin": "US",
+          "description": "Gemini 3.1 Pro by Google — released Feb 19, 2026; $2.00/M input and $12.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-02-19",
+          "Model": "Gemini 3.1 Pro",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "12",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jan. 2025",
+          "Multimodal": "Yes",
+          "Input$/M": "2",
+          "modelId": "938ef1899e8197948b60",
+          "profileId": "f1bf0be572326d1bf94c",
+          "value": 4.55,
+          "coverage": "17/18",
+          "avgIq": 63.65,
+          "unified": 490.4,
+          "provisional": false
+        },
+        {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "155c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "14.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75",
+          "modelId": "e43da5e7a8e3d9626107",
+          "profileId": "0749c9090cea70cc8040",
+          "value": 13.84,
+          "coverage": "12/18",
+          "avgIq": 62.29,
+          "unified": 470.1,
+          "provisional": false
+        },
+        {
+          "model": "Claude Sonnet 5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-06-30",
+          "Model": "Claude Sonnet 5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "10",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "8.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2",
+          "modelId": "5d10ee934c56e4e34d57",
+          "profileId": "296cf1976bc489afacf9",
+          "value": 5.12,
+          "coverage": "16/18",
+          "avgIq": 61.39,
+          "unified": 446.3,
+          "provisional": false
+        },
+        {
+          "model": "Inkling-Small",
+          "organization": "Thinking Machines Lab",
+          "link": "https://llm-stats.com/models/inkling-small",
+          "origin": "US",
+          "description": "Inkling-Small by Thinking Machines Lab — released Jul 30, 2026; $0.300/M input, $0.060/M cached input, $1.20/M output; 524K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-07-30",
+          "Input$/M": "0.3",
+          "Output$/M": "1.2",
+          "modelId": "59edd73817997d6ccec9",
+          "profileId": "22142ca29a29b70df485",
+          "value": 35.4,
+          "coverage": "14/18",
+          "avgIq": 53.1,
+          "unified": 304.56,
+          "provisional": false
+        },
+        {
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
+          "origin": "US",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Input$/M": "—",
+          "Output$/M": "$20.00",
+          "modelId": "bf6872882b4e0722ae12",
+          "profileId": "4d5e312bd619ce7fa00f",
+          "value": 2.51,
+          "coverage": "7/18",
+          "avgIq": 50.29,
+          "unified": 226.38,
+          "provisional": false
+        }
+      ],
+      "CN": [
+        {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "4c/s",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "13.5s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85",
+          "modelId": "d33cd77526f9f2073554",
+          "profileId": "6f2481eb480e706befb0",
+          "value": 4.43,
+          "coverage": "18/18",
+          "avgIq": 75.72,
+          "unified": 727.53,
+          "provisional": false
+        },
+        {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "15c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "13.5s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15",
+          "modelId": "27c9865821933f9dafd1",
+          "profileId": "b48c83ed7e4a66490ac0",
+          "value": 91.78,
+          "coverage": "16/18",
+          "avgIq": 59.66,
+          "unified": 473.04,
+          "provisional": false
+        },
+        {
+          "model": "GLM-5.3",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-14",
+          "Model": "GLM-5.3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "4",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "753",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.2",
+          "modelId": "8c1207eb630867042536",
+          "profileId": "d231e829d5b3ca660002",
+          "value": 11.86,
+          "coverage": "12/18",
+          "avgIq": 61.66,
+          "unified": 456.32,
+          "provisional": false
+        },
+        {
+          "model": "Qwen3.8 Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-02",
+          "Model": "Qwen3.8 Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "4.951",
+          "Speed": "7c/s",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "8.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.65",
+          "modelId": "32d628655ac1f115b0dd",
+          "profileId": "c26dbd0e2d466fbc1ff2",
+          "value": 9.32,
+          "coverage": "14/18",
+          "avgIq": 61.51,
+          "unified": 451.72,
+          "provisional": false
+        },
+        {
+          "model": "DeepSeek-V4-Pro-Max",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-04-23",
+          "Model": "DeepSeek-V4-Pro-Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3",
+          "modelId": "088f3a563d79d06df736",
+          "profileId": "2a7dc530671c66bf7e64",
+          "value": 15.2,
+          "coverage": "14/18",
+          "avgIq": 59.29,
+          "unified": 412.18,
+          "provisional": false
+        },
+        {
+          "model": "DeepSeek-V4-Pro-0813",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-13",
+          "Model": "DeepSeek-V4-Pro-0813",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "2.6",
+          "Speed": "30c/s",
+          "License": "",
+          "Parameters(B)": "1600",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "1.3",
+          "modelId": "7cc8168d3be894837e46",
+          "profileId": "c5095c45ec7d04280b44",
+          "value": 14.73,
+          "coverage": "14/18",
+          "avgIq": 57.45,
+          "unified": 375.56,
+          "provisional": false
+        },
+        {
+          "model": "DeepSeek-V4.1-Flash",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-09-10",
+          "Model": "DeepSeek-V4.1-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.66",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "763.2",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.22",
+          "modelId": "61114fa803c3bbb1e2b2",
+          "profileId": "b185453d2fc158c0cb38",
+          "value": 54.94,
+          "coverage": "9/18",
+          "avgIq": 48.35,
+          "unified": 224.89,
+          "provisional": false
+        },
+        {
+          "model": "Qwen3.8 Flash",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8 Flash",
+          "Country": "🇨🇳",
+          "Context": "1M",
+          "Output$/M": "0.47",
+          "Speed": "3c/s",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "4.8s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15",
+          "modelId": "b56379bf82f1c28fab2e",
+          "profileId": "4a309a5e60c6d8b2c16e",
+          "value": 71.35,
+          "coverage": "10/18",
+          "avgIq": 44.24,
+          "unified": 155.5,
+          "provisional": false
+        },
+        {
+          "model": "Qwen3.8-Flash-Next",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-flash-next",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "Qwen3.8-Flash-Next",
+          "Country": "🇨🇳",
+          "Context": "-",
+          "Output$/M": "—",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "125",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "—",
+          "modelId": "00304d6b69ead9145b28",
+          "profileId": "476b97677896aa9820a7",
+          "value": 0.0,
+          "coverage": "12/18",
+          "avgIq": 47.5,
+          "unified": 170.38,
+          "provisional": false
+        },
+        {
+          "model": "DeepSeek-V4-Flash-Max",
+          "organization": "DeepSeek",
+          "link": "https://llm-stats.com/models/deepseek-v4-flash-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-04-23",
+          "Model": "DeepSeek-V4-Flash-Max",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.18",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "284",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "No",
+          "Input$/M": "0.09",
+          "modelId": "4ff999a7dc9b4c3f0e85",
+          "profileId": "258a1499ef494bf3fb98",
+          "value": 143.82,
+          "coverage": "10/18",
+          "avgIq": 38.83,
+          "unified": 100.02,
+          "provisional": false
+        }
+      ]
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-09-26T04:45:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4526.99,
+          "count": 7,
+          "avgIq": 71.61285714285714,
+          "avgValue": 4.122857142857143
+        },
+        "CN": {
+          "total": 1656.8899999999999,
+          "count": 3,
+          "avgIq": 65.67999999999999,
+          "avgValue": 36.02333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-26T03:35:11+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5372.98,
+          "count": 8,
+          "avgIq": 74.035,
+          "avgValue": 9.838750000000001
+        },
+        "CN": {
+          "total": 1148.92,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 62.315
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-25T03:37:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4195.19,
+          "count": 6,
+          "avgIq": 70.25666666666667,
+          "avgValue": 3.52
+        },
+        "CN": {
+          "total": 2595.67,
+          "count": 4,
+          "avgIq": 64.6375,
+          "avgValue": 38.1175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-24T03:36:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5372.98,
+          "count": 8,
+          "avgIq": 74.035,
+          "avgValue": 9.838750000000001
+        },
+        "CN": {
+          "total": 1148.92,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 62.315
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-23T03:46:07+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4348.51,
+          "count": 6,
+          "avgIq": 70.25666666666667,
+          "avgValue": 3.52
+        },
+        "CN": {
+          "total": 2736.84,
+          "count": 4,
+          "avgIq": 64.6375,
+          "avgValue": 38.1175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-22T03:48:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5379.87,
+          "count": 8,
+          "avgIq": 74.035,
+          "avgValue": 8.41375
+        },
+        "CN": {
+          "total": 1149.21,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-21T03:50:41+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5379.68,
+          "count": 8,
+          "avgIq": 74.03375,
+          "avgValue": 8.41375
+        },
+        "CN": {
+          "total": 1149.21,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-20T03:46:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5379.68,
+          "count": 8,
+          "avgIq": 74.03375,
+          "avgValue": 8.41375
+        },
+        "CN": {
+          "total": 1149.21,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-19T03:46:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5379.68,
+          "count": 8,
+          "avgIq": 74.03375,
+          "avgValue": 8.41375
+        },
+        "CN": {
+          "total": 1149.21,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-18T03:47:48+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5343.400000000001,
+          "count": 8,
+          "avgIq": 73.83125,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1149.21,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-17T03:51:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5348.16,
+          "count": 8,
+          "avgIq": 73.83125,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1151.0700000000002,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-16T03:51:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5348.16,
+          "count": 8,
+          "avgIq": 73.83125,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1151.0700000000002,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-15T03:50:12+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5347.73,
+          "count": 8,
+          "avgIq": 73.82875,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1151.0700000000002,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-14T03:53:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5347.73,
+          "count": 8,
+          "avgIq": 73.82875,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1151.0700000000002,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-13T03:48:23+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5343.69,
+          "count": 8,
+          "avgIq": 73.80625,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1151.0700000000002,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-12T03:46:46+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5338.27,
+          "count": 8,
+          "avgIq": 73.80625,
+          "avgValue": 8.39875
+        },
+        "CN": {
+          "total": 1105.52,
+          "count": 2,
+          "avgIq": 68.615,
+          "avgValue": 6.875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-11T03:51:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5256.63,
+          "count": 8,
+          "avgIq": 72.91125,
+          "avgValue": 9.03375
+        },
+        "CN": {
+          "total": 1119.35,
+          "count": 2,
+          "avgIq": 68.615,
+          "avgValue": 6.875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-10T12:06:52-04:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4372.68,
+          "count": 7,
+          "avgIq": 71.75571428571429,
+          "avgValue": 9.474285714285715
+        },
+        "CN": {
+          "total": 1393.9,
+          "count": 3,
+          "avgIq": 64.25,
+          "avgValue": 18.78
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-09T03:39:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4656.04,
+          "count": 6,
+          "avgIq": 73.41833333333334,
+          "avgValue": 10.318333333333333
+        },
+        "CN": {
+          "total": 2464.62,
+          "count": 4,
+          "avgIq": 57.7175,
+          "avgValue": 54.2725
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-08T03:39:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4659.66,
+          "count": 6,
+          "avgIq": 73.41833333333334,
+          "avgValue": 10.318333333333333
+        },
+        "CN": {
+          "total": 2467.47,
+          "count": 4,
+          "avgIq": 56.9775,
+          "avgValue": 64.355
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-07T10:35:00-04:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5164.639999999999,
+          "count": 7,
+          "avgIq": 70.88142857142857,
+          "avgValue": 9.334285714285715
+        },
+        "CN": {
+          "total": 1812.8400000000001,
+          "count": 3,
+          "avgIq": 64.25,
+          "avgValue": 18.76666666666667
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-07T03:40:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4946.69,
+          "count": 6,
+          "avgIq": 72.39833333333333,
+          "avgValue": 10.301666666666668
+        },
+        "CN": {
+          "total": 2650.3199999999997,
+          "count": 4,
+          "avgIq": 57.7175,
+          "avgValue": 48.5875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-06T03:38:36+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4946.69,
+          "count": 6,
+          "avgIq": 72.39833333333333,
+          "avgValue": 10.301666666666668
+        },
+        "CN": {
+          "total": 2650.3199999999997,
+          "count": 4,
+          "avgIq": 57.7175,
+          "avgValue": 48.5875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-05T10:50:28+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4514.47,
+          "count": 6,
+          "avgIq": 64.88666666666667,
+          "avgValue": 10.004999999999999
+        },
+        "CN": {
+          "total": 2653.12,
+          "count": 4,
+          "avgIq": 56.3575,
+          "avgValue": 44.762499999999996
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-05T03:36:52+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4514.47,
+          "count": 6,
+          "avgIq": 64.88666666666667,
+          "avgValue": 10.004999999999999
+        },
+        "CN": {
+          "total": 2653.12,
+          "count": 4,
+          "avgIq": 56.3575,
+          "avgValue": 44.762499999999996
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-04T09:31:36+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4514.47,
+          "count": 6,
+          "avgIq": 64.88666666666667,
+          "avgValue": 10.004999999999999
+        },
+        "CN": {
+          "total": 2653.12,
+          "count": 4,
+          "avgIq": 56.3575,
+          "avgValue": 44.762499999999996
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-04T05:10:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4598.16,
+          "count": 6,
+          "avgIq": 65.94666666666667,
+          "avgValue": 10.295
+        },
+        "CN": {
+          "total": 2653.12,
+          "count": 4,
+          "avgIq": 56.3575,
+          "avgValue": 44.762499999999996
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-04T03:37:05+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 2432.56,
+          "count": 4,
+          "avgIq": 53.072500000000005,
+          "avgValue": 2.4699999999999998
+        },
+        "CN": {
+          "total": 3865.79,
+          "count": 6,
+          "avgIq": 53.54333333333333,
+          "avgValue": 21.086666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-03T11:26:58+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4019.91,
+          "count": 5,
+          "avgIq": 68.726,
+          "avgValue": 12.352
+        },
+        "CN": {
+          "total": 3157.93,
+          "count": 5,
+          "avgIq": 55.074,
+          "avgValue": 23.75
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-03T11:16:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4979.28,
+          "count": 7,
+          "avgIq": 65.37,
+          "avgValue": 11.611428571428572
+        },
+        "CN": {
+          "total": 2000.29,
+          "count": 3,
+          "avgIq": 62.336666666666666,
+          "avgValue": 18.16
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-03T11:03:38+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3837.48,
+          "count": 5,
+          "avgIq": 68.726,
+          "avgValue": 12.352
+        },
+        "CN": {
+          "total": 2664.73,
+          "count": 5,
+          "avgIq": 55.074,
+          "avgValue": 23.75
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-03T10:46:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4019.91,
+          "count": 5,
+          "avgIq": 68.726,
+          "avgValue": 12.352
+        },
+        "CN": {
+          "total": 3157.93,
+          "count": 5,
+          "avgIq": 55.074,
+          "avgValue": 23.75
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-02T03:32:24+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3101.96,
+          "count": 4,
+          "avgIq": 67.0025,
+          "avgValue": 5.4075
+        },
+        "CN": {
+          "total": 3697.79,
+          "count": 6,
+          "avgIq": 53.406666666666666,
+          "avgValue": 21.086666666666666
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-01T03:34:11+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4735.08,
+          "count": 6,
+          "avgIq": 70.18333333333334,
+          "avgValue": 4.3933333333333335
+        },
+        "CN": {
+          "total": 2636.8900000000003,
+          "count": 4,
+          "avgIq": 57.197500000000005,
+          "avgValue": 29.6875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-31T03:33:25+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4735.08,
+          "count": 6,
+          "avgIq": 70.18333333333334,
+          "avgValue": 4.3933333333333335
+        },
+        "CN": {
+          "total": 2636.8900000000003,
+          "count": 4,
+          "avgIq": 57.197500000000005,
+          "avgValue": 29.6875
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-30T03:30:30+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5364.49,
+          "count": 7,
+          "avgIq": 68.68285714285715,
+          "avgValue": 4.831428571428572
+        },
+        "CN": {
+          "total": 2074.3199999999997,
+          "count": 3,
+          "avgIq": 62.336666666666666,
+          "avgValue": 18.16
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-29T11:27:11+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5364.49,
+          "count": 7,
+          "avgIq": 68.68285714285715,
+          "avgValue": 4.831428571428572
+        },
+        "CN": {
+          "total": 2074.3199999999997,
+          "count": 3,
+          "avgIq": 62.336666666666666,
+          "avgValue": 18.16
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-29T07:44:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4714.27,
+          "count": 6,
+          "avgIq": 70.18333333333334,
+          "avgValue": 4.3933333333333335
+        },
+        "CN": {
+          "total": 2626.05,
+          "count": 4,
+          "avgIq": 57.955,
+          "avgValue": 55.107499999999995
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-29T04:11:54+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4714.27,
+          "count": 6,
+          "avgIq": 70.18333333333334,
+          "avgValue": 4.3933333333333335
+        },
+        "CN": {
+          "total": 2626.05,
+          "count": 4,
+          "avgIq": 57.955,
+          "avgValue": 55.107499999999995
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-28T06:41:30+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4714.27,
+          "count": 6,
+          "avgIq": 70.18333333333334,
+          "avgValue": 4.3933333333333335
+        },
+        "CN": {
+          "total": 2623.88,
+          "count": 4,
+          "avgIq": 57.915,
+          "avgValue": 55.105
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-27T05:48:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.45,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.34,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-26T04:21:24+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.45,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.34,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-25T04:17:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-24T04:20:27+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-23T04:19:19+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-22T04:14:07+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-21T04:19:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-20T04:16:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-19T04:16:23+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-18T04:15:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-17T04:18:07+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5961.5,
+          "count": 8,
+          "avgIq": 68.9075,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-16T04:17:31+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5960.58,
+          "count": 8,
+          "avgIq": 68.9,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-15T04:17:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5960.58,
+          "count": 8,
+          "avgIq": 68.9,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-14T04:42:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5960.58,
+          "count": 8,
+          "avgIq": 68.9,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-13T04:42:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5960.58,
+          "count": 8,
+          "avgIq": 68.9,
+          "avgValue": 2.5975
+        },
+        "CN": {
+          "total": 1308.37,
+          "count": 2,
+          "avgIq": 62.785,
+          "avgValue": 7.234999999999999
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-12T04:42:35+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-11T04:36:58+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-10T04:40:41+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-09T04:35:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-08T04:31:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-07T04:56:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-06T05:08:30+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-05T05:07:04+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5705.1,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.67
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-04T05:07:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5700.2300000000005,
+          "count": 8,
+          "avgIq": 70.00750000000001,
+          "avgValue": 3.5375
+        },
+        "CN": {
+          "total": 1266.5700000000002,
+          "count": 2,
+          "avgIq": 66.38499999999999,
+          "avgValue": 2.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-03T05:11:25+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-02T05:10:04+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-01T05:09:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-31T05:10:28+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-30T05:03:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-29T05:07:47+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-28T05:06:26+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-27T05:13:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-26T05:10:46+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-25T05:06:24+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6126.28,
+          "count": 9,
+          "avgIq": 68.55000000000001,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 794.69,
+          "count": 1,
+          "avgIq": 73.74,
+          "avgValue": 4.1
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-24T05:07:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6124.8,
+          "count": 9,
+          "avgIq": 68.54222222222222,
+          "avgValue": 3.1444444444444444
+        },
+        "CN": {
+          "total": 793.22,
+          "count": 1,
+          "avgIq": 73.67,
+          "avgValue": 4.09
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-23T05:09:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5874.82,
+          "count": 9,
+          "avgIq": 67.23666666666666,
+          "avgValue": 3.0999999999999996
+        },
+        "CN": {
+          "total": 793.55,
+          "count": 1,
+          "avgIq": 73.67,
+          "avgValue": 4.09
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-22T05:08:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5874.82,
+          "count": 9,
+          "avgIq": 67.23666666666666,
+          "avgValue": 3.0999999999999996
+        },
+        "CN": {
+          "total": 793.55,
+          "count": 1,
+          "avgIq": 73.67,
+          "avgValue": 4.09
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-21T05:07:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5874.82,
+          "count": 9,
+          "avgIq": 67.23666666666666,
+          "avgValue": 3.0999999999999996
+        },
+        "CN": {
+          "total": 793.55,
+          "count": 1,
+          "avgIq": 73.67,
+          "avgValue": 4.09
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-20T05:12:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5848.02,
+          "count": 8,
+          "avgIq": 65.59875,
+          "avgValue": 4.025
+        },
+        "CN": {
+          "total": 1080.1599999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-19T05:10:53+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5977.62,
+          "count": 8,
+          "avgIq": 65.39,
+          "avgValue": 4.01875
+        },
+        "CN": {
+          "total": 1105.6100000000001,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-18T05:01:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5977.62,
+          "count": 8,
+          "avgIq": 65.39,
+          "avgValue": 4.01875
+        },
+        "CN": {
+          "total": 1428.88,
+          "count": 2,
+          "avgIq": 61.22,
+          "avgValue": 7.795
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-17T05:05:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5978.3099999999995,
+          "count": 8,
+          "avgIq": 65.38875,
+          "avgValue": 4.01875
+        },
+        "CN": {
+          "total": 1105.69,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-16T05:06:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5720.75,
+          "count": 8,
+          "avgIq": 63.136250000000004,
+          "avgValue": 4.15125
+        },
+        "CN": {
+          "total": 1105.69,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-15T05:02:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-14T05:02:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5720.75,
+          "count": 8,
+          "avgIq": 63.136250000000004,
+          "avgValue": 4.15125
+        },
+        "CN": {
+          "total": 1105.69,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-13T05:11:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-12T05:10:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-11T05:06:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-10T05:21:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-09T05:20:36+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-08T05:08:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-07T05:21:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-06T05:30:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-05T05:25:16+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-04T05:12:46+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-03T05:16:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-02T05:25:26+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5034.57,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1647.62,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-07-01T05:35:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4980.71,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1640.67,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-30T05:26:31+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4980.71,
+          "count": 7,
+          "avgIq": 63.26285714285715,
+          "avgValue": 4.448571428571428
+        },
+        "CN": {
+          "total": 1640.67,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-29T05:38:44+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4955.26,
+          "count": 7,
+          "avgIq": 63.02428571428572,
+          "avgValue": 4.435714285714286
+        },
+        "CN": {
+          "total": 1640.67,
+          "count": 3,
+          "avgIq": 48.31333333333333,
+          "avgValue": 11.076666666666668
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-28T05:33:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5332.87,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 970.35,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-27T05:22:37+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5332.87,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 970.35,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-26T05:29:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1033.48,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 10.620000000000001
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-25T05:27:03+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-24T05:28:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-23T05:25:29+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-22T05:40:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-21T05:39:58+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-20T05:29:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-19T05:40:05+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5480.8099999999995,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1086.6399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-18T05:38:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5480.8099999999995,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1086.6399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-17T05:39:34+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5480.8099999999995,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1086.6399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-16T05:40:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-15T05:40:41+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5404.76,
+          "count": 8,
+          "avgIq": 61.4525,
+          "avgValue": 4.48125
+        },
+        "CN": {
+          "total": 1026.1399999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-14T05:39:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5945.05,
+          "count": 8,
+          "avgIq": 58.4425,
+          "avgValue": 3.75875
+        },
+        "CN": {
+          "total": 1202.4099999999999,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-13T05:34:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5865.42,
+          "count": 8,
+          "avgIq": 58.4425,
+          "avgValue": 3.75875
+        },
+        "CN": {
+          "total": 1145.72,
+          "count": 2,
+          "avgIq": 48.795,
+          "avgValue": 9.81
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-12T05:39:31+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6375.28,
+          "count": 9,
+          "avgIq": 57.00777777777778,
+          "avgValue": 3.823333333333333
+        },
+        "CN": {
+          "total": 574.44,
+          "count": 1,
+          "avgIq": 48.88,
+          "avgValue": 9.88
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-11T05:38:28+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6298.24,
+          "count": 8,
+          "avgIq": 49.5475,
+          "avgValue": 3.24375
+        },
+        "CN": {
+          "total": 1154.79,
+          "count": 2,
+          "avgIq": 38.695,
+          "avgValue": 43.305
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-10T05:33:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6467.0,
+          "count": 8,
+          "avgIq": 49.5475,
+          "avgValue": 3.24375
+        },
+        "CN": {
+          "total": 1209.4699999999998,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-09T05:27:35+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-08T05:39:41+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-07T05:37:07+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-06T05:23:48+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-05T05:32:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-04T05:41:32+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6414.25,
+          "count": 8,
+          "avgIq": 49.51,
+          "avgValue": 3.2424999999999997
+        },
+        "CN": {
+          "total": 1203.85,
+          "count": 2,
+          "avgIq": 39.05,
+          "avgValue": 8.58
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-03T05:49:44+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7088.79,
+          "count": 9,
+          "avgIq": 49.0,
+          "avgValue": 2.882222222222222
+        },
+        "CN": {
+          "total": 610.06,
+          "count": 1,
+          "avgIq": 39.62,
+          "avgValue": 8.0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-02T05:38:54+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-06-01T05:39:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-31T05:34:16+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-30T05:21:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-29T05:31:23+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-28T05:30:43+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7834.12,
+          "count": 10,
+          "avgIq": 48.876999999999995,
+          "avgValue": 2.897
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-27T05:33:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7791.65,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-26T05:26:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-25T05:34:46+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-24T05:28:57+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-23T05:14:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-22T05:27:35+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-21T05:31:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7657.91,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-20T05:25:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7610.55,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 2.891
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-19T05:24:13+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7611.73,
+          "count": 10,
+          "avgIq": 48.7,
+          "avgValue": 3.034
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-18T05:28:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7544.5199999999995,
+          "count": 10,
+          "avgIq": 48.42700000000001,
+          "avgValue": 2.992
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-17T05:25:05+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7674.23,
+          "count": 10,
+          "avgIq": 48.42700000000001,
+          "avgValue": 2.992
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-16T05:11:53+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7674.23,
+          "count": 10,
+          "avgIq": 48.42700000000001,
+          "avgValue": 2.992
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-15T05:22:26+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7779.59,
+          "count": 10,
+          "avgIq": 48.42700000000001,
+          "avgValue": 2.992
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-14T05:18:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7779.59,
+          "count": 10,
+          "avgIq": 48.42700000000001,
+          "avgValue": 2.992
+        },
+        "CN": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-13T05:18:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7145.05,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 682.14,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-12T05:13:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7145.05,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 682.14,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-11T05:27:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7145.05,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 682.14,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-10T05:20:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7145.05,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 682.14,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-09T05:10:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7145.05,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 682.14,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-08T05:07:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7075.73,
+          "count": 9,
+          "avgIq": 49.05555555555556,
+          "avgValue": 3.1655555555555557
+        },
+        "CN": {
+          "total": 662.98,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-07T04:56:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-06T04:55:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-05T04:50:44+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-04T04:59:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-03T05:00:04+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-02T04:51:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-05-01T05:05:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-30T04:38:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 0,
+          "count": 0,
+          "avgIq": 0,
+          "avgValue": 0
+        },
+        "CN": {
+          "total": 6078.7,
+          "count": 10,
+          "avgIq": 31.881999999999998,
+          "avgValue": 8.294
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-29T04:54:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-28T04:56:25+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-27T04:54:58+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-26T04:52:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-25T04:22:43+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-24T04:33:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-23T04:30:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7141.3,
+          "count": 9,
+          "avgIq": 47.75666666666667,
+          "avgValue": 3.151111111111111
+        },
+        "CN": {
+          "total": 693.18,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-22T04:28:57+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7114.43,
+          "count": 9,
+          "avgIq": 47.733333333333334,
+          "avgValue": 3.148888888888889
+        },
+        "CN": {
+          "total": 659.57,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-21T04:30:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 7201.05,
+          "count": 9,
+          "avgIq": 47.733333333333334,
+          "avgValue": 3.148888888888889
+        },
+        "CN": {
+          "total": 703.17,
+          "count": 1,
+          "avgIq": 41.01,
+          "avgValue": 11.39
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-20T04:36:07+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6394.39,
+          "count": 8,
+          "avgIq": 47.285000000000004,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1361.72,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 10.275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-19T04:32:27+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6394.39,
+          "count": 8,
+          "avgIq": 47.285000000000004,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1361.72,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 10.275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-18T04:24:40+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6394.39,
+          "count": 8,
+          "avgIq": 47.285000000000004,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1361.72,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 10.275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-17T04:35:21+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6388.98,
+          "count": 8,
+          "avgIq": 47.285000000000004,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1371.58,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-16T04:37:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6388.98,
+          "count": 8,
+          "avgIq": 47.285000000000004,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1371.58,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-15T04:35:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6319.71,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1363.81,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-14T04:34:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6319.71,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1363.81,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-13T04:39:43+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6321.29,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1355.37,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-12T16:01:34-04:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6321.29,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1355.37,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-11T15:27:16+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6311.79,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1344.49,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-10T15:34:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6311.79,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1344.49,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-09T15:51:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6321.29,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1355.37,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-08T15:48:31+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-07T15:47:46+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-06T15:33:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-05T15:27:31+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-04T15:27:03+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-03T15:30:36+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-02T15:38:12+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-04-01T15:46:50+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-31T15:43:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-30T15:46:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-29T15:27:04+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-28T15:27:13+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-27T15:34:21+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-26T15:46:10+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-25T15:43:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-24T15:42:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-23T15:39:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-22T15:26:25+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-21T15:26:21+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-20T15:31:09+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-19T15:35:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-18T15:44:27+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-17T15:40:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6258.84,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.3287500000000003
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-16T15:41:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6269.45,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-15T15:27:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6269.45,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-14T15:27:19+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6269.45,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1283.72,
+          "count": 2,
+          "avgIq": 40.065,
+          "avgValue": 12.05
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-13T15:30:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6248.91,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1252.54,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-12T15:37:32+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6248.91,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1252.54,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-11T15:32:57+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6248.91,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1252.54,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-10T15:38:54+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6248.91,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1252.54,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-09T15:37:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6248.91,
+          "count": 8,
+          "avgIq": 47.283750000000005,
+          "avgValue": 3.73
+        },
+        "CN": {
+          "total": 1252.54,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-08T15:26:05+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6242.66,
+          "count": 8,
+          "avgIq": 47.2525,
+          "avgValue": 3.7275
+        },
+        "CN": {
+          "total": 1252.5900000000001,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-07T15:25:48+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 6242.66,
+          "count": 8,
+          "avgIq": 47.2525,
+          "avgValue": 3.7275
+        },
+        "CN": {
+          "total": 1252.5900000000001,
+          "count": 2,
+          "avgIq": 39.745,
+          "avgValue": 11.195
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-06T15:28:12+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5378.79,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1787.79,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-05T15:35:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-04T15:28:54+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-03T15:34:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-02T15:29:29+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-03-01T17:59:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-28T15:25:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-27T15:28:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5314.11,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1678.67,
+          "count": 3,
+          "avgIq": 37.443333333333335,
+          "avgValue": 34.833333333333336
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-26T04:03:57+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-25T15:37:53+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-24T15:37:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5360.56,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1754.58,
+          "count": 3,
+          "avgIq": 38.449999999999996,
+          "avgValue": 11.733333333333334
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-23T15:33:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5314.11,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1678.67,
+          "count": 3,
+          "avgIq": 37.443333333333335,
+          "avgValue": 34.833333333333336
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-22T15:26:19+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5314.11,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1678.67,
+          "count": 3,
+          "avgIq": 37.443333333333335,
+          "avgValue": 34.833333333333336
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-21T15:26:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5314.11,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1678.67,
+          "count": 3,
+          "avgIq": 37.443333333333335,
+          "avgValue": 34.833333333333336
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-20T15:29:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5314.11,
+          "count": 7,
+          "avgIq": 46.76285714285715,
+          "avgValue": 3.8457142857142856
+        },
+        "CN": {
+          "total": 1678.67,
+          "count": 3,
+          "avgIq": 37.443333333333335,
+          "avgValue": 34.833333333333336
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-19T15:37:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4499.29,
+          "count": 6,
+          "avgIq": 44.10833333333333,
+          "avgValue": 4.098333333333334
+        },
+        "CN": {
+          "total": 2423.06,
+          "count": 4,
+          "avgIq": 37.0475,
+          "avgValue": 29.3275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-18T15:35:34+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4419.74,
+          "count": 6,
+          "avgIq": 44.10833333333333,
+          "avgValue": 4.098333333333334
+        },
+        "CN": {
+          "total": 2302.92,
+          "count": 4,
+          "avgIq": 37.0475,
+          "avgValue": 29.3275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-17T15:35:57+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4419.74,
+          "count": 6,
+          "avgIq": 44.10833333333333,
+          "avgValue": 4.098333333333334
+        },
+        "CN": {
+          "total": 2302.92,
+          "count": 4,
+          "avgIq": 37.0475,
+          "avgValue": 29.3275
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-16T15:29:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4360.01,
+          "count": 6,
+          "avgIq": 43.185,
+          "avgValue": 3.8666666666666667
+        },
+        "CN": {
+          "total": 2329.56,
+          "count": 4,
+          "avgIq": 36.0475,
+          "avgValue": 30.53
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-15T15:26:17+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4244.07,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2205.89,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-14T15:26:35+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4334.72,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2325.62,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-13T15:30:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4244.07,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2205.89,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-12T15:35:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4644.47,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-11T15:38:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5833.43,
+          "count": 8,
+          "avgIq": 40.76375,
+          "avgValue": 0.0
+        },
+        "CN": {
+          "total": 1332.8600000000001,
+          "count": 2,
+          "avgIq": 37.265,
+          "avgValue": 0.0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-10T15:42:47+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4644.47,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-09T15:36:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4644.47,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-08T15:26:38+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4644.47,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-07T15:26:20+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4644.47,
+          "count": 6,
+          "avgIq": 43.01499999999999,
+          "avgValue": 3.858333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-06T15:29:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4607.03,
+          "count": 6,
+          "avgIq": 42.66833333333333,
+          "avgValue": 3.828333333333333
+        },
+        "CN": {
+          "total": 2724.07,
+          "count": 4,
+          "avgIq": 36.010000000000005,
+          "avgValue": 30.5175
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-05T04:02:21+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-04T15:30:23+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-03T15:35:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-02T15:32:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-02-01T15:27:00+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-31T15:26:44+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-30T15:30:30+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3965.0,
+          "count": 5,
+          "avgIq": 41.144,
+          "avgValue": 4.258
+        },
+        "CN": {
+          "total": 3540.96,
+          "count": 5,
+          "avgIq": 35.176,
+          "avgValue": 28.660000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-29T15:29:06+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4023.04,
+          "count": 5,
+          "avgIq": 41.56,
+          "avgValue": 4.294
+        },
+        "CN": {
+          "total": 3609.31,
+          "count": 5,
+          "avgIq": 35.342,
+          "avgValue": 21.858
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-28T15:31:16+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4031.69,
+          "count": 5,
+          "avgIq": 41.56,
+          "avgValue": 4.294
+        },
+        "CN": {
+          "total": 3516.2,
+          "count": 5,
+          "avgIq": 34.858,
+          "avgValue": 14.52
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-27T15:30:15+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4001.26,
+          "count": 5,
+          "avgIq": 41.336,
+          "avgValue": 4.273999999999999
+        },
+        "CN": {
+          "total": 3421.19,
+          "count": 5,
+          "avgIq": 33.42,
+          "avgValue": 21.503999999999998
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-24T18:32:59+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4515.43,
+          "count": 6,
+          "avgIq": 39.053333333333335,
+          "avgValue": 4.031666666666666
+        },
+        "CN": {
+          "total": 2778.81,
+          "count": 4,
+          "avgIq": 33.8325,
+          "avgValue": 38.705
+        }
+      }
+    },
+    {
+      "timestamp": "2026-01-23T08:08:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3107.23,
+          "count": 4,
+          "avgIq": 40.29,
+          "avgValue": 4.422499999999999
+        },
+        "CN": {
+          "total": 4025.58,
+          "count": 6,
+          "avgIq": 33.07,
+          "avgValue": 31.243333333333336
+        }
+      }
+    }
+  ]
+}

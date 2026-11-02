@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generationId": "5af9861d1b948c01a9fd51383e95fe75d314e3411a6f2a638949bb973498db1e",
+  "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+  "artifacts": {
+    "current.json": "3e8f9f00c26cafec7fb0b4005574916ca14baaa472d24a3c3df843e6a1575bf9",
+    "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
+    "data/historical_benchmark_gaps.json": "71fa2fe105cf489087534423616fbc232561a6fe37c39adbe6a71189b3cbcbaa",
+    "data/model_catalog.json": "9eae6073d23ca59c1cc56f334a07433bd900723283ecd324a4f842381892e9c6",
+    "data/scoring_revision.json": "1b36a5143e92926f16421227adfe6e94d60e505c887ff0ba95060f645b56d2a2",
+    "data/site_summary.json": "a474bc4491f819eb2343857ca0cd0ae5b6905c57775ae6de28470cd0180c53e8",
+    "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "ig-image.png": "b1dabca6f70f44ca64ebb69a03f67e774d8edf3967b406ea30c5b553a43eea6a",
+    "models.json": "c426274395731692cd7e981ae3cc662f33d006c49bc13aad19894eb307fbe2d9",
+    "og-image.png": "d68441a891fd9e5a93cdeb1b3ae41134837b0991cfc42e669beb44b9a91d4475",
+    "social/2026-09-26-1-leaderboard-midnight.png": "9d5d6821fd3eb13f478c685506c05b9681ceb691096818a14837a908ea79d272",
+    "social/plan.json": "06478e0c44f4e7cbf09dc986db6d0d5cc68575556dbbe984783b7a1c546ee23e"
+  }
+}

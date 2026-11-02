@@ -1,16 +1,16 @@
 {
-  "date": "2026-09-26",
-  "timestamp": "2026-09-26T04:45:01+00:00",
   "format": "leaderboard",
   "palette": "midnight",
   "weight": 0,
+  "date": "2026-09-26",
+  "timestamp": "2026-09-26T04:45:01+00:00",
   "slides": [
-    "2026-09-26-1-leaderboard-midnight-5603345ebc.png"
+    "2026-09-26-1-leaderboard-midnight.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-09-26-1-leaderboard-midnight-5603345ebc.png"
+    "https://usvschina.ai/social/2026-09-26-1-leaderboard-midnight.png"
   ],
-  "caption": "Fresh rankings—and Claude Opus 5.5 is now tracked.\n\n• US models hold 7 of the top 10 spots, leading 4526.99 to 1656.89.\n• GPT-6 Astra leads at 900.2; Kimi K3 ranks fourth at 727.5.\n• Claude Opus 5.5 ranks 16th on our 20-model board, with results for 7 of 18 configured benchmarks. Missing results count as zero, which materially lowers its score while coverage is incomplete.\n\nHow should newly released models with incomplete benchmark coverage be compared?\n\n#AI #ArtificialIntelligence #USvsChinaAI #AIModels #ClaudeOpus55 #GPT6Astra #KimiK3\n\n@richcrane",
-  "caption_source": "verified-editorial",
-  "generated_at": "2026-09-26T04:46:01.412145+00:00"
+  "caption": "Team USA leads by 2870\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 4527 vs Team China 1657\n• 7 US and 3 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
+  "caption_source": "deterministic",
+  "generated_at": "2026-09-26T04:45:01+00:00"
 }

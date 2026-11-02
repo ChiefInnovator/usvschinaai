@@ -13,11 +13,13 @@
                     const profile = model && model.profiles[ref.profileId];
                     if (!profile) throw new Error('Missing shared model/profile: modelId=' + ref.modelId + ', profileId=' + ref.profileId);
                     const row = {...profile, ...ref, _provenance: {}};
-                    for (const component of catalog.components) {
+                    const activeWeights = snapshot.scoring?.avgIqWeights;
+                    const components = activeWeights ? catalog.components.filter(component => Object.prototype.hasOwnProperty.call(activeWeights, component.column)) : catalog.components;
+                    for (const component of components) {
                         const key = component.column;
                         row[key] = '—';
                         const candidates = Object.entries(model.benchmarks[component.id] || {})
-                            .filter(([, r]) => !r.excludedReason && r.availableFrom <= snapshot.timestamp.slice(0, 10))
+                            .filter(([, r]) => !r.excludedReason && r.availableFrom <= new Date(snapshot.timestamp).toISOString().slice(0, 10))
                             .sort(([aid, a], [bid, b]) => b.score - a.score ||
                                 a.availableFrom.localeCompare(b.availableFrom) || aid.localeCompare(bid));
                         if (candidates.length) {
@@ -28,8 +30,6 @@
                                 availableFrom: r.availableFrom, retrievedAt: r.retrievedAt};
                         }
                     }
-                    delete row.modelId;
-                    delete row.profileId;
                     return row;
                 });
             }
