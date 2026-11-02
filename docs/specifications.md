@@ -1,220 +1,131 @@
-# US vs CHINA AI — Project Specification
+# US vs China AI — project specification
 
-## 1. Project Overview
+## Product
 
-| Field | Value |
-| ------- | ------- |
-| **Project Name** | US vs CHINA AI Dashboard |
-| **Domain** | usvschina.ai |
-| **Date** | December 30, 2025 |
-| **Purpose** | Rank frontier AI models by intelligence and cost efficiency, tracking the US-China AI competition |
-| **Benchmarks** | 10 Frontier Benchmarks |
+A public static website compares US and Chinese AI models using a configured
+score and daily recorded rosters. National totals sum each country's models in
+the combined global Top 10. Filtering the visible roster never changes national
+totals. Editor-selected weights and their history are disclosed; this is not an
+independent national capability standard.
 
-## 2. Technical Stack
+## Pages and interaction
 
-- **Architecture:** Static HTML5 frontend with JSON data source
-- **Styling:** Tailwind CSS (CDN)
-- **Icons:** Lucide (CDN)
-- **Charts:** Chart.js (CDN)
-- **JavaScript:** Vanilla ES6+
+- `index.html`: compact national comparison, model ranking, deferred model
+  evidence, accessible trend/matrix tables, companies and methodology.
+- `history.html`: exact UTC date/time lookup, previous/next observation,
+  optional comparison, keyboard sorting/filtering and URL-restorable state.
+- `about.html`: current methodology, assumptions and weight-selection disclosure.
+- `privacy.html` and `terms.html`: legal reading pages without moving news.
+- `404.html`: focused recovery link.
 
-### Design System
+Rank, model and Unified remain visible together on phones. Native controls expose
+sorting, selected filters and disclosure state. Dates use recorded snapshots;
+absent dates/models are not synthetic zeros. Price availability is distinct from
+the numeric zero contribution used by the current scorer.
 
-| Element | Value |
-| --------- | ------- |
-| Background | `bg-slate-950` |
-| USA Accent | `#3b82f6` (Electric Blue) |
-| China Accent | `#ef4444` (Crimson Red) |
-| Glass Effect | `rgba(30, 41, 59, 0.4)` with backdrop blur |
+## Scoring
 
-## 3. File Structure
+`data/core_benchmarks.json` is the selection/alias/weight authority for eighteen
+benchmarks totaling 100%. `scripts/scoring.py` and its dependencies implement
+calculation and applicability. Full rules and adjustment history are in
+[two_pass_scoring.md](two_pass_scoring.md).
 
-```text
-├── index.html        # Main leaderboard (loads latest history entry)
-├── history.html      # Historical archives (loads all history entries)
-├── about.html        # Methodology, assumptions, benchmarks
-├── models.json       # Single source of truth for all data
-├── specifications.md # This file
-└── README.md         # Quick start guide
-```
+- Avg IQ is the weighted sum of the selected percentage scores with a fixed
+  denominator; missing results contribute zero.
+- Value = Avg IQ / (input price + output price), both prices per million tokens.
+- Unified = 10 × (0.9 × cohort-normalized Avg IQ + 0.1 × cohort-normalized Value).
+- National totals sum Unified for each country's entries within the global Top 10.
+- Missing public pricing leaves the existing zero Value contribution; the UI
+  explains availability rather than calling the model free or unranked.
 
-## 4. Data Schema
+### Full historical replay is mandatory
 
-### models.json Structure
+Every algorithm change triggers replay of all retained history, including changes
+to weights, benchmarks, normalization, missing results, pricing calculations or
+evidence selection. Replayed history retains timestamps, roster membership and
+dated price profiles. Source evidence remains subject to its historical
+availability date. Historical charts use the current algorithm, not a mixture of
+old and new scoring rules.
 
-```json
-{
-  "metadata": {
-    "title": "US vs CHINA AI",
-    "subtitle": "...",
-    "footerText": "..."
-  },
-  "teams": {
-    "usa": { "name": "Team USA", "flag": "🇺🇸", "description": "...", "badge": "..." },
-    "china": { "name": "Team China", "flag": "🇨🇳", "description": "...", "badge": "..." }
-  },
-  "benchmarks": ["AIME 2025", "HMMT 2025", ...],
-  "columns": [
-    { "key": "rank", "label": "Rank" },
-    { "key": "name", "label": "Model" },
-    ...
-  ],
-  "history": [
-    {
-      "timestamp": "2025-12-30T12:00:00-05:00",
-      "leader": "china",
-      "scores": {
-        "usa": { "total": 662.5, "avgIq": 89.5, "avgValue": 83.5 },
-        "china": { "total": 1009.6, "avgIq": 89.4, "avgValue": 91.2 }
-      },
-      "benchmarks": [...],
-      "models": [...]
-    }
-  ]
-}
-```
+`scoring_revision.py` fingerprints configuration, dependency pins and transitive
+local scoring source. Publication verification independently replays all dates,
+even when a fingerprint matches. Missing or mismatched revision metadata is a
+migration condition, not permission to stamp old results without calculation.
 
-### Model Object
+## Canonical storage
 
-```json
-{
-  "rank": 1,
-  "name": "DeepSeek-V3.2",
-  "company": "DeepSeek",
-  "companyLink": "https://...",
-  "origin": "CN",
-  "description": "...",
-  "unified": 184.8,
-  "iq": 92.4,
-  "value": 100,
-  "createdDate": "2025-12-15",
-  "link": "https://...",
-  "costPer1M": 0.25,
-  "benchmarkScores": {
-    "AIME 2025": { "score": 99.1, "source": "https://..." },
-    ...
-  }
-}
-```
+- `data/model_catalog.json`: stable model IDs, historical profiles, dated evidence,
+  sources, configurations and exclusions.
+- `models.json`: exact dated roster/profile references and computed scores.
+- `current.json`: latest reference-only snapshot.
+- `data/scoring_revision.json`: current scoring source fingerprint/inventory.
+- `data/historical_benchmark_gaps.json`: generated unresolved-evidence audit.
 
-## 5. Scoring Methodology
+See [model_storage.md](model_storage.md) for recovery and availability rules.
+Python/browser hydration select the same highest eligible result, resolving ties
+by availability date and evidence ID. A historical observation is not
+necessarily AI-researched.
 
-### Unified Power Score (Max ~180)
+## Public projections and publication identity
 
-$$\text{Unified} = I \times \left(1 + \frac{V_{\text{norm}}}{100}\right)$$
+`data/site_summary.json` schema 1 contains current resolved profile/score rows,
+benchmark definitions and weights, and a compact exact-timestamp index of national
+totals. It omits full evidence/historical rosters. The homepage's first data load
+does not download the full archive/catalog. Evidence and historical rosters load
+only on request.
 
-**Intelligence gates everything.** A model with low intelligence cannot score high, regardless of how cheap it is. Value acts as a multiplier boost, not an equal component.
+`data/publication.json` records the scoring revision, generation ID and exact
+artifact byte digests. Generation identity hashes the four canonical source paths
+(`models.json`, `current.json`, catalog and benchmark configuration) plus scoring
+revision using sorted compact JSON framing. Browser loaders verify response hashes
+and reject mixed generations. A failed detail request leaves the ranking intact
+and can be retried.
 
-| Component | Range | Role |
-| --------- | ----- | ---- |
-| Intelligence (I) | 0–100 | Gates the score (multiplicative) |
-| Value (V_norm) | 50–100 | Boosts the score (1.5× to 2.0× multiplier) |
+Preparation executes the copied scripts in a fresh temporary directory, performs
+full replay, renders snapshot-time images and deterministic social captions, then
+validates and installs a complete generation. The durable publication journal
+installs its manifest last and is excluded from source control/public builds.
+Image/render failure before installation leaves the old publication untouched.
+No paid research or remote social posting occurs during preparation/verification.
 
-**Examples:**
+## Build and hosting
 
-- IQ 80, Value 75 (avg cost) → Unified = 80 × 1.75 = **140**
-- IQ 60, Value 100 (free) → Unified = 60 × 2.0 = **120** (can't overcome low IQ)
-- IQ 40, Value 100 (free) → Unified = 40 × 2.0 = **80** (low IQ ceiling)
+The runtime is static HTML and vanilla JavaScript on Azure Static Web Apps.
+Tailwind 3.4.16, Chart.js 4.4.7 and Lucide 0.454.0 are exactly pinned in npm and
+served locally after compilation. Python dependencies retain exact pins.
 
-### Intelligence Index — Raw Score (0–100)
+`npm run build` compiles assets, verifies publication, and writes `dist/` using a
+public-file allowlist. Agent instructions, workflows, tests, research intake,
+secrets and writer journals are never copied. Existing public raw JSON and current
+social-slide URLs remain available.
 
-**Raw IQ:** Unweighted average of available benchmark scores (only benchmarks with data count).
+The built manifest adds hashed shell artifacts and a shell revision. Offline
+caches become active only after every required shell asset verifies. An interrupted
+update retains the previous complete generation. At most two complete generations
+and one staging cache are retained; raw evidence is not precached.
 
-$$I = \frac{\sum_{i=1}^{n} \text{Benchmark}_i}{n} \quad \text{where } n = \text{benchmarks with data}$$
+The deployment workflow verifies full replay, validates, builds and tests, uploads
+that exact artifact, and deploys it in a dependent job without rebuilding. It
+records a single candidate SHA, serializes production delivery and refuses to
+replace a newer main-branch candidate. Fork code receives no deployment secrets.
 
-#### 10 Frontier Benchmarks
+## Operations
 
-| # | Benchmark | Category | Source |
-| --- | ----------- | ---------- | -------- |
-| 1 | AIME 2025 | Math Olympiad | [llm-stats](https://llm-stats.com/benchmarks/aime-2025) |
-| 2 | HMMT 2025 | Math Tournament | [llm-stats](https://llm-stats.com/benchmarks/hmmt) |
-| 3 | GPQA Diamond | PhD Science | [llm-stats](https://llm-stats.com/benchmarks/gpqa) |
-| 4 | BrowseComp | Web Agents | [llm-stats](https://llm-stats.com/benchmarks/browsecomp) |
-| 5 | ARC-AGI v2 | Advanced Reasoning | [arcprize.org](https://arcprize.org/) |
-| 6 | HLE | Multidisciplinary | [llm-stats](https://llm-stats.com/benchmarks/hle) |
-| 7 | MMLU-Pro | Knowledge | [llm-stats](https://llm-stats.com/benchmarks/mmlu-pro) |
-| 8 | LiveCodeBench | Coding | [llm-stats](https://llm-stats.com/benchmarks/livecodebench) |
-| 9 | SWE-Bench Verified | Software Engineering | [llm-stats](https://llm-stats.com/benchmarks/swe-bench-verified) |
-| 10 | CodeForces | Competitive Programming | [llm-stats](https://llm-stats.com/benchmarks/codeforces) |
+- Daily scrape schedule: 03:17 UTC, subject to workflow execution delay.
+- Visible current-data warning: older than 26 hours.
+- Operational freshness alert: older than 30 hours; timestamps over five minutes
+  ahead also fail health checks.
+- Health monitor: every 30 minutes, checking reachability, snapshot freshness and
+  manifest/summary/revision agreement.
+- Research budget policy remains in the daily workflow. Publication captions use
+  deterministic facts; optional caption tooling remains separately available.
+- Roll back the whole previously verified artifact. A source algorithm revert
+  still requires a full replay before a new publication.
 
-### Value Index — Normalized to 50–100
+## Verification
 
-**Raw Value:** Log-normalized efficiency based on blended cost per 1M tokens:
-
-$$V_{\text{raw}} = 100 \times \left(1 - \frac{\log(C / 0.25)}{\log(60.00 / 0.25)}\right)$$
-
-**Blended Cost:**
-
-$$C = \frac{3 \times \text{Input} + 1 \times \text{Output}}{4}$$
-
-**Normalized Value:** (ensures minimum 50 even for expensive models)
-
-$$V_{\text{norm}} = 50 + \frac{V_{\text{raw}}}{100} \times 50$$
-
-| Threshold | Cost | Raw Value | Normalized |
-| --------- | ---- | --------- | ---------- |
-| Floor (Best) | $0.25 | 100 | 100 |
-| Ceiling (Worst) | $60.00 | 0 | 50 |
-
-### National Score
-
-**Rule:** Sum of Unified Scores for models in the **Global Top 10** belonging to each nation.
-
-- Only Top 10 models contribute to the national score
-- Rewards both peak performance (#1 model) and depth (multiple models in Top 10)
-
-## 6. UI Components
-
-### Pages
-
-| Page | Title Format | Data Source |
-| ------ | -------------- | ------------- |
-| index.html | `US vs CHINA AI` | Latest `history[]` entry |
-| history.html | `Historical Archives` | All `history[]` entries (desc by date) |
-| about.html | `About This Project` | Static content |
-
-### Filters (index.html & history.html)
-
-| Filter | Behavior |
-| -------- | ---------- |
-| Top 10 (default) | Global Top 10 by Unified score |
-| All | All models in dataset |
-| USA | All US-origin models |
-| China | All China-origin models |
-
-### Benchmark Badge Colors
-
-| Color | Benchmarks |
-| ------- | ------------ |
-| Blue | AIME 2025, HMMT 2025, GPQA Diamond |
-| Red | ARC-AGI, BrowseComp, ARC-AGI v2 |
-| Purple | HLE, MMLU-Pro, LiveCodeBench |
-| Yellow | SWE-Bench Verified, CodeForces |
-
-## 7. Current Rankings (Dec 31, 2025)
-
-| Rank | Model | Origin | Unified | IQ (0-100) | Value (50-100) |
-| ------ | ------- | -------- | --------- | ----------- | ---------------- |
-| 1 | Gemini 3 Flash | 🇺🇸 | 166.5 | 89.4 | 86.3 |
-| 2 | Gemini 3 Pro | 🇺🇸 | 155.2 | 89.4 | 73.6 |
-| 3 | Grok-4 Heavy | 🇺🇸 | 152.7 | 89.3 | 71.0 |
-| 4 | GPT-5.1 | 🇺🇸 | 151.7 | 86.1 | 76.1 |
-| 5 | Grok-4 | 🇺🇸 | 147.2 | 86.1 | 71.0 |
-| 6 | DeepSeek-V3.2-Exp | 🇨🇳 | 143.5 | 72.4 | 98.2 |
-| 7 | Kimi K2-Thinking | 🇨🇳 | 142.1 | 75.3 | 88.8 |
-| 8 | DeepSeek-V3.2 | 🇨🇳 | 141.7 | 71.6 | 97.9 |
-| 9 | Qwen3-235B-Thinking | 🇨🇳 | 138.9 | 74.1 | 87.6 |
-| 10 | MiMo-V2-Flash | 🇨🇳 | 138.8 | 69.4 | 100.0 |
-
-### National Totals (Top 10 Method)
-
-| Team | Score | Models in Top 10 |
-| ---- | ----- | ---------------- |
-| 🇺🇸 USA | 773.3 | 5 |
-| 🇨🇳 China | 705.0 | 5 |
-
-**Leader:** Team USA 🇺🇸 by 68.3 points
-
----
-
-Last Updated: December 31, 2025
+See [testing.md](testing.md). Tests cover scoring/evidence boundaries, historical
+pricing/identity, recoverable writes, revision mutations, summary parity, mixed
+publication generations, phone layouts, keyboard controls, historical lookup,
+request retry, public build exclusions and interrupted offline generation changes.
+Local checks do not establish live Azure deployment or production acceptance.

@@ -65,12 +65,14 @@
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+
+
+    <link rel="stylesheet" href="assets/site.css">
+    <script src="assets/vendor/lucide.min.js"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
         .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
-        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+        .winner-gradient { color: #f8fafc; }
 
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
@@ -78,69 +80,23 @@
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
 
-        /* News Marquee */
-        .news-marquee-bar {
-            background: linear-gradient(90deg, rgba(30, 58, 138, 0.7), rgba(127, 29, 29, 0.7));
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-        }
-        .news-marquee-track {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            will-change: transform;
-        }
-        .news-marquee-track.scrolling {
-            animation: newsScroll var(--scroll-duration, 60s) linear infinite;
-        }
-        .news-marquee-track:hover {
-            animation-play-state: paused;
-        }
-        @keyframes newsScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .news-marquee-track.scrolling {
-                animation: none;
-                overflow-x: auto;
-            }
-        }
-        .news-item {
-            display: inline-flex;
-            align-items: center;
-            padding: 0 2rem;
-            color: #e2e8f0;
-            text-decoration: none;
-            font-size: 1.125rem;
-            transition: color 0.2s;
-        }
-        .news-item:hover { color: #ffffff; }
-        .news-item .news-source {
-            color: rgba(255, 255, 255, 0.4);
-            margin-left: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .news-item .news-time {
-            color: rgba(255, 255, 255, 0.3);
-            margin-left: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .news-separator {
-            color: rgba(255, 255, 255, 0.2);
-            margin: 0 0.75rem;
-            font-size: 0.95rem;
-        }
+
+        :root { color-scheme: dark; } body { background:#020617; color:#f8fafc; font-family:Inter,system-ui,sans-serif; }
+        .winner-gradient { color:#f8fafc; } .glass { background:transparent; border:0; border-radius:0; padding:0; }
+        .skip-link { position:absolute; left:1rem; top:-5rem; z-index:50; background:#f8fafc; color:#020617; padding:1rem; } .skip-link:focus { top:1rem; }
+        :focus-visible { outline:3px solid #93c5fd; outline-offset:4px; } ::selection { background:#1e40af; color:white; }
+        a { text-underline-offset:4px; } .text-slate-500,.text-slate-600 { color:#94a3b8; }
+        .reading-copy { max-width:70ch; margin-inline:auto; } .reading-copy > div { margin-top:3rem; } .reading-copy .grid { display:block; } .reading-copy .grid > div + div { margin-top:1.5rem; }
+        h1 { text-wrap:balance; letter-spacing:-.03em!important; font-size:clamp(2.5rem,7vw,4rem)!important; } nav { flex-wrap:wrap; } footer > div:last-child { flex-wrap:wrap; justify-content:center; }
+        @media(max-width:600px) { nav > div { gap:1rem!important; font-size:.75rem!important; letter-spacing:0!important; } .reading-copy { padding-inline:.25rem; } }
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
-    <!-- News Marquee (loaded from news.json) -->
-    <div id="newsMarquee" class="hidden -mx-4 md:-mx-12 -mt-4 md:-mt-12 mb-4 md:mb-8" role="marquee" aria-label="Latest AI news headlines"></div>
+<a href="#main-content" class="skip-link">Skip to content</a>
 
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
-        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
+        <nav aria-label="Main navigation" class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
             <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
                 <span class="group-hover:text-blue-400 transition">US</span>
                 <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
@@ -154,7 +110,7 @@
             </div>
         </nav>
 
-        <header class="text-center mb-12">
+        <main id="main-content" tabindex="-1"><header class="text-center mb-12">
             <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-3 py-2">
                 Terms of <span class="winner-gradient pr-2">Service</span>
             </h1>
@@ -163,7 +119,7 @@
             </p>
         </header>
 
-        <div class="space-y-8">
+        <div class="space-y-8 reading-copy">
             <div class="glass rounded-3xl p-8 border border-blue-500/20 bg-blue-500/5">
                 <h2 class="text-2xl font-bold mb-4 flex items-center gap-2">
                     <i data-lucide="scroll-text" class="text-blue-300"></i>
@@ -334,6 +290,7 @@
                 </div>
             </div>
         </div>
+    </main>
     </div>
 
     <!-- Footer -->
@@ -351,107 +308,8 @@
     </footer>
 
     <script>
-        lucide.createIcons();
+        if (window.lucide) lucide.createIcons();
     </script>
 
-    <!-- News Marquee Script -->
-    <script>
-    (function() {
-        function timeAgo(dateStr) {
-            AppContract.check("timeAgo", arguments, ["?json"]);
-            if (!dateStr) return '';
-            try {
-                var date = new Date(dateStr);
-                var now = new Date();
-                var diffMs = now - date;
-                var diffMin = Math.floor(diffMs / 60000);
-                if (diffMin < 1) return 'just now';
-                if (diffMin < 60) return diffMin + 'm ago';
-                var diffHr = Math.floor(diffMin / 60);
-                if (diffHr < 24) return diffHr + 'h ago';
-                var diffDay = Math.floor(diffHr / 24);
-                if (diffDay < 7) return diffDay + 'd ago';
-                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-            } catch (e) {
-                return '';
-            }
-        }
-
-        function getCountryFlag(country) {
-            AppContract.check("getCountryFlag", arguments, ["?json"]);
-            if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
-            if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
-            return '\u{1F30D}';
-        }
-
-        function escapeHtml(str) {
-            AppContract.check("escapeHtml", arguments, ["?json"]);
-            var div = document.createElement('div');
-            div.appendChild(document.createTextNode(str));
-            return div.innerHTML;
-        }
-
-        async function loadNewsMarquee() {
-            AppContract.check("loadNewsMarquee", arguments, []);
-            var container = document.getElementById('newsMarquee');
-            if (!container) return;
-
-            try {
-                var response = await fetch('news.json');
-                if (!response.ok) return;
-                var data = await response.json();
-                var items = data && Array.isArray(data.items) ? data.items : [];
-                if (items.length === 0) return;
-
-                var newsLabel = '<span class="inline-flex items-center px-3 py-1 text-xs font-bold uppercase tracking-wider text-white/80 flex-shrink-0">' +
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>' +
-                    'LATEST</span>';
-
-                items.sort(function(a, b) { return (b.relevanceScore || 0) - (a.relevanceScore || 0); });
-
-                var itemsHtml = items.map(function(item) {
-                    var flag = getCountryFlag(item.country);
-                    var time = timeAgo(item.publishedAt);
-                    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer" class="news-item">' +
-                        '<span class="mr-2 text-base">' + flag + '</span>' +
-                        '<span class="font-medium">' + escapeHtml(item.headline) + '</span>' +
-                        '<span class="news-source">(' + escapeHtml(item.source) + ')</span>' +
-                        (time ? '<span class="news-time">' + time + '</span>' : '') +
-                        '</a>' +
-                        '<span class="news-separator">\u2022</span>';
-                }).join('');
-
-                var trackContent = itemsHtml + itemsHtml;
-
-                var baseChars = items.reduce(function(sum, item) {
-                    return sum + (item.headline || '').length + (item.source || '').length + 20;
-                }, 0);
-                var duration = Math.max(30, Math.min(120, baseChars * 0.15));
-
-                container.innerHTML =
-                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 5.5rem;">' +
-                        '<div class="flex items-center h-full">' +
-                            newsLabel +
-                            '<div class="overflow-hidden flex-1 h-full flex items-center">' +
-                                '<div class="news-marquee-track scrolling" style="--scroll-duration: ' + duration + 's;" aria-live="off">' +
-                                    trackContent +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>';
-
-                container.classList.remove('hidden');
-            } catch (e) {
-                console.log('News marquee: could not load news.json', e);
-            }
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadNewsMarquee);
-        } else {
-            loadNewsMarquee();
-        }
-    })();
-    </script>
 </body>
 </html>

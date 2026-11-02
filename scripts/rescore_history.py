@@ -8,7 +8,9 @@ Without --write, validates and reports without modifying application data.
 from preconditions import preconditions
 import argparse
 import copy
-from model_store import load_data, load_evidence, save_data
+from model_store import load_data, load_evidence, save_data, read_catalog, normalize, atomic_json, roster_identity, utc_day
+from scoring_revision import scoring_revision, revision_record, generation_id
+from site_summary import build_summary
 import json
 from datetime import date, datetime
 from pathlib import Path
@@ -39,15 +41,17 @@ def component_key(row, component):
 
 @preconditions(evidence='mapping')
 def validate_evidence(evidence):
-    ids = {b['id'] for b in load_config()['benchmarks']}
     seen = set()
+    if not isinstance(evidence.get('results'), list):
+        raise ValueError('Invalid benchmark evidence collection')
     for record in evidence['results']:
+        if not isinstance(record, dict) or any(not isinstance(record.get(key), str) or not record[key].strip()
+               for key in ('id', 'component', 'model', 'source', 'configuration')):
+            raise ValueError('Incomplete benchmark evidence')
         if record['id'] in seen:
             raise ValueError('Duplicate evidence ID: '+record['id'])
         seen.add(record['id'])
-        if record['component'] not in ids or not record['model'] or not record['source'] or not record['configuration']:
-            raise ValueError('Incomplete benchmark evidence')
-        if not isinstance(record['score'], (int, float)) or not 0 <= record['score'] <= 100 or record['unit'] != 'percent':
+        if isinstance(record.get('score'), bool) or not isinstance(record.get('score'), (int, float)) or not 0 <= record['score'] <= 100 or record.get('unit') != 'percent':
             raise ValueError('Invalid percentage result')
         available = date.fromisoformat(record['availableFrom'])
         if available > date.fromisoformat(record['retrievedAt']):
@@ -60,8 +64,9 @@ def validate_evidence(evidence):
 @preconditions(evidence='mapping')
 def index_evidence(evidence):
     indexed = {}
+    active = {b['id'] for b in load_config()['benchmarks']}
     for record in sorted(evidence['results'], key=lambda r: (-r['score'], r['availableFrom'], r['id'])):
-        if not record.get('excludedReason'):
+        if record['component'] in active and not record.get('excludedReason'):
             indexed.setdefault(record['model'], []).append(record)
     return indexed
 
@@ -70,11 +75,11 @@ def index_evidence(evidence):
 def apply_evidence(snapshot, evidence, *, indexed=None):
     components = {b['id']: b for b in load_config()['benchmarks']}
     added = []
-    day = snapshot['timestamp'][:10]
+    day = utc_day(snapshot['timestamp'])
     indexed = index_evidence(evidence) if indexed is None else indexed
     for _, row in rows(snapshot):
         for record in indexed.get(row['model'], ()):
-            if record.get('excludedReason') or row['model'] != record['model'] or day < record['availableFrom']:
+            if record['component'] not in components or record.get('excludedReason') or row['model'] != record['model'] or day < record['availableFrom']:
                 continue
             key = component_key(row, components[record['component']])
             current = row.get(key, '')
@@ -115,6 +120,7 @@ def fill_current_entries(entries, timestamp, evidence=None):
 def normalize_parameters(parameters, headers):
     """Daily serialization removes spaces from row keys, but not parameter keys."""
     by_canonical = {canonical(h): h for h in headers}
+    @preconditions(name="text")
     def key(name):
         if name in headers:
             return name
@@ -129,7 +135,7 @@ def normalize_parameters(parameters, headers):
 @preconditions(snapshot='mapping', evidence='mapping', indexed='?mapping')
 def rescore_snapshot(snapshot, evidence, *, indexed=None):
     for _, row in rows(snapshot):
-        clean = selected_columns(row)
+        clean = {**selected_columns(row), **{key: row[key] for key in ('modelId', 'profileId') if key in row}}
         row.clear()
         row.update(clean)
     added = apply_evidence(snapshot, evidence, indexed=indexed)
@@ -156,7 +162,7 @@ def audit_gaps(history):
                 key = component_key(row, component)
                 if row.get(key, '') in MISSING_VALUE_MARKERS:
                     pair = (row['model'], component['id'])
-                    gaps.setdefault(pair, set()).add(snapshot['timestamp'][:10])
+                    gaps.setdefault(pair, set()).add(utc_day(snapshot['timestamp']))
     return gaps
 
 
@@ -180,11 +186,16 @@ def unresolved_record(model, component, days, evidence):
 @preconditions(data='mapping', evidence='mapping', rebuild='bool')
 def replay(data, evidence, *, rebuild=False):
     validate_evidence(evidence)
+    identities = roster_identity(data)
+    revision = scoring_revision()
+    rebuild = rebuild or data.get('scoringRevision') != revision or any(
+        (s.get('scoring') or {}).get('revision') != revision for s in data['history'])
     if rebuild:
         for snapshot in data['history']:
             snapshot.pop('scoring', None)
             for _, row in rows(snapshot):
-                clean = selected_columns(row, rebuild=True)
+                clean = {**selected_columns(row, rebuild=True),
+                         **{key: row[key] for key in ('modelId', 'profileId') if key in row}}
                 row.clear()
                 row.update(clean)
     before = audit_gaps(data['history'])
@@ -192,11 +203,15 @@ def replay(data, evidence, *, rebuild=False):
     indexed = index_evidence(evidence)
     for snapshot in data['history']:
         filled.extend(rescore_snapshot(snapshot, evidence, indexed=indexed))
+        snapshot['scoring']['revision'] = revision
+    if roster_identity(data) != identities:
+        raise ValueError('Replay changed snapshot identities or profiles')
+    data['scoringRevision'] = revision
     recompute_badges(data)
     data.setdefault('metadata', {})['avgIqBenchmarks'] = [b['name'] for b in load_config()['benchmarks']]
     data['metadata']['footerText'] = 'Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.'
     after = audit_gaps(data['history'])
-    dates = sorted({s['timestamp'][:10] for s in data['history']})
+    dates = sorted({utc_day(s['timestamp']) for s in data['history']})
     return {'firstDate': dates[0], 'lastDate': dates[-1], 'calendarDays': len(dates),
             'snapshots': len(data['history']), 'uniqueMissingPairsBefore': len(before),
             'uniquePairsWithFills': len(set(filled)), 'cellsFilled': len(filled),
@@ -255,11 +270,23 @@ def main():
     args = parser.parse_args()
     if args.refresh_images and not args.write:
         parser.error('--refresh-images requires --write')
+    original = json.loads((ROOT / 'models.json').read_text())
+    catalog = read_catalog(EVIDENCE_PATH)
+    original_catalog = copy.deepcopy(catalog)
     data = load_data(ROOT / 'models.json')
     evidence = load_evidence(EVIDENCE_PATH)
     report = replay(data, evidence, rebuild=args.rebuild)
     if args.write:
-        save_data(data, ROOT / 'models.json')
+        candidate_catalog = copy.deepcopy(catalog)
+        candidate = normalize(data, candidate_catalog)
+        if original.get('schemaVersion') == 2:
+            if roster_identity(original) != roster_identity(candidate) or candidate_catalog != original_catalog:
+                raise ValueError('Replay changed canonical rosters, profiles or evidence')
+        normalized = save_data(data, ROOT / 'models.json', catalog=catalog)
+        atomic_json(ROOT / 'data/scoring_revision.json', revision_record())
+        atomic_json(ROOT / 'data/site_summary.json', build_summary(
+            normalized, read_catalog(EVIDENCE_PATH), normalized['scoringRevision'],
+            generation_id(ROOT, normalized['scoringRevision'])))
         # Audit contains missing evidence only, never old calculated scores.
         (ROOT / 'data/historical_benchmark_gaps.json').write_text(json.dumps(report['unresolved'], indent=2)+'\n')
     if args.refresh_images:

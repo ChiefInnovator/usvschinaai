@@ -95,6 +95,10 @@ out/
 
 # Recoverable in-progress model-store transaction (never publish)
 .model-store-pending.json
+.publication-pending.json
+
+# Compiled, locally pinned frontend assets
+/assets/
 
 # Local browser verification artifacts
 .playwright-cli/

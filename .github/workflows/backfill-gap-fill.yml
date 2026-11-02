@@ -1,24 +1,19 @@
 name: Backfill gap-fill over history
 
-# Replays the AI gap-filling pass over stored history snapshots and re-scores
-# them (docs/gap_fill_backfill.md). Manual only. Uses the same OPENAI_API_KEY
-# secret as the daily scrape; no Playwright needed, so this takes minutes.
+# Researches dated evidence for retained models; always replays ALL history.
+# The research window never limits an algorithm migration. Manual only.
 on:
   workflow_dispatch:
     inputs:
       days:
-        description: 'Window in days, counted back from the newest snapshot'
+        description: 'Research model-selection window in days; scoring always replays all history'
         default: '45'
       max_calls:
         description: 'Live API call ceiling for the whole run'
         default: '80'
       model:
         description: 'Research model'
-        default: 'gpt-5.6-luna'
-      rescore:
-        description: 'Re-score the window with today''s scorer after filling'
-        type: boolean
-        default: true
+        default: 'gpt-6-luna'
 
 permissions:
   contents: write
@@ -34,21 +29,33 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.14'
           cache: 'pip'
           cache-dependency-path: 'scripts/requirements.txt'
+
+      - name: Set up frontend build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
 
+      - name: Build pinned local frontend assets
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run build:assets
+
       - name: Check OpenAI billing
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: python scripts/check_openai_billing.py --model "${{ github.event.inputs.model }}"
+          RESEARCH_MODEL: ${{ inputs.model }}
+        run: python scripts/check_openai_billing.py --model "$RESEARCH_MODEL"
 
       - name: Install Playwright browser
         run: python -m playwright install --with-deps chromium
@@ -56,27 +63,39 @@ jobs:
       - name: Run test suite
         run: python -m unittest discover -s tests
 
+      - name: Refresh dated benchmark sources
+        run: python scripts/refresh_benchmark_sources.py --write
+
       - name: Backfill
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RESEARCH_DAYS: ${{ inputs.days }}
+          RESEARCH_CALLS: ${{ inputs.max_calls }}
+          RESEARCH_MODEL: ${{ inputs.model }}
         run: |
-          RESCORE_FLAG=""
-          if [ "${{ github.event.inputs.rescore }}" != "true" ]; then RESCORE_FLAG="--no-rescore"; fi
-          python scripts/backfill_gap_fill.py \
-            --days "${{ github.event.inputs.days }}" \
-            --max-calls "${{ github.event.inputs.max_calls }}" \
-            --model "${{ github.event.inputs.model }}" $RESCORE_FLAG
+          python scripts/research_history.py --write \
+            --days "$RESEARCH_DAYS" --max-calls "$RESEARCH_CALLS" --model "$RESEARCH_MODEL"
+          python scripts/rescore_history.py --write
 
       - name: Validate
         run: python scripts/validate_models.py
 
-      - name: Commit and push
+      - name: Prepare and verify all historical scores
         run: |
+          python scripts/prepare_publication.py --write
+          python scripts/prepare_publication.py
+
+      - name: Commit and push
+        env:
+          RESEARCH_DAYS: ${{ inputs.days }}
+          RESEARCH_MODEL: ${{ inputs.model }}
+        run: |
+          git add models.json current.json data/model_catalog.json data/scoring_revision.json data/site_summary.json data/publication.json data/historical_benchmark_gaps.json og-image.png ig-image.png social/ data/social_caption_cache.json
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add models.json current.json data/model_catalog.json data/ai_gap_cache.json data/ai_fill_history.jsonl data/ai_gap_backfill_asked.json
           if git diff --cached --quiet; then echo "No changes to commit"; exit 0; fi
-          git commit -m "Backfill gap-fill over ${{ github.event.inputs.days }} days (${{ github.event.inputs.model }})"
+          git commit -m "Backfill gap-fill over $RESEARCH_DAYS days ($RESEARCH_MODEL)"
           # Merge (never rebase) anything pushed to main meanwhile, then push.
           git pull --no-rebase https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
           git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main

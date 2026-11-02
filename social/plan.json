@@ -1,16 +1,16 @@
 {
-  "date": "2026-11-02",
-  "timestamp": "2026-11-02T03:33:32+00:00",
   "format": "leaderboard",
   "palette": "midnight",
   "weight": 0,
+  "date": "2026-11-02",
+  "timestamp": "2026-11-02T03:33:32+00:00",
   "slides": [
     "2026-11-02-1-leaderboard-midnight.png"
   ],
   "urls": [
     "https://usvschina.ai/social/2026-11-02-1-leaderboard-midnight.png"
   ],
-  "caption": "The US keeps the top spot, but China owns 2 of the top 6.\n\n• US leads the scoreboard 5344.69 to 1383.48.\n• GPT-6 Astra ranks 1st at 900.2, ahead of GPT-6.1 Sol at 832.5.\n• Kimi K3 leads China at 704.7 in 5th; Claude Fable 5.1 gained 1 place.\n\nDoes China’s 2-model top 6 signal a tighter race?\n\n#AI #ArtificialIntelligence #AIModels #USvsChina #OpenAI #MoonshotAI #AILeaderboard",
-  "caption_source": "gpt-5.6-luna",
-  "generated_at": "2026-11-02T03:34:37.553076+00:00"
+  "caption": "Team USA leads by 3961\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 5345 vs Team China 1383\n• 8 US and 2 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
+  "caption_source": "deterministic",
+  "generated_at": "2026-11-02T03:33:32+00:00"
 }

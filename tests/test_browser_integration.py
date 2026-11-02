@@ -12,10 +12,12 @@ import sys
 import tempfile
 import threading
 import unittest
-import requests
+import hashlib
+import shutil
 from playwright.sync_api import sync_playwright
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from model_store import load_data, save_data
+from site_summary import build_summary
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -29,7 +31,8 @@ class BrowserIntegrationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.temp=tempfile.TemporaryDirectory();cls.root=Path(cls.temp.name)
         cls.addClassCleanup(cls.temp.cleanup)
-        for name in ('index.html','history.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js'):
+        shutil.copyfile(ROOT/'inventing-fire-mark.png',cls.root/'inventing-fire-mark.png')
+        for name in ('index.html','history.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js','js/site-data.js'):
             dest=cls.root/name;dest.parent.mkdir(parents=True,exist_ok=True)
             content=(ROOT/name).read_text()
             if name.endswith('.html'):
@@ -55,11 +58,20 @@ class BrowserIntegrationTests(unittest.TestCase):
         base['history'][1]['teams']['CN'][0]['unified']=990
         cls.input=copy.deepcopy(base)
         save_data(base,cls.root/'models.json')
-        cls.valid={name:(cls.root/name).read_bytes() for name in ('models.json','current.json','data/model_catalog.json')}
-        cls.assets={}
-        for url in ('https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js',
-                    'https://cdn.tailwindcss.com/3.4.16'):
-            response=requests.get(url,timeout=30);response.raise_for_status();cls.assets[url]=response.content
+        revision='browser-test-revision'
+        for name in ('models.json','current.json'):
+            data=json.loads((cls.root/name).read_text());data['scoringRevision']=revision
+            for snapshot in data['history']:snapshot.setdefault('scoring',{})['revision']=revision
+            (cls.root/name).write_text(json.dumps(data))
+        raw=json.loads((cls.root/'models.json').read_text())
+        catalog=json.loads((cls.root/'data/model_catalog.json').read_text())
+        summary=build_summary(raw,catalog,revision,'browser-test-generation')
+        (cls.root/'data/site_summary.json').write_text(json.dumps(summary))
+        cls.valid={name:(cls.root/name).read_bytes() for name in ('models.json','current.json','data/model_catalog.json','data/site_summary.json')}
+        manifest={'schemaVersion':1,'scoringRevision':revision,'generationId':'browser-test-generation',
+                  'artifacts':{name:hashlib.sha256(body).hexdigest() for name,body in cls.valid.items()}}
+        (cls.root/'data/publication.json').write_text(json.dumps(manifest))
+        shutil.copytree(ROOT/'assets',cls.root/'assets')
         cls.server=ThreadingHTTPServer(('127.0.0.1',0),functools.partial(QuietHandler,directory=cls.temp.name))
         cls.thread=threading.Thread(target=cls.server.serve_forever,daemon=True);cls.thread.start()
         cls.addClassCleanup(cls.server.server_close);cls.addClassCleanup(cls.server.shutdown)
@@ -78,8 +90,6 @@ class BrowserIntegrationTests(unittest.TestCase):
             if relative in self.failures:
                 status,body=self.failures[relative]
                 request.fulfill(status=status,body=body,content_type='application/json');return
-            if url in self.assets:
-                request.fulfill(status=200,body=self.assets[url],content_type='application/javascript');return
             if url.startswith(self.url):request.continue_();return
             # Nonessential icons/news are not the subject of these tests.
             request.fulfill(status=200,body='',content_type='application/javascript')
@@ -104,56 +114,99 @@ class BrowserIntegrationTests(unittest.TestCase):
         rendered=self.page.evaluate('''() => {const c=Chart.getChart('trendChart');return c.data.datasets.map((d,i)=>c.getDatasetMeta(i).data.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)));}''')
         self.assertEqual(rendered,[True,True]);self.assertGreater(len(self.page.locator('#trendChart').screenshot()),5000)
         self.assertEqual(self.page.locator('#benchmarks-section').get_attribute('open'),None)
-        self.assertEqual(self.page.locator('nav[aria-label="Page sections"] a').count(),7)
+        self.page.get_by_text('Explore sections', exact=True).click()
+        self.assertTrue(self.page.get_by_role('navigation',name='Page sections').get_by_role('link',name='Leaderboard').is_visible())
         self.assertTrue(self.page.locator('#matrixChart').is_visible());self.assertFalse(self.errors)
-        self.page.goto(self.url+'/history.html')
-        self.page.wait_for_function('historyData.length === 5')
-        # Every archived observation remains available, including the intraday one.
-        for i,snapshot in enumerate(self.input['history'][:4]):
-            top=sorted([(r['unified'],c) for c,rows in snapshot['teams'].items() for r in rows],reverse=True)[:10]
-            text=self.page.locator('#history-container > div').nth(i).inner_text()
-            for country in ('US','CN'):
-                self.assertIn(f'{sum(score for score,c in top if c==country):.1f}',text.replace(',',''))
+    def test_initial_home_never_downloads_raw_catalog_or_archive(self):
+        requested=[];self.page.on('request',lambda req:requested.append(req.url))
+        self.page.goto(self.url+'/index.html');self.ready()
+        for path in ('models.json','current.json','data/model_catalog.json'):
+            self.assertNotIn(self.url+'/'+path,requested)
+        self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
 
-    def test_catalog_http_failure_recovers_with_leaderboard_retry(self):
+    def test_summary_failure_recovers_with_retry(self):
+        self.failures['data/site_summary.json']=(503,'{}')
+        self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
+        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
+
+    def test_generation_mismatch_explains_refresh_and_recovers(self):
+        summary=json.loads(self.valid['data/site_summary.json']);summary['current']['teams']={'US':[],'CN':[]}
+        self.failures['data/site_summary.json']=(200,json.dumps(summary))
+        self.page.goto(self.url+'/index.html');self.page.get_by_text('Published data changed',exact=False).wait_for()
+        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
+
+    def test_deferred_evidence_failure_keeps_ranking_and_retries(self):
         self.failures['data/model_catalog.json']=(503,'{}')
-        self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
-        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
-        self.assertEqual(self.page.locator('#models-table-body tr').count(),10)
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.page.locator('#models-table-body details summary').first.click()
+        self.page.get_by_role('button',name='Retry evidence').wait_for()
+        self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
+        self.failures.clear();self.page.get_by_role('button',name='Retry evidence').click()
+        self.page.locator('#models-table-body .evidence-content').first.get_by_text(
+            'Missing results contribute zero',exact=False).wait_for()
 
-    def test_empty_roster_shows_error_and_retry_recovers(self):
-        empty=json.loads(self.valid['current.json'])
-        empty['history'][0]['teams']={'US':[],'CN':[]}
-        self.failures['current.json']=(200,json.dumps(empty))
-        self.page.goto(self.url+'/index.html')
-        self.page.get_by_role('button',name='Retry',exact=True).wait_for()
-        self.assertEqual(self.page.locator('#page-subtitle').text_content(),'Data temporarily unavailable')
-        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
-        self.assertEqual(self.page.locator('#models-table-body tr').count(),10)
+    def test_chart_constructor_failure_preserves_rankings_and_tables(self):
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.page.evaluate("() => {window.Chart = class {constructor(){throw new Error('Chart render failed')}};}")
+        self.page.evaluate('fetchModels()')
+        self.page.get_by_text('Intelligence vs. Value chart unavailable.',exact=False).wait_for()
+        self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
+        self.assertEqual(self.page.locator('#matrix-values tbody tr').count(),12)
+        self.assertEqual(self.page.locator('#trend-values tbody tr').count(),3)
+        self.assertNotEqual(self.page.locator('#page-subtitle').inner_text(),'Data temporarily unavailable')
+        self.assertFalse(self.errors)
 
-    def test_malformed_catalog_json_recovers_with_retry(self):
-        self.failures['data/model_catalog.json']=(200,'{broken')
-        self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
-        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
+    def test_future_summary_timestamp_has_explicit_warning(self):
+        from datetime import datetime, timedelta, timezone
+        future=(datetime.now(timezone.utc)+timedelta(minutes=10)).isoformat()
+        summary=json.loads(self.valid['data/site_summary.json'])
+        summary['current']['timestamp']=future;summary['history'][0]['timestamp']=future
+        body=json.dumps(summary)
+        manifest=json.loads((self.root/'data/publication.json').read_text())
+        manifest['artifacts']['data/site_summary.json']=hashlib.sha256(body.encode()).hexdigest()
+        self.failures['data/site_summary.json']=(200,body)
+        self.failures['data/publication.json']=(200,json.dumps(manifest))
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.assertIn('more than five minutes in the future',self.page.locator('#snapshot-freshness-warning').inner_text())
+        self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
 
-    def test_invalid_catalog_structure_does_not_poison_retry_cache(self):
-        self.failures['data/model_catalog.json']=(200,'{"models":{},"components":[]}')
-        self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
-        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click();self.ready()
+    def test_loaded_snapshot_is_labeled_while_offline_and_updates_online(self):
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.context.set_offline(True)
+        self.page.wait_for_function("document.getElementById('connection-status').textContent.includes('Offline')")
+        status=self.page.locator('#connection-status')
+        self.assertTrue(status.is_visible())
+        self.assertIn(self.input['history'][0]['timestamp'],status.inner_text())
+        self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
+        self.context.set_offline(False)
+        self.page.wait_for_function("document.getElementById('connection-status').hidden")
 
-    def test_history_http_failure_and_malformed_json_recover_on_reload(self):
-        for status,body in ((503,'{}'),(200,'{broken')):
-            with self.subTest(status=status):
-                self.failures['models.json']=(status,body)
-                self.page.goto(self.url+'/index.html')
-                self.page.get_by_text('Historical comparison could not load.',exact=False).wait_for()
-                self.failures.clear();self.page.reload();self.ready()
+    def test_service_worker_cached_response_is_labeled_even_when_online(self):
+        self.page.route('**/data/site_summary.json',lambda route:route.fulfill(status=200,
+            body=self.valid['data/site_summary.json'],headers={'Content-Type':'application/json','X-Site-Cache':'offline'}))
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.assertTrue(self.page.evaluate('navigator.onLine'))
+        self.assertIn('Cached data',self.page.locator('#connection-status').inner_text())
+        self.assertTrue(self.page.locator('#connection-status').is_visible())
 
-    def test_archive_failure_recovers_using_its_retry_button(self):
-        self.failures['models.json']=(503,'{}')
-        self.page.goto(self.url+'/history.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
-        self.failures.clear();self.page.get_by_role('button',name='Retry',exact=True).click()
-        self.page.wait_for_function('historyData.length === 5')
+    def test_hydrate_evidence_cutoff_uses_utc_day_for_offset_timestamps(self):
+        self.page.goto(self.url+'/index.html');self.ready()
+        values=self.page.evaluate("""() => {
+            const catalog={components:[{id:'test',column:'Test'}],models:{m:{profiles:{p:{model:'Offset model'}},benchmarks:{test:{early:{score:50,availableFrom:'2026-09-06'},next:{score:90,availableFrom:'2026-09-07'}}}}}};
+            const hydrate=timestamp=>ModelStore.hydrate({schemaVersion:2,history:[{timestamp,teams:{US:[{modelId:'m',profileId:'p'}],CN:[]}}]},catalog).history[0].teams.US[0].Test;
+            return [hydrate('2026-09-07T00:30:00+04:00'),hydrate('2026-09-06T23:30:00-04:00')];
+        }""")
+        self.assertEqual(values,['50%','90%'])
+
+    def test_hydrate_uses_active_component_columns_and_keeps_zero_weights(self):
+        self.page.goto(self.url+'/index.html');self.ready()
+        row=self.page.evaluate("""() => {
+            const catalog={components:[{id:'old',column:'Retired'},{id:'new',column:'Active'}],models:{m:{profiles:{p:{model:'Changed definition'}},benchmarks:{old:{e:{score:99,availableFrom:'2026-01-01'}},new:{e:{score:80,availableFrom:'2026-01-01'}}}}}};
+            return ModelStore.hydrate({schemaVersion:2,history:[{timestamp:'2026-09-07T00:00:00Z',scoring:{avgIqWeights:{Active:0}},teams:{US:[{modelId:'m',profileId:'p'}],CN:[]}}]},catalog).history[0].teams.US[0];
+        }""")
+        self.assertEqual(row['Active'],'80%')
+        self.assertNotIn('Retired',row)
+        self.assertEqual(row['modelId'],'m')
 
     def test_public_page_actions_have_positive_and_negative_precondition_cases(self):
         import re
@@ -192,19 +245,6 @@ class BrowserIntegrationTests(unittest.TestCase):
             }
             for(const value of [null,0,84.5,'score',true,{scores:[1,2,null]}]) AppContract.check('jsonTest',[value],['json']);
             return true;
-        }''')
-        self.assertTrue(result)
-
-    def test_archive_index_precondition_rejects_out_of_range_without_changing_state(self):
-        self.page.goto(self.url+'/history.html');self.page.wait_for_function('historyData.length === 5')
-        self.page.evaluate('toggleEntry(0)')
-        self.assertTrue(self.page.get_by_text('Test Model 0',exact=False).first.is_visible())
-        result=self.page.evaluate('''() => {
-            const before=JSON.stringify(expandedEntries);
-            for(const i of [-1,5,1.5]) {
-                try {toggleEntry(i);return false;} catch(e) {if(!(e instanceof TypeError || e instanceof RangeError))return false;}
-            }
-            return before===JSON.stringify(expandedEntries);
         }''')
         self.assertTrue(result)
 

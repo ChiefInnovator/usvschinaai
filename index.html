@@ -73,22 +73,21 @@
     </script>
     
     <script src="js/model-store.js"></script>
-    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
-    <script src="https://cdn.jsdelivr.net/npm/lucide@0.454.0/dist/umd/lucide.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+    <script src="js/site-data.js"></script>
+    <link rel="stylesheet" href="assets/site.css">
+    <script src="assets/vendor/lucide.min.js"></script>
+    <script src="assets/vendor/chart.umd.min.js"></script>
     <style>
         body { background: #020617; color: #f8fafc; font-family: 'Inter', system-ui, sans-serif; }
         .glass { background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
         .scoreboard-card { border: none; }
-        .neon-blue { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-        .neon-red { box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); }
-        .winner-gradient { background: linear-gradient(90deg, #3b82f6, #ef4444); -webkit-background-clip: text; color: transparent; }
+        .winner-gradient { color: #cbd5e1; }
         
         /* Custom Scrollbar */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f172a; }
         ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
         .sort-icon { transition: transform 0.2s; }
         .sort-asc .sort-icon { transform: rotate(180deg); }
@@ -144,125 +143,72 @@
             font-weight: 600;
         }
 
-        /* News Marquee */
-        .news-marquee-bar {
-            background: linear-gradient(90deg, rgba(30, 58, 138, 0.7), rgba(127, 29, 29, 0.7));
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
+        .news-headlines {margin:1rem 0 2rem;}
+        .news-headlines h2 {font-size:1.125rem;font-weight:700;margin-bottom:.5rem;}
+        .news-headlines a {display:block;padding:.75rem 0;color:#e2e8f0;border-bottom:1px solid #334155;}
+        .news-headlines a:hover {color:#fff;text-decoration:underline;}
+        .news-headlines small {display:block;color:#cbd5e1;font-size:.875rem;margin-top:.25rem;}
+
+
+        :focus-visible { outline: 2px solid #93c5fd; outline-offset: 4px; }
+        ::selection { background:#1d4ed8; color:white; }
+        .text-slate-400,.text-slate-500,.text-slate-600 { color:#94a3b8; }
+        header { margin-bottom:1.5rem!important; } #page-title {font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.03em;}
+        body>div>nav:first-child {margin-bottom:1.5rem;padding-top:0;padding-bottom:1rem;}
+        #scoreboard {gap:1rem;margin-bottom:1.5rem;} .scoreboard-card {padding:1.25rem;border-width:1px;border-radius:16px;box-shadow:none;}
+        #scoreboard .text-5xl {font-size:2.5rem;} #scoreboard .mt-6 {margin-top:1rem;}
+        .evidence { margin-top:.5rem; font-size:.8rem;color:#cbd5e1;} .evidence summary {cursor:pointer;color:#93c5fd;}
+        .evidence-content {overflow-wrap:anywhere;max-width:65ch;} .evidence-content table{width:100%;font-size:.75rem;}
+        .evidence-content th,.evidence-content td{padding:.4rem;text-align:left;vertical-align:top;}
+        #leaderboardFlipContainer td,#leaderboardFlipContainer th{font-variant-numeric:tabular-nums;}
+        .section-navigation {margin:0 0 1.5rem;color:#cbd5e1;font-size:.875rem;}
+        .section-navigation > summary {cursor:pointer;padding:.5rem 0;}
+        .section-navigation nav {margin-top:.75rem;margin-bottom:0;}
+        @media(max-width:640px){
+          #scoreboard{grid-template-columns:1fr 1fr;gap:.5rem;}.scoreboard-card{padding:.75rem;}#scoreboard h2{font-size:1rem;}#scoreboard .text-5xl{font-size:1.75rem;}#scoreboard [id$="-desc"],#scoreboard .space-y-2,#scoreboard .h-px,.leading-badge{display:none;}#scoreboard [id$="-badge"]{font-size:.6875rem;padding:.15rem;}
+          #scoreboard .scoreboard-card>.flex:first-child{display:block;}
+          #scoreboard h2{display:block;white-space:nowrap;}
+          #scoreboard [id$="-badge"]{display:inline-block;margin-top:.25rem;padding:.15rem .35rem;}
+          #scoreboard .items-end{display:block;margin-top:.5rem;}
+          #scoreboard .items-end>span{display:block;white-space:nowrap;font-size:.6875rem;}
+          #scoreboard .text-5xl{font-size:clamp(1.4rem,7vw,1.75rem);margin-top:.15rem;}
+          #leaderboardFlipContainer .p-6{padding:.6rem;}#leaderboardFlipContainer table{table-layout:fixed;}#table-header th:nth-child(1){width:12%;}#table-header th:nth-child(2){width:61%;}#table-header th:last-child{width:27%;}
+          #models-table-body > tr > td:nth-child(3),#models-table-body > tr > td:nth-child(4),#table-header th:nth-child(3),#table-header th:nth-child(4){display:none;}
+          #models-table-body > tr > td:nth-child(2) a{font-size:.9rem;flex-wrap:wrap;word-break:break-word;}#models-table-body > tr > td:last-child span{font-size:1.1rem;}
+          #models-table-body > tr > td:nth-child(2)>div>div{flex-wrap:wrap;}#leaderboardFlipContainer .overflow-x-auto{overflow:visible;}#leaderboardFlipContainer button{padding:.35rem;}
+          #intelligence-matrix,#last-30-days{padding:1rem;} nav .gap-8{gap:1rem;} .evidence-content table{table-layout:fixed;}.evidence-content th,.evidence-content td{padding:.2rem;word-break:break-word;}
         }
-        .news-marquee-track {
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            will-change: transform;
-        }
-        .news-marquee-track.scrolling {
-            animation: newsScroll var(--scroll-duration, 60s) linear infinite;
-        }
-        .news-marquee-track:hover {
-            animation-play-state: paused;
-        }
-        @keyframes newsScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-            .news-marquee-track.scrolling {
-                animation: none;
-                overflow-x: auto;
-            }
-        }
-        .news-item {
-            display: inline-flex;
-            align-items: center;
-            padding: 0 2rem;
-            color: #e2e8f0;
-            text-decoration: none;
-            font-size: 1.125rem;
-            transition: color 0.2s;
-        }
-        .news-item:hover { color: #ffffff; }
-        .news-item .news-source {
-            color: rgba(255, 255, 255, 0.4);
-            margin-left: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .news-item .news-time {
-            color: rgba(255, 255, 255, 0.3);
-            margin-left: 0.75rem;
-            font-size: 0.95rem;
-        }
-        .news-separator {
-            color: rgba(255, 255, 255, 0.2);
-            margin: 0 0.75rem;
-            font-size: 0.95rem;
-        }
-        .benchmark-summary { list-style: none; }
-        .benchmark-summary::-webkit-details-marker { display: none; }
-        #benchmarks-section[open] .benchmark-preview { display: none; }
-        #benchmarks-section[open] .benchmark-chevron { transform: rotate(180deg); }
+        @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
-    <!-- News Marquee (loaded from news.json) -->
-    <div id="newsMarquee" class="hidden -mx-4 md:-mx-12 -mt-4 md:-mt-12 mb-4 md:mb-8" role="marquee" aria-label="Latest AI news headlines"></div>
+
 
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
         <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
             <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
                 <span class="group-hover:text-blue-400 transition">US</span>
-                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
+                <span class="text-slate-400 mx-1 group-hover:text-slate-400 transition">vs</span>
                 <span class="group-hover:text-red-400 transition">CHINA</span>
                 <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
             </a>
             <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
                 <a href="index.html" class="text-white border-b-2 border-blue-500 pb-1">Leaderboard</a>
-                <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
-                <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
+                <a href="history.html" class="text-slate-400 hover:text-white transition">Archives</a>
+                <a href="about.html" class="text-slate-400 hover:text-white transition">About</a>
             </div>
         </nav>
 
-        <nav aria-label="Page sections" class="flex flex-wrap justify-center gap-3 mb-8 text-sm">
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#scoreboard">Scoreboard</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#leaderboardFlipContainer">Leaderboard</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#benchmarks-section">Benchmarks</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#intelligence-matrix">Intelligence vs. Value</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#last-30-days">Last 30 Days</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#companies">Companies</a>
-            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#methodology">Methodology</a>
-        </nav>
+
 
         <header class="text-center mb-12">
             <h1 class="text-6xl md:text-8xl font-black italic tracking-tighter mb-4 py-2" id="page-title">
                 <!-- Title loaded from JSON -->
             </h1>
             <p class="text-slate-400 text-sm md:text-xl font-light tracking-widest uppercase px-4 break-words mb-6" id="page-subtitle"><!-- Subtitle loaded from JSON --></p>
+            <p id="connection-status" role="status" class="text-sm text-amber-300" hidden></p>
             
-            <!-- Share Buttons -->
-            <div class="flex flex-wrap justify-center gap-2 md:gap-3">
-                <button onclick="shareOnX()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-slate-700 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-white/20">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    <span class="hidden sm:inline">X (formerly Twitter)</span>
-                </button>
-                <button onclick="shareOnFacebook()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-[#1877F2] px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-[#1877F2]">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    <span class="hidden sm:inline">Facebook</span>
-                </button>
-                <button onclick="shareOnLinkedIn()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-[#0A66C2] px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-[#0A66C2]">
-                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    <span class="hidden sm:inline">LinkedIn</span>
-                </button>
-                <button onclick="copyLink()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-purple-600 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-purple-500">
-                    <i data-lucide="link" class="w-4 h-4"></i>
-                    <span id="copy-link-text">Copy Link</span>
-                </button>
-                <button onclick="shareViaEmail()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-green-600 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-green-500">
-                    <i data-lucide="mail" class="w-4 h-4"></i>
-                    <span class="hidden sm:inline">Email</span>
-                </button>
-            </div>
         </header>
 
         <!-- National Scoreboard -->
@@ -280,20 +226,20 @@
                 </div>
                 
                 <div class="flex justify-between items-end mt-6 relative z-10">
-                    <span class="text-slate-400 text-sm uppercase tracking-wider">Total Score</span>
-                    <div class="text-5xl md:text-6xl font-black text-blue-400" id="score-usa">0.0</div>
+                    <span class="text-slate-400 text-sm uppercase tracking-wider">Top 10 sum</span>
+                    <div class="text-5xl md:text-6xl font-black text-blue-400" id="score-usa">—</div>
                 </div>
                 
                 <div class="h-px bg-white/10 my-4 relative z-10"></div>
 
                 <div class="space-y-2 relative z-10">
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-400">Avg IQ Index</span>
-                        <span class="font-bold font-mono text-white" id="avg-iq-usa">0.0</span>
+                        <span class="text-slate-400">Avg IQ (0–100)</span>
+                        <span class="font-bold font-mono text-white" id="avg-iq-usa">—</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-400">Avg Value Index</span>
-                        <span class="font-bold font-mono text-white" id="avg-value-usa">0.0</span>
+                        <span class="text-slate-400">Avg Value</span>
+                        <span class="font-bold font-mono text-white" id="avg-value-usa">—</span>
                     </div>
                 </div>
             </div>
@@ -313,25 +259,37 @@
                 </div>
 
                 <div class="flex justify-between items-end mt-6 relative z-10">
-                    <span class="text-slate-400 text-sm uppercase tracking-wider">Total Score</span>
-                    <div class="text-5xl md:text-6xl font-black text-red-400" id="score-china">0.0</div>
+                    <span class="text-slate-400 text-sm uppercase tracking-wider">Top 10 sum</span>
+                    <div class="text-5xl md:text-6xl font-black text-red-400" id="score-china">—</div>
                 </div>
                 
                 <div class="h-px bg-white/10 my-4 relative z-10"></div>
 
                 <div class="space-y-2 relative z-10">
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-400">Avg IQ Index</span>
-                        <span class="font-bold font-mono text-white" id="avg-iq-china">0.0</span>
+                        <span class="text-slate-400">Avg IQ (0–100)</span>
+                        <span class="font-bold font-mono text-white" id="avg-iq-china">—</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                        <span class="text-slate-400">Avg Value Index</span>
-                        <span class="font-bold font-mono text-white" id="avg-value-china">0.0</span>
+                        <span class="text-slate-400">Avg Value</span>
+                        <span class="font-bold font-mono text-white" id="avg-value-china">—</span>
                     </div>
                 </div>
             </div>
         </div>
 
+        <p class="text-sm text-slate-300 mb-4">National totals sum each country’s models in the combined global Top 10. <span id="national-counts"></span> Filters change the list below, not these totals.</p>
+        <details class="section-navigation"><summary>Explore sections</summary>
+        <nav aria-label="Page sections" class="flex flex-wrap justify-center gap-3 mb-8 text-sm">
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#scoreboard">Scoreboard</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#leaderboardFlipContainer">Leaderboard</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#benchmarks-section">Benchmarks</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#intelligence-matrix">Intelligence vs. Value</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#last-30-days">Last 30 Days</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#companies">Companies</a>
+            <a class="px-3 py-2 rounded-lg bg-white/5 hover:bg-white/10 text-slate-300" href="#methodology">Methodology</a>
+        </nav>
+        </details>
         <!-- Main Table -->
         <div class="glass rounded-3xl overflow-hidden shadow-2xl border border-white/5 mb-12" id="leaderboardFlipContainer">
                 <!-- Toolbar -->
@@ -340,8 +298,8 @@
                         <i data-lucide="list-ordered" class="text-blue-400"></i> Leaderboard
                     </h3>
                     
-                    <div class="flex items-center gap-2 bg-slate-900/50 p-1 rounded-lg border border-white/5">
-                        <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20">
+                    <div role="group" aria-label="Leaderboard filters" class="flex items-center gap-2 p-1">
+                        <button onclick="setFilter('top10')" id="filter-top10" class="px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-700 text-white shadow-lg shadow-blue-500/20">
                             <i data-lucide="trophy" class="w-3 h-3"></i> Top 10
                         </button>
                         <button onclick="setFilter('all')" id="filter-all" class="px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5">
@@ -358,11 +316,11 @@
                 
                 <div class="overflow-x-auto">
                     <table class="w-full text-left border-collapse">
-                        <thead class="bg-slate-900/80 text-slate-500 text-sm uppercase tracking-tighter" id="table-header">
+                        <thead class="bg-slate-900/80 text-slate-400 text-sm uppercase tracking-tighter" id="table-header">
                             <!-- Headers loaded from JSON -->
                         </thead>
                         <tbody class="divide-y divide-white/5" id="models-table-body">
-                            <!-- Rows will be populated by JS -->
+                            <tr><td colspan="5" class="p-6" role="status">Loading rankings…</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -382,15 +340,40 @@
                 </details>
         </div>
 
+            <!-- Share Buttons -->
+            <div id="share-controls" aria-label="Share this leaderboard" class="flex flex-wrap justify-center gap-2 md:gap-3">
+                <button aria-label="Share on X" onclick="shareOnX()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-slate-700 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-white/20">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    <span class="hidden sm:inline">X (formerly Twitter)</span>
+                </button>
+                <button aria-label="Share on Facebook" onclick="shareOnFacebook()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-[#1877F2] px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-[#1877F2]">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    <span class="hidden sm:inline">Facebook</span>
+                </button>
+                <button aria-label="Share on LinkedIn" onclick="shareOnLinkedIn()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-[#0A66C2] px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-[#0A66C2]">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    <span class="hidden sm:inline">LinkedIn</span>
+                </button>
+                <button onclick="copyLink()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-purple-600 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-purple-500">
+                    <i data-lucide="link" class="w-4 h-4"></i>
+                    <span id="copy-link-text">Copy Link</span>
+                </button>
+                <button aria-label="Share by email" onclick="shareViaEmail()" class="flex items-center gap-2 bg-slate-800/80 hover:bg-green-600 px-4 py-2 rounded-full transition text-slate-400 hover:text-white text-sm border border-white/10 hover:border-green-500">
+                    <i data-lucide="mail" class="w-4 h-4"></i>
+                    <span class="hidden sm:inline">Email</span>
+                </button>
+            </div>
+<p id="share-status" role="status"></p><input id="share-link-fallback" aria-label="Copy this leaderboard link" readonly hidden>
+<div id="newsHeadlines" class="hidden mb-4" aria-label="Latest AI news headlines"></div>
         <!-- Intelligence vs Value Matrix -->
         <div id="intelligence-matrix" class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
                 <i data-lucide="scatter-chart" class="text-purple-400"></i> Intelligence vs. Value Matrix
             </h3>
-            <p class="text-slate-400 text-sm mb-6">Visualizing the trade-off between raw capability (IQ Index) and cost-efficiency (Value Index). The ideal model sits in the top-right quadrant.</p>
+            <p class="text-slate-400 text-sm mb-6">Avg IQ is a weighted 0–100 index. Value is Avg IQ divided by input plus output price per million tokens; higher values indicate greater cost efficiency. Normalization occurs inside Unified.</p>
             
             <div class="relative w-full h-[500px]">
-                <canvas id="matrixChart"></canvas>
+                <canvas role="img" aria-label="Intelligence and value by model; exact values in table below" id="matrixChart"></canvas>
             </div>
             
             <!-- Legend & Quadrant Guide -->
@@ -405,19 +388,19 @@
                         <span class="text-slate-300 text-sm">China Models</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span class="text-slate-500 text-sm">•</span>
+                        <span class="text-slate-400 text-sm">•</span>
                         <span class="text-slate-400 text-sm">Size = Unified Score</span>
                     </div>
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                <div class="bg-blue-500/10 border border-blue-500/20 rounded-xl p-4 text-center">
+                <div class="p-4 text-center">
                     <div class="flex items-center justify-center gap-2 text-blue-400 font-bold mb-1">
                         <span>💎</span> High IQ, Low Value
                     </div>
                     <p class="text-slate-400 text-xs">Premium frontier models</p>
                 </div>
-                <div class="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-4 text-center">
+                <div class="p-4 text-center">
                     <div class="flex items-center justify-center gap-2 text-yellow-400 font-bold mb-1">
                         <span>🏆</span> High IQ, High Value
                     </div>
@@ -431,7 +414,7 @@
             <p class="text-slate-400 text-sm mb-4">National scores from the global Top 10. One point per UTC day, using that day’s latest snapshot. Lines connect recorded days. Hover for the snapshot time and scores.</p>
             <p id="trend-status" role="status" class="text-slate-400 text-sm mb-4">Loading historical comparison…</p>
             <div class="relative w-full h-[350px] md:h-[420px]">
-                <canvas id="trendChart" role="img" aria-label="Last 30 days of United States and China national scores"></canvas>
+                <canvas role="img" aria-label="USA and China Top 10 sums over 30 days; exact values in table below" id="trendChart"></canvas>
             </div>
         </section>
 
@@ -456,25 +439,25 @@
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Unified Power Score (0–1000)</h4>
                     <p class="mb-2">Weighted blend emphasizing capability (90%) over cost efficiency (10%).</p>
-                    <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-4">
+                    <div class="font-mono text-xs mb-4 break-words">
                         Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                     </div>
-                    <p class="mb-4 text-xs text-slate-500 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
+                    <p class="mb-4 text-xs text-slate-400 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
 
                     <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (eighteen benchmarks)</h4>
                     <p class="mb-2">Avg IQ combines the eighteen selected benchmark scores using fixed allocations. The denominator always includes all eighteen; missing results contribute zero.</p>
-                    <p class="mb-2 text-xs text-slate-500">For each benchmark, we use the highest verified score for the exact model across all effort levels. The benchmark version, subset and evaluation protocol must match; results involving fallback to another model are excluded.</p>
-                    <p class="text-xs text-slate-500">Participation does not change benchmark eligibility or scoring. Models have no minimum benchmark-count requirement. Coverage describes available evidence; it does not determine whether a model can rank.</p>
+                    <p class="mb-2 text-xs text-slate-400">For each benchmark, we use the highest verified score for the exact model across all effort levels. The benchmark version, subset and evaluation protocol must match; results involving fallback to another model are excluded.</p>
+                    <p class="text-xs text-slate-400">Participation does not change benchmark eligibility or scoring. Models have no minimum benchmark-count requirement. Coverage describes available evidence; it does not determine whether a model can rank.</p>
                 </div>
                 <div>
                     <h4 class="text-white font-bold mb-2 text-lg">Value (efficiency)</h4>
                     <p class="mb-4">Value = AvgIQ ÷ (Input $/M + Output $/M). Lower cost with higher capability increases Value.</p>
-                    <p class="text-xs text-slate-500 mb-4">Value is also normalized across the cohort before contributing to Unified. Models without usable public pricing receive zero Value.</p>
+                    <p class="text-xs text-slate-400 mb-4">Value is also normalized across the cohort before contributing to Unified. Models without usable public pricing receive zero Value.</p>
 
                     <h4 class="text-white font-bold mb-2 text-lg">National Score</h4>
                     <p class="mb-4">For USA and China, we sum the Unified scores of that nation’s models inside the global Top 10.</p>
-                    <p class="text-xs text-slate-500 italic">This rewards both peak performance and depth in the top of the table.</p>
-                    <p class="text-xs text-slate-500 mt-4 border-t border-white/5 pt-4">
+                    <p class="text-xs text-slate-400 italic">This rewards both peak performance and depth in the top of the table.</p>
+                    <p class="text-xs text-slate-400 mt-4 border-t border-white/5 pt-4">
                         Not affiliated with any model provider. No guarantees are made about correctness, completeness, or fitness for any purpose.
                     </p>
                 </div>
@@ -504,7 +487,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
+    <footer class="max-w-6xl mx-auto w-full text-center pb-8 text-slate-400 text-sm flex flex-col md:flex-row justify-between items-center gap-4 mt-12 border-t border-white/5 pt-8">
         <div>
             <p>&copy; 2026 US vs CHINA AI. All rights reserved.</p>
         </div>
@@ -547,6 +530,7 @@
             'FrontierMath': 'FrontierMath'
         };
 
+        let siteSummary = null;
         let appData = {};
         let models = [];
         let benchmarkList = [];
@@ -616,7 +600,6 @@
             if (!prov || typeof prov !== 'object') return out;
             Object.entries(prov).forEach(([key, entry]) => {
                 if (!entry || typeof entry !== 'object') return;
-                if (entry.source !== 'ai_filled') return;
                 out[normalizeBenchmarkName(key)] = entry;
             });
             return out;
@@ -633,6 +616,7 @@
                 const costIn = parseNumeric(row['Input$/M'] ?? row['Input $/M']) ?? 0;
                 const costOut = parseNumeric(row['Output$/M'] ?? row['Output $/M']) ?? 0;
                 return {
+                    modelId: row.modelId, profileId: row.profileId, coverage: row.coverage,
                     name: row.model || row.name || 'Unknown Model',
                     origin: row.origin || 'US',
                     link: row.link || '#',
@@ -670,18 +654,15 @@
                 const benchmarkCells = benchmarkList.map(name => {
                     const score = model.benchmarkMap[name];
                     if (score === undefined || score === null) {
-                        return '<td class="p-3 text-center text-slate-600">—</td>';
+                        return '<td class="p-3 text-center text-slate-400">—</td>';
                     }
-                    // If this score was AI-filled, render a sparkles marker
-                    // with a tooltip showing source + confidence. Scraped
-                    // scores are unmarked.
+                    // Report stored evidence without inferring authorship or confidence.
                     const prov = model.provenanceMap && model.provenanceMap[name];
                     if (prov) {
-                        const confLabel = (prov.confidence || 'unknown').toLowerCase();
-                        const tooltip = `Filled by AI · ${prov.llm_model || 'unknown'} · ${confLabel} confidence · source: ${prov.url || '(no url)'}`;
+                        const tooltip = `Evidence · available ${prov.availableFrom || 'not reported'} · source: ${prov.url || '(no url)'}`;
                         const linkHtml = prov.url
-                            ? `<a href="${prov.url}" target="_blank" rel="noopener" class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">✨</a>`
-                            : `<span class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">✨</span>`;
+                            ? `<a href="${prov.url}" target="_blank" rel="noopener" class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">Source</a>`
+                            : `<span class="ai-provenance-mark" title="${tooltip.replace(/"/g, '&quot;')}" aria-label="${tooltip.replace(/"/g, '&quot;')}">Source</span>`;
                         return `<td class="p-3 text-center text-green-400 font-semibold">${formatNumber(score)} ${linkHtml}</td>`;
                     }
                     return `<td class="p-3 text-center text-green-400 font-semibold">${formatNumber(score)}</td>`;
@@ -724,14 +705,11 @@
         async function fetchModels() {
             AppContract.check("fetchModels", arguments, []);
             try {
-                // Dated roster references are expanded from the shared model catalog.
-                let response = await fetch('current.json');
-                if (!response.ok) response = await fetch('models.json');
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                appData = await ModelStore.expand(await response.json());
-                const history = Array.isArray(appData.history) ? appData.history : [];
-                if (!history.length) throw new Error('No history entries in models.json');
-                currentEntry = history[0];
+                SiteData.reset();
+                siteSummary = await SiteData.loadSummary();
+                appData = {...siteSummary, history:[siteSummary.current]};
+                currentEntry = siteSummary.current;
+                readViewState();
                 models = normalizeModelsFromEntry(currentEntry);
                 if (!models.length) throw new Error('Leaderboard contains no models');
                 populateStaticContent();
@@ -751,7 +729,7 @@
                 const tbody = document.getElementById('models-table-body');
                 if (tbody) {
                     tbody.innerHTML = '<tr><td colspan="5" class="p-8 text-center text-slate-400">' +
-                        'Couldn\'t load leaderboard data. ' +
+                        esc(error.message) + ' ' +
                         '<button type="button" onclick="fetchModels()" class="text-blue-400 hover:underline">Retry</button>' +
                         '</td></tr>';
                 }
@@ -764,15 +742,20 @@
         // missed a cycle — say so instead of presenting stale data as live.
         function renderStaleBanner() {
             AppContract.check("renderStaleBanner", arguments, []);
+            document.getElementById('snapshot-freshness-warning')?.remove();
             if (!currentEntry?.timestamp) return;
             const age = Date.now() - new Date(currentEntry.timestamp).getTime();
-            if (Number.isNaN(age) || age < 26 * 60 * 60 * 1000) return;
+            if (Number.isNaN(age)) return;
+            const future = age < -5 * 60 * 1000;
+            if (!future && age < 26 * 60 * 60 * 1000) return;
             const subtitle = document.getElementById('page-subtitle');
             if (!subtitle) return;
             const days = Math.round(age / (24 * 60 * 60 * 1000));
             const warn = document.createElement('div');
+            warn.id = 'snapshot-freshness-warning';
+            warn.setAttribute('role', 'status');
             warn.className = 'mt-2 inline-block text-xs text-amber-400 bg-amber-500/10 border border-amber-500/30 rounded-full px-3 py-1';
-            warn.textContent = `⚠ Data is ${days} day${days === 1 ? '' : 's'} old — the daily update may be delayed`;
+            warn.textContent = future ? 'Snapshot timestamp is more than five minutes in the future. Check the publication date or your device clock.' : `Data is ${days} day${days === 1 ? '' : 's'} old — the daily update may be delayed`;
             subtitle.insertAdjacentElement('afterend', warn);
         }
 
@@ -782,7 +765,7 @@
             document.title = `${metaTitle} | Global Leaderboard`;
 
             const titleEl = document.getElementById('page-title');
-            titleEl.innerHTML = `US <span class="text-slate-600 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`;
+            titleEl.innerHTML = `US <span class="text-slate-400 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`;
 
             const subtitle = currentEntry?.timestamp ? `Updated ${formatUpdatedTimestamp(currentEntry.timestamp)}` : '';
             document.getElementById('page-subtitle').textContent = subtitle;
@@ -804,7 +787,7 @@
             const cols = [
                 { key: 'rank', label: 'Rank' },
                 { key: 'name', label: 'Model' },
-                { key: 'iq', label: 'AvgIQ (normalized)' },
+                { key: 'iq', label: 'Avg IQ (0–100)' },
                 { key: 'value', label: 'Value (AvgIQ / Cost)' },
                 { key: 'unified', label: 'Unified (0-1000)' }
             ];
@@ -814,10 +797,10 @@
                 if (col.key === 'iq' || col.key === 'value') alignClass = 'text-center';
                 if (col.key === 'unified') alignClass = 'text-right';
                 headerRow += `
-                    <th class="p-6 cursor-pointer hover:text-white transition group ${alignClass}" onclick="sortTable('${col.key}')">
-                        <div class="flex items-center ${alignClass === 'text-right' ? 'justify-end' : (alignClass === 'text-center' ? 'justify-center' : '')} gap-1">
+                    <th data-sort="${col.key}" scope="col" class="p-6 hover:text-white transition group ${alignClass}">
+                        <button type="button" onclick="sortTable('${col.key}')" class="flex items-center ${alignClass === 'text-right' ? 'justify-end' : (alignClass === 'text-center' ? 'justify-center' : '')} gap-1">
                             ${col.label} <i data-lucide="arrow-up-down" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                        </div>
+                        </button>
                     </th>
                 `;
             });
@@ -826,7 +809,7 @@
 
             const benchmarksContainer = document.getElementById('benchmarks-container');
             if (benchmarksContainer) {
-                const included = appData.metadata?.avgIqBenchmarks || benchmarkList;
+                const included = siteSummary?.benchmarks.map(b => `${b.name} (${b.weight}%)`) || benchmarkList;
                 const preview = document.getElementById('benchmarks-preview');
                 preview.textContent = included.join(' · ');
                 preview.title = included.join(' · ');
@@ -847,6 +830,7 @@
             const top1 = sorted[0];
             const usInTop10 = top10.filter(m => m.origin === 'US');
             const cnInTop10 = top10.filter(m => m.origin === 'CN');
+            document.getElementById('national-counts').textContent = `USA: ${usInTop10.length} models; China: ${cnInTop10.length} models.`;
             const usTotal = usInTop10.reduce((s, m) => s + m.unified, 0).toFixed(2);
             const cnTotal = cnInTop10.reduce((s, m) => s + m.unified, 0).toFixed(2);
             const leader = parseFloat(cnTotal) > parseFloat(usTotal) ? 'China' : 'USA';
@@ -961,8 +945,8 @@
             let leaderCard = null;
             let badgeColor = '';
             let ringColor = '';
-            if (usTotal > cnTotal) { leaderCard = usaCard; badgeColor = 'bg-blue-500'; ringColor = 'ring-blue-400'; }
-            else if (cnTotal > usTotal) { leaderCard = chinaCard; badgeColor = 'bg-red-500'; ringColor = 'ring-red-400'; }
+            if (usTotal > cnTotal) { leaderCard = usaCard; badgeColor = 'bg-blue-700'; ringColor = 'ring-blue-400'; }
+            else if (cnTotal > usTotal) { leaderCard = chinaCard; badgeColor = 'bg-red-700'; ringColor = 'ring-red-400'; }
 
             if (leaderCard) {
                 const badge = document.createElement('div');
@@ -1005,6 +989,7 @@
             const maxIq = Math.max(...models.map(m => m.iq), 1);
             const maxValue = Math.max(...models.map(m => m.value), 1);
 
+            document.querySelectorAll("#table-header th[data-sort]").forEach(th => th.setAttribute("aria-sort", th.dataset.sort === currentSort.key ? (currentSort.direction === "asc" ? "ascending" : "descending") : "none"));
             displayModels.forEach(model => {
                 const tr = document.createElement('tr');
                 tr.className = 'hover:bg-white/5 transition group relative';
@@ -1036,10 +1021,11 @@
                                 <a href="${esc(model.companyLink)}" target="_blank" class="text-xs text-slate-400 hover:text-blue-400 transition flex items-center gap-1">
                                     <i data-lucide="building-2" class="w-3 h-3"></i> ${esc(model.organization)}
                                 </a>
-                                <span class="text-xs text-slate-600">•</span>
-                                <span class="text-xs text-slate-500">Released: ${esc(model.createdDate) || '—'}</span>
+                                <span class="text-xs text-slate-400">•</span>
+                                <span class="text-xs text-slate-400">Released: ${esc(model.createdDate) || '—'}</span>
                             </div>
-                            ${description ? `<p class="text-xs text-slate-500 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${esc(description)}</p>` : ''}
+                            <details class="evidence" data-model-id="${esc(model.modelId)}"><summary>Evidence · ${esc(model.coverage || "0/18")} reported</summary><div class="evidence-content">Open to load prices, benchmark results and sources.</div></details>
+                            ${description ? `<p class="text-xs text-slate-400 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${esc(description)}</p>` : ''}
                         </div>
                     </td>
                     <td class="p-6">
@@ -1055,7 +1041,7 @@
                     <td class="p-6">
                         <div class="flex flex-col gap-1">
                             <div class="flex justify-between text-xs text-slate-400 mb-1">
-                                <span title="${unpriced ? 'No public pricing — Value not scored' : ''}">${unpriced ? '—' : formatNumber(model.value)}</span>
+                                <span title="${unpriced ? 'Unavailable: pricing not reported; Unified retains the existing zero Value contribution' : ''}">${unpriced ? 'Unavailable' : formatNumber(model.value)}</span>
                             </div>
                             <div class="w-full bg-slate-800 rounded-full h-1.5 overflow-hidden">
                                 <div class="bg-green-500 h-full rounded-full" style="width: ${unpriced ? 0 : valueWidth}%"></div>
@@ -1067,6 +1053,7 @@
                     </td>
                 `;
                 tbody.appendChild(tr);
+                tr.querySelector("details").addEventListener("toggle", event => { if(event.target.open) loadEvidence(event.target); });
             });
 
             if (window.lucide && typeof lucide.createIcons === 'function') {
@@ -1082,12 +1069,14 @@
                 currentSort.key = key;
                 currentSort.direction = 'desc';
             }
+            saveViewState();
             renderTable();
         }
 
         function setFilter(filter) {
             AppContract.check("setFilter", arguments, ["enum:top10|all|US|CN"]);
             currentFilter = filter;
+            saveViewState();
             renderTable();
             renderMatrix();
             updateFilterUI();
@@ -1101,12 +1090,13 @@
                 'US': document.getElementById('filter-us'),
                 'CN': document.getElementById('filter-cn')
             };
-            Object.values(buttons).forEach(btn => {
+            Object.entries(buttons).forEach(([key, btn]) => {
+                btn.setAttribute("aria-pressed", String(key === currentFilter));
                 btn.className = 'px-4 py-1.5 rounded-md text-sm font-bold text-slate-400 hover:text-white transition flex items-center gap-2 hover:bg-white/5';
             });
             const activeBtn = buttons[currentFilter];
             if (currentFilter === 'top10') {
-                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-500 text-white shadow-lg shadow-blue-500/20';
+                activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-blue-700 text-white shadow-lg shadow-blue-500/20';
             } else if (currentFilter === 'all') {
                 activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-purple-500/20 text-purple-400 border border-purple-500/50';
             } else if (currentFilter === 'US') {
@@ -1115,6 +1105,33 @@
                 activeBtn.className = 'px-4 py-1.5 rounded-md text-sm font-bold transition flex items-center gap-2 bg-red-500/20 text-red-400 border border-red-500/50';
             }
         }
+
+
+        function readViewState() {
+            AppContract.check("readViewState", arguments, []);
+            const params = new URLSearchParams(location.search);
+            currentFilter = ['top10','all','US','CN'].includes(params.get('filter')) ? params.get('filter') : 'top10';
+            currentSort = {key:['rank','name','iq','value','unified'].includes(params.get('sort')) ? params.get('sort') : 'unified', direction:params.get('direction')==='asc' ? 'asc' : 'desc'};
+        }
+        function saveViewState() {
+            AppContract.check("saveViewState", arguments, []);
+            const url = new URL(location.href);
+            url.searchParams.set('filter',currentFilter);url.searchParams.set('sort',currentSort.key);url.searchParams.set('direction',currentSort.direction);
+            history.pushState(null,'',url);
+        }
+        const loadEvidence = async details => {
+            if (details.dataset.loaded) return;
+            const content=details.querySelector('.evidence-content'); content.textContent='Loading evidence…';
+            try {
+                const snapshot=await SiteData.loadSnapshot(currentEntry.timestamp);
+                const row=Object.values(snapshot.teams).flat().find(r=>r.modelId===details.dataset.modelId);
+                if (!row) throw new Error('Evidence is unavailable for this model.');
+                const safeLink=url=>/^https?:\/\//i.test(url || '') ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source</a>` : 'Source not reported';
+                content.innerHTML=`<p>Snapshot: ${esc(snapshot.timestamp)}. Input: ${esc(row['Input$/M'] ?? row['Input $/M'] ?? 'Not reported')}; output: ${esc(row['Output$/M'] ?? row['Output $/M'] ?? 'Not reported')} per million tokens. Coverage: ${esc(row.coverage)}. Missing results contribute zero; weights are editor-selected. <a href="about.html">Methodology and weight history</a>.</p><table><thead><tr><th>Benchmark / weight</th><th>Result</th><th>Evidence / configuration / available date</th></tr></thead><tbody>`+siteSummary.benchmarks.map(b=>{const evidence=row._provenance?.[b.column];return `<tr><th>${esc(b.name)} / ${esc(b.weight)}%</th><td>${esc(row[b.column] === '—' || row[b.column] == null ? 'Not reported' : row[b.column])}</td><td>${evidence ? `${safeLink(evidence.url)} · ${esc(typeof evidence.configuration === 'object' ? JSON.stringify(evidence.configuration) : evidence.configuration || 'Configuration not reported')} · available ${esc(evidence.availableFrom)}` : 'Not reported'}</td></tr>`;}).join('')+'</tbody></table>';
+                details.dataset.loaded='true';
+            } catch(error) {content.textContent=error.message+' ';const retry=document.createElement('button');retry.textContent='Retry evidence';retry.onclick=()=>loadEvidence(details);content.append(retry);}
+        }
+        window.addEventListener('popstate',()=>{readViewState();renderTable();renderMatrix();updateFilterUI();});
 
         const shareUrl = 'https://usvschina.ai/';
         const shareTitle = 'US vs CHINA AI - Compare Top AI Models';
@@ -1149,9 +1166,14 @@
             AppContract.check("copyLink", arguments, []);
             const btnText = document.getElementById('copy-link-text');
             const originalText = btnText.textContent;
-            navigator.clipboard.writeText(shareUrl).then(() => {
+            Promise.resolve().then(() => navigator.clipboard.writeText(location.href)).then(() => {
                 btnText.textContent = 'Copied!';
+                document.getElementById('share-status').textContent = 'Link copied.';
                 setTimeout(() => { btnText.textContent = originalText; }, 2000);
+            }).catch(() => {
+                const input = document.getElementById('share-link-fallback');
+                input.hidden = false; input.value = location.href; input.focus(); input.select();
+                document.getElementById('share-status').textContent = 'Clipboard unavailable. Copy the selected link.';
             });
         }
 
@@ -1167,11 +1189,8 @@
             AppContract.check("renderThirtyDayTrend", arguments, []);
             const status = document.getElementById('trend-status');
             try {
-                const response = await fetch('models.json');
-                if (!response.ok) throw new Error(`HTTP ${response.status}`);
-                // National totals need only stored roster scores, not benchmark hydration.
-                const archive = await response.json();
-                const snapshots = [...(archive.history || [])].filter(snapshot => Number.isFinite(Date.parse(snapshot.timestamp))).sort((a, b) => Date.parse(a.timestamp) - Date.parse(b.timestamp));
+                const summary = await SiteData.loadSummary();
+                const snapshots = [...summary.history].sort((a,b) => Date.parse(a.timestamp)-Date.parse(b.timestamp));
                 if (!snapshots.length || !window.Chart) throw new Error('Chart or history unavailable');
                 const dayMillis = 86400000;
                 const end = Math.floor(Date.parse(snapshots[snapshots.length - 1].timestamp) / dayMillis) * dayMillis;
@@ -1185,9 +1204,11 @@
                 const recent = [...daily.entries()];
                 const values = {US: [], CN: []};
                 for (const [day, snapshot] of recent) {
-                    const top = Object.entries(snapshot.teams || {}).flatMap(([country, rows]) => rows.map(row => ({country, score: Number(row.unified)}))).filter(row => Number.isFinite(row.score)).sort((a, b) => b.score - a.score).slice(0, 10);
-                    for (const country of ['US', 'CN']) values[country].push({x: day, snapshotTimestamp: snapshot.timestamp, y: top.filter(row => row.country === country).reduce((sum, row) => sum + row.score, 0)});
+                    for (const country of ['US', 'CN']) values[country].push({x: day, snapshotTimestamp: snapshot.timestamp, y: snapshot.scores[country].total});
                 }
+                let equivalent = document.getElementById('trend-values');
+                if (!equivalent) { equivalent = document.createElement('details'); equivalent.id='trend-values'; status.after(equivalent); }
+                equivalent.innerHTML = '<summary>Exact historical values</summary><p>Recalculated history under the current algorithm. Lines connect recorded observations; missing dates are not zero scores.</p><table><thead><tr><th>Snapshot (UTC)</th><th>USA Top 10 sum</th><th>China Top 10 sum</th></tr></thead><tbody>'+recent.map(([,point]) => `<tr><td>${esc(point.timestamp)}</td><td>${formatUnified(point.scores.US.total)}</td><td>${formatUnified(point.scores.CN.total)}</td></tr>`).join('')+'</tbody></table>';
                 if (trendChart) trendChart.destroy();
                 trendChart = new Chart(document.getElementById('trendChart'), {
                     type: 'line',
@@ -1207,7 +1228,8 @@
                 });
                 status.textContent = `${new Date(start).toLocaleDateString('en-US', {month: 'short', day: 'numeric', timeZone: 'UTC'})} – ${new Date(end).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'})} · ${recent.length} daily snapshots · UTC`;
             } catch (error) {
-                status.textContent = 'Historical comparison could not load. Reload the page to try again.';
+                document.getElementById('trendChart').hidden=true;
+                status.textContent = 'Historical chart unavailable. Exact historical values remain available below when data loaded. ' + error.message;
                 console.error('Error loading 30-day chart:', error);
             }
         }
@@ -1215,10 +1237,19 @@
         let matrixChart = null;
         function renderMatrix() {
             AppContract.check("renderMatrix", arguments, []);
+            let equivalent = document.getElementById('matrix-values');
             const canvas = document.getElementById('matrixChart');
+            if (!equivalent && canvas) { equivalent=document.createElement('details'); equivalent.id='matrix-values'; canvas.parentElement.after(equivalent); }
+            if (equivalent) equivalent.innerHTML='<summary>Exact model IQ and Value</summary><table><thead><tr><th>Model</th><th>Avg IQ (0–100)</th><th>Value (IQ / $ per million tokens)</th></tr></thead><tbody>'+models.filter(m => !['US','CN'].includes(currentFilter) || m.origin===currentFilter).map(m=>`<tr><td>${esc(m.name)}</td><td>${formatNumber(m.iq)}</td><td>${m.costIn+m.costOut>0 ? formatNumber(m.value) : 'Unavailable: pricing not reported'}</td></tr>`).join('')+'</tbody></table>';
+            let status = document.getElementById('matrix-status');
+            if (!status && canvas) { status=document.createElement('p');status.id='matrix-status';status.setAttribute('role','status');canvas.parentElement.after(status); }
+            if (status) status.textContent='';
+            try {
             if (!canvas || typeof canvas.getContext !== 'function') return;
-            if (!window.Chart || !models.length) return;
+            if (!models.length) return;
+            if (!window.Chart) throw new Error('Chart library unavailable');
 
+            canvas.hidden=false;
             const ctx = canvas.getContext('2d');
             const allIq = models.map(m => m.iq);
             const allValue = models.map(m => m.value);
@@ -1256,14 +1287,14 @@
                         x: {
                             title: { display: true, text: 'Value (AvgIQ ÷ Cost)', color: '#94a3b8', font: { size: 14, weight: 'bold' } },
                             grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
-                            ticks: { color: '#64748b', font: { size: 11 } },
+                            ticks: { color: '#94a3b8', font: { size: 11 } },
                             min: Math.max(0, valueMin - padX),
                             max: valueMax + padX
                         },
                         y: {
-                            title: { display: true, text: 'AvgIQ (normalized)', color: '#94a3b8', font: { size: 14, weight: 'bold' } },
+                            title: { display: true, text: 'Avg IQ (0–100)', color: '#94a3b8', font: { size: 14, weight: 'bold' } },
                             grid: { color: 'rgba(255, 255, 255, 0.05)', drawBorder: false },
-                            ticks: { color: '#64748b', font: { size: 11 } },
+                            ticks: { color: '#94a3b8', font: { size: 11 } },
                             min: Math.max(0, iqMin - padY),
                             max: iqMax + padY
                         }
@@ -1319,6 +1350,11 @@
                     }
                 }]
             });
+            } catch (error) {
+                if (canvas) canvas.hidden=true;
+                if (status) status.textContent='Intelligence vs. Value chart unavailable. Exact model values remain available in the table below.';
+                matrixChart=null;
+            }
         }
 
         function renderCompanyLeaderboard() {
@@ -1345,24 +1381,24 @@
                 const bgColor = c.origin === 'US' ? 'bg-blue-500/10' : 'bg-red-500/10';
                 const rankIcon = idx === 0 ? '🥇' : idx === 1 ? '🥈' : idx === 2 ? '🥉' : '';
                 return `
-                    <div class="glass p-6 rounded-2xl border ${borderColor} transition-all duration-300">
+                    <article class="py-5 border-b border-white/10">
                         <div class="flex justify-between items-start mb-4">
                             <div>
                                 <div class="text-lg font-bold ${textColor} flex items-center gap-2">
                                     ${rankIcon} ${esc(c.name)} ${flag}
                                 </div>
-                                <div class="text-xs text-slate-500">${c.modelCount} model${c.modelCount > 1 ? 's' : ''} in Top 10</div>
+                                <div class="text-xs text-slate-400">${c.modelCount} model${c.modelCount > 1 ? 's' : ''} in Top 10</div>
                             </div>
                             <div class="text-right">
                                 <div class="text-2xl font-black text-white">${formatUnified(c.totalScore)}</div>
-                                <div class="text-xs text-slate-500">Total Score</div>
+                                <div class="text-xs text-slate-400">Top 10 sum</div>
                             </div>
                         </div>
-                        <div class="${bgColor} rounded-lg p-3">
+                        <div class="pt-3">
                             <div class="text-xs text-slate-400 mb-1">Models:</div>
                             <div class="text-sm text-slate-300">${esc(c.models.join(', '))}</div>
                         </div>
-                    </div>
+                    </article>
                 `;
             }).join('');
         }
@@ -1432,9 +1468,9 @@
             return div.innerHTML;
         }
 
-        async function loadNewsMarquee() {
-            AppContract.check("loadNewsMarquee", arguments, []);
-            var container = document.getElementById('newsMarquee');
+        async function loadNewsHeadlines() {
+            AppContract.check("loadNewsHeadlines", arguments, []);
+            var container = document.getElementById('newsHeadlines');
             if (!container) return;
 
             try {
@@ -1444,53 +1480,30 @@
                 var items = data && Array.isArray(data.items) ? data.items : [];
                 if (items.length === 0) return;
 
-                var newsLabel = '<span class="inline-flex items-center px-3 py-1 text-xs font-bold uppercase tracking-wider text-white/80 flex-shrink-0">' +
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 text-yellow-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>' +
-                    'LATEST</span>';
-
                 items.sort(function(a, b) { return (b.relevanceScore || 0) - (a.relevanceScore || 0); });
-
-                var itemsHtml = items.map(function(item) {
-                    var flag = getCountryFlag(item.country);
-                    var time = timeAgo(item.publishedAt);
-                    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer" class="news-item">' +
-                        '<span class="mr-2 text-base">' + flag + '</span>' +
-                        '<span class="font-medium">' + escapeHtml(item.headline) + '</span>' +
-                        '<span class="news-source">(' + escapeHtml(item.source) + ')</span>' +
-                        (time ? '<span class="news-time">' + time + '</span>' : '') +
-                        '</a>' +
-                        '<span class="news-separator">\u2022</span>';
+                var links = items.map(function(item) {
+                    try {
+                        var url = new URL(item.url);
+                        if (!['http:', 'https:'].includes(url.protocol)) return '';
+                        var time = timeAgo(item.publishedAt);
+                        return '<li><a href="' + escapeHtml(url.href) + '" target="_blank" rel="noopener noreferrer">' +
+                            escapeHtml(item.headline) + '<small>' + escapeHtml(item.source) +
+                            (time ? ' · ' + escapeHtml(time) : '') + '</small></a></li>';
+                    } catch { return ''; }
                 }).join('');
-
-                var trackContent = itemsHtml + itemsHtml;
-
-                var baseChars = items.reduce(function(sum, item) {
-                    return sum + (item.headline || '').length + (item.source || '').length + 20;
-                }, 0);
-                var duration = Math.max(30, Math.min(120, baseChars * 0.15));
-
-                container.innerHTML =
-                    '<div class="news-marquee-bar relative overflow-hidden" style="height: 5.5rem;">' +
-                        '<div class="flex items-center h-full">' +
-                            newsLabel +
-                            '<div class="overflow-hidden flex-1 h-full flex items-center">' +
-                                '<div class="news-marquee-track scrolling" style="--scroll-duration: ' + duration + 's;" aria-live="off">' +
-                                    trackContent +
-                                '</div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</div>';
+                container.innerHTML = '<section class="news-headlines" aria-labelledby="news-heading">' +
+                    '<h2 id="news-heading">Latest collected AI news</h2><ul>' + links + '</ul></section>';
 
                 container.classList.remove('hidden');
             } catch (e) {
-                console.log('News marquee: could not load news.json', e);
+                console.log('News headlines: could not load news.json', e);
             }
         }
 
         if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadNewsMarquee);
+            document.addEventListener('DOMContentLoaded', loadNewsHeadlines);
         } else {
-            loadNewsMarquee();
+            loadNewsHeadlines();
         }
     })();
     </script>

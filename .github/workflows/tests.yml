@@ -20,9 +20,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.14'
+
+      - name: Set up frontend build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
 
       - name: Install dependencies
         # The suite now exercises the real modules (gap-fill, backfill,
@@ -31,6 +37,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r scripts/requirements.txt
+
+      - name: Build pinned local frontend assets
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run build:assets
 
       - name: Install Playwright browser
         run: python -m playwright install --with-deps chromium

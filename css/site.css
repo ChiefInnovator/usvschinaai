@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html { scroll-padding-top: 1rem; }
+body { font-variant-numeric: tabular-nums; }
+::selection { background: #1d4ed8; color: #fff; }
+:focus-visible { outline: 2px solid #93c5fd; outline-offset: 4px; }
+button, summary, a, select, input { touch-action: manipulation; }
+button, summary { -webkit-tap-highlight-color: transparent; }
+a { text-underline-offset: 0.2em; }
+input, select { accent-color: #3b82f6; caret-color: #93c5fd; }
+* { scrollbar-color: #475569 #0f172a; scrollbar-width: thin; }
+.skip-link { position: absolute; left: 1rem; top: -8rem; z-index: 100; padding: .75rem 1rem; background: #1e40af; color: #fff; border-radius: .5rem; }
+.skip-link:focus { top: 1rem; }
+.offline-status { padding: .5rem 1rem; background: #422006; color: #fef3c7; text-align: center; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}

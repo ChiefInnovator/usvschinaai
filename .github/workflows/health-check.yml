@@ -56,4 +56,36 @@ jobs:
           if age > timedelta(hours=30):
               print(f"::error::Leaderboard data is stale ({age} old) — daily scrape may be failing silently")
               sys.exit(1)
+          if age < -timedelta(minutes=5):
+              print('::error::Snapshot timestamp is more than five minutes in the future')
+              sys.exit(1)
+          EOF
+
+      - name: Publication revision and summary agreement
+        run: |
+          python3 - <<'EOF'
+          import hashlib, json
+          from urllib.request import urlopen
+          base = 'https://usvschina.ai/'
+          def read(path):
+              with urlopen(base + path, timeout=30) as response:
+                  return response.read()
+          publication = json.loads(read('data/publication.json'))
+          payloads = {path: read(path) for path in
+              ('data/site_summary.json', 'data/scoring_revision.json', 'current.json')}
+          for path, body in payloads.items():
+              if hashlib.sha256(body).hexdigest() != publication['artifacts'].get(path):
+                  raise SystemExit('Publication hash mismatch: ' + path)
+          summary = json.loads(payloads['data/site_summary.json'])
+          revision = json.loads(payloads['data/scoring_revision.json'])
+          current = json.loads(payloads['current.json'])
+          expected = publication['scoringRevision']
+          if not expected or any(value != expected for value in
+                  (summary['scoringRevision'], revision['scoringRevision'], current['scoringRevision'])):
+              raise SystemExit('Published scoring revisions disagree')
+          if summary['generationId'] != publication['generationId']:
+              raise SystemExit('Published data generations disagree')
+          if summary['current']['timestamp'] != current['history'][0]['timestamp']:
+              raise SystemExit('Published snapshot dates disagree')
+          print('Published revision, generation and current snapshot agree')
           EOF

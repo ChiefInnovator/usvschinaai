@@ -51,15 +51,10 @@ CURRENT_JSON = REPO_ROOT / "current.json"
 ASKED_FILE = REPO_ROOT / "data" / "ai_gap_backfill_asked.json"
 ASKED_TTL_DAYS = gf.POSITIVE_CACHE_TTL_DAYS
 
-# The daily scrape researches a handful of cells and can afford the strong
-# model. A 35-day backfill researches every distinct model in the window at
-# once, so it runs on the cheapest tier instead — roughly 10x less per call
-# than gpt-5.6-terra. gap_fill_benchmarks' comment warns that the weak tier is
-# likelier to hallucinate a score; the counterweight is that fills below
-# "high" confidence are dropped (--min-confidence), every accepted fill records
-# its source URL in _provenance, and the daily pass keeps using the strong
-# chain. Override with --model.
-BACKFILL_MODEL = "gpt-5.6-luna"
+# Legacy-format runs share the economy model with the dated-evidence workflow.
+# Modern scoring data still uses research_history.py and mandatory full replay.
+from ai_models import ECONOMY_MODEL
+BACKFILL_MODEL = ECONOMY_MODEL
 DEFAULT_DAYS = 45
 
 # Row fields that are bookkeeping, not leaderboard columns. META_KEYS covers

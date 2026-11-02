@@ -1,5 +1,5 @@
 # **US vs CHINA AI Dashboard**
-*Track the AI race in real-time between the US 🇺🇸 and China 🇨🇳*
+*Compare US and Chinese AI models using daily snapshots and inspectable evidence.*
 
 ## ✨ Features
 - **Unified Score (0–1000)**: A comprehensive metric that evaluates AI models based on both capability and value.
@@ -9,7 +9,7 @@
 - **Auto-Sorted Rankings**: Instantly see AI models ranked by their Unified Scores with a simple descending order display.
 - **Historical Archives**: Access expandable historical data to explore how the AI competition has evolved over time.
 - **Informative About Page**: Gain insights into the scoring methodology and benchmarks used for evaluation.
-- **Automated Daily Updates**: Receive fresh data daily at 00:00 UTC, ensuring you have the latest information.
+- **Automated Daily Updates**: Receive a daily scrape scheduled at 03:17 UTC, with a visible warning when the latest snapshot is delayed.
 
 ## 🧮 Scoring Methodology (at a glance)
 
@@ -26,7 +26,10 @@ Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
 Rebuild all retained historical cohorts with `.venv/bin/python scripts/rescore_history.py --rebuild --write --refresh-images`.
 This removes old benchmark scores and scoring inputs, repopulates the eighteen components from dated evidence, and recalculates every score.
 
-Benchmark allocations retain the previous 30/70 Astra/Fable distribution, followed by a transfer of 1.5 percentage points from Terminal-Bench 2.1, MMMU-Pro, BrowseComp, Agents’ Last Exam, MMLU-Pro, and LiveCodeBench v6 to Toolathlon, SWE-bench Verified, IFBench, CharXiv-R, DeepSWE, and OfficeQA Pro. Both the deductions and additions are proportional to the previous weights within each group. The latest adjustment sets SWE-bench Verified to 0.25% and OfficeQA Pro to 0.10%, distributing the freed 0.17786273848129009 percentage points proportionally to the existing weights of GPQA Diamond, ARC-AGI-2, FrontierMath — Tiers 1–3 v2, DeepSWE 1.1, and Humanity’s Last Exam, where both Astra and Fable have scores. The subsequent adjustment sets Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%, BrowseComp to 2%, and Agents’ Last Exam to 1.4%, adding the freed 0.8790340342808083 percentage points to DeepSWE 1.1. Total benchmark weight remains 100%. This weight set applies to all models across history. Benchmark evidence and roster membership remain unchanged.
+Benchmark weights are editor-selected and recorded in `data/core_benchmarks.json`.
+Their adjustment history, including ranking-targeted changes, is documented in
+`docs/two_pass_scoring.md`. The rankings measure this configured scoring system,
+not an independent or neutral national capability standard.
 
 Full rationale and design decisions: [docs/two_pass_scoring.md](docs/two_pass_scoring.md).
 
@@ -35,22 +38,41 @@ Experience the AI leaderboard live by visiting our deployed application: [US vs 
 For detailed information, check our GitHub Pages site: [GitHub Pages](https://chiefinnovator.github.io/usvschinaai/).
 
 ### Getting Started Locally
-To run the project locally, you will need a local web server. Here are some easy methods to set it up:
 
-#### Python (Recommended)
-```bash
-python3 -m http.server
+Install Python dependencies and the pinned frontend build packages, then build the
+public artifact:
+
+```sh
+python3.14 -m venv .venv
+.venv/bin/python -m pip install -r scripts/requirements.txt
+npm ci --ignore-scripts
+npm run build
+python3 -m http.server 8000 --directory dist
 ```
-Then, navigate to `http://localhost:8000` in your web browser.
 
-#### VS Code Live Server
-1. Install the **Live Server** extension.
-2. Right-click `index.html` and select **Open with Live Server**.
+Open `http://localhost:8000`. `npm run build:assets` builds only local CSS/vendor
+assets when developing against the source HTML. The complete build verifies the
+publication manifest and copies an explicit public-file allowlist into `dist/`.
 
-#### Node.js
-```bash
-npx http-server .
+### Every scoring change requires a full historical rescore
+
+Changes to benchmark selection, weights, normalization, missing-result rules,
+Value or evidence selection require replaying **every retained snapshot**.
+Historical timestamps, model membership and historical price profiles stay
+intact. Archive scores always reflect the current algorithm.
+
+```sh
+.venv/bin/python -m playwright install chromium
+.venv/bin/python scripts/prepare_publication.py --write
+.venv/bin/python scripts/prepare_publication.py
+npm run build
 ```
+
+Preparation runs in an isolated staging directory, regenerates scores, summary,
+images and deterministic social captions, and installs a validated generation.
+Verification independently replays all history and rejects stale outputs; it does
+not run research or post social content. Include regenerated outputs in the same
+change as the algorithm. See [publication and storage](docs/model_storage.md).
 
 ## 🔍 Explore the Pages
 | Page          | Description                          |
@@ -64,7 +86,8 @@ The project is built primarily using HTML, CSS, and JavaScript for the front-end
 
 - **Data Scraping**: Scripts in the `scripts/` directory (`scrape_models.py` and `scrape_news.py`) gather real-time data on AI models and relevant news.
 - **Data Storage**: Model data is stored in `models.json` and news data in `news.json` for easy access and manipulation.
-- **Web Interface**: The main application interface is served through `index.html`, providing a straightforward user experience.
+- **Web Interface**: Static pages load `data/site_summary.json` first; raw history and benchmark evidence load on request.
+- **Publication**: `data/publication.json` binds a complete data/image generation. The deployment workflow tests and deploys the same allowlisted artifact.
 
 ## 🤝 Contributing
 We welcome contributions! If you'd like to help improve the project, please fork the repository and submit a pull request.

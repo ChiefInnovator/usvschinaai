@@ -4,7 +4,7 @@
 This is the only place in the social pipeline that spends tokens, and it
 spends as few as the job allows:
 
-  Model routing   gpt-5.6-luna for a routine day; gpt-5.6-terra only when the
+  Model routing   gpt-6-luna for a routine day; gpt-6.1-terra only when the
                   story carries weight (a lead change or a new #1), where a
                   sharper hook is worth ~10x the pennies. SOCIAL_CAPTION_MODEL
                   overrides.
@@ -25,6 +25,7 @@ Batching is deliberately absent: at one call a day there is nothing to batch.
 """
 from preconditions import preconditions
 from model_store import load_data
+from ai_models import ECONOMY_MODEL, RESEARCH_MODEL, TOKEN_PRICES
 import json
 import os
 import sys
@@ -39,15 +40,9 @@ CACHE_PATH = REPO_ROOT / "data" / "social_caption_cache.json"
 LEDGER_PATH = REPO_ROOT / "data" / "social_cost.jsonl"
 RESPONSES_URL = "https://api.openai.com/v1/responses"
 
-# USD per million tokens (input, cached input, output), from the pricing page
-# on 2026-09-03. Used only for the ledger.
-PRICES = {
-    "gpt-5.6-luna":  (0.20, 0.02, 1.20),
-    "gpt-5.6-terra": (2.00, 0.20, 12.00),
-    "gpt-5.4-nano":  (0.20, 0.02, 1.25),
-}
-ROUTINE_MODEL = "gpt-5.6-luna"
-STRONG_MODEL = "gpt-5.6-terra"
+PRICES = TOKEN_PRICES
+ROUTINE_MODEL = ECONOMY_MODEL
+STRONG_MODEL = RESEARCH_MODEL
 ESCALATE_AT_WEIGHT = 3     # lead_change (4) and new_challenger (3)
 MAX_OUTPUT_TOKENS = 350
 

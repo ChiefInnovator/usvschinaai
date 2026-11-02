@@ -212,6 +212,42 @@ class PassHookTests(unittest.TestCase):
         self.assertEqual(seen, [])
         self.assertEqual(len(self.calls), 2)
 
+    def test_cache_only_pass_does_not_discover_a_model(self):
+        discovered = []
+        gf.discover_available_model = lambda *a, **k: discovered.append(1) or 'stub-model'
+        gf.run_gap_filling_pass(self._entries(), max_calls=0, new_model_max_calls=0)
+        self.assertEqual(discovered, [])
+        self.assertEqual(self.calls, [])
+
+    def test_cached_results_apply_without_an_api_key(self):
+        from datetime import datetime, timezone
+        gf.resolve_openai_key = lambda: ''
+        gf.load_cache = lambda: {'M': {'GPQA': {'score': 90, 'confidence': 'high',
+            'cached_at': datetime.now(timezone.utc).isoformat(),
+            'source_url': 'https://example.org/verified'}}}
+        discovered = []
+        gf.discover_available_model = lambda *a, **k: discovered.append(1) or 'stub-model'
+        entries = self._entries()
+        gf.run_gap_filling_pass(entries, max_calls=5, new_model_max_calls=0)
+        self.assertEqual(float(entries[0].columns['GPQA'].rstrip('%')), 90)
+        self.assertEqual(entries[0].columns['_provenance']['GPQA']['url'],
+                         'https://example.org/verified')
+        self.assertEqual(discovered, [])
+        self.assertEqual(self.calls, [])
+
+    def test_fully_cached_pass_does_not_discover_or_query(self):
+        from datetime import datetime, timezone
+        stamp = datetime.now(timezone.utc).isoformat()
+        result = {'score': 90, 'confidence': 'high', 'cached_at': stamp,
+                  'source_url': 'https://example.org/verified'}
+        gf.load_cache = lambda: {'M': {'GPQA': dict(result), 'HLE': dict(result)},
+                                 'K': {'HLE': dict(result)}}
+        discovered = []
+        gf.discover_available_model = lambda *a, **k: discovered.append(1) or 'stub-model'
+        gf.run_gap_filling_pass(self._entries(), max_calls=5)
+        self.assertEqual(discovered, [])
+        self.assertEqual(self.calls, [])
+
 
 if __name__ == "__main__":
     unittest.main()

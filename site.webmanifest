@@ -2,7 +2,7 @@
   "id": "/",
   "name": "US vs China AI - AI Model Leaderboard",
   "short_name": "US vs China AI",
-  "description": "Real-time competitive leaderboard comparing United States and Chinese artificial intelligence models across multiple benchmarks",
+  "description": "Daily AI model rankings comparing United States and Chinese models, with evidence and recalculated historical scores",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -44,7 +44,7 @@
     },
     {
       "src": "/ig-image.png",
-      "sizes": "1080x1920",
+      "sizes": "1080x1350",
       "type": "image/png",
       "form_factor": "narrow"
     }

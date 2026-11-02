@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import tempfile
+from datetime import datetime, timezone
 from pathlib import Path
 
 from avg_iq_benchmarks import MODEL_FIELDS, load_config
@@ -18,6 +19,14 @@ from benchmark_names import canonicalize_benchmark_name as canonical
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG_PATH = ROOT / 'data/model_catalog.json'
 SCORES = {'avgIq', 'value', 'unified', 'coverage', 'provisional'}
+
+
+@preconditions(timestamp='timestamp')
+def utc_day(timestamp):
+    parsed = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc).date().isoformat()
 
 
 @preconditions(value='json')
@@ -49,6 +58,11 @@ def atomic_json(path, data):
             stream.flush()
             os.fsync(stream.fileno())
         os.replace(temporary, path)
+        directory = os.open(path.parent, os.O_RDONLY)
+        try:
+            os.fsync(directory)
+        finally:
+            os.close(directory)
     finally:
         Path(temporary).unlink(missing_ok=True)
 
@@ -138,8 +152,9 @@ def hydrate(data, catalog):
                 model = catalog['models'][mid]  # Dangling references must fail loudly.
                 profile = model['profiles'][ref['profileId']]
                 if mid not in cache:
-                    cache[mid] = benchmark_columns(model, snapshot['timestamp'][:10])
+                    cache[mid] = benchmark_columns(model, utc_day(snapshot['timestamp']))
                 expanded.append({**copy.deepcopy(profile), **copy.deepcopy(cache[mid]),
+                                 'modelId': mid, 'profileId': ref['profileId'],
                                  **{k: v for k, v in ref.items() if k in SCORES}})
             snapshot['teams'][country] = expanded
     return result
@@ -162,11 +177,11 @@ def normalize(data, catalog):
     components = load_config()['benchmarks']
     aliases = {canonical(a): b for b in components for a in b['aliases']}
     for snapshot in result['history']:
-        day = snapshot['timestamp'][:10]
+        day = utc_day(snapshot['timestamp'])
         for country, rows in snapshot['teams'].items():
             refs = []
             for row in rows:
-                if 'modelId' in row:
+                if 'modelId' in row and 'model' not in row:
                     raise ValueError('Normalize expects hydrated rows')
                 mid, model = model_record(catalog, row['model'])
                 # Unknown benchmark columns must not become permanent model metadata.
@@ -203,16 +218,28 @@ def normalize(data, catalog):
     return result
 
 
+@preconditions(data='mapping')
+def roster_identity(data):
+    """Ordered snapshot membership and exact metadata, excluding computed cells."""
+    return [(snapshot['timestamp'], [(country, [
+        {key: copy.deepcopy(value) for key, value in row.items()
+         if key in MODEL_FIELDS or key in ('modelId', 'profileId')}
+        for row in rows]) for country, rows in snapshot['teams'].items()])
+        for snapshot in data['history']]
+
+
 @preconditions(data='mapping', path='path', catalog='?mapping')
 def save_data(data, path, *, catalog=None):
     path = Path(path)
     catalog_path = path.parent / 'data/model_catalog.json'
     catalog = read_catalog(catalog_path) if catalog is None else catalog
-    catalog['components'] = [dict(id=b['id'], name=b['name'], column=b['aliases'][0].replace(' ', ''))
-                             for b in load_config()['benchmarks']]
+    components = catalog.setdefault('components', [])
+    known_components = {component['id'] for component in components}
+    components.extend(dict(id=b['id'], name=b['name'], column=b['aliases'][0].replace(' ', ''))
+                      for b in load_config()['benchmarks'] if b['id'] not in known_components)
     # Oldest first ensures an observation is stored once at its earliest retained date.
     ordered = copy.deepcopy(data)
-    ordered['history'] = sorted(ordered['history'], key=lambda s: s['timestamp'])
+    ordered['history'] = sorted(ordered['history'], key=lambda s: utc_day(s['timestamp']))
     normalized = normalize(ordered, catalog)
     by_timestamp = {s['timestamp']: s for s in normalized['history']}
     if len(by_timestamp) != len(data['history']):
@@ -228,19 +255,79 @@ def save_data(data, path, *, catalog=None):
     return normalized
 
 
+@preconditions(root='path', relative='nonempty')
+def safe_store_path(root, relative):
+    if relative not in ('.model-store-pending.json', 'data/model_catalog.json', 'models.json', 'current.json'):
+        raise ValueError('Invalid model-store transaction path')
+    root = Path(root).absolute()
+    target = root / relative
+    cursor = target
+    while True:
+        if cursor.is_symlink():
+            raise ValueError('Model-store transaction path is a symlink: '+str(cursor))
+        if cursor == root:
+            break
+        cursor = cursor.parent
+    return target
+
+
+@preconditions(transaction='mapping')
+def validate_pending(transaction):
+    if set(transaction) != {'catalog', 'history', 'current', 'historyFile'} or transaction['historyFile'] != 'models.json':
+        raise ValueError('Invalid model-store pending transaction destinations')
+    catalog, history, current = (transaction[key] for key in ('catalog', 'history', 'current'))
+    if not all(isinstance(value, dict) for value in (catalog, history, current)):
+        raise ValueError('Invalid model-store pending transaction payloads')
+    if catalog.get('schemaVersion') != 1 or not isinstance(catalog.get('models'), dict) or not isinstance(catalog.get('evidenceMetadata'), dict):
+        raise ValueError('Invalid pending model catalog')
+    if history.get('schemaVersion') != 2 or history.get('modelCatalog') != 'data/model_catalog.json' or not isinstance(history.get('history'), list):
+        raise ValueError('Invalid pending model history')
+    if current != {**history, 'history': history['history'][:1]}:
+        raise ValueError('Pending current roster disagrees with history')
+    for model in catalog['models'].values():
+        if not isinstance(model, dict) or not isinstance(model.get('profiles'), dict) or not isinstance(model.get('benchmarks'), dict):
+            raise ValueError('Invalid pending catalog model')
+        if any(not isinstance(profile, dict) for profile in model['profiles'].values()):
+            raise ValueError('Invalid pending catalog profile')
+        for records in model['benchmarks'].values():
+            if not isinstance(records, dict) or any(not isinstance(record, dict) for record in records.values()):
+                raise ValueError('Invalid pending benchmark observations')
+    seen = set()
+    for snapshot in history['history']:
+        if not isinstance(snapshot, dict) or not isinstance(snapshot.get('teams'), dict):
+            raise ValueError('Invalid pending snapshot')
+        timestamp = snapshot.get('timestamp')
+        utc_day(timestamp)
+        if timestamp in seen:
+            raise ValueError('Duplicate pending snapshot timestamp')
+        seen.add(timestamp)
+        for rows in snapshot['teams'].values():
+            if not isinstance(rows, list):
+                raise ValueError('Invalid pending snapshot roster')
+            for ref in rows:
+                if not isinstance(ref, dict):
+                    raise ValueError('Invalid pending model reference')
+                model = catalog['models'].get(ref.get('modelId'))
+                if model is None or ref.get('profileId') not in model['profiles']:
+                    raise ValueError('Dangling pending model/profile reference')
+    json.dumps(transaction, allow_nan=False)
+
+
 @preconditions(root='path')
 def recover_pending(root):
     root = Path(root)
-    pending = root / '.model-store-pending.json'
+    pending = safe_store_path(root, '.model-store-pending.json')
     if not pending.exists():
         return
+    # Validate all destinations and the complete transaction before the first write.
+    targets = [safe_store_path(root, name) for name in
+               ('data/model_catalog.json', 'models.json', 'current.json')]
     transaction = json.loads(pending.read_text())
-    history_name = transaction['historyFile']
-    if Path(history_name).name != history_name or history_name in ('current.json', 'model_catalog.json'):
-        raise ValueError('Invalid history filename in pending transaction')
-    atomic_json(root / 'data/model_catalog.json', transaction['catalog'])
-    atomic_json(root / history_name, transaction['history'])
-    atomic_json(root / 'current.json', transaction['current'])
+    if not isinstance(transaction, dict):
+        raise ValueError('Invalid model-store pending transaction')
+    validate_pending(transaction)
+    for path, key in zip(targets, ('catalog', 'history', 'current')):
+        atomic_json(path, transaction[key])
     pending.unlink()
 
 

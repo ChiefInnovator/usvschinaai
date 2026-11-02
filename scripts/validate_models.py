@@ -22,7 +22,9 @@ Checks (ERROR = fail the run, WARN = print only):
 """
 from preconditions import preconditions
 from model_store import load_data
+from scoring_revision import require_revision, scoring_revision
 import json
+import math
 import re
 import sys
 from pathlib import Path
@@ -40,7 +42,7 @@ MISSING = {"", "-", "–", "—", "n/a", "N/A", "null", "None", "—"}
 META_KEYS = {
     "model", "organization", "link", "origin", "description", "created",
     "avgIq", "value", "unified", "coverage", "provisional",
-    "_provenance", "_scoring",
+    "_provenance", "_scoring", "modelId", "profileId",
     "Model", "Country", "License", "Context", "Input$/M", "Output$/M",
     "Speed", "Parameters(B)", "KnowledgeCutoff", "Multimodal", "Released",
     "Organization", "LLMStats", "Latency", "CodeArena",
@@ -86,11 +88,28 @@ def rows_of(entry):
             yield row
 
 
+@preconditions(data='mapping')
+def score_errors(data):
+    errors = []
+    for snapshot in data.get('history', []):
+        for row in rows_of(snapshot):
+            for key in ('avgIq', 'value', 'unified'):
+                value = row.get(key)
+                if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+                    errors.append(f"{snapshot.get('timestamp')}: {row.get('model', '?')}: invalid {key}")
+    return errors
+
+
 @preconditions()
 def main() -> int:
     errors, warnings = [], []
 
     data = load_data(MODELS_PATH)
+    try:
+        require_revision(data, scoring_revision(REPO_ROOT))
+    except ValueError as error:
+        errors.append(str(error))
+    errors.extend(score_errors(data))
     history = data.get("history") or []
     if not history:
         print("ERROR: models.json has no history entries")

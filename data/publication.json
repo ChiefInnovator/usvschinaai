@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "generationId": "d21aecd98ff2d8b7cfa5ff292d0a1320fbd13d0a37faccd0d0a1de68a1aa0e3f",
+  "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
+  "artifacts": {
+    "current.json": "d34999cadbead0b6cf3ee16fe9465c69211288ed41ca7e9ece65c79bcbd30984",
+    "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
+    "data/historical_benchmark_gaps.json": "19440c60c3235a8399a85f992611b51ce421a8ef9d50511e64071691da69c250",
+    "data/model_catalog.json": "f2d5172a5d1c482b6d776487a3ce5d765aab86c932bb6fa7f90e1cbfb504babc",
+    "data/scoring_revision.json": "7a64853c4b9c516e361fe69f947511e00c3b088c6c679144a38a6f750dc725c9",
+    "data/site_summary.json": "cbd0af016d543779c7567f74eca034a1d2c3c1bda6f8c89b0afdaa59eeea2a04",
+    "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "ig-image.png": "cc2a406e77aee71a10cef9bb46db71ee05b3d1fec11494b23c72bd36407f58b0",
+    "models.json": "d2b18035e722816d9c3f3c955838af769ed5bb41cc75a5762b385daa70c77876",
+    "og-image.png": "abcf2300f9ba9a7c0720b5b353b8335d15922d30def1389124831a89d679824a",
+    "social/2026-11-02-1-leaderboard-midnight.png": "faebe7619962a7f3329b8921d1f950764412925e38bcf6e01f79f06bafe179a8",
+    "social/plan.json": "9d79eda2d75073f6c2b0fe897d059ebc4616596bc44967dda4e7bc906112fae4"
+  }
+}
