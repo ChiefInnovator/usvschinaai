@@ -17,6 +17,11 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
 
 jobs:
   backfill:
@@ -24,8 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          # Full history so the merge-before-push step has something to merge
-          # against, as in daily-scrape.yml.
+          ref: develop
+          token: ${{ secrets.PAT_TOKEN }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -85,8 +90,9 @@ jobs:
           python scripts/prepare_publication.py --write
           python scripts/prepare_publication.py
 
-      - name: Commit and push
+      - name: Open data feature pull request
         env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
           RESEARCH_DAYS: ${{ inputs.days }}
           RESEARCH_MODEL: ${{ inputs.model }}
         run: |
@@ -96,6 +102,9 @@ jobs:
           git add models.json current.json data/model_catalog.json data/ai_gap_cache.json data/ai_fill_history.jsonl data/ai_gap_backfill_asked.json
           if git diff --cached --quiet; then echo "No changes to commit"; exit 0; fi
           git commit -m "Backfill gap-fill over $RESEARCH_DAYS days ($RESEARCH_MODEL)"
-          # Merge (never rebase) anything pushed to main meanwhile, then push.
-          git pull --no-rebase https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
+          BRANCH="feature/backfill-${{ github.run_id }}-${{ github.run_attempt }}"
+          git switch -c "$BRANCH"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
+            --title "Refresh data (backfill)" \
+            --body "Generated publication for review. Merge into develop, then promote develop to main to publish."

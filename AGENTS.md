@@ -1,5 +1,13 @@
 # US vs China AI
 
+- Branch flow is same-repository feature branch -> develop -> main. A feature
+  branch is any nonempty branch other than main, develop or master.
+- Never push directly to main or develop. Use merge-commit pull requests;
+  main accepts only develop, and develop accepts only feature branches.
+- GitHub Copilot automatically reviews pull requests targeting develop only.
+- Daily scrape and backfill open feature pull requests into develop. Data goes
+  live only after develop is promoted to main; do not bypass this for freshness.
+
 - Every scoring algorithm change requires a full rescore of every retained
   historical snapshot before publication. This includes benchmark selection,
   weights, normalization, missing results, Value and evidence-selection logic.

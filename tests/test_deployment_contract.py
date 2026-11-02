@@ -53,11 +53,12 @@ class DeploymentContractTests(unittest.TestCase):
         self.assertIn("github.event.action == 'closed'", close)
         self.assertNotIn('pull_request_target:', self.deploy)
 
-    def test_writer_workflow_completion_resolves_current_main_and_serializes_delivery(self):
-        self.assertIn("github.event.workflow_run.conclusion == 'success'", self.verify)
-        self.assertIn("github.event.workflow_run.head_branch == 'main'", self.verify)
-        self.assertIn("github.event_name == 'workflow_run' && 'main' || github.sha", self.verify)
-        self.assertNotIn('github.event.workflow_run.head_sha', self.verify)
+    def test_only_main_promotions_deploy_production_and_develop_prs_get_previews(self):
+        self.assertNotIn('workflow_run:', self.deploy)
+        self.assertIn('branches: [main]', self.deploy)
+        self.assertIn('branches: [main, develop]', self.deploy)
+        self.assertIn("github.ref == 'refs/heads/main'", self.verify)
+        self.assertIn('ref: ${{ github.sha }}', self.verify)
         self.assertIn('cancel-in-progress: false', self.deploy)
         self.assertIn("|| 'production'", self.deploy)
         self.assertIn('CANDIDATE_SHA: ${{ needs.verify_build.outputs.sha }}', self.delivery)
