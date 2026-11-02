@@ -969,5 +969,23 @@
       "#MoonshotAI",
       "#AILeaderboard"
     ]
+  },
+  "2026-11-02T03:33:32+00:00|leaderboard": {
+    "hook": "The US keeps the top spot, but China owns 2 of the top 6.",
+    "bullets": [
+      "US leads the scoreboard 5344.69 to 1383.48.",
+      "GPT-6 Astra ranks 1st at 900.2, ahead of GPT-6.1 Sol at 832.5.",
+      "Kimi K3 leads China at 704.7 in 5th; Claude Fable 5.1 gained 1 place."
+    ],
+    "question": "Does China\u2019s 2-model top 6 signal a tighter race?",
+    "hashtags": [
+      "#AI",
+      "#ArtificialIntelligence",
+      "#AIModels",
+      "#USvsChina",
+      "#OpenAI",
+      "#MoonshotAI",
+      "#AILeaderboard"
+    ]
   }
 }

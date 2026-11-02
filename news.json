@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-01T03:37:32.919906+00:00",
+  "lastUpdated": "2026-11-02T03:34:32.896398+00:00",
   "items": [
+    {
+      "id": "77ea26cc84c3135d",
+      "headline": "DeepSeek Super-Agent takes coding work from GitHub and team chats",
+      "url": "https://www.bundle.app/en/technology/deepseek-super-agent-takes-coding-work-from-github-and-team-chats-7B7EF140-4593-569A-838D-03FDD8BC3990",
+      "source": "Bundle",
+      "country": "CN",
+      "publishedAt": "2026-11-01 11:13:57",
+      "relevanceScore": 0.6
+    },
     {
       "id": "0223b6c6a01926cf",
       "headline": "Your electricity bill is skyrocketing — and techbros are to blame",
@@ -171,15 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-10-19 13:03:20",
       "relevanceScore": 0.69
-    },
-    {
-      "id": "d8e717c285942f28",
-      "headline": "Saudi OpenAI Employee's Arrest Revives Fears US Tech Companies Are Hiring Spies",
-      "url": "https://yro.slashdot.org/story/26/10/18/0323207/saudi-openai-employees-arrest-revives-fears-us-tech-companies-are-hiring-spies",
-      "source": "Slashdot",
-      "country": "Both",
-      "publishedAt": "2026-10-18 04:34:00",
-      "relevanceScore": 0.53
     }
   ]
 }

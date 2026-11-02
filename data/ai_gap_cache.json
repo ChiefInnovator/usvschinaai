@@ -10,6 +10,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/reflection-beam-1-0"
     },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-02T03:29:18.735440+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1, lab self-report cited by the DeepSWE tracker; result publication is independently recorded as October 5, 2026. This is original DeepSWE, not DeepSWE v1.1.",
+      "score": "44.4%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.deepswe.dev/"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-10-22T03:37:59.261683+00:00",
