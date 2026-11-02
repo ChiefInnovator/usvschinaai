@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
-  "generationId": "5af9861d1b948c01a9fd51383e95fe75d314e3411a6f2a638949bb973498db1e",
-  "catalogFingerprint": "26b7a358ee566fc7ceca2008d576e06bca35773300adce97f34ac98b6f5d8eb4",
+  "generationId": "1f56502abc1d88c35c7246bbe6cb88965add29a4ef223c4b641ed8dd31121a92",
+  "catalogFingerprint": "ac9f71b65fc0e90e6712320dff645c4582a32777d901414f8fa6f78d554ef834",
   "metadata": {
     "title": "US vs CHINA AI",
     "footerText": "Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.",
@@ -178,7 +178,7 @@
     }
   ],
   "current": {
-    "timestamp": "2026-09-26T04:45:01+00:00",
+    "timestamp": "2026-11-02T03:33:32+00:00",
     "scoring": {
       "version": 4,
       "avgIqWeights": {
@@ -223,10 +223,10 @@
       ],
       "qualifiedMinReports": 0,
       "bounds": {
-        "minAvgIq": 38.83,
+        "minAvgIq": 44.24,
         "maxAvgIq": 84.61,
-        "minValue": 1.08,
-        "maxValue": 143.82
+        "minValue": 1.11,
+        "maxValue": 112.94
       },
       "benchmarkRanges": {
         "ARC-AGI-2": [
@@ -317,72 +317,141 @@
           "Country": "🇺🇸",
           "Context": "1.1M",
           "Output$/M": "50",
-          "Speed": "46c/s",
+          "Speed": "19c/s",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "3.3s",
+          "Latency": "7.2s",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10",
           "modelId": "8ff2177f5f388b9c9474",
-          "profileId": "824946cb0dcfd0970ed9",
-          "value": 1.41,
-          "coverage": "11/18",
+          "profileId": "5eabdb002eaa6d084a89",
           "avgIq": 84.61,
-          "unified": 900.2,
-          "provisional": false
+          "unified": 900.24,
+          "provisional": false,
+          "coverage": "11/18",
+          "value": 1.41
         },
         {
-          "model": "GPT-5.6 Terra",
+          "model": "GPT-6.1 Sol",
           "organization": "OpenAI",
-          "link": "https://llm-stats.com/models/gpt-5.6-terra",
+          "link": "https://llm-stats.com/models/gpt-6.1-sol",
           "origin": "US",
-          "description": "GPT-5.6 Terra by OpenAI — released Jul 9, 2026; $2.00/M input, $0.200/M cached input, $12.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-07-09",
-          "Model": "GPT-5.6 Terra",
+          "description": "GPT-6.1 Sol by OpenAI — released Sep 29, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-29",
+          "Model": "GPT-6.1 Sol",
           "Country": "🇺🇸",
           "Context": "1.1M",
-          "Output$/M": "12",
-          "Speed": "–",
+          "Output$/M": "10",
+          "Speed": "46c/s",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "–",
-          "KnowledgeCutoff": "Feb. 2026",
+          "Latency": "2.6s",
+          "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2",
-          "modelId": "3e8493d70f3b80a11cf5",
-          "profileId": "0c8fa6f3b629a6df3e66",
-          "value": 5.73,
-          "coverage": "16/18",
-          "avgIq": 80.28,
-          "unified": 818.11,
-          "provisional": false
+          "modelId": "86814cd08ec3ac720e22",
+          "profileId": "771512a76c4999c976b7",
+          "avgIq": 81.36,
+          "unified": 832.53,
+          "provisional": false,
+          "coverage": "9/18",
+          "value": 6.78
         },
         {
-          "model": "GPT-5.6 Sol",
-          "organization": "OpenAI",
-          "link": "https://llm-stats.com/models/gpt-5.6-sol",
+          "model": "Claude Opus 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-opus-5-5",
           "origin": "US",
-          "description": "GPT-5.6 Sol by OpenAI — released Jul 9, 2026; $5.00/M input, $0.500/M cached input, $30.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-07-09",
-          "Model": "GPT-5.6 Sol",
+          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Model": "Claude Opus 5.5",
           "Country": "🇺🇸",
-          "Context": "1.1M",
-          "Output$/M": "30",
+          "Context": "1M",
+          "Output$/M": "20",
           "Speed": "–",
           "License": "",
           "Parameters(B)": "-",
           "Latency": "–",
-          "KnowledgeCutoff": "Feb. 2026",
+          "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
-          "Input$/M": "5",
-          "modelId": "1b3752879df84503751c",
-          "profileId": "bcc8c5fd343267c3306e",
-          "value": 2.25,
-          "coverage": "16/18",
-          "avgIq": 78.85,
-          "unified": 787.56,
-          "provisional": false
+          "Input$/M": "4",
+          "modelId": "bf6872882b4e0722ae12",
+          "profileId": "bd209ba8a0338b51cb1d",
+          "avgIq": 79.68,
+          "unified": 792.01,
+          "provisional": false,
+          "coverage": "10/18",
+          "value": 3.32
+        },
+        {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "92c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "2.5s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75",
+          "modelId": "e43da5e7a8e3d9626107",
+          "profileId": "c03cd9541ac589f33493",
+          "avgIq": 77.3,
+          "unified": 751.33,
+          "provisional": false,
+          "coverage": "13/18",
+          "value": 17.18
+        },
+        {
+          "model": "GPT-6 Luna",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-luna",
+          "origin": "US",
+          "description": "GPT-6 Luna by OpenAI — released Sep 22, 2026; $0.100/M input, $0.010/M cached input, $0.500/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-22",
+          "Input$/M": "0.1",
+          "Output$/M": "0.5",
+          "modelId": "822c760d6aa27b46cc0b",
+          "profileId": "8fcc2f531c31cd7cd6da",
+          "avgIq": 67.77,
+          "unified": 624.48,
+          "provisional": false,
+          "coverage": "9/18",
+          "value": 112.94
+        },
+        {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10",
+          "modelId": "827d7fc31374fbdd49bc",
+          "profileId": "1ddd23a9f1cba09d7a72",
+          "avgIq": 66.84,
+          "unified": 503.89,
+          "provisional": false,
+          "coverage": "12/18",
+          "value": 1.11
         },
         {
           "model": "GPT-5.5 Pro",
@@ -404,37 +473,37 @@
           "Input$/M": "—",
           "modelId": "1fbd36e112c0244fe56a",
           "profileId": "0d2c1799f41663b5d7a7",
-          "value": 0.0,
-          "coverage": "6/18",
           "avgIq": 66.64,
-          "unified": 546.73,
-          "provisional": false
+          "unified": 499.38,
+          "provisional": false,
+          "coverage": "6/18",
+          "value": 0.0
         },
         {
-          "model": "Claude Fable 5.1",
-          "organization": "Anthropic",
-          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "model": "Gemini 4 Argon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-argon",
           "origin": "US",
-          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-09-01",
-          "Model": "Claude Fable 5.1",
+          "description": "Gemini 4 Argon by Google — released Sep 30, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-30",
+          "Model": "Gemini 4 Argon",
           "Country": "🇺🇸",
-          "Context": "1M",
-          "Output$/M": "50",
-          "Speed": "3c/s",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "–",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "16.6s",
+          "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
-          "Input$/M": "10",
-          "modelId": "827d7fc31374fbdd49bc",
-          "profileId": "8ce05828c5760596c710",
-          "value": 1.08,
-          "coverage": "10/18",
-          "avgIq": 64.97,
-          "unified": 513.89,
-          "provisional": false
+          "Input$/M": "2",
+          "modelId": "a276059f28b67f49e058",
+          "profileId": "0e853b6be4fcfdb150b0",
+          "avgIq": 63.84,
+          "unified": 440.83,
+          "provisional": false,
+          "coverage": "8/18",
+          "value": 5.32
         },
         {
           "model": "Gemini 3.1 Pro",
@@ -443,139 +512,44 @@
           "origin": "US",
           "description": "Gemini 3.1 Pro by Google — released Feb 19, 2026; $2.00/M input and $12.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-02-19",
-          "Model": "Gemini 3.1 Pro",
-          "Country": "🇺🇸",
-          "Context": "1.0M",
+          "Input$/M": "2",
           "Output$/M": "12",
+          "modelId": "938ef1899e8197948b60",
+          "profileId": "e1a3f64739c6ec5f467b",
+          "avgIq": 63.65,
+          "unified": 435.83,
+          "provisional": false,
+          "coverage": "17/18",
+          "value": 4.55
+        },
+        {
+          "model": "Claude Sonnet 5.5",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-sonnet-5-5",
+          "origin": "US",
+          "description": "Claude Sonnet 5.5 by Anthropic — released Sep 28, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-28",
+          "Model": "Claude Sonnet 5.5",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "10",
           "Speed": "–",
           "License": "",
           "Parameters(B)": "-",
           "Latency": "–",
-          "KnowledgeCutoff": "Jan. 2025",
+          "KnowledgeCutoff": "Jun. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2",
-          "modelId": "938ef1899e8197948b60",
-          "profileId": "f1bf0be572326d1bf94c",
-          "value": 4.55,
-          "coverage": "17/18",
-          "avgIq": 63.65,
-          "unified": 490.4,
-          "provisional": false
-        },
-        {
-          "model": "Gemini 3.8 Flash",
-          "organization": "Google",
-          "link": "https://llm-stats.com/models/gemini-3.8-flash",
-          "origin": "US",
-          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-09-02",
-          "Model": "Gemini 3.8 Flash",
-          "Country": "🇺🇸",
-          "Context": "1.0M",
-          "Output$/M": "3.75",
-          "Speed": "155c/s",
-          "License": "",
-          "Parameters(B)": "-",
-          "Latency": "14.8s",
-          "KnowledgeCutoff": "Mar. 2026",
-          "Multimodal": "Yes",
-          "Input$/M": "0.75",
-          "modelId": "e43da5e7a8e3d9626107",
-          "profileId": "0749c9090cea70cc8040",
-          "value": 13.84,
-          "coverage": "12/18",
-          "avgIq": 62.29,
-          "unified": 470.1,
-          "provisional": false
-        },
-        {
-          "model": "Claude Sonnet 5",
-          "organization": "Anthropic",
-          "link": "https://llm-stats.com/models/claude-sonnet-5",
-          "origin": "US",
-          "description": "Claude Sonnet 5 by Anthropic — released Jun 30, 2026; $2.00/M input, $0.200/M cached input, $10.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-06-30",
-          "Model": "Claude Sonnet 5",
-          "Country": "🇺🇸",
-          "Context": "1M",
-          "Output$/M": "10",
-          "Speed": "15c/s",
-          "License": "",
-          "Parameters(B)": "-",
-          "Latency": "8.4s",
-          "KnowledgeCutoff": "-",
-          "Multimodal": "Yes",
-          "Input$/M": "2",
-          "modelId": "5d10ee934c56e4e34d57",
-          "profileId": "296cf1976bc489afacf9",
-          "value": 5.12,
-          "coverage": "16/18",
-          "avgIq": 61.39,
-          "unified": 446.3,
-          "provisional": false
-        },
-        {
-          "model": "Inkling-Small",
-          "organization": "Thinking Machines Lab",
-          "link": "https://llm-stats.com/models/inkling-small",
-          "origin": "US",
-          "description": "Inkling-Small by Thinking Machines Lab — released Jul 30, 2026; $0.300/M input, $0.060/M cached input, $1.20/M output; 524K-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-07-30",
-          "Input$/M": "0.3",
-          "Output$/M": "1.2",
-          "modelId": "59edd73817997d6ccec9",
-          "profileId": "22142ca29a29b70df485",
-          "value": 35.4,
-          "coverage": "14/18",
-          "avgIq": 53.1,
-          "unified": 304.56,
-          "provisional": false
-        },
-        {
-          "model": "Claude Opus 5.5",
-          "organization": "Anthropic",
-          "link": "https://llm-stats.com/models/claude-opus-5-5",
-          "origin": "US",
-          "description": "Claude Opus 5.5 by Anthropic — released Sep 22, 2026; $4.00/M input, $0.200/M cached input, $20.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
-          "created": "2026-09-22",
-          "Input$/M": "—",
-          "Output$/M": "$20.00",
-          "modelId": "bf6872882b4e0722ae12",
-          "profileId": "4d5e312bd619ce7fa00f",
-          "value": 2.51,
-          "coverage": "7/18",
-          "avgIq": 50.29,
-          "unified": 226.38,
-          "provisional": false
+          "modelId": "96e3cd24328c4bf62746",
+          "profileId": "b8b03e694e8bafb8353a",
+          "avgIq": 62.82,
+          "unified": 417.99,
+          "provisional": false,
+          "coverage": "8/18",
+          "value": 5.24
         }
       ],
       "CN": [
-        {
-          "model": "Kimi K3",
-          "organization": "Moonshot AI",
-          "link": "https://llm-stats.com/models/kimi-k3",
-          "origin": "CN",
-          "description": "",
-          "created": "2026-07-16",
-          "Model": "Kimi K3",
-          "Country": "🇨🇳",
-          "Context": "1.0M",
-          "Output$/M": "14.25",
-          "Speed": "4c/s",
-          "License": "",
-          "Parameters(B)": "2800",
-          "Latency": "13.5s",
-          "KnowledgeCutoff": "-",
-          "Multimodal": "Yes",
-          "Input$/M": "2.85",
-          "modelId": "d33cd77526f9f2073554",
-          "profileId": "6f2481eb480e706befb0",
-          "value": 4.43,
-          "coverage": "18/18",
-          "avgIq": 75.72,
-          "unified": 727.53,
-          "provisional": false
-        },
         {
           "model": "GLM-5.3-Flash",
           "organization": "Zhipu AI",
@@ -587,20 +561,46 @@
           "Country": "🇨🇳",
           "Context": "1.0M",
           "Output$/M": "0.5",
-          "Speed": "15c/s",
+          "Speed": "12c/s",
           "License": "",
           "Parameters(B)": "320",
-          "Latency": "13.5s",
+          "Latency": "7.1s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15",
           "modelId": "27c9865821933f9dafd1",
-          "profileId": "b48c83ed7e4a66490ac0",
-          "value": 91.78,
-          "coverage": "16/18",
-          "avgIq": 59.66,
-          "unified": 473.04,
-          "provisional": false
+          "profileId": "42b7c5b3e3cc64614f09",
+          "avgIq": 70.39,
+          "unified": 678.76,
+          "provisional": false,
+          "coverage": "17/18",
+          "value": 108.29
+        },
+        {
+          "model": "Kimi K3",
+          "organization": "Moonshot AI",
+          "link": "https://llm-stats.com/models/kimi-k3",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-07-16",
+          "Model": "Kimi K3",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "14.25",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "2800",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2.85",
+          "modelId": "d33cd77526f9f2073554",
+          "profileId": "a9d6a39dff51326a982d",
+          "avgIq": 75.72,
+          "unified": 704.72,
+          "provisional": false,
+          "coverage": "18/18",
+          "value": 4.43
         },
         {
           "model": "GLM-5.3",
@@ -622,11 +622,11 @@
           "Input$/M": "1.2",
           "modelId": "8c1207eb630867042536",
           "profileId": "d231e829d5b3ca660002",
-          "value": 11.86,
-          "coverage": "12/18",
           "avgIq": 61.66,
-          "unified": 456.32,
-          "provisional": false
+          "unified": 397.91,
+          "provisional": false,
+          "coverage": "12/18",
+          "value": 11.86
         },
         {
           "model": "Qwen3.8 Max",
@@ -639,20 +639,20 @@
           "Country": "🇨🇳",
           "Context": "1.0M",
           "Output$/M": "4.951",
-          "Speed": "7c/s",
+          "Speed": "–",
           "License": "",
           "Parameters(B)": "2400",
-          "Latency": "8.9s",
+          "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "1.65",
           "modelId": "32d628655ac1f115b0dd",
-          "profileId": "c26dbd0e2d466fbc1ff2",
-          "value": 9.32,
-          "coverage": "14/18",
+          "profileId": "d6270d0ed4e1a7cef091",
           "avgIq": 61.51,
-          "unified": 451.72,
-          "provisional": false
+          "unified": 392.44,
+          "provisional": false,
+          "coverage": "14/18",
+          "value": 9.32
         },
         {
           "model": "DeepSeek-V4-Pro-Max",
@@ -674,11 +674,11 @@
           "Input$/M": "1.3",
           "modelId": "088f3a563d79d06df736",
           "profileId": "2a7dc530671c66bf7e64",
-          "value": 15.2,
-          "coverage": "14/18",
           "avgIq": 59.29,
-          "unified": 412.18,
-          "provisional": false
+          "unified": 348.19,
+          "provisional": false,
+          "coverage": "14/18",
+          "value": 15.2
         },
         {
           "model": "DeepSeek-V4-Pro-0813",
@@ -691,7 +691,7 @@
           "Country": "🇨🇳",
           "Context": "1.0M",
           "Output$/M": "2.6",
-          "Speed": "30c/s",
+          "Speed": "–",
           "License": "",
           "Parameters(B)": "1600",
           "Latency": "–",
@@ -699,38 +699,64 @@
           "Multimodal": "No",
           "Input$/M": "1.3",
           "modelId": "7cc8168d3be894837e46",
-          "profileId": "c5095c45ec7d04280b44",
-          "value": 14.73,
-          "coverage": "14/18",
+          "profileId": "8ca020f9bab8ac7cb81d",
           "avgIq": 57.45,
-          "unified": 375.56,
-          "provisional": false
+          "unified": 306.61,
+          "provisional": false,
+          "coverage": "14/18",
+          "value": 14.73
         },
         {
-          "model": "DeepSeek-V4.1-Flash",
+          "model": "DeepSeek-V4.1-Flash-1017",
           "organization": "DeepSeek",
-          "link": "https://llm-stats.com/models/deepseek-v4.1-flash",
+          "link": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
           "origin": "CN",
           "description": "",
-          "created": "2026-09-10",
-          "Model": "DeepSeek-V4.1-Flash",
+          "created": "2026-10-17",
+          "Model": "DeepSeek-V4.1-Flash-1017",
           "Country": "🇨🇳",
           "Context": "1.0M",
-          "Output$/M": "0.66",
+          "Output$/M": "1.2",
           "Speed": "–",
           "License": "",
           "Parameters(B)": "763.2",
           "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
-          "Input$/M": "0.22",
-          "modelId": "61114fa803c3bbb1e2b2",
-          "profileId": "b185453d2fc158c0cb38",
-          "value": 54.94,
-          "coverage": "9/18",
-          "avgIq": 48.35,
-          "unified": 224.89,
-          "provisional": false
+          "Input$/M": "0.3",
+          "modelId": "5a14beb8aa3e7cb2f50a",
+          "profileId": "b5c86192a914dc5e209f",
+          "avgIq": 55.75,
+          "unified": 288.75,
+          "provisional": false,
+          "coverage": "6/18",
+          "value": 37.16
+        },
+        {
+          "model": "Qwen3.8-27B",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen3.8-27b",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-14",
+          "Model": "Qwen3.8-27B",
+          "Country": "🇨🇳",
+          "Context": "262.1k",
+          "Output$/M": "3",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "27.8",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.4",
+          "modelId": "175a962cb4b24bfdbde0",
+          "profileId": "dba179c13bb823b94ff0",
+          "avgIq": 51.19,
+          "unified": 167.33,
+          "provisional": false,
+          "coverage": "13/18",
+          "value": 15.05
         },
         {
           "model": "Qwen3.8 Flash",
@@ -743,20 +769,20 @@
           "Country": "🇨🇳",
           "Context": "1M",
           "Output$/M": "0.47",
-          "Speed": "3c/s",
+          "Speed": "–",
           "License": "",
           "Parameters(B)": "125",
-          "Latency": "4.8s",
+          "Latency": "–",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15",
           "modelId": "b56379bf82f1c28fab2e",
-          "profileId": "4a309a5e60c6d8b2c16e",
-          "value": 71.35,
-          "coverage": "10/18",
+          "profileId": "99664cb32bb270bae0df",
           "avgIq": 44.24,
-          "unified": 155.5,
-          "provisional": false
+          "unified": 62.81,
+          "provisional": false,
+          "coverage": "10/18",
+          "value": 71.35
         },
         {
           "model": "Qwen3.8-Flash-Next",
@@ -778,42 +804,682 @@
           "Input$/M": "—",
           "modelId": "00304d6b69ead9145b28",
           "profileId": "476b97677896aa9820a7",
-          "value": 0.0,
-          "coverage": "12/18",
           "avgIq": 47.5,
-          "unified": 170.38,
-          "provisional": false
-        },
-        {
-          "model": "DeepSeek-V4-Flash-Max",
-          "organization": "DeepSeek",
-          "link": "https://llm-stats.com/models/deepseek-v4-flash-max",
-          "origin": "CN",
-          "description": "",
-          "created": "2026-04-23",
-          "Model": "DeepSeek-V4-Flash-Max",
-          "Country": "🇨🇳",
-          "Context": "1.0M",
-          "Output$/M": "0.18",
-          "Speed": "–",
-          "License": "",
-          "Parameters(B)": "284",
-          "Latency": "–",
-          "KnowledgeCutoff": "-",
-          "Multimodal": "No",
-          "Input$/M": "0.09",
-          "modelId": "4ff999a7dc9b4c3f0e85",
-          "profileId": "258a1499ef494bf3fb98",
-          "value": 143.82,
-          "coverage": "10/18",
-          "avgIq": 38.83,
-          "unified": 100.02,
-          "provisional": false
+          "unified": 72.6,
+          "provisional": false,
+          "coverage": "12/18",
+          "value": 0.0
         }
       ]
     }
   },
   "history": [
+    {
+      "timestamp": "2026-11-02T03:33:32+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5344.69,
+          "count": 8,
+          "avgIq": 73.505,
+          "avgValue": 18.5075
+        },
+        "CN": {
+          "total": 1383.48,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-11-01T03:37:01+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5715.17,
+          "count": 8,
+          "avgIq": 75.58125,
+          "avgValue": 18.56125
+        },
+        "CN": {
+          "total": 1383.48,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-31T03:30:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5344.69,
+          "count": 8,
+          "avgIq": 73.505,
+          "avgValue": 18.5075
+        },
+        "CN": {
+          "total": 1383.48,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-30T03:36:35+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4903.86,
+          "count": 7,
+          "avgIq": 74.88571428571429,
+          "avgValue": 20.391428571428573
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-29T03:36:45+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5215.79,
+          "count": 7,
+          "avgIq": 76.85857142857142,
+          "avgValue": 21.212857142857143
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-28T03:36:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5878.27,
+          "count": 8,
+          "avgIq": 75.58125,
+          "avgValue": 18.56125
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-27T03:51:39+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5215.79,
+          "count": 7,
+          "avgIq": 76.85857142857142,
+          "avgValue": 21.212857142857143
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-26T03:47:36+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5878.27,
+          "count": 8,
+          "avgIq": 75.58125,
+          "avgValue": 18.56125
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-25T03:49:03+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5878.27,
+          "count": 8,
+          "avgIq": 75.58125,
+          "avgValue": 18.56125
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-24T03:40:42+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5766.8,
+          "count": 8,
+          "avgIq": 74.87375,
+          "avgValue": 18.5025
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-23T03:44:41+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5766.8,
+          "count": 8,
+          "avgIq": 74.87375,
+          "avgValue": 18.5025
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-22T03:42:08+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5089.32,
+          "count": 7,
+          "avgIq": 76.05,
+          "avgValue": 21.145714285714288
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-21T03:42:16+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5766.8,
+          "count": 8,
+          "avgIq": 74.87375,
+          "avgValue": 18.5025
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-20T03:41:51+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5766.8,
+          "count": 8,
+          "avgIq": 74.87375,
+          "avgValue": 18.5025
+        },
+        "CN": {
+          "total": 1423.0,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-19T03:45:56+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5089.32,
+          "count": 7,
+          "avgIq": 76.05,
+          "avgValue": 21.145714285714288
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-18T03:44:58+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5089.32,
+          "count": 7,
+          "avgIq": 76.05,
+          "avgValue": 21.145714285714288
+        },
+        "CN": {
+          "total": 2054.74,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-17T03:38:50+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5084.9400000000005,
+          "count": 7,
+          "avgIq": 76.02142857142857,
+          "avgValue": 20.987142857142857
+        },
+        "CN": {
+          "total": 2054.7799999999997,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-16T03:41:50+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5084.9400000000005,
+          "count": 7,
+          "avgIq": 76.02142857142857,
+          "avgValue": 20.987142857142857
+        },
+        "CN": {
+          "total": 2054.7799999999997,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-15T03:42:06+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5084.9400000000005,
+          "count": 7,
+          "avgIq": 76.02142857142857,
+          "avgValue": 20.987142857142857
+        },
+        "CN": {
+          "total": 2054.7799999999997,
+          "count": 3,
+          "avgIq": 72.42,
+          "avgValue": 64.52333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-14T03:41:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-13T04:12:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-12T03:57:30+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-11T03:53:02+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-10T03:46:49+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-09T03:50:19+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5547.09,
+          "count": 8,
+          "avgIq": 74.64,
+          "avgValue": 18.49875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-08T03:48:14+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5276.86,
+          "count": 8,
+          "avgIq": 73.13375,
+          "avgValue": 18.27875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-07T03:47:54+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5276.86,
+          "count": 8,
+          "avgIq": 73.13375,
+          "avgValue": 18.27875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-06T03:44:47+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5276.86,
+          "count": 8,
+          "avgIq": 73.13375,
+          "avgValue": 18.27875
+        },
+        "CN": {
+          "total": 1383.51,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-05T03:52:22+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5491.95,
+          "count": 8,
+          "avgIq": 73.13375,
+          "avgValue": 18.27875
+        },
+        "CN": {
+          "total": 1200.57,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-04T04:48:33+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5491.95,
+          "count": 8,
+          "avgIq": 73.13375,
+          "avgValue": 18.27875
+        },
+        "CN": {
+          "total": 1200.57,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-03T03:51:53+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 5194.55,
+          "count": 8,
+          "avgIq": 71.2575,
+          "avgValue": 17.86125
+        },
+        "CN": {
+          "total": 1200.57,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-02T03:43:55+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4909.28,
+          "count": 8,
+          "avgIq": 69.44624999999999,
+          "avgValue": 17.78625
+        },
+        "CN": {
+          "total": 1200.57,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-10-01T03:49:53+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4909.28,
+          "count": 8,
+          "avgIq": 69.44624999999999,
+          "avgValue": 17.78625
+        },
+        "CN": {
+          "total": 1200.57,
+          "count": 2,
+          "avgIq": 67.69,
+          "avgValue": 48.105000000000004
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-30T03:45:37+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 4262.05,
+          "count": 7,
+          "avgIq": 69.68571428571428,
+          "avgValue": 4.192857142857143
+        },
+        "CN": {
+          "total": 1656.8899999999999,
+          "count": 3,
+          "avgIq": 65.67999999999999,
+          "avgValue": 36.02333333333333
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-29T03:45:06+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3742.7200000000003,
+          "count": 6,
+          "avgIq": 70.435,
+          "avgValue": 4.4383333333333335
+        },
+        "CN": {
+          "total": 2108.61,
+          "count": 4,
+          "avgIq": 64.6375,
+          "avgValue": 29.3475
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-28T03:48:18+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3742.7200000000003,
+          "count": 6,
+          "avgIq": 70.435,
+          "avgValue": 4.4383333333333335
+        },
+        "CN": {
+          "total": 2108.61,
+          "count": 4,
+          "avgIq": 64.6375,
+          "avgValue": 29.3475
+        }
+      }
+    },
+    {
+      "timestamp": "2026-09-27T03:47:24+00:00",
+      "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
+      "scores": {
+        "US": {
+          "total": 3742.7200000000003,
+          "count": 6,
+          "avgIq": 70.435,
+          "avgValue": 4.4383333333333335
+        },
+        "CN": {
+          "total": 2108.61,
+          "count": 4,
+          "avgIq": 64.6375,
+          "avgValue": 29.3475
+        }
+      }
+    },
     {
       "timestamp": "2026-09-26T04:45:01+00:00",
       "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",

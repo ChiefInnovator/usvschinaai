@@ -11,7 +11,7 @@ from preconditions import preconditions
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = ('index.html', 'history.html', 'about.html', 'privacy.html', 'terms.html', '404.html')
 PUBLIC = ('site.webmanifest', 'favicon.svg', 'favicon.ico', 'apple-touch-icon.png',
-          'og-image.png', 'ig-image.png', 'robots.txt', 'sitemap.xml', 'llms.txt', 'humans.txt',
+          'og-image.png', 'ig-image.png', 'inventing-fire-mark.png', 'app-icon-1024.png', 'robots.txt', 'sitemap.xml', 'llms.txt', 'humans.txt',
           'sw.js', 'staticwebapp.config.json', 'news.json')
 DATA = ('current.json', 'models.json', 'data/model_catalog.json', 'data/core_benchmarks.json',
         'data/site_summary.json', 'data/scoring_revision.json',
@@ -98,7 +98,7 @@ def build_site(root=ROOT, output=ROOT / 'dist', *, verify=True):
              for name in sorted(names)
              if name in PAGES or name.startswith(('assets/', 'js/'))
              or name in ('site.webmanifest', 'favicon.svg', 'favicon.ico',
-                         'apple-touch-icon.png', 'data/site_summary.json')
+                         'apple-touch-icon.png', 'inventing-fire-mark.png', 'app-icon-1024.png', 'data/site_summary.json')
              or name.startswith(('web-app-manifest-', 'maskable-', 'favicon-'))}
     manifest['shellArtifacts'] = shell
     manifest['shellRevision'] = hashlib.sha256(json.dumps(shell, sort_keys=True, separators=(',', ':')).encode()).hexdigest()

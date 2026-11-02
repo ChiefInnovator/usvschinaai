@@ -31,6 +31,7 @@ class BrowserIntegrationTests(unittest.TestCase):
     def setUpClass(cls):
         cls.temp=tempfile.TemporaryDirectory();cls.root=Path(cls.temp.name)
         cls.addClassCleanup(cls.temp.cleanup)
+        shutil.copyfile(ROOT/'inventing-fire-mark.png',cls.root/'inventing-fire-mark.png')
         for name in ('index.html','history.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js','js/site-data.js'):
             dest=cls.root/name;dest.parent.mkdir(parents=True,exist_ok=True)
             content=(ROOT/name).read_text()

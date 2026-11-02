@@ -1,19 +1,19 @@
 {
   "schemaVersion": 1,
-  "generationId": "5af9861d1b948c01a9fd51383e95fe75d314e3411a6f2a638949bb973498db1e",
+  "generationId": "1f56502abc1d88c35c7246bbe6cb88965add29a4ef223c4b641ed8dd31121a92",
   "scoringRevision": "20081474e5f8880213bdfbb2a834ae1b12b1f2199fb2ebdaef9284eadaa81dc4",
   "artifacts": {
-    "current.json": "3e8f9f00c26cafec7fb0b4005574916ca14baaa472d24a3c3df843e6a1575bf9",
+    "current.json": "c1af1293a4e1940e16bdbf238c2e2f789b26e19a9701a7749898a75b3de7f580",
     "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
-    "data/historical_benchmark_gaps.json": "71fa2fe105cf489087534423616fbc232561a6fe37c39adbe6a71189b3cbcbaa",
-    "data/model_catalog.json": "9eae6073d23ca59c1cc56f334a07433bd900723283ecd324a4f842381892e9c6",
+    "data/historical_benchmark_gaps.json": "19440c60c3235a8399a85f992611b51ce421a8ef9d50511e64071691da69c250",
+    "data/model_catalog.json": "f2d5172a5d1c482b6d776487a3ce5d765aab86c932bb6fa7f90e1cbfb504babc",
     "data/scoring_revision.json": "1b36a5143e92926f16421227adfe6e94d60e505c887ff0ba95060f645b56d2a2",
-    "data/site_summary.json": "a474bc4491f819eb2343857ca0cd0ae5b6905c57775ae6de28470cd0180c53e8",
+    "data/site_summary.json": "1c4781efbecb1b286d9778d1c9879fdd94b5d6538e0eaf69c515b5bf0e6bd42b",
     "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-    "ig-image.png": "b1dabca6f70f44ca64ebb69a03f67e774d8edf3967b406ea30c5b553a43eea6a",
-    "models.json": "c426274395731692cd7e981ae3cc662f33d006c49bc13aad19894eb307fbe2d9",
-    "og-image.png": "d68441a891fd9e5a93cdeb1b3ae41134837b0991cfc42e669beb44b9a91d4475",
-    "social/2026-09-26-1-leaderboard-midnight.png": "9d5d6821fd3eb13f478c685506c05b9681ceb691096818a14837a908ea79d272",
-    "social/plan.json": "06478e0c44f4e7cbf09dc986db6d0d5cc68575556dbbe984783b7a1c546ee23e"
+    "ig-image.png": "cc2a406e77aee71a10cef9bb46db71ee05b3d1fec11494b23c72bd36407f58b0",
+    "models.json": "3ffbf9a6fc57caef9521f0071300d98f5f7f83b2629a8d6267cc15a9a4d51743",
+    "og-image.png": "a1a8a8b049a4ef8535491ad7a3f157a555aaec7d0201b6b506c353a86001bd69",
+    "social/2026-11-02-1-leaderboard-midnight.png": "faebe7619962a7f3329b8921d1f950764412925e38bcf6e01f79f06bafe179a8",
+    "social/plan.json": "9d79eda2d75073f6c2b0fe897d059ebc4616596bc44967dda4e7bc906112fae4"
   }
 }

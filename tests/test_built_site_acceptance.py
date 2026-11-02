@@ -87,6 +87,10 @@ class BuiltSiteAcceptanceTests(unittest.TestCase):
                     self.assertGreaterEqual(box['x'], 0)
                     self.assertLessEqual(box['x'] + box['width'], 390)
         self.assertTrue(self.page.evaluate('document.documentElement.scrollWidth <= 390'))
+        author_image = self.page.locator('#built-by img')
+        author_image.scroll_into_view_if_needed()
+        self.page.wait_for_function("document.querySelector('#built-by img').naturalWidth > 0")
+        self.assertIn(self.url + '/inventing-fire-mark.png', self.requested)
         self.assertFalse(self.external, self.external)
         self.assertFalse(self.errors, self.errors)
 
@@ -94,7 +98,8 @@ class BuiltSiteAcceptanceTests(unittest.TestCase):
         hashes = self.manifest['shellArtifacts']
         for required in ('index.html', 'history.html', 'about.html', 'privacy.html', 'terms.html',
                          '404.html', 'assets/site.css', 'assets/vendor/chart.umd.min.js',
-                         'assets/vendor/lucide.min.js', 'js/site-data.js', 'data/site_summary.json'):
+                         'assets/vendor/lucide.min.js', 'js/site-data.js', 'data/site_summary.json',
+                         'inventing-fire-mark.png', 'app-icon-1024.png'):
             self.assertIn(required, hashes)
         for path, expected in hashes.items():
             with self.subTest(path=path):

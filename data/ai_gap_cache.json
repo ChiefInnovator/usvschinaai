@@ -1,20 +1,62 @@
 {
+  "Beam 1.0": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Semi-Private result at XHigh reasoning; published October 16, 2026.",
+      "score": "23.5%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/reflection-beam-1-0"
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-02T03:29:18.735440+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1, lab self-report cited by the DeepSWE tracker; result publication is independently recorded as October 5, 2026. This is original DeepSWE, not DeepSWE v1.1.",
+      "score": "44.4%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.deepswe.dev/"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official Reflection model card; BF16 is the highest listed numeric variant (FP8 90.3%, NVFP4 89.3%), evaluated at temperature 0.7 and top_p 0.99. No independently verified publication date for this individual result was found.",
+      "score": "90.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/reflection/Beam-1.0-501B-A23B"
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "The leaderboard's release_v6 pass@1 view lists Beam 1.0 at 0.883. Individual-result publication date unknown.",
+      "score": "88.3%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llm-stats.com/benchmarks/livecodebench"
+    }
+  },
   "Claude Fable 5.1": {
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
@@ -30,21 +72,25 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "score": null
+      "notes": "Vals reported 90.64% for Claude Fable 5.1 on MMMU Pro; its release evaluation used max reasoning effort and temperature 1.0. The page does not provide an individual-result publication date.",
+      "score": "90.6%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.vals.ai/home?src=polymer.co"
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
@@ -58,9 +104,13 @@
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "score": null
+      "notes": "Mercor’s SWE-bench Verified leaderboard reports Pass@1 of 96.6% for Fable 5.1 Max; the page also lists 92.1% at High effort. The page does not provide an individual-result publication date.",
+      "score": "96.6%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
@@ -74,13 +124,91 @@
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-09-21T03:35:56.500556+00:00",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    }
+  },
+  "Claude Haiku 5.5": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1, 108 tasks, three trials, max effort, internal harness; safeguarded Fable configuration with disclosed Opus fallback. System card dated September 1, 2026.",
-      "score": "77.8%",
-      "source_type": "system_card",
-      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
+      "notes": "ARC Prize Verified leaderboard; XHigh reasoning, the highest verified ARC-AGI-2 result. The individual-result publication date is not displayed.",
+      "score": "61.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/anthropic-claude-haiku-5-5"
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-29T03:31:30.358316+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE 1.0, Claude Haiku 5.5 at medium effort. Result publication date is not stated by the accessible leaderboard.",
+      "score": "51.6%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://fu.furukama.com/model/?model=claude-haiku-5.5"
+    },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-10-29T03:31:30.358316+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1, Claude Haiku 5.5 at max effort using mini-swe-agent; the independently tracked Mercor row reports 59.9% ±7.7. Result publication date is unknown.",
+      "score": "59.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond, 198-question subset; Anthropic reports 85% accuracy at the model's default medium effort, averaged over two runs on October 7, 2026, with server-side fallback off and refusals counted wrong. Publication date of this individual result is not stated.",
+      "score": "85.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-08T03:43:47.819306+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Anthropic reports 85% accuracy for Claude Haiku 5.5 at its default effort; two runs on the 198-question Diamond subset, with refusals counted wrong. The documentation says these runs occurred October 7, 2026.",
+      "score": "85.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-08T03:43:47.819306+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "No-tools result. Anthropic’s official launch post is dated October 7, 2026; it separately reports 57.4% with tools, which is not substituted here.",
+      "score": "45.9%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-28T03:31:11.758007+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Reported for Claude Haiku 5.5 at medium effort; individual-result publication date is not shown.",
+      "score": "54.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://fu.furukama.com/model/?model=claude-haiku-5-5"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Fidian leaderboard, high effort, pass@1. The leaderboard published this result on October 8, 2026.",
+      "score": "79.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://fidian.ai/leaderboard/"
     }
   },
   "Claude Mythos 5.1": {
@@ -94,6 +222,58 @@
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
     },
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-10-05T03:48:07.418891+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Joint Anthropic system card reports 67.4% averaged over five trials for the shared Fable 5.1/Mythos 5.1 model configuration. Publication date: September 1, 2026; effort: adaptive thinking at max effort.",
+      "score": "67.4%",
+      "source_type": "system_card",
+      "source_url": "https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf"
+    },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
       "cached_at": "2026-09-14T03:35:43.088570+00:00",
@@ -103,6 +283,48 @@
       "score": "60.9%",
       "source_type": "vendor_blog",
       "source_url": "https://www.anthropic.com/claude-fable-and-mythos-5-1"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
@@ -158,6 +380,38 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/anthropic-claude-opus-5-5"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; Anthropic-reported at max effort. The model/result was published September 22, 2026.",
+      "score": "74.2%",
+      "source_type": "system_card",
+      "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Anthropic reports 92% accuracy for Claude Opus 5.5 on GPQA Diamond; the documentation does not provide a separately dated publication date for this individual result.",
+      "score": "92.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-26T04:35:45.187716+00:00",
@@ -178,15 +432,45 @@
       "source_type": "system_card",
       "source_url": "https://www.anthropic.com/claude-opus-5-5-system-card"
     },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis MMMU-Pro leaderboard row for Claude Opus 5.5 (thinking); this is the highest displayed effort-specific score.",
+      "notes": "Artificial Analysis result for Claude Opus 5.5, Adaptive Reasoning, max effort, default fallback. Independently verified publication date: September 22, 2026.",
       "score": "87.7%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.benchleader.com/benchmarks/aa_mmmu_pro"
+      "source_url": "https://artificialanalysis.ai/models/claude-opus-5-5"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "Claude Sonnet 5": {
@@ -219,6 +503,94 @@
       "score": "90.5%",
       "source_type": "system_card",
       "source_url": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf"
+    }
+  },
+  "Claude Sonnet 5.5": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; adaptive thinking at max effort; average over five trials. The system card was published September 28, 2026.",
+      "score": "71.0%",
+      "source_type": "system_card",
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5-system-card"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-29T03:40:21.703140+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Anthropic reports 64.5% with tools. The cited launch post is dated September 28, 2026.",
+      "score": "64.5%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.anthropic.com/claude-sonnet-5-5"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "DeepSeek-V4-Flash-Vision-Exp": {
@@ -357,6 +729,28 @@
       "score": "74.1%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
+    }
+  },
+  "Ember-1": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE 1.1, 113 tasks; published September 23, 2026 in Fireworks' benchmark table.",
+      "score": "75.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://fireworks.ai/blog/ember-1"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA.ai reports Ember-1's Original 198-question GPQA Diamond score as 91.92%; mean@1, max configuration. Individual-result publication date unknown.",
+      "score": "91.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://gpqa.ai/changes/"
     }
   },
   "GLM-5.3": {
@@ -542,13 +936,13 @@
   "GPT-5.6 Terra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "No-tools CharXiv-R score; the leaderboard also lists 88.0% tool-assisted, which is excluded as a different protocol. The cited result is dated September 2, 2026.",
+      "notes": "Google DeepMind reports 85.9% for GPT-5.6 Terra on CharXiv Reasoning (the CharXiv-R reasoning subset), with no tools; its methodology states that GPT-5.6 Terra uses maximum reasoning where available and that this result was self-computed. Individual-result publication date unknown.",
       "score": "85.9%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/charxiv_r/"
+      "source_type": "model_card",
+      "source_url": "https://deepmind.com/models/evals-methodology/gemini-3-8-flash"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -562,19 +956,15 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-27T03:39:35.911131+00:00",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Full-corpus OfficeQA Pro v1 (133 questions, 697 Treasury Bulletins), using Energent's fixed agent and the official scorer; published September 2, 2026.",
-      "score": "60.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://www.energent.ai/en/highlights/officeqa-v1-to-v2"
+      "score": null
     }
   },
   "GPT-6 Astra": {
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
@@ -590,37 +980,37 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     }
@@ -636,15 +1026,89 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/openai-gpt-6-luna"
     },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1, max reasoning effort. OpenAI published this result on September 22, 2026.",
+      "score": "66.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-01T03:45:23.417125+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond original 198-question score; GPT 6 Luna, mean@1, max effort. The source reports 90.91%; publication date of this individual result is unknown (table states data through September 29, 2026).",
+      "score": "90.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://gpqa.ai/changes/"
+    },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-25T03:32:35.389699+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-29T03:40:21.703140+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis reports the highest listed GPT-6 Luna reasoning setting, max; its model page does not independently publish an individual-result date.",
+      "notes": "Artificial Analysis independently reports 39.0% for GPT-6 Luna at max reasoning effort. Result publication date is not independently verified from the cited comparison page.",
       "score": "39.0%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gpt-6-luna"
+      "source_url": "https://artificialanalysis.ai/models/comparisons/gpt-6-luna-vs-gpt-6-astra"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
     }
   },
   "GPT-6 Sol": {
@@ -657,6 +1121,144 @@
       "score": "68.8%",
       "source_type": "vendor_blog",
       "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independent evaluation; May 2025 text-only 2,158-question subset, no tools, pass@1; GPT-6 Sol at max reasoning effort.",
+      "score": "47.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/humanitys-last-exam"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-09-28T03:43:59.635724+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independent evaluation; GPT-6 Sol at max reasoning effort.",
+      "score": "83.3%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
+    }
+  },
+  "GPT-6.1 Sol": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1 on the 130 public BrowseComp tasks; GPT-6.1 Sol Max. Result publication date is unknown.",
+      "score": "95.4%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-browsecomp-leaderboard/"
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-02T03:39:50.266525+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; highest vendor-published effort result, High. The underlying OpenAI launch result was published September 29, 2026.",
+      "score": "75.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-sol/"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-10-09T03:45:43.808678+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy, Epoch AI harness, max reasoning effort. Evaluated September 29, 2026; independently published in the benchmark registry on October 7, 2026.",
+      "score": "95.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarkregistry.org/benchmarks/gpqa/diamond-epoch-ai?result=0372e7e45f6003b4a7cd3437259ffe1ed26b0f5222b4c1d5ece38a88b108a4f5&view=history"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports 52.9% for GPT-6.1 Sol at max reasoning effort on its text-only, no-tools HLE evaluation (2,158 questions); individual-result publication date is not displayed.",
+      "score": "52.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gpt-6-1-sol"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-06T03:40:47.994022+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "MMMU-Pro overall score, independently evaluated by Artificial Analysis; max reasoning mode. Result publication date is unknown.",
+      "score": "86.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/mmmu-pro"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    }
+  },
+  "GPT-6.1 Terra": {
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-30T03:31:49.595219+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "OpenAI’s MMMU-Pro (Vision) result at max reasoning effort. Published October 26, 2026.",
+      "score": "85.5%",
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/introducing-gpt-6-1-terra/"
     }
   },
   "Gemini 3.1 Pro": {
@@ -711,6 +1313,28 @@
       "source_url": "https://www.vals.ai/models/google_gemini-3.1-pro-preview"
     }
   },
+  "Gemini 3.5 Flash-Lite": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-04T04:40:56.972317+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis reports HLE accuracy of 18.8%; its record is dated 2026-09-02.",
+      "score": "18.8%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-04T04:40:56.972317+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis lists the exact hyphenated MMMU-Pro overall score as 79.0%; its record is dated 2026-08-26. The separately listed Vals “MMMU Pro” result was not substituted.",
+      "score": "79.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite"
+    }
+  },
   "Gemini 3.8 Flash": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
@@ -724,15 +1348,19 @@
     },
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "score": null
+      "notes": "Pass@1 on the 130 public BrowseComp tasks, using the Mercor APEX web-research harness; Gemini 3.8 Flash at high effort (519 evaluation samples). The leaderboard records the result date as 2026-10-03.",
+      "score": "83.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -746,29 +1374,135 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-10-04T04:40:56.972317+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond, Artificial Analysis independent evaluation, High reasoning configuration (95.25%, rounded to 95.3%); source collected September 24, 2026.",
+      "notes": "GPQA Diamond accuracy. The OpenAI comparison table’s exact Gemini 3.8 Flash column reports 95.3%; no effort setting is specified. Independently archived as published on 2026-09-03: https://localsonly.run/runs/research-gemini-3.8-flash-published-reference-gpqa-diamond-1.0",
       "score": "95.3%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/gemini-3-8-flash"
+      "source_type": "vendor_blog",
+      "source_url": "https://openai.com/index/gpt-6-astra/"
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    }
+  },
+  "Gemini 4 Argon": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize’s verified-results table reports 91.3% for Gemini 4 Argon at High reasoning on ARC-AGI-2 Semi-Private. Result page published October 13, 2026.",
+      "score": "91.3%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/google-gemini-4-argon"
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-12T03:52:58.338227+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "DeepSWE v1.1; Google self-computed with a mini-swe agent harness at highest thinking. The result table is stated as current as of October 2026; individual-result publication date unknown.",
+      "score": "77.9%",
+      "source_type": "system_card",
+      "source_url": "https://deepmind.google/models/evals-methodology/gemini-4-argon"
+    },
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "GPQA Diamond accuracy for Epoch AI's `gemini-4-argon_high` run, high effort; published October 13, 2026.",
+      "score": "96.4%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://ai.info/tracker/benchmarks/gpqa-diamond"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently evaluated Gemini 4 Argon at high reasoning effort; its displayed HLE result is 57%. Publication date of the individual result is not stated.",
+      "score": "57.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/gemini-4-argon"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-10-24T03:36:58.139789+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vals row for Gemini 4 Argon using the Terminus 2 harness; pass@1. Individual-result publication date unknown.",
+      "score": "57.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.vals.ai/benchmarks/terminal-bench-2-1"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     }
@@ -842,65 +1576,87 @@
   "IBM Granite 4.2 30B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-09-30T03:40:56.509052+00:00",
+      "confidence": "high",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis evaluation for Granite 4.2 30B’s reasoning variant; independently published result. Publication date for the individual result is not stated.",
-      "score": "64.4%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
+      "notes": "IBM reports 66.41% in thinking mode using the NeMo Evaluator harness. The IBM Granite 4.2 release publication is dated August 25, 2026.",
+      "score": "66.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.2-30b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-25T03:40:24.180784+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis independently evaluated result for the standard no-tools HLE configuration; no individual-result publication date is stated.",
+      "notes": "Artificial Analysis independently reports 11.2% for its text-only Humanity’s Last Exam evaluation of Granite 4.2 30B. Publication date of this individual result was not independently verified.",
       "score": "11.2%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b/"
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-30b"
     }
   },
   "IBM Granite 4.2 3B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table explicitly labels this as GPQA Diamond and lists IBM Granite 4.2-3B at 55.9%; configuration and reasoning effort are undisclosed.",
+      "notes": "Third-party ledger identifies this as a 55.9% Artificial Analysis GPQA Diamond run. The individual-result publication date is unknown; the ledger attributes the result to September 28, 2026. IBM's 54.80 result is generic GPQA, not GPQA Diamond, and was not substituted.",
       "score": "55.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://verdictpal.com/models/granite-4-2-3b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table labels the metric HLE and lists IBM Granite 4.2-3B at 6.6%; configuration and tool setting are undisclosed.",
+      "notes": "Third-party ledger reports a 6.6% Artificial Analysis Humanity’s Last Exam result. The individual-result publication date is unknown; the ledger attributes the result to September 28, 2026.",
       "score": "6.6%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://verdictpal.com/models/granite-4-2-3b"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-13T04:07:51.393943+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table explicitly labels this SWE-bench Verified result and lists IBM Granite 4.2-3B at 32.2%; harness configuration and reasoning effort are undisclosed.",
+      "notes": "Third-party ledger reports 32.2% for this exact model and benchmark. It attributes the figure to a cited publisher table read on October 2, 2026; the individual-result publication date is unknown. IBM's own model card lists its 3B SWE-bench Verified cell as NA, so the 8B/30B IBM scores were not used.",
       "score": "32.2%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.publicai.io/model-index/m/granite-4-2-3b"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-16T03:37:41.100928+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "IFM's comparative table lists IBM Granite 4.2-3B at 13.9; the evaluation configuration and reasoning-effort setting are not disclosed.",
+      "notes": "Artificial Analysis independently evaluates Terminal-Bench 2.1 with Terminus 2, reporting pass@1 averaged over three repeats; the model row’s publication date is unknown.",
       "score": "13.9%",
-      "source_type": "vendor_blog",
-      "source_url": "https://ifm.ai/blog/k2/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/evaluations/terminalbench-2-1"
+    }
+  },
+  "IBM Granite 4.2 8B": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-09-30T03:40:56.509052+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "IBM’s model card reports GPQA 64.14 for the 8B Dense model; LLM Stats labels its GPQA metric as Diamond accuracy. Reported at one decimal place.",
+      "score": "64.1%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ibm-granite/granite-4.2-8b"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-03T03:47:39.850539+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently evaluated the reasoning model on its text-only HLE protocol; score is pass@1 over its 2,158-question text-only subset. Individual-result publication date is unknown.",
+      "score": "9.7%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/granite-4-2-8b/"
     }
   },
   "Inkling": {
@@ -935,80 +1691,106 @@
       "source_url": "https://thinkingmachines.ai/model-card/inkling/"
     }
   },
+  "Inkling-Small": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "llm_model": "gpt-5.6-terra",
+      "score": null
+    }
+  },
   "LFM2.5-2.6B": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "OpenBMB comparative baseline table, LFM2.5-2.6B column. Marked †, which the card attributes to the official Artificial Analysis release; individual-result publication date unknown.",
+      "notes": "Listed as an independently measured Artificial Analysis run; source page identifies the exact LFM2.5-2.6B model and GPQA Diamond metric. Individual-result publication date is unknown.",
       "score": "55.8%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B-Base?hardware=a30"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llmbenchmark.ai/models/liquid-lfm-2-5-2-6b"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "Listed as HLE in the OpenBMB comparative baseline table, LFM2.5-2.6B column. Marked †, which the card attributes to the official Artificial Analysis release; individual-result publication date unknown.",
+      "notes": "Listed as an independently measured Artificial Analysis run; this is Humanity’s Last Exam, not Agents’ Last Exam. Individual-result publication date is unknown.",
       "score": "6.2%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B-Base?hardware=a30"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://llmbenchmark.ai/models/liquid-lfm-2-5-2-6b"
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "OpenBMB comparative baseline table, LFM2.5-2.6B column; the card states unmarked results were reproduced internally. Individual-result publication date unknown.",
+      "notes": "Exact LFM2.5-2.6B row is marked verified by the leaderboard; public result date is not shown.",
       "score": "65.2%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B-Base?hardware=a30"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://open-llm-radar.com/benchmarks/mmlu-pro?page=2"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "OpenBMB comparative baseline table, LFM2.5-2.6B column; the card states unmarked results were reproduced internally. Individual-result publication date unknown.",
+      "notes": "Direct LFM2.5-2.6B column in OpenBMB's published comparison table; this is the requested Verified benchmark, not SWE-bench Pro. No independently verified publication date for this individual result.",
       "score": "6.0%",
       "source_type": "model_card",
-      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B-Base?hardware=a30"
+      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B/raw/main/README.md"
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "confidence": "medium",
       "llm_model": "gpt-5.6-terra",
-      "notes": "OpenBMB comparative baseline table, LFM2.5-2.6B column. Marked †, which the card attributes to the official Artificial Analysis release; individual-result publication date unknown.",
+      "notes": "Exact Terminal-Bench 2.1 row for LFM2.5-2.6B; public result date is not shown.",
       "score": "4.5%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/openbmb/MiniCPM5-2B-Base?hardware=a30"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://open-llm-radar.com/benchmarks/terminal-bench-2-1"
     }
   },
   "Laguna S 2.1": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
@@ -1024,63 +1806,85 @@
     },
     "FrontierMath — Tiers 1–3 v2": {
       "benchmark": "FrontierMath — Tiers 1–3 v2",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
+    }
+  },
+  "Mercury 3": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official benchmark chart reports DeepSWE v1 = 46.31%, rounded to 46.3%. Published October 19, 2026.",
+      "score": "46.3%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-22T03:37:59.261683+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official benchmark chart reports GPQA Diamond = 89.23%, rounded to 89.2%. Published October 19, 2026.",
+      "score": "89.2%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
     }
   },
   "MiMo-V2.6-Flash": {
@@ -1118,6 +1922,16 @@
     }
   },
   "Muse Glimmer-30B": {
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Third-party comparison model card; exact Muse Glimmer 30B column, served locally in BF16 at its highest reasoning setting with 131K context. The card specifies uncapped DeepSWE; publication date not stated.",
+      "score": "5.3%",
+      "source_type": "model_card",
+      "source_url": "https://cdn-avatars.qwak.ai/sabicap/sabi-noema-mla"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-09-26T04:35:45.187716+00:00",
@@ -1127,24 +1941,44 @@
       "score": "83.5%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/meta-models/Muse-Glimmer-30B"
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Third-party comparison model card; exact Muse Glimmer 30B column. Publication date not stated. Meta's official report instead reports LiveCodeBench Pro (2025Q2), which is incompatible and was not substituted.",
+      "score": "64.0%",
+      "source_type": "model_card",
+      "source_url": "https://cdn-avatars.qwak.ai/sabicap/sabi-noema-mla"
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Third-party comparison model card; exact Muse Glimmer 30B column, served locally in BF16 at its highest reasoning setting with 131K context. Publication date not stated. MMLU-ProX was not substituted.",
+      "score": "84.2%",
+      "source_type": "model_card",
+      "source_url": "https://cdn-avatars.qwak.ai/sabicap/sabi-noema-mla"
     }
   },
   "Muse Spark 1.3": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
@@ -1160,7 +1994,7 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
@@ -1176,39 +2010,137 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-09-26T04:35:45.187716+00:00",
+      "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
+    }
+  },
+  "Muse Spark Open": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Verified leaderboard, Semi-Private ARC-AGI-2 score at XHigh reasoning. The listing identifies the model as Muse Spark Open; individual-result publication date is not independently stated.",
+      "score": "57.5%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/meta-muse-spark-open"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official Meta model-card benchmark table; xhigh reasoning effort. The model card gives its release date as October 15, 2026.",
+      "score": "89.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-27T03:46:59.717021+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "HLE with tools, xhigh reasoning effort; Meta reports use of the full 2,500-question dataset under its stated HLE protocol. Result publication date unknown.",
+      "score": "61.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis model entry for Muse Spark Open at xhigh reasoning effort. Individual-result publication date not stated.",
+      "score": "80.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/muse-spark-open/"
+    }
+  },
+  "Muse Wonder": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-10-26T03:43:03.464204+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Full-release passRate; Muse Code harness, High effort. The operator leaderboard identifies the row as Muse Wonder 1.0; individual-result publication date is unknown.",
+      "score": "36.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://agents-last-exam.org/leaderboard"
+    },
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-28T03:31:11.758007+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis independently reports the Muse Wonder max-effort result; individual-result publication date unknown.",
+      "score": "50.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/muse-wonder"
+    }
+  },
+  "Muse Wonder Full": {
+    "Humanity’s Last Exam": {
+      "benchmark": "Humanity’s Last Exam",
+      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Artificial Analysis lists Muse Wonder Full (Max) at 54%; score displayed rounded by the leaderboard. Publication date of this individual result is unknown.",
+      "score": "54.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://artificialanalysis.ai/models/muse-wonder-full/"
+    }
+  },
+  "Nemotron 3.5 Bolt (74B A9B 24GB)": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Nemotron 3.5 Bolt 74B-A9B-24GB IQ2 checkpoint. Published in NVIDIA’s technical report dated October 15, 2026.",
+      "score": "86.4%",
+      "source_type": "paper",
+      "source_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-Technical-Report.pdf"
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "IFBench (instruction loose), Nemotron 3.5 Bolt 74B-A9B-24GB IQ2 checkpoint. Published in NVIDIA’s technical report dated October 15, 2026.",
+      "score": "66.2%",
+      "source_type": "paper",
+      "source_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-Technical-Report.pdf"
     }
   },
   "Nemotron 3.5 Lightning (30B A3B)": {
@@ -1221,6 +2153,82 @@
       "score": "75.4%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16"
+    }
+  },
+  "Nemotron 3.5 Super VL (120B A12B)": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "ARC Prize Verified score; highest published reasoning setting is Medium (High: 1.5%, None: 0.8%). Result page lists the model date as October 15, 2026.",
+      "score": "1.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/nvidia-nemotron-3-5-super-vl-120b-a12b"
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "BF16 post-trained checkpoint; NVIDIA reports 24.65 on “DeepSWE [offline]”, rounded to 24.7%. The card does not publish an individual-result date.",
+      "score": "24.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "BF16 post-trained checkpoint; published as 89.52, rounded to 89.5%. NVIDIA’s technical report specifies GPQA-Diamond is averaged over eight repeats. The card does not publish an individual-result date.",
+      "score": "89.5%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-10-30T03:31:49.595219+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Comparative vendor model card reports Nemotron 3.5 Super VL at 60.1% on Toolathlon-Verified; official evaluation service, 128K maximum token limit. Source publication date not independently verified.",
+      "score": "60.1%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ornith-ai/Ornith-1.5-122B?library=transformers"
+    }
+  },
+  "Nemotron Labs Dory 1.0 (4B)": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-20T03:37:52.117863+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Official NVIDIA model card reports GPQA Diamond (no tools): 69.19% at 1 loop, 72.41% at 2 loops, and 72.16% at 4 loops. Highest verified setting is 2 loops. The card does not provide an individual-result publication date; model release date is October 16, 2026.",
+      "score": "72.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16"
+    }
+  },
+  "Particle-1": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-10-30T03:31:49.595219+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Pass@1/task pass rate using Terminus 2, 16 rollouts per task, 512k-token limit, temperature 1, top_p 0.95, and max reasoning; published October 28, 2026.",
+      "score": "72.6%",
+      "source_type": "vendor_blog",
+      "source_url": "https://particle.ai/blog/introducing-particle-1"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-10-30T03:31:49.595219+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-5.6-terra",
+      "notes": "Vendor-reported GPQA Diamond accuracy; published October 28, 2026.",
+      "score": "90.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://particle.ai/blog/introducing-particle-1"
     }
   },
   "Qwen3.8 Flash": {
