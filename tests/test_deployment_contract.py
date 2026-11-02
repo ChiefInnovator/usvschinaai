@@ -66,12 +66,14 @@ class DeploymentContractTests(unittest.TestCase):
         self.assertIn('"$CURRENT" = "$CANDIDATE_SHA"', self.delivery)
         self.assertIn("if: steps.current.outputs.eligible == 'true'", self.delivery)
 
-    def test_cache_invalidation_ignores_successful_preview_runs(self):
-        cache = (WORKFLOWS / 'bust-cache.yml').read_text()
-        self.assertIn("github.event.workflow_run.conclusion == 'success'", cache)
-        self.assertIn("github.event.workflow_run.head_branch == 'main'", cache)
-        self.assertIn("github.event.workflow_run.event == 'push'", cache)
-        self.assertIn("github.event.workflow_run.event == 'workflow_dispatch'", cache)
+    def test_production_consumers_ignore_successful_preview_runs(self):
+        for filename in ('bust-cache.yml', 'post-instagram.yml'):
+            with self.subTest(workflow=filename):
+                consumer = (WORKFLOWS / filename).read_text()
+                self.assertIn("github.event.workflow_run.conclusion == 'success'", consumer)
+                self.assertIn("github.event.workflow_run.head_branch == 'main'", consumer)
+                self.assertIn("github.event.workflow_run.event == 'push'", consumer)
+                self.assertIn("github.event.workflow_run.event == 'workflow_dispatch'", consumer)
 
     def test_writers_prepare_and_verify_after_generators_before_commit(self):
         for filename, generator in (('daily-scrape.yml', 'python scripts/scrape_news.py'),
