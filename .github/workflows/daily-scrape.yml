@@ -8,8 +8,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   
+concurrency:
+  group: data-writer
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -20,6 +24,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
+          ref: develop
+          persist-credentials: false
           fetch-depth: 0
       
       - name: Set up Python
@@ -129,8 +135,6 @@ jobs:
         run: |
           git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
           git config --local user.name "${{ github.repository_owner }}"
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
       
       - name: Check for changes
         id: changes
@@ -155,9 +159,18 @@ jobs:
           git status --porcelain social/ data/social_history.jsonl data/social_caption_cache.json data/social_cost.jsonl | grep -q . && CHANGES=true
           echo "has_changes=$CHANGES" >> "$GITHUB_OUTPUT"
 
-      - name: Commit and push changes
+      - name: Open data feature pull request
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         if: steps.changes.outputs.has_changes == 'true'
         run: |
+          # Only this final step can access the write-capable token.
+          gh auth setup-git
+          git fetch origin develop
+          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+            echo '::error::develop advanced during generation; rerun against its latest state.'
+            exit 1
+          fi
           git add models.json
           git add current.json 2>/dev/null || true
           git add data/scoring_revision.json data/site_summary.json data/publication.json
@@ -178,12 +191,12 @@ jobs:
           git add data/social_history.jsonl data/social_caption_cache.json data/social_cost.jsonl 2>/dev/null || true
           TIMESTAMP=$(date -u +'%Y-%m-%dT%H:%M:%S')
           git commit -m "Daily scrape run - $TIMESTAMP UTC"
-          # The scrape takes ~45 min; if anything was pushed to main in that
-          # window, a plain push is rejected. Merge (never rebase) the remote
-          # first — data files are only written by this workflow, so the merge
-          # is clean unless two scrape runs overlap, which should fail loudly.
-          git pull --no-rebase https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
-          git push https://x-access-token:${{ secrets.PAT_TOKEN }}@github.com/${{ github.repository }}.git main
+          BRANCH="feature/daily-scrape-${{ github.run_id }}-${{ github.run_attempt }}"
+          git switch -c "$BRANCH"
+          git push origin "HEAD:refs/heads/$BRANCH"
+          gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
+            --title "Refresh data (daily-scrape)" \
+            --body "Generated publication for review. Merge into develop, then promote develop to main to publish."
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'

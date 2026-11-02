@@ -53,17 +53,27 @@ class DeploymentContractTests(unittest.TestCase):
         self.assertIn("github.event.action == 'closed'", close)
         self.assertNotIn('pull_request_target:', self.deploy)
 
-    def test_writer_workflow_completion_resolves_current_main_and_serializes_delivery(self):
-        self.assertIn("github.event.workflow_run.conclusion == 'success'", self.verify)
-        self.assertIn("github.event.workflow_run.head_branch == 'main'", self.verify)
-        self.assertIn("github.event_name == 'workflow_run' && 'main' || github.sha", self.verify)
-        self.assertNotIn('github.event.workflow_run.head_sha', self.verify)
+    def test_only_main_promotions_deploy_production_and_develop_prs_get_previews(self):
+        self.assertNotIn('workflow_run:', self.deploy)
+        self.assertIn('branches: [main]', self.deploy)
+        self.assertIn('branches: [main, develop]', self.deploy)
+        self.assertIn("github.ref == 'refs/heads/main'", self.verify)
+        self.assertIn('ref: ${{ github.sha }}', self.verify)
         self.assertIn('cancel-in-progress: false', self.deploy)
         self.assertIn("|| 'production'", self.deploy)
         self.assertIn('CANDIDATE_SHA: ${{ needs.verify_build.outputs.sha }}', self.delivery)
         self.assertIn('git/ref/heads/main', self.delivery)
         self.assertIn('"$CURRENT" = "$CANDIDATE_SHA"', self.delivery)
         self.assertIn("if: steps.current.outputs.eligible == 'true'", self.delivery)
+
+    def test_production_consumers_ignore_successful_preview_runs(self):
+        for filename in ('bust-cache.yml', 'post-instagram.yml'):
+            with self.subTest(workflow=filename):
+                consumer = (WORKFLOWS / filename).read_text()
+                self.assertIn("github.event.workflow_run.conclusion == 'success'", consumer)
+                self.assertIn("github.event.workflow_run.head_branch == 'main'", consumer)
+                self.assertIn("github.event.workflow_run.event == 'push'", consumer)
+                self.assertIn("github.event.workflow_run.event == 'workflow_dispatch'", consumer)
 
     def test_writers_prepare_and_verify_after_generators_before_commit(self):
         for filename, generator in (('daily-scrape.yml', 'python scripts/scrape_news.py'),
