@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-11-02T11:05:12.447Z",
         "reason": "Reviewed design preserves the incumbent Inter/system font stack rather than introducing a new brand or remote font dependency."
+      },
+      {
+        "rule": "low-contrast",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-11-02T11:54:12.024Z",
+        "reason": "Agent verified live Chromium computed style: all six text-slate-500 author links render #94a3b8 due index.html:155 override, on composited #0a0d1e background; contrast 7.52:1. Static detector uses overridden Tailwind #64748b; this rule has no extractable value so file scope is the narrowest supported ignore."
       }
     ]
   }
