@@ -1,16 +1,18 @@
 {
-  "format": "leaderboard",
-  "palette": "midnight",
-  "weight": 0,
-  "date": "2026-11-02",
-  "timestamp": "2026-11-02T03:33:32+00:00",
+  "format": "price_vs_power",
+  "palette": "newsprint",
+  "weight": 1,
+  "date": "2026-11-04",
+  "timestamp": "2026-11-04T09:11:32+00:00",
   "slides": [
-    "2026-11-02-1-leaderboard-midnight.png"
+    "2026-11-04-1-price_vs_power-newsprint.png",
+    "2026-11-04-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-11-02-1-leaderboard-midnight.png"
+    "https://usvschina.ai/social/2026-11-04-1-price_vs_power-newsprint.png",
+    "https://usvschina.ai/social/2026-11-04-2-leaderboard-newsprint.png"
   ],
   "caption": "Team USA leads by 3961\n\n• #1 overall: GPT-6 Astra at 900 Unified\n• Team USA 5345 vs Team China 1383\n• 8 US and 2 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
   "caption_source": "deterministic",
-  "generated_at": "2026-11-02T03:33:32+00:00"
+  "generated_at": "2026-11-04T09:11:32+00:00"
 }

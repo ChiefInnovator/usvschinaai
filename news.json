@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-02T03:34:32.896398+00:00",
+  "lastUpdated": "2026-11-04T09:12:29.770353+00:00",
   "items": [
+    {
+      "id": "22533435f8f4d466",
+      "headline": "NVIDIA Rises 3% Despite AI CEO’s Warning on Chinese Chip Competition; AMD Climbs 5%, Broadcom Gains 3%",
+      "url": "https://247wallst.com/investing/2026/11/03/nvidia-rises-3-despite-ai-ceos-warning-on-chinese-chip-competition-amd-climbs-5-broadcom-gains-3/",
+      "source": "24/7 Wall St",
+      "country": "CN",
+      "publishedAt": "2026-11-03 18:48:52",
+      "relevanceScore": 0.4
+    },
+    {
+      "id": "c79071bf0393f882",
+      "headline": "OpenAI Hires DOGE Alumni Who Hacked Into Anthropic to Strengthen Security",
+      "url": "https://gizmodo.com/openai-hires-doge-alumni-who-hacked-into-anthropic-to-strengthen-security-2000834432",
+      "source": "Gizmodo",
+      "country": "US",
+      "publishedAt": "2026-11-03 18:15:34",
+      "relevanceScore": 0.6
+    },
     {
       "id": "77ea26cc84c3135d",
       "headline": "DeepSeek Super-Agent takes coding work from GitHub and team chats",
@@ -126,60 +144,6 @@
       "country": "Both",
       "publishedAt": "2026-10-21 13:32:20",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "777e4261c2d9f67a",
-      "headline": "IT Security News Hourly Summary 2026-10-20 16h : 41 posts",
-      "url": "https://www.itsecuritynews.info/it-security-news-hourly-summary-2026-10-20-16h-41-posts/",
-      "source": "It Security News",
-      "country": "Both",
-      "publishedAt": "2026-10-20 14:00:15",
-      "relevanceScore": 0.45
-    },
-    {
-      "id": "b9084f5a1eabe837",
-      "headline": "US bans DeepSeek and AI tools built on its models from federal agencies, prompting angry response from China",
-      "url": "https://www.techspot.com/news/114269-us-bans-deepseek-ai-tools-built-models-federal.html",
-      "source": "Techspot",
-      "country": "CN",
-      "publishedAt": "2026-10-20 13:58:00",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "fe772c65f1f701ee",
-      "headline": "DHS Orders DeepSeek Removed from Federal IT Systems Over Security Risks",
-      "url": "https://www.techrepublic.com/article/news-dhs-deepseek-federal-systems-security-ban/",
-      "source": "Techrepublic",
-      "country": "CN",
-      "publishedAt": "2026-10-20 13:53:08",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "5f5153403debf2c4",
-      "headline": "China slams US ban on DeepSeek AI over security concerns",
-      "url": "https://biztoc.com/x/648ff3afdadf20c8",
-      "source": "Biztoc",
-      "country": "CN",
-      "publishedAt": "2026-10-20 13:15:51",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "34cf4fff8f00a476",
-      "headline": "US orders federal agencies to remove China’s DeepSeek AI from their systems",
-      "url": "https://techcrunch.com/2026/10/20/us-orders-federal-agencies-to-remove-chinas-deepseek-ai-from-their-systems/",
-      "source": "Tech Crunch",
-      "country": "CN",
-      "publishedAt": "2026-10-20 13:07:24",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "b5d0982340f6e1c5",
-      "headline": "Anthropic Hands a Growing Slice of Itself to the Public — and China Wants to Lock Down Its Best AI Models",
-      "url": "https://thecherrycreeknews.com/anthropic-public-benefit-fund-china-ai-model-export-controls/",
-      "source": "The Cherry Creek News",
-      "country": "Both",
-      "publishedAt": "2026-10-19 13:03:20",
-      "relevanceScore": 0.69
     }
   ]
 }
