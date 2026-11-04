@@ -1,57 +1,57 @@
 {
-  "retrievedAt": "2026-11-02",
-  "modelsChecked": 297,
-  "sourcesChecked": 307,
-  "findings": 1142,
-  "accepted": 0,
+  "retrievedAt": "2026-11-04",
+  "modelsChecked": 301,
+  "sourcesChecked": 311,
+  "findings": 1139,
+  "accepted": 8,
   "failures": [
     {
-      "source": "llm-stats:Kimi K2-Thinking-0905",
+      "source": "llm-stats:Qwen3.5-397B-A17B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Opus 4.7",
+      "source": "llm-stats:Qwen3.5-122B-A10B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Fable 5.1",
+      "source": "llm-stats:DeepSeek-V4-Flash-Vision-Exp",
       "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:DeepSeek-V4-Pro-0813",
+      "error": "HTTP Error 502: Bad Gateway"
     },
     {
       "source": "llm-stats:Qwen3.8-27B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Mythos 5.1",
+      "source": "llm-stats:Nemotron 3 Super (120B A12B)",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 5.5",
+      "source": "llm-stats:GPT OSS 120B High",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 4 Carbon",
+      "source": "llm-stats:DeepSeek-V3.2",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Jev",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:DeepSeek R1 Distill Qwen 14B",
+      "error": "HTTP Error 502: Bad Gateway"
     },
     {
-      "source": "llm-stats:Nemotron 3.5 Bolt (74B A9B 24GB)",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "vals:lcb",
+      "error": "Vals benchmark identity or payload changed: lcb"
     },
     {
-      "source": "llm-stats:IBM Granite 4.2 8B",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
-      "source": "llm-stats:Muse Glimmer-30B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Grok-4.1 Fast Non-Reasoning",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "vals:swebench",
+      "error": "Vals benchmark identity or payload changed: swebench"
     },
     {
       "source": "vals:gpqa",
@@ -60,18 +60,6 @@
     {
       "source": "vals:terminal-bench-2-1",
       "error": "Vals benchmark identity or payload changed: terminal-bench-2-1"
-    },
-    {
-      "source": "vals:lcb",
-      "error": "Vals benchmark identity or payload changed: lcb"
-    },
-    {
-      "source": "vals:swebench",
-      "error": "Vals benchmark identity or payload changed: swebench"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     }
   ],
   "skippedConfigurations": [],
