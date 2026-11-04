@@ -452,13 +452,13 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-10-02T03:39:50.266525+00:00",
-      "confidence": "high",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis result for Claude Opus 5.5, Adaptive Reasoning, max effort, default fallback. Independently verified publication date: September 22, 2026.",
-      "score": "87.7%",
+      "cached_at": "2026-11-04T09:01:47.638690+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Mercor evaluation of the original 1,730 public tasks, Pass@1; max effort. Publication date unknown. A higher reported result uses a fallback configuration and was excluded.",
+      "score": "87.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/claude-opus-5-5"
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/sample-task/"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
@@ -1250,6 +1250,16 @@
     }
   },
   "GPT-6.1 Terra": {
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-11-04T09:01:47.638690+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPQA Diamond, maximum reasoning effort; Epoch AI evaluation, reported as 94.32% and rounded to one decimal. Individual result publication date unknown.",
+      "score": "94.3%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://theaggregate.ai/benchmark?slug=epoch-ai-gpqa-diamond"
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-10-30T03:31:49.595219+00:00",
@@ -1436,13 +1446,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
+      "cached_at": "2026-11-04T09:01:47.638690+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy for Epoch AI's `gemini-4-argon_high` run, high effort; published October 13, 2026.",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPQA Diamond, 198 questions; high reasoning effort, Epoch task 1.0.11. The CSV could not be read directly, but a public result record transcribes the matching row. Publication date unknown.",
       "score": "96.4%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://ai.info/tracker/benchmarks/gpqa-diamond"
+      "source_type": "official_leaderboard",
+      "source_url": "https://epoch.ai/data/benchmarks.csv"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -1767,6 +1777,18 @@
       "score": "4.5%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://open-llm-radar.com/benchmarks/terminal-bench-2-1"
+    }
+  },
+  "LFM3-1.7B": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-11-04T09:01:47.638690+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Vendor reports 63.37%; BF16 with vLLM, temperature 0.6 and top-p 0.95; reasoning effort and individual result publication date unspecified.",
+      "score": "63.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/LiquidAI/LFM3-1.7B"
     }
   },
   "Laguna S 2.1": {

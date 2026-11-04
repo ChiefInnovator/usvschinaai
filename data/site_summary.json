@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
-  "generationId": "d21aecd98ff2d8b7cfa5ff292d0a1320fbd13d0a37faccd0d0a1de68a1aa0e3f",
-  "catalogFingerprint": "ac9f71b65fc0e90e6712320dff645c4582a32777d901414f8fa6f78d554ef834",
+  "generationId": "cbecf1c88a625126d50c358736525cd603f52d12e8efdde3854ff30f043875a4",
+  "catalogFingerprint": "681c909f56299d63973035371b126af03081803849280b47bde70982da5e5ff8",
   "metadata": {
     "title": "US vs CHINA AI",
     "footerText": "Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.",
@@ -178,7 +178,7 @@
     }
   ],
   "current": {
-    "timestamp": "2026-11-02T03:33:32+00:00",
+    "timestamp": "2026-11-04T09:11:32+00:00",
     "scoring": {
       "version": 4,
       "avgIqWeights": {
@@ -317,20 +317,20 @@
           "Country": "🇺🇸",
           "Context": "1.1M",
           "Output$/M": "50",
-          "Speed": "19c/s",
+          "Speed": "92c/s",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "7.2s",
+          "Latency": "2.7s",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10",
           "modelId": "8ff2177f5f388b9c9474",
-          "profileId": "5eabdb002eaa6d084a89",
-          "coverage": "11/18",
-          "provisional": false,
-          "value": 1.41,
+          "profileId": "ec33c9c80cf574879e44",
           "unified": 900.24,
-          "avgIq": 84.61
+          "provisional": false,
+          "avgIq": 84.61,
+          "value": 1.41,
+          "coverage": "11/18"
         },
         {
           "model": "GPT-6.1 Sol",
@@ -343,20 +343,20 @@
           "Country": "🇺🇸",
           "Context": "1.1M",
           "Output$/M": "10",
-          "Speed": "46c/s",
+          "Speed": "–",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "2.6s",
+          "Latency": "–",
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "2",
           "modelId": "86814cd08ec3ac720e22",
-          "profileId": "771512a76c4999c976b7",
-          "coverage": "9/18",
-          "provisional": false,
-          "value": 6.78,
+          "profileId": "c5638b173a5ba23d4949",
           "unified": 832.53,
-          "avgIq": 81.36
+          "provisional": false,
+          "avgIq": 81.36,
+          "value": 6.78,
+          "coverage": "9/18"
         },
         {
           "model": "Claude Opus 5.5",
@@ -378,11 +378,11 @@
           "Input$/M": "4",
           "modelId": "bf6872882b4e0722ae12",
           "profileId": "bd209ba8a0338b51cb1d",
-          "coverage": "10/18",
-          "provisional": false,
-          "value": 3.32,
           "unified": 792.01,
-          "avgIq": 79.68
+          "provisional": false,
+          "avgIq": 79.68,
+          "value": 3.32,
+          "coverage": "10/18"
         },
         {
           "model": "Gemini 3.8 Flash",
@@ -395,20 +395,20 @@
           "Country": "🇺🇸",
           "Context": "1.0M",
           "Output$/M": "3.75",
-          "Speed": "92c/s",
+          "Speed": "98c/s",
           "License": "",
           "Parameters(B)": "-",
-          "Latency": "2.5s",
+          "Latency": "12.2s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75",
           "modelId": "e43da5e7a8e3d9626107",
-          "profileId": "c03cd9541ac589f33493",
-          "coverage": "13/18",
-          "provisional": false,
-          "value": 17.18,
+          "profileId": "d05608ffe6962899fdfd",
           "unified": 751.33,
-          "avgIq": 77.3
+          "provisional": false,
+          "avgIq": 77.3,
+          "value": 17.18,
+          "coverage": "13/18"
         },
         {
           "model": "GPT-6 Luna",
@@ -421,11 +421,11 @@
           "Output$/M": "0.5",
           "modelId": "822c760d6aa27b46cc0b",
           "profileId": "8fcc2f531c31cd7cd6da",
-          "coverage": "9/18",
-          "provisional": false,
-          "value": 112.94,
           "unified": 624.48,
-          "avgIq": 67.77
+          "provisional": false,
+          "avgIq": 67.77,
+          "value": 112.94,
+          "coverage": "9/18"
         },
         {
           "model": "Claude Fable 5.1",
@@ -447,11 +447,11 @@
           "Input$/M": "10",
           "modelId": "827d7fc31374fbdd49bc",
           "profileId": "1ddd23a9f1cba09d7a72",
-          "coverage": "12/18",
-          "provisional": false,
-          "value": 1.11,
           "unified": 503.89,
-          "avgIq": 66.84
+          "provisional": false,
+          "avgIq": 66.84,
+          "value": 1.11,
+          "coverage": "12/18"
         },
         {
           "model": "GPT-5.5 Pro",
@@ -473,11 +473,11 @@
           "Input$/M": "—",
           "modelId": "1fbd36e112c0244fe56a",
           "profileId": "0d2c1799f41663b5d7a7",
-          "coverage": "6/18",
-          "provisional": false,
-          "value": 0.0,
           "unified": 499.38,
-          "avgIq": 66.64
+          "provisional": false,
+          "avgIq": 66.64,
+          "value": 0.0,
+          "coverage": "6/18"
         },
         {
           "model": "Gemini 4 Argon",
@@ -499,11 +499,11 @@
           "Input$/M": "2",
           "modelId": "a276059f28b67f49e058",
           "profileId": "0e853b6be4fcfdb150b0",
-          "coverage": "8/18",
-          "provisional": false,
-          "value": 5.32,
           "unified": 440.83,
-          "avgIq": 63.84
+          "provisional": false,
+          "avgIq": 63.84,
+          "value": 5.32,
+          "coverage": "8/18"
         },
         {
           "model": "Gemini 3.1 Pro",
@@ -516,11 +516,11 @@
           "Output$/M": "12",
           "modelId": "938ef1899e8197948b60",
           "profileId": "e1a3f64739c6ec5f467b",
-          "coverage": "17/18",
-          "provisional": false,
-          "value": 4.55,
           "unified": 435.83,
-          "avgIq": 63.65
+          "provisional": false,
+          "avgIq": 63.65,
+          "value": 4.55,
+          "coverage": "17/18"
         },
         {
           "model": "Claude Sonnet 5.5",
@@ -542,11 +542,11 @@
           "Input$/M": "2",
           "modelId": "96e3cd24328c4bf62746",
           "profileId": "b8b03e694e8bafb8353a",
-          "coverage": "8/18",
-          "provisional": false,
-          "value": 5.24,
           "unified": 417.99,
-          "avgIq": 62.82
+          "provisional": false,
+          "avgIq": 62.82,
+          "value": 5.24,
+          "coverage": "8/18"
         }
       ],
       "CN": [
@@ -555,33 +555,33 @@
           "organization": "Zhipu AI",
           "link": "https://llm-stats.com/models/glm-5.3-flash",
           "origin": "CN",
-          "description": "",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-26",
           "Model": "GLM-5.3-Flash",
           "Country": "🇨🇳",
           "Context": "1.0M",
           "Output$/M": "0.5",
-          "Speed": "12c/s",
+          "Speed": "20c/s",
           "License": "",
           "Parameters(B)": "320",
-          "Latency": "7.1s",
+          "Latency": "6.0s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15",
           "modelId": "27c9865821933f9dafd1",
-          "profileId": "42b7c5b3e3cc64614f09",
-          "coverage": "17/18",
-          "provisional": false,
-          "value": 108.29,
+          "profileId": "bdf4f85b1877fadc2b66",
           "unified": 678.76,
-          "avgIq": 70.39
+          "provisional": false,
+          "avgIq": 70.39,
+          "value": 108.29,
+          "coverage": "17/18"
         },
         {
           "model": "Kimi K3",
           "organization": "Moonshot AI",
           "link": "https://llm-stats.com/models/kimi-k3",
           "origin": "CN",
-          "description": "",
+          "description": "Kimi K3 by Moonshot AI — released Jul 16, 2026; $2.85/M input, $0.285/M cached input, $14.25/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-07-16",
           "Model": "Kimi K3",
           "Country": "🇨🇳",
@@ -595,19 +595,19 @@
           "Multimodal": "Yes",
           "Input$/M": "2.85",
           "modelId": "d33cd77526f9f2073554",
-          "profileId": "a9d6a39dff51326a982d",
-          "coverage": "18/18",
-          "provisional": false,
-          "value": 4.43,
+          "profileId": "f4844249cf5844485f8b",
           "unified": 704.72,
-          "avgIq": 75.72
+          "provisional": false,
+          "avgIq": 75.72,
+          "value": 4.43,
+          "coverage": "18/18"
         },
         {
           "model": "GLM-5.3",
           "organization": "Zhipu AI",
           "link": "https://llm-stats.com/models/glm-5.3",
           "origin": "CN",
-          "description": "",
+          "description": "GLM-5.3 by Zhipu AI — released Aug 14, 2026; $1.20/M input, $0.120/M cached input, $4.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-14",
           "Model": "GLM-5.3",
           "Country": "🇨🇳",
@@ -621,19 +621,19 @@
           "Multimodal": "No",
           "Input$/M": "1.2",
           "modelId": "8c1207eb630867042536",
-          "profileId": "d231e829d5b3ca660002",
-          "coverage": "12/18",
-          "provisional": false,
-          "value": 11.86,
+          "profileId": "8fe388bd2ccc9ece3bbf",
           "unified": 397.91,
-          "avgIq": 61.66
+          "provisional": false,
+          "avgIq": 61.66,
+          "value": 11.86,
+          "coverage": "12/18"
         },
         {
           "model": "Qwen3.8 Max",
           "organization": "Alibaba Cloud / Qwen Team",
           "link": "https://llm-stats.com/models/qwen3.8-max",
           "origin": "CN",
-          "description": "",
+          "description": "Qwen3.8 Max by Alibaba Cloud / Qwen Team — released Aug 2, 2026; $1.65/M input, $0.206/M cached input, $4.95/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-02",
           "Model": "Qwen3.8 Max",
           "Country": "🇨🇳",
@@ -647,12 +647,12 @@
           "Multimodal": "Yes",
           "Input$/M": "1.65",
           "modelId": "32d628655ac1f115b0dd",
-          "profileId": "d6270d0ed4e1a7cef091",
-          "coverage": "14/18",
-          "provisional": false,
-          "value": 9.32,
+          "profileId": "65e6bde0a19fab4aa408",
           "unified": 392.44,
-          "avgIq": 61.51
+          "provisional": false,
+          "avgIq": 61.51,
+          "value": 9.32,
+          "coverage": "14/18"
         },
         {
           "model": "DeepSeek-V4-Pro-Max",
@@ -674,18 +674,18 @@
           "Input$/M": "1.3",
           "modelId": "088f3a563d79d06df736",
           "profileId": "2a7dc530671c66bf7e64",
-          "coverage": "14/18",
-          "provisional": false,
-          "value": 15.2,
           "unified": 348.19,
-          "avgIq": 59.29
+          "provisional": false,
+          "avgIq": 59.29,
+          "value": 15.2,
+          "coverage": "14/18"
         },
         {
           "model": "DeepSeek-V4-Pro-0813",
           "organization": "DeepSeek",
           "link": "https://llm-stats.com/models/deepseek-v4-pro-0813",
           "origin": "CN",
-          "description": "",
+          "description": "DeepSeek-V4-Pro-0813 by DeepSeek — released Aug 13, 2026; $1.30/M input, $0.100/M cached input, $2.60/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-13",
           "Model": "DeepSeek-V4-Pro-0813",
           "Country": "🇨🇳",
@@ -699,19 +699,19 @@
           "Multimodal": "No",
           "Input$/M": "1.3",
           "modelId": "7cc8168d3be894837e46",
-          "profileId": "8ca020f9bab8ac7cb81d",
-          "coverage": "14/18",
-          "provisional": false,
-          "value": 14.73,
+          "profileId": "03a2015af8bfdb0245d8",
           "unified": 306.61,
-          "avgIq": 57.45
+          "provisional": false,
+          "avgIq": 57.45,
+          "value": 14.73,
+          "coverage": "14/18"
         },
         {
           "model": "DeepSeek-V4.1-Flash-1017",
           "organization": "DeepSeek",
           "link": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
           "origin": "CN",
-          "description": "",
+          "description": "DeepSeek-V4.1-Flash-1017 by DeepSeek — released Oct 17, 2026; $0.300/M input, $0.006/M cached input, $1.20/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-10-17",
           "Model": "DeepSeek-V4.1-Flash-1017",
           "Country": "🇨🇳",
@@ -725,19 +725,19 @@
           "Multimodal": "Yes",
           "Input$/M": "0.3",
           "modelId": "5a14beb8aa3e7cb2f50a",
-          "profileId": "b5c86192a914dc5e209f",
-          "coverage": "6/18",
-          "provisional": false,
-          "value": 37.16,
+          "profileId": "68b0ab211dd098f34866",
           "unified": 288.75,
-          "avgIq": 55.75
+          "provisional": false,
+          "avgIq": 55.75,
+          "value": 37.16,
+          "coverage": "6/18"
         },
         {
           "model": "Qwen3.8-27B",
           "organization": "Alibaba Cloud / Qwen Team",
           "link": "https://llm-stats.com/models/qwen3.8-27b",
           "origin": "CN",
-          "description": "",
+          "description": "Qwen3.8-27B by Alibaba Cloud / Qwen Team — released Aug 14, 2026; $0.400/M input, $0.040/M cached input, $3.00/M output; 262K-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-14",
           "Model": "Qwen3.8-27B",
           "Country": "🇨🇳",
@@ -751,19 +751,19 @@
           "Multimodal": "Yes",
           "Input$/M": "0.4",
           "modelId": "175a962cb4b24bfdbde0",
-          "profileId": "dba179c13bb823b94ff0",
-          "coverage": "13/18",
-          "provisional": false,
-          "value": 15.05,
+          "profileId": "3664283f4444f5549055",
           "unified": 167.33,
-          "avgIq": 51.19
+          "provisional": false,
+          "avgIq": 51.19,
+          "value": 15.05,
+          "coverage": "13/18"
         },
         {
           "model": "Qwen3.8 Flash",
           "organization": "Alibaba Cloud / Qwen Team",
           "link": "https://llm-stats.com/models/qwen3.8-flash",
           "origin": "CN",
-          "description": "",
+          "description": "Qwen3.8 Flash by Alibaba Cloud / Qwen Team — released Aug 26, 2026; $0.150/M input, $0.016/M cached input, $0.470/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-26",
           "Model": "Qwen3.8 Flash",
           "Country": "🇨🇳",
@@ -777,19 +777,19 @@
           "Multimodal": "Yes",
           "Input$/M": "0.15",
           "modelId": "b56379bf82f1c28fab2e",
-          "profileId": "99664cb32bb270bae0df",
-          "coverage": "10/18",
-          "provisional": false,
-          "value": 71.35,
+          "profileId": "783d568b73faf73ebfb7",
           "unified": 62.81,
-          "avgIq": 44.24
+          "provisional": false,
+          "avgIq": 44.24,
+          "value": 71.35,
+          "coverage": "10/18"
         },
         {
           "model": "Qwen3.8-Flash-Next",
           "organization": "Alibaba Cloud / Qwen Team",
           "link": "https://llm-stats.com/models/qwen3.8-flash-next",
           "origin": "CN",
-          "description": "",
+          "description": "Qwen3.8-Flash-Next by Alibaba Cloud / Qwen Team — released Aug 26, 2026. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-08-26",
           "Model": "Qwen3.8-Flash-Next",
           "Country": "🇨🇳",
@@ -803,17 +803,35 @@
           "Multimodal": "Yes",
           "Input$/M": "—",
           "modelId": "00304d6b69ead9145b28",
-          "profileId": "476b97677896aa9820a7",
-          "coverage": "12/18",
-          "provisional": false,
-          "value": 0.0,
+          "profileId": "87d89e0622ad0e82848a",
           "unified": 72.6,
-          "avgIq": 47.5
+          "provisional": false,
+          "avgIq": 47.5,
+          "value": 0.0,
+          "coverage": "12/18"
         }
       ]
     }
   },
   "history": [
+    {
+      "timestamp": "2026-11-04T09:11:32+00:00",
+      "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
+      "scores": {
+        "US": {
+          "total": 5344.69,
+          "count": 8,
+          "avgIq": 73.505,
+          "avgValue": 18.5075
+        },
+        "CN": {
+          "total": 1383.48,
+          "count": 2,
+          "avgIq": 73.055,
+          "avgValue": 56.36
+        }
+      }
+    },
     {
       "timestamp": "2026-11-02T03:33:32+00:00",
       "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
