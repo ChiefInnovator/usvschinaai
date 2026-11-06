@@ -19,30 +19,35 @@ jobs:
         run: sleep 30
 
       - name: Bust Facebook OG cache
-        continue-on-error: true
         env:
           FB_APP_ID: ${{ secrets.FB_APP_ID }}
           FB_APP_SECRET: ${{ secrets.FB_APP_SECRET }}
         run: |
-          if [ -n "$FB_APP_ID" ] && [ -n "$FB_APP_SECRET" ]; then
-            TOKEN="${FB_APP_ID}|${FB_APP_SECRET}"
-            PAGES="index.html og-image.png"
-            for DOMAIN in "https://usvschina.ai" "https://chiefinnovator.github.io/usvschinaai"; do
-              # Bust both root variants (with and without trailing slash)
-              for URL in "${DOMAIN}" "${DOMAIN}/"; do
-                echo "Scraping Facebook cache for $URL"
-                curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
-                echo ""
-              done
-              # Bust each page
-              for PAGE in $PAGES; do
-                URL="${DOMAIN}/${PAGE}"
-                echo "Scraping Facebook cache for $URL"
-                curl -s -X POST "https://graph.facebook.com/?id=${URL}&scrape=true&access_token=${TOKEN}" | head -c 200
-                echo ""
-              done
-            done
-            echo "Facebook OG cache refreshed"
-          else
-            echo "Skipping — FB_APP_ID/FB_APP_SECRET not configured"
-          fi
+          python3 - <<'PY'
+          import json
+          import os
+          from urllib.error import HTTPError, URLError
+          from urllib.parse import urlencode
+          from urllib.request import Request, urlopen
+
+          app_id = os.environ.get('FB_APP_ID')
+          app_secret = os.environ.get('FB_APP_SECRET')
+          if not app_id or not app_secret:
+              raise SystemExit('::error::Facebook cache credentials not configured')
+          for path in ('', '/', '/index.html', '/og-image.png'):
+              url = 'https://usvschina.ai' + path
+              print('Refreshing Facebook cache for ' + url)
+              body = urlencode({'id': url, 'scrape': 'true',
+                                'access_token': app_id + '|' + app_secret}).encode()
+              request = Request('https://graph.facebook.com/', data=body)
+              try:
+                  with urlopen(request, timeout=30) as response:
+                      result = json.load(response)
+              except HTTPError as error:
+                  raise SystemExit(f'::error::Facebook cache refresh failed for {url}: HTTP {error.code}') from None
+              except (URLError, OSError, ValueError):
+                  raise SystemExit(f'::error::Facebook cache refresh failed for {url}: request or response error') from None
+              if not isinstance(result, dict) or 'error' in result or result.get('success') is False:
+                  raise SystemExit(f'::error::Facebook cache refresh failed for {url}: API rejected request')
+          print('Facebook OG cache refreshed')
+          PY

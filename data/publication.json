@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generationId": "4255c346bfc3e0a3f08b871eab7459fe77c613acd15bad9365d4765b9d9519af",
+  "generationId": "cefcbe5404c058462741c07fa8f3731369691fd2bbf23be1070d1bce51e78528",
   "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
   "artifacts": {
-    "current.json": "2ee43ab83889c452c255b2fc7ab2a9da4dcc97d32380d0136e8906dca8002d89",
+    "current.json": "78dd8e6da34f94159dfe0022d2303b089c83e9aa808dc32fa10ed45db1bc33be",
     "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
-    "data/historical_benchmark_gaps.json": "6d2cdd5f351256487ab5bd3fc44c5dd4b6bc5be384487178d69eabaa705f4580",
-    "data/model_catalog.json": "dc6ed82139f0e860398babfdb96b4f3b27ac933ae6ead6f1147417afb2bbaa13",
+    "data/historical_benchmark_gaps.json": "4475a59f249cf94c53d2ded0ba1b67318f2842d8d842b7a91e1320d8d80b95f0",
+    "data/model_catalog.json": "49eb009b0cbcc83b691b2a576fb56e3fe136981158aa93d1683658910e0f79f5",
     "data/scoring_revision.json": "7a64853c4b9c516e361fe69f947511e00c3b088c6c679144a38a6f750dc725c9",
-    "data/site_summary.json": "fa2c1a425d2645b7451870e96ec70694de2316b792c4bd52fa0b577db33b7641",
+    "data/site_summary.json": "5f1fbf6224b84c4afbff4a2f64b06c7827da0bcd6411227dc695e82f5f4b8210",
     "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-    "ig-image.png": "06058b1e1a3b7f50dfe94b61473976d3703a94193cb2d303387f0c622af8863f",
-    "models.json": "3487a4f126b6dfcc58816b64dbf211556d67a4ac8e89abb7d3eb7767f4e53caa",
-    "og-image.png": "a289c0ef2f113591d0f537403a0c75bd2d085805359da66eaa08e0f7030bdb50",
-    "social/2026-11-06-1-price_vs_power-newsprint.png": "ec366d81c14638cf87b14f1e1e1b1693db89f2dc417a8455e78b5b0dfe326d65",
-    "social/2026-11-06-2-leaderboard-newsprint.png": "f6efb2936c5c840b672191015c6ecd4d7319369c704c6cedc370d143f0909be9",
+    "ig-image.png": "aaac4f9bc4610e7dc02a27355e78256adc3cc44189c598c24ba3549d6fe0235c",
+    "models.json": "4a6b5594e848f7666bd41161bf6e2dfe56b9c020c1be49e3bd04e2ede87bc53b",
+    "og-image.png": "ded817ba3483b0910d3c498879341c5c3e43b3b9ed65b9eaaed6127cffa18c4d",
+    "social/2026-11-06-1-price_vs_power-newsprint.png": "4a41c143fec41e4bb3e7a1f26d02532ff3a4ae3c5b681e070e4b854346b6ba3a",
+    "social/2026-11-06-2-leaderboard-newsprint.png": "a7150357b3b5d2182f3176a9bc455b6a73c2134531a4ab396021fd531d8b6bf0",
     "social/plan.json": "2059758119c1c2e308ee6ae9af84b1a6c9730ba74de19a2f8eb627fba330dd5b"
   }
 }
