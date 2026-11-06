@@ -909,7 +909,7 @@ def retain_model_metadata(new_entry, history):
         'model', 'origin', 'Input$/M', 'Output$/M', 'Input $/M', 'Output $/M',
         'llm-stats ranking',
     }
-    missing = ('', '—', '–', '-', 'N/A', 'n/a', 'Unknown')
+    missing = MISSING_VALUE_MARKERS | {'Unknown'}
     timestamp = datetime.fromisoformat(new_entry['timestamp'].replace('Z', '+00:00'))
     for snapshot in history:
         if datetime.fromisoformat(snapshot['timestamp'].replace('Z', '+00:00')) >= timestamp:
