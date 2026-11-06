@@ -10,7 +10,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import model_store as store
 from refresh_benchmark_sources import accept_findings, finding
 with patch('dotenv.load_dotenv'):
-    from scrape_models import prepend_history
+    from scrape_models import prepend_history, retain_model_metadata
 from rescore_history import replay
 
 
@@ -27,6 +27,51 @@ def fixture():
 
 
 class StoreIntegrationTests(unittest.TestCase):
+    def test_metadata_placeholders_do_not_replace_known_values(self):
+        for missing in (None, '', '  ', '—', '–', '-', 'N/A', 'n/a', 'null', 'None', 'Unknown'):
+            with self.subTest(missing=missing):
+                history = fixture()['history']
+                history[0]['teams']['US'][0]['description'] = missing
+                history[1]['teams']['US'][0]['description'] = 'Known description'
+                new = copy.deepcopy(history[0])
+                new['timestamp'] = '2026-03-04T12:00:00Z'
+                new['teams']['US'][0]['Context'] = 'New context'
+                history[1]['teams']['US'][0]['Context'] = 'Old context'
+                retain_model_metadata(new, history)
+                self.assertEqual(new['teams']['US'][0]['description'], 'Known description')
+                self.assertEqual(new['teams']['US'][0]['Context'], 'New context')
+
+    def test_sparse_daily_metadata_retains_prior_values_without_changing_dated_prices(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / 'models.json'
+            old = fixture()
+            earlier = old['history'][1]['teams']['US'][0]
+            earlier.update(description='Known model description', Context='128K',
+                           Speed='100', Multimodal=False, **{'Parameters(B)': 0})
+            latest = old['history'][0]['teams']['US'][0]
+            latest.update(description='', Context='256K', **{'Input$/M': '$0.50'})
+            store.save_data(old, path)
+            before = store.load_data(path)['history']
+            new = copy.deepcopy(before[0])
+            new['timestamp'] = '2026-03-04T12:00:00Z'
+            row = new['teams']['US'][0]
+            row.update(description='  ', Context='—', Speed=None, **{'Input$/M': '$0.25'})
+            row.pop('Output$/M')
+            prepend_history(path, new)
+            after = store.load_data(path)['history']
+            actual = after[0]['teams']['US'][0]
+            self.assertEqual(actual['description'], 'Known model description')
+            self.assertEqual(actual['Context'], '256K')
+            self.assertEqual(actual['Speed'], '100')
+            self.assertIs(actual['Multimodal'], False)
+            self.assertEqual(actual['Parameters(B)'], 0)
+            self.assertEqual(actual['Input$/M'], '$0.25')
+            self.assertNotIn('Output$/M', actual)
+            for original, retained in zip(before, after[1:]):
+                self.assertEqual(store.roster_identity({'history': [original]}),
+                                 store.roster_identity({'history': [retained]}))
+            self.assertNotIn('description', after[0]['teams']['US'][1])
+
     def test_migration_preserves_all_rows_profiles_evidence_and_is_repeatable(self):
         with tempfile.TemporaryDirectory() as tmp:
             root=Path(tmp);path=root/'models.json';legacy=root/'data/historical_benchmark_evidence.json'
