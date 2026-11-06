@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T09:12:29.770353+00:00",
+  "lastUpdated": "2026-11-06T03:33:27.496263+00:00",
   "items": [
     {
       "id": "22533435f8f4d466",
@@ -126,24 +126,6 @@
       "country": "Both",
       "publishedAt": "2026-10-25 06:37:11",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "7f4a3c9094e4ac06",
-      "headline": "DeepSeek’s V4.1-Flash-1017 Model Just Built An Exploit That Escapes Chrome’s Sandbox, As The AI-Driven Assault On...",
-      "url": "https://wccftech.com/deepseeks-v4-1-flash-1017-model-just-built-an-exploit-that-escapes-chromes-sandbox-as-the-ai-driven-assault-on-the-open-web-goes-on-an-overdrive/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-10-22 15:30:51",
-      "relevanceScore": 0.98
-    },
-    {
-      "id": "83d77a3f1cd140d7",
-      "headline": "Nvidia's Huang urges Europe to go all in on AI",
-      "url": "https://thepeninsulaqatar.com/article/21/10/2026/nvidias-huang-urges-europe-to-go-all-in-on-ai",
-      "source": "The Peninsula Qatar",
-      "country": "Both",
-      "publishedAt": "2026-10-21 13:32:20",
-      "relevanceScore": 0.24
     }
   ]
 }

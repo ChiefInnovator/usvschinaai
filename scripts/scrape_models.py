@@ -4,6 +4,7 @@ Scrape LLM leaderboard data from llm-stats.com with staged architecture.
 Supports --leaderboard-basic (Stage 1), --leaderboard-full (Stage 2), and full scrape (Stage 3).
 """
 from preconditions import preconditions
+import copy
 import argparse
 import csv
 from model_store import load_data, save_data, read_catalog
@@ -900,6 +901,31 @@ def build_history_entry(
     return entry
 
 
+@preconditions(new_entry='mapping', history='sequence')
+def retain_model_metadata(new_entry, history):
+    """Fill sparse scrape metadata from earlier exact-model profiles, never prices."""
+    from avg_iq_benchmarks import MODEL_FIELDS
+    fields = MODEL_FIELDS - {
+        'model', 'origin', 'Input$/M', 'Output$/M', 'Input $/M', 'Output $/M',
+        'llm-stats ranking',
+    }
+    missing = MISSING_VALUE_MARKERS | {'Unknown'}
+    timestamp = datetime.fromisoformat(new_entry['timestamp'].replace('Z', '+00:00'))
+    for snapshot in history:
+        if datetime.fromisoformat(snapshot['timestamp'].replace('Z', '+00:00')) >= timestamp:
+            continue
+        for country, rows in new_entry['teams'].items():
+            previous = {row['model']: row for row in snapshot['teams'].get(country, [])}
+            for row in rows:
+                old = previous.get(row['model'], {})
+                for field in fields:
+                    value, retained = row.get(field), old.get(field)
+                    if (value is None or isinstance(value, str) and value.strip() in missing) and (
+                        retained is not None and not (isinstance(retained, str) and retained.strip() in missing)
+                    ):
+                        row[field] = copy.deepcopy(retained)
+
+
 @preconditions(models_path='path', new_entry='mapping')
 def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
     """Prepend new history entry to models.json."""
@@ -912,6 +938,7 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
     if 'history' not in data:
         data['history'] = []
 
+    retain_model_metadata(new_entry, data['history'])
     data['history'].insert(0, new_entry)
     from avg_iq_benchmarks import load_config
     data.setdefault('metadata', {})['avgIqBenchmarks'] = [b['name'] for b in load_config()['benchmarks']]
