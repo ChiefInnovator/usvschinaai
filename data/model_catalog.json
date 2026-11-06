@@ -2212,6 +2212,25 @@
           "Latency": "926ms",
           "Speed": "17c/s",
           "License": "Closed"
+        },
+        "d2b3bb3dc27bee7b2770": {
+          "model": "Claude Fable 5.1",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-1",
+          "origin": "US",
+          "description": "Claude Fable 5.1 by Anthropic — released Sep 1, 2026; $10.00/M input, $0.250/M cached input, $50.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-01",
+          "Model": "Claude Fable 5.1",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "50",
+          "Speed": "17c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "926ms",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -37968,6 +37987,44 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "acd9f8224823f946ef58": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "21c/s",
+          "License": "",
+          "Parameters(B)": "320",
+          "Latency": "5.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "dea5ca0803bd1661ff94": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "21c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "5.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -56060,6 +56117,44 @@
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "0e63142b9428cd49a547": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "49c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "2.7s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
+        },
+        "a52e054459a900df4b4b": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "49c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "2.7s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -64746,6 +64841,34 @@
           "KnowledgeCutoff": "Jan. 2025",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "24d3ad96034d726e70b9": {
+          "model": "Gemini 3.1 Pro",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+          "origin": "US",
+          "description": "",
+          "created": "2026-02-19",
+          "Input$/M": "2",
+          "Output$/M": "12"
+        },
+        "1e46384269d34c666a64": {
+          "model": "Gemini 3.1 Pro",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+          "origin": "US",
+          "description": "Gemini 3.1 Pro by Google — released Feb 19, 2026; $2.00/M input and $12.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-02-19",
+          "Input$/M": "2",
+          "Output$/M": "12",
+          "Multimodal": "Yes",
+          "Latency": "13.0s",
+          "Model": "Gemini 3.1 Pro",
+          "License": "Closed",
+          "Context": "1.0M",
+          "Speed": "44c/s",
+          "Country": "🇺🇸",
+          "KnowledgeCutoff": "Jan. 2025"
         }
       },
       "benchmarks": {
@@ -67921,6 +68044,44 @@
           "Context": "1.0M",
           "Country": "🇺🇸",
           "License": "Closed"
+        },
+        "a8d8f74e7af8c03a9b2c": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "103c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "12.6s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "16c21e1b2928b5e58efa": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "103c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "12.6s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -100813,6 +100974,25 @@
           "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
           "License": "Closed"
+        },
+        "ac70abc4f31af4e7aedb": {
+          "model": "GPT-5.5 Pro",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-5.5-pro",
+          "origin": "US",
+          "description": "GPT-5.5 Pro by OpenAI — released Apr 23, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-04-23",
+          "Model": "GPT-5.5 Pro",
+          "Country": "🇺🇸",
+          "Context": "-",
+          "Output$/M": "—",
+          "Speed": "–",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes",
+          "Input$/M": "—"
         }
       },
       "benchmarks": {
@@ -102715,11 +102895,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Model": "GPT-6 Luna",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "May 2026",
+          "Model": "GPT-6 Luna",
           "Context": "1.1M",
-          "Country": "🇺🇸"
+          "Country": "🇺🇸",
+          "KnowledgeCutoff": "May 2026"
         }
       },
       "benchmarks": {

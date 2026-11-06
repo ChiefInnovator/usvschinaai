@@ -1,77 +1,33 @@
 {
-  "retrievedAt": "2026-11-05",
+  "retrievedAt": "2026-11-06",
   "modelsChecked": 301,
   "sourcesChecked": 311,
-  "findings": 1146,
+  "findings": 1178,
   "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:GLM-4.6",
+      "source": "llm-stats:GPT-5.1 Medium",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V3.2 (Non-thinking)",
+      "source": "llm-stats:GPT-5.1",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Kimi K2 0905",
+      "source": "llm-stats:Gemini 3.5 Flash",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:ERNIE 4.5",
+      "source": "llm-stats:Gemini 3.8 Flash",
       "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:DeepSeek R1 Distill Llama 70B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:MiniMax M2.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Qwen3 VL 235B A22B Instruct",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.2 Pro",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Beam 1.0",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Nemotron Labs Dory 1.0 (4B)",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Muse Wonder Full",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Claude Haiku 5.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Ember-1",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:SWE-2",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:IBM Granite 4.2 3B",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "vals:swebench",
-      "error": "Vals benchmark identity or payload changed: swebench"
     },
     {
       "source": "vals:mmlu_pro",
       "error": "Vals benchmark identity or payload changed: mmlu_pro"
+    },
+    {
+      "source": "vals:swebench",
+      "error": "Vals benchmark identity or payload changed: swebench"
     },
     {
       "source": "vals:lcb",
