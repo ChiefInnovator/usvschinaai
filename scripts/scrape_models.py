@@ -990,14 +990,11 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
 
 
 # URLs whose <lastmod> should get bumped every time the daily scraper runs.
-# Static pages (about/privacy/terms/humans) are intentionally excluded — their
+# Static pages (about/privacy/terms) are intentionally excluded — their
 # lastmod should only move when the content actually changes.
 _DAILY_SITEMAP_URLS = {
     "https://usvschina.ai/",
-    "https://usvschina.ai/index.html",
     "https://usvschina.ai/history.html",
-    "https://usvschina.ai/llms.txt",
-    "https://usvschina.ai/models.json",
 }
 
 
@@ -1120,7 +1117,8 @@ def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -
             continue
 
         if current_loc in _DAILY_SITEMAP_URLS and lastmod_pattern.search(line):
-            new_line = lastmod_pattern.sub(rf"\g<1>{today}\g<2>", line)
+            previous = re.search(r'<lastmod>\s*([^<]+)', line).group(1).strip()
+            new_line = lastmod_pattern.sub(rf"\g<1>{max(previous, today)}\g<2>", line)
             if new_line != line:
                 changed = True
             rewritten.append(new_line)
@@ -1132,6 +1130,22 @@ def update_sitemap_lastmod(sitemap_path: Path, run_date: Optional[str] = None) -
         sitemap_path.write_text("".join(rewritten), encoding="utf-8")
         print(f"Updated sitemap lastmod → {today} on {len(_DAILY_SITEMAP_URLS)} daily URLs")
     return changed
+
+
+@preconditions(path='path', run_date='text')
+def update_llms_metadata(path: Path, run_date: str) -> bool:
+    """Keep the AI resource map aligned with the snapshot and benchmark config."""
+    if not path.exists():
+        return False
+    source = path.read_text(encoding='utf-8')
+    updated = re.sub(r'^Updated: .*$', 'Updated: ' + run_date, source, flags=re.MULTILINE)
+    names = ''.join('- ' + b['name'] + '\n' for b in load_config()['benchmarks'])
+    updated = re.sub(r'(?<=<!-- benchmark-names:start -->\n).*?(?=<!-- benchmark-names:end -->)',
+                     lambda _: names, updated, flags=re.DOTALL)
+    if updated == source:
+        return False
+    path.write_text(updated, encoding='utf-8')
+    return True
 
 
 @preconditions(args='namespace')
@@ -1587,6 +1601,7 @@ def run_scraper(args):
                 try:
                     run_date = ts_iso[:10] if ts_iso else datetime.now().strftime("%Y-%m-%d")
                     update_sitemap_lastmod(workspace_dir / "sitemap.xml", run_date=run_date)
+                    update_llms_metadata(workspace_dir / "llms.txt", run_date=run_date)
                 except Exception as sitemap_err:
                     print(f"Warning: could not update sitemap.xml: {sitemap_err}")
 
