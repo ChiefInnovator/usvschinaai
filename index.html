@@ -809,7 +809,7 @@
 
             const benchmarksContainer = document.getElementById('benchmarks-container');
             if (benchmarksContainer) {
-                const included = siteSummary?.benchmarks.map(b => `${b.name} (${b.weight}%)`) || benchmarkList;
+                const included = siteSummary?.benchmarks.map(b => b.name) || benchmarkList;
                 const preview = document.getElementById('benchmarks-preview');
                 preview.textContent = included.join(' · ');
                 preview.title = included.join(' · ');
@@ -1127,7 +1127,7 @@
                 const row=Object.values(snapshot.teams).flat().find(r=>r.modelId===details.dataset.modelId);
                 if (!row) throw new Error('Evidence is unavailable for this model.');
                 const safeLink=url=>/^https?:\/\//i.test(url || '') ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">Source</a>` : 'Source not reported';
-                content.innerHTML=`<p>Snapshot: ${esc(snapshot.timestamp)}. Input: ${esc(row['Input$/M'] ?? row['Input $/M'] ?? 'Not reported')}; output: ${esc(row['Output$/M'] ?? row['Output $/M'] ?? 'Not reported')} per million tokens. Coverage: ${esc(row.coverage)}. Missing results contribute zero; weights are editor-selected. <a href="about.html">Methodology and weight history</a>.</p><table><thead><tr><th>Benchmark / weight</th><th>Result</th><th>Evidence / configuration / available date</th></tr></thead><tbody>`+siteSummary.benchmarks.map(b=>{const evidence=row._provenance?.[b.column];return `<tr><th>${esc(b.name)} / ${esc(b.weight)}%</th><td>${esc(row[b.column] === '—' || row[b.column] == null ? 'Not reported' : row[b.column])}</td><td>${evidence ? `${safeLink(evidence.url)} · ${esc(typeof evidence.configuration === 'object' ? JSON.stringify(evidence.configuration) : evidence.configuration || 'Configuration not reported')} · available ${esc(evidence.availableFrom)}` : 'Not reported'}</td></tr>`;}).join('')+'</tbody></table>';
+                content.innerHTML=`<p>Snapshot: ${esc(snapshot.timestamp)}. Input: ${esc(row['Input$/M'] ?? row['Input $/M'] ?? 'Not reported')}; output: ${esc(row['Output$/M'] ?? row['Output $/M'] ?? 'Not reported')} per million tokens. Coverage: ${esc(row.coverage)}. Missing results contribute zero; weights are editor-selected. <a href="about.html">Methodology and weight history</a>.</p><table><thead><tr><th>Benchmark</th><th>Result</th><th>Evidence / configuration / available date</th></tr></thead><tbody>`+siteSummary.benchmarks.map(b=>{const evidence=row._provenance?.[b.column];return `<tr><th>${esc(b.name)}</th><td>${esc(row[b.column] === '—' || row[b.column] == null ? 'Not reported' : row[b.column])}</td><td>${evidence ? `${safeLink(evidence.url)} · ${esc(typeof evidence.configuration === 'object' ? JSON.stringify(evidence.configuration) : evidence.configuration || 'Configuration not reported')} · available ${esc(evidence.availableFrom)}` : 'Not reported'}</td></tr>`;}).join('')+'</tbody></table>';
                 details.dataset.loaded='true';
             } catch(error) {content.textContent=error.message+' ';const retry=document.createElement('button');retry.textContent='Retry evidence';retry.onclick=()=>loadEvidence(details);content.append(retry);}
         }
