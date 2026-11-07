@@ -14,6 +14,22 @@
     "~/.agents/skills": true,
     "~/.copilot/skills": true,
     "~/.claude/skills": true,
-    "~/.vscode/extensions/synapsevscode.synapse-1.26.0/copilot/skills": true
+    "~/.vscode/extensions/synapsevscode.synapse-1.26.0/copilot/skills": true,
+    "~/.vscode/extensions/synapsevscode.synapse-1.27.0/copilot/skills": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.jj": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/flutter/ephemeral": true,
+    "**/Flutter/ephemeral": true,
+    "**/.symlinks": true,
+    "**/.plugin_symlinks": true,
+    "**/.widget_preview": true,
+    "**/CVS": true,
+    "**/.ruby-lsp": true
   }
 }
