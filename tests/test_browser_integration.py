@@ -124,6 +124,14 @@ class BrowserIntegrationTests(unittest.TestCase):
             self.assertNotIn(self.url+'/'+path,requested)
         self.assertEqual(self.page.locator('#models-table-body > tr').count(),10)
 
+        benchmarks=json.loads(self.valid['data/site_summary.json'])['benchmarks']
+        self.assertTrue(any(b['weight'] > 0 for b in benchmarks))
+        names=[b['name'] for b in benchmarks]
+        preview=self.page.locator('#benchmarks-preview')
+        self.assertEqual(preview.text_content(),' · '.join(names))
+        self.assertEqual(preview.get_attribute('title'),' · '.join(names))
+        self.assertEqual(self.page.locator('#benchmarks-container > span').all_text_contents(),names)
+
     def test_summary_failure_recovers_with_retry(self):
         self.failures['data/site_summary.json']=(503,'{}')
         self.page.goto(self.url+'/index.html');self.page.get_by_role('button',name='Retry',exact=True).wait_for()
@@ -144,6 +152,8 @@ class BrowserIntegrationTests(unittest.TestCase):
         self.failures.clear();self.page.get_by_role('button',name='Retry evidence').click()
         self.page.locator('#models-table-body .evidence-content').first.get_by_text(
             'Missing results contribute zero',exact=False).wait_for()
+        names=[b['name'] for b in json.loads(self.valid['data/site_summary.json'])['benchmarks']]
+        self.assertEqual(self.page.locator('#models-table-body .evidence-content').first.locator('tbody th').all_text_contents(),names)
 
     def test_chart_constructor_failure_preserves_rankings_and_tables(self):
         self.page.goto(self.url+'/index.html');self.ready()

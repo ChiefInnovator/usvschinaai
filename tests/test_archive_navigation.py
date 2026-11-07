@@ -103,6 +103,10 @@ class ArchiveNavigationTests(unittest.TestCase):
         self.page.get_by_role('link', name='Source', exact=True).wait_for()
         self.assertTrue(any('current.json' in url for url in self.requests))
         self.assertIn('available 2026-01-01', row.inner_text())
+        self.assertEqual(row.locator('.evidence li strong').first.inner_text(), 'GPQA')
+        self.assertIn('GPQA: 70', row.locator('.evidence').inner_text())
+        self.assertNotIn('15%', row.locator('.evidence').inner_text())
+        self.assertNotIn('% weight', row.locator('.evidence').inner_text())
         self.assertFalse(self.errors)
 
     def test_date_intraday_comparison_and_back(self):

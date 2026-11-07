@@ -1,5 +1,7 @@
 # US vs China AI
 
+- Never display benchmark weight percentages in the UI; show benchmark names only.
+
 - Branch flow is same-repository feature branch -> develop -> main. A feature
   branch is any nonempty branch other than main, develop or master.
 - Never push directly to main or develop. Use merge-commit pull requests;
