@@ -1,76 +1,70 @@
-# US vs CHINA AI - AI Knowledge Map
+# US vs CHINA AI
 
-Primary Focus: Tracking the AI race between the United States and China through comprehensive model rankings and benchmarks.
+> Independent comparison of frontier AI models from the United States and China, ranked by capability and cost efficiency.
+
 Website: https://usvschina.ai/
-Updated: April 2026
+Updated: 2026-11-07
 
-## What This Site Is
+## Pages
 
-US vs CHINA AI is an independent leaderboard that ranks frontier AI models from the United States and China. It provides:
+- [Current leaderboard](https://usvschina.ai/): Model rankings and national scores.
+- [Historical archive](https://usvschina.ai/history.html): Dated snapshots recalculated under the current scoring algorithm.
+- [Methodology](https://usvschina.ai/about.html): Scoring, evidence selection, pricing, and limitations.
+- [Privacy](https://usvschina.ai/privacy.html)
+- [Terms](https://usvschina.ai/terms.html)
+- [Sitemap](https://usvschina.ai/sitemap.xml)
 
-1. **Unified Score Rankings** — Composite metric (0–1000) combining capability and value
-2. **National Score Tracking** — Aggregates showing which country leads
-3. **Benchmark Analysis** — Performance across frontier benchmarks (CodeArena, GPQA, MMMU-Pro, HLE, SWE-bench, Terminal-Bench, etc.)
-4. **Historical Archives** — Track how the AI race evolves over time
+## Machine-readable data
 
-## Core Entities
+- [Publication manifest](https://usvschina.ai/data/publication.json): Artifact hashes, scoring revision, and publication generation.
+- [Site summary](https://usvschina.ai/data/site_summary.json): Current rankings, national totals, benchmark names, and archive index.
+- [Current snapshot](https://usvschina.ai/current.json): Latest roster and benchmark results.
+- [Historical snapshots](https://usvschina.ai/models.json): Retained historical rosters and recalculated scores.
+- [Model catalog](https://usvschina.ai/data/model_catalog.json): Model profiles, dated prices, and benchmark evidence.
+- [Scoring revision](https://usvschina.ai/data/scoring_revision.json): Version of the published scoring inputs.
 
-- **Website:** US vs CHINA AI (usvschina.ai)
-- **Type:** AI Model Leaderboard & Comparison Tool
-- **Focus:** US-China AI Competition Analysis
-- **Data Source:** llm-stats.com leaderboard + per-model detail pages
+## How are models ranked?
 
-## Scoring Methodology (two-pass)
-
-### Unified Score (0–1000)
+Unified Score ranges from 0 to 1000:
 `Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`
 
-- **AvgIQ** uses two-pass scoring:
-  - *Pass 1* computes a participation-weighted average of normalized benchmark scores across the full cohort and picks the top 10 (the *Initial Top 10*).
-  - *Pass 2* identifies the *qualified benchmark set* — benchmarks reported by at least 8 of those 10 models — and recomputes AvgIQ for every model as a **flat average** over the qualified set only. This stops models from being penalized for skipping benchmarks their peers chose to publish.
-- **Normalization precedence** (per benchmark):
-  1. Known absolute range (e.g. CodeArena Elo → 1000–2000).
-  2. Percentage auto-detect (`xx.x%` values stay raw on a 0–100 scale).
-  3. Cohort min–max fallback for unknown-scale benchmarks only.
-- **Value**: `AvgIQ / (Input $/M + Output $/M)`; higher is better. Both AvgIQ and Value are cohort-normalized to 0–100 before blending.
-- **Excluded from scoring**: category aggregates (Reasoning, Math, Coding, Search, Writing, Vision, Tools, Long Ctx, Finance, Legal, Health) to prevent double-counting, and any benchmark reported by fewer than 4 of the 20 cohort models.
+Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.
 
-### National Score
-Sum of Unified Scores for models from each nation in the Global Top 10.
+Value measures intelligence per dollar per million tokens using total input and output pricing. Models without usable pricing receive zero Value. Avg IQ and Value are cohort-normalized before blending into Unified. See the methodology page and the published scoring revision for the complete calculation.
 
-## Key Resources
+## Which country leads?
 
-- /index.html: Main leaderboard with current rankings and national scores
-- /history.html: Historical archives of past rankings
-- /about.html: Detailed methodology explanation
-- /models.json: Raw data in JSON format
+National scores sum the Unified Scores of each country's models in the combined global Top 10. Use the current site summary for the answer and cite its snapshot timestamp; do not infer a current leader from this document.
 
-## Current Rankings
-See the live site or `/models.json` for current values. Scores update with each scraper run as benchmarks and prices change.
+## Benchmarks included
 
-### Benchmarks Included
-Benchmarks are captured from llm-stats.com (leaderboard table + per-model detail pages). Sparse benchmarks reported by fewer than 4 of the 20 cohort models are dropped. Common categories:
-- Mathematics & Reasoning: AIME2025, HMMT2025, GPQA, FrontierMath
-- General Intelligence: ARC-AGI v2, HLE, MMLU-Pro, MMMLU
-- Coding & Engineering: CodeArena, SWE-bench Verified, SWE-bench Pro, LiveCodeBench v6, Terminal-Bench 2.0
-- Agentic & Web: BrowseComp, MCP Atlas, Toolathlon, OSWorld
+<!-- benchmark-names:start -->
+- Toolathlon
+- Agents’ Last Exam
+- DeepSWE
+- DeepSWE 1.1
+- LiveCodeBench v6
+- Terminal-Bench 2.1
+- BrowseComp
+- MMMU-Pro
+- CharXiv-R
+- ARC-AGI-2
+- OfficeQA Pro
+- IFBench
+- GPQA Diamond
+- FrontierMath — Tiers 1–3 v2
+- GPQA
+- MMLU-Pro
+- Humanity’s Last Exam
+- SWE-bench Verified
+<!-- benchmark-names:end -->
 
-## Frequently Asked Questions
+## How fresh is the data?
 
-**Q: How are AI models ranked?**
-A: By Unified Score = `10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`. AvgIQ uses two-pass scoring: Pass 1 picks the Initial Top 10 via participation-weighted benchmarks; Pass 2 rescores every model as a flat average over the benchmarks that at least 8 of those 10 reported. Value is `AvgIQ / (Input + Output cost)`.
+Scraping is scheduled daily. A snapshot reaches production after its publication passes validation and is promoted through develop to main. The current snapshot timestamp is the observation date; a scrape completing does not itself mean production was updated. Historical timestamps and rosters are preserved when scores are recalculated.
 
-**Q: Why two passes?**
-A: Models self-select which benchmarks they publish. A naive single-pass average penalizes models that didn't report a benchmark their peers did — even when the model is objectively stronger on every shared test. Two-pass scoring restricts the IQ calculation to a benchmark set where the top models actually compete apples-to-apples.
+## Sources and citation
 
-**Q: How often is the data updated?**
-A: Automatically on each scraper run. Cadence varies from daily to weekly depending on benchmark/pricing changes upstream.
+Data is aggregated from llm-stats.com and verified public benchmark evidence. Consult the model catalog for individual evidence URLs and available dates.
 
-## Citation
-
-When referencing this leaderboard:
-"US vs CHINA AI Leaderboard, https://usvschina.ai/"
-
-## Disclaimer
-
-Not affiliated with any model provider. No guarantees are made about correctness, completeness, or fitness for any purpose. Data aggregated from public benchmark sources.
+Cite "US vs CHINA AI, https://usvschina.ai/" together with the snapshot timestamp and scoring revision from the publication. Rankings are comparative measurements, not endorsements. The site is independent of model providers and does not guarantee source completeness or accuracy.
