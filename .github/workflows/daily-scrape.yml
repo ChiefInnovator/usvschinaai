@@ -105,25 +105,19 @@ jobs:
         run: |
           python scripts/scrape_news.py
 
-      - name: Update sitemap lastmod dates
+      - name: Refresh sitemap and AI resource map from the snapshot
         run: |
-          TODAY=$(date -u +'%Y-%m-%d')
-          sed -i "s|<loc>https://usvschina.ai/</loc>\n\s*<lastmod>[^<]*</lastmod>|<loc>https://usvschina.ai/</loc>\n        <lastmod>${TODAY}</lastmod>|" sitemap.xml || true
-          python3 -c "
-          import re, sys
-          today = '${TODAY}'
-          with open('sitemap.xml', 'r') as f:
-              content = f.read()
-          # Update lastmod for dynamic pages
-          dynamic = ['https://usvschina.ai/', 'https://usvschina.ai/index.html',
-                     'https://usvschina.ai/history.html', 'https://usvschina.ai/models.json']
-          for url in dynamic:
-              pattern = f'(<loc>{re.escape(url)}</loc>\\s*<lastmod>)[^<]*(</lastmod>)'
-              content = re.sub(pattern, f'\\g<1>{today}\\g<2>', content)
-          with open('sitemap.xml', 'w') as f:
-              f.write(content)
-          print(f'Updated sitemap lastmod to {today}')
-          "
+          python3 - <<'PYTHON'
+          import json
+          import sys
+          from pathlib import Path
+          sys.path.insert(0, 'scripts')
+          from scrape_models import update_llms_metadata, update_sitemap_lastmod
+          snapshot = json.loads(Path('current.json').read_text())['history'][0]
+          date = snapshot['timestamp'][:10]
+          update_sitemap_lastmod(Path('sitemap.xml'), date)
+          update_llms_metadata(Path('llms.txt'), date)
+          PYTHON
 
       - name: Prepare and verify complete publication
         # Snapshot-time deterministic rendering; never posts or researches.
@@ -145,7 +139,7 @@ jobs:
           git diff --quiet current.json 2>/dev/null || CHANGES=true
           git ls-files --others --exclude-standard | grep -q current.json && CHANGES=true
           git diff --quiet news.json 2>/dev/null || CHANGES=true
-          git diff --quiet sitemap.xml 2>/dev/null || CHANGES=true
+          git diff --quiet sitemap.xml llms.txt 2>/dev/null || CHANGES=true
           git diff --quiet og-image.png 2>/dev/null || CHANGES=true
           git diff --quiet ig-image.png 2>/dev/null || CHANGES=true
           git diff --quiet -- '*.html' 2>/dev/null || CHANGES=true
@@ -177,7 +171,7 @@ jobs:
           git add news.json 2>/dev/null || true
           git add og-image.png 2>/dev/null || true
           git add ig-image.png 2>/dev/null || true
-          git add sitemap.xml 2>/dev/null || true
+          git add sitemap.xml llms.txt
           git add -- *.html 2>/dev/null || true
           # AI gap-fill cache + audit log are committed so the next run benefits
           # from prior verified positive responses and the

@@ -3,55 +3,21 @@
     <url>
         <loc>https://usvschina.ai/</loc>
         <lastmod>2026-11-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://usvschina.ai/index.html</loc>
-        <lastmod>2026-11-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>1.0</priority>
     </url>
     <url>
         <loc>https://usvschina.ai/history.html</loc>
         <lastmod>2026-11-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://usvschina.ai/about.html</loc>
-        <lastmod>2026-03-01</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://usvschina.ai/llms.txt</loc>
-        <lastmod>2026-11-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://usvschina.ai/models.json</loc>
-        <lastmod>2026-11-07</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.5</priority>
+        <lastmod>2026-11-02</lastmod>
     </url>
     <url>
         <loc>https://usvschina.ai/privacy.html</loc>
-        <lastmod>2026-03-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <lastmod>2026-11-02</lastmod>
     </url>
     <url>
         <loc>https://usvschina.ai/terms.html</loc>
-        <lastmod>2026-03-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
-    <url>
-        <loc>https://usvschina.ai/humans.txt</loc>
-        <lastmod>2026-03-01</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.1</priority>
+        <lastmod>2026-11-02</lastmod>
     </url>
 </urlset>
