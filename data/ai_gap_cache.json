@@ -1252,7 +1252,7 @@
   "GPT-6.1 Terra": {
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-11-06T03:28:06.959645+00:00",
+      "cached_at": "2026-11-07T03:27:01.129711+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
       "notes": "GPQA Diamond, Epoch AI evaluation, max reasoning effort; individual result publication date unknown.",
@@ -1515,6 +1515,18 @@
       "cached_at": "2026-11-01T03:29:13.050830+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
+    }
+  },
+  "Gemini 4 Carbon": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-11-07T03:27:01.129711+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "v1.1, 122-task full evaluation, pass rate; high effort with ALE-Claw. Individual result publication date unknown.",
+      "score": "45.9%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
     }
   },
   "Grok 4.6": {
@@ -2098,6 +2110,26 @@
       "source_type": "model_card",
       "source_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B"
     },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-07T03:27:01.129711+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Ricursive comparison at maximum effort and BF16; exact effort name and result publication date are unstated.",
+      "score": "78.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/240d5966cbe00f0627c699e59ef58560b60303cf/README.md"
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-07T03:27:01.129711+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Ricursive comparison at maximum effort and BF16; exact effort name and result publication date are unstated.",
+      "score": "87.9%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/240d5966cbe00f0627c699e59ef58560b60303cf/README.md"
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
       "cached_at": "2026-10-23T03:39:55.982360+00:00",
@@ -2107,6 +2139,16 @@
       "score": "80.9%",
       "source_type": "third_party_leaderboard",
       "source_url": "https://artificialanalysis.ai/models/muse-spark-open/"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-07T03:27:01.129711+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Ricursive comparison using OpenCode at maximum effort and BF16; exact effort name and result publication date are unstated.",
+      "score": "78.7%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/240d5966cbe00f0627c699e59ef58560b60303cf/README.md"
     }
   },
   "Muse Wonder": {
