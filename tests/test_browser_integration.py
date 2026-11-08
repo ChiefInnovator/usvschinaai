@@ -4,6 +4,7 @@ Only benchmark data and transport failures are fixtures. Application renderers
 and Chart.js are real. No API keys, model research, or publishing is involved.
 """
 import copy
+from datetime import datetime, timezone
 import functools
 import json
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -98,21 +99,49 @@ class BrowserIntegrationTests(unittest.TestCase):
     def ready(self):
         self.page.wait_for_function('window.Chart && Chart.getChart("trendChart") && document.getElementById("trend-status").textContent.includes("daily snapshots")')
 
-    def test_visible_updated_timestamp_uses_the_archive_utc_date(self):
-        for timezone in ('America/New_York', 'America/Los_Angeles', 'Asia/Tokyo'):
-            with self.subTest(timezone=timezone):
-                context=self.browser.new_context(service_workers='block',timezone_id=timezone)
+    def test_visible_updated_timestamp_uses_local_calendar_days_and_time(self):
+        for zone,expected in (('America/New_York','YESTERDAY AT 10:37 PM'),
+                              ('America/Los_Angeles','YESTERDAY AT 7:37 PM'),
+                              ('Asia/Tokyo','TODAY AT 12:37 PM')):
+            with self.subTest(timezone=zone):
+                context=self.browser.new_context(service_workers='block',timezone_id=zone)
                 try:
                     page=context.new_page()
+                    page.clock.install(time=datetime(2026,11,8,11,52,tzinfo=timezone.utc))
                     page.route('**/data/site_summary.json',lambda route: route.fulfill(
                         status=200,body=self.valid['data/site_summary.json'],content_type='application/json'))
                     page.goto(self.url+'/index.html',wait_until='domcontentloaded')
                     page.wait_for_function("document.querySelector('#page-subtitle').textContent.startsWith('Updated ')")
                     page.evaluate("currentEntry.timestamp='2026-11-08T03:37:41+00:00'; populateStaticContent()")
                     self.assertEqual(page.locator('#page-subtitle').inner_text(),
-                                     'UPDATED NOVEMBER 8, 2026 · 03:37 UTC')
+                                     'UPDATED '+expected)
+                    self.assertNotIn('UTC',page.locator('#page-subtitle').inner_text())
+                    title=page.locator('#page-subtitle').get_attribute('title')
+                    self.assertIn({'America/New_York':'EST','America/Los_Angeles':'PST','Asia/Tokyo':'GMT+9'}[zone],title)
+                    self.assertIn({'America/New_York':'10:37:41 PM','America/Los_Angeles':'7:37:41 PM','Asia/Tokyo':'12:37:41 PM'}[zone],title)
+                    page.clock.set_system_time(datetime(2026,11,10,11,52,tzinfo=timezone.utc))
+                    page.clock.fast_forward(60000)
+                    self.assertNotIn('TODAY',page.locator('#page-subtitle').inner_text())
+                    self.assertNotIn('YESTERDAY',page.locator('#page-subtitle').inner_text())
+                    page.clock.set_system_time(datetime(2026,11,8,11,52,tzinfo=timezone.utc))
+                    page.evaluate("Object.defineProperty(document,'hidden',{configurable:true,value:true}); document.dispatchEvent(new Event('visibilitychange'))")
+                    self.assertNotIn('UPDATED '+expected,page.locator('#page-subtitle').inner_text())
+                    page.evaluate("Object.defineProperty(document,'hidden',{configurable:true,value:false}); document.dispatchEvent(new Event('visibilitychange'))")
+                    self.assertEqual(page.locator('#page-subtitle').inner_text(),'UPDATED '+expected)
                 finally:
                     context.close()
+
+    def test_failed_refresh_keeps_error_after_timer_and_visibility_updates(self):
+        self.page.clock.install(time=datetime(2026,11,8,11,52,tzinfo=timezone.utc))
+        self.page.goto(self.url+'/index.html');self.ready()
+        self.failures['data/site_summary.json']=(503,'{}')
+        self.page.evaluate('fetchModels()')
+        subtitle=self.page.locator('#page-subtitle')
+        self.assertEqual(subtitle.inner_text(),'DATA TEMPORARILY UNAVAILABLE')
+        self.page.clock.fast_forward(60000)
+        self.page.evaluate("document.dispatchEvent(new Event('visibilitychange'))")
+        self.assertEqual(subtitle.inner_text(),'DATA TEMPORARILY UNAVAILABLE')
+        self.assertIsNone(subtitle.get_attribute('title'))
 
     def test_graph_uses_latest_snapshot_per_utc_day_and_preserves_archive(self):
         self.page.goto(self.url+'/index.html');self.ready()
