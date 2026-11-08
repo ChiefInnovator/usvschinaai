@@ -140,6 +140,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/anthropic-claude-haiku-5-5"
     },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Comparison-table column: Claude Haiku 5.5. Original reasoning-question configuration without Python; effort unspecified. Model card published November 5, 2026.",
+      "score": "84.4%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-10-29T03:31:30.358316+00:00",
@@ -152,13 +162,13 @@
     },
     "DeepSWE 1.1": {
       "benchmark": "DeepSWE 1.1",
-      "cached_at": "2026-10-29T03:31:30.358316+00:00",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1, Claude Haiku 5.5 at max effort using mini-swe-agent; the independently tracked Mercor row reports 59.9% ±7.7. Result publication date is unknown.",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Max effort; Mercor pass@1 using mini-swe-agent. Individual result publication date unknown.",
       "score": "59.9%",
-      "source_type": "official_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-deep-swe-leaderboard/sample-task/"
     },
     "GPQA": {
       "benchmark": "GPQA",
@@ -200,15 +210,35 @@
       "source_type": "third_party_leaderboard",
       "source_url": "https://fu.furukama.com/model/?model=claude-haiku-5-5"
     },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Comparison-table column: Claude Haiku 5.5. Standard 10 configuration; Mercor reports max effort. Model card published November 5, 2026.",
+      "score": "79.1%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Mercor original-set result at max effort; individual result publication date unknown.",
+      "score": "88.9%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-swe-bench-verified-leaderboard/sample-task/"
+    },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Fidian leaderboard, high effort, pass@1. The leaderboard published this result on October 8, 2026.",
-      "score": "79.4%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://fidian.ai/leaderboard/"
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Cognition comparison table; effort and harness unspecified. Published November 4, 2026.",
+      "score": "94.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://cognition.com/blog/swe-2-flash"
     }
   },
   "Claude Mythos 5.1": {
@@ -452,13 +482,13 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-11-04T09:01:47.638690+00:00",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Mercor evaluation of the original 1,730 public tasks, Pass@1; max effort. Publication date unknown. A higher reported result uses a fallback configuration and was excluded.",
+      "notes": "Max effort; Mercor’s original public benchmark, pass@1, not its extended set. Publication date unknown. ([mercor.com](https://www.mercor.com/apex/mercor-extended/ots-held-out-mmmu-pro-leaderboard/?utm_source=openai))",
       "score": "87.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/oss-benchmarks/oss-mmmu-pro-leaderboard/sample-task/"
+      "source_url": "https://www.mercor.com/apex/mercor-extended/ots-held-out-mmmu-pro-leaderboard/"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
@@ -514,20 +544,20 @@
     },
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "DeepSWE": {
@@ -542,8 +572,8 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Humanity’s Last Exam": {
@@ -558,38 +588,38 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -1446,13 +1476,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-11-04T09:01:47.638690+00:00",
+      "cached_at": "2026-11-08T03:28:09.883324+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "GPQA Diamond, 198 questions; high reasoning effort, Epoch task 1.0.11. The CSV could not be read directly, but a public result record transcribes the matching row. Publication date unknown.",
+      "notes": "GPQA Diamond accuracy, Epoch AI evaluation, high reasoning effort. Individual result publication date is unknown.",
       "score": "96.4%",
-      "source_type": "official_leaderboard",
-      "source_url": "https://epoch.ai/data/benchmarks.csv"
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://epoch.ai/benchmarks/gpqa-diamond?tab=leaderboard&view=graph"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
