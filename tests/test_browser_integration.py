@@ -110,7 +110,7 @@ class BrowserIntegrationTests(unittest.TestCase):
                     page.wait_for_function("document.querySelector('#page-subtitle').textContent.startsWith('Updated ')")
                     page.evaluate("currentEntry.timestamp='2026-11-08T03:37:41+00:00'; populateStaticContent()")
                     self.assertEqual(page.locator('#page-subtitle').inner_text(),
-                                     'UPDATED NOVEMBER 8, 2026 · 03:37 UTC')
+                                     'UPDATED NOVEMBER 8, 2026 · 3:37 AM UTC')
                 finally:
                     context.close()
 
