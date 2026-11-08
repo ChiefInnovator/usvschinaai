@@ -549,11 +549,9 @@
             if (!ts) return '';
             const d = new Date(ts);
             if (Number.isNaN(d.getTime())) return ts;
-            const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-            const now = new Date();
-            const diffDays = Math.max(0, Math.round((now - d) / (1000 * 60 * 60 * 24)));
-            const rel = diffDays === 0 ? 'today' : diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
-            return `${dateStr} (${rel})`;
+            const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+            const timeStr = d.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'UTC' });
+            return `${dateStr} · ${timeStr} UTC`;
         };
         const parseNumeric = (value) => {
             if (value === null || value === undefined) return null;
