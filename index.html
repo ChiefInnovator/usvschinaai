@@ -737,6 +737,7 @@
                     lucide.createIcons();
                 }
             } catch (error) {
+                currentEntry = null;
                 console.error('Error fetching models:', error);
                 const tbody = document.getElementById('models-table-body');
                 if (tbody) {
@@ -746,7 +747,10 @@
                         '</td></tr>';
                 }
                 const subtitle = document.getElementById('page-subtitle');
-                if (subtitle) subtitle.textContent = 'Data temporarily unavailable';
+                if (subtitle) {
+                    subtitle.textContent = 'Data temporarily unavailable';
+                    subtitle.removeAttribute('title');
+                }
             }
         }
 
