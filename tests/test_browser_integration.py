@@ -4,6 +4,7 @@ Only benchmark data and transport failures are fixtures. Application renderers
 and Chart.js are real. No API keys, model research, or publishing is involved.
 """
 import copy
+from datetime import datetime, timezone
 import functools
 import json
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -98,19 +99,27 @@ class BrowserIntegrationTests(unittest.TestCase):
     def ready(self):
         self.page.wait_for_function('window.Chart && Chart.getChart("trendChart") && document.getElementById("trend-status").textContent.includes("daily snapshots")')
 
-    def test_visible_updated_timestamp_uses_the_archive_utc_date(self):
-        for timezone in ('America/New_York', 'America/Los_Angeles', 'Asia/Tokyo'):
-            with self.subTest(timezone=timezone):
-                context=self.browser.new_context(service_workers='block',timezone_id=timezone)
+    def test_visible_updated_timestamp_uses_local_calendar_days_and_time(self):
+        for zone,expected in (('America/New_York','YESTERDAY AT 10:37 PM'),
+                              ('America/Los_Angeles','YESTERDAY AT 7:37 PM'),
+                              ('Asia/Tokyo','TODAY AT 12:37 PM')):
+            with self.subTest(timezone=zone):
+                context=self.browser.new_context(service_workers='block',timezone_id=zone)
                 try:
                     page=context.new_page()
+                    page.clock.set_fixed_time(datetime(2026,11,8,11,52,tzinfo=timezone.utc))
                     page.route('**/data/site_summary.json',lambda route: route.fulfill(
                         status=200,body=self.valid['data/site_summary.json'],content_type='application/json'))
                     page.goto(self.url+'/index.html',wait_until='domcontentloaded')
                     page.wait_for_function("document.querySelector('#page-subtitle').textContent.startsWith('Updated ')")
                     page.evaluate("currentEntry.timestamp='2026-11-08T03:37:41+00:00'; populateStaticContent()")
                     self.assertEqual(page.locator('#page-subtitle').inner_text(),
-                                     'UPDATED NOVEMBER 8, 2026 · 3:37 AM UTC')
+                                     'UPDATED '+expected)
+                    self.assertNotIn('UTC',page.locator('#page-subtitle').inner_text())
+                    page.clock.set_fixed_time(datetime(2026,11,10,11,52,tzinfo=timezone.utc))
+                    page.evaluate('updateSnapshotTimestamp()')
+                    self.assertNotIn('TODAY',page.locator('#page-subtitle').inner_text())
+                    self.assertNotIn('YESTERDAY',page.locator('#page-subtitle').inner_text())
                 finally:
                     context.close()
 

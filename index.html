@@ -549,10 +549,24 @@
             if (!ts) return '';
             const d = new Date(ts);
             if (Number.isNaN(d.getTime())) return ts;
-            const dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
-            const timeStr = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true, timeZone: 'UTC' });
-            return `${dateStr} · ${timeStr} UTC`;
+            const now = new Date();
+            const localDay = date => Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
+            const days = (localDay(now) - localDay(d)) / 86400000;
+            const dateStr = days === 0 ? 'today' : days === 1 ? 'yesterday' :
+                d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            const timeStr = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+            return `${dateStr} at ${timeStr}`;
         };
+        const updateSnapshotTimestamp = () => {
+            if (!currentEntry?.timestamp) return;
+            const subtitle = document.getElementById('page-subtitle');
+            subtitle.textContent = `Updated ${formatUpdatedTimestamp(currentEntry.timestamp)}`;
+            subtitle.title = new Date(currentEntry.timestamp).toLocaleString('en-US', { timeZoneName: 'short' });
+        };
+        setInterval(updateSnapshotTimestamp, 60000);
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) updateSnapshotTimestamp();
+        });
         const parseNumeric = (value) => {
             if (value === null || value === undefined) return null;
             const cleaned = String(value).replace(/[%$,]/g, '').trim();
@@ -765,8 +779,7 @@
             const titleEl = document.getElementById('page-title');
             titleEl.innerHTML = `US <span class="text-slate-400 italic text-4xl md:text-6xl align-middle mx-2">vs</span> CHINA <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>`;
 
-            const subtitle = currentEntry?.timestamp ? `Updated ${formatUpdatedTimestamp(currentEntry.timestamp)}` : '';
-            document.getElementById('page-subtitle').textContent = subtitle;
+            updateSnapshotTimestamp();
 
             if (appData?.teams?.usa && appData?.teams?.china) {
                 const usa = appData.teams.usa;
