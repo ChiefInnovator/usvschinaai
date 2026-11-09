@@ -1,20 +1,16 @@
 {
-  "retrievedAt": "2026-11-08",
+  "retrievedAt": "2026-11-09",
   "modelsChecked": 301,
   "sourcesChecked": 311,
-  "findings": 1147,
+  "findings": 1155,
   "accepted": 0,
   "failures": [
     {
-      "source": "llm-stats:MiMo-V2-Flash",
+      "source": "llm-stats:Claude Opus 4.8",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:MiniMax M2",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:DeepSeek-V4-Pro-0813",
+      "source": "llm-stats:GPT-5.6 Terra",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -22,7 +18,11 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek-V4.1-Flash",
+      "source": "llm-stats:DeepSeek-V4-Flash-Vision-Exp",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source": "llm-stats:GPT-5.5 Pro",
       "error": "HTTP Error 403: Forbidden"
     },
     {
@@ -30,36 +30,16 @@
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Gemini 4 Argon",
+      "source": "llm-stats:GPT-6.1 Sol",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:Claude Sonnet 5.5",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Muse Wonder Full",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:GPT-5.5 Instant",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Nova 2 Omni",
-      "error": "HTTP Error 403: Forbidden"
-    },
-    {
-      "source": "llm-stats:Nova 2 Sonic",
+      "source": "llm-stats:LFM3-VL-2B",
       "error": "HTTP Error 403: Forbidden"
     },
     {
       "source": "vals:lcb",
       "error": "Vals benchmark identity or payload changed: lcb"
-    },
-    {
-      "source": "vals:mmlu_pro",
-      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     },
     {
       "source": "vals:swebench",
@@ -72,6 +52,10 @@
     {
       "source": "vals:gpqa",
       "error": "Vals benchmark identity or payload changed: gpqa"
+    },
+    {
+      "source": "vals:mmlu_pro",
+      "error": "Vals benchmark identity or payload changed: mmlu_pro"
     }
   ],
   "skippedConfigurations": [],

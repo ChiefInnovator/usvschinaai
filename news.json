@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-08T03:38:13.271334+00:00",
+  "lastUpdated": "2026-11-09T03:35:51.525049+00:00",
   "items": [
+    {
+      "id": "8b15cbf8f63ab143",
+      "headline": "AI signals this week (2026-11-02 to 2026-11-08): what actually moved",
+      "url": "https://dev.to/signals_api/ai-signals-this-week-2026-11-02-to-2026-11-08-what-actually-moved-115a",
+      "source": "Dev Community",
+      "country": "Both",
+      "publishedAt": "2026-11-08 15:00:05",
+      "relevanceScore": 1.0
+    },
+    {
+      "id": "a57b06389f706ca6",
+      "headline": "NVIDIA’s Jensen Huang Rejects Anthropic’s Total China Chip Ban Push, Says “I Completely Disagree” And Believes...",
+      "url": "https://wccftech.com/nvidia-jensen-huang-rejects-anthropic-china-chip-ban-america-competition-vera-rubin/",
+      "source": "Wccftech",
+      "country": "Both",
+      "publishedAt": "2026-11-08 12:20:47",
+      "relevanceScore": 0.46
+    },
     {
       "id": "424bf68d76affd46",
       "headline": "What Alibaba left blank about Qwen4",
@@ -135,15 +153,6 @@
       "country": "US",
       "publishedAt": "2026-10-26 13:05:25",
       "relevanceScore": 0.53
-    },
-    {
-      "id": "7158d81995179ed8",
-      "headline": "Chamath Palihapitiya Takes Dig at Claude as Economist Warns of AI Bubble: ‘AI Moves in Mysterious Ways’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62579263/chamath-palihapitiya-takes-dig-at-claude-as-economist-warns-of-ai-bubble-ai-moves-in-mysterious-ways",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-10-25 06:37:11",
-      "relevanceScore": 0.3
     }
   ]
 }
