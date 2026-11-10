@@ -16,7 +16,7 @@ class SiteSummaryTests(unittest.TestCase):
                 mid, pid = country+str(i), 'profile'+str(i)
                 catalog['models'][mid] = {'profiles': {pid: {'model': mid, 'origin': country, 'Input$/M': '$1'}}, 'benchmarks': {}}
                 teams[country].append({'modelId': mid, 'profileId': pid, 'unified': 1,
-                                       'avgIq': i, 'value': i*2, 'coverage': '0/18', 'provisional': False})
+                                       'avgIq': i, 'value': i*2, 'coverage': '0/17', 'provisional': False})
         snapshots = [{'timestamp': day+'T12:00:00Z', 'scoring': {'revision': 'test'}, 'teams': copy.deepcopy(teams)}
                      for day in ('2026-01-01', '2026-01-03', '2026-01-02')]
         raw = {'schemaVersion': 2, 'scoringRevision': 'test', 'metadata': {'title': 'Title'},

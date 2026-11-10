@@ -209,7 +209,7 @@ def replay(data, evidence, *, rebuild=False):
     data['scoringRevision'] = revision
     recompute_badges(data)
     data.setdefault('metadata', {})['avgIqBenchmarks'] = [b['name'] for b in load_config()['benchmarks']]
-    data['metadata']['footerText'] = 'Avg IQ: eighteen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.'
+    data['metadata']['footerText'] = 'Avg IQ: seventeen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.'
     after = audit_gaps(data['history'])
     dates = sorted({utc_day(s['timestamp']) for s in data['history']})
     return {'firstDate': dates[0], 'lastDate': dates[-1], 'calendarDays': len(dates),

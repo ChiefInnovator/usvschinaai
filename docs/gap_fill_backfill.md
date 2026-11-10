@@ -3,7 +3,7 @@
 Run `.venv/bin/python scripts/rescore_history.py --rebuild --write --refresh-images`.
 The rebuild retains historical timestamps, exact model cohorts and model
 metadata/pricing. It clears every old benchmark and calculated score, applies
-dated evidence for the configured eighteen benchmarks, and recalculates Avg IQ,
+dated evidence for the configured seventeen benchmarks, and recalculates Avg IQ,
 Value, Unified Score, coverage, badges and graph inputs. Without `--rebuild`,
 replay retains selected raw results but still removes all legacy benchmark fields.
 

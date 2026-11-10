@@ -7,8 +7,8 @@
     <title>US vs CHINA AI | About - Methodology & Scoring Explained</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Learn how US vs CHINA AI ranks AI models with a normalized Unified Score (0–1000), eighteen-benchmark scoring, and value based on total cost (input + output).">
-    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Score, AI model evaluation, eighteen-benchmark scoring, GPQA Diamond, DeepSWE, FrontierMath">
+    <meta name="description" content="Learn how US vs CHINA AI ranks AI models with a normalized Unified Score (0–1000), seventeen-benchmark scoring, and value based on total cost (input + output).">
+    <meta name="keywords" content="AI scoring methodology, AI benchmarks explained, how to compare AI models, AI IQ index, AI value index, Unified Score, AI model evaluation, seventeen-benchmark scoring, GPQA Diamond, DeepSWE, FrontierMath">
     <meta name="author" content="US vs CHINA AI">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://usvschina.ai/about.html">
@@ -73,14 +73,14 @@
             "name": "What is the Unified Score?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The Unified Score (0–1000) emphasizes capability over cost efficiency: 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value is Avg IQ divided by total cost (Input $/M + Output $/M)."
+                "text": "The Unified Score (0–1000) emphasizes capability over cost efficiency: 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines seventeen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value is Avg IQ divided by total cost (Input $/M + Output $/M)."
             }
         },{
             "@type": "Question",
             "name": "What benchmarks are used to measure AI intelligence?",
             "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The selected benchmarks are Humanity’s Last Exam, SWE-bench Verified, GPQA, MMLU-Pro, Toolathlon, Agents’ Last Exam, DeepSWE, DeepSWE 1.1, LiveCodeBench v6, Terminal-Bench 2.1, BrowseComp, MMMU-Pro, CharXiv-R, ARC-AGI-2, OfficeQA Pro, IFBench, GPQA Diamond, FrontierMath — Tiers 1–3 v2. All eighteen are included regardless of participation. Missing results contribute zero; category aggregates are excluded to avoid double-counting."
+                "text": "The selected benchmarks are Humanity’s Last Exam, SWE-bench Verified, MMLU-Pro, Toolathlon, Agents’ Last Exam, DeepSWE, DeepSWE 1.1, LiveCodeBench v6, Terminal-Bench 4.0, BrowseComp, MMMU-Pro, CharXiv-R, ARC-AGI-2, OfficeQA Pro, IFBench, GPQA Diamond, FrontierMath — Tiers 1–3 v2. All seventeen are included regardless of participation. Missing results contribute zero; category aggregates are excluded to avoid double-counting."
             }
         },{
             "@type": "Question",
@@ -241,13 +241,13 @@
                     <div>
                         <h3 class="text-white font-bold mb-2 text-lg">Unified Score (0–1000)</h3>
                         <p class="text-slate-400 mb-4">
-                            Capability-focused (90%) with value efficiency (10%). Avg IQ combines eighteen selected benchmarks using fixed allocations, with missing results contributing zero.
+                            Capability-focused (90%) with value efficiency (10%). Avg IQ combines seventeen selected benchmarks using fixed allocations, with missing results contributing zero.
                         </p>
                         <div class="bg-slate-900/50 p-4 rounded-xl font-mono text-xs mb-3 border border-purple-500/20">
                             Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
                         </div>
                         <ul class="text-slate-300 text-sm space-y-2">
-                            <li><span class="text-purple-200 font-semibold">Avg IQ:</span> Combine the eighteen benchmark percentages using fixed allocations. The denominator always includes all eighteen, even when results are missing.</li>
+                            <li><span class="text-purple-200 font-semibold">Avg IQ:</span> Combine the seventeen benchmark percentages using fixed allocations. The denominator always includes all seventeen, even when results are missing.</li>
                             <li><span class="text-purple-200 font-semibold">Best verified result:</span> Use the highest score for each exact model and benchmark across all effort levels. Different benchmarks may use different effort levels. Preserve benchmark version, subset and protocol; exclude results that fall back to another model.</li>
                             <li><span class="text-purple-200 font-semibold">Coverage:</span> No participation filters, participation multipliers or minimum number of reported benchmarks. Missing results receive zero contribution.</li>
                             <li><span class="text-purple-200 font-semibold">Value:</span> AvgIQ / (Input $/M + Output $/M); models without usable pricing receive zero Value. Both Avg IQ and Value are cohort-normalized to 0–100 before blending into Unified.</li>
@@ -288,8 +288,8 @@
                             <p class="text-slate-400">A strong model becomes more powerful when it’s also affordable to deploy at scale.</p>
                         </div>
                         <div>
-                            <div class="font-bold text-white mb-1">3) The same eighteen benchmarks apply to every model</div>
-                            <p class="text-slate-400">Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.</p>
+                            <div class="font-bold text-white mb-1">3) The same seventeen benchmarks apply to every model</div>
+                            <p class="text-slate-400">Avg IQ combines seventeen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.</p>
                         </div>
                     </div>
 
@@ -316,10 +316,9 @@
                     <span>Benchmarks included</span>
                 </h2>
                 <p class="text-slate-400 mb-4">
-                    All eighteen selected benchmarks are included, regardless of how many models report results:
+                    All seventeen selected benchmarks are included, regardless of how many models report results:
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">GPQA</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">MMLU-Pro</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Humanity’s Last Exam</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">SWE-bench Verified</span>
@@ -328,7 +327,7 @@
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">DeepSWE</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">DeepSWE 1.1</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">LiveCodeBench v6</span>
-                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Terminal-Bench 2.1</span>
+                    <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">Terminal-Bench 4.0</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">BrowseComp</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">MMMU-Pro</span>
                     <span class="px-3 py-1 bg-blue-500/10 border border-blue-500/20 rounded-lg text-xs text-slate-200">CharXiv-R</span>

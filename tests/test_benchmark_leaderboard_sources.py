@@ -30,8 +30,9 @@ class LeaderboardSourceTests(unittest.TestCase):
 
     def test_effort_suffix_matches_without_merging_release_variants(self):
         raw=page({'overall':{'meta/muse_spark_1_3_max':{'accuracy':90},
-                             'meta/muse_spark_1_2_max':{'accuracy':99}}}, 'Terminal-Bench 2.1')
-        results,audit=vals_results(raw,'terminal-bench-2-1',{'Muse Spark 1.3':'2026-09-02'})
+                             'meta/muse_spark_1_2_max':{'accuracy':99}}}, 'Terminal-Bench 4.0')
+        results,audit=vals_results(raw,'terminal-bench-4',{'Muse Spark 1.3':'2026-09-02'})
+        self.assertEqual(results[0]['component'],'terminal-bench-4.0')
         self.assertEqual([r['score'] for r in results],[90])
         self.assertEqual(audit['unmatched'],['meta/muse_spark_1_2_max'])
 

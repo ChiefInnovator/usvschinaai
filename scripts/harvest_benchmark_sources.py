@@ -9,7 +9,7 @@ Two machine-readable sources carry most models at once:
   GPQA Diamond and FrontierMath Tiers 1-3 v2 tables record the evaluation
   start timestamp; this is not a publication date and does not permit backdating.
 * Artificial Analysis' model pages, which embed every model AA tracks in the
-  Next.js payload with `gpqa`, `ifbench`, `mmmuPro` and `terminalBench21`.
+  Next.js payload with `gpqa`, `ifbench`, `mmmuPro` and `terminalBench40`.
 
 For each exact model and selected benchmark, use the highest verified score
 across reasoning-effort settings. Different components may use different effort
@@ -43,7 +43,7 @@ USER_AGENT = 'Mozilla/5.0 (compatible; usvschinaai-benchmark-harvest/1.0)'
 
 # AA payload field -> our component id. AA's `gpqa` is the Diamond subset.
 AA_FIELDS = {'gpqa': 'gpqa-diamond', 'ifbench': 'ifbench',
-             'mmmuPro': 'mmmu-pro', 'terminalBench21': 'terminal-bench-2.1'}
+             'mmmuPro': 'mmmu-pro', 'terminalBench40': 'terminal-bench-4.0'}
 # Epoch CSV -> (component id, score column, evaluation-date column or None).
 EPOCH_TABLES = {
     'gpqa_diamond.csv': ('gpqa-diamond', 'mean_score', 'Started at'),
@@ -53,7 +53,7 @@ EPOCH_TABLES = {
 }
 # Columns already scraped into models.json that can fingerprint an effort tier.
 FINGERPRINT_COLUMNS = {'GPQA Diamond': 'gpqa', 'MMMU-Pro': 'mmmuPro', 'HLE': 'hle',
-                       'IFBench': 'ifbench', 'Terminal-Bench 2.1': 'terminalbenchV21'}
+                       'IFBench': 'ifbench', 'Terminal-Bench 4.0': 'terminalBench40'}
 MIN_FINGERPRINT_OVERLAP = 2
 MAX_FINGERPRINT_DELTA = 1.5
 EFFORT_TOKENS = ('minimal', 'low', 'medium', 'xhigh', 'high', 'max')

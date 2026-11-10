@@ -444,8 +444,8 @@
                     </div>
                     <p class="mb-4 text-xs text-slate-400 italic">AvgIQ and Value are normalized within the cohort so every run is self-balancing.</p>
 
-                    <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (eighteen benchmarks)</h4>
-                    <p class="mb-2">Avg IQ combines the eighteen selected benchmark scores using fixed allocations. The denominator always includes all eighteen; missing results contribute zero.</p>
+                    <h4 class="text-white font-bold mb-2 text-lg">Avg IQ (seventeen benchmarks)</h4>
+                    <p class="mb-2">Avg IQ combines the seventeen selected benchmark scores using fixed allocations. The denominator always includes all seventeen; missing results contribute zero.</p>
                     <p class="mb-2 text-xs text-slate-400">For each benchmark, we use the highest verified score for the exact model across all effort levels. The benchmark version, subset and evaluation protocol must match; results involving fallback to another model are excluded.</p>
                     <p class="text-xs text-slate-400">Participation does not change benchmark eligibility or scoring. Models have no minimum benchmark-count requirement. Coverage describes available evidence; it does not determine whether a model can rank.</p>
                 </div>
@@ -876,7 +876,7 @@
                     "name": "How are AI models ranked on this leaderboard?",
                     "acceptedAnswer": {
                         "@type": "Answer",
-                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value = Avg IQ ÷ (Input + Output cost)."
+                        "text": "Models are ranked by Unified (0–1000) = 10 × (0.9 × normalized AvgIQ + 0.1 × normalized Value). Avg IQ combines seventeen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility. Value = Avg IQ ÷ (Input + Output cost)."
                     }
                 }]
             };
@@ -1039,7 +1039,7 @@
                                 <span class="text-xs text-slate-400">•</span>
                                 <span class="text-xs text-slate-400">Released: ${esc(model.createdDate) || '—'}</span>
                             </div>
-                            <details class="evidence" data-model-id="${esc(model.modelId)}"><summary>Evidence · ${esc(model.coverage || "0/18")} reported</summary><div class="evidence-content">Open to load prices, benchmark results and sources.</div></details>
+                            <details class="evidence" data-model-id="${esc(model.modelId)}"><summary>Evidence · ${esc(model.coverage || "0/17")} reported</summary><div class="evidence-content">Open to load prices, benchmark results and sources.</div></details>
                             ${description ? `<p class="text-xs text-slate-400 mt-2 hidden group-hover:block max-w-sm leading-relaxed italic">${esc(description)}</p>` : ''}
                         </div>
                     </td>

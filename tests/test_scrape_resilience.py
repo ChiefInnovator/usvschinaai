@@ -60,6 +60,10 @@ class CountryFilterWaitTests(unittest.TestCase):
             with patch.object(scrape_models.time, 'monotonic', side_effect=[0, 1, 2, 99, 99]):
                 self.assertFalse(self.wait(Page(rows)), rows)
 
+    def test_row_without_a_rendered_link_does_not_confirm_the_filter(self):
+        with patch.object(scrape_models.time, 'monotonic', side_effect=[0, 1, 2, 99, 99]):
+            self.assertFalse(self.wait(Page(['us-a', ''])))
+
     def test_unreadable_metadata_falls_back_to_the_fixed_pause(self):
         with patch.object(scrape_models, 'extract_leaderboard_metadata', side_effect=ValueError('missing')):
             self.assertFalse(scrape_models.wait_for_country_rows(Page(['us-a']), 'US', 5.0))

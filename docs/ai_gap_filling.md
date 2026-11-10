@@ -1,6 +1,6 @@
 # AI benchmark gap filling
 
-The research pass fills missing results for exactly the eighteen Avg IQ benchmarks
+The research pass fills missing results for exactly the seventeen Avg IQ benchmarks
 in `data/core_benchmarks.json`. That file is the single source for benchmark
 selection, aliases and scoring weights. The pass does not accept the old Value
 benchmark list.
@@ -11,12 +11,12 @@ The daily scraper now runs `refresh_benchmark_sources.py` before AI research.
 This API-key-independent stage refreshes every retained historical llm-stats model
 plus the current scraped roster, with six concurrent source requests:
 
-- llm-stats model detail pages, matched against all eighteen configured components.
+- llm-stats model detail pages, matched against all seventeen configured components.
 - Artificial Analysis embedded evaluation data and Epoch benchmark CSV exports.
 - The operator's original Toolathlon table, separated from Toolathlon-Verified.
 - CharXiv's operator CSV, using reasoning accuracy rather than descriptive accuracy.
 - Vals embedded benchmark data: MMLU-Pro, LiveCodeBench v6,
-  SWE-bench Verified, GPQA Diamond, and Terminal-Bench 2.1. Select the exact task:
+  SWE-bench Verified, GPQA Diamond, and Terminal-Bench 4.0. Select the exact task:
   adapters use overall accuracy, never a subject/difficulty subset.
   AIME 2025 is no longer configured and its source refresh is disabled.
 - Agents’ Last Exam's official API, full-split pass rate across effort settings;
@@ -105,7 +105,8 @@ There are no participation thresholds, qualification tiers, country/vendor locks
 minimum model coverage rules or participation-based priorities. A reported result
 for another benchmark version does not block research for the selected version.
 Already populated exact components, including configured aliases, are not gaps.
-Generic GPQA does not automatically establish GPQA Diamond.
+A result reported as generic GPQA counts as GPQA Diamond evidence and keeps its
+reported name; the highest verified value per model is used.
 
 Candidates are batched by model in incoming model order, with all its missing
 components requested together. Eligibility is unchanged, but the call budgets are
@@ -147,7 +148,7 @@ dated-evidence rules in [gap_fill_backfill.md](gap_fill_backfill.md).
 ## Scoring boundary
 
 Gap filling runs after detail enrichment and before scoring. Only the configured
-eighteen benchmark columns are saved. Avg IQ uses their fixed weights and a 100%
+seventeen benchmark columns are saved. Avg IQ uses their fixed weights and a 100%
 denominator, with missing results contributing zero. Value uses that same Avg IQ
 divided by input plus output price. Model selection uses Unified Score without a
 coverage cutoff. No legacy participation or Value input path is used.
@@ -161,7 +162,7 @@ effort in provenance. The source refresh checks all published effort rows, and
 historical replay upgrades existing scores as well as filling missing values.
 Higher results apply only on or after their evidence availability date; undated
 results begin at retrieval. Exact model release, benchmark version/subset and
-mixed-model fallback exclusions remain enforced. The eighteen fixed weights and
+mixed-model fallback exclusions remain enforced. The seventeen fixed weights and
 missing-as-zero denominator are unchanged. Historical calibration reports describe
 the evidence available when the weights were fitted; scores can change as new
 verified evidence arrives, without automatically refitting the weights.

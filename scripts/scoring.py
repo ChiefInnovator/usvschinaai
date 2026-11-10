@@ -443,7 +443,7 @@ def score_cohort(entries: List[Any], benchmark_headers: List[str], *, drop_spars
 
 @preconditions(entries='sequence', benchmark_headers='?sequence', log='callable')
 def score_avg_iq_cohort(entries, benchmark_headers=None, *, log=print):
-    """Score only the eighteen configured benchmarks; derive Value from that IQ."""
+    """Score only the seventeen configured benchmarks; derive Value from that IQ."""
     from avg_iq_benchmarks import load_config, selected_value
     from types import SimpleNamespace
     weights = {b['aliases'][0].replace(' ', ''): b['weight']/100 for b in load_config()['benchmarks']}
