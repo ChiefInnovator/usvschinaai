@@ -37,10 +37,11 @@ jobs:
           fi
 
       - name: Data freshness (scrape ran within 30h, published within 72h)
-        # Publishing is two manual merges, so the live snapshot is often older
-        # than 30h while a fresh one waits on develop or in the daily pull
-        # request. That is a warning. A failure means the scrape itself stopped,
-        # or a fresh snapshot has gone unpublished for three days.
+        # The daily scrape publishes its own data unless something needs a
+        # person, so the live snapshot can be older than 30h while a fresh one
+        # waits on develop or in the daily pull request. That is a warning. A
+        # failure means the scrape itself stopped, or a fresh snapshot has gone
+        # unpublished for three days.
         env:
           GH_TOKEN: ${{ github.token }}
         run: |

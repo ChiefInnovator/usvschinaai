@@ -1495,7 +1495,12 @@
                 var items = data && Array.isArray(data.items) ? data.items : [];
                 if (items.length === 0) return;
 
-                items.sort(function(a, b) { return (b.relevanceScore || 0) - (a.relevanceScore || 0); });
+                // Newest first; relevance only breaks ties. Sorting by relevance alone
+                // kept week-old headlines ahead of today's.
+                items.sort(function(a, b) {
+                    var newer = (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0);
+                    return newer || (b.relevanceScore || 0) - (a.relevanceScore || 0);
+                });
                 var links = items.map(function(item) {
                     try {
                         var url = new URL(item.url);

@@ -68,7 +68,11 @@ CN_KEYWORDS = [
 
 @preconditions(api_key='nonempty')
 def fetch_news(api_key):
-    """Fetch articles from NewsData.io latest endpoint."""
+    """Fetch articles from NewsData.io latest endpoint.
+
+    Returns the articles, which may be an empty list, or None when the request
+    or the API failed. The caller must tell "no news" from "could not ask".
+    """
     params = {
         "apikey": api_key,
         "q": "US AND CHINA AND AI",
@@ -85,11 +89,11 @@ def fetch_news(api_key):
         if data.get("status") != "success":
             msg = data.get("results", {})
             print(f"  API error: {msg}")
-            return []
+            return None
         return data.get("results") or []
     except Exception as e:
         print(f"  Request failed: {e}")
-        return []
+        return None
 
 
 @preconditions(article='mapping')
@@ -304,12 +308,16 @@ def main():
     news_path = workspace / "news.json"
 
     print("Fetching AI news from NewsData.io...")
-    raw_articles = fetch_news(api_key)
+    fetched = fetch_news(api_key)
+    raw_articles = fetched or []
     print(f"  Got {len(raw_articles)} articles")
 
     if not raw_articles:
-        print("No articles fetched. Keeping existing news.json if present.")
-        sys.exit(0)
+        # Still run the merge below: it ages out old and low-quality items.
+        if not news_path.exists():
+            print("No articles fetched and no existing news.json.")
+            sys.exit(0)
+        print("No articles fetched. Pruning existing news.json.")
 
     # Transform and filter
     transformed = [transform_article(a) for a in raw_articles]
@@ -327,9 +335,16 @@ def main():
     # Merge with existing
     final = merge_with_existing(transformed, news_path)
 
-    # Write news.json
+    # Write news.json. lastUpdated is the last successful fetch, including one
+    # that found nothing new; a failed request keeps the previous time.
+    last_updated = datetime.now(timezone.utc).isoformat()
+    if fetched is None:
+        try:
+            last_updated = json.loads(news_path.read_text(encoding="utf-8")).get("lastUpdated") or last_updated
+        except (OSError, ValueError):
+            pass
     output = {
-        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "lastUpdated": last_updated,
         "items": final,
     }
     with open(news_path, "w", encoding="utf-8") as f:

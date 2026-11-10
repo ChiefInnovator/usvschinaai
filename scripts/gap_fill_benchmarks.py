@@ -964,19 +964,23 @@ def run_gap_filling_pass(
             print("  → batch schema validation failed")
             continue
         if on_batch is not None:
-            on_batch(model_name, list(batch_benchmarks))
+            # Only what was answered: a caller that remembers asked pairs must
+            # still retry a benchmark the response left out.
+            on_batch(model_name, [b for b in batch_benchmarks if b in validated_map])
 
         # Apply each validated result to its matching candidate
         for cand in batch_candidates:
             entry = validated_map.get(cand.benchmark)
-            # Omitted and null answers are cached as nulls so the next runs
-            # skip them for NEGATIVE_CACHE_TTL_DAYS; new models are re-asked
-            # every run, so theirs are not cached.
-            if entry is None or entry["score"] is None:
-                if entry is None:
-                    print(f"  · {cand.benchmark}: omitted from response")
-                else:
-                    print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
+            # A null answer is cached so the next runs skip it for
+            # NEGATIVE_CACHE_TTL_DAYS; new models are re-asked every run, so
+            # theirs are not cached. A benchmark missing from the response
+            # (truncated or invalid entry) was never answered: caching it as
+            # "no result" would stop the question being asked for weeks.
+            if entry is None:
+                print(f"  · {cand.benchmark}: omitted from response; will ask again")
+                continue
+            if entry["score"] is None:
+                print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
                 if new_model:
                     continue
                 cache.setdefault(cand.model_name, {})[cand.benchmark] = {
