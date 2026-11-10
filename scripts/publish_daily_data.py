@@ -76,9 +76,14 @@ def wait_for_review(repo, pr, head, timeout):
     deadline = time.monotonic() + timeout
     while True:
         _, out = gh(['api', f'repos/{repo}/pulls/{pr}/reviews?per_page=100'])
-        reviews = json.loads(out)
-        if any(review.get('commit_id') == head and (review.get('user') or {}).get('login') == REVIEWER
-               for review in reviews):
+        mine = [review for review in json.loads(out)
+                if review.get('commit_id') == head and (review.get('user') or {}).get('login') == REVIEWER]
+        if mine:
+            # The reviewer's latest word on this commit decides. A request for
+            # changes, or a review that was dismissed, is not a finished review.
+            latest = max(mine, key=lambda review: review.get('submitted_at') or '')
+            if latest.get('state') not in ('COMMENTED', 'APPROVED'):
+                raise NeedsPerson(f"the automatic review is {str(latest.get('state')).lower().replace('_', ' ')}")
             return
         if time.monotonic() >= deadline:
             raise NeedsPerson('the automatic review did not finish in time')

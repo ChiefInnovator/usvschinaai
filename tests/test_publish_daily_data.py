@@ -19,7 +19,7 @@ class FakeGitHub:
         self.options = dict(data_checks='pass', promotion_checks='pass', review_head=HEAD,
                             reviewer='copilot-pull-request-reviewer[bot]', threads=0,
                             base='develop', promotion_head=DEVELOP, develop_tip=STARTED,
-                            merge_parents=[STARTED, HEAD])
+                            merge_parents=[STARTED, HEAD], review_state='COMMENTED', earlier_state='COMMENTED')
         self.options.update(options)
         self.merged, self.created = [], []
 
@@ -43,9 +43,13 @@ class FakeGitHub:
         if args[0] == 'api' and '/commits/' in args[1]:
             return 0, json.dumps({'parents': [{'sha': sha} for sha in self.options['merge_parents']]})
         if args[0] == 'api' and 'graphql' not in args:
-            return 0, json.dumps([{'commit_id': self.options['review_head'],
-                                   'user': {'login': self.options['reviewer']}},
-                                  {'commit_id': HEAD, 'user': {'login': 'claude[bot]'}}])
+            return 0, json.dumps([
+                {'commit_id': self.options['review_head'], 'user': {'login': self.options['reviewer']},
+                 'state': self.options['earlier_state'], 'submitted_at': '2026-11-10T03:40:00Z'},
+                {'commit_id': self.options['review_head'], 'user': {'login': self.options['reviewer']},
+                 'state': self.options['review_state'], 'submitted_at': '2026-11-10T03:45:00Z'},
+                {'commit_id': HEAD, 'user': {'login': 'claude[bot]'}, 'state': 'APPROVED',
+                 'submitted_at': '2026-11-10T03:50:00Z'}])
         if args[:2] == ['api', 'graphql']:
             nodes = [{'isResolved': False}] * self.options['threads'] + [{'isResolved': True}]
             return 0, json.dumps({'data': {'repository': {'pullRequest': {'reviewThreads': {
@@ -93,6 +97,16 @@ class PublishDailyDataTests(unittest.TestCase):
             code, github, log = self.run_publish(**options)
             self.assertEqual((code, github.merged), (1, []))
             self.assertIn('automatic review did not finish', log)
+
+    def test_blocking_or_dismissed_review_needs_a_person(self):
+        # A body-only review leaves no thread, so its state has to be read.
+        for state in ('CHANGES_REQUESTED', 'DISMISSED', 'PENDING'):
+            code, github, log = self.run_publish(review_state=state)
+            self.assertEqual((code, github.merged), (1, []), state)
+            self.assertIn('automatic review is', log)
+        # Only the latest review on the commit counts.
+        code, github, _ = self.run_publish(earlier_state='CHANGES_REQUESTED', review_state='APPROVED')
+        self.assertEqual((code, github.merged), (0, [7, 8]))
 
     def test_open_review_thread_needs_a_person(self):
         code, github, log = self.run_publish(threads=1)
