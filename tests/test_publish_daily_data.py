@@ -19,13 +19,16 @@ class FakeGitHub:
         self.options = dict(data_checks='pass', promotion_checks='pass', review_head=HEAD,
                             reviewer='copilot-pull-request-reviewer[bot]', threads=0,
                             base='develop', promotion_head=DEVELOP, develop_tip=STARTED,
-                            merge_parents=[STARTED, HEAD], review_state='COMMENTED', earlier_state='COMMENTED')
+                            merge_parents=[STARTED, HEAD], review_state='COMMENTED', earlier_state='COMMENTED',
+                            data_head=HEAD, files=['models.json', 'current.json', 'data/model_catalog.json',
+                                                   'data/ai_fill_history.jsonl', 'social/2026-11-10-1-x.png',
+                                                   'social/plan.json', 'og-image.png', 'sitemap.xml', 'llms.txt'])
         self.options.update(options)
         self.merged, self.created = [], []
 
     def pull(self, number):
         if number == 7:
-            return dict(number=7, state='MERGED' if 7 in self.merged else 'OPEN', headRefOid=HEAD,
+            return dict(number=7, state='MERGED' if 7 in self.merged else 'OPEN', headRefOid=self.options['data_head'],
                         baseRefName=self.options['base'], headRefName=BRANCH, isCrossRepository=False,
                         mergeCommit={'oid': DEVELOP} if 7 in self.merged else None)
         return dict(number=8, state='MERGED' if 8 in self.merged else 'OPEN',
@@ -38,6 +41,8 @@ class FakeGitHub:
         if args[:2] == ['pr', 'checks']:
             bucket = self.options['data_checks' if args[2] == '7' else 'promotion_checks']
             return 0, json.dumps([{'name': 'test', 'bucket': bucket}, {'name': 'verify_build', 'bucket': 'pass'}])
+        if args[0] == 'api' and '/files?' in args[1]:
+            return 0, json.dumps([{'filename': name} for name in self.options['files']])
         if args[0] == 'api' and args[1].endswith('/git/ref/heads/develop'):
             return 0, json.dumps({'object': {'sha': self.options['develop_tip']}})
         if args[0] == 'api' and '/commits/' in args[1]:
@@ -73,7 +78,8 @@ class PublishDailyDataTests(unittest.TestCase):
         github = FakeGitHub(**options)
         with patch.object(publish, 'gh', github), patch.object(publish.time, 'sleep'), \
              patch.object(publish, 'CHECK_TIMEOUT', 0), patch.object(publish, 'REVIEW_TIMEOUT', 0), \
-             patch.object(sys, 'argv', ['publish', '--repo', REPO, '--branch', BRANCH, '--develop', STARTED]), \
+             patch.object(sys, 'argv', ['publish', '--repo', REPO, '--branch', BRANCH, '--head', HEAD,
+                                        '--develop', STARTED]), \
              patch('builtins.print') as out:
             code = publish.main()
         return code, github, ' '.join(str(call.args[0]) for call in out.call_args_list)
@@ -117,6 +123,30 @@ class PublishDailyDataTests(unittest.TestCase):
         code, github, _ = self.run_publish(base='main')
         self.assertEqual((code, github.merged, github.created), (1, [], []))
 
+    def test_only_the_commit_this_run_pushed_and_only_data_files_are_merged(self):
+        # Someone pushed to the branch after the run: not the generated commit.
+        code, github, log = self.run_publish(data_head='d' * 40)
+        self.assertEqual((code, github.merged), (1, []))
+        self.assertIn('not the commit this run pushed', log)
+        for extra in ('scripts/scoring.py', '.github/workflows/daily-scrape.yml', 'index.html', 'AGENTS.md',
+                      'data/social_preview/x.png', 'social/nested/x.png', 'models.json.bak'):
+            code, github, log = self.run_publish(files=['models.json', extra])
+            self.assertEqual((code, github.merged), (1, []), extra)
+            self.assertIn('not generated data: ' + extra, log)
+
+    def test_recovery_message_matches_how_far_publication_got(self):
+        _, _, log = self.run_publish(threads=1)
+        self.assertIn('Review the open data pull request', log)
+        # The data is merged; only the promotion is left.
+        _, github, log = self.run_publish(promotion_checks='fail')
+        self.assertEqual(github.merged, [7])
+        self.assertIn('#7 is already merged into develop', log)
+        self.assertIn('Promotion #8 is open', log)
+        self.assertNotIn('Review the open data pull request', log)
+        _, github, log = self.run_publish(merge_parents=['9' * 40, HEAD])
+        self.assertIn('#7 is already merged into develop', log)
+        self.assertIn('promote it to main by hand', log)
+
     def test_develop_must_be_the_commit_the_run_started_from(self):
         # Something else landed on develop during the run: do not merge at all.
         code, github, log = self.run_publish(develop_tip='9' * 40)
@@ -125,7 +155,7 @@ class PublishDailyDataTests(unittest.TestCase):
         # It landed between the check and the merge: the data is in develop, but main is not touched.
         code, github, log = self.run_publish(merge_parents=['9' * 40, HEAD])
         self.assertEqual((code, github.merged, github.created), (1, [7], []))
-        self.assertIn('promote by hand', log)
+        self.assertIn('did not start from', log)
 
     def test_promotion_stops_when_its_checks_fail_or_develop_moved(self):
         for options in (dict(promotion_checks='fail'), dict(promotion_head='e' * 40)):

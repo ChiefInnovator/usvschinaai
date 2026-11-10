@@ -277,6 +277,7 @@ jobs:
             --title "Refresh data (daily-scrape)" \
             --body-file "$RUNNER_TEMP/pr-body.md"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Publish daily data
         # Merges the data pull request and promotes develop to main, both as
@@ -296,7 +297,8 @@ jobs:
             exit 1
           fi
           python scripts/publish_daily_data.py --repo "$GITHUB_REPOSITORY" \
-            --branch "${{ steps.pr.outputs.branch }}" --develop "${{ steps.base.outputs.develop_sha }}"
+            --branch "${{ steps.pr.outputs.branch }}" --head "${{ steps.pr.outputs.head }}" \
+            --develop "${{ steps.base.outputs.develop_sha }}"
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'

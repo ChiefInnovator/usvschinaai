@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
 """Publish the daily data pull request when nothing in it needs a person.
 
-    python scripts/publish_daily_data.py --repo OWNER/REPO --branch feature/daily-scrape-... --develop SHA
+    python scripts/publish_daily_data.py --repo OWNER/REPO --branch feature/daily-scrape-... \
+        --head SHA --develop SHA
 
 Merges the data pull request into develop, then opens and merges the
 develop -> main promotion. Both are ordinary merge-commit pull requests; nothing
-is pushed to develop or main. Each merge requires that:
+is pushed to develop or main. The data pull request must be the exact commit
+this run pushed and may change only generated data files, so a later push to
+the branch, or anything that is not data, is never merged here. Each merge
+requires that:
 
 - the required checks have passed on the exact head commit,
 - for develop, the automatic review has finished on that commit,
@@ -19,6 +23,7 @@ and the workflow-failure email tells a person to merge it by hand.
 from preconditions import preconditions
 import argparse
 import json
+import re
 import subprocess
 import sys
 import time
@@ -29,13 +34,21 @@ REVIEW_TIMEOUT = 20 * 60
 # The account GitHub's automatic review posts as. A substring match would let
 # any account with a similar name satisfy the review gate.
 REVIEWER = 'copilot-pull-request-reviewer[bot]'
+# The files a daily scrape generates. Code, workflows and pages are not data.
+GENERATED = re.compile(r'(models\.json|current\.json|news\.json|og-image\.png|ig-image\.png|sitemap\.xml|llms\.txt'
+                       r'|data/[^/]+\.jsonl?|social/[^/]+\.(png|json))')
 THREADS = '''query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
   repository(owner: $owner, name: $name) { pullRequest(number: $number) {
     reviewThreads(first: 100, after: $cursor) { nodes { isResolved } pageInfo { hasNextPage endCursor } } } } }'''
 
 
 class NeedsPerson(Exception):
-    """The pull request was left open for a manual merge."""
+    """Publication stopped; `recovery` says what a person has to do."""
+
+    @preconditions(reason='text', recovery='?text')
+    def __init__(self, reason, recovery=None):
+        super().__init__(reason)
+        self.recovery = recovery
 
 
 @preconditions(args='sequence', check='bool')
@@ -139,29 +152,66 @@ def branch_tip(repo, branch):
     return json.loads(out)['object']['sha']
 
 
-@preconditions(repo='nonempty', branch='nonempty', started_from='nonempty')
-def publish(repo, branch, started_from):
+@preconditions(repo='nonempty', pr='positive_int')
+def changed_files(repo, pr):
+    """Every path the pull request changes, including the old name of a rename."""
+    paths, page = [], 1
+    while True:
+        _, out = gh(['api', f'repos/{repo}/pulls/{pr}/files?per_page=100&page={page}'])
+        files = json.loads(out)
+        for item in files:
+            paths.extend(name for name in (item.get('filename'), item.get('previous_filename')) if name)
+        if len(files) < 100:
+            return paths
+        page += 1
+
+
+@preconditions(repo='nonempty', branch='nonempty', head='nonempty', started_from='nonempty')
+def publish(repo, branch, head, started_from):
     data = pull_request(repo, branch)
     if (data['state'] != 'OPEN' or data['baseRefName'] != 'develop' or data['isCrossRepository']
             or not data['headRefName'].startswith('feature/daily-scrape-')):
         raise NeedsPerson('this is not an open daily data pull request into develop')
+    # Only the commit this run generated, and only data. Anything pushed to
+    # the branch afterwards, or any code, workflow or page change, needs review.
+    if data['headRefOid'] != head:
+        raise NeedsPerson('the pull request head is not the commit this run pushed')
+    other = sorted(path for path in changed_files(repo, data['number']) if not GENERATED.fullmatch(path))
+    if other:
+        raise NeedsPerson('the pull request changes files that are not generated data: ' + ', '.join(other[:5]))
     # Anything merged into develop during the run would ride along to main.
     if branch_tip(repo, 'develop') != started_from:
         raise NeedsPerson('develop changed while the scrape ran')
     develop = merge_when_clean(repo, data['number'], data['headRefOid'], review=True)
     print(f"Merged data pull request #{data['number']} into develop at {develop[:7]}.")
+    try:
+        promote(repo, data, develop, started_from)
+    except NeedsPerson as reason:
+        # The data pull request is merged; telling a person to merge it would mislead.
+        raise NeedsPerson(str(reason), reason.recovery or
+                          f"Data pull request #{data['number']} is already merged into develop. "
+                          'Review develop and promote it to main by hand.') from reason
+
+
+@preconditions(repo='nonempty', data='mapping', develop='nonempty', started_from='nonempty')
+def promote(repo, data, develop, started_from):
     _, out = gh(['api', f'repos/{repo}/commits/{develop}'])
     parents = [parent['sha'] for parent in json.loads(out)['parents']]
     if parents != [started_from, data['headRefOid']]:
-        raise NeedsPerson('the data merged onto a develop commit this run did not start from; promote by hand')
+        raise NeedsPerson('the data merged onto a develop commit this run did not start from')
     _, url = gh(['pr', 'create', '--repo', repo, '--base', 'main', '--head', 'develop',
                  '--title', f"Publish daily data from #{data['number']}",
                  '--body', f"Promotes #{data['number']}. Opened and merged by the daily scrape after its "
                            'required checks passed and its automatic review left no open thread.'])
     promotion = int(url.strip().rsplit('/', 1)[-1])
+    waiting = (f"Data pull request #{data['number']} is already merged into develop. "
+               f'Promotion #{promotion} is open: review and merge it by hand.')
     if pull_request(repo, promotion)['headRefOid'] != develop:
-        raise NeedsPerson(f'develop moved before promotion #{promotion} was opened')
-    main = merge_when_clean(repo, promotion, develop, review=False)
+        raise NeedsPerson(f'develop moved before promotion #{promotion} was opened', waiting)
+    try:
+        main = merge_when_clean(repo, promotion, develop, review=False)
+    except NeedsPerson as reason:
+        raise NeedsPerson(str(reason), waiting) from reason
     print(f'Promoted develop to main at {main[:7]} through #{promotion}.')
 
 
@@ -170,13 +220,14 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo', required=True)
     parser.add_argument('--branch', required=True)
+    parser.add_argument('--head', required=True, help='The commit this run pushed to the branch')
     parser.add_argument('--develop', required=True, help='The develop commit the run started from')
     args = parser.parse_args()
     try:
-        publish(args.repo, args.branch, args.develop)
+        publish(args.repo, args.branch, args.head, args.develop)
     except NeedsPerson as reason:
-        print(f'::error::Daily data was not published automatically: {reason}. '
-              'Merge the open pull request and promote develop by hand.')
+        recovery = reason.recovery or 'Review the open data pull request, then merge it and promote develop by hand.'
+        print(f'::error::Daily data was not published automatically: {reason}. {recovery}')
         return 1
     return 0
 
