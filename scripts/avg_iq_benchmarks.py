@@ -14,8 +14,8 @@ CONFIG_PATH = Path(__file__).resolve().parents[1] / 'data/core_benchmarks.json'
 def load_config():
     config = json.loads(CONFIG_PATH.read_text())
     benchmarks = config['benchmarks']
-    if len(benchmarks) != 18 or not math.isclose(sum(b['weight'] for b in benchmarks), 100, rel_tol=0, abs_tol=1e-9) or any(not math.isfinite(b['weight']) or b['weight'] < 0 for b in benchmarks) or config.get('denominator') != 1.0 or config.get('missingContribution') != 0:
-        raise ValueError('Avg IQ requires eighteen benchmark weights totaling 100%')
+    if len(benchmarks) != 17 or not math.isclose(sum(b['weight'] for b in benchmarks), 100, rel_tol=0, abs_tol=1e-9) or any(not math.isfinite(b['weight']) or b['weight'] < 0 for b in benchmarks) or config.get('denominator') != 1.0 or config.get('missingContribution') != 0:
+        raise ValueError('Avg IQ requires seventeen benchmark weights totaling 100%')
     aliases = {}
     for b in benchmarks:
         for alias in b['aliases']:

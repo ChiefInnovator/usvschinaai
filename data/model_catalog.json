@@ -2629,7 +2629,7 @@
             "modelAvailableFrom": "2026-07-21"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "79a74665ce9df61e": {
             "benchmark": "GPQA",
             "score": 94.6,
@@ -2667,9 +2667,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6cd2a1e900a1fb8e": {
             "benchmark": "GPQA Diamond",
             "score": 94.5,
@@ -3012,7 +3010,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "098f64d68adbe23f": {
             "benchmark": "GPQA",
             "score": 79.6,
@@ -3037,9 +3035,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "769d08814c6d92a9": {
             "benchmark": "GPQA Diamond",
             "score": 76.3,
@@ -3236,7 +3232,7 @@
             "notes": "Epoch AI v2 backfill; run started 2026-06-11. Postdates the brief's Opus 4.1 window."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "33957c8c1c92aeeb": {
             "benchmark": "GPQA",
             "score": 80.9,
@@ -3261,9 +3257,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2431585b6bb8d5d0": {
             "benchmark": "GPQA Diamond",
             "score": 81.0,
@@ -6029,7 +6023,7 @@
             "notes": "Epoch AI backfilled v2 scores for older Claude models; run started 2026-06-11, v2 dataset published 2026-06-12."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5bd2fa340370e392": {
             "benchmark": "GPQA",
             "score": 87.0,
@@ -6067,9 +6061,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "b2ead1cdbd7a22c6": {
             "benchmark": "GPQA Diamond",
             "score": 87.0,
@@ -9250,7 +9242,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-opus-4-6_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5be701a425d8f6bb": {
             "benchmark": "GPQA",
             "score": 91.3,
@@ -9288,9 +9280,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-06"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "3f454f7e3ac3ffeb": {
             "benchmark": "GPQA Diamond",
             "score": 91.3,
@@ -11571,7 +11561,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-opus-4-7_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "355cadaf5985499c": {
             "benchmark": "GPQA",
             "score": 94.2,
@@ -11609,9 +11599,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "16be296f1cecf497": {
             "benchmark": "GPQA Diamond",
             "score": 94.2,
@@ -12926,7 +12914,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-opus-4-8_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "bd6933dbab7ca079": {
             "benchmark": "GPQA",
             "score": 93.6,
@@ -12964,9 +12952,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-03"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "0b5999c92f471597": {
             "benchmark": "GPQA Diamond",
             "score": 92.0,
@@ -14027,6 +14013,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-13",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "60f05aa0e344e667": {
+            "benchmark": "GPQA",
+            "score": 93.7,
+            "unit": "percent",
+            "source": "https://openai.com/index/gpt-6-astra/?video=1222553704",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "GPQA Diamond accuracy for Claude Opus 5 in the comparison table; the table reports the maximum across effort settings. Published September 3, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13"
           }
         },
         "humanitys-last-exam": {
@@ -14212,21 +14211,6 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-13"
           }
-        },
-        "gpqa": {
-          "60f05aa0e344e667": {
-            "benchmark": "GPQA",
-            "score": 93.7,
-            "unit": "percent",
-            "source": "https://openai.com/index/gpt-6-astra/?video=1222553704",
-            "availableFrom": "2026-09-11",
-            "retrievedAt": "2026-09-11",
-            "configuration": "GPQA Diamond accuracy for Claude Opus 5 in the comparison table; the table reports the maximum across effort settings. Published September 3, 2026.",
-            "kind": "published",
-            "sourceType": "vendor_blog",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-08-13"
-          }
         }
       }
     },
@@ -14255,7 +14239,7 @@
         }
       },
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "617a297f9bbefa8a": {
             "benchmark": "GPQA",
             "score": 75.4,
@@ -14280,9 +14264,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2f3f4c2fcbeb1d00": {
             "benchmark": "GPQA Diamond",
             "score": 75.4,
@@ -15014,7 +14996,7 @@
             "notes": "Epoch AI v2 backfill; run started 2026-06-11. Postdates the brief's Sonnet 4.5 window."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "1d6195493b013c9a": {
             "benchmark": "GPQA",
             "score": 83.4,
@@ -15039,9 +15021,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "8a12d8c41ce108fd": {
             "benchmark": "GPQA Diamond",
             "score": 83.4,
@@ -17909,7 +17889,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "53a44a5e476f6e25": {
             "benchmark": "GPQA",
             "score": 89.9,
@@ -17947,9 +17927,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-20"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "ad142b4377a74874": {
             "benchmark": "GPQA Diamond",
             "score": 89.9,
@@ -18906,6 +18884,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "7667c40b91c3f86c": {
+            "benchmark": "GPQA",
+            "score": 90.5,
+            "unit": "percent",
+            "source": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "GPQA Diamond accuracy. Published in Anthropic's Claude Sonnet 5 system card; Claude Sonnet 5 was announced June 30, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
           }
         },
         "humanitys-last-exam": {
@@ -19190,21 +19181,6 @@
             "notes": "Present in production https://usvschina.ai/models.json snapshot 2026-09-08T03:39:33+00:00; reverified against the cited source on 2026-09-09. Availability uses the retained observation date, not an inferred publication date."
           }
         },
-        "gpqa": {
-          "7667c40b91c3f86c": {
-            "benchmark": "GPQA",
-            "score": 90.5,
-            "unit": "percent",
-            "source": "https://www-cdn.anthropic.com/480e0bb54327b9622282e9c39a83a4f490ed377e/Claude%20Sonnet%205%20System%20Card.pdf",
-            "availableFrom": "2026-09-11",
-            "retrievedAt": "2026-09-11",
-            "configuration": "GPQA Diamond accuracy. Published in Anthropic's Claude Sonnet 5 system card; Claude Sonnet 5 was announced June 30, 2026.",
-            "kind": "published",
-            "sourceType": "system_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-08-28"
-          }
-        },
         "deepswe": {
           "aab1066d2f0cb605": {
             "benchmark": "DeepSWE",
@@ -19245,7 +19221,7 @@
         }
       },
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "1aab99f866092e57": {
             "benchmark": "GPQA",
             "score": 65.2,
@@ -19270,9 +19246,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-11"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2aa22d797c113e21": {
             "benchmark": "GPQA Diamond",
             "score": 40.2,
@@ -19921,7 +19895,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "fde93ab57bafcf84": {
             "benchmark": "GPQA",
             "score": 82.4,
@@ -19946,9 +19920,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2c247bb492c3eb55": {
             "benchmark": "GPQA Diamond",
             "score": 82.4,
@@ -20340,7 +20312,7 @@
             "modelAvailableFrom": "2026-01-27"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "90019b1780243a70": {
             "benchmark": "GPQA",
             "score": 79.9,
@@ -20365,9 +20337,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-27"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "f5e66d570f688ad1": {
             "benchmark": "GPQA Diamond",
             "score": 79.9,
@@ -22388,7 +22358,7 @@
             "notes": "Column 'DeepSeek-V4-Flash (Preview)'; DeepSWE v1.1 is the only DeepSWE release live at the time of publication."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "0573ffe85e3c90be": {
             "benchmark": "GPQA",
             "score": 88.1,
@@ -22426,9 +22396,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-18"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "c6e42c3ef003bba2": {
             "benchmark": "GPQA Diamond",
             "score": 88.1,
@@ -25613,7 +25581,7 @@
             "notes": "Column 'DeepSeek-V4-Pro (Preview)'; DeepSWE v1.1 is the only live DeepSWE release/leaderboard since 2026-06-15, and the official datacurve v1.1 board lists deepseek-v4-pro [max] at 63% consistent with the 0813 column."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "31e0f433e59f594a": {
             "benchmark": "GPQA",
             "score": 90.1,
@@ -25651,9 +25619,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-10"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "b2c8c01b06d45b08": {
             "benchmark": "GPQA Diamond",
             "score": 90.1,
@@ -25960,7 +25926,7 @@
         }
       },
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "e735da1b69d6ff64": {
             "benchmark": "GPQA",
             "score": 74.0,
@@ -25985,9 +25951,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-11"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "57546fa1151fd254": {
             "benchmark": "GPQA Diamond",
             "score": 81.1,
@@ -26430,7 +26394,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5ddabf98303af43c": {
             "benchmark": "GPQA",
             "score": 79.1,
@@ -26455,9 +26419,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "487e9891895b0f5c": {
             "benchmark": "GPQA Diamond",
             "score": 78.2,
@@ -28130,7 +28092,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "e95dfccddb28deaf": {
             "benchmark": "GPQA",
             "score": 81.0,
@@ -28155,9 +28117,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "8de7d488effabe4c": {
             "benchmark": "GPQA Diamond",
             "score": 81.0,
@@ -29981,7 +29941,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "97868e7dbafc37ef": {
             "benchmark": "GPQA",
             "score": 85.7,
@@ -30006,9 +29966,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "4f3cdd763017c625": {
             "benchmark": "GPQA Diamond",
             "score": 85.7,
@@ -34812,7 +34770,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row glm-5.1."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "e0559379222672b5": {
             "benchmark": "GPQA",
             "score": 86.2,
@@ -34837,9 +34795,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-09"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6f664adf09508029": {
             "benchmark": "GPQA Diamond",
             "score": 86.2,
@@ -36333,7 +36289,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row glm-5.2_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "3c2e908c4b80b83e": {
             "benchmark": "GPQA",
             "score": 91.2,
@@ -36371,9 +36327,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-18"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "95f14fff9e9d9595": {
             "benchmark": "GPQA Diamond",
             "score": 91.2,
@@ -37030,6 +36984,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "dffb65e911a99b33": {
+            "benchmark": "GPQA",
+            "score": 91.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5-3",
+            "availableFrom": "2026-09-18",
+            "retrievedAt": "2026-09-18",
+            "configuration": "GPQA Diamond accuracy, independently measured by Artificial Analysis for GLM-5.3 (max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
           }
         },
         "humanitys-last-exam": {
@@ -37239,21 +37206,6 @@
             "configuration": "DeepSWE v1.1; Z.ai vendor-reported using mini-swe-agent, temperature 0.95, top-p 1.0, 6-hour timeout, and 400K context; model-card benchmark guidance specifies default/max reasoning effort.",
             "kind": "published",
             "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-08-28"
-          }
-        },
-        "gpqa": {
-          "dffb65e911a99b33": {
-            "benchmark": "GPQA",
-            "score": 91.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/glm-5-3",
-            "availableFrom": "2026-09-18",
-            "retrievedAt": "2026-09-18",
-            "configuration": "GPQA Diamond accuracy, independently measured by Artificial Analysis for GLM-5.3 (max).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
@@ -38503,6 +38455,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "dc56ca6e722e89bf": {
+            "benchmark": "GPQA",
+            "score": 92.2,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4",
+            "availableFrom": "2026-09-13",
+            "retrievedAt": "2026-09-13",
+            "configuration": "GPQA Diamond. NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.9217. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28"
           }
         },
         "humanitys-last-exam": {
@@ -38780,21 +38745,6 @@
             "availableFrom": "2026-09-13",
             "retrievedAt": "2026-09-13",
             "configuration": "NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.6130. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-08-28"
-          }
-        },
-        "gpqa": {
-          "dc56ca6e722e89bf": {
-            "benchmark": "GPQA",
-            "score": 92.2,
-            "unit": "percent",
-            "source": "https://huggingface.co/nvidia/GLM-5.3-Flash-NVFP4",
-            "availableFrom": "2026-09-13",
-            "retrievedAt": "2026-09-13",
-            "configuration": "GPQA Diamond. NVIDIA's table reports the exact original GLM-5.3-Flash BF16 baseline, not the NVFP4 derivative: 0.9217. Temperature=1.0, top_p=0.95, max_new_tokens=327,680.",
             "kind": "published",
             "sourceType": "model_card",
             "confidence": "high",
@@ -39602,7 +39552,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06); explicit high-effort row, no evaluation start date recorded."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5db641fb1184ed85": {
             "benchmark": "GPQA",
             "score": 87.3,
@@ -39640,9 +39590,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-30"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "cdbc8dbbc7c7769d": {
             "benchmark": "GPQA Diamond",
             "score": 85.4,
@@ -40420,7 +40368,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06) arc_agi_2_external.csv; no evaluation date recorded."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "554ef1ff314efbea": {
             "benchmark": "GPQA",
             "score": 88.1,
@@ -40458,9 +40406,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-27"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "b1b902adbf0d19f7": {
             "benchmark": "GPQA Diamond",
             "score": 84.2,
@@ -40817,7 +40763,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "863399f6a69438e5": {
             "benchmark": "GPQA",
             "score": 88.1,
@@ -40855,9 +40801,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-28"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "a4ce6dfe29a1c905": {
             "benchmark": "GPQA Diamond",
             "score": 87.3,
@@ -41346,7 +41290,7 @@
             "notes": "Publication date verified from this pinned README commit in the official publisher repository."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "ce7755f5bd3fad3d": {
             "benchmark": "GPQA",
             "score": 88.1,
@@ -41384,9 +41328,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-24"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "89aad5098177d2d8": {
             "benchmark": "GPQA Diamond",
             "score": 87.3,
@@ -41715,7 +41657,7 @@
             "modelAvailableFrom": "2026-01-24"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "e6df5921c3985d0a": {
             "benchmark": "GPQA",
             "score": 88.1,
@@ -41753,9 +41695,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-24"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "86ecbe5f46421b32": {
             "benchmark": "GPQA Diamond",
             "score": 88.1,
@@ -43868,7 +43808,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06) frontiermath_tiers_1_3_v2.csv. Epoch only publishes per-reasoning-effort rows; the top effort tier is used for the unsuffixed model name (verified against ARC-AGI-2 where the unsuffixed leaderboard value equals the top-effort row)."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "2fb6f8fada714f0b": {
             "benchmark": "GPQA",
             "score": 92.4,
@@ -43906,9 +43846,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "dd31476ce23572c2": {
             "benchmark": "GPQA Diamond",
             "score": 91.4,
@@ -45273,7 +45211,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06) frontiermath_tiers_1_3_v2.csv. Epoch only publishes per-reasoning-effort rows; the top effort tier is used for the unsuffixed model name (verified against ARC-AGI-2 where the unsuffixed leaderboard value equals the top-effort row)."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "935b8406413a22b5": {
             "benchmark": "GPQA",
             "score": 93.2,
@@ -45311,9 +45249,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "fa47a607c82dfeb0": {
             "benchmark": "GPQA Diamond",
             "score": 93.2,
@@ -48346,7 +48282,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06) frontiermath_tiers_1_3_v2.csv. Epoch only publishes per-reasoning-effort rows; the top effort tier is used for the unsuffixed model name (verified against ARC-AGI-2 where the unsuffixed leaderboard value equals the top-effort row)."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "437290e217aa60fb": {
             "benchmark": "GPQA",
             "score": 92.8,
@@ -48384,9 +48320,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-07"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "ef5174271c53dbef": {
             "benchmark": "GPQA Diamond",
             "score": 92.8,
@@ -48763,7 +48697,7 @@
             "notes": "From Epoch AI public benchmark dataset (https://epoch.ai/data/benchmark_data.zip, downloaded 2026-09-06) frontiermath_tiers_1_3_v2.csv. Epoch only publishes per-reasoning-effort rows; the top effort tier is used for the unsuffixed model name (verified against ARC-AGI-2 where the unsuffixed leaderboard value equals the top-effort row)."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "7a469ad82ae2c356": {
             "benchmark": "GPQA",
             "score": 88.0,
@@ -48801,9 +48735,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-14"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "cb8b926562725769": {
             "benchmark": "GPQA Diamond",
             "score": 87.5,
@@ -51177,7 +51109,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-5.5_xhigh."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "fc9f3fb7c0005390": {
             "benchmark": "GPQA",
             "score": 93.6,
@@ -51215,9 +51147,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-08"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "f2bb6473d703d756": {
             "benchmark": "GPQA Diamond",
             "score": 93.6,
@@ -52245,7 +52175,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-5.6-luna_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "f829bf97e6c3fb10": {
             "benchmark": "GPQA",
             "score": 92.3,
@@ -52283,9 +52213,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "f67cb4e86dd1cb46": {
             "benchmark": "GPQA Diamond",
             "score": 91.6,
@@ -53867,7 +53795,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-5.6-sol_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "c4a81dacc1d2773a": {
             "benchmark": "GPQA",
             "score": 94.6,
@@ -53905,9 +53833,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-17"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "91ad98a7f1ec0eaf": {
             "benchmark": "GPQA Diamond",
             "score": 93.5,
@@ -55586,7 +55512,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-5.6-terra_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "3a45447fe9a8c365": {
             "benchmark": "GPQA",
             "score": 92.9,
@@ -55624,9 +55550,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "be3bc31bf3f667db": {
             "benchmark": "GPQA Diamond",
             "score": 93.3,
@@ -56796,7 +56720,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-6-astra_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "09ee9021ec54850a": {
             "benchmark": "GPQA",
             "score": 96.0,
@@ -56834,9 +56758,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-04"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2210298a5348c4dd": {
             "benchmark": "GPQA Diamond",
             "score": 96.0,
@@ -57054,7 +56976,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-2.5-pro."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "ecaa95fd213d896c": {
             "benchmark": "GPQA",
             "score": 83.0,
@@ -57079,9 +57001,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "70e367f05a818667": {
             "benchmark": "GPQA Diamond",
             "score": 84.4,
@@ -60223,7 +60143,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "362cebb72ef8b1ab": {
             "benchmark": "GPQA",
             "score": 90.4,
@@ -60261,9 +60181,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "0a120bf78a2b1972": {
             "benchmark": "GPQA Diamond",
             "score": 90.4,
@@ -61815,7 +61733,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "4bf5e1aabe0f5fc1": {
             "benchmark": "GPQA",
             "score": 91.9,
@@ -61853,9 +61771,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6636c0377e9343e0": {
             "benchmark": "GPQA Diamond",
             "score": 91.9,
@@ -65469,7 +65385,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "83f22ed8df1bb6e9": {
             "benchmark": "GPQA",
             "score": 94.3,
@@ -65507,9 +65423,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-20"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6af1e5ae09d419a5": {
             "benchmark": "GPQA Diamond",
             "score": 94.3,
@@ -68772,6 +68686,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-3.8-flash_high."
+          },
+          "cf2d2ce7d9bd64cd": {
+            "benchmark": "GPQA",
+            "score": 95.3,
+            "unit": "percent",
+            "source": "https://openai.com/index/gpt-6-astra/",
+            "availableFrom": "2026-10-04",
+            "retrievedAt": "2026-10-04",
+            "configuration": "GPQA Diamond accuracy. The OpenAI comparison table’s exact Gemini 3.8 Flash column reports 95.3%; no effort setting is specified. Independently archived as published on 2026-09-03: https://localsonly.run/runs/research-gemini-3.8-flash-published-reference-gpqa-diamond-1.0",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03"
           }
         },
         "livecodebench-v6": {
@@ -68980,21 +68907,6 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gemini-3.8-flash_high."
-          }
-        },
-        "gpqa": {
-          "cf2d2ce7d9bd64cd": {
-            "benchmark": "GPQA",
-            "score": 95.3,
-            "unit": "percent",
-            "source": "https://openai.com/index/gpt-6-astra/",
-            "availableFrom": "2026-10-04",
-            "retrievedAt": "2026-10-04",
-            "configuration": "GPQA Diamond accuracy. The OpenAI comparison table’s exact Gemini 3.8 Flash column reports 95.3%; no effort setting is specified. Independently archived as published on 2026-09-03: https://localsonly.run/runs/research-gemini-3.8-flash-published-reference-gpqa-diamond-1.0",
-            "kind": "published",
-            "sourceType": "vendor_blog",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-03"
           }
         }
       }
@@ -69621,7 +69533,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row grok-4.5_high."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "dffb7d6b5415b7e2": {
             "benchmark": "GPQA",
             "score": 93.0,
@@ -69659,9 +69571,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "5287b36dd3e8fb9a": {
             "benchmark": "GPQA Diamond",
             "score": 93.1,
@@ -70366,7 +70276,7 @@
             "notes": "The card writes the benchmark as 'DeepSWE' without a version; DeepSWE v1.1 (released 2026-06-15) was the only current release at publication. Confidence lowered for the unstated version."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "62940eaafbd6410c": {
             "benchmark": "GPQA",
             "score": 90.4,
@@ -70404,9 +70314,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "9b68c9938e695e5e": {
             "benchmark": "GPQA Diamond",
             "score": 89.7,
@@ -70761,7 +70669,7 @@
             "notes": "The card writes the benchmark as 'DeepSWE' without a version; DeepSWE v1.1 was the only current release at publication. Confidence lowered for the unstated version."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "0ae261cdf44d3b35": {
             "benchmark": "GPQA",
             "score": 92.3,
@@ -70799,9 +70707,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-31"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "f2de37df777ce4f3": {
             "benchmark": "GPQA Diamond",
             "score": 92.3,
@@ -72111,7 +72017,7 @@
         }
       },
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "f62a1c35f1bb02db": {
             "benchmark": "GPQA",
             "score": 75.8,
@@ -72136,9 +72042,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "2a70c2aee6b11e2b": {
             "benchmark": "GPQA Diamond",
             "score": 76.7,
@@ -73104,7 +73008,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "4b2369a55104c127": {
             "benchmark": "GPQA",
             "score": 84.5,
@@ -73129,9 +73033,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "958e1126de4266d7": {
             "benchmark": "GPQA Diamond",
             "score": 84.5,
@@ -75184,7 +75086,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "c538bd2dc87802b2": {
             "benchmark": "GPQA",
             "score": 87.6,
@@ -75222,9 +75124,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-28"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "3402f24b067d3709": {
             "benchmark": "GPQA Diamond",
             "score": 87.6,
@@ -77970,7 +77870,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row kimi-k2.6."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "09ff654c991e527a": {
             "benchmark": "GPQA",
             "score": 90.5,
@@ -78008,9 +77908,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "5c30c86972ed64de": {
             "benchmark": "GPQA Diamond",
             "score": 90.5,
@@ -80005,7 +79903,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row kimi-k3_max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "1b5141bf086f1e7e": {
             "benchmark": "GPQA",
             "score": 93.5,
@@ -80043,9 +79941,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-18"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "c347daa6e466476d": {
             "benchmark": "GPQA Diamond",
             "score": 93.5,
@@ -80986,7 +80882,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "470b95b27cccdc9a": {
             "benchmark": "GPQA",
             "score": 83.7,
@@ -81011,9 +80907,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "89a7ac9bcb3af141": {
             "benchmark": "GPQA Diamond",
             "score": 83.5,
@@ -81483,7 +81377,7 @@
         }
       },
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "d9a0570d7fa04bf4": {
             "benchmark": "GPQA",
             "score": 66.7,
@@ -81508,9 +81402,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-14"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "330970f30ef38740": {
             "benchmark": "GPQA Diamond",
             "score": 86.6,
@@ -81886,7 +81778,7 @@
             "modelAvailableFrom": "2026-02-11"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "92d528d7b375596f": {
             "benchmark": "GPQA",
             "score": 78.0,
@@ -81911,9 +81803,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-11"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "7a240a046f78fb43": {
             "benchmark": "GPQA Diamond",
             "score": 77.7,
@@ -82994,7 +82884,7 @@
             "modelAvailableFrom": "2026-01-23"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5e1ffa14b43893b3": {
             "benchmark": "GPQA",
             "score": 81.0,
@@ -83019,9 +82909,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "b53e55f58d4a5e67": {
             "benchmark": "GPQA Diamond",
             "score": 83.0,
@@ -86203,7 +86091,7 @@
             "notes": "Row from the BenchLM mirror of the Epoch AI FrontierMath Tiers 1-3 (v2) leaderboard (51 models), retrieved 2026-09-06; epoch.ai/benchmarks/frontiermath-tiers-1-3-v2 renders its table client-side."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "b66ce8630563b0c9": {
             "benchmark": "GPQA",
             "score": 89.5,
@@ -86241,9 +86129,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-04"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "13504d713c6e55c5": {
             "benchmark": "GPQA Diamond",
             "score": 88.4,
@@ -88064,7 +87950,7 @@
             "modelAvailableFrom": "2026-03-14"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "0bdc3f38bfd8f9b9": {
             "benchmark": "GPQA",
             "score": 86.6,
@@ -88089,9 +87975,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-14"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "9c1a38f82055c2a3": {
             "benchmark": "GPQA Diamond",
             "score": 86.6,
@@ -88817,7 +88701,7 @@
             "modelAvailableFrom": "2026-04-10"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "6b3d10a4a3ddc9e9": {
             "benchmark": "GPQA",
             "score": 85.5,
@@ -88842,9 +88726,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-10"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "7fd61e9902b6ae2e": {
             "benchmark": "GPQA Diamond",
             "score": 85.5,
@@ -89545,7 +89427,7 @@
             "modelAvailableFrom": "2026-03-14"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "8d734d601be807d8": {
             "benchmark": "GPQA",
             "score": 84.2,
@@ -89570,9 +89452,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-14"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "d35f68313d4970c5": {
             "benchmark": "GPQA Diamond",
             "score": 84.2,
@@ -92259,7 +92139,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.5-397b-a17b."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "04fe5fa0eb5767ef": {
             "benchmark": "GPQA",
             "score": 88.4,
@@ -92297,9 +92177,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-17"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "3ec5503cd518d787": {
             "benchmark": "GPQA Diamond",
             "score": 89.3,
@@ -94319,7 +94197,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.6-plus."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "dbad58154321336a": {
             "benchmark": "GPQA",
             "score": 90.4,
@@ -94357,9 +94235,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-09"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "aad4a1d70d27a0d3": {
             "benchmark": "GPQA Diamond",
             "score": 88.2,
@@ -96225,7 +96101,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.7-max."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5977451d7f993868": {
             "benchmark": "GPQA",
             "score": 92.4,
@@ -96263,9 +96139,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-27"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "60adfb12b30b78c7": {
             "benchmark": "GPQA Diamond",
             "score": 92.3,
@@ -96988,7 +96862,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.7-plus_none."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "941eaaff8ee24f3a": {
             "benchmark": "GPQA",
             "score": 90.3,
@@ -97026,9 +96900,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "cab7abf9819a4ee9": {
             "benchmark": "GPQA Diamond",
             "score": 90.0,
@@ -98031,7 +97903,7 @@
             "modelAvailableFrom": "2026-08-31"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "265220a9640d04d3": {
             "benchmark": "GPQA",
             "score": 91.7,
@@ -98069,9 +97941,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-31"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6d79295fcb4c5553": {
             "benchmark": "GPQA Diamond",
             "score": 91.7,
@@ -98991,7 +98861,7 @@
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.8-max_xhigh."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "c99c002bf5cbfbc8": {
             "benchmark": "GPQA",
             "score": 92.6,
@@ -99029,9 +98899,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-04"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "6d69c28fffb8ebbd": {
             "benchmark": "GPQA Diamond",
             "score": 92.7,
@@ -99707,7 +99575,7 @@
             "modelAvailableFrom": "2026-09-03"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "8ba3bc3eab5bcaad": {
             "benchmark": "GPQA",
             "score": 89.2,
@@ -99745,9 +99613,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "3613ff9d21b5c102": {
             "benchmark": "GPQA Diamond",
             "score": 89.2,
@@ -100315,7 +100181,7 @@
             "modelAvailableFrom": "2026-08-28"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "4fcf999b4312af02": {
             "benchmark": "GPQA",
             "score": 91.7,
@@ -100353,9 +100219,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "710c7eeabba5887e": {
             "benchmark": "GPQA Diamond",
             "score": 92.3,
@@ -101010,7 +100874,7 @@
             "notes": "Row 'CharXiv-RQ' (the reasoning-question split) in tables/tab_vlm_image.tex; the descriptive split 'CharXiv-DQ' scores 93.5 and was not used."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "1fbf339ee6566b8d": {
             "benchmark": "GPQA",
             "score": 88.9,
@@ -101048,9 +100912,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "c891ef05db5d8249": {
             "benchmark": "GPQA Diamond",
             "score": 88.9,
@@ -101793,9 +101655,7 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-07"
-          }
-        },
-        "gpqa": {
+          },
           "2d4b0ff33e85f871": {
             "benchmark": "GPQA",
             "score": 93.6,
@@ -102295,7 +102155,7 @@
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "51a04de3120d87d3": {
             "benchmark": "GPQA",
             "score": 90.9,
@@ -102308,24 +102168,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-11"
-          }
-        },
-        "humanitys-last-exam": {
-          "ca3c8d6b245684b7": {
-            "benchmark": "Humanity’s Last Exam",
-            "score": 36.8,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
-            "availableFrom": "2026-09-11",
-            "retrievedAt": "2026-09-11",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-11"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "d9a5cb31d219ccbd": {
             "benchmark": "GPQA Diamond",
             "score": 90.9,
@@ -102352,6 +102195,21 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-11",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row deepseek-v4.1-flash_max."
+          }
+        },
+        "humanitys-last-exam": {
+          "ca3c8d6b245684b7": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 36.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-09-11",
+            "retrievedAt": "2026-09-11",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
           }
         },
         "mmlu-pro": {
@@ -103368,6 +103226,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-23",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row claude-opus-5-5_max."
+          },
+          "7b4a1da71dc8ee96": {
+            "benchmark": "GPQA",
+            "score": 92.0,
+            "unit": "percent",
+            "source": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence",
+            "availableFrom": "2026-10-03",
+            "retrievedAt": "2026-10-03",
+            "configuration": "Anthropic reports 92% accuracy for Claude Opus 5.5 on GPQA Diamond; the documentation does not provide a separately dated publication date for this individual result.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23"
           }
         },
         "deepswe": {
@@ -103400,21 +103271,6 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-09-23",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-opus-5-5_max."
-          }
-        },
-        "gpqa": {
-          "7b4a1da71dc8ee96": {
-            "benchmark": "GPQA",
-            "score": 92.0,
-            "unit": "percent",
-            "source": "https://platform.claude.com/docs/en/about-claude/models/optimizing-for-cost-and-intelligence",
-            "availableFrom": "2026-10-03",
-            "retrievedAt": "2026-10-03",
-            "configuration": "Anthropic reports 92% accuracy for Claude Opus 5.5 on GPQA Diamond; the documentation does not provide a separately dated publication date for this individual result.",
-            "kind": "published",
-            "sourceType": "vendor_blog",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-23"
           }
         }
       }
@@ -103844,6 +103700,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-25",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-6-luna_max."
+          },
+          "7189622219053a9d": {
+            "benchmark": "GPQA",
+            "score": 90.9,
+            "unit": "percent",
+            "source": "https://gpqa.ai/changes/",
+            "availableFrom": "2026-10-01",
+            "retrievedAt": "2026-10-01",
+            "configuration": "GPQA Diamond original 198-question score; GPT 6 Luna, mean@1, max effort. The source reports 90.91%; publication date of this individual result is unknown (table states data through September 29, 2026).",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-25"
           }
         },
         "frontiermath-1-3-v2": {
@@ -103861,21 +103730,6 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-09-25",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-6-luna_max."
-          }
-        },
-        "gpqa": {
-          "7189622219053a9d": {
-            "benchmark": "GPQA",
-            "score": 90.9,
-            "unit": "percent",
-            "source": "https://gpqa.ai/changes/",
-            "availableFrom": "2026-10-01",
-            "retrievedAt": "2026-10-01",
-            "configuration": "GPQA Diamond original 198-question score; GPT 6 Luna, mean@1, max effort. The source reports 90.91%; publication date of this individual result is unknown (table states data through September 29, 2026).",
-            "kind": "published",
-            "sourceType": "official_leaderboard",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-25"
           }
         },
         "mmmu-pro": {
@@ -103953,6 +103807,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "AA record inkling-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "2402506e079cffb2": {
+            "benchmark": "GPQA",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-small",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "frontiermath-1-3-v2": {
@@ -104133,21 +104000,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
-          "2402506e079cffb2": {
-            "benchmark": "GPQA",
-            "score": 89.5,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/inkling-small",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
         "humanitys-last-exam": {
           "bb7978fb55c94ffb": {
             "benchmark": "Humanity’s Last Exam",
@@ -104283,6 +104135,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-27",
             "notes": "AA record inkling; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "50fd2e4c806e2dee": {
+            "benchmark": "GPQA",
+            "score": 87.2,
+            "unit": "percent",
+            "source": "https://thinkingmachines.ai/model-card/inkling/",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "GPQA Diamond, effort=0.99. Result published July 15, 2026.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "frontiermath-1-3-v2": {
@@ -104490,21 +104355,6 @@
             "availableFrom": "2026-09-26",
             "retrievedAt": "2026-09-26",
             "configuration": "Official model card reports BrowseComp with context management at effort=0.99. Result published July 15, 2026.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa": {
-          "50fd2e4c806e2dee": {
-            "benchmark": "GPQA",
-            "score": 87.2,
-            "unit": "percent",
-            "source": "https://thinkingmachines.ai/model-card/inkling/",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "GPQA Diamond, effort=0.99. Result published July 15, 2026.",
             "kind": "published",
             "sourceType": "model_card",
             "confidence": "high",
@@ -104751,6 +104601,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-5.5-instant."
+          },
+          "74aa7176b65eb13d": {
+            "benchmark": "GPQA",
+            "score": 85.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.5-instant",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "frontiermath-1-3-v2": {
@@ -104789,21 +104652,6 @@
           "f448298153a1de60": {
             "benchmark": "CharXiv-R",
             "score": 81.6,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/gpt-5.5-instant",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa": {
-          "74aa7176b65eb13d": {
-            "benchmark": "GPQA",
-            "score": 85.6,
             "unit": "percent",
             "source": "https://llm-stats.com/models/gpt-5.5-instant",
             "availableFrom": "2026-09-26",
@@ -104863,9 +104711,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record gpt-oss-20b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "7a3eca9cc907a393": {
             "benchmark": "GPQA",
             "score": 71.5,
@@ -104979,9 +104825,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-2.5-pro-preview-06-05."
-          }
-        },
-        "gpqa": {
+          },
           "a5c5375150181491": {
             "benchmark": "GPQA",
             "score": 86.4,
@@ -105060,9 +104904,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record phi-4; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "d77b98394aa81186": {
             "benchmark": "GPQA",
             "score": 56.1,
@@ -105128,9 +104970,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Llama-3.3-70B-Instruct."
-          }
-        },
-        "gpqa": {
+          },
           "c6c6ed8628913849": {
             "benchmark": "GPQA",
             "score": 50.5,
@@ -105180,9 +105020,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Llama-3.1-405B-Instruct."
-          }
-        },
-        "gpqa": {
+          },
           "5f14e77db316c381": {
             "benchmark": "GPQA",
             "score": 50.7,
@@ -105232,9 +105070,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Llama-3.1-8B-Instruct."
-          }
-        },
-        "gpqa": {
+          },
           "4d3e122042f04e4c": {
             "benchmark": "GPQA",
             "score": 30.4,
@@ -105689,6 +105525,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwen3-6-35b-a3b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "891272fba5512f92": {
+            "benchmark": "GPQA",
+            "score": 86.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.6-35b-a3b",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "frontiermath-1-3-v2": {
@@ -105785,21 +105634,6 @@
           "0faa8566903b36e4": {
             "benchmark": "CharXiv-R",
             "score": 78.0,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/qwen3.6-35b-a3b",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa": {
-          "891272fba5512f92": {
-            "benchmark": "GPQA",
-            "score": 86.0,
             "unit": "percent",
             "source": "https://llm-stats.com/models/qwen3.6-35b-a3b",
             "availableFrom": "2026-09-26",
@@ -105922,6 +105756,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "4b7188c85557383b": {
+            "benchmark": "GPQA",
+            "score": 81.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.5-9b",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "livecodebench-v6": {
@@ -105966,21 +105813,6 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
-          "4b7188c85557383b": {
-            "benchmark": "GPQA",
-            "score": 81.7,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/qwen3.5-9b",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
           }
         },
         "mmlu-pro": {
@@ -106050,12 +105882,10 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Qwen3-235B-A22B-Thinking-2507."
-          }
-        },
-        "livecodebench-v6": {
-          "fd13e4bfe24adfb1": {
-            "benchmark": "LiveCodeBench v6",
-            "score": 74.1,
+          },
+          "2b98dd319fc1333b": {
+            "benchmark": "GPQA",
+            "score": 81.1,
             "unit": "percent",
             "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507",
             "availableFrom": "2026-09-26",
@@ -106067,10 +105897,10 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
-          "2b98dd319fc1333b": {
-            "benchmark": "GPQA",
-            "score": 81.1,
+        "livecodebench-v6": {
+          "fd13e4bfe24adfb1": {
+            "benchmark": "LiveCodeBench v6",
+            "score": 74.1,
             "unit": "percent",
             "source": "https://llm-stats.com/models/qwen3-235b-a22b-thinking-2507",
             "availableFrom": "2026-09-26",
@@ -106132,6 +105962,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-0528."
+          },
+          "ad75a9910081a1d0": {
+            "benchmark": "GPQA",
+            "score": 81.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-r1-0528",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
           }
         },
         "arc-agi-2": {
@@ -106154,21 +105997,6 @@
           "e20beec357bf3138": {
             "benchmark": "BrowseComp",
             "score": 8.9,
-            "unit": "percent",
-            "source": "https://llm-stats.com/models/deepseek-r1-0528",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa": {
-          "ad75a9910081a1d0": {
-            "benchmark": "GPQA",
-            "score": 81.0,
             "unit": "percent",
             "source": "https://llm-stats.com/models/deepseek-r1-0528",
             "availableFrom": "2026-09-26",
@@ -106327,9 +106155,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwen3-30b-a3b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "c7f634e64d554fe4": {
             "benchmark": "GPQA",
             "score": 65.8,
@@ -106408,9 +106234,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwen3-235b-a22b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "5b8b50dd1d1fe80c": {
             "benchmark": "GPQA",
             "score": 47.5,
@@ -106588,9 +106412,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record qwq-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "df36f7987264154e": {
             "benchmark": "GPQA",
             "score": 65.2,
@@ -106655,9 +106477,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record deepseek-r1-distill-qwen-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "3790beea43561e96": {
             "benchmark": "GPQA",
             "score": 62.1,
@@ -106722,9 +106542,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record deepseek-r1-distill-qwen-14b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "f5e65af948a18be9": {
             "benchmark": "GPQA",
             "score": 59.1,
@@ -106789,9 +106607,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record deepseek-r1-distill-qwen-1-5b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
+          },
           "958a9c8c4881d140": {
             "benchmark": "GPQA",
             "score": 33.8,
@@ -106842,9 +106658,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen2.5-72b-instruct."
-          }
-        },
-        "gpqa": {
+          },
           "ea92bccc8caf21e2": {
             "benchmark": "GPQA",
             "score": 49.0,
@@ -106894,9 +106708,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen2.5-32b-instruct."
-          }
-        },
-        "gpqa": {
+          },
           "669f9b28c3cfd5a5": {
             "benchmark": "GPQA",
             "score": 49.5,
@@ -106946,9 +106758,7 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen2.5-7b-instruct."
-          }
-        },
-        "gpqa": {
+          },
           "283534fbc85450c6": {
             "benchmark": "GPQA",
             "score": 36.4,
@@ -107015,7 +106825,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "4c80659b68391814": {
             "benchmark": "GPQA",
             "score": 85.7,
@@ -107028,6 +106838,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "f8a77c8ba6796138": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-fast-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4 Fast (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-4-fast-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "humanitys-last-exam": {
@@ -107043,22 +106867,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "f8a77c8ba6796138": {
-            "benchmark": "GPQA Diamond",
-            "score": 84.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/grok-4-fast-reasoning",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Grok 4 Fast (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record grok-4-fast-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -107131,7 +106939,7 @@
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row grok-3-mini_low."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "7711b61e909c1e58": {
             "benchmark": "GPQA",
             "score": 84.0,
@@ -107183,7 +106991,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "cd3560381260c815": {
             "benchmark": "GPQA",
             "score": 77.5,
@@ -107234,7 +107042,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "d189a37b62565614": {
             "benchmark": "GPQA",
             "score": 40.2,
@@ -107247,6 +107055,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "648fcab3ca629753": {
+            "benchmark": "GPQA Diamond",
+            "score": 42.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "swe-bench-verified": {
@@ -107262,22 +107084,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "648fcab3ca629753": {
-            "benchmark": "GPQA Diamond",
-            "score": 42.6,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -107377,7 +107183,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "4f7f629165c78946": {
             "benchmark": "GPQA",
             "score": 81.4,
@@ -107390,6 +107196,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "f2ff265e163c839e": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o4-mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "humanitys-last-exam": {
@@ -107420,22 +107240,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "f2ff265e163c839e": {
-            "benchmark": "GPQA Diamond",
-            "score": 78.4,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/o4-mini",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of o4-mini (High).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record o4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -107727,7 +107531,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "6bb9c6b9c3b30236": {
             "benchmark": "GPQA",
             "score": 66.4,
@@ -107740,6 +107544,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "e5c8f1eded8ca6cf": {
+            "benchmark": "GPQA Diamond",
+            "score": 66.4,
+            "unit": "percent",
+            "source": "https://huggingface.co/ibm-granite/granite-4.2-30b",
+            "availableFrom": "2026-09-30",
+            "retrievedAt": "2026-09-30",
+            "configuration": "IBM reports 66.41% in thinking mode using the NeMo Evaluator harness. The IBM Granite 4.2 release publication is dated August 25, 2026.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-30"
           }
         },
         "mmlu-pro": {
@@ -107770,21 +107587,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "e5c8f1eded8ca6cf": {
-            "benchmark": "GPQA Diamond",
-            "score": 66.4,
-            "unit": "percent",
-            "source": "https://huggingface.co/ibm-granite/granite-4.2-30b",
-            "availableFrom": "2026-09-30",
-            "retrievedAt": "2026-09-30",
-            "configuration": "IBM reports 66.41% in thinking mode using the NeMo Evaluator harness. The IBM Granite 4.2 release publication is dated August 25, 2026.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-30"
           }
         }
       }
@@ -107823,7 +107625,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "936a8b945d6d923a": {
             "benchmark": "GPQA",
             "score": 54.8,
@@ -107976,7 +107778,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "17c4b5b632e6bb25": {
             "benchmark": "GPQA",
             "score": 75.4,
@@ -107988,6 +107790,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
+          },
+          "5d578a71d0ff5381": {
+            "benchmark": "GPQA Diamond",
+            "score": 75.4,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "NVIDIA's model card reports 75.44 on “GPQA Diamond (no tools),” rounded to 75.4%; the individual-result publication date is not stated.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-09-26"
           }
         },
@@ -108033,21 +107848,6 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "5d578a71d0ff5381": {
-            "benchmark": "GPQA Diamond",
-            "score": 75.4,
-            "unit": "percent",
-            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "NVIDIA's model card reports 75.44 on “GPQA Diamond (no tools),” rounded to 75.4%; the individual-result publication date is not stated.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
             "modelAvailableFrom": "2026-09-26"
           }
         }
@@ -108117,7 +107917,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "88e7d7689e1112bb": {
             "benchmark": "GPQA",
             "score": 83.5,
@@ -108129,6 +107929,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
+          },
+          "c6b3a2a649ae2e52": {
+            "benchmark": "GPQA Diamond",
+            "score": 83.5,
+            "unit": "percent",
+            "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Meta model card reports 83.5% at high reasoning; methodology specifies the full 198-question GPQA Diamond set, with results sourced from Artificial Analysis.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-09-26"
           }
         },
@@ -108159,21 +107972,6 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
-            "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "c6b3a2a649ae2e52": {
-            "benchmark": "GPQA Diamond",
-            "score": 83.5,
-            "unit": "percent",
-            "source": "https://huggingface.co/meta-models/Muse-Glimmer-30B",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Meta model card reports 83.5% at high reasoning; methodology specifies the full 198-question GPQA Diamond set, with results sourced from Artificial Analysis.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
             "modelAvailableFrom": "2026-09-26"
           }
         }
@@ -108316,7 +108114,7 @@
             "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5bfef0accc1d6767": {
             "benchmark": "GPQA",
             "score": 73.2,
@@ -108329,6 +108127,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "ffabe040732186a5": {
+            "benchmark": "GPQA Diamond",
+            "score": 66.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -108359,22 +108171,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "ffabe040732186a5": {
-            "benchmark": "GPQA Diamond",
-            "score": 66.9,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -108531,7 +108327,7 @@
             "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "eb179a3b54e282ef": {
             "benchmark": "GPQA",
             "score": 87.0,
@@ -108544,6 +108340,34 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "d7c59f05c879d70b": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/gpqa",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Vals GPQA Diamond; Diamond subset; overall accuracy; exact ID nvidia/nemotron-3-ultra-550b-a55b; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "f1542ba22d273411": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Ultra 550B A55B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -108618,36 +108442,6 @@
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
-        },
-        "gpqa-diamond": {
-          "d7c59f05c879d70b": {
-            "benchmark": "GPQA Diamond",
-            "score": 86.1,
-            "unit": "percent",
-            "source": "https://www.vals.ai/benchmarks/gpqa",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Vals GPQA Diamond; Diamond subset; overall accuracy; exact ID nvidia/nemotron-3-ultra-550b-a55b; max_output_tokens=128000.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-26",
-            "notes": "Individual publication date unknown; page update date is not used to backdate results."
-          },
-          "f1542ba22d273411": {
-            "benchmark": "GPQA Diamond",
-            "score": 86.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Ultra 550B A55B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
         }
       }
     },
@@ -108685,7 +108479,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "f526acef4bd77017": {
             "benchmark": "GPQA",
             "score": 84.2,
@@ -108780,7 +108574,7 @@
             "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "07fb6df945a46686": {
             "benchmark": "GPQA",
             "score": 78.8,
@@ -108793,6 +108587,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "89a73a352eda70ec": {
+            "benchmark": "GPQA Diamond",
+            "score": 75.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -108823,22 +108631,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "89a73a352eda70ec": {
-            "benchmark": "GPQA Diamond",
-            "score": 75.3,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -108923,7 +108715,7 @@
             "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "6086cec5c0203e06": {
             "benchmark": "GPQA",
             "score": 84.3,
@@ -108936,6 +108728,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "a8b09f463afa504a": {
+            "benchmark": "GPQA Diamond",
+            "score": 85.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -108966,22 +108772,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "a8b09f463afa504a": {
-            "benchmark": "GPQA Diamond",
-            "score": 85.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -109066,7 +108856,7 @@
             "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "7f2cc103eec0b2dc": {
             "benchmark": "GPQA",
             "score": 82.3,
@@ -109079,6 +108869,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "661a10092b832f97": {
+            "benchmark": "GPQA Diamond",
+            "score": 79.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -109109,22 +108913,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "661a10092b832f97": {
-            "benchmark": "GPQA Diamond",
-            "score": 79.2,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -109209,7 +108997,7 @@
             "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "7f2d90d16b818b29": {
             "benchmark": "GPQA",
             "score": 58.6,
@@ -109222,6 +109010,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "10a1f6a79fd54adb": {
+            "benchmark": "GPQA Diamond",
+            "score": 57.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -109237,22 +109039,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "10a1f6a79fd54adb": {
-            "benchmark": "GPQA Diamond",
-            "score": 57.6,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -109337,7 +109123,7 @@
             "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "17c520999028b49e": {
             "benchmark": "GPQA",
             "score": 43.4,
@@ -109350,6 +109136,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "92a99f74525fea5f": {
+            "benchmark": "GPQA Diamond",
+            "score": 43.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -109365,22 +109165,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "92a99f74525fea5f": {
-            "benchmark": "GPQA Diamond",
-            "score": 43.3,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -109479,7 +109263,7 @@
             "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "b80ce4a3cb147a6c": {
             "benchmark": "GPQA",
             "score": 82.8,
@@ -109492,6 +109276,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "e9f2e5246e34424c": {
+            "benchmark": "GPQA Diamond",
+            "score": 81.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "humanitys-last-exam": {
@@ -109507,22 +109305,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "e9f2e5246e34424c": {
-            "benchmark": "GPQA Diamond",
-            "score": 81.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -109607,7 +109389,7 @@
             "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "08e3479b23056ebe": {
             "benchmark": "GPQA",
             "score": 82.7,
@@ -109620,6 +109402,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "8be54bd7eaff5f6c": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-super-120b-a12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Super 120B A12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -109667,22 +109463,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa-diamond": {
-          "8be54bd7eaff5f6c": {
-            "benchmark": "GPQA Diamond",
-            "score": 80.0,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-super-120b-a12b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Super 120B A12B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "terminal-bench-2.1": {
           "a85ab1be6f340a14": {
             "benchmark": "Terminal-Bench 2.1",
@@ -109720,7 +109500,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "15523e46d68c4c62": {
             "benchmark": "GPQA",
             "score": 74.0,
@@ -109756,7 +109536,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "81858d195c78f908": {
             "benchmark": "GPQA",
             "score": 75.0,
@@ -109852,7 +109632,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "ea938de29b24c4fc": {
             "benchmark": "GPQA",
             "score": 81.4,
@@ -109984,7 +109764,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "d418687c0ff040a9": {
             "benchmark": "GPQA",
             "score": 79.6,
@@ -110056,7 +109836,7 @@
       "name": "Claude Haiku 4.5",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c2833bad2d23e0bc": {
             "benchmark": "GPQA",
             "score": 73.0,
@@ -110177,7 +109957,7 @@
       "name": "Nemotron Nano 9B v2",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "afff008118cf89c6": {
             "benchmark": "GPQA",
             "score": 64.0,
@@ -110198,7 +109978,7 @@
       "name": "GPT OSS 120B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "cda72c7e3db6e595": {
             "benchmark": "GPQA",
             "score": 80.1,
@@ -110211,6 +109991,34 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "fbc1d79f8fd0ec61": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/gpqa",
+            "availableFrom": "2026-09-26",
+            "retrievedAt": "2026-09-26",
+            "configuration": "Vals GPQA Diamond; Diamond subset; overall accuracy; exact ID fireworks/gpt-oss-120b; max_output_tokens=128000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "ff838764789b688f": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-120b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-120b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-120b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "humanitys-last-exam": {
@@ -110276,36 +110084,6 @@
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         },
-        "gpqa-diamond": {
-          "fbc1d79f8fd0ec61": {
-            "benchmark": "GPQA Diamond",
-            "score": 78.5,
-            "unit": "percent",
-            "source": "https://www.vals.ai/benchmarks/gpqa",
-            "availableFrom": "2026-09-26",
-            "retrievedAt": "2026-09-26",
-            "configuration": "Vals GPQA Diamond; Diamond subset; overall accuracy; exact ID fireworks/gpt-oss-120b; max_output_tokens=128000.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-26",
-            "notes": "Individual publication date unknown; page update date is not used to backdate results."
-          },
-          "ff838764789b688f": {
-            "benchmark": "GPQA Diamond",
-            "score": 78.2,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gpt-oss-120b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of gpt-oss-120b (High).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gpt-oss-120b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "ifbench": {
           "82ffba2eff02c3f0": {
             "benchmark": "IFBench",
@@ -110344,7 +110122,7 @@
       "name": "GPT OSS 20B High",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "684968e7780488ff": {
             "benchmark": "GPQA",
             "score": 74.2,
@@ -110395,7 +110173,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "1fbf5f0afb8ce325": {
             "benchmark": "GPQA",
             "score": 80.9,
@@ -110431,7 +110209,7 @@
       "name": "Gemma 3n E2B Instructed",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "8e477a5cbb7ac319": {
             "benchmark": "GPQA",
             "score": 24.8,
@@ -110467,7 +110245,7 @@
       "name": "Gemma 3n E4B Instructed LiteRT Preview",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "0b148c0047ae8540": {
             "benchmark": "GPQA",
             "score": 23.7,
@@ -110503,7 +110281,7 @@
       "name": "Gemma 3n E2B Instructed LiteRT (Preview)",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "30e6b8b15fb54158": {
             "benchmark": "GPQA",
             "score": 24.8,
@@ -110539,7 +110317,7 @@
       "name": "Phi 4 Reasoning Plus",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "760666da97529242": {
             "benchmark": "GPQA",
             "score": 68.9,
@@ -110575,7 +110353,7 @@
       "name": "Phi 4 Reasoning",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "fd05d6087cbc8c72": {
             "benchmark": "GPQA",
             "score": 65.8,
@@ -110611,7 +110389,7 @@
       "name": "Llama 3.1 Nemotron Ultra 253B v1",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "b0c18590544b708f": {
             "benchmark": "GPQA",
             "score": 76.0,
@@ -110624,9 +110402,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "74b61b82cb3856a3": {
             "benchmark": "GPQA Diamond",
             "score": 72.8,
@@ -110693,7 +110469,7 @@
             "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "a8f8c7855f985af9": {
             "benchmark": "GPQA",
             "score": 69.8,
@@ -110706,6 +110482,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "799a51c41f3866d5": {
+            "benchmark": "GPQA Diamond",
+            "score": 67.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -110721,22 +110511,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "799a51c41f3866d5": {
-            "benchmark": "GPQA Diamond",
-            "score": 67.1,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -110777,7 +110551,7 @@
       "name": "Llama 4 Scout",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "e5ba4258fe49eb1e": {
             "benchmark": "GPQA",
             "score": 57.2,
@@ -110790,6 +110564,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "32bd21301fbe2ba4": {
+            "benchmark": "GPQA Diamond",
+            "score": 58.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-scout",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -110805,22 +110593,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "32bd21301fbe2ba4": {
-            "benchmark": "GPQA Diamond",
-            "score": 58.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/llama-4-scout",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -110877,7 +110649,7 @@
       "name": "Llama-3.3 Nemotron Super 49B v1",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "7f5e2a9fcea7fccd": {
             "benchmark": "GPQA",
             "score": 66.7,
@@ -110890,9 +110662,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "208a93b00115367b": {
             "benchmark": "GPQA Diamond",
             "score": 64.3,
@@ -110930,7 +110700,7 @@
       "name": "Llama 3.1 Nemotron Nano 8B V1",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "20735d6bc50b30df": {
             "benchmark": "GPQA",
             "score": 54.1,
@@ -110951,7 +110721,7 @@
       "name": "Gemma 3 27B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "e98223764277f4ed": {
             "benchmark": "GPQA",
             "score": 42.4,
@@ -110987,7 +110757,7 @@
       "name": "Gemma 3 4B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "8c1f475bb3f793b5": {
             "benchmark": "GPQA",
             "score": 30.8,
@@ -111023,7 +110793,7 @@
       "name": "Gemma 3 1B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "59b72453d99c7bbb": {
             "benchmark": "GPQA",
             "score": 19.2,
@@ -111110,7 +110880,7 @@
       "name": "Phi 4 Mini",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c38c83720eecc9d9": {
             "benchmark": "GPQA",
             "score": 25.2,
@@ -111146,7 +110916,7 @@
       "name": "Gemini 2.0 Flash Thinking",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "8fbf5152890d05f8": {
             "benchmark": "GPQA",
             "score": 74.2,
@@ -111167,7 +110937,7 @@
       "name": "Nova Micro",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "48e17831acf182bb": {
             "benchmark": "GPQA",
             "score": 40.0,
@@ -111180,9 +110950,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "7f1f1b77ba9e5343": {
             "benchmark": "GPQA Diamond",
             "score": 35.8,
@@ -111256,7 +111024,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "8375d244faab0c15": {
             "benchmark": "GPQA",
             "score": 46.7,
@@ -111292,7 +111060,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "bc679def6f3bf855": {
             "benchmark": "GPQA",
             "score": 32.8,
@@ -111313,7 +111081,7 @@
       "name": "Llama 3.2 3B Instruct",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "e068ffb86b031be3": {
             "benchmark": "GPQA",
             "score": 32.8,
@@ -111334,7 +111102,7 @@
       "name": "o1-preview",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "87c2f248d713ca4a": {
             "benchmark": "GPQA",
             "score": 73.3,
@@ -111347,6 +111115,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "4390652331895b9d": {
+            "benchmark": "GPQA Diamond",
+            "score": 76.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o1-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o1-preview.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o1-preview; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "swe-bench-verified": {
@@ -111363,22 +111145,6 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
-        },
-        "gpqa-diamond": {
-          "4390652331895b9d": {
-            "benchmark": "GPQA Diamond",
-            "score": 76.5,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/o1-preview",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of o1-preview.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record o1-preview; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
         }
       }
     },
@@ -111386,7 +111152,7 @@
       "name": "Phi-3.5-MoE-instruct",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "449745d58268e35b": {
             "benchmark": "GPQA",
             "score": 36.8,
@@ -111422,7 +111188,7 @@
       "name": "Phi-3.5-mini-instruct",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "853144d20bcc60f4": {
             "benchmark": "GPQA",
             "score": 30.4,
@@ -111473,7 +111239,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "b72d7b47e7e11f6c": {
             "benchmark": "GPQA",
             "score": 66.1,
@@ -111539,7 +111305,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "9b48c8fb8b35abd7": {
             "benchmark": "GPQA",
             "score": 70.1,
@@ -111605,7 +111371,7 @@
       "name": "ChatGPT-4o Latest",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c2386359043ed999": {
             "benchmark": "GPQA",
             "score": 84.0,
@@ -111626,7 +111392,7 @@
       "name": "GPT-4 Turbo",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "f294fb34ca7e6d3e": {
             "benchmark": "GPQA",
             "score": 48.0,
@@ -111647,7 +111413,7 @@
       "name": "Gemini 1.5 Flash 8B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "5d4a94d443267d60": {
             "benchmark": "GPQA",
             "score": 38.4,
@@ -111660,6 +111426,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "22877572b62f1723": {
+            "benchmark": "GPQA Diamond",
+            "score": 35.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-1-5-flash-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 1.5 Flash-8B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-1-5-flash-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -111675,22 +111455,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "22877572b62f1723": {
-            "benchmark": "GPQA Diamond",
-            "score": 35.9,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/gemini-1-5-flash-8b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Gemini 1.5 Flash-8B.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record gemini-1-5-flash-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmmu-pro": {
@@ -111842,7 +111606,7 @@
             "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "5ff8106ccd2e3e28": {
             "benchmark": "GPQA",
             "score": 76.2,
@@ -111855,6 +111619,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "82febeac05ee5452": {
+            "benchmark": "GPQA Diamond",
+            "score": 77.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -111870,22 +111648,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "82febeac05ee5452": {
-            "benchmark": "GPQA Diamond",
-            "score": 77.1,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmmu-pro": {
@@ -111955,7 +111717,7 @@
             "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "08b3312e09bfefb3": {
             "benchmark": "GPQA",
             "score": 51.6,
@@ -111968,6 +111730,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "d77b79ec5374bf53": {
+            "benchmark": "GPQA Diamond",
+            "score": 45.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -111983,22 +111759,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "d77b79ec5374bf53": {
-            "benchmark": "GPQA Diamond",
-            "score": 45.6,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmmu-pro": {
@@ -112068,7 +111828,7 @@
             "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "55337fa93e977e4b": {
             "benchmark": "GPQA",
             "score": 11.9,
@@ -112081,6 +111841,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "ca79dce39544a89e": {
+            "benchmark": "GPQA Diamond",
+            "score": 23.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Non-reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -112096,22 +111870,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "ca79dce39544a89e": {
-            "benchmark": "GPQA Diamond",
-            "score": 23.6,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Non-reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmmu-pro": {
@@ -112212,7 +111970,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "893e1af5bf9f15e9": {
             "benchmark": "GPQA",
             "score": 79.0,
@@ -112263,7 +112021,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "58e75b833ab98782": {
             "benchmark": "GPQA",
             "score": 85.1,
@@ -112373,7 +112131,7 @@
             "notes": "AA record qwen3-max-thinking; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "75f7dad9a7fb5328": {
             "benchmark": "GPQA",
             "score": 87.4,
@@ -112386,6 +112144,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "a70e75e36aa8ec47": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-max-thinking",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Max Thinking.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-max-thinking; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -112416,22 +112188,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "a70e75e36aa8ec47": {
-            "benchmark": "GPQA Diamond",
-            "score": 86.1,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-max-thinking",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3 Max Thinking.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-max-thinking; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -112476,7 +112232,7 @@
       "name": "LongCat-Flash-Lite",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "a7d017c6dd2c6704": {
             "benchmark": "GPQA",
             "score": 66.8,
@@ -112489,6 +112245,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "6926eb777debc273": {
+            "benchmark": "GPQA Diamond",
+            "score": 63.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/longcat-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of LongCat Flash Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record longcat-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -112521,22 +112291,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa-diamond": {
-          "6926eb777debc273": {
-            "benchmark": "GPQA Diamond",
-            "score": 63.6,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/longcat-flash-lite",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of LongCat Flash Lite.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record longcat-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "ifbench": {
           "1150e5c8a6c3b661": {
             "benchmark": "IFBench",
@@ -112559,7 +112313,7 @@
       "name": "ERNIE 5.0",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "53ad55d2c6ecf5bd": {
             "benchmark": "GPQA",
             "score": 85.0,
@@ -112625,7 +112379,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "31803b50b18cfcf0": {
             "benchmark": "GPQA",
             "score": 80.5,
@@ -112706,7 +112460,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "099cec291c11b386": {
             "benchmark": "GPQA",
             "score": 82.4,
@@ -112719,6 +112473,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "36999264e1d3502c": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v3-2-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V3.2 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-v3-2-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -112764,22 +112532,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "36999264e1d3502c": {
-            "benchmark": "GPQA Diamond",
-            "score": 84.0,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/deepseek-v3-2-reasoning",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of DeepSeek V3.2 (Reasoning).",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record deepseek-v3-2-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -112946,7 +112698,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "dd073e3464be2222": {
             "benchmark": "GPQA",
             "score": 73.1,
@@ -113041,7 +112793,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "887908349503ea29": {
             "benchmark": "GPQA",
             "score": 68.9,
@@ -113054,6 +112806,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "efc93df4d7d12810": {
+            "benchmark": "GPQA Diamond",
+            "score": 67.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-32b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 32B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-32b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -113069,22 +112835,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "efc93df4d7d12810": {
-            "benchmark": "GPQA Diamond",
-            "score": 67.1,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-vl-32b-instruct",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 32B Instruct.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-vl-32b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -113154,7 +112904,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "856ae91b5c94d7ce": {
             "benchmark": "GPQA",
             "score": 74.4,
@@ -113249,7 +112999,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "669a0ebadfc14b54": {
             "benchmark": "GPQA",
             "score": 70.4,
@@ -113262,6 +113012,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "d8d81c5bbcfdeac7": {
+            "benchmark": "GPQA Diamond",
+            "score": 69.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-30b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 30B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-30b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -113277,22 +113041,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "d8d81c5bbcfdeac7": {
-            "benchmark": "GPQA Diamond",
-            "score": 69.5,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-vl-30b-a3b-instruct",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 30B A3B Instruct.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-vl-30b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -113362,7 +113110,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "fb415ad400e3e122": {
             "benchmark": "GPQA",
             "score": 69.9,
@@ -113555,7 +113303,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "b7e4ce517ee0ed05": {
             "benchmark": "GPQA",
             "score": 64.1,
@@ -113718,7 +113466,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "b23dff72248f71fd": {
             "benchmark": "GPQA",
             "score": 77.2,
@@ -113769,7 +113517,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "d336692a442f89ee": {
             "benchmark": "GPQA",
             "score": 72.9,
@@ -113782,6 +113530,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "9553caa11fd02212": {
+            "benchmark": "GPQA Diamond",
+            "score": 73.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Next 80B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-next-80b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -113797,22 +113559,6 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
-          "9553caa11fd02212": {
-            "benchmark": "GPQA Diamond",
-            "score": 73.8,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of Qwen3 Next 80B A3B Instruct.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record qwen3-next-80b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "ifbench": {
@@ -113837,7 +113583,7 @@
       "name": "Kimi K2-Instruct-0905",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "519d8592194eb47a": {
             "benchmark": "GPQA",
             "score": 75.1,
@@ -113903,7 +113649,7 @@
       "name": "LongCat-Flash-Chat",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "8fb9d0591592fe05": {
             "benchmark": "GPQA",
             "score": 73.2,
@@ -113969,7 +113715,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "69d645a017315b68": {
             "benchmark": "GPQA",
             "score": 75.0,
@@ -113982,6 +113728,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "71931d2de995e736": {
+            "benchmark": "GPQA Diamond",
+            "score": 73.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5-air",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5-Air.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5-air; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -114029,22 +113789,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa-diamond": {
-          "71931d2de995e736": {
-            "benchmark": "GPQA Diamond",
-            "score": 73.3,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/glm-4-5-air",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of GLM-4.5-Air.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record glm-4-5-air; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "ifbench": {
           "69abd60f999b052e": {
             "benchmark": "IFBench",
@@ -114082,7 +113826,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "730ed8d7f2380c7d": {
             "benchmark": "GPQA",
             "score": 48.1,
@@ -114118,7 +113862,7 @@
       "name": "MiniMax M1 80K",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "90c239f0f8785f7e": {
             "benchmark": "GPQA",
             "score": 70.0,
@@ -114131,6 +113875,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "561b4a60e2e9f298": {
+            "benchmark": "GPQA Diamond",
+            "score": 69.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-80k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 80k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-80k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -114178,22 +113936,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa-diamond": {
-          "561b4a60e2e9f298": {
-            "benchmark": "GPQA Diamond",
-            "score": 69.7,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/minimax-m1-80k",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 80k.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record minimax-m1-80k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "ifbench": {
           "51da095251168865": {
             "benchmark": "IFBench",
@@ -114216,7 +113958,7 @@
       "name": "MiniMax M1 40K",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "353c783985241675": {
             "benchmark": "GPQA",
             "score": 69.2,
@@ -114229,6 +113971,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "08e514d8e9378fb1": {
+            "benchmark": "GPQA Diamond",
+            "score": 68.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-40k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 40k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-40k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmlu-pro": {
@@ -114276,22 +114032,6 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa-diamond": {
-          "08e514d8e9378fb1": {
-            "benchmark": "GPQA Diamond",
-            "score": 68.2,
-            "unit": "percent",
-            "source": "https://artificialanalysis.ai/models/minimax-m1-40k",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 40k.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "medium",
-            "modelAvailableFrom": "2026-11-10",
-            "notes": "AA record minimax-m1-40k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
         "ifbench": {
           "8957be3b45e5da50": {
             "benchmark": "IFBench",
@@ -114329,7 +114069,7 @@
             "modelAvailableFrom": "2026-09-26"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "bca31581a2063c26": {
             "benchmark": "GPQA",
             "score": 30.8,
@@ -114460,7 +114200,7 @@
       "name": "DeepSeek R1 Zero",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "613ec19e1811dcc3": {
             "benchmark": "GPQA",
             "score": 73.3,
@@ -114481,7 +114221,7 @@
       "name": "DeepSeek R1 Distill Qwen 7B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "cd676389c4e9263c": {
             "benchmark": "GPQA",
             "score": 49.1,
@@ -114502,7 +114242,7 @@
       "name": "DeepSeek R1 Distill Llama 8B",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c1ff51aeb0fdb886": {
             "benchmark": "GPQA",
             "score": 49.0,
@@ -114515,9 +114255,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "ad71a7c3b50313c8": {
             "benchmark": "GPQA Diamond",
             "score": 30.2,
@@ -114555,7 +114293,7 @@
       "name": "QwQ-32B-Preview",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c1e85f060b69824a": {
             "benchmark": "GPQA",
             "score": 65.2,
@@ -114568,9 +114306,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "3b86f7b40bb815d4": {
             "benchmark": "GPQA Diamond",
             "score": 55.7,
@@ -114592,7 +114328,7 @@
       "name": "Qwen2.5 14B Instruct",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c8f1db4ace5149a0": {
             "benchmark": "GPQA",
             "score": 45.5,
@@ -114941,7 +114677,7 @@
             "modelAvailableFrom": "2026-09-27"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "68ac6a69aff69807": {
             "benchmark": "GPQA",
             "score": 64.1,
@@ -114954,6 +114690,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-27"
+          },
+          "730e94ad2fbe6b4b": {
+            "benchmark": "GPQA Diamond",
+            "score": 64.1,
+            "unit": "percent",
+            "source": "https://huggingface.co/ibm-granite/granite-4.2-8b",
+            "availableFrom": "2026-09-30",
+            "retrievedAt": "2026-09-30",
+            "configuration": "IBM’s model card reports GPQA 64.14 for the 8B Dense model; LLM Stats labels its GPQA metric as Diamond accuracy. Reported at one decimal place.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-30"
           }
         },
         "mmlu-pro": {
@@ -114986,21 +114735,6 @@
             "modelAvailableFrom": "2026-09-27"
           }
         },
-        "gpqa-diamond": {
-          "730e94ad2fbe6b4b": {
-            "benchmark": "GPQA Diamond",
-            "score": 64.1,
-            "unit": "percent",
-            "source": "https://huggingface.co/ibm-granite/granite-4.2-8b",
-            "availableFrom": "2026-09-30",
-            "retrievedAt": "2026-09-30",
-            "configuration": "IBM’s model card reports GPQA 64.14 for the 8B Dense model; LLM Stats labels its GPQA metric as Diamond accuracy. Reported at one decimal place.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-09-30"
-          }
-        },
         "humanitys-last-exam": {
           "420cbe79ba36335b": {
             "benchmark": "Humanity’s Last Exam",
@@ -115022,7 +114756,7 @@
       "name": "Gemini Diffusion",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "c8ef5889afc46fe0": {
             "benchmark": "GPQA",
             "score": 40.4,
@@ -115058,7 +114792,7 @@
       "name": "Phi 4 Mini Reasoning",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "2271d8ca12d54c38": {
             "benchmark": "GPQA",
             "score": 52.0,
@@ -115148,7 +114882,7 @@
       "name": "Gemma 3n E4B Instructed",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "7b5b94588de37424": {
             "benchmark": "GPQA",
             "score": 23.7,
@@ -115476,6 +115210,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-01",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-6.1-sol_max."
+          },
+          "9043a4d22d21bc9b": {
+            "benchmark": "GPQA",
+            "score": 95.4,
+            "unit": "percent",
+            "source": "https://benchmarkregistry.org/benchmarks/gpqa/diamond-epoch-ai?result=0372e7e45f6003b4a7cd3437259ffe1ed26b0f5222b4c1d5ece38a88b108a4f5&view=history",
+            "availableFrom": "2026-10-09",
+            "retrievedAt": "2026-10-09",
+            "configuration": "GPQA Diamond accuracy, Epoch AI harness, max reasoning effort. Evaluated September 29, 2026; independently published in the benchmark registry on October 7, 2026.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06"
           }
         },
         "frontiermath-1-3-v2": {
@@ -115581,21 +115328,6 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-06",
             "notes": "AA record gpt-6-1-sol; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa": {
-          "9043a4d22d21bc9b": {
-            "benchmark": "GPQA",
-            "score": 95.4,
-            "unit": "percent",
-            "source": "https://benchmarkregistry.org/benchmarks/gpqa/diamond-epoch-ai?result=0372e7e45f6003b4a7cd3437259ffe1ed26b0f5222b4c1d5ece38a88b108a4f5&view=history",
-            "availableFrom": "2026-10-09",
-            "retrievedAt": "2026-10-09",
-            "configuration": "GPQA Diamond accuracy, Epoch AI harness, max reasoning effort. Evaluated September 29, 2026; independently published in the benchmark registry on October 7, 2026.",
-            "kind": "published",
-            "sourceType": "third_party_leaderboard",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-10-06"
           }
         },
         "humanitys-last-exam": {
@@ -116331,7 +116063,7 @@
             "modelAvailableFrom": "2026-10-20"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "7cae2b99c099939e": {
             "benchmark": "GPQA",
             "score": 72.4,
@@ -116343,6 +116075,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-10-20"
+          },
+          "4f33cd26ae8668e1": {
+            "benchmark": "GPQA Diamond",
+            "score": 72.4,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
+            "availableFrom": "2026-10-20",
+            "retrievedAt": "2026-10-20",
+            "configuration": "Official NVIDIA model card reports GPQA Diamond (no tools): 69.19% at 1 loop, 72.41% at 2 loops, and 72.16% at 4 loops. Highest verified setting is 2 loops. The card does not provide an individual-result publication date; model release date is October 16, 2026.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-10-20"
           }
         },
@@ -116373,21 +116118,6 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
-            "modelAvailableFrom": "2026-10-20"
-          }
-        },
-        "gpqa-diamond": {
-          "4f33cd26ae8668e1": {
-            "benchmark": "GPQA Diamond",
-            "score": 72.4,
-            "unit": "percent",
-            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Dory1.0-4B-BF16",
-            "availableFrom": "2026-10-20",
-            "retrievedAt": "2026-10-20",
-            "configuration": "Official NVIDIA model card reports GPQA Diamond (no tools): 69.19% at 1 loop, 72.41% at 2 loops, and 72.16% at 4 loops. Highest verified setting is 2 loops. The card does not provide an individual-result publication date; model release date is October 16, 2026.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
             "modelAvailableFrom": "2026-10-20"
           }
         }
@@ -116442,7 +116172,7 @@
             "notes": "AA record muse-spark-open; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "84b0e7428a580bc9": {
             "benchmark": "GPQA",
             "score": 89.0,
@@ -116455,9 +116185,7 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-20"
-          }
-        },
-        "gpqa-diamond": {
+          },
           "4bda963734f749c5": {
             "benchmark": "GPQA Diamond",
             "score": 89.0,
@@ -116613,7 +116341,7 @@
             "modelAvailableFrom": "2026-10-20"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "fb236c24cae446fc": {
             "benchmark": "GPQA",
             "score": 89.5,
@@ -116625,6 +116353,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-10-20"
+          },
+          "a35beeb3a0a76f31": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
+            "availableFrom": "2026-10-20",
+            "retrievedAt": "2026-10-20",
+            "configuration": "BF16 post-trained checkpoint; published as 89.52, rounded to 89.5%. NVIDIA’s technical report specifies GPQA-Diamond is averaged over eight repeats. The card does not publish an individual-result date.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-10-20"
           }
         },
@@ -116667,21 +116408,6 @@
             "availableFrom": "2026-10-20",
             "retrievedAt": "2026-10-20",
             "configuration": "BF16 post-trained checkpoint; NVIDIA reports 24.65 on “DeepSWE [offline]”, rounded to 24.7%. The card does not publish an individual-result date.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-10-20"
-          }
-        },
-        "gpqa-diamond": {
-          "a35beeb3a0a76f31": {
-            "benchmark": "GPQA Diamond",
-            "score": 89.5,
-            "unit": "percent",
-            "source": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16",
-            "availableFrom": "2026-10-20",
-            "retrievedAt": "2026-10-20",
-            "configuration": "BF16 post-trained checkpoint; published as 89.52, rounded to 89.5%. NVIDIA’s technical report specifies GPQA-Diamond is averaged over eight repeats. The card does not publish an individual-result date.",
             "kind": "published",
             "sourceType": "model_card",
             "confidence": "high",
@@ -116739,7 +116465,7 @@
             "modelAvailableFrom": "2026-10-20"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "69eb74e973e16321": {
             "benchmark": "GPQA",
             "score": 86.4,
@@ -116751,6 +116477,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-10-20"
+          },
+          "af891d15c7d614bc": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.4,
+            "unit": "percent",
+            "source": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-Technical-Report.pdf",
+            "availableFrom": "2026-10-20",
+            "retrievedAt": "2026-10-20",
+            "configuration": "Nemotron 3.5 Bolt 74B-A9B-24GB IQ2 checkpoint. Published in NVIDIA’s technical report dated October 15, 2026.",
+            "kind": "published",
+            "sourceType": "paper",
+            "confidence": "high",
             "modelAvailableFrom": "2026-10-20"
           }
         },
@@ -116778,21 +116517,6 @@
             "availableFrom": "2026-10-20",
             "retrievedAt": "2026-10-20",
             "configuration": "IFBench (instruction loose), Nemotron 3.5 Bolt 74B-A9B-24GB IQ2 checkpoint. Published in NVIDIA’s technical report dated October 15, 2026.",
-            "kind": "published",
-            "sourceType": "paper",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-10-20"
-          }
-        },
-        "gpqa-diamond": {
-          "af891d15c7d614bc": {
-            "benchmark": "GPQA Diamond",
-            "score": 86.4,
-            "unit": "percent",
-            "source": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3.5-Bolt-74B-A9B-24GB-Technical-Report.pdf",
-            "availableFrom": "2026-10-20",
-            "retrievedAt": "2026-10-20",
-            "configuration": "Nemotron 3.5 Bolt 74B-A9B-24GB IQ2 checkpoint. Published in NVIDIA’s technical report dated October 15, 2026.",
             "kind": "published",
             "sourceType": "paper",
             "confidence": "high",
@@ -116986,7 +116710,7 @@
             "modelAvailableFrom": "2026-10-22"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "d08667f8fda0071a": {
             "benchmark": "GPQA",
             "score": 89.2,
@@ -116999,6 +116723,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-22"
+          },
+          "25204a4bdccc42a9": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.2,
+            "unit": "percent",
+            "source": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
+            "availableFrom": "2026-10-22",
+            "retrievedAt": "2026-10-22",
+            "configuration": "Official benchmark chart reports GPQA Diamond = 89.23%, rounded to 89.2%. Published October 19, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-22"
           }
         },
         "deepswe": {
@@ -117010,21 +116747,6 @@
             "availableFrom": "2026-10-22",
             "retrievedAt": "2026-10-22",
             "configuration": "Official benchmark chart reports DeepSWE v1 = 46.31%, rounded to 46.3%. Published October 19, 2026.",
-            "kind": "published",
-            "sourceType": "vendor_blog",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-10-22"
-          }
-        },
-        "gpqa-diamond": {
-          "25204a4bdccc42a9": {
-            "benchmark": "GPQA Diamond",
-            "score": 89.2,
-            "unit": "percent",
-            "source": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
-            "availableFrom": "2026-10-22",
-            "retrievedAt": "2026-10-22",
-            "configuration": "Official benchmark chart reports GPQA Diamond = 89.23%, rounded to 89.2%. Published October 19, 2026.",
             "kind": "published",
             "sourceType": "vendor_blog",
             "confidence": "high",
@@ -117098,7 +116820,7 @@
             "modelAvailableFrom": "2026-10-22"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "062749e145a5d00e": {
             "benchmark": "GPQA",
             "score": 90.6,
@@ -117110,6 +116832,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-10-22"
+          },
+          "fab5c67f2ff455af": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.6,
+            "unit": "percent",
+            "source": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
+            "availableFrom": "2026-10-22",
+            "retrievedAt": "2026-10-22",
+            "configuration": "Official Reflection model card; BF16 is the highest listed numeric variant (FP8 90.3%, NVFP4 89.3%), evaluated at temperature 0.7 and top_p 0.99. No independently verified publication date for this individual result was found.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-10-22"
           }
         },
@@ -117140,21 +116875,6 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
-            "modelAvailableFrom": "2026-10-22"
-          }
-        },
-        "gpqa-diamond": {
-          "fab5c67f2ff455af": {
-            "benchmark": "GPQA Diamond",
-            "score": 90.6,
-            "unit": "percent",
-            "source": "https://huggingface.co/reflection/Beam-1.0-501B-A23B",
-            "availableFrom": "2026-10-22",
-            "retrievedAt": "2026-10-22",
-            "configuration": "Official Reflection model card; BF16 is the highest listed numeric variant (FP8 90.3%, NVFP4 89.3%), evaluated at temperature 0.7 and top_p 0.99. No independently verified publication date for this individual result was found.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
             "modelAvailableFrom": "2026-10-22"
           }
         },
@@ -117276,7 +116996,7 @@
       "name": "Particle-1",
       "profiles": {},
       "benchmarks": {
-        "gpqa": {
+        "gpqa-diamond": {
           "96b46109e814a66f": {
             "benchmark": "GPQA",
             "score": 90.4,
@@ -117288,6 +117008,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-10-30"
+          },
+          "1e01f60bd866838e": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.4,
+            "unit": "percent",
+            "source": "https://particle.ai/blog/introducing-particle-1",
+            "availableFrom": "2026-10-30",
+            "retrievedAt": "2026-10-30",
+            "configuration": "Vendor-reported GPQA Diamond accuracy; published October 28, 2026.",
+            "kind": "published",
+            "sourceType": "vendor_blog",
+            "confidence": "high",
             "modelAvailableFrom": "2026-10-30"
           }
         },
@@ -117304,21 +117037,6 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "benchmarkAvailableFrom": "2026-06-15",
-            "modelAvailableFrom": "2026-10-30"
-          }
-        },
-        "gpqa-diamond": {
-          "1e01f60bd866838e": {
-            "benchmark": "GPQA Diamond",
-            "score": 90.4,
-            "unit": "percent",
-            "source": "https://particle.ai/blog/introducing-particle-1",
-            "availableFrom": "2026-10-30",
-            "retrievedAt": "2026-10-30",
-            "configuration": "Vendor-reported GPQA Diamond accuracy; published October 28, 2026.",
-            "kind": "published",
-            "sourceType": "vendor_blog",
-            "confidence": "high",
             "modelAvailableFrom": "2026-10-30"
           }
         }
@@ -117554,7 +117272,7 @@
             "modelAvailableFrom": "2026-10-31"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "79e5480072689ed2": {
             "benchmark": "GPQA",
             "score": 94.2,
@@ -117635,7 +117353,7 @@
             "modelAvailableFrom": "2026-11-04"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "eaa559464cee4cd3": {
             "benchmark": "GPQA",
             "score": 63.4,
@@ -117647,6 +117365,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-11-04"
+          },
+          "e4eb15b1e04951db": {
+            "benchmark": "GPQA Diamond",
+            "score": 63.4,
+            "unit": "percent",
+            "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
+            "availableFrom": "2026-11-04",
+            "retrievedAt": "2026-11-04",
+            "configuration": "Vendor reports 63.37%; BF16 with vLLM, temperature 0.6 and top-p 0.95; reasoning effort and individual result publication date unspecified.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-11-04"
           }
         },
@@ -117677,21 +117408,6 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
-            "modelAvailableFrom": "2026-11-04"
-          }
-        },
-        "gpqa-diamond": {
-          "e4eb15b1e04951db": {
-            "benchmark": "GPQA Diamond",
-            "score": 63.4,
-            "unit": "percent",
-            "source": "https://huggingface.co/LiquidAI/LFM3-1.7B",
-            "availableFrom": "2026-11-04",
-            "retrievedAt": "2026-11-04",
-            "configuration": "Vendor reports 63.37%; BF16 with vLLM, temperature 0.6 and top-p 0.95; reasoning effort and individual result publication date unspecified.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
             "modelAvailableFrom": "2026-11-04"
           }
         }
@@ -117990,7 +117706,7 @@
             "modelAvailableFrom": "2026-11-10"
           }
         },
-        "gpqa": {
+        "gpqa-diamond": {
           "1988e237cfb25f9f": {
             "benchmark": "GPQA",
             "score": 93.0,
@@ -118002,6 +117718,19 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          },
+          "df6a23c0a1d66c1c": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.0,
+            "unit": "percent",
+            "source": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
             "modelAvailableFrom": "2026-11-10"
           }
         },
@@ -118078,21 +117807,6 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record inkling-2-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
-          }
-        },
-        "gpqa-diamond": {
-          "df6a23c0a1d66c1c": {
-            "benchmark": "GPQA Diamond",
-            "score": 93.0,
-            "unit": "percent",
-            "source": "https://thinkingmachines.ai/model-card/inkling-2-small/",
-            "availableFrom": "2026-11-10",
-            "retrievedAt": "2026-11-10",
-            "configuration": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
-            "kind": "published",
-            "sourceType": "model_card",
-            "confidence": "high",
-            "modelAvailableFrom": "2026-11-10"
           }
         }
       }

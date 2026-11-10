@@ -1,6 +1,6 @@
 {
-  "version": 28,
-  "scope": "Eighteen Avg IQ benchmark weights proportional to accepted-score participant counts in the recorded reference snapshot; fixed 100% denominator and missing results zero; no participation eligibility filter",
+  "version": 29,
+  "scope": "Seventeen Avg IQ benchmark weights proportional to accepted-score participant counts in the recorded reference snapshot; fixed 100% denominator and missing results zero; no participation eligibility filter",
   "benchmarks": [
     {
       "id": "toolathlon",
@@ -44,11 +44,11 @@
       ]
     },
     {
-      "id": "terminal-bench-2.1",
-      "name": "Terminal-Bench 2.1",
+      "id": "terminal-bench-4.0",
+      "name": "Terminal-Bench 4.0",
       "weight": 2.0,
       "aliases": [
-        "Terminal-Bench 2.1"
+        "Terminal-Bench 4.0"
       ]
     },
     {
@@ -103,9 +103,10 @@
     {
       "id": "gpqa-diamond",
       "name": "GPQA Diamond",
-      "weight": 17.080453270838543,
+      "weight": 32.829501118650676,
       "aliases": [
-        "GPQA Diamond"
+        "GPQA Diamond",
+        "GPQA"
       ]
     },
     {
@@ -115,14 +116,6 @@
       "aliases": [
         "FrontierMath Tiers 1–3 v2",
         "FrontierMath Tiers 1-3 (v2)"
-      ]
-    },
-    {
-      "id": "gpqa",
-      "name": "GPQA",
-      "weight": 15.749047847812134,
-      "aliases": [
-        "GPQA"
       ]
     },
     {
@@ -1455,21 +1448,44 @@
         "freedPercentagePoints": 0.17786273848129008,
         "previousSharedTotal": 72.865016719438,
         "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+      },
+      {
+        "date": "2026-09-09",
+        "reason": "Set Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%, BrowseComp to 2%, and Agents’ Last Exam to 1.4%; give the full remainder to DeepSWE 1.1.",
+        "targets": {
+          "terminal-bench-2.1": 2.0,
+          "mmmu-pro": 1.8,
+          "browsecomp": 2.0,
+          "agents-last-exam": 1.4
+        },
+        "recipient": "deepswe-1.1",
+        "freedPercentagePoints": 0.8790340342808083,
+        "method": "DeepSWE1.1New = DeepSWE1.1Old + sum(previousDonorWeight - targetDonorWeight)",
+        "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
       }
     ],
     "adjustment": {
-      "date": "2026-09-09",
-      "reason": "Set Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%, BrowseComp to 2%, and Agents’ Last Exam to 1.4%; give the full remainder to DeepSWE 1.1.",
-      "targets": {
-        "terminal-bench-2.1": 2.0,
-        "mmmu-pro": 1.8,
-        "browsecomp": 2.0,
-        "agents-last-exam": 1.4
+      "date": "2026-11-10",
+      "reason": "Fold generic GPQA into GPQA Diamond and replace Terminal-Bench 2.1 with Terminal-Bench 4.0.",
+      "folded": {
+        "from": "gpqa",
+        "into": "gpqa-diamond",
+        "previousWeights": {
+          "diamond": 17.080453270838543,
+          "generic": 15.749047847812134
+        },
+        "combinedWeight": 32.829501118650676,
+        "evidence": "Generic GPQA results are relabelled as GPQA Diamond evidence and keep their reported benchmark name; the highest verified value per model is used.",
+        "basis": "llm-stats reports the benchmark as GPQA. On the 2026-11-10T21:39:32+00:00 board the two differed by at most 1.3 points for the 16 models that had both, and four models were missing only the generic column."
       },
-      "recipient": "deepswe-1.1",
-      "freedPercentagePoints": 0.8790340342808083,
-      "method": "DeepSWE1.1New = DeepSWE1.1Old + sum(previousDonorWeight - targetDonorWeight)",
-      "snapshotTimestamp": "2026-09-09T03:39:45+00:00"
+      "replaced": {
+        "from": "terminal-bench-2.1",
+        "to": "terminal-bench-4.0",
+        "weight": 2.0,
+        "basis": "Artificial Analysis and llm-stats no longer report 2.1 for the newest releases. Results for 2.1 are retained as inactive evidence."
+      },
+      "method": "Combined weight is the sum of the two previous weights; all other weights are unchanged.",
+      "snapshotTimestamp": "2026-11-10T21:39:32+00:00"
     }
   },
   "effortPolicy": "Highest verified score per exact model and benchmark across effort settings; preserve source effort as provenance, never as an eligibility filter"

@@ -3,7 +3,7 @@
 
 ## ✨ Features
 - **Unified Score (0–1000)**: A comprehensive metric that evaluates AI models based on both capability and value.
-- **Eighteen-Benchmark Scoring**: Eighteen configured Avg IQ benchmark allocations, with no participation filters or multipliers, a fixed 100% denominator, and missing results contributing zero. Avg Value uses the same rebuilt Avg IQ and retained model prices.
+- **Seventeen-Benchmark Scoring**: Seventeen configured Avg IQ benchmark allocations, with no participation filters or multipliers, a fixed 100% denominator, and missing results contributing zero. Avg Value uses the same rebuilt Avg IQ and retained model prices.
 - **Smart Normalization**: Percentage benchmarks (GPQA, MMMU-Pro, etc.) use their raw 0–100 score directly. Non-percentage benchmarks with a known range (CodeArena helper range 1000–2800) use that range. Only unknown-scale benchmarks fall back to cohort min–max.
 - **National Scoreboard**: An engaging scoreboard format to compare the AI prowess of Team USA 🇺🇸 and Team China 🇨🇳.
 - **Auto-Sorted Rankings**: Instantly see AI models ranked by their Unified Scores with a simple descending order display.
@@ -14,8 +14,8 @@
 ## 🧮 Scoring Methodology (at a glance)
 
 ```text
-Avg IQ inputs: eighteen components in data/core_benchmarks.json, totaling 100%
-Only these eighteen benchmark columns remain in current and historical data
+Avg IQ inputs: seventeen components in data/core_benchmarks.json, totaling 100%
+Only these seventeen benchmark columns remain in current and historical data
 AvgIQ = sum(normalized scores × configured weights) / 1.00
 Missing results contribute zero; denominator always includes all 18
 Models are selected by Unified Score only, with no benchmark-count minimum
@@ -24,7 +24,7 @@ Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))
 ```
 
 Rebuild all retained historical cohorts with `.venv/bin/python scripts/rescore_history.py --rebuild --write --refresh-images`.
-This removes old benchmark scores and scoring inputs, repopulates the eighteen components from dated evidence, and recalculates every score.
+This removes old benchmark scores and scoring inputs, repopulates the seventeen components from dated evidence, and recalculates every score.
 
 Benchmark weights are editor-selected and recorded in `data/core_benchmarks.json`.
 Their adjustment history, including ranking-targeted changes, is documented in

@@ -28,7 +28,7 @@ Updated: 2026-11-10
 Unified Score ranges from 0 to 1000:
 `Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))`
 
-Avg IQ combines eighteen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.
+Avg IQ combines seventeen selected benchmarks using fixed allocations and a constant denominator. Missing results contribute zero. Each benchmark uses the highest verified score for the exact model across effort levels. Participation and benchmark coverage do not determine eligibility.
 
 Value measures intelligence per dollar per million tokens using total input and output pricing. Models without usable pricing receive zero Value. Avg IQ and Value are cohort-normalized before blending into Unified. See the methodology page and the published scoring revision for the complete calculation.
 

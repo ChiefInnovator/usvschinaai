@@ -1,7 +1,7 @@
-# Eighteen-benchmark scoring
+# Seventeen-benchmark scoring
 
 `data/core_benchmarks.json` is the single source of benchmark selection,
-aliases and weights for both research and scoring. Only these eighteen benchmark
+aliases and weights for both research and scoring. Only these seventeen benchmark
 columns are retained in current and historical application data.
 
 For reference, the benchmarks fall into four groups. These are descriptive categories,
@@ -11,7 +11,7 @@ not separate scoring formulas or claims about llm-stats' official taxonomy:
 |---|---|
 | LLM Stats (general capability) | MMMU-Pro, CharXiv-R, IFBench |
 | Reasoning | GPQA, GPQA Diamond, MMLU-Pro, Humanity’s Last Exam, ARC-AGI-2, FrontierMath — Tiers 1–3 v2 |
-| Coding | DeepSWE, DeepSWE 1.1, LiveCodeBench v6, SWE-bench Verified, Terminal-Bench 2.1 |
+| Coding | DeepSWE, DeepSWE 1.1, LiveCodeBench v6, SWE-bench Verified, Terminal-Bench 4.0 |
 | Agent | Toolathlon, Agents’ Last Exam, BrowseComp, OfficeQA Pro |
 
 The previous allocations blended 90% of the all-model participation weights with
@@ -82,10 +82,20 @@ ARC-AGI-2, FrontierMath Tiers 1–3 v2, DeepSWE 1.1, and Humanity’s Last Exam,
 which have scores for both Astra and Fable 5.1. Distribution is proportional
 to their previous weights: `sharedNew = sharedOld + freed * sharedOld / sharedTotal`.
 Overall weights remain 100%; other benchmark allocations are unchanged.
-The latest adjustment sets Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%,
+An earlier adjustment set Terminal-Bench 2.1 to 2%, MMMU-Pro to 1.8%,
 BrowseComp to 2%, and Agents’ Last Exam to 1.4%. Their freed
 0.8790340342808083 percentage points are added entirely to DeepSWE 1.1,
 bringing it to 13.65464714295311%. Other allocations remain unchanged.
+The latest adjustment (November 10, 2026, version 29) reduces the set from
+eighteen benchmarks to seventeen. Generic GPQA is folded into GPQA Diamond: the
+two weights are summed, results reported as GPQA count as GPQA Diamond evidence
+while keeping their reported name, and the highest verified value per model is
+used. On that day's board the two differed by at most 1.3 points for the models
+that had both. Terminal-Bench 2.1 is replaced by Terminal-Bench 4.0 at the same
+weight, because Artificial Analysis and llm-stats no longer report 2.1 for the
+newest releases; 2.1 results are retained as inactive evidence. Terminal-Bench
+4.0 results are undated and apply from the day they were retrieved, so earlier
+snapshots score zero for that component. All other weights are unchanged.
 This one weight set applies across retained history; weights are not recomputed
 independently for each historical cohort. The counts and reference timestamp are
 recorded in `data/core_benchmarks.json`. This replaces the earlier calibrated and
@@ -101,7 +111,7 @@ model coverage minimums or fallback benchmark sets.
 
 `Value = Avg IQ / (input price per million + output price per million)`
 
-Unpriced models receive Value zero. Value uses the same rebuilt eighteen-benchmark
+Unpriced models receive Value zero. Value uses the same rebuilt seventeen-benchmark
 Avg IQ; there is no separate legacy benchmark numerator or stored Value input set.
 
 `Unified = 10 × (0.9 × normalized Avg IQ + 0.1 × normalized Value)`
@@ -114,12 +124,12 @@ existing graphs consume the recalculated scores.
 ## Evidence and storage
 
 A result must identify the exact model, benchmark version, subset, metric and
-compatible configuration. Generic GPQA requires explicit source confirmation
-before it can populate GPQA Diamond. Different benchmark versions and model
+compatible configuration. A result reported as generic GPQA counts as GPQA
+Diamond. Different benchmark versions and model
 fallback combinations cannot be silently substituted. Missing evidence stays
 missing in storage and contributes zero in the calculation.
 
-Only the eighteen selected raw benchmark percentages, model metadata/pricing,
+Only the seventeen selected raw benchmark percentages, model metadata/pricing,
 source provenance and newly calculated scores remain in `models.json` and
 `current.json`. No old benchmark columns, category/composite benchmark scores,
 `_prior` score archives or `valueInputs` survive the rebuild. Snapshot scoring
@@ -140,7 +150,7 @@ effort in provenance. The source refresh checks all published effort rows, and
 historical replay upgrades existing scores as well as filling missing values.
 Higher results apply only on or after their evidence availability date; undated
 results begin at retrieval. Exact model release, benchmark version/subset and
-mixed-model fallback exclusions remain enforced. The eighteen fixed weights and
+mixed-model fallback exclusions remain enforced. The seventeen fixed weights and
 missing-as-zero denominator are unchanged. Historical calibration reports describe
 the evidence available when the weights were fitted; scores can change as new
 verified evidence arrives, without automatically refitting the weights.

@@ -21,7 +21,7 @@ OAI-SearchBot. The existing training-crawler policy is unchanged.
 
 ## Answer and generative engine discovery
 
-`llms.txt` describes the current eighteen-benchmark algorithm, missing-result
+`llms.txt` describes the current seventeen-benchmark algorithm, missing-result
 handling, national Top 10 totals, evidence, publication timestamps, and protected
 release cadence. It links to canonical pages and the publication manifest, site
 summary, current/history data, model catalog, and scoring revision. Benchmark names

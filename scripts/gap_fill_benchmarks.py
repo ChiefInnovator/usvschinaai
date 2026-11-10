@@ -320,7 +320,7 @@ _SYSTEM_PROMPT = (
     "11. Audit-informed source routes: check llm-stats benchmark leaderboards "
     "as well as model detail pages, following pagination. Check Vals "
     "(https://www.vals.ai/benchmarks/) for MMLU-Pro, AIME, LiveCodeBench, "
-    "SWE-bench Verified, GPQA Diamond and Terminal-Bench 2.1. Inspect embedded "
+    "SWE-bench Verified, GPQA Diamond and Terminal-Bench 4.0. Inspect embedded "
     "structured results when rendered summaries omit numbers; use the exact "
     "model row and selected task, not a headline or comparison snippet. An "
     "archived benchmark can still contain usable results; archived does not "
@@ -816,7 +816,7 @@ def run_gap_filling_pass(
     model_discovered = False
 
     candidates = build_candidates(combined_entries)
-    print(f"[gap-fill] {len(candidates)} missing results across the eighteen configured Avg IQ benchmarks")
+    print(f"[gap-fill] {len(candidates)} missing results across the seventeen configured Avg IQ benchmarks")
     if skip_pairs:
         before = len(candidates)
         candidates = [c for c in candidates if (c.model_name, c.benchmark) not in skip_pairs]
