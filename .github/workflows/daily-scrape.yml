@@ -39,6 +39,13 @@ jobs:
             echo '::error::PAT_TOKEN is missing, expired or revoked; the run could not open its pull request.'
             exit 1
           fi
+          # The first request of a real push. GitHub refuses it for a token that cannot write.
+          PUSH=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 -u "x-access-token:$GH_TOKEN" \
+            "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git/info/refs?service=git-receive-pack" || true)
+          if [ "$PUSH" = "401" ] || [ "$PUSH" = "403" ] || [ "$PUSH" = "404" ]; then
+            echo "::error::PAT_TOKEN cannot push to this repository (HTTP $PUSH); the run could not open its pull request."
+            exit 1
+          fi
           EXPIRES=$(gh api -i rate_limit 2>/dev/null | tr -d '\r' \
             | awk -F': ' 'tolower($1)=="github-authentication-token-expiration"{print $2}')
           SECONDS_LEFT=$(( $(date -u -d "$EXPIRES" +%s 2>/dev/null || echo 0) - $(date -u +%s) ))

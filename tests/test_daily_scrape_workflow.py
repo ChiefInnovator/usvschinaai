@@ -92,6 +92,9 @@ class SourceHealthStepTests(unittest.TestCase):
         text = WORKFLOW.read_text(encoding="utf-8")
         self.assertLess(text.index("- name: Verify publishing token"), text.index("- name: Run scraper"))
         self.assertIn("exit 1", run_block(step("Verify publishing token")))
+        # A valid but read-only token must fail here, not after the scrape and paid research.
+        for workflow in (WORKFLOW, WORKFLOW.with_name("backfill-gap-fill.yml")):
+            self.assertIn("info/refs?service=git-receive-pack", workflow.read_text(encoding="utf-8"))
         # The scraper itself never sees the write-capable token.
         self.assertNotIn("PAT_TOKEN", step("Run scraper"))
 

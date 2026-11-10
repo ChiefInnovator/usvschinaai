@@ -41,6 +41,13 @@ jobs:
             echo '::error::PAT_TOKEN is missing, expired or revoked; the run could not open its pull request.'
             exit 1
           fi
+          # The first request of a real push. GitHub refuses it for a token that cannot write.
+          PUSH=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 -u "x-access-token:$GH_TOKEN" \
+            "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git/info/refs?service=git-receive-pack" || true)
+          if [ "$PUSH" = "401" ] || [ "$PUSH" = "403" ] || [ "$PUSH" = "404" ]; then
+            echo "::error::PAT_TOKEN cannot push to this repository (HTTP $PUSH); the run could not open its pull request."
+            exit 1
+          fi
 
       - name: Set up Python
         uses: actions/setup-python@v5
