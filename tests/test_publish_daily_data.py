@@ -24,7 +24,7 @@ class FakeGitHub:
                                                    'data/ai_fill_history.jsonl', 'social/2026-11-10-1-x.png',
                                                    'social/plan.json', 'og-image.png', 'sitemap.xml', 'llms.txt'])
         self.options.update(options)
-        self.merged, self.created = [], []
+        self.merged, self.created, self.views = [], [], 0
 
     def pull(self, number):
         if number == 7:
@@ -37,14 +37,22 @@ class FakeGitHub:
 
     def __call__(self, args, check=True):
         if args[:2] == ['pr', 'view']:
-            return 0, json.dumps(self.pull(7 if args[2] in (BRANCH, '7') else 8))
+            self.views += 1
+            pull = self.pull(7 if args[2] in (BRANCH, '7') else 8)
+            # Something changed the pull request while the checks and review ran.
+            if pull['number'] == 7 and self.views > self.options.get('stable_views', 99):
+                pull.update(self.options['later'])
+            return 0, json.dumps(pull)
         if args[:2] == ['pr', 'checks']:
             bucket = self.options['data_checks' if args[2] == '7' else 'promotion_checks']
             return 0, json.dumps([{'name': 'test', 'bucket': bucket}, {'name': 'verify_build', 'bucket': 'pass'}])
         if args[0] == 'api' and '/files?' in args[1]:
             return 0, json.dumps([{'filename': name} for name in self.options['files']])
         if args[0] == 'api' and args[1].endswith('/git/ref/heads/develop'):
-            return 0, json.dumps({'object': {'sha': self.options['develop_tip']}})
+            self.tips = getattr(self, 'tips', 0) + 1
+            moved = self.options.get('develop_moves_after')
+            tip = '9' * 40 if moved is not None and self.tips > moved else self.options['develop_tip']
+            return 0, json.dumps({'object': {'sha': tip}})
         if args[0] == 'api' and '/commits/' in args[1]:
             return 0, json.dumps({'parents': [{'sha': sha} for sha in self.options['merge_parents']]})
         if args[0] == 'api' and 'graphql' not in args:
@@ -133,6 +141,17 @@ class PublishDailyDataTests(unittest.TestCase):
             code, github, log = self.run_publish(files=['models.json', extra])
             self.assertEqual((code, github.merged), (1, []), extra)
             self.assertIn('not generated data: ' + extra, log)
+
+    def test_pull_request_and_base_are_read_again_just_before_merging(self):
+        # Retargeted, closed or pushed to while the checks and review ran.
+        for later in (dict(baseRefName='main'), dict(state='CLOSED'), dict(headRefOid='d' * 40)):
+            code, github, log = self.run_publish(stable_views=2, later=later)
+            self.assertEqual((code, github.merged), (1, []), later)
+            self.assertIn('changed while its checks and review ran', log)
+        # develop moved after the first check but before the merge.
+        code, github, log = self.run_publish(develop_moves_after=1)
+        self.assertEqual((code, github.merged), (1, []))
+        self.assertIn('develop changed while the checks and review ran', log)
 
     def test_recovery_message_matches_how_far_publication_got(self):
         _, _, log = self.run_publish(threads=1)

@@ -131,14 +131,25 @@ def pull_request(repo, pr):
     return json.loads(out)
 
 
-@preconditions(repo='nonempty', pr='positive_int', head='nonempty', review='bool')
-def merge_when_clean(repo, pr, head, review):
-    """Merge with a merge commit once the gates hold; returns the merge commit."""
+@preconditions(repo='nonempty', pr='positive_int', head='nonempty', base='nonempty', review='bool', base_tip='?text')
+def merge_when_clean(repo, pr, head, base, review, base_tip=None):
+    """Merge with a merge commit once the gates hold; returns the merge commit.
+
+    Checks and review take minutes. The pull request and its base are read
+    again immediately before merging, so one that was retargeted, closed or
+    pushed to in the meantime, or a base that moved, is not merged.
+    """
     wait_for_checks(repo, pr, head, CHECK_TIMEOUT)
     if review:
         wait_for_review(repo, pr, head, REVIEW_TIMEOUT)
     if open_threads(repo, pr):
         raise NeedsPerson('a review thread is open')
+    current = pull_request(repo, pr)
+    if (current['state'] != 'OPEN' or current['baseRefName'] != base or current['headRefOid'] != head
+            or current['isCrossRepository']):
+        raise NeedsPerson('the pull request changed while its checks and review ran')
+    if base_tip and branch_tip(repo, base) != base_tip:
+        raise NeedsPerson(f'{base} changed while the checks and review ran')
     gh(['pr', 'merge', str(pr), '--repo', repo, '--merge', '--match-head-commit', head])
     merged = pull_request(repo, pr)
     if merged['state'] != 'MERGED' or merged['headRefOid'] != head or not merged.get('mergeCommit'):
@@ -182,7 +193,8 @@ def publish(repo, branch, head, started_from):
     # Anything merged into develop during the run would ride along to main.
     if branch_tip(repo, 'develop') != started_from:
         raise NeedsPerson('develop changed while the scrape ran')
-    develop = merge_when_clean(repo, data['number'], data['headRefOid'], review=True)
+    develop = merge_when_clean(repo, data['number'], data['headRefOid'], 'develop', review=True,
+                               base_tip=started_from)
     print(f"Merged data pull request #{data['number']} into develop at {develop[:7]}.")
     try:
         promote(repo, data, develop, started_from)
@@ -209,7 +221,7 @@ def promote(repo, data, develop, started_from):
     if pull_request(repo, promotion)['headRefOid'] != develop:
         raise NeedsPerson(f'develop moved before promotion #{promotion} was opened', waiting)
     try:
-        main = merge_when_clean(repo, promotion, develop, review=False)
+        main = merge_when_clean(repo, promotion, develop, 'main', review=False)
     except NeedsPerson as reason:
         raise NeedsPerson(str(reason), waiting) from reason
     print(f'Promoted develop to main at {main[:7]} through #{promotion}.')
