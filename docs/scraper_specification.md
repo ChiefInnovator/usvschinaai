@@ -287,7 +287,7 @@ All open questions have been resolved:
 | --- | --- |
 | Benchmark handling | Auto-detected, per-benchmark range resolution (known → percentage → cohort fallback), category aggregates excluded, sparse benchmarks excluded from scoring at < 4 reporting models, with raw data retained. |
 | Cron schedule | Daily via `.github/workflows/daily-scrape.yml`. |
-| Failure notifications | Silent — errors logged to Actions output only, no Slack/email/GitHub alerts. |
+| Failure notifications | A failed workflow run triggers the GitHub failure email. The health check covers reachability and freshness; the daily scrape fails on a sustained benchmark source outage after opening its pull request. |
 | Two-pass scoring | Implemented over the whole scoring cohort with the configured eighteen weights for Avg IQ and Value. See [two_pass_scoring.md](two_pass_scoring.md). |
 | AI gap-filling | Implemented via OpenAI Responses API + `web_search` tool. See [ai_gap_filling.md](ai_gap_filling.md). |
 

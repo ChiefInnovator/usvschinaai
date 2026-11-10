@@ -184,12 +184,33 @@ class PassHookTests(unittest.TestCase):
         self.assertEqual(seen, [('K', ['HLE'])])
         self.assertEqual(saved['K']['HLE']['cached_at'], stamp, "the new null was not written over it")
 
-    def test_model_missing_from_history_counts_as_new(self):
-        from datetime import datetime, timezone
+    def test_model_missing_from_history_is_new_only_while_recently_released(self):
+        from datetime import datetime, timezone, timedelta
         now = datetime.now(timezone.utc)
-        self.assertTrue(gf.is_new_model("Brand New", {"M": "2026-01-01"}, now))
-        self.assertFalse(gf.is_new_model("M", {"M": "2026-01-01"}, now))
-        self.assertFalse(gf.is_new_model("M", None, now), "unreadable history -> nothing is new")
+        day = lambda n: (now - timedelta(days=n)).date().isoformat()
+        seen = {"M": "2026-01-01"}
+        self.assertTrue(gf.is_new_model("Brand New", seen, now, day(3)))
+        # A release that never reached the board must not stay new forever.
+        self.assertFalse(gf.is_new_model("Never On Board", seen, now, day(60)))
+        self.assertFalse(gf.is_new_model("No Date", seen, now))
+        self.assertFalse(gf.is_new_model("Label Only", seen, now, "Sep. 2026"))
+        self.assertFalse(gf.is_new_model("M", seen, now, day(1)), "published history outranks the release day")
+        self.assertFalse(gf.is_new_model("M", None, now, day(1)), "unreadable history -> nothing is new")
+
+    def test_off_board_old_release_gets_no_new_budget_and_its_nulls_are_cached(self):
+        from datetime import datetime, timezone, timedelta
+        gf.build_candidates = self.saved["build_candidates"]
+        gf.load_first_seen = lambda: {}
+        old = Entry("Old", "US", {"Released": "2026-01-01"})
+        recent = Entry("Recent", "CN", {"Released": (datetime.now(timezone.utc) - timedelta(days=2)).date().isoformat()})
+        asked = []
+        gf.run_gap_filling_pass([old, recent], max_calls=0, on_batch=lambda model, benchmarks: asked.append(model))
+        self.assertEqual(asked, ["Recent"], "a weeknight asks only about the real release")
+        saved = {}
+        gf.save_cache = lambda cache: saved.update(cache)
+        gf.run_gap_filling_pass([old, recent], max_calls=1, new_model_max_calls=0)
+        self.assertIn("Old", saved, "an old release's nulls are cached like any other model's")
+        self.assertNotIn("Recent", saved)
 
     def test_new_model_window_is_two_weeks(self):
         from datetime import datetime, timezone, timedelta

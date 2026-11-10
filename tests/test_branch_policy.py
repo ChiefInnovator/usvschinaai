@@ -76,7 +76,11 @@ class BranchPolicyTests(unittest.TestCase):
             self.assertIn('contents: read', text)
             self.assertNotIn('token: ${{ secrets.PAT_TOKEN }}', text)
             self.assertIn('git fetch origin develop', text)
-            self.assertIn('"$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)"', text)
+            # The daily scrape may build on develop plus pending data, so it
+            # compares the develop commit it started from, not its own HEAD.
+            started = ('"${{ steps.base.outputs.develop_sha }}"' if filename == 'daily-scrape.yml'
+                       else '"$(git rev-parse HEAD)"')
+            self.assertIn(started + ' != "$(git rev-parse FETCH_HEAD)"', text)
             self.assertLess(text.index('git fetch origin develop'), text.index('git commit'))
             self.assertIn('--base develop', text)
             self.assertIn('git push origin "HEAD:refs/heads/$BRANCH"', text)

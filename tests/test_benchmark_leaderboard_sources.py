@@ -7,12 +7,12 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from benchmark_leaderboard_sources import vals_results, ale_results
 
 
-def page(tasks, name='AIME'):
+def page(tasks, name='AIME', component='BenchmarkView'):
     def encode(x):
         if isinstance(x, dict): return [0, {k:encode(v) for k,v in x.items()}]
         return [0,x]
     props={'benchmarkView':encode({'metadata':{'benchmark':name},'tasks':tasks})}
-    return '<astro-island component-url="/_astro/BenchmarkView.test.js" props="'+html.escape(json.dumps(props),quote=True)+'"></astro-island>'
+    return '<astro-island component-url="/_astro/'+component+'.test.js" props="'+html.escape(json.dumps(props),quote=True)+'"></astro-island>'
 
 
 class LeaderboardSourceTests(unittest.TestCase):
@@ -40,3 +40,22 @@ class LeaderboardSourceTests(unittest.TestCase):
         results=ale_results({'rows':rows},{'GPT-5.5':'2026-04-01'})
         self.assertEqual([r['score'] for r in results],[30,40])
         self.assertTrue(all(r['publishedAt'] is None for r in results))
+
+    def test_vals_payload_survives_component_renames(self):
+        # Vals moved the view from BenchmarkView to chart islands; identity is the metadata, not the file name.
+        chart=page({'overall':{'gpt-5.5':{'accuracy':70}}},'SWE-bench','ScatterGraph')
+        table=page({'overall':{'gpt-5.5':{'accuracy':70},'kimi-k3':{'accuracy':60}},'1-4 hours':{}},'SWE-bench','BarGraph')
+        loader='<astro-island component-url="/_astro/BenchmarkViewLoader.test.js" props="'+html.escape(json.dumps({'benchmarkViewUrl':[0,'/x.json']}),quote=True)+'"></astro-island>'
+        results,audit=vals_results(loader+chart+table,'swebench',{'GPT-5.5':'2026-04-01','Kimi K3':'2026-08-01'})
+        self.assertEqual(sorted(r['score'] for r in results),[60,70])
+        self.assertEqual(audit['rows'],2)
+
+    def test_vals_wrong_benchmark_or_empty_table_fails_closed(self):
+        for raw in (page({'overall':{'gpt-5.5':{'accuracy':70}}},'SWE-bench Multimodal','BarGraph'),
+                    page({'overall':{}},'SWE-bench','BarGraph'), '<html></html>'):
+            with self.assertRaises(ValueError):
+                vals_results(raw,'swebench',{'GPT-5.5':'2026-04-01'})
+
+    def test_ale_without_full_split_fails_closed(self):
+        with self.assertRaises(ValueError):
+            ale_results({'rows':[{'model':'gpt-5.5','split':'last_exam','passRate':0.9}]},{'GPT-5.5':'2026-04-01'})
