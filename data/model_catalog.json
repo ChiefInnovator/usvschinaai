@@ -6446,6 +6446,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
           }
+        },
+        "toolathlon": {
+          "fa0bdd2dd359ef4c": {
+            "benchmark": "Toolathlon",
+            "score": 43.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Opus-4.5; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-11-27",
+            "modelAvailableFrom": "2026-01-23"
+          }
         }
       }
     },
@@ -9551,6 +9567,20 @@
             "publishedAt": "2026-05-28",
             "modelAvailableFrom": "2026-02-06",
             "notes": "Claude Opus 4.8 System Card Figure 8.13.7.A (also repeated in the Fable 5 and Sonnet 5 system cards)."
+          },
+          "fbdc8e44536176c7": {
+            "benchmark": "Toolathlon",
+            "score": 47.2,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-03-06",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Opus-4.6; Claude Agent SDK harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-06",
+            "modelAvailableFrom": "2026-02-06"
           }
         }
       }
@@ -11910,6 +11940,20 @@
             "publishedAt": "2026-05-28",
             "modelAvailableFrom": "2026-04-21",
             "notes": "Claude Opus 4.8 System Card Figure 8.13.7.A."
+          },
+          "33dde8f28b38dfca": {
+            "benchmark": "Toolathlon",
+            "score": 52.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-25",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Opus-4.7; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-25",
+            "modelAvailableFrom": "2026-04-21"
           }
         }
       }
@@ -14329,6 +14373,22 @@
             "modelAvailableFrom": "2026-01-23",
             "notes": "Terminal-Bench 2.1 postdates the model's May 2025 release, so this is a retrospective AA measurement of unknown date; publishedAt left null."
           }
+        },
+        "toolathlon": {
+          "45ca10b3369d9fb7": {
+            "benchmark": "Toolathlon",
+            "score": 29.9,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Sonnet-4; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-23"
+          }
         }
       }
     },
@@ -15219,6 +15279,20 @@
             "publishedAt": "2026-05-28",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Claude Opus 4.8 System Card Figure 8.13.7.A. Postdates the brief's Sonnet 4.5 window."
+          },
+          "3c293c1040130c6a": {
+            "benchmark": "Toolathlon",
+            "score": 38.9,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Sonnet-4.5; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-23"
           }
         }
       }
@@ -18244,6 +18318,20 @@
             "publishedAt": "2026-06-30",
             "modelAvailableFrom": "2026-02-20",
             "notes": "Claude Sonnet 5 System Card Table 8.11.5.A."
+          },
+          "08375039f945b7a8": {
+            "benchmark": "Toolathlon",
+            "score": 44.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-02-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Claude-Sonnet-4.6; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-02-23",
+            "modelAvailableFrom": "2026-02-20"
           }
         }
       }
@@ -20119,6 +20207,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
+          },
+          "8f4b97c1b8214d28": {
+            "benchmark": "Toolathlon",
+            "score": 35.2,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; DeepSeek-V3.2-Thinking; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-01",
+            "modelAvailableFrom": "2026-01-23"
           }
         }
       }
@@ -20393,6 +20495,20 @@
             "publishedAt": "2025-10-29",
             "modelAvailableFrom": "2026-01-27",
             "notes": "Toolathlon (Tool Decathlon) official paper Table 3; DeepSeek-v3.2-Exp is the top open-weights model."
+          },
+          "57c3c5a5f8e73f70": {
+            "benchmark": "Toolathlon",
+            "score": 20.1,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-27",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; DeepSeek-V3.2-Exp; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-27"
           }
         }
       }
@@ -22516,6 +22632,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-05-18"
+          },
+          "8afd340d4c8add36": {
+            "benchmark": "Toolathlon",
+            "score": 48.2,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-05-18",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; DeepSeek-V4-Flash Max; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-25",
             "modelAvailableFrom": "2026-05-18"
           }
         }
@@ -25728,6 +25858,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-10"
+          },
+          "c4ae42a483380d2a": {
+            "benchmark": "Toolathlon",
+            "score": 52.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-05-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; DeepSeek-V4-Pro Max; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-25",
+            "modelAvailableFrom": "2026-05-10"
           }
         },
         "frontiermath-1-3-v2": {
@@ -28287,6 +28431,22 @@
             "modelAvailableFrom": "2026-01-23",
             "notes": "AA record glm-4-6-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "toolathlon": {
+          "3c8141e5574832fe": {
+            "benchmark": "Toolathlon",
+            "score": 18.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GLM-4.6; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-23"
+          }
         }
       }
     },
@@ -30217,6 +30377,20 @@
             "publishedAt": "2026-02-17",
             "modelAvailableFrom": "2026-01-23",
             "notes": "GLM-4.7 comparison column of the GLM-5 model-card table; Tool-Decathlon = Toolathlon."
+          },
+          "26861a99020aa0c2": {
+            "benchmark": "Toolathlon",
+            "score": 23.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GLM-4.7; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-25",
+            "modelAvailableFrom": "2026-01-23"
           }
         }
       }
@@ -32669,6 +32843,20 @@
             "publishedAt": "2026-02-17",
             "modelAvailableFrom": "2026-02-13",
             "notes": "'Tool-Decathlon' is the full name of Toolathlon (hkust-nlp, arXiv:2510.25726); llm-stats and BenchLM both list GLM-5 at 38.0 under Toolathlon/Tool Decathlon."
+          },
+          "6816ef582719c234": {
+            "benchmark": "Toolathlon",
+            "score": 39.2,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-02-13",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GLM-5; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-02-13",
+            "modelAvailableFrom": "2026-02-13"
           }
         }
       }
@@ -34895,6 +35083,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-04-09"
+          },
+          "a2b64ada82a93754": {
+            "benchmark": "Toolathlon",
+            "score": 40.7,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-09",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GLM-5.1; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-07",
             "modelAvailableFrom": "2026-04-09"
           }
         }
@@ -40798,6 +41000,22 @@
             "modelAvailableFrom": "2026-01-28",
             "notes": "AA record gpt-5-1; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "toolathlon": {
+          "404f8ec4c3aa3b49": {
+            "benchmark": "Toolathlon",
+            "score": 37.0,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-28",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.1-high; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-17",
+            "modelAvailableFrom": "2026-01-28"
+          }
         }
       }
     },
@@ -44257,6 +44475,34 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
+          },
+          "1faf70be4849c429": {
+            "benchmark": "Toolathlon",
+            "score": 43.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.2-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-18",
+            "modelAvailableFrom": "2026-01-23"
+          },
+          "486c16593a779050": {
+            "benchmark": "Toolathlon",
+            "score": 41.7,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.2-high; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-17",
             "modelAvailableFrom": "2026-01-23"
           }
         }
@@ -48401,6 +48647,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-07"
+          },
+          "f25d1551df184538": {
+            "benchmark": "Toolathlon",
+            "score": 54.6,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-03-07",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.4-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-06",
+            "modelAvailableFrom": "2026-03-07"
           }
         }
       }
@@ -48703,6 +48963,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-04-14"
+          },
+          "baf17838a20a3f2e": {
+            "benchmark": "Toolathlon",
+            "score": 42.9,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-14",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.4-mini-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-17",
             "modelAvailableFrom": "2026-04-14"
           }
         }
@@ -51321,6 +51595,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-05-08"
+          },
+          "4b157d9d9e09aad2": {
+            "benchmark": "Toolathlon",
+            "score": 55.6,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-05-08",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.5-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-24",
             "modelAvailableFrom": "2026-05-08"
           }
         }
@@ -56907,6 +57195,22 @@
             "modelAvailableFrom": "2026-01-23",
             "notes": "Artificial Analysis model record gemini-2-5-pro (releaseDate 2025-06-05)."
           }
+        },
+        "toolathlon": {
+          "fada7ae79aa324a2": {
+            "benchmark": "Toolathlon",
+            "score": 10.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Gemini-2.5-Pro; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-23"
+          }
         }
       }
     },
@@ -60161,6 +60465,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
+          },
+          "de9526fe74a6166e": {
+            "benchmark": "Toolathlon",
+            "score": 49.4,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Gemini-3-Flash; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-18",
+            "modelAvailableFrom": "2026-01-23"
           }
         }
       }
@@ -61967,6 +62285,22 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
+          }
+        },
+        "toolathlon": {
+          "b2d2c92ee60820aa": {
+            "benchmark": "Toolathlon",
+            "score": 36.4,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Gemini-3-Pro; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-11-22",
             "modelAvailableFrom": "2026-01-23"
           }
         }
@@ -65356,6 +65690,20 @@
             "configuration": "comparison setup not fully disclosed; vendor table",
             "kind": "published",
             "publishedAt": "2026-04-23"
+          },
+          "c62201e782c396aa": {
+            "benchmark": "Toolathlon",
+            "score": 48.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-03-13",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Gemini-3.1-Pro; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-13",
+            "modelAvailableFrom": "2026-02-20"
           }
         },
         "agents-last-exam": {
@@ -66877,6 +67225,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-06-04"
+          },
+          "5903aaa5e3694241": {
+            "benchmark": "Toolathlon",
+            "score": 56.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-06-04",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Gemini-3.5-Flash; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-05-19",
             "modelAvailableFrom": "2026-06-04"
           }
         }
@@ -71809,6 +72171,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
           }
+        },
+        "toolathlon": {
+          "b56d9bdf30b1fae1": {
+            "benchmark": "Toolathlon",
+            "score": 13.0,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Kimi-K2-0905; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-01-23"
+          }
         }
       }
     },
@@ -75286,6 +75664,20 @@
             "modelAvailableFrom": "2026-01-28",
             "notes": "Kimi K2.5 appears as a comparison column in the Kimi K2.6 model card; Toolathlon row reads 50.0 | 54.6 | 47.2 | 48.8 | 27.8 (K2.6 | GPT-5.4 | Opus 4.6 | Gemini 3.1 Pro | K2.5). Plain Toolathlon, not Toolathlon-Verified.",
             "excludedReason": "Reported configuration mixes model fallback or a distinct benchmark variant; not comparable to the selected component."
+          },
+          "31e8596b9b9cd329": {
+            "benchmark": "Toolathlon",
+            "score": 27.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-02-04",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Kimi-K2.5; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-02-04",
+            "modelAvailableFrom": "2026-01-28"
           }
         }
       }
@@ -77960,6 +78352,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-04-23"
+          },
+          "383d42db7c58171f": {
+            "benchmark": "Toolathlon",
+            "score": 50.0,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Kimi-K2.6; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-21",
             "modelAvailableFrom": "2026-04-23"
           }
         }
@@ -82885,6 +83291,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
+          },
+          "9529785d06196f20": {
+            "benchmark": "Toolathlon",
+            "score": 40.7,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-01-23",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; MiniMax-M2.1; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-12-25",
+            "modelAvailableFrom": "2026-01-23"
           }
         }
       }
@@ -84200,6 +84620,20 @@
             "publishedAt": "2026-05-26",
             "modelAvailableFrom": "2026-02-17",
             "notes": "'The MiniMax-M2 Series' tech report, Table 4 (Office & Tools block), M2.5 reference column."
+          },
+          "496ba5de1e3ae6d5": {
+            "benchmark": "Toolathlon",
+            "score": 38.3,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-03-18",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; MiniMax-M2.5; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-18",
+            "modelAvailableFrom": "2026-02-17"
           }
         }
       }
@@ -85601,6 +86035,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-04-14"
+          },
+          "877a1737d114ee84": {
+            "benchmark": "Toolathlon",
+            "score": 46.3,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-14",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; MiniMax-M2.7; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-18",
             "modelAvailableFrom": "2026-04-14"
           }
         }
@@ -88892,6 +89340,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-10"
           }
+        },
+        "toolathlon": {
+          "7d1f4f22c6795bf1": {
+            "benchmark": "Toolathlon",
+            "score": 31.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-17",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen3.5-27B; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-17",
+            "modelAvailableFrom": "2026-04-10"
+          }
         }
       }
     },
@@ -89633,6 +90097,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-14",
             "notes": "AA record qwen3-5-35b-a3b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "toolathlon": {
+          "c49c8ec482a15e39": {
+            "benchmark": "Toolathlon",
+            "score": 28.7,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-17",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen3.5-35BA3B; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-17",
+            "modelAvailableFrom": "2026-03-14"
           }
         }
       }
@@ -92170,6 +92650,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-17"
+          },
+          "03cb5053d7f6c6a3": {
+            "benchmark": "Toolathlon",
+            "score": 38.3,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-04-02",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen3.5-397B-A17B; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-02",
+            "modelAvailableFrom": "2026-02-17"
           }
         }
       }
@@ -94248,6 +94742,20 @@
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
+            "modelAvailableFrom": "2026-05-09"
+          },
+          "fa19d426fcb3435d": {
+            "benchmark": "Toolathlon",
+            "score": 39.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-05-09",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen3.6-Plus; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-02",
             "modelAvailableFrom": "2026-05-09"
           }
         }
@@ -98540,6 +99048,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-04"
+          },
+          "0041fb214b630bfd": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04",
+            "notes": "AA record qwen3-8-max-0803; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "humanitys-last-exam": {
@@ -98706,6 +99228,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-04"
+          },
+          "7b7c5da417f0824f": {
+            "benchmark": "MMMU-Pro",
+            "score": 82.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04",
+            "notes": "AA record qwen3-8-max-0803; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "swe-bench-verified": {
@@ -98790,6 +99326,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-04"
+          },
+          "03fe429a5d4bca31": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 81.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04",
+            "notes": "AA record qwen3-8-max-0803; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "toolathlon": {
@@ -103273,6 +103823,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
+        },
+        "mmmu-pro": {
+          "6d7b576b860f3e25": {
+            "benchmark": "MMMU-Pro",
+            "score": 79.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-luna-xhigh",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6 Luna (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "AA record gpt-6-luna-xhigh; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -103319,6 +103885,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "a77fa2a5191a959b": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "AA record inkling-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -103409,6 +103989,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "a528974bd689a1ed": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 55.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "AA record inkling-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "browsecomp": {
@@ -103439,6 +104033,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "333af87840479e9a": {
+            "benchmark": "MMMU-Pro",
+            "score": 74.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "AA record inkling-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -103607,6 +104215,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "8a53d3f186ba9725": {
+            "benchmark": "GPQA Diamond",
+            "score": 87.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27",
+            "notes": "AA record inkling; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -103669,6 +104291,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "7da417efc7d58c3f": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 55.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27",
+            "notes": "AA record inkling; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "mmmu-pro": {
@@ -103684,6 +104320,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "c97a460c1df27073": {
+            "benchmark": "MMMU-Pro",
+            "score": 73.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27",
+            "notes": "AA record inkling; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -112161,6 +112811,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-06"
+          },
+          "e20df14da721cd1c": {
+            "benchmark": "MMMU-Pro",
+            "score": 86.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.1 Sol (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-06",
+            "notes": "AA record gpt-6-1-sol; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -113452,6 +114116,22 @@
             "modelAvailableFrom": "2026-10-31",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row deepseek-v4.1-flash-1017_max."
           }
+        },
+        "mmmu-pro": {
+          "6f1f72b09fe03df0": {
+            "benchmark": "MMMU-Pro",
+            "score": 80.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4.1 Flash 1017 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "AA record deepseek-v4-1-flash-1017; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -114357,6 +115037,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10"
+          },
+          "98dcae965f3d736e": {
+            "benchmark": "MMMU-Pro",
+            "score": 81.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling 2 Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record inkling-2-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -114448,6 +115142,20 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-11-10"
+          },
+          "3d9db798f8c03533": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 81.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling 2 Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record inkling-2-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa-diamond": {

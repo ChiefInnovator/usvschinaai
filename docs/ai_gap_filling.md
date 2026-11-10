@@ -41,7 +41,36 @@ researched undated results remain applicable from retrieval. Old provenance
 ambiguities identified by an audit are not silently assigned publication dates.
 
 Individual source failures are recorded in `data/benchmark_source_refresh.json`
-and do not prevent other sources from being processed. Accepted results enter
+and do not prevent other sources from being processed. Requests retry throttled
+and transient responses (403, 408, 425, 429, 5xx, timeouts) three times with
+jittered backoff, and at most three llm-stats detail pages are fetched at once.
+
+### Source health
+
+A source that changes its page silently looks identical to "no new results",
+so every adapter fails closed when its payload stops parsing: a missing Vals
+view, a renamed Artificial Analysis field, a missing Epoch table, unreadable
+Toolathlon rows or an absent ALE full split are all recorded as failures.
+
+The same report carries a `sourceHealth` record per source, rolled forward from
+the previous run: `status` (`ok`, `failed`, or `empty` when the source answers
+but matches no tracked model), `findings`, `since` (the day that status began)
+and `lastOk` (the last day it produced results). llm-stats detail pages are one
+source; it is `failed` only when most pages are unavailable.
+
+`scripts/check_source_health.py` reads that record. The daily workflow adds its
+summary to the data pull request, then runs it again as the final step, after
+the pull request is open. A source that is `failed` on consecutive refreshes,
+or `empty` after previously producing results, fails the run. Publication is
+never blocked; the failure exists to trigger the workflow-failure email. A
+source that has never matched a tracked model is listed without alerting.
+
+```sh
+python scripts/check_source_health.py --markdown   # summary only
+python scripts/check_source_health.py              # exit 1 on a sustained outage
+```
+
+Accepted results enter
 `data/model_catalog.json` and fill current gaps before paid research.
 A dry run applies results in memory without writing source evidence or the audit.
 The model roster is never expanded from these external benchmark tables.
@@ -79,7 +108,25 @@ Already populated exact components, including configured aliases, are not gaps.
 Generic GPQA does not automatically establish GPQA Diamond.
 
 Candidates are batched by model in incoming model order, with all its missing
-components requested together. `--gap-fill-max-calls` (default 40) limits API calls,
+components requested together. Eligibility is unchanged, but the call budgets are
+spent in that order, so the daily scraper sets it with
+`scripts/research_priority.py`:
+
+1. models on the latest published board, heaviest missing benchmark weight first;
+2. new models, newest first;
+3. every other model, in scrape order.
+
+Each tier alternates between the United States and China; in scrape order every
+US model precedes every Chinese one, so no Chinese model was reached.
+
+A model is new for 14 days from the day it was first published on the board.
+A model that has never been published is new for 14 days from its release date,
+and is not new when that date is unknown. New models draw on their own nightly
+budget and their null answers are not cached. Until this rule used the release
+date, every release that never reached the board stayed new indefinitely and
+took that budget every night.
+
+`--gap-fill-max-calls` (default 40) limits API calls,
 not eligibility. `--no-gap-fill` disables both source refresh and AI research; an unavailable API
 only disables the AI stage and leaves its unresolved cells missing.
 

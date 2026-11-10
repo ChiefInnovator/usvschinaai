@@ -64,3 +64,21 @@ paths and bytes, installs data/images, writes the publication manifest last and
 removes the journal. A failed render before installation leaves the old publication
 untouched. Do not deploy while either writer journal exists. Git remains the
 rollback source; restore a complete verified artifact for immediate site rollback.
+
+## Unmerged daily publications
+
+Publishing is two manual merges, so a daily pull request can still be open when
+the next scrape starts. Building that run on develop alone would omit the
+waiting snapshot and conflict with it at merge. The daily workflow therefore
+builds on develop plus the newest open `feature/daily-scrape-*` branch when all
+of these hold: the branch changes only generated data (JSON, JSONL, images,
+sitemap, `llms.txt`), it merges into develop without conflict, and
+`prepare_publication.py` verifies the result under develop's code. Otherwise it
+builds on develop alone and says why in a warning. The new pull request contains
+the earlier one, so merging it merges both.
+
+The health check follows the same model. It fails when no snapshot has been
+produced for 30 hours, counting develop and open daily pull requests, or when
+the published snapshot is more than 72 hours old. A published snapshot older
+than 30 hours with a newer one awaiting promotion is a warning. The page shows
+its own notice once the published snapshot is older than 36 hours.

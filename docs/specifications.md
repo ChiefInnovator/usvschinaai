@@ -112,7 +112,7 @@ replace a newer main-branch candidate. Fork code receives no deployment secrets.
 ## Operations
 
 - Daily scrape schedule: 03:17 UTC, subject to workflow execution delay.
-- Visible current-data warning: older than 26 hours.
+- Visible current-data warning: older than 36 hours. A daily snapshot is published by manual promotion, typically 3 to 12 hours after its scrape.
 - Operational freshness alert: older than 30 hours; timestamps over five minutes
   ahead also fail health checks.
 - Health monitor: every 30 minutes, checking reachability, snapshot freshness and

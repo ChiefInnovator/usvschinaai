@@ -55,6 +55,7 @@ class LeaderboardEntry:
     country: str
     url: str
     columns: Dict[str, str] = field(default_factory=dict)  # Header -> raw value
+    release_date: str = ""  # Normalized ISO day; columns["Released"] is a display label
 
 
 # Benchmark records in the flight payload are flat objects delimited by `{` / `}`.
@@ -452,6 +453,7 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
             'Input $/M': str(record['input_price']) if record.get('input_price') is not None else '—',
             'Output $/M': str(record['output_price']) if record.get('output_price') is not None else '—',
         })
+        entry.release_date = release_day
         candidates.append(entry)
         release_days[entry.url] = release_day
     if not candidates:
@@ -1469,8 +1471,19 @@ def run_scraper(args):
                     fill_current_entries(combined_entries, datetime.now(timezone.utc).isoformat())
                     scrape_run_ts = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
                     try:
+                        # Budgets are spent in list order: board models and real
+                        # new releases first, alternating countries. The entries
+                        # are shared, so fills land in combined_entries.
+                        from ingest_benchmark_findings import model_first_seen
+                        from research_priority import plan_research
+                        published = load_data(models_path)['history']
+                        board = {row['model'] for rows in published[0]['teams'].values()
+                                 for row in rows} if published else set()
+                        research_order = plan_research(
+                            combined_entries, board, model_first_seen(),
+                            datetime.now(timezone.utc), load_config()['benchmarks'])
                         run_gap_filling_pass(
-                            combined_entries,
+                            research_order,
                             max_calls=getattr(args, "gap_fill_max_calls", 10),
                             scraper_run_ts=scrape_run_ts,
                         )

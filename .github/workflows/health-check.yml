@@ -10,6 +10,10 @@ on:
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pull-requests: read
+
 jobs:
   health:
     runs-on: ubuntu-latest
@@ -32,10 +36,23 @@ jobs:
             exit 1
           fi
 
-      - name: Data freshness (scrape ran within 30h)
+      - name: Data freshness (scrape ran within 30h, published within 72h)
+        # Publishing is two manual merges, so the live snapshot is often older
+        # than 30h while a fresh one waits on develop or in the daily pull
+        # request. That is a warning. A failure means the scrape itself stopped,
+        # or a fresh snapshot has gone unpublished for three days.
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           curl -sf --max-time 30 https://usvschina.ai/current.json -o current.json \
             || curl -sf --max-time 30 https://usvschina.ai/models.json -o current.json
+          : > produced.txt
+          OPEN=$(gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open --json headRefName \
+            --jq '.[].headRefName | select(startswith("feature/daily-scrape-"))' || true)
+          for REF in develop $OPEN; do
+            gh api "repos/$GITHUB_REPOSITORY/contents/current.json?ref=$REF" -H "Accept: application/vnd.github.raw" 2>/dev/null \
+              | python3 -c "import json,sys; print(json.load(sys.stdin)['history'][0]['timestamp'])" >> produced.txt || true
+          done
           python3 - <<'EOF'
           import json, sys
           from datetime import datetime, timezone, timedelta
@@ -46,19 +63,26 @@ jobs:
               if not teams.get(country):
                   print(f"::error::Leaderboard has no {country} models")
                   sys.exit(1)
-          ts = data["history"][0]["timestamp"]
-          # Timestamps look like 2026-08-29T07:44:51+00:00 — fromisoformat handles them.
-          dt = datetime.fromisoformat(ts)
-          if dt.tzinfo is None:
-              dt = dt.replace(tzinfo=timezone.utc)
-          age = datetime.now(timezone.utc) - dt
-          print(f"latest snapshot: {ts} (age {age})")
-          if age > timedelta(hours=30):
-              print(f"::error::Leaderboard data is stale ({age} old) — daily scrape may be failing silently")
-              sys.exit(1)
-          if age < -timedelta(minutes=5):
+          def parse(ts):
+              # Timestamps look like 2026-08-29T07:44:51+00:00 — fromisoformat handles them.
+              dt = datetime.fromisoformat(ts)
+              return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+          now = datetime.now(timezone.utc)
+          live = parse(data["history"][0]["timestamp"])
+          with open("produced.txt") as f:
+              produced = max([live, *(parse(line.strip()) for line in f if line.strip())])
+          print(f"published snapshot: {live.isoformat()} (age {now - live}); newest produced: {produced.isoformat()}")
+          if now - live < -timedelta(minutes=5):
               print('::error::Snapshot timestamp is more than five minutes in the future')
               sys.exit(1)
+          if now - produced > timedelta(hours=30):
+              print(f"::error::No snapshot produced for {now - produced} — daily scrape may be failing silently")
+              sys.exit(1)
+          if now - live > timedelta(hours=72):
+              print(f"::error::Published data is {now - live} old; a newer snapshot is waiting — promote develop to main")
+              sys.exit(1)
+          if now - live > timedelta(hours=30):
+              print(f"::warning::Published data is {now - live} old; the {produced.isoformat()} snapshot awaits promotion to main")
           EOF
 
       - name: Publication revision and summary agreement

@@ -9,7 +9,7 @@ Two machine-readable sources carry most models at once:
   GPQA Diamond and FrontierMath Tiers 1-3 v2 tables record the evaluation
   start timestamp; this is not a publication date and does not permit backdating.
 * Artificial Analysis' model pages, which embed every model AA tracks in the
-  Next.js payload with `gpqa`, `ifbench`, `mmmuPro` and `terminalbenchV21`.
+  Next.js payload with `gpqa`, `ifbench`, `mmmuPro` and `terminalBench21`.
 
 For each exact model and selected benchmark, use the highest verified score
 across reasoning-effort settings. Different components may use different effort
@@ -22,7 +22,11 @@ import io
 from model_store import load_data
 import json
 import re
+import http.client
+import random
 import sys
+import time
+import urllib.error
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -39,7 +43,7 @@ USER_AGENT = 'Mozilla/5.0 (compatible; usvschinaai-benchmark-harvest/1.0)'
 
 # AA payload field -> our component id. AA's `gpqa` is the Diamond subset.
 AA_FIELDS = {'gpqa': 'gpqa-diamond', 'ifbench': 'ifbench',
-             'mmmuPro': 'mmmu-pro', 'terminalbenchV21': 'terminal-bench-2.1'}
+             'mmmuPro': 'mmmu-pro', 'terminalBench21': 'terminal-bench-2.1'}
 # Epoch CSV -> (component id, score column, evaluation-date column or None).
 EPOCH_TABLES = {
     'gpqa_diamond.csv': ('gpqa-diamond', 'mean_score', 'Started at'),
@@ -80,12 +84,31 @@ def effort_of(label):
     return next((token for token in EFFORT_TOKENS if token in text), None)
 
 
-@preconditions(url='text', binary='bool')
-def fetch(url, binary=False):
-    request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
-    with urllib.request.urlopen(request, timeout=120) as response:
-        payload = response.read()
-    return payload if binary else payload.decode('utf-8', 'replace')
+# Throttling and transient upstream statuses; anything else is a real answer.
+RETRY_STATUS = {403, 408, 425, 429, 500, 502, 503, 504}
+MAX_RETRY_DELAY = 30
+
+
+@preconditions(url='text', binary='bool', attempts='int')
+def fetch(url, binary=False, attempts=3):
+    """GET with bounded, jittered backoff so one throttled burst does not lose a source for the day."""
+    for attempt in range(attempts):
+        request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                payload = response.read()
+            return payload if binary else payload.decode('utf-8', 'replace')
+        except urllib.error.HTTPError as exc:
+            if exc.code not in RETRY_STATUS or attempt == attempts - 1:
+                raise
+            advised = exc.headers.get('Retry-After') if exc.headers else None
+            exc.close()
+            delay = float(advised) if advised and advised.isdigit() else 2 * 3 ** attempt
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException):
+            if attempt == attempts - 1:
+                raise
+            delay = 2 * 3 ** attempt
+        time.sleep(min(delay, MAX_RETRY_DELAY) + random.random())
 
 
 @preconditions()
@@ -128,9 +151,13 @@ def load_aa(html):
                         record = json.loads(blob[start:index + 1])
                     except ValueError:
                         break
-                    if 'terminalbenchV21' in record:
+                    if any(field in record for field in AA_FIELDS):
                         models.append(record)
                     break
+    # A renamed field otherwise reads as "no results" forever; fail closed instead.
+    missing = [field for field in AA_FIELDS if not any(field in record for record in models)]
+    if missing:
+        raise ValueError('Artificial Analysis payload changed; missing ' + ', '.join(missing))
     return {record['name']: record for record in models}
 
 

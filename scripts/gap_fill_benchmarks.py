@@ -101,6 +101,7 @@ class GapCandidate:
     model_url: str
     organization: str
     benchmark: str
+    released: str = ""  # ISO release day, when the source states one
 
 
 
@@ -191,19 +192,31 @@ def load_first_seen() -> Optional[Dict[str, str]]:
         return None
 
 
-@preconditions(model_name='text', first_seen='?mapping', now='datetime')
-def is_new_model(model_name: str, first_seen: Optional[Dict[str, str]], now: datetime) -> bool:
-    """First seen within NEW_MODEL_DAYS; a model absent from history is new today."""
+@preconditions(model_name='text', first_seen='?mapping', now='datetime', released='?text')
+def is_new_model(model_name: str, first_seen: Optional[Dict[str, str]], now: datetime,
+                 released: Optional[str] = None) -> bool:
+    """First published, or for a never-published model released, within NEW_MODEL_DAYS.
+
+    Published history holds only models that reached the board. A release that
+    never did has no first-seen day, so its release day decides, and without a
+    readable one it is not new. Treating every such model as new made each
+    off-board release new forever: asked every night, its nulls never cached.
+    """
     if first_seen is None:
         return False
-    day = first_seen.get(model_name)
-    if not day:
-        return True
+    day = first_seen.get(model_name) or released or ""
     try:
         seen = datetime.fromisoformat(day[:10]).date()
     except ValueError:
         return False
     return (now.date() - seen) < timedelta(days=NEW_MODEL_DAYS)
+
+
+@preconditions(entry='entry')
+def release_day(entry: Any) -> str:
+    """The entry's normalized release day. `Released` is a display label that
+    may read "Sep. 2026", so it is only a fallback for entries without one."""
+    return str(getattr(entry, "release_date", "") or entry.columns.get("Released") or "")
 
 
 @preconditions(combined_entries='sequence')
@@ -218,7 +231,7 @@ def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
         GapCandidate(
             model_name=entry.name, model_country=entry.country,
             model_url=entry.url, organization=entry.columns.get("Organization", ""),
-            benchmark=component["name"],
+            benchmark=component["name"], released=release_day(entry),
         )
         for entry in combined_entries
         for component in load_config()["benchmarks"]
@@ -833,7 +846,7 @@ def run_gap_filling_pass(
 
     for rep, cands in groups:
         model_name = rep.model_name
-        new_model = is_new_model(model_name, first_seen, now)
+        new_model = is_new_model(model_name, first_seen, now, rep.released)
         # Split into cached vs needs-fetch partitions. Recent null answers
         # are skipped (except for new models); expired ones fall through.
         batch_benchmarks: List[str] = []
