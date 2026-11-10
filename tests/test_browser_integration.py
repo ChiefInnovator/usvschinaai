@@ -50,7 +50,7 @@ class BrowserIntegrationTests(unittest.TestCase):
             country='US' if i%2==0 else 'CN'
             sample['teams'][country].append(dict(model=f'Test Model {i}',origin=country,organization='Test',
                 link=f'https://example.org/model-{i}',**{'Input$/M':'$1','Output$/M':'$2','GPQADiamond':'70%',
-                'avgIq':70,'value':23.33,'unified':900-i*50,'coverage':'1/18','provisional':False}))
+                'avgIq':70,'value':23.33,'unified':900-i*50,'coverage':'1/17','provisional':False}))
         base['history']=[]
         # Two observations on the same UTC day, an exact daily boundary and an older point.
         for stamp in ('2026-09-07T12:00:00-04:00','2026-09-06T20:30:00Z',

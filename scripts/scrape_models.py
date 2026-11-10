@@ -482,7 +482,9 @@ def wait_for_country_rows(page, origin_code: str, timeout: float = 20.0) -> bool
     while time.monotonic() < deadline:
         try:
             links = [row.query_selector("a") for row in page.query_selector_all("tbody tr")]
-            slugs = [(link.get_attribute("href") or "").rstrip('/').rsplit('/', 1)[-1] for link in links if link]
+            # A row whose link has not rendered yet is not confirmed: it maps to no country.
+            slugs = [(link.get_attribute("href") or "").rstrip('/').rsplit('/', 1)[-1] if link else ""
+                     for link in links]
         except Exception:
             slugs = []  # the table is mid-render; look again
         if slugs and all(countries.get(slug) == origin_code for slug in slugs):
@@ -1003,7 +1005,7 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
             date_label = ts[:10]
         data["metadata"]["footerText"] = (
             f"Data Audited {date_label} | Source: llm-stats.com | "
-            "IQ = eighteen configured weights; missing results count as zero"
+            "IQ = seventeen configured weights; missing results count as zero"
         )
 
     # Store observations once, then recompute every retained roster from them.
@@ -1485,12 +1487,12 @@ def run_scraper(args):
 
                 combined_entries = us_entries + cn_entries
 
-                # Research and scoring both use the configured eighteen components.
+                # Research and scoring both use the configured seventeen components.
                 # -------------------------------------------------------------
                 # Gap-Filling Pass — runs BEFORE Pass 1 so the scoring sees the
                 # enriched data from the start. See docs/ai_gap_filling.md.
                 # --no-gap-fill disables refresh and AI research. Direct sources
-                # do not require OPENAI_API_KEY; all eighteen components are researched.
+                # do not require OPENAI_API_KEY; all seventeen components are researched.
                 # -------------------------------------------------------------
                 if not getattr(args, "no_gap_fill", False):
                     from refresh_benchmark_sources import refresh_sources, persist_ai_findings

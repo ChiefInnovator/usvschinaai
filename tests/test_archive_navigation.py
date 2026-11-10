@@ -39,7 +39,7 @@ class ArchiveNavigationTests(unittest.TestCase):
             model_id, profile_id = f'model-{i}', f'profile-{i}'
             profile = {'model': f'Test Model {i}', 'Input$/M': '$1', 'Output$/M': '$2', 'company': 'Test'}
             row = dict(profile, modelId=model_id, profileId=profile_id, avgIq=70,
-                       value=23.33, unified=900-i*50, coverage='1/18', provisional=False)
+                       value=23.33, unified=900-i*50, coverage='1/17', provisional=False)
             rows['US' if i % 2 == 0 else 'CN'].append(row)
             catalog['models'][model_id] = {'profiles': {profile_id: profile}, 'benchmarks': {
                 'gpqa': {'e1': {'score': 70, 'source': 'https://example.org/evidence',
@@ -54,7 +54,7 @@ class ArchiveNavigationTests(unittest.TestCase):
                    'catalogFingerprint': 'fixture', 'metadata': {}, 'teams': {}, 'columns': [],
                    'benchmarks': [{'id': 'gpqa', 'name': 'GPQA', 'column': 'GPQA', 'weight': 15}] +
                                  [{'id': f'b{i}', 'name': f'Fixture benchmark {i}',
-                                   'column': f'B{i}', 'weight': 5} for i in range(17)],
+                                   'column': f'B{i}', 'weight': 5} for i in range(16)],
                    'current': current, 'history': [{'timestamp': s, 'scoringRevision': 'revision',
                                                    'scores': {'US': total, 'CN': total}} for s in cls.stamps]}
         payloads = {'data/site_summary.json': summary, 'data/model_catalog.json': catalog,

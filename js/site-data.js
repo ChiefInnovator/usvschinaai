@@ -37,7 +37,7 @@
         const publication = await manifest();
         const data = await json('data/site_summary.json', publication);
         if (data.schemaVersion !== 1 || data.generationId !== publication.generationId || data.scoringRevision !== publication.scoringRevision ||
-            !data.catalogFingerprint || !data.current || data.current.scoring?.revision !== data.scoringRevision || !Array.isArray(data.history) || !Array.isArray(data.benchmarks) || data.benchmarks.length !== 18 || data.benchmarks.some(b => !b.id || !b.column || !Number.isFinite(b.weight))) throw mismatch();
+            !data.catalogFingerprint || !data.current || data.current.scoring?.revision !== data.scoringRevision || !Array.isArray(data.history) || !Array.isArray(data.benchmarks) || data.benchmarks.length !== 17 || data.benchmarks.some(b => !b.id || !b.column || !Number.isFinite(b.weight))) throw mismatch();
         const rows = ['US','CN'].flatMap(country => {
             if (!Array.isArray(data.current.teams?.[country])) throw mismatch();
             return data.current.teams[country];

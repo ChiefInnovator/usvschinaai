@@ -134,7 +134,7 @@ class StoreIntegrationTests(unittest.TestCase):
             self.assertEqual((len(accepted),len(rejected)),(2,1))
             store.save_evidence(evidence,catalog);rows=store.load_data(path)['history'][0]['teams']['US']
             self.assertEqual(rows[0]['GPQADiamond'],'90%');self.assertEqual(rows[1]['GPQADiamond'],'70%')
-            self.assertEqual(rows[0]['GPQA'],'—');self.assertEqual(rows[0]['DeepSWE'],'—')
+            self.assertNotIn('GPQA',rows[0]);self.assertEqual(rows[0]['DeepSWE'],'—')
             self.assertEqual(rows[0]['DeepSWE1.1'],'85%');self.assertEqual(rows[1]['DeepSWE1.1'],'—')
 
     def test_interrupted_multi_file_save_recovers_without_losing_rosters(self):

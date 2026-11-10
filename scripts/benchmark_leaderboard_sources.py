@@ -34,7 +34,7 @@ VALS_SOURCES = {
     'lcb': ('livecodebench-v6', 'LiveCodeBench', 'overall', 'v6 code generation; overall accuracy, not an easy/medium/hard subset'),
     'swebench': ('swe-bench-verified', 'SWE-bench', 'overall', '500 Verified tasks; minimal bash-only agent harness'),
     'gpqa': ('gpqa-diamond', 'GPQA Diamond', 'overall', 'Diamond subset; overall accuracy'),
-    'terminal-bench-2-1': ('terminal-bench-2.1', 'Terminal-Bench 2.1', 'overall', 'version 2.1; overall accuracy'),
+    'terminal-bench-4': ('terminal-bench-4.0', 'Terminal-Bench 4.0', 'overall', 'version 4.0; overall accuracy'),
 }
 
 

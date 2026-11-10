@@ -320,7 +320,7 @@ _SYSTEM_PROMPT = (
     "11. Audit-informed source routes: check llm-stats benchmark leaderboards "
     "as well as model detail pages, following pagination. Check Vals "
     "(https://www.vals.ai/benchmarks/) for MMLU-Pro, AIME, LiveCodeBench, "
-    "SWE-bench Verified, GPQA Diamond and Terminal-Bench 2.1. Inspect embedded "
+    "SWE-bench Verified, GPQA Diamond and Terminal-Bench 4.0. Inspect embedded "
     "structured results when rendered summaries omit numbers; use the exact "
     "model row and selected task, not a headline or comparison snippet. An "
     "archived benchmark can still contain usable results; archived does not "
@@ -328,8 +328,9 @@ _SYSTEM_PROMPT = (
     "12. Metric checks: Vals AIME 'overall' combines 2024 and 2025; use only "
     "the 'aime_2025' task. Vals MMLU-Pro uses overall accuracy across 14 "
     "subjects, not the highest subject. LiveCodeBench must be v6 overall "
-    "code generation, not an easy/medium/hard subset. GPQA Diamond is not "
-    "generic GPQA. On https://agents-last-exam.org/api/demo/leaderboard use "
+    "code generation, not an easy/medium/hard subset. A result reported as "
+    "plain GPQA counts as GPQA Diamond; GPQA Extended and other subsets do "
+    "not. On https://agents-last-exam.org/api/demo/leaderboard use "
     "split='full' and passRate, never avgScore or a sub-split. OfficeQA Pro "
     "requires full-corpus evaluation, not oracle pages or OfficeQA-Full; "
     "consult https://arxiv.org/html/2603.08655v1 and retain the harness and "
@@ -816,7 +817,7 @@ def run_gap_filling_pass(
     model_discovered = False
 
     candidates = build_candidates(combined_entries)
-    print(f"[gap-fill] {len(candidates)} missing results across the eighteen configured Avg IQ benchmarks")
+    print(f"[gap-fill] {len(candidates)} missing results across the seventeen configured Avg IQ benchmarks")
     if skip_pairs:
         before = len(candidates)
         candidates = [c for c in candidates if (c.model_name, c.benchmark) not in skip_pairs]

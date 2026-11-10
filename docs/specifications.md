@@ -25,7 +25,7 @@ the numeric zero contribution used by the current scorer.
 
 ## Scoring
 
-`data/core_benchmarks.json` is the selection/alias/weight authority for eighteen
+`data/core_benchmarks.json` is the selection/alias/weight authority for seventeen
 benchmarks totaling 100%. `scripts/scoring.py` and its dependencies implement
 calculation and applicability. Full rules and adjustment history are in
 [two_pass_scoring.md](two_pass_scoring.md).
