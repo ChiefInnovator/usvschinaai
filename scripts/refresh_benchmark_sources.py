@@ -192,8 +192,11 @@ def source_health(previous, counts, pages, failures, retrieved):
         failed=len(found)*2>total if total>1 else bool(found)
         status='failed' if failed else 'ok' if counts[name] else 'empty'
         before=previous.get(name) or {}
+        # A productive source that moves between failed and empty is still one outage.
+        continuing=before.get('status')==status or bool(
+            status!='ok' and before.get('status') in ('failed','empty') and before.get('lastOk'))
         record=dict(status=status,findings=counts[name],
-                    since=before.get('since',retrieved) if before.get('status')==status else retrieved,
+                    since=before.get('since',retrieved) if continuing else retrieved,
                     lastOk=retrieved if status=='ok' else before.get('lastOk'))
         if total>1: record.update(pages=total,failedPages=len(found))
         if found: record['error']=found[0]

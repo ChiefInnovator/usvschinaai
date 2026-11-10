@@ -212,6 +212,13 @@ def is_new_model(model_name: str, first_seen: Optional[Dict[str, str]], now: dat
     return (now.date() - seen) < timedelta(days=NEW_MODEL_DAYS)
 
 
+@preconditions(entry='entry')
+def release_day(entry: Any) -> str:
+    """The entry's normalized release day. `Released` is a display label that
+    may read "Sep. 2026", so it is only a fallback for entries without one."""
+    return str(getattr(entry, "release_date", "") or entry.columns.get("Released") or "")
+
+
 @preconditions(combined_entries='sequence')
 def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
     """Research every missing configured Avg IQ component for every retained model.
@@ -224,7 +231,7 @@ def build_candidates(combined_entries: List[Any]) -> List[GapCandidate]:
         GapCandidate(
             model_name=entry.name, model_country=entry.country,
             model_url=entry.url, organization=entry.columns.get("Organization", ""),
-            benchmark=component["name"], released=str(entry.columns.get("Released") or ""),
+            benchmark=component["name"], released=release_day(entry),
         )
         for entry in combined_entries
         for component in load_config()["benchmarks"]

@@ -133,6 +133,21 @@ class SourceRefreshTests(unittest.TestCase):
         recovered=refresh.source_health(health,dict(counts,**{'vals:gpqa':7}),{'llm-stats':10},[],'2026-11-11')
         self.assertEqual(recovered['vals:gpqa'],dict(status='ok',findings=7,since='2026-11-11',lastOk='2026-11-11'))
 
+    def test_outage_start_survives_a_change_of_failure_mode(self):
+        # Parser exception one night, an answer with no matches the next: still one outage.
+        previous={'vals:gpqa':dict(status='failed',findings=0,since='2026-11-08',lastOk='2026-11-07'),
+                  'aa':dict(status='empty',findings=0,since='2026-11-08',lastOk='2026-11-07'),
+                  'charxiv':dict(status='empty',findings=0,since='2026-09-06',lastOk=None)}
+        counts={'vals:gpqa':0,'aa':0,'charxiv':0}
+        failures=[{'source':'aa','error':'payload changed'},{'source':'charxiv','error':'timed out'}]
+        health=refresh.source_health(previous,counts,{},failures,'2026-11-09')
+        self.assertEqual((health['vals:gpqa']['status'],health['vals:gpqa']['since']),('empty','2026-11-08'))
+        self.assertEqual((health['aa']['status'],health['aa']['since']),('failed','2026-11-08'))
+        # A source that never matched is not in an outage; its first error starts the clock.
+        self.assertEqual((health['charxiv']['status'],health['charxiv']['since']),('failed','2026-11-09'))
+        recovered=refresh.source_health(health,dict(counts,aa=3),{},[],'2026-11-10')
+        self.assertEqual((recovered['aa']['status'],recovered['aa']['since']),('ok','2026-11-10'))
+
     def test_refresh_reports_missing_epoch_table_and_writes_health(self):
         import io
         import zipfile

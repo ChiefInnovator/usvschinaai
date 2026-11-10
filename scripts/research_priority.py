@@ -14,7 +14,7 @@ Each tier alternates between countries.
 from itertools import zip_longest
 
 from avg_iq_benchmarks import selected_value
-from gap_fill_benchmarks import is_new_model
+from gap_fill_benchmarks import is_new_model, release_day
 from preconditions import preconditions
 
 
@@ -41,7 +41,6 @@ def plan_research(entries, board, first_seen, now, benchmarks):
     new, rest = [], []
     for entry in entries:
         if entry.name not in board:
-            released = str(entry.columns.get('Released') or '')
-            (new if is_new_model(entry.name, first_seen, now, released) else rest).append(entry)
+            (new if is_new_model(entry.name, first_seen, now, release_day(entry)) else rest).append(entry)
     print(f"[gap-fill] research order: {len(on_board)} on the board, {len(new)} new releases, {len(rest)} others")
     return [*alternate(on_board), *alternate(new), *alternate(rest)]

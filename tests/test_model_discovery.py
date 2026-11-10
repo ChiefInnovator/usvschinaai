@@ -26,6 +26,7 @@ class ModelDiscoveryTests(unittest.TestCase):
         self.assertEqual([e.name for e in result], ['Claude Opus 5.5'])
         self.assertEqual(result[0].columns['Output $/M'], '$20')
         self.assertEqual(result[0].columns['Released'], 'Sep. 2026')
+        self.assertEqual(result[0].release_date, '2026-09-23', 'the label is display only')
         earlier = discover_released_models([], metadata, 'US', '2026-09-22', catalog)
         self.assertEqual([e.name for e in earlier], ['Claude Opus 5'])
 
@@ -37,6 +38,7 @@ class ModelDiscoveryTests(unittest.TestCase):
         result = discover_released_models([old], metadata, 'US', '2026-09-26')
         self.assertEqual([e.name for e in result], ['Claude Opus 5.5'])
         self.assertEqual(result[0].columns['Released'], '2026-09-22')
+        self.assertEqual(result[0].release_date, '2026-09-22')
         self.assertEqual(result[0].columns['Input $/M'], '4')
 
     def test_full_dataset_has_no_table_or_pool_cutoff(self):

@@ -55,6 +55,7 @@ class LeaderboardEntry:
     country: str
     url: str
     columns: Dict[str, str] = field(default_factory=dict)  # Header -> raw value
+    release_date: str = ""  # Normalized ISO day; columns["Released"] is a display label
 
 
 # Benchmark records in the flight payload are flat objects delimited by `{` / `}`.
@@ -452,6 +453,7 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
             'Input $/M': str(record['input_price']) if record.get('input_price') is not None else '—',
             'Output $/M': str(record['output_price']) if record.get('output_price') is not None else '—',
         })
+        entry.release_date = release_day
         candidates.append(entry)
         release_days[entry.url] = release_day
     if not candidates:

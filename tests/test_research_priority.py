@@ -47,6 +47,14 @@ class ResearchPriorityTests(unittest.TestCase):
         order = plan(entries, board=('Just promoted',), first_seen={'Just promoted': '2026-11-09'})
         self.assertEqual([e.name for e in order], ['Just promoted', 'Fresh', 'Never on board', 'Label only'])
 
+    def test_display_label_does_not_hide_a_recent_release(self):
+        # A retained catalog release shows "Nov. 2026" but carries its normalized day.
+        labelled = entry('Labelled', 'US', 'Nov. 2026')
+        labelled.release_date = '2026-11-06'
+        order = plan([entry('Old', 'US', '2026-03-01'), labelled])
+        self.assertEqual([e.name for e in order], ['Labelled', 'Old'])
+        self.assertEqual(gf.build_candidates([labelled])[0].released, '2026-11-06')
+
     def test_alternation_keeps_each_countrys_order(self):
         mixed = [entry('a', 'US'), entry('b', 'US'), entry('c', 'CN')]
         self.assertEqual([e.name for e in alternate(mixed)], ['a', 'c', 'b'])
