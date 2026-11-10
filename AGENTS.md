@@ -2,6 +2,9 @@
 
 - Never display benchmark weight percentages in the UI; show benchmark names only.
 
+- Always upgrade dependencies. Keep Playwright unpinned so workflows install its
+  latest stable release; retain dependency freshness and compatibility checks.
+
 - Branch flow is same-repository feature branch -> develop -> main. A feature
   branch is any nonempty branch other than main, develop or master.
 - Never push directly to main or develop. Use merge-commit pull requests;

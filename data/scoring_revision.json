@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scoringRevision": "0ba06c278913de03276ee93691acb6b50a5dfed3f8d794cab474d6fdad487234",
+  "scoringRevision": "d98d99602210d35d1453ae1fe5af22e261cd9e72681bd396a0dd06df9d425ea9",
   "sources": {
     "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
     "scripts/ai_models.py": "65da7a0a2085deddeb22b225b424a3e32ceb691fe1a3b1adfe170a6919ae51ac",
@@ -13,7 +13,7 @@
     "scripts/model_families.py": "ee3bacdfd735e80dc76102f0c92a00fe18b7bde4bb3b169ae8b7b6c23c25315a",
     "scripts/model_store.py": "17682ddbde6af624f0fbe43fdbf94422650d63e473bbcb15eee9d3375faa90b7",
     "scripts/preconditions.py": "52bac796d71db8c04598c7a9d5ae78e404b086daa659ffb9f42dd69651c016c7",
-    "scripts/requirements.txt": "184dec9d4835377e06c943f59d7fb8f3c1991881d1d2471845b1e36ea84f930e",
+    "scripts/requirements.txt": "9783532043ce436f9126f1f5e2eebc4f8d7efe28d1fc2de4b2bbdbd999d20029",
     "scripts/rescore_history.py": "c8561b5bf607b684b4b7000562e81b40f7c22f47decce252f79116c61bd82f07",
     "scripts/scoring.py": "8201e88fa644dd2a83a8afdc69c2888c5658984ef6a817cf898baf06c77f754a",
     "scripts/scoring_revision.py": "2a3345919c02c1b93d96a6674c0dff708805a4fb625b4647825eb2fa08b7c51e",

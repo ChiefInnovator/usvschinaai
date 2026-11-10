@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-08T03:38:13.271334+00:00",
+  "lastUpdated": "2026-11-10T03:33:42.105670+00:00",
   "items": [
+    {
+      "id": "bfbf7905205db2a5",
+      "headline": "Nvidia CEO Admits Affair Amid Chinese Espionage Probe At $4.5 Trillion AI Giant (Worthy News Investigation)",
+      "url": "https://www.worthynews.com/118844-nvidia-ceo-admits-affair-amid-chinese-espionage-probe-at-4-5-trillion-ai-giant-worthy-news-investigation",
+      "source": "Worthy Christian News",
+      "country": "CN",
+      "publishedAt": "2026-11-09 14:47:45",
+      "relevanceScore": 0.24
+    },
     {
       "id": "424bf68d76affd46",
       "headline": "What Alibaba left blank about Qwen4",
@@ -90,60 +99,6 @@
       "country": "Both",
       "publishedAt": "2026-10-28 13:30:31",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "d241e01e2e39f8ac",
-      "headline": "Anthropic files papers to sell shares to the public for first time",
-      "url": "https://www.mor-tv.com/article/anthropic-claude-files-to-sell-shares-publicly/74248591",
-      "source": "Mor Tv",
-      "country": "Both",
-      "publishedAt": "2026-10-26 15:38:00",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "e3e23899545ee6d1",
-      "headline": "The U.S. and China AI rivalry is intensifying with the formation of these AI blocs",
-      "url": "https://www.fastcompany.com/91629784/u-s-china-ai-rivalry-intensifying-formation-ai-blocs",
-      "source": "Fast Company",
-      "country": "Both",
-      "publishedAt": "2026-10-26 14:46:23",
-      "relevanceScore": 0.63
-    },
-    {
-      "id": "3084836856587bda",
-      "headline": "Anthropic files for an IPO that could top SpaceX’s record debut",
-      "url": "https://apnews.com/article/anthropic-ipo-shares-public-ca2f4c282bef3201a392e59e3df2300c",
-      "source": "Apnews",
-      "country": "US",
-      "publishedAt": "2026-10-26 13:07:32",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "302c3a62588b7eb0",
-      "headline": "Anthropic files for potentially the biggest IPO ever even as CEO warns of risk to humanity from AI",
-      "url": "https://kstp.com/ap-top-news/ap-top-news-business/anthropic-files-for-potentially-the-biggest-ipo-ever-even-as-ceo-warns-of-risk-to-humanity-from-ai/",
-      "source": "Kstp Television",
-      "country": "US",
-      "publishedAt": "2026-10-26 13:05:25",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "5f1b9193cb0b8213",
-      "headline": "Anthropic files for potentially the biggest IPO ever as CEO warns of risk to humanity from AI",
-      "url": "https://www.kob.com/ap-top-news/anthropic-files-for-potentially-the-biggest-ipo-ever-as-ceo-warns-of-risk-to-humanity-from-ai/",
-      "source": "Kob 4",
-      "country": "US",
-      "publishedAt": "2026-10-26 13:05:25",
-      "relevanceScore": 0.53
-    },
-    {
-      "id": "7158d81995179ed8",
-      "headline": "Chamath Palihapitiya Takes Dig at Claude as Economist Warns of AI Bubble: ‘AI Moves in Mysterious Ways’",
-      "url": "https://www.benzinga.com/markets/tech/26/10/62579263/chamath-palihapitiya-takes-dig-at-claude-as-economist-warns-of-ai-bubble-ai-moves-in-mysterious-ways",
-      "source": "Benzinga",
-      "country": "Both",
-      "publishedAt": "2026-10-25 06:37:11",
-      "relevanceScore": 0.3
     }
   ]
 }
