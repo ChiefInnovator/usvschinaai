@@ -89,13 +89,13 @@ class SourceRefreshTests(unittest.TestCase):
         def aa_page(**scores):
             record=dict(id='0'*8+'-0000-0000-0000-'+'0'*12,slug='model-a',name='Model A',**scores)
             return 'self.__next_f.push([1,"'+json.dumps(json.dumps(record,separators=(',',':')))[1:-1]+'"])'
-        current=dict(gpqa=0.9,ifbench=0.5,mmmuPro=0.6,terminalBench21=0.7)
+        current=dict(gpqa=0.9,ifbench=0.5,mmmuPro=0.6,terminalBench40=0.7,terminalBench21=0.99)
         found,_,_=harvest.harvest_aa(aa_page(**current),['Model A'],{})
         self.assertEqual({r['component']:r['score'] for r in found},
-                         {'gpqa-diamond':90.0,'ifbench':50.0,'mmmu-pro':60.0,'terminal-bench-2.1':70.0})
-        renamed=dict(current,terminalbenchV21=current['terminalBench21']); del renamed['terminalBench21']
+                         {'gpqa-diamond':90.0,'ifbench':50.0,'mmmu-pro':60.0,'terminal-bench-4.0':70.0})
+        renamed=dict(current,terminalbench40=current['terminalBench40']); del renamed['terminalBench40']
         for raw in (aa_page(**renamed),'<html>no payload</html>'):
-            with self.assertRaisesRegex(ValueError,'terminalBench21'): harvest.load_aa(raw)
+            with self.assertRaisesRegex(ValueError,'terminalBench40'): harvest.load_aa(raw)
 
     def test_fetch_retries_throttling_but_not_missing_pages(self):
         import io

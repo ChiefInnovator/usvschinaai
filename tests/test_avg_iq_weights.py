@@ -19,7 +19,7 @@ class WeightedInputsTests(unittest.TestCase):
         weights = selected_weights(['Humanity’s Last Exam', 'SWE-bench Verified', 'DeepSWE'])
         model = E('M', 'US', **{'HLE': '40%', 'SWE-benchVerified': '80%'})
         result = score_avg_iq_cohort([model], log=lambda *a: None)
-        self.assertEqual(result.coverage(model), (2, 18))
+        self.assertEqual(result.coverage(model), (2, 17))
         self.assertEqual(result.scores_for(model)['avgIq'],
                          round(40 * weights['Humanity’s Last Exam'] + 80 * weights['SWE-bench Verified'], 2))
 
@@ -29,10 +29,11 @@ class WeightedInputsTests(unittest.TestCase):
 
     def test_configuration_and_exact_versions(self):
         b = load_config()['benchmarks']
-        self.assertEqual(len(b), 18)
+        self.assertEqual(len(b), 17)
         self.assertAlmostEqual(sum(x['weight'] for x in b), 100)
         self.assertTrue(all(x['weight'] >= 0 for x in b))
-        self.assertEqual(selected_weights(['GPQA Extended', 'DeepSWE 1.0', 'Terminal-Bench2.0', 'FrontierMath', 'ARC-AGI', 'CharXiv']), {})
+        self.assertEqual(selected_weights(['GPQA Extended', 'DeepSWE 1.0', 'Terminal-Bench2.0', 'Terminal-Bench 2.1', 'FrontierMath', 'ARC-AGI', 'CharXiv']), {})
+        self.assertEqual(list(selected_weights(['Terminal-Bench 4.0'])), ['Terminal-Bench 4.0'])
         self.assertEqual(selected_weights(['DeepSWE1.1']), {'DeepSWE1.1': next(b['weight']/100 for b in load_config()['benchmarks'] if b['id']=='deepswe-1.1')})
 
     def test_deepswe_versions_have_independent_weights_and_scores(self):
@@ -43,7 +44,7 @@ class WeightedInputsTests(unittest.TestCase):
         model=E('M','US',**{'DeepSWE':'80%','DeepSWE1.1':'90%'})
         scored=score_avg_iq_cohort([model],log=lambda *a:None)
         self.assertEqual(scored.scores_for(model)['avgIq'],round(80*weights['DeepSWE']+90*weights['DeepSWE1.1'],2))
-        self.assertEqual(scored.coverage(model),(2,18))
+        self.assertEqual(scored.coverage(model),(2,17))
 
     def test_livecodebench_v6_allocation_and_version_boundary(self):
         from avg_iq_benchmarks import selected_value
@@ -51,20 +52,26 @@ class WeightedInputsTests(unittest.TestCase):
         self.assertEqual(selected_value({'LiveCodeBench':'99%','LiveCodeBench v5':'98%'},'LiveCodeBench v6'),'')
         model=E('M','CN',**{'LiveCodeBenchv6':'80%'})
         result=score_avg_iq_cohort([model],log=lambda *a:None)
-        self.assertEqual(result.coverage(model),(1,18))
+        self.assertEqual(result.coverage(model),(1,17))
         self.assertEqual(result.scores_for(model)['avgIq'],round(80*weights['LiveCodeBench v6'],2))
 
-    def test_new_benchmarks_and_gpqa_subsets_score_separately(self):
+    def test_generic_gpqa_is_gpqa_diamond_and_counts_once(self):
         from avg_iq_benchmarks import selected_value
-        self.assertEqual(selected_value({'GPQA':'90%'},'GPQA Diamond'),'')
-        self.assertEqual(selected_value({'GPQA Diamond':'90%'},'GPQA'),'')
-        model=E('M','US',**{'GPQA':'80%','GPQADiamond':'90%','MMLU-Pro':'70%','AIME2025':'60%'})
-        result=score_avg_iq_cohort([model],log=lambda *a:None)
-        self.assertEqual(result.coverage(model),(3,18))
+        # llm-stats reports the benchmark as GPQA; it fills GPQA Diamond when that column is absent.
+        self.assertEqual(selected_value({'GPQA':'90%'},'GPQA Diamond'),'90%')
+        self.assertEqual(selected_value({'GPQA Extended':'99%'},'GPQA Diamond'),'')
         weights=selected_weights(['GPQA','GPQA Diamond','MMLU-Pro','AIME 2025'])
         self.assertNotIn('AIME 2025', weights)
-        expected=80*weights['GPQA']+90*weights['GPQA Diamond']+70*weights['MMLU-Pro']
-        self.assertEqual(result.scores_for(model)['avgIq'],round(expected,2))
+        self.assertEqual(weights['GPQA'],weights['GPQA Diamond'])
+        self.assertAlmostEqual(weights['GPQA Diamond'],0.3282950111865068)
+        generic_only=E('G','US',**{'GPQA':'80%'})
+        both=E('M','US',**{'GPQA':'80%','GPQADiamond':'90%','MMLU-Pro':'70%','AIME2025':'60%'})
+        result=score_avg_iq_cohort([generic_only,both],log=lambda *a:None)
+        self.assertEqual(result.coverage(generic_only),(1,17))
+        self.assertEqual(result.scores_for(generic_only)['avgIq'],round(80*weights['GPQA Diamond'],2))
+        # One component: the Diamond column decides and the generic one is not added on top.
+        self.assertEqual(result.coverage(both),(2,17))
+        self.assertEqual(result.scores_for(both)['avgIq'],round(90*weights['GPQA Diamond']+70*weights['MMLU-Pro'],2))
 
     def test_fixed_denominator_drives_value_and_formula(self):
         entries = self.entries()
@@ -90,7 +97,7 @@ class WeightedInputsTests(unittest.TestCase):
         result = score_avg_iq_cohort(entries, ['Toolathlon','DeepSWE1.1','BrowseComp','IFBench'], log=lambda *a: None)
         self.assertEqual(result.scores_for(entries[0])['avgIq'], round(90*selected_weights(['Toolathlon'])['Toolathlon']+70*selected_weights(['BrowseComp'])['BrowseComp']+95*selected_weights(['IFBench'])['IFBench'],2))
         self.assertIn('IFBench', result.benchmark_headers)
-        self.assertEqual(len(result.qualified_benchmarks),18)
+        self.assertEqual(len(result.qualified_benchmarks),17)
         self.assertEqual(result.qualified_min_reports,0)
         self.assertEqual([e.columns for e in entries], before)
 
@@ -99,7 +106,7 @@ class WeightedInputsTests(unittest.TestCase):
         result=score_avg_iq_cohort(entries,['BrowseComp'],log=lambda *a: None)
         self.assertEqual(result.scores_for(entries[0])['avgIq'],round(91.5*selected_weights(['BrowseComp'])['BrowseComp'],2))
         self.assertEqual(result.scores_for(entries[1])['avgIq'],0)
-        self.assertEqual(len(result.benchmark_headers),18)
+        self.assertEqual(len(result.benchmark_headers),17)
 
     def test_muse_example_keeps_all_twelve_allocations_in_denominator(self):
         e=E('Muse Spark 1.3','US', **{'DeepSWE1.1':'75.4%', 'Terminal-Bench2.1':'88.8%'})
@@ -175,7 +182,9 @@ class HistoricalEvidenceTests(unittest.TestCase):
         self.assertEqual(today['avgIq'],round(80*selected_weights(['GPQA Diamond'])['GPQA Diamond'],2))
         self.assertEqual(today['value'],round(40*selected_weights(['GPQA Diamond'])['GPQA Diamond'],2))
         self.assertEqual(earlier['avgIq'],0.0)
-        self.assertEqual(today['GPQA'],'—')
+        self.assertNotIn('GPQA',today)
+        self.assertEqual(today['Terminal-Bench4.0'],'—')
+        self.assertNotIn('Terminal-Bench2.1',today)
         self.assertNotIn('GPQA Extended',today)
         self.assertEqual(today['Toolathlon'],'—')
         self.assertNotIn('valueInputs',data['history'][0]['scoring'])

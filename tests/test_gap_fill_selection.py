@@ -28,11 +28,12 @@ class ResearchSelectionTests(unittest.TestCase):
 
     def test_aliases_count_but_unrelated_or_newer_benchmarks_do_not(self):
         e = entry(0, {'GPQA': '96%', 'DeepSWE1.1': '74.1%',
-                      'ARC-AGIv2': '95%', 'Terminal-Bench4.0': '57%', 'HLE': '65%'})
+                      'ARC-AGIv2': '95%', 'Terminal-Bench2.1': '57%', 'HLE': '65%'})
         names = {c.benchmark for c in build_candidates([e])}
-        self.assertEqual(len(names), 14)
-        self.assertIn('GPQA Diamond', names)
-        self.assertIn('Terminal-Bench 2.1', names)
+        self.assertEqual(len(names), 13)
+        # Generic GPQA is GPQA Diamond; an older Terminal-Bench version is not 4.0.
+        self.assertNotIn('GPQA Diamond', names)
+        self.assertIn('Terminal-Bench 4.0', names)
         self.assertNotIn('DeepSWE 1.1', names)
         self.assertNotIn('ARC-AGI-2', names)
         self.assertNotIn('Humanity’s Last Exam', names)
