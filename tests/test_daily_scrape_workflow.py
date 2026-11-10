@@ -115,7 +115,7 @@ class CarryForwardStepTests(unittest.TestCase):
         self.git(self.work, "checkout", "--quiet", "-b", "develop")
         (self.work / "scripts").mkdir()
         self.commit({"models.json": "day 1\n", "scripts/code.py": "v1\n"}, "develop")
-        self.git(self.work, "push", "--quiet", "origin", "develop")
+        self.git(self.work, "push", "--quiet", "origin", "develop", "develop:main")
         self.develop = self.head()
 
     def git(self, cwd, *args):
@@ -158,7 +158,9 @@ class CarryForwardStepTests(unittest.TestCase):
                "GITHUB_OUTPUT": str(out), "RUNNER_TEMP": str(runner), "GITHUB_REPOSITORY": "o/r"}
         done = subprocess.run(["bash", "-e", "-c", script], cwd=self.work, env=env, capture_output=True, text=True)
         self.assertEqual(done.returncode, 0, done.stderr)
-        self.assertEqual(out.read_text().strip(), f"develop_sha={self.develop}")
+        outputs = dict(line.split("=", 1) for line in out.read_text().split())
+        self.assertEqual(outputs["develop_sha"], self.develop)
+        self.promoted = outputs["promoted"]
         self.assertEqual(self.git(self.work, "status", "--porcelain"), "")
         return done.stdout, (runner / "pending-note.md").exists()
 
@@ -166,6 +168,7 @@ class CarryForwardStepTests(unittest.TestCase):
         log, noted = self.run_step()
         self.assertEqual((self.head(), noted), (self.develop, False))
         self.assertIn("building on develop", log)
+        self.assertEqual(self.promoted, "true", "develop matches main, so the run may publish itself")
 
     def test_pending_data_is_built_upon(self):
         branch, tip = self.pending({"models.json": "day 1\nday 2\n"})
@@ -181,6 +184,7 @@ class CarryForwardStepTests(unittest.TestCase):
         self.develop = self.head()
         self.run_step(branch)
         self.assertEqual(self.git(self.work, "rev-list", "--parents", "-n", "1", "HEAD").split()[1:], [self.develop, tip])
+        self.assertEqual(self.promoted, "false", "develop holds code main does not; a person promotes")
         self.assertEqual((self.work / "scripts/code.py").read_text(), "v2\n")
 
     def test_branch_touching_code_is_never_built_upon(self):
@@ -212,6 +216,50 @@ class CarryForwardStepTests(unittest.TestCase):
         self.assertEqual(order, sorted(order))
         # The pending branch is read with the job's read-only token, never the publishing one.
         self.assertNotIn("PAT_TOKEN", step("Carry forward an unmerged daily scrape"))
+
+
+class AutoPublishStepTests(unittest.TestCase):
+    def publish(self, promoted, pending=False):
+        """Run the publish step's shell with a stub publisher; returns (exit code, output)."""
+        script = (run_block(step("Publish daily data"))
+                  .replace("${{ steps.base.outputs.promoted }}", promoted)
+                  .replace("${{ steps.pr.outputs.branch }}", "feature/daily-scrape-1-1"))
+        with tempfile.TemporaryDirectory() as tmp:
+            stub = Path(tmp) / "python"
+            stub.write_text('#!/bin/sh\necho "published $*"\n')
+            stub.chmod(stub.stat().st_mode | stat.S_IEXEC)
+            if pending:
+                (Path(tmp) / "pending-note.md").write_text("carried forward")
+            env = {**os.environ, "PATH": f"{tmp}:{os.environ['PATH']}", "RUNNER_TEMP": tmp, "GITHUB_REPOSITORY": "o/r"}
+            done = subprocess.run(["bash", "-e", "-c", script], env=env, capture_output=True, text=True)
+        return done.returncode, done.stdout
+
+    def test_publishes_only_from_a_fully_promoted_develop_not_built_on_pending_data(self):
+        code, log = self.publish("true")
+        self.assertEqual(code, 0)
+        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1", log)
+        for promoted, pending in (("false", False), ("", False), ("true", True)):
+            code, log = self.publish(promoted, pending)
+            self.assertEqual(code, 1, (promoted, pending))
+            self.assertIn("::error::", log)
+            self.assertNotIn("published", log)
+
+    def test_publication_follows_the_pull_request_and_never_bypasses_it(self):
+        text = WORKFLOW.read_text(encoding="utf-8")
+        order = [text.index(f"- name: {n}") for n in
+                 ("Open data feature pull request", "Publish daily data", "Alert on sustained benchmark source outage")]
+        self.assertEqual(order, sorted(order))
+        publish = step("Publish daily data")
+        self.assertIn("steps.changes.outputs.has_changes == 'true'", publish)
+        self.assertNotRegex(text, r"git push[^\n]*(develop|main)\b")
+        self.assertNotRegex(text, r"--admin|--auto\b|--squash|--rebase")
+        # A stopped publication must not hide a source outage.
+        self.assertIn("!cancelled()", step("Alert on sustained benchmark source outage"))
+
+    def test_run_records_whether_develop_was_fully_promoted(self):
+        base = run_block(step("Carry forward an unmerged daily scrape"))
+        self.assertIn("git diff --quiet origin/main HEAD", base)
+        self.assertLess(base.index("promoted="), base.index("gh pr list"))
 
 
 if __name__ == "__main__":

@@ -67,7 +67,17 @@ rollback source; restore a complete verified artifact for immediate site rollbac
 
 ## Unmerged daily publications
 
-Publishing is two manual merges, so a daily pull request can still be open when
+The daily scrape publishes its own data when nothing needs a person
+(`scripts/publish_daily_data.py`): it merges its pull request into develop and
+promotes develop to main, both as merge-commit pull requests. It does so only
+when the required checks pass on the exact head commit, the automatic review
+has finished on that commit with no open thread, develop held nothing
+unpromoted before the run, and the run was not built on an unmerged daily pull
+request. Otherwise the step fails, the pull request stays open, and the
+failure email asks for a manual merge. Backfill pull requests and code changes
+are never published automatically.
+
+A daily pull request can therefore still be open when
 the next scrape starts. Building that run on develop alone would omit the
 waiting snapshot and conflict with it at merge. The daily workflow therefore
 builds on develop plus the newest open `feature/daily-scrape-*` branch when all

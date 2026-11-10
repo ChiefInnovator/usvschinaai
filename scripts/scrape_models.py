@@ -464,6 +464,33 @@ def discover_released_models(entries, metadata, country, today, catalog=None):
     return dedupe_superseded_versions(candidates)
 
 
+@preconditions(page='page', origin_code='text', timeout='positive')
+def wait_for_country_rows(page, origin_code: str, timeout: float = 20.0) -> bool:
+    """Wait until every table row belongs to the filtered country.
+
+    The filter re-renders the table asynchronously. A fixed pause that is too
+    short leaves rows from the other country in place, and the scrape then
+    refuses to publish. Returns False when the wait cannot confirm the filter;
+    the caller keeps its fixed pause and the per-row country check still guards.
+    """
+    try:
+        countries = {slug: record.get('organization_country')
+                     for slug, record in extract_leaderboard_metadata(page).items()}
+    except Exception:
+        return False
+    deadline = time.monotonic() + timeout
+    while time.monotonic() < deadline:
+        try:
+            links = [row.query_selector("a") for row in page.query_selector_all("tbody tr")]
+            slugs = [(link.get_attribute("href") or "").rstrip('/').rsplit('/', 1)[-1] for link in links if link]
+        except Exception:
+            slugs = []  # the table is mid-render; look again
+        if slugs and all(countries.get(slug) == origin_code for slug in slugs):
+            return True
+        time.sleep(0.5)
+    return False
+
+
 @preconditions(page='page', country_name='text', origin_code='text', max_models='int', stage='text')
 def scrape_country_leaderboard(
     page,
@@ -537,8 +564,9 @@ def scrape_country_leaderboard(
         return [], [], []
 
     country_option.click()
-    time.sleep(2)
-    
+    if not wait_for_country_rows(page, origin_code):
+        time.sleep(2)
+
     # Extract all table headers
     header_elements = page.query_selector_all("thead th")
     all_headers = [h.inner_text().strip() for h in header_elements]

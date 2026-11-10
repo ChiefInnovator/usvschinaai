@@ -308,8 +308,11 @@ def main():
     print(f"  Got {len(raw_articles)} articles")
 
     if not raw_articles:
-        print("No articles fetched. Keeping existing news.json if present.")
-        sys.exit(0)
+        # Still run the merge below: it ages out old and low-quality items.
+        if not news_path.exists():
+            print("No articles fetched and no existing news.json.")
+            sys.exit(0)
+        print("No articles fetched. Pruning existing news.json.")
 
     # Transform and filter
     transformed = [transform_article(a) for a in raw_articles]
@@ -327,9 +330,15 @@ def main():
     # Merge with existing
     final = merge_with_existing(transformed, news_path)
 
-    # Write news.json
+    # Write news.json. lastUpdated is the last successful fetch, not the last prune.
+    last_updated = datetime.now(timezone.utc).isoformat()
+    if not raw_articles:
+        try:
+            last_updated = json.loads(news_path.read_text(encoding="utf-8")).get("lastUpdated") or last_updated
+        except (OSError, ValueError):
+            pass
     output = {
-        "lastUpdated": datetime.now(timezone.utc).isoformat(),
+        "lastUpdated": last_updated,
         "items": final,
     }
     with open(news_path, "w", encoding="utf-8") as f:
