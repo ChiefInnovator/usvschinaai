@@ -84,6 +84,14 @@ jobs:
         run: |
           DEVELOP_SHA=$(git rev-parse HEAD)
           echo "develop_sha=$DEVELOP_SHA" >> "$GITHUB_OUTPUT"
+          # Automatic publication promotes all of develop, so it is allowed only
+          # when every develop commit is already on main. Equal file content is
+          # not enough: an unpromoted revert leaves the same tree.
+          if git merge-base --is-ancestor "$DEVELOP_SHA" origin/main; then
+            echo "promoted=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "promoted=false" >> "$GITHUB_OUTPUT"
+          fi
           PENDING=$(gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open \
             --json headRefName,createdAt \
             --jq '[.[] | select(.headRefName | startswith("feature/daily-scrape-"))] | sort_by(.createdAt) | last | .headRefName // empty') || PENDING=""
@@ -187,6 +195,7 @@ jobs:
           python scripts/prepare_publication.py
 
       - name: Summarize benchmark source health
+        id: summary
         # Read by the pull request below, so a broken source is seen at review.
         # A summary problem must never hold back the publication.
         run: |
@@ -222,11 +231,12 @@ jobs:
           echo "has_changes=$CHANGES" >> "$GITHUB_OUTPUT"
 
       - name: Open data feature pull request
+        id: pr
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          # Only this step and the token preflight can access the write-capable token.
+          # Only this step, the token preflight and the publish step can access the write-capable token.
           gh auth setup-git
           git fetch origin develop
           if [ "${{ steps.base.outputs.develop_sha }}" != "$(git rev-parse FETCH_HEAD)" ]; then
@@ -266,6 +276,29 @@ jobs:
           gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
             --title "Refresh data (daily-scrape)" \
             --body-file "$RUNNER_TEMP/pr-body.md"
+          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Publish daily data
+        # Merges the data pull request and promotes develop to main, both as
+        # merge-commit pull requests, when required checks pass and the
+        # automatic review leaves no open thread. Anything else fails this step:
+        # the pull request stays open and the failure email asks for a manual merge.
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          if [ "${{ steps.base.outputs.promoted }}" != "true" ]; then
+            echo "::error::develop held changes not yet on main before this run. Merge the data pull request and promote develop by hand."
+            exit 1
+          fi
+          if [ -f "$RUNNER_TEMP/pending-note.md" ]; then
+            echo "::error::This run was built on an unmerged daily pull request. Review and merge the new pull request by hand."
+            exit 1
+          fi
+          python scripts/publish_daily_data.py --repo "$GITHUB_REPOSITORY" \
+            --branch "${{ steps.pr.outputs.branch }}" --head "${{ steps.pr.outputs.head }}" \
+            --develop "${{ steps.base.outputs.develop_sha }}"
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'
@@ -281,4 +314,6 @@ jobs:
       - name: Alert on sustained benchmark source outage
         # Runs after the pull request is open: the data still publishes, but a
         # source broken on consecutive nights turns this run red and emails.
+        # It also runs when publication stopped for a manual merge.
+        if: ${{ !cancelled() && steps.summary.outcome == 'success' }}
         run: python scripts/check_source_health.py

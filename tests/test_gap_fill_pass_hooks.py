@@ -33,7 +33,8 @@ class PassHookTests(unittest.TestCase):
         gf.append_audit_entry = lambda entry: None
         gf.query_openai_responses = lambda *a, **k: self.calls.append(k.get("user", a[1] if len(a) > 1 else "")) or {}
         gf.extract_json_from_response = lambda raw: {"results": []}
-        gf.validate_batch_response = lambda parsed, expected: {}      # every benchmark omitted -> nulls
+        # Every benchmark answered "no result".
+        gf.validate_batch_response = lambda parsed, expected: {b: {"benchmark": b, "score": None} for b in expected}
 
         class T:
             @staticmethod
@@ -211,6 +212,17 @@ class PassHookTests(unittest.TestCase):
         gf.run_gap_filling_pass([old, recent], max_calls=1, new_model_max_calls=0)
         self.assertIn("Old", saved, "an old release's nulls are cached like any other model's")
         self.assertNotIn("Recent", saved)
+
+    def test_unanswered_benchmark_is_not_cached_as_no_result(self):
+        # The response covered HLE only; GPQA was cut off and must be asked again.
+        gf.validate_batch_response = lambda parsed, expected: {"HLE": {"benchmark": "HLE", "score": None}}
+        saved = {}
+        gf.save_cache = lambda cache: saved.update(cache)
+        asked = []
+        gf.run_gap_filling_pass([Entry("M", "US", {"HLE": "—", "GPQA": "—"})], max_calls=1,
+                                on_batch=lambda model, benchmarks: asked.append((model, benchmarks)))
+        self.assertEqual(list(saved["M"]), ["HLE"])
+        self.assertEqual(asked, [("M", ["HLE"])], "the backfill must not record GPQA as asked")
 
     def test_new_model_window_is_two_weeks(self):
         from datetime import datetime, timezone, timedelta

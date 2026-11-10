@@ -11,7 +11,16 @@
   main accepts only develop, and develop accepts only feature branches.
 - GitHub Copilot automatically reviews pull requests targeting develop only.
 - Daily scrape and backfill open feature pull requests into develop. Data goes
-  live only after develop is promoted to main; do not bypass this for freshness.
+  live only after develop is promoted to main through a pull request.
+- The daily scrape publishes its own data: it merges its pull request and
+  promotes develop to main, both as merge-commit pull requests, only when its
+  pull request is the exact commit the run pushed and changes only generated
+  data, required checks pass, the automatic review is complete with no open
+  thread, develop held nothing unpromoted before the run and did not move
+  during it, and the run was not built on an unmerged daily pull request.
+  Otherwise it stops and a person merges.
+  Code changes and backfill pull requests are always merged and promoted by a
+  person; do not extend automatic publication to them.
 
 - Every scoring algorithm change requires a full rescore of every retained
   historical snapshot before publication. This includes benchmark selection,
