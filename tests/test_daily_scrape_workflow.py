@@ -233,6 +233,7 @@ class AutoPublishStepTests(unittest.TestCase):
         script = (run_block(step("Publish daily data"))
                   .replace("${{ steps.base.outputs.promoted }}", promoted)
                   .replace("${{ steps.pr.outputs.branch }}", "feature/daily-scrape-1-1")
+                  .replace("${{ steps.pr.outputs.head }}", "def456")
                   .replace("${{ steps.base.outputs.develop_sha }}", "abc123"))
         with tempfile.TemporaryDirectory() as tmp:
             stub = Path(tmp) / "python"
@@ -247,7 +248,8 @@ class AutoPublishStepTests(unittest.TestCase):
     def test_publishes_only_from_a_fully_promoted_develop_not_built_on_pending_data(self):
         code, log = self.publish("true")
         self.assertEqual(code, 0)
-        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1 --develop abc123", log)
+        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1 "
+                      "--head def456 --develop abc123", log)
         for promoted, pending in (("false", False), ("", False), ("true", True)):
             code, log = self.publish(promoted, pending)
             self.assertEqual(code, 1, (promoted, pending))
@@ -261,6 +263,9 @@ class AutoPublishStepTests(unittest.TestCase):
         self.assertEqual(order, sorted(order))
         publish = step("Publish daily data")
         self.assertIn("steps.changes.outputs.has_changes == 'true'", publish)
+        # The publisher is bound to the commit this job pushed, recorded right after the push.
+        opened = run_block(step("Open data feature pull request"))
+        self.assertLess(opened.index("git push origin"), opened.index('echo "head=$(git rev-parse HEAD)"'))
         self.assertNotRegex(text, r"git push[^\n]*(develop|main)\b")
         self.assertNotRegex(text, r"--admin|--auto\b|--squash|--rebase")
         # A stopped publication must not hide a source outage.

@@ -13,10 +13,12 @@
 - Daily scrape and backfill open feature pull requests into develop. Data goes
   live only after develop is promoted to main through a pull request.
 - The daily scrape publishes its own data: it merges its pull request and
-  promotes develop to main, both as merge-commit pull requests, only when
-  required checks pass, the automatic review is complete with no open thread,
-  develop held nothing unpromoted before the run, and the run was not built on
-  an unmerged daily pull request. Otherwise it stops and a person merges.
+  promotes develop to main, both as merge-commit pull requests, only when its
+  pull request is the exact commit the run pushed and changes only generated
+  data, required checks pass, the automatic review is complete with no open
+  thread, develop held nothing unpromoted before the run and did not move
+  during it, and the run was not built on an unmerged daily pull request.
+  Otherwise it stops and a person merges.
   Code changes and backfill pull requests are always merged and promoted by a
   person; do not extend automatic publication to them.
 
