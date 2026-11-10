@@ -32,6 +32,16 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
+      - name: Verify publishing token
+        # Fail before paid research when the run could not open its pull request.
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          if ! gh api "repos/$GITHUB_REPOSITORY" --silent; then
+            echo '::error::PAT_TOKEN is missing, expired or revoked; the run could not open its pull request.'
+            exit 1
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -95,7 +105,7 @@ jobs:
           RESEARCH_DAYS: ${{ inputs.days }}
           RESEARCH_MODEL: ${{ inputs.model }}
         run: |
-          # Only this final step can access the write-capable token.
+          # Only this step and the token preflight can access the write-capable token.
           gh auth setup-git
           git fetch origin develop
           if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then

@@ -1040,16 +1040,6 @@
     "beforeAvailableEvidenceDays": 0
   },
   {
-    "model": "Claude Opus 4.5",
-    "component": "toolathlon",
-    "days": 170,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-07-15",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "Claude Opus 4.6",
     "component": "agents-last-exam",
     "days": 179,
@@ -1142,12 +1132,12 @@
   {
     "model": "Claude Opus 4.6",
     "component": "toolathlon",
-    "days": 110,
+    "days": 28,
     "firstDate": "2026-02-06",
-    "lastDate": "2026-05-27",
-    "reason": "Available evidence starts on 2026-05-28; earlier applicability is unverified.",
+    "lastDate": "2026-03-05",
+    "reason": "Available evidence starts on 2026-03-06; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 110
+    "beforeAvailableEvidenceDays": 28
   },
   {
     "model": "Claude Opus 4.7",
@@ -1232,12 +1222,12 @@
   {
     "model": "Claude Opus 4.7",
     "component": "toolathlon",
-    "days": 36,
+    "days": 4,
     "firstDate": "2026-04-21",
-    "lastDate": "2026-05-27",
-    "reason": "Available evidence starts on 2026-05-28; earlier applicability is unverified.",
+    "lastDate": "2026-04-24",
+    "reason": "Available evidence starts on 2026-04-25; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 36
+    "beforeAvailableEvidenceDays": 4
   },
   {
     "model": "Claude Opus 4.8",
@@ -1680,16 +1670,6 @@
     "beforeAvailableEvidenceDays": 0
   },
   {
-    "model": "Claude Sonnet 4",
-    "component": "toolathlon",
-    "days": 1,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-01-23",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "Claude Sonnet 4.5",
     "component": "agents-last-exam",
     "days": 39,
@@ -1778,16 +1758,6 @@
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "Claude Sonnet 4.5",
-    "component": "toolathlon",
-    "days": 39,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-03-06",
-    "reason": "Available evidence starts on 2026-05-28; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 39
   },
   {
     "model": "Claude Sonnet 4.6",
@@ -1882,12 +1852,12 @@
   {
     "model": "Claude Sonnet 4.6",
     "component": "toolathlon",
-    "days": 129,
+    "days": 3,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-06-29",
-    "reason": "Available evidence starts on 2026-06-30; earlier applicability is unverified.",
+    "lastDate": "2026-02-22",
+    "reason": "Available evidence starts on 2026-02-23; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 129
+    "beforeAvailableEvidenceDays": 3
   },
   {
     "model": "Claude Sonnet 5",
@@ -3642,12 +3612,12 @@
   {
     "model": "DeepSeek-V4.1-Flash-1017",
     "component": "mmmu-pro",
-    "days": 10,
+    "days": 9,
     "firstDate": "2026-10-31",
-    "lastDate": "2026-11-10",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "lastDate": "2026-11-09",
+    "reason": "Available evidence starts on 2026-11-10; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 9
   },
   {
     "model": "DeepSeek-V4.1-Flash-1017",
@@ -4060,16 +4030,6 @@
     "beforeAvailableEvidenceDays": 137
   },
   {
-    "model": "GLM-4.6",
-    "component": "toolathlon",
-    "days": 137,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-06-17",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "GLM-4.7",
     "component": "agents-last-exam",
     "days": 115,
@@ -4168,16 +4128,6 @@
     "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 115
-  },
-  {
-    "model": "GLM-4.7",
-    "component": "toolathlon",
-    "days": 22,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-02-16",
-    "reason": "Available evidence starts on 2026-02-17; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 22
   },
   {
     "model": "GLM-5",
@@ -4308,16 +4258,6 @@
     "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 0
-  },
-  {
-    "model": "GLM-5",
-    "component": "toolathlon",
-    "days": 4,
-    "firstDate": "2026-02-13",
-    "lastDate": "2026-02-16",
-    "reason": "Available evidence starts on 2026-02-17; earlier applicability is unverified.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 4
   },
   {
     "model": "GLM-5.1",
@@ -5108,16 +5048,6 @@
     "reason": "Available evidence starts on 2026-09-06; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
     "beforeAvailableEvidenceDays": 18
-  },
-  {
-    "model": "GPT-5.1",
-    "component": "toolathlon",
-    "days": 18,
-    "firstDate": "2026-01-28",
-    "lastDate": "2026-04-20",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
   },
   {
     "model": "GPT-5.1 High",
@@ -6632,12 +6562,12 @@
   {
     "model": "GPT-6 Luna",
     "component": "mmmu-pro",
-    "days": 41,
+    "days": 40,
     "firstDate": "2026-09-25",
-    "lastDate": "2026-11-10",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "lastDate": "2026-11-09",
+    "reason": "Available evidence starts on 2026-11-10; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 40
   },
   {
     "model": "GPT-6 Luna",
@@ -6880,16 +6810,6 @@
     "beforeAvailableEvidenceDays": 0
   },
   {
-    "model": "Gemini 2.5 Pro",
-    "component": "toolathlon",
-    "days": 1,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-01-23",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "Gemini 3 Flash",
     "component": "agents-last-exam",
     "days": 176,
@@ -7070,16 +6990,6 @@
     "beforeAvailableEvidenceDays": 0
   },
   {
-    "model": "Gemini 3 Pro",
-    "component": "toolathlon",
-    "days": 129,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-06-03",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "Gemini 3.1 Pro",
     "component": "agents-last-exam",
     "days": 192,
@@ -7182,12 +7092,12 @@
   {
     "model": "Gemini 3.1 Pro",
     "component": "toolathlon",
-    "days": 62,
+    "days": 21,
     "firstDate": "2026-02-20",
-    "lastDate": "2026-04-22",
-    "reason": "Available evidence starts on 2026-04-23; earlier applicability is unverified.",
+    "lastDate": "2026-03-12",
+    "reason": "Available evidence starts on 2026-03-13; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 62
+    "beforeAvailableEvidenceDays": 21
   },
   {
     "model": "Gemini 3.5 Flash",
@@ -8390,16 +8300,6 @@
     "beforeAvailableEvidenceDays": 0
   },
   {
-    "model": "Kimi K2 0905",
-    "component": "toolathlon",
-    "days": 107,
-    "firstDate": "2026-01-23",
-    "lastDate": "2026-05-17",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
-    "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
-  },
-  {
     "model": "Kimi K2-Thinking-0905",
     "component": "agents-last-exam",
     "days": 103,
@@ -8602,12 +8502,12 @@
   {
     "model": "Kimi K2.5",
     "component": "toolathlon",
-    "days": 189,
+    "days": 7,
     "firstDate": "2026-01-28",
-    "lastDate": "2026-08-27",
-    "reason": "Available evidence starts on 2026-04-20; earlier applicability is unverified.",
+    "lastDate": "2026-02-03",
+    "reason": "Available evidence starts on 2026-02-04; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 82
+    "beforeAvailableEvidenceDays": 7
   },
   {
     "model": "Kimi K2.6",
@@ -9402,12 +9302,12 @@
   {
     "model": "MiniMax M2.5",
     "component": "toolathlon",
-    "days": 78,
+    "days": 28,
     "firstDate": "2026-02-17",
-    "lastDate": "2026-05-08",
-    "reason": "Available evidence starts on 2026-05-26; earlier applicability is unverified.",
+    "lastDate": "2026-03-17",
+    "reason": "Available evidence starts on 2026-03-18; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 78
+    "beforeAvailableEvidenceDays": 28
   },
   {
     "model": "MiniMax M2.7",
@@ -10165,9 +10065,9 @@
     "days": 2,
     "firstDate": "2026-04-10",
     "lastDate": "2026-04-11",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "reason": "Available evidence starts on 2026-04-17; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 2
   },
   {
     "model": "Qwen3.5-35B-A3B",
@@ -10245,9 +10145,9 @@
     "days": 1,
     "firstDate": "2026-03-14",
     "lastDate": "2026-03-14",
-    "reason": "No exact, date-applicable result verified in retained evidence or bounded primary-source research.",
+    "reason": "Available evidence starts on 2026-04-17; earlier applicability is unverified.",
     "beforeBenchmarkReleaseDays": 0,
-    "beforeAvailableEvidenceDays": 0
+    "beforeAvailableEvidenceDays": 1
   },
   {
     "model": "Qwen3.5-397B-A17B",

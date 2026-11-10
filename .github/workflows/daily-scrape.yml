@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: read
   
 concurrency:
   group: data-writer
@@ -28,6 +29,24 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
       
+      - name: Verify publishing token
+        # A run that cannot open its pull request is discarded. Fail in seconds
+        # rather than after the scrape, and warn before the token expires.
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          if ! gh api "repos/$GITHUB_REPOSITORY" --silent; then
+            echo '::error::PAT_TOKEN is missing, expired or revoked; the run could not open its pull request.'
+            exit 1
+          fi
+          EXPIRES=$(gh api -i rate_limit 2>/dev/null | tr -d '\r' \
+            | awk -F': ' 'tolower($1)=="github-authentication-token-expiration"{print $2}')
+          SECONDS_LEFT=$(( $(date -u -d "$EXPIRES" +%s 2>/dev/null || echo 0) - $(date -u +%s) ))
+          if [ -n "$EXPIRES" ] && [ "$SECONDS_LEFT" -lt 864000 ]; then
+            echo "::warning::PAT_TOKEN expires $EXPIRES; rotate it before the nightly scrape stops publishing."
+            echo "> ⚠️ \`PAT_TOKEN\` expires $EXPIRES. Rotate it before the nightly scrape stops publishing." > "$RUNNER_TEMP/token-note.md"
+          fi
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -46,6 +65,41 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade -r scripts/requirements.txt
       
+      - name: Carry forward an unmerged daily scrape
+        id: base
+        # Yesterday's data may still be waiting in its pull request. Building on
+        # develop alone drops that snapshot from this run and conflicts with it
+        # at merge, so build on develop plus that data. Only generated data that
+        # verifies under develop's code is accepted; otherwise build on develop.
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GENERATED: '^(models\.json|current\.json|news\.json|og-image\.png|ig-image\.png|sitemap\.xml|llms\.txt|data/[^/]+\.jsonl?|social/[^/]+\.(png|json))$'
+        run: |
+          DEVELOP_SHA=$(git rev-parse HEAD)
+          echo "develop_sha=$DEVELOP_SHA" >> "$GITHUB_OUTPUT"
+          PENDING=$(gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open \
+            --json headRefName,createdAt \
+            --jq '[.[] | select(.headRefName | startswith("feature/daily-scrape-"))] | sort_by(.createdAt) | last | .headRefName // empty') || PENDING=""
+          if [ -z "$PENDING" ]; then
+            echo "No unmerged daily scrape; building on develop."
+            exit 0
+          fi
+          skip() {
+            git merge --abort 2>/dev/null || true
+            git reset --hard --quiet "$DEVELOP_SHA"
+            echo "::warning::Not carrying forward $PENDING: $1. Building on develop alone."
+            exit 0
+          }
+          git fetch --no-tags --quiet origin "refs/heads/$PENDING" || skip "the branch could not be fetched"
+          OUTSIDE=$(git diff --name-only "$(git merge-base HEAD FETCH_HEAD)" FETCH_HEAD | grep -Ev "$GENERATED" || true)
+          [ -z "$OUTSIDE" ] || skip "it changes files the scrape does not generate"
+          git -c user.name="${{ github.repository_owner }}" \
+              -c user.email="${{ github.repository_owner }}@users.noreply.github.com" \
+              merge --no-edit --quiet FETCH_HEAD || skip "it conflicts with develop"
+          python scripts/prepare_publication.py > /dev/null 2>&1 || skip "its publication does not verify under develop's code"
+          echo "Building on develop plus $PENDING."
+          echo "> Includes the unmerged data from \`$PENDING\`. Merging this pull request merges that one too." > "$RUNNER_TEMP/pending-note.md"
+
       - name: Decide AI research budget
         id: budget
         # Full AI gap-fill (web_search) runs Sundays and on manual dispatch;
@@ -125,6 +179,13 @@ jobs:
           python scripts/prepare_publication.py --write
           python scripts/prepare_publication.py
 
+      - name: Summarize benchmark source health
+        # Read by the pull request below, so a broken source is seen at review.
+        # A summary problem must never hold back the publication.
+        run: |
+          python scripts/check_source_health.py --markdown > "$RUNNER_TEMP/source-health.md" \
+            || echo "Benchmark source health summary unavailable." > "$RUNNER_TEMP/source-health.md"
+
       - name: Configure git
         run: |
           git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
@@ -158,10 +219,10 @@ jobs:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          # Only this final step can access the write-capable token.
+          # Only this step and the token preflight can access the write-capable token.
           gh auth setup-git
           git fetch origin develop
-          if [ "$(git rev-parse HEAD)" != "$(git rev-parse FETCH_HEAD)" ]; then
+          if [ "${{ steps.base.outputs.develop_sha }}" != "$(git rev-parse FETCH_HEAD)" ]; then
             echo '::error::develop advanced during generation; rerun against its latest state.'
             exit 1
           fi
@@ -188,9 +249,16 @@ jobs:
           BRANCH="feature/daily-scrape-${{ github.run_id }}-${{ github.run_attempt }}"
           git switch -c "$BRANCH"
           git push origin "HEAD:refs/heads/$BRANCH"
+          {
+            echo "Generated publication for review. Merge into develop, then promote develop to main to publish."
+            echo
+            cat "$RUNNER_TEMP/pending-note.md" 2>/dev/null && echo
+            cat "$RUNNER_TEMP/token-note.md" 2>/dev/null && echo
+            cat "$RUNNER_TEMP/source-health.md"
+          } > "$RUNNER_TEMP/pr-body.md"
           gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
             --title "Refresh data (daily-scrape)" \
-            --body "Generated publication for review. Merge into develop, then promote develop to main to publish."
+            --body-file "$RUNNER_TEMP/pr-body.md"
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'
@@ -202,3 +270,8 @@ jobs:
         if: steps.changes.outputs.has_changes == 'false'
         run: |
           echo "ℹ️ No changes detected - data unchanged"
+
+      - name: Alert on sustained benchmark source outage
+        # Runs after the pull request is open: the data still publishes, but a
+        # source broken on consecutive nights turns this run red and emails.
+        run: python scripts/check_source_health.py

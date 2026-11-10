@@ -103,6 +103,39 @@ class DeploymentContractTests(unittest.TestCase):
                       'scoring_revision.json', 'publication.json', 'generationId', 'scoringRevision'):
             self.assertIn(token, text)
 
+    def freshness(self, live_hours, produced_hours=None):
+        """Run the workflow's own freshness verdict for a published and a produced snapshot age."""
+        import json, subprocess, sys, tempfile, textwrap
+        from datetime import datetime, timedelta, timezone
+        text = (WORKFLOWS / 'health-check.yml').read_text()
+        step = text[text.index('- name: Data freshness'):text.index('- name: Publication revision')]
+        program = textwrap.dedent(step[step.index("python3 - <<'EOF'\n") + len("python3 - <<'EOF'\n"):step.rindex('EOF')])
+        stamp = lambda hours: (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat()
+        with tempfile.TemporaryDirectory() as directory:
+            snapshot = {'history': [{'timestamp': stamp(live_hours), 'teams': {'US': [1], 'CN': [1]}}]}
+            (Path(directory) / 'current.json').write_text(json.dumps(snapshot))
+            (Path(directory) / 'produced.txt').write_text('' if produced_hours is None else stamp(produced_hours) + '\n')
+            done = subprocess.run([sys.executable, '-c', program], cwd=directory, capture_output=True, text=True)
+        return done.returncode, done.stdout
+
+    def test_awaiting_promotion_warns_but_a_stopped_scrape_or_long_wait_fails(self):
+        code, log = self.freshness(5)
+        self.assertEqual(code, 0)
+        self.assertNotIn('::', log)
+        code, log = self.freshness(40, produced_hours=10)
+        self.assertEqual(code, 0)
+        self.assertIn('::warning::', log)
+        self.assertIn('awaits promotion', log)
+        code, log = self.freshness(40)
+        self.assertEqual(code, 1, 'nothing newer was produced: the scrape stopped')
+        self.assertIn('daily scrape may be failing', log)
+        code, log = self.freshness(40, produced_hours=35)
+        self.assertEqual(code, 1)
+        code, log = self.freshness(80, produced_hours=3)
+        self.assertEqual(code, 1, 'a fresh snapshot unpublished for three days is an outage')
+        self.assertIn('promote develop to main', log)
+        self.assertEqual(self.freshness(-1)[0], 1)
+
     def test_build_command_never_runs_paid_research_or_social_publishing(self):
         import json
         scripts = json.loads((ROOT / 'package.json').read_text())['scripts']

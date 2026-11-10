@@ -13,6 +13,7 @@ import io
 from model_store import load_data, load_evidence, save_evidence
 import json
 import re
+import threading
 import zipfile
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -28,6 +29,11 @@ from benchmark_leaderboard_sources import VALS_SOURCES, vals_results, ale_result
 ROOT = Path(__file__).resolve().parents[1]
 EVIDENCE = ROOT / 'data/model_catalog.json'
 AUDIT = ROOT / 'data/benchmark_source_refresh.json'
+# llm-stats throttles bursts from CI addresses; keep its detail pages below the pool width.
+LLM_STATS_GATE = threading.BoundedSemaphore(3)
+# After this many pages fail in a row the host is blocking, not throttling: stop retrying.
+LLM_STATS_BLOCKED_AFTER = 20
+llm_stats_failures = 0
 
 
 @preconditions(model='text', component='nonempty', score='number', source='text', configuration='text', published='?date')
@@ -41,18 +47,21 @@ class Tables(HTMLParser):
     """Read plain text table cells; never guess image/chart values."""
     @preconditions()
     def __init__(self):
-        super().__init__(); self.tables=[]; self.table=None; self.row=None; self.cell=None
+        super().__init__(); self.tables=[]; self.table=None; self.row=None; self.cell=None; self.icon=0
     @preconditions(tag='text', attrs='sequence')
     def handle_starttag(self, tag, attrs):
-        if tag == 'table': self.table=[]
+        # Vendor icons carry a <title> that is not part of the cell text.
+        if tag == 'svg': self.icon+=1
+        elif tag == 'table': self.table=[]
         elif tag == 'tr' and self.table is not None: self.row=[]
         elif tag in ('td','th') and self.row is not None: self.cell=''
     @preconditions(data='text')
     def handle_data(self, data):
-        if self.cell is not None: self.cell += data
+        if self.cell is not None and not self.icon: self.cell += data
     @preconditions(tag='text')
     def handle_endtag(self, tag):
-        if tag in ('td','th') and self.cell is not None:
+        if tag == 'svg': self.icon=max(0,self.icon-1)
+        elif tag in ('td','th') and self.cell is not None:
             self.row.append(self.cell); self.cell=None
         elif tag == 'tr' and self.row is not None:
             self.table.append(self.row); self.row=None
@@ -67,17 +76,20 @@ def original_toolathlon(html, models):
     if marker not in html: raise ValueError('Original Toolathlon series boundary missing')
     parser=Tables(); parser.feed(html.split(marker,1)[1])
     if not parser.tables: raise ValueError('Original Toolathlon table missing')
-    results=[]
+    results=[]; readable=0
     for row in parser.tables[0][1:]:
         if len(row)<5: continue
         label=re.sub('[✓†‡]', '', row[0]).strip()
         name=re.sub(r'-(?:xhigh|high|medium|low)$', '', label)
-        model=resolve_model(name, models)
         score=re.match(r'\s*([0-9.]+)',row[4])
-        if model and score and re.fullmatch(r'\d{4}-\d{2}-\d{2}',row[3]):
+        if not (score and re.fullmatch(r'\d{4}-\d{2}-\d{2}',row[3])): continue
+        readable+=1
+        model=resolve_model(name, models)
+        if model:
             results.append(finding(model,'toolathlon',float(score[1]),
                 'https://toolathlon.xyz/docs/leaderboard',
                 f'Original pre-Verified Toolathlon; {label}; {row[2]} harness; Pass@1.',row[3]))
+    if not readable: raise ValueError('Original Toolathlon rows unreadable')
     return results
 
 
@@ -99,7 +111,11 @@ def charxiv_results(text, models):
 def detail_results(model, url):
     # Lazy import avoids a circular import when invoked by the scraper.
     from scrape_models import extract_detail_benchmarks
-    html=fetch(url)
+    global llm_stats_failures
+    with LLM_STATS_GATE:
+        try: html=fetch(url,attempts=1 if llm_stats_failures>=LLM_STATS_BLOCKED_AFTER else 3)
+        except Exception: llm_stats_failures+=1; raise
+        llm_stats_failures=0
     scores=extract_detail_benchmarks(SimpleNamespace(content=lambda:html))
     return [dict(finding(model,b['id'],float(value.rstrip('%')),url,
                   'Exact model detail-page benchmark identity and normalized percentage.'),
@@ -154,6 +170,37 @@ def persist_ai_findings(entries):
     return accepted,rejected
 
 
+@preconditions(name='text')
+def source_group(name):
+    """Per-model pages and per-table failures roll up to the source that serves them."""
+    prefix=name.split(':',1)[0]
+    return prefix if prefix in ('llm-stats','epoch','artificial-analysis') else name
+
+
+@preconditions(previous='mapping', counts='mapping', pages='mapping', failures='sequence', retrieved='date')
+def source_health(previous, counts, pages, failures, retrieved):
+    """Status per source, the day that status began and the last productive day.
+
+    failed: the source errored (for per-model pages, most of them did).
+    empty: it answered but matched no tracked model.
+    """
+    errors={}
+    for failure in failures: errors.setdefault(source_group(failure['source']),[]).append(failure['error'])
+    health={}
+    for name in sorted(counts):
+        found=errors.get(name,[]); total=pages.get(name,1)
+        failed=len(found)*2>total if total>1 else bool(found)
+        status='failed' if failed else 'ok' if counts[name] else 'empty'
+        before=previous.get(name) or {}
+        record=dict(status=status,findings=counts[name],
+                    since=before.get('since',retrieved) if before.get('status')==status else retrieved,
+                    lastOk=retrieved if status=='ok' else before.get('lastOk'))
+        if total>1: record.update(pages=total,failedPages=len(found))
+        if found: record['error']=found[0]
+        health[name]=record
+    return health
+
+
 @preconditions(entries='sequence', write='bool')
 def refresh_sources(entries=(), *, write=False):
     retrieved=datetime.now(timezone.utc).date().isoformat()
@@ -189,40 +236,50 @@ def refresh_sources(entries=(), *, write=False):
             try: payloads[name]=job.result()
             except Exception as exc: failures.append({'source':name,'error':str(exc)})
     findings=[]; skipped=[]; efforts={}; coverage=[]
+    counts={source_group(name):0 for name in sources}
     if 'artificial-analysis' in payloads:
         try:
             found,ambiguous,efforts=harvest_aa(payloads['artificial-analysis'],list(models),observed)
-            findings.extend(found);skipped.extend(ambiguous)
+            findings.extend(found);skipped.extend(ambiguous);counts['artificial-analysis']=len(found)
         except Exception as exc: failures.append({'source':'artificial-analysis','error':str(exc)})
     if 'epoch' in payloads:
         try:
             with zipfile.ZipFile(io.BytesIO(payloads['epoch'])) as archive:
                 tables={Path(n).name:list(csv.DictReader(io.StringIO(archive.read(n).decode('utf8'))))
                         for n in archive.namelist() if Path(n).name in EPOCH_TABLES}
+            # A renamed or dropped table must not read as "no new results".
+            failures.extend({'source':'epoch:'+name,'error':'Table missing or empty in benchmark dump'}
+                            for name in EPOCH_TABLES if not tables.get(name))
             found,ambiguous=harvest_epoch(tables,list(models),observed,efforts)
             for record in found:
                 # An evaluation start is not a public release date.
                 record['publishedAt']=None
-            findings.extend(found);skipped.extend(ambiguous)
+            findings.extend(found);skipped.extend(ambiguous);counts['epoch']=len(found)
         except Exception as exc: failures.append({'source':'epoch','error':str(exc)})
     for name in sources:
         if name not in ('epoch','artificial-analysis'):
             if name.startswith('vals:') and name in payloads:
                 records,audit=payloads[name]; findings.extend(records); coverage.append(audit)
+                counts[name]=len(records)
             elif not name.startswith('vals:'):
                 findings.extend(payloads.get(name,[]))
+                counts[source_group(name)]+=len(payloads.get(name,[]))
     evidence=load_evidence(EVIDENCE)
     accepted,rejected=accept_findings(evidence,findings,models,retrieved)
+    try: previous=json.loads(AUDIT.read_text()).get('sourceHealth') or {}
+    except (OSError,ValueError): previous={}
+    pages={'llm-stats':sum(name.startswith('llm-stats:') for name in sources)}
     report=dict(retrievedAt=retrieved,modelsChecked=len(models),sourcesChecked=len(sources),
                 findings=len(findings),accepted=len(accepted),failures=failures,
-                skippedConfigurations=skipped,rejected=rejected,leaderboardCoverage=coverage)
+                skippedConfigurations=skipped,rejected=rejected,leaderboardCoverage=coverage,
+                sourceHealth=source_health(previous,counts,pages,failures,retrieved))
     if entries:
         from rescore_history import fill_current_entries
         fill_current_entries(entries, retrieved, evidence=evidence)
     if write:
         save_evidence(evidence, EVIDENCE)
         AUDIT.write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
-    print('[source-refresh] '+json.dumps({k:v for k,v in report.items() if not isinstance(v,list)}))
+    print('[source-refresh] '+json.dumps({k:v for k,v in report.items() if not isinstance(v,(list,dict))}))
     for failure in failures: print('[source-refresh] unavailable: '+failure['source'])
     return report
 

@@ -11,9 +11,10 @@ from harvest_benchmark_sources import strip_effort
 def ale_results(payload, models):
     """Use the full ALE pass rate, never partial-credit avgScore or a sub-split."""
     findings = []
-    for row in payload['rows']:
-        if row.get('split') != 'full':
-            continue
+    full = [row for row in payload['rows'] if row.get('split') == 'full']
+    if not full:
+        raise ValueError('ALE full-split rows missing')
+    for row in full:
         model = resolve_model(row.get('model', ''), models)
         score = row.get('passRate')
         if not model or not isinstance(score, (int, float)) or not math.isfinite(score) or not 0 <= score <= 1:
@@ -49,29 +50,34 @@ def decode_astro(value):
 
 
 class ValsProps(HTMLParser):
+    """Collect every island's benchmarkView; component names change between deploys."""
     @preconditions()
     def __init__(self):
-        super().__init__(); self.view = None
+        super().__init__(); self.views = []
 
     @preconditions(tag='text', attrs='sequence')
     def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if tag == 'astro-island' and 'BenchmarkView.' in attrs.get('component-url', ''):
-            self.view = decode_astro(json.loads(attrs['props']))['benchmarkView']
+        props = dict(attrs).get('props') or ''
+        if tag == 'astro-island' and '"benchmarkView"' in props:
+            view = decode_astro(json.loads(props)).get('benchmarkView')
+            if isinstance(view, dict):
+                self.views.append(view)
 
 
 @preconditions(html='text', slug='text', models='mapping')
 def vals_results(html, slug, models):
     component, expected, task, protocol = VALS_SOURCES[slug]
     parser = ValsProps(); parser.feed(html)
-    view = parser.view
-    if not view or view.get('metadata', {}).get('benchmark') != expected:
+    views = [v for v in parser.views if (v.get('metadata') or {}).get('benchmark') == expected]
+    if not views:
         raise ValueError('Vals benchmark identity or payload changed: ' + slug)
     if slug == 'lcb' and '(v6)' not in html:
         raise ValueError('LiveCodeBench v6 confirmation absent')
-    scores = view.get('tasks', {}).get(task)
-    if not isinstance(scores, dict):
+    # Chart islands may carry a subset of tasks; use the fullest exact-task table.
+    tables = [t for t in ((v.get('tasks') or {}).get(task) for v in views) if isinstance(t, dict) and t]
+    if not tables:
         raise ValueError('Exact Vals task unavailable: ' + task)
+    scores = max(tables, key=len)
     findings = []; unmatched = []
     for model_id, row in scores.items():
         # Exact release matching, allowing punctuation only. No stripping dates,
