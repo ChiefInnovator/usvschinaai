@@ -129,6 +129,18 @@
       "score": null
     }
   },
+  "Claude Fable 5.2": {
+    "GPQA": {
+      "benchmark": "GPQA",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPQA Diamond; Epoch displays 94% rounded to a whole percentage point. Effort and individual-result publication date were not verified.",
+      "score": "94.0%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://epoch.ai/models/claude-fable-5-2"
+    }
+  },
   "Claude Haiku 5.5": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
@@ -482,13 +494,9 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-11-08T03:28:09.883324+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Max effort; Mercor’s original public benchmark, pass@1, not its extended set. Publication date unknown. ([mercor.com](https://www.mercor.com/apex/mercor-extended/ots-held-out-mmmu-pro-leaderboard/?utm_source=openai))",
-      "score": "87.4%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://www.mercor.com/apex/mercor-extended/ots-held-out-mmmu-pro-leaderboard/"
+      "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
@@ -656,15 +664,21 @@
       "source_type": "paper",
       "source_url": "https://arxiv.org/html/2606.19348v1"
     },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "GPQA Diamond accuracy from Vals, evaluated at max reasoning effort. The Vals model page identifies the exact 0813 model and lists GPQA Diamond; the individual-result publication date is not independently established.",
-      "score": "92.4%",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPQA Diamond; Artificial Analysis evaluation, max reasoning effort. Individual result publication date unknown.",
+      "score": "92.8%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://www.vals.ai/models/deepseek_deepseek-v4-pro-0813"
+      "source_url": "https://llmbenchmark.ai/benchmarks/aa-gpqa"
     },
     "IFBench": {
       "benchmark": "IFBench",
@@ -675,6 +689,18 @@
       "score": "76.5%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/nvidia/DeepSeek-V4-Pro-0813-nvfp4-DSpark"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "DeepSeek-V4-Pro-Max": {
@@ -687,6 +713,12 @@
       "score": "61.3%",
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/deepseek-v4-pro-0813"
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -710,13 +742,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-12T03:31:17.346153+00:00",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "The leaderboard lists DeepSeek V4 Pro at 76.5% and attributes it to an official April 24, 2026 result; effort configuration is not stated on that row.",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "DeepSeek V4 Pro 0424, max effort; independent Artificial Analysis evaluation, benchmark-defined tools. Individual result publication date unknown.",
       "score": "76.5%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://evals.report/benchmarks/ifbench?tab=scores"
+      "source_url": "https://llmleaderboard.com/models/deepseek-v4-pro-0424"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
@@ -727,6 +759,18 @@
       "score": "93.5%",
       "source_type": "paper",
       "source_url": "https://arxiv.org/html/2606.19348v1"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "DeepSeek-V4.1-Flash": {
@@ -784,6 +828,28 @@
     }
   },
   "GLM-5.3": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Table 1; effort not reported. The paper describes search, page visits and Python; published October 20, 2026. A higher comparative result could not be verified from its source chart.",
+      "score": "76.2%",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/html/2610.28578v1"
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-11T03:32:26.561650+00:00",
@@ -806,13 +872,29 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-20T03:33:17.557229+00:00",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis result for GLM-5.3 at max reasoning effort; reported configuration: temperature 1, top_p 0.95, and 128K maximum output tokens.",
-      "score": "71.5%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/glm-5-3"
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Table 1; strict prompt-level accuracy over 294 prompts; effort not reported. Published October 20, 2026.",
+      "score": "53.4%",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/html/2610.28578v1"
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Max effort; Claude Code with the complete PDF corpus supplied as page images without machine-readable text. A higher reported score lacked a verifiable full-corpus configuration; publication date unknown.",
+      "score": "58.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
     }
   },
   "GLM-5.3-Flash": {
@@ -858,6 +940,30 @@
     }
   },
   "GPT-5.5 Pro": {
+    "Agents’ Last Exam": {
+      "benchmark": "Agents’ Last Exam",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "GPQA": {
       "benchmark": "GPQA",
       "cached_at": "2026-09-12T03:31:17.346153+00:00",
@@ -880,23 +986,51 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-09-15T03:33:42.102932+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Epoch AI Inspect result: gpt-5.5-pro_xhigh, IFBench task v2.0.0, verification_code scorer, mean accuracy 78.05% (rounded to 78.1%). Publication date of this individual result is unknown.",
-      "score": "78.1%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://epoch.ai/data/benchmarks.csv"
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMMU-Pro": {
+      "benchmark": "MMMU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-09-23T03:34:18.731552+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "LM Market Cap lists an exact GPT-5.5 Pro row at 88.7% resolve rate; individual-result publication date is not stated.",
-      "score": "88.7%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://lmmarketcap.com/benchmarks/swe_bench_verified"
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "GPT-5.6 Luna": {
@@ -1476,13 +1610,13 @@
     },
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-11-08T03:28:09.883324+00:00",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "GPQA Diamond accuracy, Epoch AI evaluation, high reasoning effort. Individual result publication date is unknown.",
+      "notes": "GPQA Diamond, 198 questions; Epoch AI evaluation with high reasoning effort, zero-shot chain-of-thought, and task version 1.0.11. Individual result publication date unknown.",
       "score": "96.4%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://epoch.ai/benchmarks/gpqa-diamond?tab=leaderboard&view=graph"
+      "source_url": "https://epoch.ai/benchmarks/gpqa-diamond"
     },
     "Humanity’s Last Exam": {
       "benchmark": "Humanity’s Last Exam",
@@ -2368,6 +2502,18 @@
     }
   },
   "Qwen3.8 Flash": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-18T03:32:32.115679+00:00",
@@ -2378,28 +2524,66 @@
       "source_type": "vendor_blog",
       "source_url": "https://docs.qwencloud.com/developer-guides/getting-started/latest-model"
     },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-09-12T03:31:17.346153+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "AI IQ model profile reports 79.769 and attributes MMMU-Pro data to Artificial Analysis; configuration and individual-result publication date are not disclosed.",
-      "score": "79.8%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://www.aiiq.org/models/qwen3.8-flash/"
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     },
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
-      "cached_at": "2026-09-12T03:31:17.346153+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1; leaderboard attributes its canonical value to Artificial Analysis, with Vals.ai fallback; effort/config and individual-result publication date are not disclosed.",
-      "score": "86.1%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://www.aiiq.org/charts/terminal-bench-2-1-scores/"
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "Qwen3.8 Max": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Reasoning questions without Python; effort not specified. The source also reports 93.5% with Python, a different configuration. Publication date of the individual result is unknown.",
+      "score": "88.4%",
+      "source_type": "vendor_blog",
+      "source_url": "https://www.qwencloud.com/news/qwen-3-8-max"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-11T03:32:26.561650+00:00",
@@ -2409,9 +2593,63 @@
       "score": "57.0%",
       "source_type": "official_leaderboard",
       "source_url": "https://deepswe.datacurve.ai/"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    }
+  },
+  "Qwen3.8-27B": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Full 1,266-task set; frozen Qwen actor with Codex CLI and trained REMORY memory, GPT-5.6-Sol judge, one run; effort unspecified. Published October 8, 2026.",
+      "score": "77.0%",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/html/2610.11287v1"
+    },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "Qwen3.8-Flash-Next": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-12T03:31:17.346153+00:00",
@@ -2421,6 +2659,34 @@
       "score": "58.7%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/Qwen/Qwen3.8-Flash-Next"
+    },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Original BF16 model; thinking on, mini-swe-agent 2.4.6, 500 instances, one run, Apptainer grading; 16 reference patches did not pass in that setup. Publication date unknown.",
+      "score": "79.8%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-P48NVFP4-MoESQ/blob/main/README.md"
     }
   }
 }

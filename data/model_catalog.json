@@ -38284,6 +38284,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "d81f2715d7696eb8bebf": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "20c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "6.7s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -68574,6 +68593,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "12.1s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "bee0ef7cb923dedc86ea": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "17c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "9.5s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -102700,6 +102738,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-25"
           }
+        },
+        "mmmu-pro": {
+          "950c6cca0f272a74": {
+            "benchmark": "MMMU-Pro",
+            "score": 73.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-6-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.6-Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-6-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -104506,6 +104560,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "60e85138569426bf": {
+            "benchmark": "GPQA Diamond",
+            "score": 83.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.5 Flash-Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-3-5-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -104568,6 +104636,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "bde222d570440fed": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 53.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.5 Flash-Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-3-5-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -104631,6 +104713,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "mmmu-pro": {
+          "176374b5380559ec": {
+            "benchmark": "MMMU-Pro",
+            "score": 79.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-5-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.5 Flash-Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-3-5-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -104751,6 +104849,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "3848e5924eb27a4f": {
+            "benchmark": "GPQA Diamond",
+            "score": 68.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-20b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-20b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-20b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -104813,6 +104925,38 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "ifbench": {
+          "1ed078d537acb98e": {
+            "benchmark": "IFBench",
+            "score": 65.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-20b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-20b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-20b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "8a61cfe42fe0983c": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 13.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-20b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-20b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-20b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -104902,6 +105046,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row phi-4."
+          },
+          "bacfb90cc5f83635": {
+            "benchmark": "GPQA Diamond",
+            "score": 57.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/phi-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Phi-4.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record phi-4; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -104932,6 +105090,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "ifbench": {
+          "add964af7fa96a71": {
+            "benchmark": "IFBench",
+            "score": 23.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/phi-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Phi-4.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record phi-4; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -105110,6 +105284,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row kimi-k2.7-code."
+          },
+          "7b494821d5b287cc": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K2.7 Code.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record kimi-k2-7-code; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -105206,6 +105394,36 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "a6035fa11b968598": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 67.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K2.7 Code.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record kimi-k2-7-code; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "3181e73911ad5d97": {
+            "benchmark": "IFBench",
+            "score": 63.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k2-7-code",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K2.7 Code.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record kimi-k2-7-code; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -105242,6 +105460,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "74200e49af32c999": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M3.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "terminal-bench-2.1": {
@@ -105271,6 +105503,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "082cddeadf984d7c": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 65.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M3.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "browsecomp": {
@@ -105301,6 +105547,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "d4f5e9083be5c860": {
+            "benchmark": "MMMU-Pro",
+            "score": 78.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M3.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "officeqa-pro": {
@@ -105378,6 +105638,22 @@
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "ifbench": {
+          "67823edd56b5fbe1": {
+            "benchmark": "IFBench",
+            "score": 82.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M3.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -105399,6 +105675,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3.6-35b-a3b."
+          },
+          "9eb034985860e268": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.6 35B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-6-35b-a3b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -105431,6 +105721,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "301536478a1c195a": {
+            "benchmark": "Toolathlon",
+            "score": 26.9,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen3.6-35BA3B; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-04-17",
+            "modelAvailableFrom": "2026-11-10"
           }
         },
         "livecodebench-v6": {
@@ -105461,6 +105765,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "884cdf0f776c2cd6": {
+            "benchmark": "MMMU-Pro",
+            "score": 75.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.6 35B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-6-35b-a3b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -105537,6 +105855,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "ifbench": {
+          "b91e646129fc3954": {
+            "benchmark": "IFBench",
+            "score": 64.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.6 35B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-6-35b-a3b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "5a0686f150cfb04b": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 44.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-6-35b-a3b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.6 35B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-6-35b-a3b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -105558,6 +105908,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3.5-9B."
+          },
+          "a445fb5967bbdf4a": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-9b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 9B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "livecodebench-v6": {
@@ -105588,6 +105952,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "14fa07935b20f804": {
+            "benchmark": "IFBench",
+            "score": 66.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-9b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 9B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -105618,6 +105996,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "mmmu-pro": {
+          "58c13587bb8544c0": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-9b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 9B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "459a4a92346b58e9": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 29.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-9b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 9B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-9b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -105835,6 +106245,52 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Qwen3-32B."
+          },
+          "3cde4b2296b85578": {
+            "benchmark": "GPQA Diamond",
+            "score": 66.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 32B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-32b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "2c242d091fe2744e": {
+            "benchmark": "IFBench",
+            "score": 36.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 32B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-32b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "00df64829c07efd8": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 5.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-32b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 32B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-32b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -105857,6 +106313,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row Qwen3-30B-A3B."
+          },
+          "781e8c421ed9dd31": {
+            "benchmark": "GPQA Diamond",
+            "score": 61.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-30b-a3b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 30B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-30b-a3b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -105872,6 +106342,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "ifbench": {
+          "1fae7516c4b28019": {
+            "benchmark": "IFBench",
+            "score": 41.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-30b-a3b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 30B A3B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-30b-a3b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -105908,6 +106394,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "f7c07c3b638b9251": {
+            "benchmark": "GPQA Diamond",
+            "score": 70.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 235B A22B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-235b-a22b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -105969,6 +106469,22 @@
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "ifbench": {
+          "89d62832475b557a": {
+            "benchmark": "IFBench",
+            "score": 38.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-235b-a22b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 235B A22B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-235b-a22b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -105990,6 +106506,52 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3-14b."
+          },
+          "0e9bb649e9971f00": {
+            "benchmark": "GPQA Diamond",
+            "score": 60.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-14b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 14B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-14b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "684cc3ea76635e6f": {
+            "benchmark": "IFBench",
+            "score": 40.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-14b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 14B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-14b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "952a51d45de5fa24": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 4.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-14b-instruct-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 14B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-14b-instruct-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -106012,6 +106574,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row QwQ-32B."
+          },
+          "f175437ed532ce70": {
+            "benchmark": "GPQA Diamond",
+            "score": 59.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwq-32b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of QwQ 32B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwq-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -106027,6 +106603,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "ifbench": {
+          "6102c6748138313d": {
+            "benchmark": "IFBench",
+            "score": 38.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwq-32b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of QwQ 32B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwq-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -106049,6 +106641,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-Distill-Qwen-32B."
+          },
+          "58285292d3de8e1b": {
+            "benchmark": "GPQA Diamond",
+            "score": 61.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-32b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 32B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -106064,6 +106670,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "ifbench": {
+          "70c4ccf0c9cbaa82": {
+            "benchmark": "IFBench",
+            "score": 22.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-32b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 32B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-32b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -106086,6 +106708,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-Distill-Qwen-14B."
+          },
+          "5243f78ebb1e4eba": {
+            "benchmark": "GPQA Diamond",
+            "score": 48.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-14b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 14B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-14b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -106101,6 +106737,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "ifbench": {
+          "ec82f1c932378c3a": {
+            "benchmark": "IFBench",
+            "score": 22.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-14b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 14B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-14b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -106123,6 +106775,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-Distill-Qwen-1.5B."
+          },
+          "417fd235a151acd4": {
+            "benchmark": "GPQA Diamond",
+            "score": 9.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-1-5b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 1.5B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-1-5b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -106138,6 +106804,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "ifbench": {
+          "7c8fbb13532c145d": {
+            "benchmark": "IFBench",
+            "score": 13.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-qwen-1-5b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Qwen 1.5B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-qwen-1-5b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -106362,6 +107044,70 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "f8a77c8ba6796138": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-fast-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4 Fast (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-4-fast-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "9d236813a191674b": {
+            "benchmark": "IFBench",
+            "score": 50.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-fast-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4 Fast (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-4-fast-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "93340ab4414d7465": {
+            "benchmark": "MMMU-Pro",
+            "score": 61.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-fast-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4 Fast (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-4-fast-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "toolathlon": {
+          "0d1356df56cd6168": {
+            "benchmark": "Toolathlon",
+            "score": 18.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Grok-4-Fast; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-11-10"
+          }
         }
       }
     },
@@ -106517,6 +107263,70 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "648fcab3ca629753": {
+            "benchmark": "GPQA Diamond",
+            "score": 42.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "992889ce8807b676": {
+            "benchmark": "IFBench",
+            "score": 31.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "64710852f2f53174": {
+            "benchmark": "MMMU-Pro",
+            "score": 41.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "0fd52fc617ed9931": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 5.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-4o-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-4o mini.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-4o-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -106611,6 +107421,70 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "f2ff265e163c839e": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o4-mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "cf794ea9a017db84": {
+            "benchmark": "IFBench",
+            "score": 68.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o4-mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "3c800e56a7f6d19e": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o4-mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "toolathlon": {
+          "5a761ba989d63ec4": {
+            "benchmark": "Toolathlon",
+            "score": 14.8,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; o4-mini; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-11-10"
+          }
         }
       }
     },
@@ -106647,6 +107521,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "ccbdfb040265bf83": {
+            "benchmark": "MMMU-Pro",
+            "score": 75.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.5.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-5-0424; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -106726,6 +107614,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "ea7298a86920bd69": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.5.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-5-0424; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "terminal-bench-2.1": {
@@ -106742,6 +107644,36 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "654f07c5db1a4bbd": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 63.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.5.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-5-0424; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "c5e248b92b42fc2b": {
+            "benchmark": "IFBench",
+            "score": 67.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-5-0424",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.5.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-5-0424; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -107280,6 +108212,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "2b8065c1ad87515c": {
+            "benchmark": "GPQA Diamond",
+            "score": 55.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/lfm2-5-2-6b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of LFM2.5-2.6B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record lfm2-5-2-6b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "2fb6505efffc4e97": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 4.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/lfm2-5-2-6b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of LFM2.5-2.6B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record lfm2-5-2-6b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -107336,6 +108300,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "a11ea163eaf62fbc": {
+            "benchmark": "MMMU-Pro",
+            "score": 66.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107381,6 +108359,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "ffabe040732186a5": {
+            "benchmark": "GPQA Diamond",
+            "score": 66.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "5edf20be6649948e": {
+            "benchmark": "IFBench",
+            "score": 59.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "88854896149b0e7f": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 12.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/diffusiongemma-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DiffusionGemma 26B A4B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record diffusiongemma-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -107445,6 +108471,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "63f77c5c7594b5c0": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 53.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Ultra 550B A55B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "browsecomp": {
@@ -107475,6 +108515,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "4e47b383676016d2": {
+            "benchmark": "IFBench",
+            "score": 81.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Ultra 550B A55B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107579,6 +108633,20 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "f1542ba22d273411": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-ultra-550b-a55b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Ultra 550B A55B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-ultra-550b-a55b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -107696,6 +108764,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "04f646a8b6e8c8cd": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107742,6 +108824,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "89a73a352eda70ec": {
+            "benchmark": "GPQA Diamond",
+            "score": 75.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "77a9ce678ea6573e": {
+            "benchmark": "IFBench",
+            "score": 73.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "4ffe38a4118049e6": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 27.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -107777,6 +108907,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "86a185b795dccd96": {
+            "benchmark": "MMMU-Pro",
+            "score": 73.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107823,6 +108967,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "a8b09f463afa504a": {
+            "benchmark": "GPQA Diamond",
+            "score": 85.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "f616133675264b30": {
+            "benchmark": "IFBench",
+            "score": 75.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "971c9d8f02110423": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 43.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-31b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 31B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-31b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -107858,6 +109050,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "d1259d3d69f0ed9e": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107904,6 +109110,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "661a10092b832f97": {
+            "benchmark": "GPQA Diamond",
+            "score": 79.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "2022a62cba9bcd25": {
+            "benchmark": "IFBench",
+            "score": 72.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "967da301f83c48a9": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 39.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-26b-a4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 26B A4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-26b-a4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -107939,6 +109193,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "de58a17aea6c571b": {
+            "benchmark": "MMMU-Pro",
+            "score": 51.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -107969,6 +109237,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "10a1f6a79fd54adb": {
+            "benchmark": "GPQA Diamond",
+            "score": 57.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "0fbf095054cc42a9": {
+            "benchmark": "IFBench",
+            "score": 44.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "e6d537c059f6505e": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 1.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -108005,6 +109321,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "0045310f6774978d": {
+            "benchmark": "MMMU-Pro",
+            "score": 44.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -108036,6 +109366,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "92a99f74525fea5f": {
+            "benchmark": "GPQA Diamond",
+            "score": 43.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "88e191c12d2cafdf": {
+            "benchmark": "IFBench",
+            "score": 38.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "4ce961d8f820fbdd": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 0.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemma-4-e2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemma 4 E2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemma-4-e2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -108056,6 +109434,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "8d143e8324424693": {
+            "benchmark": "Toolathlon",
+            "score": 35.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.4-nano-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-17",
+            "modelAvailableFrom": "2026-11-10"
           }
         },
         "mmmu-pro": {
@@ -108071,6 +109463,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "b9dac0ca43e568b6": {
+            "benchmark": "MMMU-Pro",
+            "score": 65.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -108101,6 +109507,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "e9f2e5246e34424c": {
+            "benchmark": "GPQA Diamond",
+            "score": 81.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "04a93d7d6b8690d1": {
+            "benchmark": "IFBench",
+            "score": 75.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "dbd383e864c5b427": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 60.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-nano",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 nano (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-4-nano; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -108137,6 +109591,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "e77833ac15dbc8ec": {
+            "benchmark": "IFBench",
+            "score": 71.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-super-120b-a12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Super 120B A12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -108197,6 +109665,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "8be54bd7eaff5f6c": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-super-120b-a12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Super 120B A12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "a85ab1be6f340a14": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 38.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nvidia-nemotron-3-super-120b-a12b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nemotron 3 Super 120B A12B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nvidia-nemotron-3-super-120b-a12b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -108622,6 +110122,54 @@
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "gpqa-diamond": {
+          "fa4fdf68fdeed2a9": {
+            "benchmark": "GPQA Diamond",
+            "score": 72.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-code-fast-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok Code Fast 1.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-code-fast-1; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "d19fc0e77995943f": {
+            "benchmark": "IFBench",
+            "score": 41.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-code-fast-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok Code Fast 1.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record grok-code-fast-1; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "toolathlon": {
+          "8cfefb34a22c4296": {
+            "benchmark": "Toolathlon",
+            "score": 18.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Grok-Code-Fast-1; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
+            "modelAvailableFrom": "2026-11-10"
+          }
         }
       }
     },
@@ -108742,6 +110290,52 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "ff838764789b688f": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-120b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-120b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-120b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "82ffba2eff02c3f0": {
+            "benchmark": "IFBench",
+            "score": 69.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-120b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-120b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-120b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "cc18c5574e94a902": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 26.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-oss-120b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of gpt-oss-120b (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-oss-120b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109031,6 +110625,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "74b61b82cb3856a3": {
+            "benchmark": "GPQA Diamond",
+            "score": 72.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-3-1-nemotron-ultra-253b-v1-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 3.1 Nemotron Ultra 253B v1 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-3-1-nemotron-ultra-253b-v1-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "b3475a9dd1d5b49b": {
+            "benchmark": "IFBench",
+            "score": 38.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-3-1-nemotron-ultra-253b-v1-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 3.1 Nemotron Ultra 253B v1 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-3-1-nemotron-ultra-253b-v1-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -109051,6 +110677,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "b177aa7a64a43493": {
+            "benchmark": "MMMU-Pro",
+            "score": 62.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -109081,6 +110721,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "799a51c41f3866d5": {
+            "benchmark": "GPQA Diamond",
+            "score": 67.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "27f34bd30001ce93": {
+            "benchmark": "IFBench",
+            "score": 43.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "557345efc48877ad": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 7.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-maverick",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Maverick.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-maverick; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109118,6 +110806,70 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "32bd21301fbe2ba4": {
+            "benchmark": "GPQA Diamond",
+            "score": 58.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-scout",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "855afa79fb9e9ed7": {
+            "benchmark": "IFBench",
+            "score": 39.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-scout",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "024206b607013076": {
+            "benchmark": "MMMU-Pro",
+            "score": 52.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-scout",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "2d618356d26ec2d0": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 3.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-4-scout",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 4 Scout.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-4-scout; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -109138,6 +110890,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "208a93b00115367b": {
+            "benchmark": "GPQA Diamond",
+            "score": 64.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-3-3-nemotron-super-49b-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 3.3 Nemotron Super 49B v1 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-3-3-nemotron-super-49b-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "99c9545764784c09": {
+            "benchmark": "IFBench",
+            "score": 39.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/llama-3-3-nemotron-super-49b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Llama 3.3 Nemotron Super 49B v1 (Non-reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record llama-3-3-nemotron-super-49b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109288,6 +111072,36 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "aaffaf0967572d72": {
+            "benchmark": "MMMU-Pro",
+            "score": 14.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/phi-4-multimodal",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Phi-4 Multimodal Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record phi-4-multimodal; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "gpqa-diamond": {
+          "595f826ce01493a9": {
+            "benchmark": "GPQA Diamond",
+            "score": 31.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/phi-4-multimodal",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Phi-4 Multimodal Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record phi-4-multimodal; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109366,6 +111180,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "7f1f1b77ba9e5343": {
+            "benchmark": "GPQA Diamond",
+            "score": 35.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nova-micro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nova Micro.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nova-micro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "2b965a66d8b37ee0": {
+            "benchmark": "IFBench",
+            "score": 29.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/nova-micro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Nova Micro.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record nova-micro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109516,6 +111362,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "4390652331895b9d": {
+            "benchmark": "GPQA Diamond",
+            "score": 76.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o1-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o1-preview.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o1-preview; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109814,6 +111676,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "22877572b62f1723": {
+            "benchmark": "GPQA Diamond",
+            "score": 35.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-1-5-flash-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 1.5 Flash-8B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-1-5-flash-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "61ce2d4b2df28988": {
+            "benchmark": "MMMU-Pro",
+            "score": 36.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-1-5-flash-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 1.5 Flash-8B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-1-5-flash-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -109834,6 +111728,68 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "547764f68965f2e9": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 39.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-7-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step 3.7 Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-7-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "gpqa-diamond": {
+          "24ead0b33a5b46ea": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-7-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step 3.7 Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-7-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "df6274c1553a45af": {
+            "benchmark": "IFBench",
+            "score": 67.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-7-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step 3.7 Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-7-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "6b65e0e7ac15269f": {
+            "benchmark": "MMMU-Pro",
+            "score": 75.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-7-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step 3.7 Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-7-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -109870,6 +111826,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "4b8cd33f7dab1be8": {
+            "benchmark": "IFBench",
+            "score": 52.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -109901,6 +111871,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "82febeac05ee5452": {
+            "benchmark": "GPQA Diamond",
+            "score": 77.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "dda3e37232105899": {
+            "benchmark": "MMMU-Pro",
+            "score": 65.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "63f561ed9a297c7f": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 25.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-4b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 4B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-4b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -109921,6 +111939,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "f7ee163563baaa81": {
+            "benchmark": "IFBench",
+            "score": 31.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -109952,6 +111984,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "d77b79ec5374bf53": {
+            "benchmark": "GPQA Diamond",
+            "score": 45.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "084d26b22e2259e8": {
+            "benchmark": "MMMU-Pro",
+            "score": 43.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "2d601257eaa72998": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 3.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-2b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 2B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-2b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -109972,6 +112052,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "068474c179adee6b": {
+            "benchmark": "IFBench",
+            "score": 21.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Non-reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -110002,6 +112096,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "ca79dce39544a89e": {
+            "benchmark": "GPQA Diamond",
+            "score": 23.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Non-reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "e607f2c9ab9cfdb7": {
+            "benchmark": "MMMU-Pro",
+            "score": 25.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-0-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "dbde00bdd770a335": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 0.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-0-8b-non-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 0.8B (Non-reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-5-0-8b-non-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -110215,6 +112357,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "3cb3f060d60ff72f": {
+            "benchmark": "IFBench",
+            "score": 70.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-max-thinking",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Max Thinking.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-max-thinking; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -110260,6 +112416,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "a70e75e36aa8ec47": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-max-thinking",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Max Thinking.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-max-thinking; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -110347,6 +112519,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "6926eb777debc273": {
+            "benchmark": "GPQA Diamond",
+            "score": 63.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/longcat-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of LongCat Flash Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record longcat-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "1150e5c8a6c3b661": {
+            "benchmark": "IFBench",
+            "score": 43.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/longcat-flash-lite",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of LongCat Flash Lite.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record longcat-flash-lite; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -110561,6 +112765,54 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "36999264e1d3502c": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v3-2-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V3.2 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-v3-2-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "dce15af304ca5384": {
+            "benchmark": "IFBench",
+            "score": 60.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v3-2-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V3.2 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-v3-2-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "f342ba2129b52d74": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 46.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v3-2-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V3.2 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-v3-2-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -110758,6 +113010,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "6b267d41bc44df70": {
+            "benchmark": "MMMU-Pro",
+            "score": 64.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-32b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 32B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-32b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -110803,6 +113069,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "efc93df4d7d12810": {
+            "benchmark": "GPQA Diamond",
+            "score": 67.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-32b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 32B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-32b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "c46d98e3ee56b7a6": {
+            "benchmark": "IFBench",
+            "score": 39.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-32b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 32B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-32b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -110920,6 +113218,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "398ded03015eca42": {
+            "benchmark": "MMMU-Pro",
+            "score": 62.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-30b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 30B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-30b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -110965,6 +113277,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "d8d81c5bbcfdeac7": {
+            "benchmark": "GPQA Diamond",
+            "score": 69.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-30b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 30B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-30b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "22fadfb6c72589db": {
+            "benchmark": "IFBench",
+            "score": 33.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-30b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 30B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-30b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111082,6 +113426,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "3eccdc4eeec9bde9": {
+            "benchmark": "MMMU-Pro",
+            "score": 47.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-8b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 8B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-8b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -111112,6 +113470,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "a4f5eacf9c745771": {
+            "benchmark": "GPQA Diamond",
+            "score": 42.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-8b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 8B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-8b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "05422c4aaaaf99a6": {
+            "benchmark": "IFBench",
+            "score": 32.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-8b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 8B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-8b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111229,6 +113619,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          },
+          "e46f25ef9ec0a2a2": {
+            "benchmark": "MMMU-Pro",
+            "score": 43.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-4b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 4B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-4b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -111259,6 +113663,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "0e776cfdfea8a05c": {
+            "benchmark": "GPQA Diamond",
+            "score": 37.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-4b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 4B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-4b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "180108ae8d5da932": {
+            "benchmark": "IFBench",
+            "score": 31.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-vl-4b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 VL 4B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-vl-4b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111361,6 +113797,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "9553caa11fd02212": {
+            "benchmark": "GPQA Diamond",
+            "score": 73.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Next 80B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-next-80b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "5e71418ba6a4e719": {
+            "benchmark": "IFBench",
+            "score": 39.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-next-80b-a3b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Next 80B A3B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-next-80b-a3b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111560,6 +114028,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "71931d2de995e736": {
+            "benchmark": "GPQA Diamond",
+            "score": 73.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5-air",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5-Air.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5-air; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "69abd60f999b052e": {
+            "benchmark": "IFBench",
+            "score": 37.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5-air",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5-Air.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5-air; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -111677,6 +114177,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "561b4a60e2e9f298": {
+            "benchmark": "GPQA Diamond",
+            "score": 69.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-80k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 80k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-80k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "51da095251168865": {
+            "benchmark": "IFBench",
+            "score": 41.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-80k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 80k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-80k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -111742,6 +114274,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "08e514d8e9378fb1": {
+            "benchmark": "GPQA Diamond",
+            "score": 68.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-40k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 40k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-40k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "8957be3b45e5da50": {
+            "benchmark": "IFBench",
+            "score": 41.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m1-40k",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax M1 40k.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m1-40k; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111814,6 +114378,38 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "4412d8ae4a6bc330": {
+            "benchmark": "GPQA Diamond",
+            "score": 61.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-coder-480b-a35b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Coder 480B A35B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-coder-480b-a35b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "10e8a664c1f3b9d0": {
+            "benchmark": "IFBench",
+            "score": 40.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-coder-480b-a35b-instruct",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3 Coder 480B A35B Instruct.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-coder-480b-a35b-instruct; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -111920,6 +114516,38 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
           }
+        },
+        "gpqa-diamond": {
+          "ad71a7c3b50313c8": {
+            "benchmark": "GPQA Diamond",
+            "score": 30.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-llama-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Llama 8B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-llama-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "cab73a74c29639ff": {
+            "benchmark": "IFBench",
+            "score": 17.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-r1-distill-llama-8b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek R1 Distill Llama 8B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record deepseek-r1-distill-llama-8b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -111940,6 +114568,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "gpqa-diamond": {
+          "3b86f7b40bb815d4": {
+            "benchmark": "GPQA Diamond",
+            "score": 55.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/QwQ-32B-Preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of QwQ 32B-Preview.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record QwQ-32B-Preview; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -112181,6 +114825,70 @@
             "modelAvailableFrom": "2026-09-26",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "gpqa-diamond": {
+          "dd53e9d311c3b54a": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.3 Codex (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-3-codex; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "79bb8e502696882b": {
+            "benchmark": "IFBench",
+            "score": 75.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.3 Codex (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-3-codex; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "5cd4db7cbd392cc6": {
+            "benchmark": "MMMU-Pro",
+            "score": 78.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-3-codex",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.3 Codex (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-3-codex; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "toolathlon": {
+          "9830a9249a8f6be6": {
+            "benchmark": "Toolathlon",
+            "score": 51.9,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; GPT-5.3-Codex-xhigh; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2026-03-06",
+            "modelAvailableFrom": "2026-11-10"
+          }
         }
       }
     },
@@ -112384,6 +115092,54 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-27"
+          }
+        },
+        "gpqa-diamond": {
+          "370c352eb33b7c3a": {
+            "benchmark": "GPQA Diamond",
+            "score": 82.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-omni",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2-Omni.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-omni; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "99a1d4bb2f16f339": {
+            "benchmark": "IFBench",
+            "score": 53.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-omni",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2-Omni.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-omni; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "9b5ddac675ab40f1": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-omni",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2-Omni.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record mimo-v2-omni; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -113426,6 +116182,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-10-28"
           }
+        },
+        "mmmu-pro": {
+          "26f4c3da622495c9": {
+            "benchmark": "MMMU-Pro",
+            "score": 83.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-wonder-high",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Wonder (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record muse-wonder-high; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -113505,6 +116277,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-20"
+          }
+        },
+        "mmmu-pro": {
+          "a6c238412d71d92d": {
+            "benchmark": "MMMU-Pro",
+            "score": 79.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m3-1-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M3.1-Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record minimax-m3-1-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -113638,6 +116426,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-20"
+          },
+          "835127b1aaf6a91a": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 76.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-spark-open",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Spark Open (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record muse-spark-open; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "gpqa": {
@@ -113668,6 +116470,20 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-20"
+          },
+          "e9e1b26dcc8e7042": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-spark-open",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Spark Open (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record muse-spark-open; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "arc-agi-2": {
@@ -113698,6 +116514,22 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-27"
+          }
+        },
+        "mmmu-pro": {
+          "2c996d62b10c96df": {
+            "benchmark": "MMMU-Pro",
+            "score": 80.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-spark-open",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Spark Open (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record muse-spark-open; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -114422,6 +117254,20 @@
             "sourceType": "vendor_blog",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-30"
+          },
+          "3c15ebe17bec51d0": {
+            "benchmark": "MMMU-Pro",
+            "score": 84.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-1-terra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.1 Terra (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-6-1-terra; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -114533,6 +117379,20 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-31",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3.8-max-0902_xhigh."
+          },
+          "0f2cfcfc48808fde": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max (0902).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-8-max; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "frontiermath-1-3-v2": {
@@ -114550,6 +117410,38 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-10-31",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen3.8-max-0902_xhigh."
+          }
+        },
+        "mmmu-pro": {
+          "8f304a9789fab19f": {
+            "benchmark": "MMMU-Pro",
+            "score": 82.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max (0902).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-8-max; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "d7e7e646d72a84a2": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 88.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max (0902).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-8-max; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -114616,6 +117508,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-10-31"
+          },
+          "c4297173afbd2e56": {
+            "benchmark": "MMMU-Pro",
+            "score": 83.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k3-1-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K3.1 Pro.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record kimi-k3-1-pro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         },
         "charxiv-r": {
@@ -114844,6 +117750,22 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-11-07"
+          }
+        },
+        "mmmu-pro": {
+          "c890089a2572c80f": {
+            "benchmark": "MMMU-Pro",
+            "score": 89.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-carbon-medium",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Carbon (Medium).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gemini-4-carbon-medium; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -115170,6 +118092,304 @@
             "kind": "published",
             "sourceType": "model_card",
             "confidence": "high",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        }
+      }
+    },
+    "a84ff56439332024b9fd": {
+      "name": "GPT-5.1 Codex Mini",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "f556ad552c4eaa8c": {
+            "benchmark": "GPQA Diamond",
+            "score": 81.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.1 Codex mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-1-codex-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "cae0af2910b2737b": {
+            "benchmark": "IFBench",
+            "score": 67.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.1 Codex mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-1-codex-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "d1d60031cc87242c": {
+            "benchmark": "MMMU-Pro",
+            "score": 69.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-1-codex-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.1 Codex mini (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record gpt-5-1-codex-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "cb68a751d637f0bd90f4": {
+      "name": "o3-pro",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "716e90cf93d8ed7c": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/o3-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of o3-pro.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record o3-pro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "6adefb93979caf7fc9f7": {
+      "name": "Qwen3.8-2.4T-A95B",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "70118ff49a5e1100": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 2.4T A95B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-8-2-4t-a95b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-2.1": {
+          "fbbe7145e185ecce": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 82.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-2-4t-a95b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 2.4T A95B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record qwen3-8-2-4t-a95b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "3c5e29f5269a5b03062b": {
+      "name": "GLM-5V-Turbo",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "099bd4a5b32c5b81": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5v-turbo",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM 5V Turbo (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-5v-turbo; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "07ebd9b2d3e712dc": {
+            "benchmark": "IFBench",
+            "score": 61.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5v-turbo",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM 5V Turbo (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-5v-turbo; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "93cf885480d0ac4e": {
+            "benchmark": "MMMU-Pro",
+            "score": 72.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5v-turbo",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM 5V Turbo (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-5v-turbo; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "6bcecf41316803096cf0": {
+      "name": "Step3-VL-10B",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "b3ee97ed5ef1b975": {
+            "benchmark": "GPQA Diamond",
+            "score": 69.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-vl-10b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step3 VL 10B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-vl-10b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "5e6d6affa1661afb": {
+            "benchmark": "IFBench",
+            "score": 50.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-vl-10b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step3 VL 10B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-vl-10b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "8e40dd16ea4083af": {
+            "benchmark": "MMMU-Pro",
+            "score": 64.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/step-3-vl-10b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Step3 VL 10B.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record step-3-vl-10b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "cf3363efc1897631baea": {
+      "name": "GLM-4.5V",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "d64b296247063a5b": {
+            "benchmark": "GPQA Diamond",
+            "score": 68.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5v-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5V (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5v-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "ifbench": {
+          "ae5cb1de772d25c1": {
+            "benchmark": "IFBench",
+            "score": 34.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5v-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5V (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5v-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "mmmu-pro": {
+          "855db6f5a1fb2f3b": {
+            "benchmark": "MMMU-Pro",
+            "score": 50.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-4-5v-reasoning",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-4.5V (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record glm-4-5v-reasoning; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        }
+      }
+    },
+    "75421afa5997a1ad10bc": {
+      "name": "Qwen3-Coder",
+      "profiles": {},
+      "benchmarks": {
+        "toolathlon": {
+          "286f0e1e610ab7f3": {
+            "benchmark": "Toolathlon",
+            "score": 14.5,
+            "unit": "percent",
+            "source": "https://toolathlon.xyz/docs/leaderboard",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Original pre-Verified Toolathlon; Qwen-3-Coder; Default harness; Pass@1.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "publishedAt": "2025-10-28",
             "modelAvailableFrom": "2026-11-10"
           }
         }

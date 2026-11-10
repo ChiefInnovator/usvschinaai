@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generationId": "637b6368d03e4f50e14ae591751dfb0929886e53db33357640253ba21d42e35f",
+  "generationId": "828833de180e6bec0b45a2c57d3ceedcce97f00883b48d196c133baea3fd102e",
   "scoringRevision": "c57b41dde8092e64176b1d750451b24a90b5bdda696baf6d7ef43abe51a68c55",
   "artifacts": {
-    "current.json": "2c0621bb0d50dbc186ca0cf79704ad507e8b65958ede7ec18fb750731abaaeee",
+    "current.json": "ceaae89f5f54cab2b6d1eb29002238bc359abd84e13a45ac195f38780577679f",
     "data/core_benchmarks.json": "013b6d3b2bd15564bd4cfc8f9ee1d1d537084c37e035a3ea306d0be67340d46f",
     "data/historical_benchmark_gaps.json": "f10dc86597c3f7c1ec2b686c5e5c404b341b1cb4ae1410f8c06070fb7acf9e65",
-    "data/model_catalog.json": "959c2bc8810569e205c8892e658aa75d509d5091586e38929480ad7753429af5",
+    "data/model_catalog.json": "8edd30e8caf4fa214a70d5b3159c0d5a0e663116aefc9f5380435ac7e91f857c",
     "data/scoring_revision.json": "1621415df5545b3d552c56944c450dd451bc2ef025fd023423bc453a75343ed8",
-    "data/site_summary.json": "ccdc198fec55d59875bd5c206f06cd733e159d5f225d647a01df5b2cec5ed7d1",
+    "data/site_summary.json": "3d5282ef4db5f7bc42f8d978e6eeb5da3ccdc399e6fb95426c70eac2172dd844",
     "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-    "ig-image.png": "b864e2ab2ab59fd2976fa0669ee56c2b74ae9b8016c5661fe587ad213e5d0da1",
-    "models.json": "df47b8b44735d026e8237865691b2fdd2ea3a1b621aa6e799cd8724fd84560a1",
-    "og-image.png": "e22bc1f6d570c2735a7488c214aaec2de3d80eb21064c59321179b5ab3aa063b",
-    "social/2026-11-10-1-new_challenger-graphite.png": "4fb0dbf1d6d14a2f9bcebadd0665f194db41af31c77d45bed1cb9e9600e30db3",
-    "social/2026-11-10-2-leaderboard-graphite.png": "120f28c210dd833b160f5755f3ce0d4aa680aa79c0e5c12df7b79c753cf3091c",
-    "social/plan.json": "4ae9b252583e4601dd46cb6327afaef64d6de23816bb65139c7743ff1dc76022"
+    "ig-image.png": "345e099706b78ee2098cb9097f261f0be1c888e8c37f7e909c3f126db7f1b08e",
+    "models.json": "3ff0c7802167d7f59d85a387779ea248f8660bf82ecb133a5ac7c3306be5f7a8",
+    "og-image.png": "e3d1b5feefc651605f95f92b08dfeea8a16177b3288bddf3d64392de63c1f65d",
+    "social/2026-11-10-1-new_challenger-graphite.png": "0f02267e3b095af336bcabe4806bd4bc3ffb8468d633add160f6f81363ae92e2",
+    "social/2026-11-10-2-leaderboard-graphite.png": "6fe67974fd90c793dba8e07d77d30a2d0cb02456624e710ced5b8de0d2898659",
+    "social/plan.json": "6be1c5aed0031a7d0c960d37c4df02817f141d30e9970c46ccc83eb2049f45b7"
   }
 }
