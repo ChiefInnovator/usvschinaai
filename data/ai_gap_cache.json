@@ -1282,13 +1282,13 @@
   "GPT-6.1 Terra": {
     "GPQA": {
       "benchmark": "GPQA",
-      "cached_at": "2026-11-09T03:30:20.481843+00:00",
+      "cached_at": "2026-11-10T03:27:56.078749+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "GPQA Diamond, max effort, Epoch Inspect; individual result publication date unknown.",
+      "notes": "GPQA Diamond, Epoch AI evaluation, max reasoning effort; individual result publication date unknown.",
       "score": "94.3%",
       "source_type": "third_party_leaderboard",
-      "source_url": "https://epoch.ai/data/benchmark_data.zip"
+      "source_url": "https://llmbenchmark.ai/benchmarks/epoch-gpqa-diamond"
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
@@ -1741,6 +1741,38 @@
       "score": "29.7%",
       "source_type": "model_card",
       "source_url": "https://thinkingmachines.ai/model-card/inkling/"
+    }
+  },
+  "Inkling 2 Small": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-11-10T03:27:56.078749+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+      "score": "72.1%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    },
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-11-10T03:27:56.078749+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+      "score": "93.0%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    },
+    "Terminal-Bench 2.1": {
+      "benchmark": "Terminal-Bench 2.1",
+      "cached_at": "2026-11-10T03:27:56.078749+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Pi harness; effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+      "score": "85.1%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
     }
   },
   "Inkling-Small": {
