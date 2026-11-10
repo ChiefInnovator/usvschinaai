@@ -1690,6 +1690,35 @@
             "modelAvailableFrom": "2026-06-10",
             "notes": "Claude Sonnet 5 System Card Table 8.11.5.A; the Fable 5 system card gives the same figure."
           }
+        },
+        "terminal-bench-4.0": {
+          "cb443f6bd3866d14": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 44.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-10"
+          },
+          "d64b360638365c19": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 41.4,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-fable-5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-06-10",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -2522,6 +2551,35 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-09-02"
           }
+        },
+        "terminal-bench-4.0": {
+          "59d3a514062bd8ef": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 55.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-02"
+          },
+          "792e5ea30ac14f0c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 58.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-fable-5-1; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-02",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -2691,6 +2749,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          },
+          "a307cf99eaa1aaac": {
+            "benchmark": "GPQA Diamond",
+            "score": 94.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-mythos-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -3050,6 +3121,19 @@
             "publishedAt": "2025-05-22",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Epoch AI GPQA Diamond hub, run started 2025-05-22."
+          },
+          "c49b2710de12c996": {
+            "benchmark": "GPQA Diamond",
+            "score": 79.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-20250514",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "swe-bench-verified": {
@@ -3272,6 +3356,19 @@
             "publishedAt": "2025-11-24",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Claude Opus 4.5 System Card Table 2.3.A, Opus 4.1 comparison column."
+          },
+          "2adafdf94347aab5": {
+            "benchmark": "GPQA Diamond",
+            "score": 80.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-1-20250805",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "swe-bench-verified": {
@@ -6129,6 +6226,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
+          },
+          "57766b3377bdd34b": {
+            "benchmark": "GPQA Diamond",
+            "score": 87.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-5-20251101",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -9347,6 +9457,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-06"
+          },
+          "49010f06000859a7": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-06"
           }
         },
         "humanitys-last-exam": {
@@ -11666,6 +11789,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-21"
+          },
+          "22bccd82bb197029": {
+            "benchmark": "GPQA Diamond",
+            "score": 94.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-7",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-21"
           }
         },
         "humanitys-last-exam": {
@@ -13007,6 +13143,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-03"
+          },
+          "32b7ab48b28f634e": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-8",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-03"
           }
         },
         "humanitys-last-exam": {
@@ -13274,6 +13423,49 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-03"
+          }
+        },
+        "terminal-bench-4.0": {
+          "5bb61ca7e407252a": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 21.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/claude-opus-4-8",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Claude Opus 4.8 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-03",
+            "notes": "AA record claude-opus-4-8; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "1c025bbea7d743e6": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 23.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-4-8",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-03"
+          },
+          "f998998abea899ea": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 23.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-opus-4-8; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-06-03",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -14211,6 +14403,49 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-13"
           }
+        },
+        "terminal-bench-4.0": {
+          "9c1836408edec58d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 49.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/claude-opus-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Claude Opus 5 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-13",
+            "notes": "AA record claude-opus-5; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "07b60eeb8ca69643": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 51.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-13"
+          },
+          "faee341113cceac4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 53.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-opus-5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -14279,6 +14514,19 @@
             "publishedAt": "2025-05-22",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Anthropic's Claude 4 launch post; the post states the reported benchmarks are the highest score achieved with or without extended thinking."
+          },
+          "e1a48d650cddc64b": {
+            "benchmark": "GPQA Diamond",
+            "score": 75.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-4-20250514",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "ifbench": {
@@ -15066,6 +15314,19 @@
             "publishedAt": "2025-12-22",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Publication date verified from this pinned README commit in the official publisher repository."
+          },
+          "20b3e0bd3e843eeb": {
+            "benchmark": "GPQA Diamond",
+            "score": 83.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-4-5-20250929",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "ifbench": {
@@ -17993,6 +18254,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-20"
+          },
+          "47a0e3ddd5c82002": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-4-6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-20"
           }
         },
         "humanitys-last-exam": {
@@ -18310,6 +18584,22 @@
             "confidence": "high",
             "publishedAt": "2026-02-23",
             "modelAvailableFrom": "2026-02-20"
+          }
+        },
+        "terminal-bench-4.0": {
+          "084f0c555e6d8e51": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 3.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/claude-sonnet-4-6-adaptive",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Claude Sonnet 4.6 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-20",
+            "notes": "AA record claude-sonnet-4-6-adaptive; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -19195,6 +19485,49 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
           }
+        },
+        "terminal-bench-4.0": {
+          "6748a3515fe5732f": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 14.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/claude-sonnet-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Claude Sonnet 5 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record claude-sonnet-5; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "65b01bd34a5553e5": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28"
+          },
+          "78ed98d81363d880": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 10.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-sonnet-5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -19274,6 +19607,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-11",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row DeepSeek-R1-Distill-Llama-70B."
+          },
+          "08e61575c1c8bb36": {
+            "benchmark": "GPQA Diamond",
+            "score": 65.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-r1-distill-llama-70b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-11"
           }
         },
         "ifbench": {
@@ -19950,6 +20296,19 @@
             "publishedAt": "2026-01-27",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Publication date verified from this pinned README commit in the official publisher repository."
+          },
+          "d7bc03b0dd3cbebc": {
+            "benchmark": "GPQA Diamond",
+            "score": 82.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-reasoner",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -20362,6 +20721,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-27",
             "notes": "AA record deepseek-v3-2-reasoning-0925; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "0839f0e3a7a1662b": {
+            "benchmark": "GPQA Diamond",
+            "score": 79.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v3.2-exp",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-27"
           }
         },
         "humanitys-last-exam": {
@@ -21990,6 +22362,36 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-13"
           }
+        },
+        "terminal-bench-4.0": {
+          "5aa1ca7b4f5209ee": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4 Flash 0731 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-13",
+            "notes": "AA record deepseek-v4-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "7ee0ed8e83807546": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 18.7,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID deepseek/deepseek-v4-flash-0731; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-13",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -22420,6 +22822,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-18"
+          },
+          "f517d99cec32af08": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4-flash-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -23697,6 +24112,36 @@
             "sourceType": "paper",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "terminal-bench-4.0": {
+          "f93201bc52bf9fe4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 14.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4 Pro 0813 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record deepseek-v4-pro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "3bc2d48f07093de4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 14.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID deepseek/deepseek-v4-pro-0813; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -25647,6 +26092,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-10"
+          },
+          "6871ba0bbc052de0": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4-pro-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-10"
           }
         },
         "humanitys-last-exam": {
@@ -25965,6 +26423,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-11",
             "notes": "AA lists the model as 'ERNIE 4.5 300B A47B' with releaseDate 2025-06-30, matching the brief's ERNIE 4.5 (Baidu, Jun 2025) open-weights flagship. AA measurement date not stated."
+          },
+          "2cf09d11a38dece9": {
+            "benchmark": "GPQA Diamond",
+            "score": 74.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-4.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-11"
           }
         },
         "ifbench": {
@@ -26447,6 +26918,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "977c0ac4e046317e": {
+            "benchmark": "GPQA Diamond",
+            "score": 79.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-4.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -28174,6 +28658,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "01d5595cf4f169dc": {
+            "benchmark": "GPQA Diamond",
+            "score": 81.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-4.6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -30024,6 +30521,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "0050850b7a8e490a": {
+            "benchmark": "GPQA Diamond",
+            "score": 85.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-4.7",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -34852,6 +35362,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-04-09",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "4a6ac066b78600c7": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-5.1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-09"
           }
         },
         "humanitys-last-exam": {
@@ -35054,6 +35577,22 @@
             "confidence": "high",
             "publishedAt": "2026-04-07",
             "modelAvailableFrom": "2026-04-09"
+          }
+        },
+        "terminal-bench-4.0": {
+          "d06bb50c203da98b": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 2.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-5.1 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-09",
+            "notes": "AA record glm-5-1; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -36397,6 +36936,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-18"
+          },
+          "98e424450e07f695": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-5.2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-18"
           }
         },
         "humanitys-last-exam": {
@@ -36625,6 +37177,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-06-18"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c730910b5261a38d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 1.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5-2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-5.2 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-18",
+            "notes": "AA record glm-5-2; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -37208,6 +37776,49 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "terminal-bench-4.0": {
+          "e3c094f9b87d6bee": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 41.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5-3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-5.3 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record glm-5-3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "cc8a4d17fdd5c955": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 41.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/glm-5.3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28"
+          },
+          "2aa5038b31d08b41": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 38.9,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID zai/glm-5.3; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -38766,6 +39377,36 @@
             "modelAvailableFrom": "2026-08-28",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row glm-5.3-flash_max."
           }
+        },
+        "terminal-bench-4.0": {
+          "3c97b67df4fe410f": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 32.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/glm-5-3-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GLM-5.3-Flash.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record glm-5-3-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "98535c9c385bb0c6": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 37.4,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID zai/glm-5.3-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -39632,6 +40273,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-30"
+          },
+          "7fae42386d705166": {
+            "benchmark": "GPQA Diamond",
+            "score": 87.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5-high-2025-08-07",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-30"
           }
         },
         "ifbench": {
@@ -40433,6 +41087,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-27"
+          },
+          "6e3720c7baba50c9": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5-medium-2025-08-07",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-27"
           }
         },
         "ifbench": {
@@ -40824,6 +41491,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-28"
+          },
+          "482a7a2ca5252e7e": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.1-2025-11-13",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -41370,6 +42050,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-24"
+          },
+          "660795c7ba119d8e": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.1-high-2025-11-12",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-24"
           }
         },
         "ifbench": {
@@ -41718,6 +42411,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-24"
+          },
+          "fe262884104013e9": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.1-thinking-2025-11-12",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -43958,6 +44664,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
+          },
+          "1469c64d9bd2dfa4": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.2-2025-12-11",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -45283,6 +46002,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          },
+          "6bcd3765c06f6925": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.2-pro-2025-12-11",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -48359,6 +49091,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-07"
+          },
+          "e70c5765bf1895b7": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-03-07"
           }
         },
         "humanitys-last-exam": {
@@ -48762,6 +49507,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-14"
+          },
+          "5bfaa77ec86d1a0d": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-14"
           }
         },
         "humanitys-last-exam": {
@@ -48929,6 +49687,22 @@
             "confidence": "high",
             "publishedAt": "2026-03-17",
             "modelAvailableFrom": "2026-04-14"
+          }
+        },
+        "terminal-bench-4.0": {
+          "b7538ad2387c435c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 2.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-4-mini",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.4 mini (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-14",
+            "notes": "AA record gpt-5-4-mini; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -51214,6 +51988,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-08"
+          },
+          "3e9b2583c5ecb96b": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-08"
           }
         },
         "humanitys-last-exam": {
@@ -51559,6 +52346,22 @@
             "confidence": "high",
             "publishedAt": "2026-04-24",
             "modelAvailableFrom": "2026-05-08"
+          }
+        },
+        "terminal-bench-4.0": {
+          "8067a54f9c25426d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 14.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.5 (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-08",
+            "notes": "AA record gpt-5-5; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -52283,6 +53086,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
+          },
+          "3f80c8f21779016b": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-luna",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03"
           }
         },
         "mmlu-pro": {
@@ -52477,6 +53293,49 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
+          }
+        },
+        "terminal-bench-4.0": {
+          "551300026016a677": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 11.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-6-luna",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.6 Luna (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "AA record gpt-5-6-luna; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "02dd5fa294974c2a": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 17.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-luna",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03"
+          },
+          "9b25457c974493cf": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 11.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-5.6-luna; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -53889,6 +54748,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-17"
+          },
+          "a67da65b1e2d2609": {
+            "benchmark": "GPQA Diamond",
+            "score": 94.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-sol",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-17"
           }
         },
         "ifbench": {
@@ -54146,6 +55018,49 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "351314bf7d1f184d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 39.9,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-6-sol",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.6 Sol (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-17",
+            "notes": "AA record gpt-5-6-sol; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "1c4d8ed5a159611b": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 37.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-sol",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-17"
+          },
+          "078c799b320667ca": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 37.9,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-5.6-sol; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-07-17",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -55620,6 +56535,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          },
+          "170ee917d48d25ab": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-terra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
           }
         },
         "ifbench": {
@@ -55891,6 +56819,49 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-07-21"
+          }
+        },
+        "terminal-bench-4.0": {
+          "0fd6e2aa0f15b8bc": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 35.4,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-5-6-terra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-5.6 Terra (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "AA record gpt-5-6-terra; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "6209ac6bc2f9082e": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 21.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-5.6-terra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          },
+          "ba1e2c49c524307b": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 22.7,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-5.6-terra; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -56812,6 +57783,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-04"
+          },
+          "5212c6d371042c15": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-astra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-04"
           }
         },
         "mmmu-pro": {
@@ -56902,6 +57886,49 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-04"
+          }
+        },
+        "terminal-bench-4.0": {
+          "797c31ba32668d93": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 59.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-astra-xhigh",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6 Astra (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-04",
+            "notes": "AA record gpt-6-astra-xhigh; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "2e8d86e2c10f7dec": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 57.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6-astra",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-04"
+          },
+          "6f77fd46a9f524f6": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 59.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-6-astra; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-04",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -57029,6 +58056,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-2.5-pro."
+          },
+          "2d2d785f521e6e7a": {
+            "benchmark": "GPQA Diamond",
+            "score": 83.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-2.5-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -57149,6 +58189,22 @@
             "confidence": "high",
             "publishedAt": "2025-10-28",
             "modelAvailableFrom": "2026-01-23"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c971636cf612fe2d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-2-5-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 2.5 Pro.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23",
+            "notes": "AA record gemini-2-5-pro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -60209,6 +61265,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23"
+          },
+          "c75416040cf8eb58": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-3-flash-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -61851,6 +62920,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
+          },
+          "a3aa4548936e03b7": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-3-pro-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -65448,6 +66530,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-20"
+          },
+          "d1b3d31b18d1a511": {
+            "benchmark": "GPQA Diamond",
+            "score": 94.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-3.1-pro-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-20"
           }
         },
         "humanitys-last-exam": {
@@ -67174,6 +68269,36 @@
             "publishedAt": "2026-05-19",
             "modelAvailableFrom": "2026-06-04"
           }
+        },
+        "terminal-bench-4.0": {
+          "d51ce1a4e2c975a2": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 6.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-5-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.5 Flash (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-04",
+            "notes": "AA record gemini-3-5-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "358a41deadd74d7b": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 6.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-3.5-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-06-04",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -67653,6 +68778,36 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "terminal-bench-4.0": {
+          "04f0c82fa4f4e0bb": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 13.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-7-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.7 Flash (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record gemini-3-7-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "09d7f67c8c238099": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-3.7-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -68908,6 +70063,49 @@
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gemini-3.8-flash_high."
           }
+        },
+        "terminal-bench-4.0": {
+          "9b2c9ca4dc1165c3": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-3-8-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 3.8 Flash (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "AA record gemini-3-8-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "8fee473381be391e": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-3.8-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03"
+          },
+          "992d51a5cd6b2e14": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.7,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-3.8-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -69626,6 +70824,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          },
+          "a5f2a10c8d87aa3b": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/grok-4.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
           }
         },
         "livecodebench-v6": {
@@ -69758,6 +70969,49 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          }
+        },
+        "terminal-bench-4.0": {
+          "0c3c93d91396f751": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 10.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4.5 (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "AA record grok-4-5; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "2460371b6f0e0cc4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/grok-4.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          },
+          "b368847a31870d6c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 8.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID grok/grok-4.5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -70134,6 +71388,49 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-08-31"
           }
+        },
+        "terminal-bench-4.0": {
+          "423ca1af0ff90723": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 21.2,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/grok-4-6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Grok 4.6 (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-31",
+            "notes": "AA record grok-4-6; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "8bf7ef7e819cccee": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 20.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/grok-4.6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-31"
+          },
+          "a2a83a1d49d856fe": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 17.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID grok/grok-4.6; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-31",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -70341,6 +71638,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          },
+          "d261dc1510883d11": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
           }
         },
         "officeqa-pro": {
@@ -70492,6 +71802,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          }
+        },
+        "terminal-bench-4.0": {
+          "62279dbb6f365d03": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/hy3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Hy3.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "AA record hy3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -70735,6 +72061,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-31"
+          },
+          "bf33f50338cfe55e": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-preview",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-31"
           }
         },
         "officeqa-pro": {
@@ -70884,6 +72223,22 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-31"
+          }
+        },
+        "terminal-bench-4.0": {
+          "f58d8ecf73d91a41": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 8.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID tencent/hy4-preview; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-31",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -72056,6 +73411,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Artificial Analysis model record kimi-k2-0905 (releaseDate 2025-09-05)."
+          },
+          "e418f56ab77a990d": {
+            "benchmark": "GPQA Diamond",
+            "score": 75.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k2-0905",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "ifbench": {
@@ -73048,6 +74416,19 @@
             "publishedAt": "2025-09-05",
             "modelAvailableFrom": "2026-01-23",
             "notes": "llm-stats' kimi-k2-thinking-0905 page resolves to this model card / the Kimi K2 Thinking launch post; the card labels the row GPQA and the vendor blog states the Diamond tier. publishedAt set to the model's stated release date (2025-09-05) as the card carries no explicit date."
+          },
+          "42a7a18b1c00ea34": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k2-thinking-0905",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -75173,6 +76554,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-28"
+          },
+          "b3c5a45ae0efc838": {
+            "benchmark": "GPQA Diamond",
+            "score": 87.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k2.5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -77974,6 +79368,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-23"
+          },
+          "a85356f3b0fe74bf": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k2.6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-23"
           }
         },
         "humanitys-last-exam": {
@@ -78303,6 +79710,22 @@
             "confidence": "high",
             "publishedAt": "2026-04-21",
             "modelAvailableFrom": "2026-04-23"
+          }
+        },
+        "terminal-bench-4.0": {
+          "7d7d15cd8ee4a14b": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k2-6",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K2.6 (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-23",
+            "notes": "AA record kimi-k2-6; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -80011,6 +81434,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-18"
+          },
+          "0e43cc440918cd76": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/kimi-k3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-18"
           }
         },
         "humanitys-last-exam": {
@@ -80333,6 +81769,36 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-18"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c416ca21fe47d6a8": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/kimi-k3-low",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Kimi K3 (Low).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-18",
+            "notes": "AA record kimi-k3-low; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "7ef8f277722b2f8f": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 17.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID kimi/kimi-k3; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-07-18",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -80964,6 +82430,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "3a24b172475cd4ca": {
+            "benchmark": "GPQA Diamond",
+            "score": 83.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -81444,6 +82923,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-06-14",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "0c763fd6f2cfecdf": {
+            "benchmark": "GPQA Diamond",
+            "score": 66.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/mimo-v2.5-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-14"
           }
         },
         "humanitys-last-exam": {
@@ -81695,6 +83187,36 @@
             "modelAvailableFrom": "2026-06-14",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
+        },
+        "terminal-bench-4.0": {
+          "cab3e4351e3e9a4d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/mimo-v2-5-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiMo-V2.5-Pro (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-06-14",
+            "notes": "AA record mimo-v2-5-pro; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "674e73eccc8787d9": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID xiaomi/mimo-v2.5-pro; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-06-14",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -81832,6 +83354,19 @@
             "publishedAt": "2025-12-23",
             "modelAvailableFrom": "2026-02-11",
             "notes": "Publication date verified from this pinned README commit in the official publisher repository."
+          },
+          "e7704b84628d020a": {
+            "benchmark": "GPQA Diamond",
+            "score": 78.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/minimax-m2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-11"
           }
         },
         "humanitys-last-exam": {
@@ -82952,6 +84487,19 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-01-23",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "aa5998a4f6f0f2f6": {
+            "benchmark": "GPQA Diamond",
+            "score": 81.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/minimax-m2.1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-01-23"
           }
         },
         "humanitys-last-exam": {
@@ -85977,6 +87525,22 @@
             "publishedAt": "2026-03-18",
             "modelAvailableFrom": "2026-04-14"
           }
+        },
+        "terminal-bench-4.0": {
+          "381339f569a96fe1": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/minimax-m2-7",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of MiniMax-M2.7.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-14",
+            "notes": "AA record minimax-m2-7; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -86180,6 +87744,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-04"
+          },
+          "1818b50b1ed4bcb3": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/muse-spark",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -86768,6 +88345,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
           }
+        },
+        "terminal-bench-4.0": {
+          "6cdad277bb04e3d5": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 6.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-spark-1-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Spark 1.1 (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record muse-spark-1-1; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -87253,6 +88846,50 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row muse-spark-1.3_xhigh."
+          }
+        },
+        "terminal-bench-4.0": {
+          "583e0eb08fc8d5e5": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 33.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/muse-spark-1-3",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Muse Spark 1.3 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "AA record muse-spark-1-3; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "fb69c61f1f72d388": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 24.7,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID meta/muse_spark_1_3_max; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          },
+          "6ed65f74be223437": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 10.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID meta/muse_spark_1_3; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -88049,6 +89686,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-14",
             "notes": "AA record qwen3-5-122b-a10b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "3aebb4a2a3d08d3c": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.5-122b-a10b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-03-14"
           }
         },
         "humanitys-last-exam": {
@@ -88550,6 +90200,22 @@
             "modelAvailableFrom": "2026-03-14",
             "notes": "AA 'terminalbenchV21' = 0.4757 for 'Qwen3.5 122B A10B (Reasoning)'; vendor card only gives Terminal-Bench 2.0 (49.4)."
           }
+        },
+        "terminal-bench-4.0": {
+          "811cb7661a36af21": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-122b-a10b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 122B A10B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-03-14",
+            "notes": "AA record qwen3-5-122b-a10b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
         }
       }
     },
@@ -88800,6 +90466,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-04-10",
             "notes": "AA record qwen3-5-27b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "67dd7a911ab34e2c": {
+            "benchmark": "GPQA Diamond",
+            "score": 85.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.5-27b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-04-10"
           }
         },
         "humanitys-last-exam": {
@@ -89540,6 +91219,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-03-14",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen3.5-35b-a3b."
+          },
+          "12f7d2e077dd1f73": {
+            "benchmark": "GPQA Diamond",
+            "score": 84.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.5-35b-a3b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-03-14"
           }
         },
         "humanitys-last-exam": {
@@ -92218,6 +93910,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-02-17"
+          },
+          "6801b14dbf488cba": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.5-397b-a17b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-17"
           }
         },
         "humanitys-last-exam": {
@@ -92580,6 +94285,22 @@
             "confidence": "high",
             "publishedAt": "2026-04-02",
             "modelAvailableFrom": "2026-02-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "d163a24680784432": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-5-397b-a17b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.5 397B A17B (Reasoning).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-02-17",
+            "notes": "AA record qwen3-5-397b-a17b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -94286,6 +96007,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-09"
+          },
+          "e17c138a72c59589": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.6-plus",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -96194,6 +97928,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-05-27"
+          },
+          "a3ea27d881a05e85": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.7-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-27"
           }
         },
         "humanitys-last-exam": {
@@ -96480,6 +98227,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-05-27",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "terminal-bench-4.0": {
+          "eb4995b08e48d62d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 1.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-7-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.7 Max.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-05-27",
+            "notes": "AA record qwen3-7-max; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -96941,6 +98704,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-07-21"
+          },
+          "73d6144a8f117ed8": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.7-plus",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
           }
         },
         "humanitys-last-exam": {
@@ -97239,6 +99015,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-07-21",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "terminal-bench-4.0": {
+          "b92b9bc882c5ced2": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 1.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-7-plus",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.7 Plus.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21",
+            "notes": "AA record qwen3-7-plus; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -97950,6 +99742,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-31"
+          },
+          "8d91883d4bc41948": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.8-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -98968,6 +100773,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-04",
             "notes": "AA record qwen3-8-max-0803; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "d525b277aece019f": {
+            "benchmark": "GPQA Diamond",
+            "score": 92.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.8-max",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04"
           }
         },
         "humanitys-last-exam": {
@@ -99303,6 +101121,36 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-04"
+          }
+        },
+        "terminal-bench-4.0": {
+          "75f46130d69b97a8": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 18.7,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-max-0803",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 Max.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-04",
+            "notes": "AA record qwen3-8-max-0803; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "784faa0f3c42c063": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 34.3,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID alibaba/qwen3.8-max; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-08-04",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -99669,6 +101517,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03"
+          },
+          "31984ecbb4501ad4": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.8-27b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03"
           }
         },
         "humanitys-last-exam": {
@@ -99923,6 +101784,22 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-03",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row qwen3.8-27b_xhigh."
+          }
+        },
+        "terminal-bench-4.0": {
+          "87f7ad9b80a6a7d4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 5.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-27b",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8 27B (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-03",
+            "notes": "AA record qwen3-8-27b; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -100246,6 +102123,19 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-08-28"
+          },
+          "864861b571acddfc": {
+            "benchmark": "GPQA Diamond",
+            "score": 91.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen3.8-flash-next",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28"
           }
         },
         "humanitys-last-exam": {
@@ -100468,6 +102358,22 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-08-28"
+          }
+        },
+        "terminal-bench-4.0": {
+          "1bb13f20af1ef348": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 25.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/qwen3-8-flash-next",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Qwen3.8-Flash-Next.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-08-28",
+            "notes": "AA record qwen3-8-flash-next; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }
@@ -100936,6 +102842,19 @@
             "availableFrom": "2026-09-06",
             "retrievedAt": "2026-09-06",
             "configuration": "Exact benchmark leaderboard and model link; 0–1 score normalized to percentage. Visible table only; individual publication date unknown.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-07-21"
+          },
+          "452d216761a2e568": {
+            "benchmark": "GPQA Diamond",
+            "score": 88.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/seed-2.0-pro",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
@@ -102195,6 +104114,19 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-11",
             "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row deepseek-v4.1-flash_max."
+          },
+          "0adf1ca4a2fe4248": {
+            "benchmark": "GPQA Diamond",
+            "score": 90.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
           }
         },
         "humanitys-last-exam": {
@@ -102273,6 +104205,49 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-09-11",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row deepseek-v4.1-flash_max."
+          }
+        },
+        "terminal-bench-4.0": {
+          "ff1ca12e0bbfa331": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 26.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4.1 Flash (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11",
+            "notes": "AA record deepseek-v4-1-flash; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "015099dfeffa2293": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 31.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-11"
+          },
+          "0780728ea6175431": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.7,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID deepseek/deepseek-v4.1-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-11",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -102358,6 +104333,21 @@
             "sourceType": "system_card",
             "confidence": "high",
             "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-09-23"
+          }
+        },
+        "terminal-bench-4.0": {
+          "9896a0bfc1bd1dbe": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 60.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-mythos-5-1",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
             "modelAvailableFrom": "2026-09-23"
           }
         }
@@ -103272,6 +105262,35 @@
             "modelAvailableFrom": "2026-09-23",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-opus-5-5_max."
           }
+        },
+        "terminal-bench-4.0": {
+          "d78976ee94273efa": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 66.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-opus-5-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-23"
+          },
+          "8adb6ee6ef0adb6e": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 65.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-opus-5-5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-23",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -103747,6 +105766,36 @@
             "modelAvailableFrom": "2026-09-25",
             "notes": "AA record gpt-6-luna-xhigh; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "terminal-bench-4.0": {
+          "a4309170a3857516": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-luna",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6 Luna (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "AA record gpt-6-luna; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "a090e136e58887e4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 13.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-6-luna; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-25",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -103815,6 +105864,19 @@
             "source": "https://llm-stats.com/models/inkling-small",
             "availableFrom": "2026-09-26",
             "retrievedAt": "2026-09-26",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26"
+          },
+          "831e1042ebb04f78": {
+            "benchmark": "GPQA Diamond",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
             "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
@@ -104069,6 +106131,36 @@
             "availableFrom": "2026-09-26",
             "retrievedAt": "2026-09-26",
             "configuration": "Vals LiveCodeBench; v6 code generation; overall accuracy, not an easy/medium/hard subset; exact ID thinkingmachines/inkling-small; reasoning_effort=0.99; max_output_tokens=262000.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "terminal-bench-4.0": {
+          "4cb1a24147dc651c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 1.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-26",
+            "notes": "AA record inkling-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "9c0f7f0d3be582a7": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.0,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID thinkingmachines/inkling-small; .",
             "kind": "published",
             "sourceType": "third_party_leaderboard",
             "confidence": "high",
@@ -104374,6 +106466,36 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-09-26"
+          }
+        },
+        "terminal-bench-4.0": {
+          "09e63541e9173697": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 1.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-27",
+            "notes": "AA record inkling; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "9df14fec3d26d4d9": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 0.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID thinkingmachines/inkling; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-27",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -115107,6 +117229,35 @@
             "modelAvailableFrom": "2026-09-30",
             "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-sonnet-5-5_xhigh."
           }
+        },
+        "terminal-bench-4.0": {
+          "93953f990c46dc21": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 70.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-sonnet-5-5",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-09-30"
+          },
+          "63f493cd8578dd56": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 64.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-sonnet-5-5; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-09-30",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -115343,6 +117494,36 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-06"
+          }
+        },
+        "terminal-bench-4.0": {
+          "b892e8a180538c3a": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 56.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-1-sol",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.1 Sol (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-06",
+            "notes": "AA record gpt-6-1-sol; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "e780356789dc15f1": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 55.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-6.1-sol; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-06",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -115729,6 +117910,49 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-10-16"
+          }
+        },
+        "terminal-bench-4.0": {
+          "8ab15e58b86ba8ce": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 57.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-argon",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Argon (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-16",
+            "notes": "AA record gemini-4-argon; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "c54b10c8b7eabb61": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 57.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-4-argon",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-16"
+          },
+          "a2eedf6a388314fe": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 57.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-4-argon; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-16",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -116688,6 +118912,49 @@
             "modelAvailableFrom": "2026-10-31",
             "notes": "AA record deepseek-v4-1-flash-1017; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "terminal-bench-4.0": {
+          "7549c3794c7a44cc": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 33.8,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/deepseek-v4-1-flash-1017",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of DeepSeek V4.1 Flash 1017 (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "AA record deepseek-v4-1-flash-1017; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "07d33f70fc4da922": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 42.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/deepseek-v4.1-flash-1017",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-31"
+          },
+          "6fa88502b4b8bcd6": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 31.8,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID deepseek/deepseek-v4.1-flash-1017; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-10-31",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -117604,6 +119871,35 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10"
           }
+        },
+        "terminal-bench-4.0": {
+          "15aaad952d59fe6e": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 67.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5-2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          },
+          "f81b03a542cad42a": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 65.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID anthropic/claude-fable-5-2; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
         }
       }
     },
@@ -117732,6 +120028,19 @@
             "sourceType": "model_card",
             "confidence": "high",
             "modelAvailableFrom": "2026-11-10"
+          },
+          "20d488c64ebf490b": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
           }
         },
         "humanitys-last-exam": {
@@ -117807,6 +120116,36 @@
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-10",
             "notes": "AA record inkling-2-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-4.0": {
+          "d49ea678f3fab1a2": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 13.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Artificial Analysis independent evaluation of Inkling 2 Small.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "AA record inkling-2-small; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "027e376dce4f7458": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 12.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID thinkingmachines/inkling-2-small; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         }
       }
@@ -118200,6 +120539,11 @@
       "id": "swe-bench-verified",
       "name": "SWE-bench Verified",
       "column": "SWE-benchVerified"
+    },
+    {
+      "id": "terminal-bench-4.0",
+      "name": "Terminal-Bench 4.0",
+      "column": "Terminal-Bench4.0"
     }
   ]
 }
