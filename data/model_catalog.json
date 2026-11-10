@@ -64937,14 +64937,14 @@
           "created": "2026-02-19",
           "Input$/M": "2",
           "Output$/M": "12",
-          "Model": "Gemini 3.1 Pro",
-          "Speed": "44c/s",
-          "KnowledgeCutoff": "Jan. 2025",
-          "Country": "🇺🇸",
           "Context": "1.0M",
+          "Model": "Gemini 3.1 Pro",
+          "License": "Closed",
           "Latency": "13.0s",
+          "Speed": "44c/s",
+          "Country": "🇺🇸",
           "Multimodal": "Yes",
-          "License": "Closed"
+          "KnowledgeCutoff": "Jan. 2025"
         }
       },
       "benchmarks": {
@@ -68193,6 +68193,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "8.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "7ad9ab00d85715957a96": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "90c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "12.1s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -101084,9 +101103,9 @@
           "Input$/M": "—",
           "Output$/M": "—",
           "Model": "GPT-5.5 Pro",
+          "Multimodal": "Yes",
           "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
-          "Multimodal": "Yes",
           "License": "Closed"
         },
         "ac70abc4f31af4e7aedb": {
@@ -103009,11 +103028,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Model": "GPT-6 Luna",
-          "KnowledgeCutoff": "May 2026",
-          "Country": "🇺🇸",
           "Context": "1.1M",
-          "Multimodal": "Yes"
+          "Model": "GPT-6 Luna",
+          "Country": "🇺🇸",
+          "Multimodal": "Yes",
+          "KnowledgeCutoff": "May 2026"
         }
       },
       "benchmarks": {

@@ -14,10 +14,12 @@ Network-dependent tests skip (rather than fail) when PyPI is unreachable, so
 the suite still runs offline.
 """
 import json
+from importlib.metadata import version as installed_version
 import os
 import re
 import sys
 import unittest
+from unittest import mock
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -27,6 +29,7 @@ REQUIREMENTS = REPO_ROOT / "scripts" / "requirements.txt"
 WORKFLOW_DIR = REPO_ROOT / ".github" / "workflows"
 
 PIN_RE = re.compile(r"^\s*([A-Za-z0-9._-]+)\s*==\s*([^\s#]+)\s*$")
+PACKAGE_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 PY_VERSION_RE = re.compile(r"python-version:\s*['\"]?(\d+)\.(\d+)['\"]?")
 
 
@@ -39,6 +42,8 @@ def parse_requirements():
         m = PIN_RE.match(line)
         if m:
             pins[m.group(1)] = m.group(2)
+        elif PACKAGE_RE.fullmatch(line):
+            pins[line] = None
     return pins
 
 
@@ -86,18 +91,22 @@ def wheel_supports(filename, py):
 class RequirementsFormatTests(unittest.TestCase):
     def test_requirements_file_exists_and_is_nonempty(self):
         self.assertTrue(REQUIREMENTS.exists(), f"missing {REQUIREMENTS}")
-        self.assertTrue(parse_requirements(), "no pinned requirements parsed")
+        self.assertTrue(parse_requirements(), "no requirements parsed")
 
-    def test_every_requirement_is_exactly_pinned(self):
-        """A floating pin makes CI non-reproducible and can break overnight."""
+    def test_requirements_use_supported_version_policy(self):
+        """Playwright tracks latest; remaining dependencies use checked pins."""
         loose = []
         for line in REQUIREMENTS.read_text().splitlines():
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            if not PIN_RE.match(line):
+            if line != "playwright" and not PIN_RE.match(line):
                 loose.append(line)
-        self.assertEqual(loose, [], f"requirements not pinned with '==': {loose}")
+        self.assertEqual(loose, [], f"unsupported requirement specifications: {loose}")
+
+    def test_playwright_tracks_latest_release(self):
+        self.assertIn("playwright", parse_requirements())
+        self.assertIsNone(parse_requirements()["playwright"])
 
 
 class WorkflowPythonTests(unittest.TestCase):
@@ -126,6 +135,7 @@ class WheelAvailabilityTests(unittest.TestCase):
         missing = []
         for package, version in parse_requirements().items():
             data = pypi(package)
+            version = version or data["info"]["version"]
             files = data["releases"].get(version, [])
             self.assertTrue(files, f"{package}=={version} not published on PyPI")
             if not any(wheel_supports(f["filename"], py) for f in files):
@@ -149,9 +159,30 @@ class WheelAvailabilityTests(unittest.TestCase):
         stale = []
         for package, version in parse_requirements().items():
             latest = pypi(package)["info"]["version"]
+            source = "pinned" if version else "installed"
+            version = version or installed_version(package)
             if version != latest:
-                stale.append(f"{package}: pinned {version}, latest {latest}")
+                stale.append(f"{package}: {source} {version}, latest {latest}")
         self.assertEqual(stale, [], "dependencies behind latest: " + "; ".join(stale))
+
+
+class FloatingRequirementTests(unittest.TestCase):
+    def test_latest_check_rejects_an_outdated_installed_playwright(self):
+        with (mock.patch.dict(os.environ, {"CHECK_LATEST": "1"}),
+              mock.patch(__name__ + ".parse_requirements", return_value={"playwright": None}),
+              mock.patch(__name__ + ".pypi", return_value={"info": {"version": "1.65.0"}}),
+              mock.patch(__name__ + ".installed_version", return_value="1.64.1")):
+            check = WheelAvailabilityTests("test_pins_are_the_latest_released_version")
+            with self.assertRaisesRegex(AssertionError, "playwright: installed 1.64.1, latest 1.65.0"):
+                check.test_pins_are_the_latest_released_version()
+
+    def test_wheel_check_includes_the_latest_playwright_release(self):
+        with (mock.patch(__name__ + ".parse_requirements", return_value={"playwright": None}),
+              mock.patch(__name__ + ".pypi", return_value={
+                  "info": {"version": "1.65.0"}, "releases": {"1.65.0": []}})):
+            check = WheelAvailabilityTests("test_every_pin_has_a_linux_wheel_for_the_ci_python")
+            with self.assertRaisesRegex(AssertionError, "playwright==1.65.0 not published on PyPI"):
+                check.test_every_pin_has_a_linux_wheel_for_the_ci_python()
 
 
 class LocalInterpreterTests(unittest.TestCase):

@@ -44,7 +44,7 @@ jobs:
           cache: npm
       - name: Install pinned dependencies
         run: |
-          python -m pip install -r scripts/requirements.txt
+          python -m pip install --upgrade -r scripts/requirements.txt
           npm ci --ignore-scripts --no-audit --no-fund
           python -m playwright install --with-deps chromium
       - name: Verify full historical replay and installed publication

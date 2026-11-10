@@ -2152,6 +2152,16 @@
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/meta-muse-spark-open"
     },
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-09T03:30:20.481843+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Original reasoning-question configuration without Python; Muse Spark Open effort and individual result publication date not specified.",
+      "score": "85.4%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
+    },
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
       "cached_at": "2026-10-20T03:37:52.117863+00:00",
@@ -2194,23 +2204,23 @@
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
-      "cached_at": "2026-10-23T03:39:55.982360+00:00",
+      "cached_at": "2026-11-09T03:30:20.481843+00:00",
       "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Artificial Analysis model entry for Muse Spark Open at xhigh reasoning effort. Individual-result publication date not stated.",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Standard 10 subset; comparative model-card result; Muse Spark Open effort and individual result publication date not specified.",
       "score": "80.9%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://artificialanalysis.ai/models/muse-spark-open/"
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-11-07T03:27:01.129711+00:00",
+      "cached_at": "2026-11-09T03:30:20.481843+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Ricursive comparison using OpenCode at maximum effort and BF16; exact effort name and result publication date are unstated.",
-      "score": "78.7%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview/blob/240d5966cbe00f0627c699e59ef58560b60303cf/README.md"
+      "notes": "Fireworks launch-validation run on production serving stack; effort and agent harness are unspecified, and individual result publication date is unknown.",
+      "score": "84.3%",
+      "source_type": "vendor_blog",
+      "source_url": "https://fireworks.ai/blog/meta-muse-spark-open"
     }
   },
   "Muse Wonder": {
