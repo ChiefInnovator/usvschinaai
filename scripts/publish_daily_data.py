@@ -88,8 +88,15 @@ def wait_for_review(repo, pr, head, timeout):
     """Block until the automatic reviewer has reviewed this head commit."""
     deadline = time.monotonic() + timeout
     while True:
-        _, out = gh(['api', f'repos/{repo}/pulls/{pr}/reviews?per_page=100'])
-        mine = [review for review in json.loads(out)
+        reviews, page = [], 1
+        while True:  # every page: the decisive review may not be on the first
+            _, out = gh(['api', f'repos/{repo}/pulls/{pr}/reviews?per_page=100&page={page}'])
+            batch = json.loads(out)
+            reviews += batch
+            if len(batch) < 100:
+                break
+            page += 1
+        mine = [review for review in reviews
                 if review.get('commit_id') == head and (review.get('user') or {}).get('login') == REVIEWER]
         if mine:
             # The reviewer's latest word on this commit decides. A request for

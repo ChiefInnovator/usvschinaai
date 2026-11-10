@@ -482,7 +482,9 @@ def wait_for_country_rows(page, origin_code: str, timeout: float = 20.0) -> bool
     while time.monotonic() < deadline:
         try:
             links = [row.query_selector("a") for row in page.query_selector_all("tbody tr")]
-            slugs = [(link.get_attribute("href") or "").rstrip('/').rsplit('/', 1)[-1] for link in links if link]
+            # A row whose link has not rendered yet is not confirmed: it maps to no country.
+            slugs = [(link.get_attribute("href") or "").rstrip('/').rsplit('/', 1)[-1] if link else ""
+                     for link in links]
         except Exception:
             slugs = []  # the table is mid-render; look again
         if slugs and all(countries.get(slug) == origin_code for slug in slugs):
