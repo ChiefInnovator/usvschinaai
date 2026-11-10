@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
-  "generationId": "b978e45ef4b1f303f2239c304891301b5f2aee1622043f6d8356aab5a2ffb95f",
+  "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
+  "generationId": "e750357ed11f354c3c8e4a1e7b851cfda0215de7d293f62ed344c4ac4aa9e4f9",
   "catalogFingerprint": "b3fb9b20b6c0c468a57f519111806c3da8b7fed9651dd5f698e9c202a664406c",
   "metadata": {
     "title": "US vs CHINA AI",
@@ -289,7 +289,7 @@
           100.0
         ]
       },
-      "revision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12"
+      "revision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079"
     },
     "teams": {
       "US": [
@@ -313,11 +313,11 @@
           "Input$/M": "10",
           "modelId": "8ff2177f5f388b9c9474",
           "profileId": "75e9a0bc58b0cb3d9ba3",
+          "unified": 900.0,
+          "coverage": "10/17",
           "avgIq": 84.05,
           "provisional": false,
-          "value": 1.4,
-          "unified": 900.0,
-          "coverage": "10/17"
+          "value": 1.4
         },
         {
           "model": "GPT-6.1 Sol",
@@ -339,11 +339,11 @@
           "Input$/M": "2",
           "modelId": "86814cd08ec3ac720e22",
           "profileId": "771512a76c4999c976b7",
+          "unified": 869.35,
+          "coverage": "9/17",
           "avgIq": 82.48,
           "provisional": false,
-          "value": 6.87,
-          "unified": 869.35,
-          "coverage": "9/17"
+          "value": 6.87
         },
         {
           "model": "Claude Opus 5.5",
@@ -365,11 +365,11 @@
           "Input$/M": "4",
           "modelId": "bf6872882b4e0722ae12",
           "profileId": "16fafe8522df4fab32c0",
+          "unified": 793.26,
+          "coverage": "9/17",
           "avgIq": 79.25,
           "provisional": false,
-          "value": 3.3,
-          "unified": 793.26,
-          "coverage": "9/17"
+          "value": 3.3
         },
         {
           "model": "Gemini 3.8 Flash",
@@ -391,11 +391,11 @@
           "Input$/M": "0.75",
           "modelId": "e43da5e7a8e3d9626107",
           "profileId": "bee0ef7cb923dedc86ea",
+          "unified": 729.97,
+          "coverage": "12/17",
           "avgIq": 75.92,
           "provisional": false,
-          "value": 16.87,
-          "unified": 729.97,
-          "coverage": "12/17"
+          "value": 16.87
         },
         {
           "model": "GPT-6 Luna",
@@ -413,11 +413,11 @@
           "KnowledgeCutoff": "May 2026",
           "modelId": "822c760d6aa27b46cc0b",
           "profileId": "c462fc8255ec2f189c92",
+          "unified": 638.98,
+          "coverage": "9/17",
           "avgIq": 68.08,
           "provisional": false,
-          "value": 113.47,
-          "unified": 638.98,
-          "coverage": "9/17"
+          "value": 113.47
         },
         {
           "model": "GPT-5.5 Pro",
@@ -435,11 +435,11 @@
           "License": "Closed",
           "modelId": "1fbd36e112c0244fe56a",
           "profileId": "5823d2bbfb6ba0a59e75",
+          "unified": 506.41,
+          "coverage": "5/17",
           "avgIq": 66.64,
           "provisional": false,
-          "value": 0.0,
-          "unified": 506.41,
-          "coverage": "5/17"
+          "value": 0.0
         },
         {
           "model": "Inkling 2 Small",
@@ -461,11 +461,11 @@
           "Input$/M": "0.3",
           "modelId": "055feb5d450668c49c20",
           "profileId": "d156c5059645be72a9d8",
+          "unified": 450.18,
+          "coverage": "9/17",
           "avgIq": 62.32,
           "provisional": false,
-          "value": 47.94,
-          "unified": 450.18,
-          "coverage": "9/17"
+          "value": 47.94
         },
         {
           "model": "Claude Fable 5.2",
@@ -487,11 +487,11 @@
           "Input$/M": "8",
           "modelId": "1880a0ee12458f6f57e9",
           "profileId": "716ec9a47e2d40600620",
+          "unified": 829.39,
+          "coverage": "7/17",
           "avgIq": 80.92,
           "provisional": false,
-          "value": 1.69,
-          "unified": 829.39,
-          "coverage": "7/17"
+          "value": 1.69
         },
         {
           "model": "Gemini 4 Argon",
@@ -513,11 +513,11 @@
           "Input$/M": "2",
           "modelId": "a276059f28b67f49e058",
           "profileId": "0e853b6be4fcfdb150b0",
+          "unified": 791.02,
+          "coverage": "8/17",
           "avgIq": 79.02,
           "provisional": false,
-          "value": 6.59,
-          "unified": 791.02,
-          "coverage": "8/17"
+          "value": 6.59
         },
         {
           "model": "Gemini 3.1 Pro",
@@ -538,11 +538,11 @@
           "KnowledgeCutoff": "Jan. 2025",
           "modelId": "938ef1899e8197948b60",
           "profileId": "1e46384269d34c666a64",
+          "unified": 409.78,
+          "coverage": "15/17",
           "avgIq": 62.25,
           "provisional": false,
-          "value": 4.45,
-          "unified": 409.78,
-          "coverage": "15/17"
+          "value": 4.45
         }
       ],
       "CN": [
@@ -566,11 +566,11 @@
           "Input$/M": "0.15",
           "modelId": "27c9865821933f9dafd1",
           "profileId": "d81f2715d7696eb8bebf",
+          "unified": 668.1,
+          "coverage": "16/17",
           "avgIq": 69.62,
           "provisional": false,
-          "value": 107.11,
-          "unified": 668.1,
-          "coverage": "16/17"
+          "value": 107.11
         },
         {
           "model": "Kimi K3",
@@ -592,11 +592,11 @@
           "Input$/M": "2.85",
           "modelId": "d33cd77526f9f2073554",
           "profileId": "678cdfc0653f6056e075",
+          "unified": 682.11,
+          "coverage": "17/17",
           "avgIq": 74.3,
           "provisional": false,
-          "value": 4.34,
-          "unified": 682.11,
-          "coverage": "17/17"
+          "value": 4.34
         },
         {
           "model": "GLM-5.3",
@@ -618,11 +618,11 @@
           "Input$/M": "1.2",
           "modelId": "8c1207eb630867042536",
           "profileId": "545915ab73ce3c75f2c4",
+          "unified": 382.0,
+          "coverage": "11/17",
           "avgIq": 60.73,
           "provisional": false,
-          "value": 11.68,
-          "unified": 382.0,
-          "coverage": "11/17"
+          "value": 11.68
         },
         {
           "model": "Qwen3.8 Max",
@@ -644,11 +644,11 @@
           "Input$/M": "1.65",
           "modelId": "32d628655ac1f115b0dd",
           "profileId": "7202a4cd6fcc2b81bad2",
+          "unified": 377.73,
+          "coverage": "13/17",
           "avgIq": 60.64,
           "provisional": false,
-          "value": 9.19,
-          "unified": 377.73,
-          "coverage": "13/17"
+          "value": 9.19
         },
         {
           "model": "DeepSeek-V4-Pro-Max",
@@ -670,11 +670,11 @@
           "Input$/M": "1.3",
           "modelId": "088f3a563d79d06df736",
           "profileId": "1a73d20d9bbed839c9ed",
+          "unified": 319.78,
+          "coverage": "12/17",
           "avgIq": 57.85,
           "provisional": false,
-          "value": 14.83,
-          "unified": 319.78,
-          "coverage": "12/17"
+          "value": 14.83
         },
         {
           "model": "DeepSeek-V4.1-Flash-1017",
@@ -696,11 +696,11 @@
           "Input$/M": "0.3",
           "modelId": "5a14beb8aa3e7cb2f50a",
           "profileId": "68b0ab211dd098f34866",
+          "unified": 685.89,
+          "coverage": "8/17",
           "avgIq": 72.72,
           "provisional": false,
-          "value": 48.48,
-          "unified": 685.89,
-          "coverage": "8/17"
+          "value": 48.48
         },
         {
           "model": "DeepSeek-V4-Pro-0813",
@@ -722,11 +722,11 @@
           "Input$/M": "1.3",
           "modelId": "7cc8168d3be894837e46",
           "profileId": "a61a1b6a35d84a21c6ba",
+          "unified": 610.52,
+          "coverage": "14/17",
           "avgIq": 70.59,
           "provisional": false,
-          "value": 18.1,
-          "unified": 610.52,
-          "coverage": "14/17"
+          "value": 18.1
         },
         {
           "model": "Qwen3.8-27B",
@@ -748,11 +748,11 @@
           "Input$/M": "0.4",
           "modelId": "175a962cb4b24bfdbde0",
           "profileId": "174b8a6ef33c99241f47",
+          "unified": 139.97,
+          "coverage": "12/17",
           "avgIq": 49.91,
           "provisional": false,
-          "value": 14.68,
-          "unified": 139.97,
-          "coverage": "12/17"
+          "value": 14.68
         },
         {
           "model": "Qwen3.8 Flash",
@@ -774,11 +774,11 @@
           "Input$/M": "0.15",
           "modelId": "b56379bf82f1c28fab2e",
           "profileId": "3ffa90ff3c9022e65417",
+          "unified": 62.41,
+          "coverage": "9/17",
           "avgIq": 44.24,
           "provisional": false,
-          "value": 71.35,
-          "unified": 62.41,
-          "coverage": "9/17"
+          "value": 71.35
         },
         {
           "model": "Qwen3.8-Flash-Next",
@@ -800,11 +800,11 @@
           "Input$/M": "—",
           "modelId": "00304d6b69ead9145b28",
           "profileId": "9c8feb5c4af80e588fc2",
+          "unified": 48.27,
+          "coverage": "11/17",
           "avgIq": 46.38,
           "provisional": false,
-          "value": 0.0,
-          "unified": 48.27,
-          "coverage": "11/17"
+          "value": 0.0
         }
       ]
     }
@@ -812,7 +812,7 @@
   "history": [
     {
       "timestamp": "2026-11-10T21:39:32+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5551.97,
@@ -830,7 +830,7 @@
     },
     {
       "timestamp": "2026-11-10T03:32:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5551.97,
@@ -848,7 +848,7 @@
     },
     {
       "timestamp": "2026-11-09T03:34:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -866,7 +866,7 @@
     },
     {
       "timestamp": "2026-11-08T03:37:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -884,7 +884,7 @@
     },
     {
       "timestamp": "2026-11-07T03:31:27+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -902,7 +902,7 @@
     },
     {
       "timestamp": "2026-11-06T03:32:23+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -920,7 +920,7 @@
     },
     {
       "timestamp": "2026-11-05T03:34:48+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -938,7 +938,7 @@
     },
     {
       "timestamp": "2026-11-04T09:11:32+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -956,7 +956,7 @@
     },
     {
       "timestamp": "2026-11-02T03:33:32+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -974,7 +974,7 @@
     },
     {
       "timestamp": "2026-11-01T03:37:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5722.79,
@@ -992,7 +992,7 @@
     },
     {
       "timestamp": "2026-10-31T03:30:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -1010,7 +1010,7 @@
     },
     {
       "timestamp": "2026-10-30T03:36:35+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5669.1900000000005,
@@ -1028,7 +1028,7 @@
     },
     {
       "timestamp": "2026-10-29T03:36:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5727.51,
@@ -1046,7 +1046,7 @@
     },
     {
       "timestamp": "2026-10-28T03:36:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5809.71,
@@ -1064,7 +1064,7 @@
     },
     {
       "timestamp": "2026-10-27T03:51:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5727.51,
@@ -1082,7 +1082,7 @@
     },
     {
       "timestamp": "2026-10-26T03:47:36+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5809.71,
@@ -1100,7 +1100,7 @@
     },
     {
       "timestamp": "2026-10-25T03:49:03+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5809.71,
@@ -1118,7 +1118,7 @@
     },
     {
       "timestamp": "2026-10-24T03:40:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5572.06,
@@ -1136,7 +1136,7 @@
     },
     {
       "timestamp": "2026-10-23T03:44:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5575.4400000000005,
@@ -1154,7 +1154,7 @@
     },
     {
       "timestamp": "2026-10-22T03:42:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5452.9,
@@ -1172,7 +1172,7 @@
     },
     {
       "timestamp": "2026-10-21T03:42:16+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5572.06,
@@ -1190,7 +1190,7 @@
     },
     {
       "timestamp": "2026-10-20T03:41:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5575.4400000000005,
@@ -1208,7 +1208,7 @@
     },
     {
       "timestamp": "2026-10-19T03:45:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5448.65,
@@ -1226,7 +1226,7 @@
     },
     {
       "timestamp": "2026-10-18T03:44:58+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5448.65,
@@ -1244,7 +1244,7 @@
     },
     {
       "timestamp": "2026-10-17T03:38:50+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5405.15,
@@ -1262,7 +1262,7 @@
     },
     {
       "timestamp": "2026-10-16T03:41:50+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5405.15,
@@ -1280,7 +1280,7 @@
     },
     {
       "timestamp": "2026-10-15T03:42:06+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4763.33,
@@ -1298,7 +1298,7 @@
     },
     {
       "timestamp": "2026-10-14T03:41:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1316,7 +1316,7 @@
     },
     {
       "timestamp": "2026-10-13T04:12:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1334,7 +1334,7 @@
     },
     {
       "timestamp": "2026-10-12T03:57:30+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1352,7 +1352,7 @@
     },
     {
       "timestamp": "2026-10-11T03:53:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1370,7 +1370,7 @@
     },
     {
       "timestamp": "2026-10-10T03:46:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1388,7 +1388,7 @@
     },
     {
       "timestamp": "2026-10-09T03:50:19+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1406,7 +1406,7 @@
     },
     {
       "timestamp": "2026-10-08T03:48:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1424,7 +1424,7 @@
     },
     {
       "timestamp": "2026-10-07T03:47:54+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1442,7 +1442,7 @@
     },
     {
       "timestamp": "2026-10-06T03:44:47+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5379.15,
@@ -1460,7 +1460,7 @@
     },
     {
       "timestamp": "2026-10-05T03:52:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -1478,7 +1478,7 @@
     },
     {
       "timestamp": "2026-10-04T04:48:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -1496,7 +1496,7 @@
     },
     {
       "timestamp": "2026-10-03T03:51:53+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -1514,7 +1514,7 @@
     },
     {
       "timestamp": "2026-10-02T03:43:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -1532,7 +1532,7 @@
     },
     {
       "timestamp": "2026-10-01T03:49:53+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -1550,7 +1550,7 @@
     },
     {
       "timestamp": "2026-09-30T03:45:37+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5660.16,
@@ -1568,7 +1568,7 @@
     },
     {
       "timestamp": "2026-09-29T03:45:06+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4869.61,
@@ -1586,7 +1586,7 @@
     },
     {
       "timestamp": "2026-09-28T03:48:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4869.61,
@@ -1604,7 +1604,7 @@
     },
     {
       "timestamp": "2026-09-27T03:47:24+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4869.61,
@@ -1622,7 +1622,7 @@
     },
     {
       "timestamp": "2026-09-26T04:45:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5651.37,
@@ -1640,7 +1640,7 @@
     },
     {
       "timestamp": "2026-09-26T03:35:11+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6049.38,
@@ -1658,7 +1658,7 @@
     },
     {
       "timestamp": "2026-09-25T03:37:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5051.4,
@@ -1676,7 +1676,7 @@
     },
     {
       "timestamp": "2026-09-24T03:36:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5298.32,
@@ -1694,7 +1694,7 @@
     },
     {
       "timestamp": "2026-09-23T03:46:07+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5219.860000000001,
@@ -1712,7 +1712,7 @@
     },
     {
       "timestamp": "2026-09-22T03:48:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5304.7,
@@ -1730,7 +1730,7 @@
     },
     {
       "timestamp": "2026-09-21T03:50:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5843.49,
@@ -1748,7 +1748,7 @@
     },
     {
       "timestamp": "2026-09-20T03:46:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5843.49,
@@ -1766,7 +1766,7 @@
     },
     {
       "timestamp": "2026-09-19T03:46:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5843.49,
@@ -1784,7 +1784,7 @@
     },
     {
       "timestamp": "2026-09-18T03:47:48+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5843.49,
@@ -1802,7 +1802,7 @@
     },
     {
       "timestamp": "2026-09-17T03:51:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5847.17,
@@ -1820,7 +1820,7 @@
     },
     {
       "timestamp": "2026-09-16T03:51:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5847.17,
@@ -1838,7 +1838,7 @@
     },
     {
       "timestamp": "2026-09-15T03:50:12+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5847.17,
@@ -1856,7 +1856,7 @@
     },
     {
       "timestamp": "2026-09-14T03:53:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5847.17,
@@ -1874,7 +1874,7 @@
     },
     {
       "timestamp": "2026-09-13T03:48:23+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5842.95,
@@ -1892,7 +1892,7 @@
     },
     {
       "timestamp": "2026-09-12T03:46:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5689.03,
@@ -1910,7 +1910,7 @@
     },
     {
       "timestamp": "2026-09-11T03:51:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5751.5,
@@ -1928,7 +1928,7 @@
     },
     {
       "timestamp": "2026-09-10T12:06:52-04:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5109.86,
@@ -1946,7 +1946,7 @@
     },
     {
       "timestamp": "2026-09-09T03:39:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5013.24,
@@ -1964,7 +1964,7 @@
     },
     {
       "timestamp": "2026-09-08T03:39:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5015.969999999999,
@@ -1982,7 +1982,7 @@
     },
     {
       "timestamp": "2026-09-07T10:35:00-04:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5245.39,
@@ -2000,7 +2000,7 @@
     },
     {
       "timestamp": "2026-09-07T03:40:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4984.5,
@@ -2018,7 +2018,7 @@
     },
     {
       "timestamp": "2026-09-06T03:38:36+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4984.5,
@@ -2036,7 +2036,7 @@
     },
     {
       "timestamp": "2026-09-05T10:50:28+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4254.4,
@@ -2054,7 +2054,7 @@
     },
     {
       "timestamp": "2026-09-05T03:36:52+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4254.4,
@@ -2072,7 +2072,7 @@
     },
     {
       "timestamp": "2026-09-04T09:31:36+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4254.4,
@@ -2090,7 +2090,7 @@
     },
     {
       "timestamp": "2026-09-04T05:10:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4054.55,
@@ -2108,7 +2108,7 @@
     },
     {
       "timestamp": "2026-09-04T03:37:05+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 2154.11,
@@ -2126,7 +2126,7 @@
     },
     {
       "timestamp": "2026-09-03T11:26:58+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4047.96,
@@ -2144,7 +2144,7 @@
     },
     {
       "timestamp": "2026-09-03T11:16:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4780.1900000000005,
@@ -2162,7 +2162,7 @@
     },
     {
       "timestamp": "2026-09-03T11:03:38+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3646.7799999999997,
@@ -2180,7 +2180,7 @@
     },
     {
       "timestamp": "2026-09-03T10:46:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4047.96,
@@ -2198,7 +2198,7 @@
     },
     {
       "timestamp": "2026-09-02T03:32:24+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3951.55,
@@ -2216,7 +2216,7 @@
     },
     {
       "timestamp": "2026-09-01T03:34:11+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5098.0599999999995,
@@ -2234,7 +2234,7 @@
     },
     {
       "timestamp": "2026-08-31T03:33:25+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5098.0599999999995,
@@ -2252,7 +2252,7 @@
     },
     {
       "timestamp": "2026-08-30T03:30:30+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5723.5,
@@ -2270,7 +2270,7 @@
     },
     {
       "timestamp": "2026-08-29T11:27:11+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5723.5,
@@ -2288,7 +2288,7 @@
     },
     {
       "timestamp": "2026-08-29T07:44:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5079.91,
@@ -2306,7 +2306,7 @@
     },
     {
       "timestamp": "2026-08-29T04:11:54+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5079.91,
@@ -2324,7 +2324,7 @@
     },
     {
       "timestamp": "2026-08-28T06:41:30+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5079.91,
@@ -2342,7 +2342,7 @@
     },
     {
       "timestamp": "2026-08-27T05:48:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.6,
@@ -2360,7 +2360,7 @@
     },
     {
       "timestamp": "2026-08-26T04:21:24+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.6,
@@ -2378,7 +2378,7 @@
     },
     {
       "timestamp": "2026-08-25T04:17:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2396,7 +2396,7 @@
     },
     {
       "timestamp": "2026-08-24T04:20:27+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2414,7 +2414,7 @@
     },
     {
       "timestamp": "2026-08-23T04:19:19+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2432,7 +2432,7 @@
     },
     {
       "timestamp": "2026-08-22T04:14:07+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2450,7 +2450,7 @@
     },
     {
       "timestamp": "2026-08-21T04:19:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2468,7 +2468,7 @@
     },
     {
       "timestamp": "2026-08-20T04:16:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2486,7 +2486,7 @@
     },
     {
       "timestamp": "2026-08-19T04:16:23+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2504,7 +2504,7 @@
     },
     {
       "timestamp": "2026-08-18T04:15:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2522,7 +2522,7 @@
     },
     {
       "timestamp": "2026-08-17T04:18:07+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5924.64,
@@ -2540,7 +2540,7 @@
     },
     {
       "timestamp": "2026-08-16T04:17:31+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5923.4,
@@ -2558,7 +2558,7 @@
     },
     {
       "timestamp": "2026-08-15T04:17:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5923.4,
@@ -2576,7 +2576,7 @@
     },
     {
       "timestamp": "2026-08-14T04:42:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5923.4,
@@ -2594,7 +2594,7 @@
     },
     {
       "timestamp": "2026-08-13T04:42:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5923.4,
@@ -2612,7 +2612,7 @@
     },
     {
       "timestamp": "2026-08-12T04:42:35+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2630,7 +2630,7 @@
     },
     {
       "timestamp": "2026-08-11T04:36:58+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2648,7 +2648,7 @@
     },
     {
       "timestamp": "2026-08-10T04:40:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2666,7 +2666,7 @@
     },
     {
       "timestamp": "2026-08-09T04:35:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2684,7 +2684,7 @@
     },
     {
       "timestamp": "2026-08-08T04:31:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2702,7 +2702,7 @@
     },
     {
       "timestamp": "2026-08-07T04:56:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2720,7 +2720,7 @@
     },
     {
       "timestamp": "2026-08-06T05:08:30+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2738,7 +2738,7 @@
     },
     {
       "timestamp": "2026-08-05T05:07:04+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5748.71,
@@ -2756,7 +2756,7 @@
     },
     {
       "timestamp": "2026-08-04T05:07:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5743.8,
@@ -2774,7 +2774,7 @@
     },
     {
       "timestamp": "2026-08-03T05:11:25+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2792,7 +2792,7 @@
     },
     {
       "timestamp": "2026-08-02T05:10:04+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2810,7 +2810,7 @@
     },
     {
       "timestamp": "2026-08-01T05:09:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2828,7 +2828,7 @@
     },
     {
       "timestamp": "2026-07-31T05:10:28+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2846,7 +2846,7 @@
     },
     {
       "timestamp": "2026-07-30T05:03:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2864,7 +2864,7 @@
     },
     {
       "timestamp": "2026-07-29T05:07:47+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2882,7 +2882,7 @@
     },
     {
       "timestamp": "2026-07-28T05:06:26+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2900,7 +2900,7 @@
     },
     {
       "timestamp": "2026-07-27T05:13:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2918,7 +2918,7 @@
     },
     {
       "timestamp": "2026-07-26T05:10:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2936,7 +2936,7 @@
     },
     {
       "timestamp": "2026-07-25T05:06:24+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6201.73,
@@ -2954,7 +2954,7 @@
     },
     {
       "timestamp": "2026-07-24T05:07:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6200.24,
@@ -2972,7 +2972,7 @@
     },
     {
       "timestamp": "2026-07-23T05:09:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5948.13,
@@ -2990,7 +2990,7 @@
     },
     {
       "timestamp": "2026-07-22T05:08:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5948.13,
@@ -3008,7 +3008,7 @@
     },
     {
       "timestamp": "2026-07-21T05:07:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5948.13,
@@ -3026,7 +3026,7 @@
     },
     {
       "timestamp": "2026-07-20T05:12:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6086.39,
@@ -3044,7 +3044,7 @@
     },
     {
       "timestamp": "2026-07-19T05:10:53+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6086.39,
@@ -3062,7 +3062,7 @@
     },
     {
       "timestamp": "2026-07-18T05:01:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6086.39,
@@ -3080,7 +3080,7 @@
     },
     {
       "timestamp": "2026-07-17T05:05:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6086.39,
@@ -3098,7 +3098,7 @@
     },
     {
       "timestamp": "2026-07-16T05:06:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5761.11,
@@ -3116,7 +3116,7 @@
     },
     {
       "timestamp": "2026-07-15T05:02:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3134,7 +3134,7 @@
     },
     {
       "timestamp": "2026-07-14T05:02:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5761.11,
@@ -3152,7 +3152,7 @@
     },
     {
       "timestamp": "2026-07-13T05:11:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3170,7 +3170,7 @@
     },
     {
       "timestamp": "2026-07-12T05:10:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3188,7 +3188,7 @@
     },
     {
       "timestamp": "2026-07-11T05:06:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3206,7 +3206,7 @@
     },
     {
       "timestamp": "2026-07-10T05:21:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3224,7 +3224,7 @@
     },
     {
       "timestamp": "2026-07-09T05:20:36+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3242,7 +3242,7 @@
     },
     {
       "timestamp": "2026-07-08T05:08:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3260,7 +3260,7 @@
     },
     {
       "timestamp": "2026-07-07T05:21:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3278,7 +3278,7 @@
     },
     {
       "timestamp": "2026-07-06T05:30:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3296,7 +3296,7 @@
     },
     {
       "timestamp": "2026-07-05T05:25:16+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3314,7 +3314,7 @@
     },
     {
       "timestamp": "2026-07-04T05:12:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3332,7 +3332,7 @@
     },
     {
       "timestamp": "2026-07-03T05:16:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3350,7 +3350,7 @@
     },
     {
       "timestamp": "2026-07-02T05:25:26+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5163.0199999999995,
@@ -3368,7 +3368,7 @@
     },
     {
       "timestamp": "2026-07-01T05:35:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5116.39,
@@ -3386,7 +3386,7 @@
     },
     {
       "timestamp": "2026-06-30T05:26:31+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5116.39,
@@ -3404,7 +3404,7 @@
     },
     {
       "timestamp": "2026-06-29T05:38:44+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5113.39,
@@ -3422,7 +3422,7 @@
     },
     {
       "timestamp": "2026-06-28T05:33:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5375.28,
@@ -3440,7 +3440,7 @@
     },
     {
       "timestamp": "2026-06-27T05:22:37+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5375.28,
@@ -3458,7 +3458,7 @@
     },
     {
       "timestamp": "2026-06-26T05:29:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3476,7 +3476,7 @@
     },
     {
       "timestamp": "2026-06-25T05:27:03+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3494,7 +3494,7 @@
     },
     {
       "timestamp": "2026-06-24T05:28:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3512,7 +3512,7 @@
     },
     {
       "timestamp": "2026-06-23T05:25:29+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3530,7 +3530,7 @@
     },
     {
       "timestamp": "2026-06-22T05:40:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3548,7 +3548,7 @@
     },
     {
       "timestamp": "2026-06-21T05:39:58+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3566,7 +3566,7 @@
     },
     {
       "timestamp": "2026-06-20T05:29:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3584,7 +3584,7 @@
     },
     {
       "timestamp": "2026-06-19T05:40:05+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5113.39,
@@ -3602,7 +3602,7 @@
     },
     {
       "timestamp": "2026-06-18T05:38:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5113.39,
@@ -3620,7 +3620,7 @@
     },
     {
       "timestamp": "2026-06-17T05:39:34+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5113.39,
@@ -3638,7 +3638,7 @@
     },
     {
       "timestamp": "2026-06-16T05:40:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3656,7 +3656,7 @@
     },
     {
       "timestamp": "2026-06-15T05:40:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5081.91,
@@ -3674,7 +3674,7 @@
     },
     {
       "timestamp": "2026-06-14T05:39:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5664.19,
@@ -3692,7 +3692,7 @@
     },
     {
       "timestamp": "2026-06-13T05:34:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6025.07,
@@ -3710,7 +3710,7 @@
     },
     {
       "timestamp": "2026-06-12T05:39:31+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6025.07,
@@ -3728,7 +3728,7 @@
     },
     {
       "timestamp": "2026-06-11T05:38:28+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6770.09,
@@ -3746,7 +3746,7 @@
     },
     {
       "timestamp": "2026-06-10T05:33:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6881.51,
@@ -3764,7 +3764,7 @@
     },
     {
       "timestamp": "2026-06-09T05:27:35+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3782,7 +3782,7 @@
     },
     {
       "timestamp": "2026-06-08T05:39:41+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3800,7 +3800,7 @@
     },
     {
       "timestamp": "2026-06-07T05:37:07+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3818,7 +3818,7 @@
     },
     {
       "timestamp": "2026-06-06T05:23:48+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3836,7 +3836,7 @@
     },
     {
       "timestamp": "2026-06-05T05:32:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3854,7 +3854,7 @@
     },
     {
       "timestamp": "2026-06-04T05:41:32+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6464.57,
@@ -3872,7 +3872,7 @@
     },
     {
       "timestamp": "2026-06-03T05:49:44+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6330.21,
@@ -3890,7 +3890,7 @@
     },
     {
       "timestamp": "2026-06-02T05:38:54+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3908,7 +3908,7 @@
     },
     {
       "timestamp": "2026-06-01T05:39:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3926,7 +3926,7 @@
     },
     {
       "timestamp": "2026-05-31T05:34:16+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3944,7 +3944,7 @@
     },
     {
       "timestamp": "2026-05-30T05:21:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3962,7 +3962,7 @@
     },
     {
       "timestamp": "2026-05-29T05:31:23+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3980,7 +3980,7 @@
     },
     {
       "timestamp": "2026-05-28T05:30:43+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6992.95,
@@ -3998,7 +3998,7 @@
     },
     {
       "timestamp": "2026-05-27T05:33:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6990.73,
@@ -4016,7 +4016,7 @@
     },
     {
       "timestamp": "2026-05-26T05:26:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4034,7 +4034,7 @@
     },
     {
       "timestamp": "2026-05-25T05:34:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4052,7 +4052,7 @@
     },
     {
       "timestamp": "2026-05-24T05:28:57+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4070,7 +4070,7 @@
     },
     {
       "timestamp": "2026-05-23T05:14:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4088,7 +4088,7 @@
     },
     {
       "timestamp": "2026-05-22T05:27:35+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4106,7 +4106,7 @@
     },
     {
       "timestamp": "2026-05-21T05:31:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6919.5,
@@ -4124,7 +4124,7 @@
     },
     {
       "timestamp": "2026-05-20T05:25:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6712.66,
@@ -4142,7 +4142,7 @@
     },
     {
       "timestamp": "2026-05-19T05:24:13+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6713.84,
@@ -4160,7 +4160,7 @@
     },
     {
       "timestamp": "2026-05-18T05:28:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6707.53,
@@ -4178,7 +4178,7 @@
     },
     {
       "timestamp": "2026-05-17T05:25:05+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 7264.4,
@@ -4196,7 +4196,7 @@
     },
     {
       "timestamp": "2026-05-16T05:11:53+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 7264.4,
@@ -4214,7 +4214,7 @@
     },
     {
       "timestamp": "2026-05-15T05:22:26+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 7246.51,
@@ -4232,7 +4232,7 @@
     },
     {
       "timestamp": "2026-05-14T05:18:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 7246.51,
@@ -4250,7 +4250,7 @@
     },
     {
       "timestamp": "2026-05-13T05:18:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6712.23,
@@ -4268,7 +4268,7 @@
     },
     {
       "timestamp": "2026-05-12T05:13:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6711.43,
@@ -4286,7 +4286,7 @@
     },
     {
       "timestamp": "2026-05-11T05:27:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6712.23,
@@ -4304,7 +4304,7 @@
     },
     {
       "timestamp": "2026-05-10T05:20:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6712.23,
@@ -4322,7 +4322,7 @@
     },
     {
       "timestamp": "2026-05-09T05:10:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6712.23,
@@ -4340,7 +4340,7 @@
     },
     {
       "timestamp": "2026-05-08T05:07:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 7204.18,
@@ -4358,7 +4358,7 @@
     },
     {
       "timestamp": "2026-05-07T04:56:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4376,7 +4376,7 @@
     },
     {
       "timestamp": "2026-05-06T04:55:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4394,7 +4394,7 @@
     },
     {
       "timestamp": "2026-05-05T04:50:44+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4412,7 +4412,7 @@
     },
     {
       "timestamp": "2026-05-04T04:59:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4430,7 +4430,7 @@
     },
     {
       "timestamp": "2026-05-03T05:00:04+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4448,7 +4448,7 @@
     },
     {
       "timestamp": "2026-05-02T04:51:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4466,7 +4466,7 @@
     },
     {
       "timestamp": "2026-05-01T05:05:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4484,7 +4484,7 @@
     },
     {
       "timestamp": "2026-04-30T04:38:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 0,
@@ -4502,7 +4502,7 @@
     },
     {
       "timestamp": "2026-04-29T04:54:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4520,7 +4520,7 @@
     },
     {
       "timestamp": "2026-04-28T04:56:25+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4538,7 +4538,7 @@
     },
     {
       "timestamp": "2026-04-27T04:54:58+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4556,7 +4556,7 @@
     },
     {
       "timestamp": "2026-04-26T04:52:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4574,7 +4574,7 @@
     },
     {
       "timestamp": "2026-04-25T04:22:43+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6739.39,
@@ -4592,7 +4592,7 @@
     },
     {
       "timestamp": "2026-04-24T04:33:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6732.39,
@@ -4610,7 +4610,7 @@
     },
     {
       "timestamp": "2026-04-23T04:30:49+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6732.39,
@@ -4628,7 +4628,7 @@
     },
     {
       "timestamp": "2026-04-22T04:28:57+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6732.36,
@@ -4646,7 +4646,7 @@
     },
     {
       "timestamp": "2026-04-21T04:30:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 6736.75,
@@ -4664,7 +4664,7 @@
     },
     {
       "timestamp": "2026-04-20T04:36:07+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.99,
@@ -4682,7 +4682,7 @@
     },
     {
       "timestamp": "2026-04-19T04:32:27+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.99,
@@ -4700,7 +4700,7 @@
     },
     {
       "timestamp": "2026-04-18T04:24:40+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.99,
@@ -4718,7 +4718,7 @@
     },
     {
       "timestamp": "2026-04-17T04:35:21+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.99,
@@ -4736,7 +4736,7 @@
     },
     {
       "timestamp": "2026-04-16T04:37:51+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.99,
@@ -4754,7 +4754,7 @@
     },
     {
       "timestamp": "2026-04-15T04:35:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.51,
@@ -4772,7 +4772,7 @@
     },
     {
       "timestamp": "2026-04-14T04:34:14+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.51,
@@ -4790,7 +4790,7 @@
     },
     {
       "timestamp": "2026-04-13T04:39:43+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.51,
@@ -4808,7 +4808,7 @@
     },
     {
       "timestamp": "2026-04-12T16:01:34-04:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5877.51,
@@ -4826,7 +4826,7 @@
     },
     {
       "timestamp": "2026-04-11T15:27:16+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5961.62,
@@ -4844,7 +4844,7 @@
     },
     {
       "timestamp": "2026-04-10T15:34:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5961.62,
@@ -4862,7 +4862,7 @@
     },
     {
       "timestamp": "2026-04-09T15:51:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5916.83,
@@ -4880,7 +4880,7 @@
     },
     {
       "timestamp": "2026-04-08T15:48:31+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4898,7 +4898,7 @@
     },
     {
       "timestamp": "2026-04-07T15:47:46+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4916,7 +4916,7 @@
     },
     {
       "timestamp": "2026-04-06T15:33:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4934,7 +4934,7 @@
     },
     {
       "timestamp": "2026-04-05T15:27:31+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4952,7 +4952,7 @@
     },
     {
       "timestamp": "2026-04-04T15:27:03+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4970,7 +4970,7 @@
     },
     {
       "timestamp": "2026-04-03T15:30:36+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -4988,7 +4988,7 @@
     },
     {
       "timestamp": "2026-04-02T15:38:12+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5006,7 +5006,7 @@
     },
     {
       "timestamp": "2026-04-01T15:46:50+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5024,7 +5024,7 @@
     },
     {
       "timestamp": "2026-03-31T15:43:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5042,7 +5042,7 @@
     },
     {
       "timestamp": "2026-03-30T15:46:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5060,7 +5060,7 @@
     },
     {
       "timestamp": "2026-03-29T15:27:04+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5078,7 +5078,7 @@
     },
     {
       "timestamp": "2026-03-28T15:27:13+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5096,7 +5096,7 @@
     },
     {
       "timestamp": "2026-03-27T15:34:21+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5114,7 +5114,7 @@
     },
     {
       "timestamp": "2026-03-26T15:46:10+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5132,7 +5132,7 @@
     },
     {
       "timestamp": "2026-03-25T15:43:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5150,7 +5150,7 @@
     },
     {
       "timestamp": "2026-03-24T15:42:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5168,7 +5168,7 @@
     },
     {
       "timestamp": "2026-03-23T15:39:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5186,7 +5186,7 @@
     },
     {
       "timestamp": "2026-03-22T15:26:25+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5204,7 +5204,7 @@
     },
     {
       "timestamp": "2026-03-21T15:26:21+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5222,7 +5222,7 @@
     },
     {
       "timestamp": "2026-03-20T15:31:09+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5240,7 +5240,7 @@
     },
     {
       "timestamp": "2026-03-19T15:35:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5258,7 +5258,7 @@
     },
     {
       "timestamp": "2026-03-18T15:44:27+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5276,7 +5276,7 @@
     },
     {
       "timestamp": "2026-03-17T15:40:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5912.49,
@@ -5294,7 +5294,7 @@
     },
     {
       "timestamp": "2026-03-16T15:41:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5921.43,
@@ -5312,7 +5312,7 @@
     },
     {
       "timestamp": "2026-03-15T15:27:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5921.43,
@@ -5330,7 +5330,7 @@
     },
     {
       "timestamp": "2026-03-14T15:27:19+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5921.43,
@@ -5348,7 +5348,7 @@
     },
     {
       "timestamp": "2026-03-13T15:30:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5921.43,
@@ -5366,7 +5366,7 @@
     },
     {
       "timestamp": "2026-03-12T15:37:32+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5955.98,
@@ -5384,7 +5384,7 @@
     },
     {
       "timestamp": "2026-03-11T15:32:57+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5955.98,
@@ -5402,7 +5402,7 @@
     },
     {
       "timestamp": "2026-03-10T15:38:54+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5955.98,
@@ -5420,7 +5420,7 @@
     },
     {
       "timestamp": "2026-03-09T15:37:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5955.98,
@@ -5438,7 +5438,7 @@
     },
     {
       "timestamp": "2026-03-08T15:26:05+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5947.43,
@@ -5456,7 +5456,7 @@
     },
     {
       "timestamp": "2026-03-07T15:25:48+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5947.43,
@@ -5474,7 +5474,7 @@
     },
     {
       "timestamp": "2026-03-06T15:28:12+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5096.8099999999995,
@@ -5492,7 +5492,7 @@
     },
     {
       "timestamp": "2026-03-05T15:35:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5510,7 +5510,7 @@
     },
     {
       "timestamp": "2026-03-04T15:28:54+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5528,7 +5528,7 @@
     },
     {
       "timestamp": "2026-03-03T15:34:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5546,7 +5546,7 @@
     },
     {
       "timestamp": "2026-03-02T15:29:29+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5564,7 +5564,7 @@
     },
     {
       "timestamp": "2026-03-01T17:59:08+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5582,7 +5582,7 @@
     },
     {
       "timestamp": "2026-02-28T15:25:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5600,7 +5600,7 @@
     },
     {
       "timestamp": "2026-02-27T15:28:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5027.04,
@@ -5618,7 +5618,7 @@
     },
     {
       "timestamp": "2026-02-26T04:03:57+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5636,7 +5636,7 @@
     },
     {
       "timestamp": "2026-02-25T15:37:53+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5654,7 +5654,7 @@
     },
     {
       "timestamp": "2026-02-24T15:37:55+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5043.88,
@@ -5672,7 +5672,7 @@
     },
     {
       "timestamp": "2026-02-23T15:33:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5027.04,
@@ -5690,7 +5690,7 @@
     },
     {
       "timestamp": "2026-02-22T15:26:19+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5021.24,
@@ -5708,7 +5708,7 @@
     },
     {
       "timestamp": "2026-02-21T15:26:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5021.24,
@@ -5726,7 +5726,7 @@
     },
     {
       "timestamp": "2026-02-20T15:29:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5021.24,
@@ -5744,7 +5744,7 @@
     },
     {
       "timestamp": "2026-02-19T15:37:39+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4056.0,
@@ -5762,7 +5762,7 @@
     },
     {
       "timestamp": "2026-02-18T15:35:34+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4064.02,
@@ -5780,7 +5780,7 @@
     },
     {
       "timestamp": "2026-02-17T15:35:57+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4064.02,
@@ -5798,7 +5798,7 @@
     },
     {
       "timestamp": "2026-02-16T15:29:33+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3854.73,
@@ -5816,7 +5816,7 @@
     },
     {
       "timestamp": "2026-02-15T15:26:17+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3818.15,
@@ -5834,7 +5834,7 @@
     },
     {
       "timestamp": "2026-02-14T15:26:35+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3818.15,
@@ -5852,7 +5852,7 @@
     },
     {
       "timestamp": "2026-02-13T15:30:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3818.15,
@@ -5870,7 +5870,7 @@
     },
     {
       "timestamp": "2026-02-12T15:35:18+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4631.15,
@@ -5888,7 +5888,7 @@
     },
     {
       "timestamp": "2026-02-11T15:38:01+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 5815.2,
@@ -5906,7 +5906,7 @@
     },
     {
       "timestamp": "2026-02-10T15:42:47+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4631.15,
@@ -5924,7 +5924,7 @@
     },
     {
       "timestamp": "2026-02-09T15:36:42+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4631.15,
@@ -5942,7 +5942,7 @@
     },
     {
       "timestamp": "2026-02-08T15:26:38+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4631.15,
@@ -5960,7 +5960,7 @@
     },
     {
       "timestamp": "2026-02-07T15:26:20+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4631.15,
@@ -5978,7 +5978,7 @@
     },
     {
       "timestamp": "2026-02-06T15:29:02+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3982.01,
@@ -5996,7 +5996,7 @@
     },
     {
       "timestamp": "2026-02-05T04:02:21+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6014,7 +6014,7 @@
     },
     {
       "timestamp": "2026-02-04T15:30:23+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6032,7 +6032,7 @@
     },
     {
       "timestamp": "2026-02-03T15:35:22+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6050,7 +6050,7 @@
     },
     {
       "timestamp": "2026-02-02T15:32:45+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6068,7 +6068,7 @@
     },
     {
       "timestamp": "2026-02-01T15:27:00+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6086,7 +6086,7 @@
     },
     {
       "timestamp": "2026-01-31T15:26:44+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6104,7 +6104,7 @@
     },
     {
       "timestamp": "2026-01-30T15:30:30+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3962.67,
@@ -6122,7 +6122,7 @@
     },
     {
       "timestamp": "2026-01-29T15:29:06+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4009.95,
@@ -6140,7 +6140,7 @@
     },
     {
       "timestamp": "2026-01-28T15:31:16+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4010.52,
@@ -6158,7 +6158,7 @@
     },
     {
       "timestamp": "2026-01-27T15:30:15+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4008.49,
@@ -6176,7 +6176,7 @@
     },
     {
       "timestamp": "2026-01-24T18:32:59+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 4501.18,
@@ -6194,7 +6194,7 @@
     },
     {
       "timestamp": "2026-01-23T08:08:56+00:00",
-      "scoringRevision": "1677b99433879786acbcf2d89e6a2e0d992db88a1b5b321b5a9d461388581a12",
+      "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079",
       "scores": {
         "US": {
           "total": 3113.21,

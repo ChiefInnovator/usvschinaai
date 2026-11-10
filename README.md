@@ -17,7 +17,7 @@
 Avg IQ inputs: seventeen components in data/core_benchmarks.json, totaling 100%
 Only these seventeen benchmark columns remain in current and historical data
 AvgIQ = sum(normalized scores × configured weights) / 1.00
-Missing results contribute zero; denominator always includes all 18
+Missing results contribute zero; denominator always includes all 17
 Models are selected by Unified Score only, with no benchmark-count minimum
 Value = AvgIQ ÷ (Input $/M + Output $/M)
 Unified = 10 × (0.9 × norm(AvgIQ) + 0.1 × norm(Value))

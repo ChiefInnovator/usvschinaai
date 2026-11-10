@@ -69,9 +69,13 @@ class WeightedInputsTests(unittest.TestCase):
         result=score_avg_iq_cohort([generic_only,both],log=lambda *a:None)
         self.assertEqual(result.coverage(generic_only),(1,17))
         self.assertEqual(result.scores_for(generic_only)['avgIq'],round(80*weights['GPQA Diamond'],2))
-        # One component: the Diamond column decides and the generic one is not added on top.
+        # One component: the higher of the two names counts, once.
         self.assertEqual(result.coverage(both),(2,17))
         self.assertEqual(result.scores_for(both)['avgIq'],round(90*weights['GPQA Diamond']+70*weights['MMLU-Pro'],2))
+        self.assertEqual(selected_value({'GPQA':'92.2%','GPQADiamond':'91.2%'},'GPQA Diamond'),'92.2%')
+        higher=E('H','US',**{'GPQA':'92.2%','GPQADiamond':'91.2%'})
+        scored=score_avg_iq_cohort([higher],log=lambda *a:None)
+        self.assertEqual(scored.scores_for(higher)['avgIq'],round(92.2*weights['GPQA Diamond'],2))
 
     def test_fixed_denominator_drives_value_and_formula(self):
         entries = self.entries()

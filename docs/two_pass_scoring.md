@@ -10,7 +10,7 @@ not separate scoring formulas or claims about llm-stats' official taxonomy:
 | Group | Benchmarks |
 |---|---|
 | LLM Stats (general capability) | MMMU-Pro, CharXiv-R, IFBench |
-| Reasoning | GPQA, GPQA Diamond, MMLU-Pro, Humanity’s Last Exam, ARC-AGI-2, FrontierMath — Tiers 1–3 v2 |
+| Reasoning | GPQA Diamond, MMLU-Pro, Humanity’s Last Exam, ARC-AGI-2, FrontierMath — Tiers 1–3 v2 |
 | Coding | DeepSWE, DeepSWE 1.1, LiveCodeBench v6, SWE-bench Verified, Terminal-Bench 4.0 |
 | Agent | Toolathlon, Agents’ Last Exam, BrowseComp, OfficeQA Pro |
 

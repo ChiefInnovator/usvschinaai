@@ -47,8 +47,27 @@ def component_aliases(header):
 
 @preconditions(columns='mapping', header='text')
 def selected_value(columns, header):
-    """Resolve one configured component using ingestion's first-present rule."""
+    """Resolve one configured component using ingestion's first-present rule.
+
+    A component marked `highestAlias` merges two reported names for the same
+    benchmark, so it takes the highest value among them instead.
+    """
     from scoring import MISSING_VALUE_MARKERS
+    component = next((c for c in load_config()['benchmarks']
+                      if canonical(header) in {canonical(a) for a in c['aliases']}), None)
+    if component and component.get('highestAlias'):
+        keys = component_aliases(header)
+        best = None
+        for key, candidate in columns.items():
+            if canonical(key) not in keys or candidate in MISSING_VALUE_MARKERS:
+                continue
+            try:
+                number = float(str(candidate).rstrip('%'))
+            except ValueError:
+                continue
+            if best is None or number > best[0]:
+                best = (number, candidate)
+        return best[1] if best else ''
     value = columns.get(header, '')
     if value not in MISSING_VALUE_MARKERS:
         return value
