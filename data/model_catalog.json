@@ -38063,6 +38063,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "89bb4662b7287cdc0f06": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "27c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "5.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -56193,6 +56212,25 @@
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "75e9a0bc58b0cb3d9ba3": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "46c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "2.5s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -64899,14 +64937,14 @@
           "created": "2026-02-19",
           "Input$/M": "2",
           "Output$/M": "12",
-          "License": "Closed",
-          "Context": "1.0M",
           "Model": "Gemini 3.1 Pro",
-          "Multimodal": "Yes",
-          "Country": "🇺🇸",
           "Speed": "44c/s",
+          "KnowledgeCutoff": "Jan. 2025",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
           "Latency": "13.0s",
-          "KnowledgeCutoff": "Jan. 2025"
+          "Multimodal": "Yes",
+          "License": "Closed"
         }
       },
       "benchmarks": {
@@ -68136,6 +68174,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "12.1s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "6ac3cdcb55bdccf42479": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "88c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "8.8s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -101027,9 +101084,9 @@
           "Input$/M": "—",
           "Output$/M": "—",
           "Model": "GPT-5.5 Pro",
-          "Multimodal": "Yes",
           "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
+          "Multimodal": "Yes",
           "License": "Closed"
         },
         "ac70abc4f31af4e7aedb": {
@@ -102952,11 +103009,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Context": "1.1M",
           "Model": "GPT-6 Luna",
-          "Multimodal": "Yes",
+          "KnowledgeCutoff": "May 2026",
           "Country": "🇺🇸",
-          "KnowledgeCutoff": "May 2026"
+          "Context": "1.1M",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -114088,6 +114145,305 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-11-07"
+          }
+        }
+      }
+    },
+    "1880a0ee12458f6f57e9": {
+      "name": "Claude Fable 5.2",
+      "profiles": {
+        "716ec9a47e2d40600620": {
+          "model": "Claude Fable 5.2",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-2",
+          "origin": "US",
+          "description": "Claude Fable 5.2 by Anthropic — released Nov 9, 2026; $8.00/M input, $0.200/M cached input, $40.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-09",
+          "Model": "Claude Fable 5.2\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "40",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "8"
+        }
+      },
+      "benchmarks": {
+        "gpqa-diamond": {
+          "6f5213a1a4a90d5f": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.9,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Epoch AI evaluation of claude-fable-5-2_max; evaluation started 2026-11-06",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row claude-fable-5-2_max."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "80b960d4a90d041b": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 95.1,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Epoch AI evaluation of claude-fable-5-2_max; evaluation started 2026-11-06",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row claude-fable-5-2_max."
+          }
+        },
+        "arc-agi-2": {
+          "8baa12e3772a7f11": {
+            "benchmark": "ARC-AGI-2",
+            "score": 93.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Epoch AI evaluation of claude-fable-5-2_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row claude-fable-5-2_xhigh."
+          }
+        },
+        "deepswe-1.1": {
+          "0aee1a4c8c039aee": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 74.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5-2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "officeqa-pro": {
+          "f6c7f1d1ec1dd5cc": {
+            "benchmark": "OfficeQA Pro",
+            "score": 72.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5-2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "humanitys-last-exam": {
+          "8f5b379e61bee26b": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 73.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/claude-fable-5-2",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        }
+      }
+    },
+    "055feb5d450668c49c20": {
+      "name": "Inkling 2 Small",
+      "profiles": {
+        "d156c5059645be72a9d8": {
+          "model": "Inkling 2 Small",
+          "organization": "Thinking Machines Lab",
+          "link": "https://llm-stats.com/models/inkling-2-small",
+          "origin": "US",
+          "description": "Inkling 2 Small by Thinking Machines Lab — released Nov 5, 2026; $0.300/M input, $0.030/M cached input, $1.00/M output; 256K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-05",
+          "Model": "Inkling 2 Small\nNEW",
+          "Country": "🇺🇸",
+          "Context": "256k",
+          "Output$/M": "1",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "594",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.3"
+        }
+      },
+      "benchmarks": {
+        "arc-agi-2": {
+          "22d0351c05631683": {
+            "benchmark": "ARC-AGI-2",
+            "score": 81.7,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Epoch AI evaluation of inkling-2-small_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row inkling-2-small_xhigh."
+          }
+        },
+        "browsecomp": {
+          "68d98fef088ab2fc": {
+            "benchmark": "BrowseComp",
+            "score": 90.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "mmmu-pro": {
+          "4069d72a25860938": {
+            "benchmark": "MMMU-Pro",
+            "score": 81.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "charxiv-r": {
+          "6627fbb5d422ed76": {
+            "benchmark": "CharXiv-R",
+            "score": 85.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "gpqa": {
+          "1988e237cfb25f9f": {
+            "benchmark": "GPQA",
+            "score": 93.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "humanitys-last-exam": {
+          "a0faa70efb878604": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 44.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "swe-bench-verified": {
+          "2904c3988886631e": {
+            "benchmark": "SWE-bench Verified",
+            "score": 82.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-small",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "deepswe-1.1": {
+          "76e7e525535650fb": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 72.1,
+            "unit": "percent",
+            "source": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "terminal-bench-2.1": {
+          "7c945487a637bf34": {
+            "benchmark": "Terminal-Bench 2.1",
+            "score": 85.1,
+            "unit": "percent",
+            "source": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Pi harness; effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-10"
+          }
+        },
+        "gpqa-diamond": {
+          "df6a23c0a1d66c1c": {
+            "benchmark": "GPQA Diamond",
+            "score": 93.0,
+            "unit": "percent",
+            "source": "https://thinkingmachines.ai/model-card/inkling-2-small/",
+            "availableFrom": "2026-11-10",
+            "retrievedAt": "2026-11-10",
+            "configuration": "Effort 0.99 (xhigh), temperature 1.0, 1M-token trajectory limit; individual result publication date unknown.",
+            "kind": "published",
+            "sourceType": "model_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-10"
           }
         }
       }
