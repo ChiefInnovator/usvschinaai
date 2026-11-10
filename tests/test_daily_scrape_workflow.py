@@ -187,6 +187,15 @@ class CarryForwardStepTests(unittest.TestCase):
         self.assertEqual(self.promoted, "false", "develop holds code main does not; a person promotes")
         self.assertEqual((self.work / "scripts/code.py").read_text(), "v2\n")
 
+    def test_unpromoted_revert_with_identical_content_is_not_promoted(self):
+        self.commit({"scripts/code.py": "v2\n"}, "change")
+        self.commit({"scripts/code.py": "v1\n"}, "revert")
+        self.git(self.work, "push", "--quiet", "origin", "develop")
+        self.develop = self.head()
+        self.assertEqual(self.git(self.work, "diff", "--stat", "origin/main", "HEAD"), "")
+        self.run_step()
+        self.assertEqual(self.promoted, "false")
+
     def test_branch_touching_code_is_never_built_upon(self):
         branch, _ = self.pending({"models.json": "day 2\n", "scripts/code.py": "injected\n"})
         log, noted = self.run_step(branch)
@@ -223,7 +232,8 @@ class AutoPublishStepTests(unittest.TestCase):
         """Run the publish step's shell with a stub publisher; returns (exit code, output)."""
         script = (run_block(step("Publish daily data"))
                   .replace("${{ steps.base.outputs.promoted }}", promoted)
-                  .replace("${{ steps.pr.outputs.branch }}", "feature/daily-scrape-1-1"))
+                  .replace("${{ steps.pr.outputs.branch }}", "feature/daily-scrape-1-1")
+                  .replace("${{ steps.base.outputs.develop_sha }}", "abc123"))
         with tempfile.TemporaryDirectory() as tmp:
             stub = Path(tmp) / "python"
             stub.write_text('#!/bin/sh\necho "published $*"\n')
@@ -237,7 +247,7 @@ class AutoPublishStepTests(unittest.TestCase):
     def test_publishes_only_from_a_fully_promoted_develop_not_built_on_pending_data(self):
         code, log = self.publish("true")
         self.assertEqual(code, 0)
-        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1", log)
+        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1 --develop abc123", log)
         for promoted, pending in (("false", False), ("", False), ("true", True)):
             code, log = self.publish(promoted, pending)
             self.assertEqual(code, 1, (promoted, pending))
@@ -258,7 +268,9 @@ class AutoPublishStepTests(unittest.TestCase):
 
     def test_run_records_whether_develop_was_fully_promoted(self):
         base = run_block(step("Carry forward an unmerged daily scrape"))
-        self.assertIn("git diff --quiet origin/main HEAD", base)
+        # Ancestry, not equal content: an unpromoted revert has the same tree as main.
+        self.assertIn('git merge-base --is-ancestor "$DEVELOP_SHA" origin/main', base)
+        self.assertNotIn("git diff --quiet origin/main", base)
         self.assertLess(base.index("promoted="), base.index("gh pr list"))
 
 

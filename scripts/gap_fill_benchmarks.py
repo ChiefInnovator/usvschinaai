@@ -964,7 +964,9 @@ def run_gap_filling_pass(
             print("  → batch schema validation failed")
             continue
         if on_batch is not None:
-            on_batch(model_name, list(batch_benchmarks))
+            # Only what was answered: a caller that remembers asked pairs must
+            # still retry a benchmark the response left out.
+            on_batch(model_name, [b for b in batch_benchmarks if b in validated_map])
 
         # Apply each validated result to its matching candidate
         for cand in batch_candidates:

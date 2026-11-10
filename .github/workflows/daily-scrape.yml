@@ -85,8 +85,9 @@ jobs:
           DEVELOP_SHA=$(git rev-parse HEAD)
           echo "develop_sha=$DEVELOP_SHA" >> "$GITHUB_OUTPUT"
           # Automatic publication promotes all of develop, so it is allowed only
-          # when develop holds nothing that a person has not already promoted.
-          if git diff --quiet origin/main HEAD; then
+          # when every develop commit is already on main. Equal file content is
+          # not enough: an unpromoted revert leaves the same tree.
+          if git merge-base --is-ancestor "$DEVELOP_SHA" origin/main; then
             echo "promoted=true" >> "$GITHUB_OUTPUT"
           else
             echo "promoted=false" >> "$GITHUB_OUTPUT"
@@ -294,7 +295,8 @@ jobs:
             echo "::error::This run was built on an unmerged daily pull request. Review and merge the new pull request by hand."
             exit 1
           fi
-          python scripts/publish_daily_data.py --repo "$GITHUB_REPOSITORY" --branch "${{ steps.pr.outputs.branch }}"
+          python scripts/publish_daily_data.py --repo "$GITHUB_REPOSITORY" \
+            --branch "${{ steps.pr.outputs.branch }}" --develop "${{ steps.base.outputs.develop_sha }}"
       
       - name: Notify success
         if: steps.changes.outputs.has_changes == 'true'

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Publish the daily data pull request when nothing in it needs a person.
 
-    python scripts/publish_daily_data.py --repo OWNER/REPO --branch feature/daily-scrape-...
+    python scripts/publish_daily_data.py --repo OWNER/REPO --branch feature/daily-scrape-... --develop SHA
 
 Merges the data pull request into develop, then opens and merges the
 develop -> main promotion. Both are ordinary merge-commit pull requests; nothing
@@ -9,7 +9,9 @@ is pushed to develop or main. Each merge requires that:
 
 - the required checks have passed on the exact head commit,
 - for develop, the automatic review has finished on that commit,
-- no review thread is open.
+- no review thread is open,
+- develop is still the commit the run started from, so the promotion carries
+  this run's data and nothing a person has not promoted.
 
 Any other outcome leaves the pull request open and exits 1, so the run fails
 and the workflow-failure email tells a person to merge it by hand.
@@ -17,7 +19,6 @@ and the workflow-failure email tells a person to merge it by hand.
 from preconditions import preconditions
 import argparse
 import json
-import re
 import subprocess
 import sys
 import time
@@ -25,7 +26,9 @@ import time
 POLL_SECONDS = 20
 CHECK_TIMEOUT = 20 * 60
 REVIEW_TIMEOUT = 20 * 60
-REVIEWER = re.compile('copilot', re.I)
+# The account GitHub's automatic review posts as. A substring match would let
+# any account with a similar name satisfy the review gate.
+REVIEWER = 'copilot-pull-request-reviewer[bot]'
 THREADS = '''query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
   repository(owner: $owner, name: $name) { pullRequest(number: $number) {
     reviewThreads(first: 100, after: $cursor) { nodes { isResolved } pageInfo { hasNextPage endCursor } } } } }'''
@@ -74,7 +77,7 @@ def wait_for_review(repo, pr, head, timeout):
     while True:
         _, out = gh(['api', f'repos/{repo}/pulls/{pr}/reviews?per_page=100'])
         reviews = json.loads(out)
-        if any(review.get('commit_id') == head and REVIEWER.search((review.get('user') or {}).get('login', ''))
+        if any(review.get('commit_id') == head and (review.get('user') or {}).get('login') == REVIEWER
                for review in reviews):
             return
         if time.monotonic() >= deadline:
@@ -126,13 +129,26 @@ def merge_when_clean(repo, pr, head, review):
 
 
 @preconditions(repo='nonempty', branch='nonempty')
-def publish(repo, branch):
+def branch_tip(repo, branch):
+    _, out = gh(['api', f'repos/{repo}/git/ref/heads/{branch}'])
+    return json.loads(out)['object']['sha']
+
+
+@preconditions(repo='nonempty', branch='nonempty', started_from='nonempty')
+def publish(repo, branch, started_from):
     data = pull_request(repo, branch)
     if (data['state'] != 'OPEN' or data['baseRefName'] != 'develop' or data['isCrossRepository']
             or not data['headRefName'].startswith('feature/daily-scrape-')):
         raise NeedsPerson('this is not an open daily data pull request into develop')
+    # Anything merged into develop during the run would ride along to main.
+    if branch_tip(repo, 'develop') != started_from:
+        raise NeedsPerson('develop changed while the scrape ran')
     develop = merge_when_clean(repo, data['number'], data['headRefOid'], review=True)
     print(f"Merged data pull request #{data['number']} into develop at {develop[:7]}.")
+    _, out = gh(['api', f'repos/{repo}/commits/{develop}'])
+    parents = [parent['sha'] for parent in json.loads(out)['parents']]
+    if parents != [started_from, data['headRefOid']]:
+        raise NeedsPerson('the data merged onto a develop commit this run did not start from; promote by hand')
     _, url = gh(['pr', 'create', '--repo', repo, '--base', 'main', '--head', 'develop',
                  '--title', f"Publish daily data from #{data['number']}",
                  '--body', f"Promotes #{data['number']}. Opened and merged by the daily scrape after its "
@@ -149,9 +165,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--repo', required=True)
     parser.add_argument('--branch', required=True)
+    parser.add_argument('--develop', required=True, help='The develop commit the run started from')
     args = parser.parse_args()
     try:
-        publish(args.repo, args.branch)
+        publish(args.repo, args.branch, args.develop)
     except NeedsPerson as reason:
         print(f'::error::Daily data was not published automatically: {reason}. '
               'Merge the open pull request and promote develop by hand.')

@@ -9,7 +9,7 @@ import publish_daily_data as publish
 
 REPO = 'owner/repo'
 BRANCH = 'feature/daily-scrape-1-1'
-HEAD, DEVELOP, MAIN = 'a' * 40, 'b' * 40, 'c' * 40
+HEAD, DEVELOP, MAIN, STARTED = 'a' * 40, 'b' * 40, 'c' * 40, 'f' * 40
 
 
 class FakeGitHub:
@@ -18,7 +18,8 @@ class FakeGitHub:
     def __init__(self, **options):
         self.options = dict(data_checks='pass', promotion_checks='pass', review_head=HEAD,
                             reviewer='copilot-pull-request-reviewer[bot]', threads=0,
-                            base='develop', promotion_head=DEVELOP)
+                            base='develop', promotion_head=DEVELOP, develop_tip=STARTED,
+                            merge_parents=[STARTED, HEAD])
         self.options.update(options)
         self.merged, self.created = [], []
 
@@ -37,6 +38,10 @@ class FakeGitHub:
         if args[:2] == ['pr', 'checks']:
             bucket = self.options['data_checks' if args[2] == '7' else 'promotion_checks']
             return 0, json.dumps([{'name': 'test', 'bucket': bucket}, {'name': 'verify_build', 'bucket': 'pass'}])
+        if args[0] == 'api' and args[1].endswith('/git/ref/heads/develop'):
+            return 0, json.dumps({'object': {'sha': self.options['develop_tip']}})
+        if args[0] == 'api' and '/commits/' in args[1]:
+            return 0, json.dumps({'parents': [{'sha': sha} for sha in self.options['merge_parents']]})
         if args[0] == 'api' and 'graphql' not in args:
             return 0, json.dumps([{'commit_id': self.options['review_head'],
                                    'user': {'login': self.options['reviewer']}},
@@ -64,7 +69,8 @@ class PublishDailyDataTests(unittest.TestCase):
         github = FakeGitHub(**options)
         with patch.object(publish, 'gh', github), patch.object(publish.time, 'sleep'), \
              patch.object(publish, 'CHECK_TIMEOUT', 0), patch.object(publish, 'REVIEW_TIMEOUT', 0), \
-             patch.object(sys, 'argv', ['publish', '--repo', REPO, '--branch', BRANCH]), patch('builtins.print') as out:
+             patch.object(sys, 'argv', ['publish', '--repo', REPO, '--branch', BRANCH, '--develop', STARTED]), \
+             patch('builtins.print') as out:
             code = publish.main()
         return code, github, ' '.join(str(call.args[0]) for call in out.call_args_list)
 
@@ -81,7 +87,9 @@ class PublishDailyDataTests(unittest.TestCase):
             self.assertIn('::error::Daily data was not published automatically', log)
 
     def test_review_must_cover_the_exact_head_by_the_automatic_reviewer(self):
-        for options in (dict(review_head='d' * 40), dict(reviewer='someone')):
+        # A look-alike account must not satisfy the gate.
+        for options in (dict(review_head='d' * 40), dict(reviewer='someone'), dict(reviewer='copilot-reviewer'),
+                        dict(reviewer='Copilot-Pull-Request-Reviewer[bot]x')):
             code, github, log = self.run_publish(**options)
             self.assertEqual((code, github.merged), (1, []))
             self.assertIn('automatic review did not finish', log)
@@ -94,6 +102,16 @@ class PublishDailyDataTests(unittest.TestCase):
     def test_only_a_daily_data_pull_request_into_develop_is_published(self):
         code, github, _ = self.run_publish(base='main')
         self.assertEqual((code, github.merged, github.created), (1, [], []))
+
+    def test_develop_must_be_the_commit_the_run_started_from(self):
+        # Something else landed on develop during the run: do not merge at all.
+        code, github, log = self.run_publish(develop_tip='9' * 40)
+        self.assertEqual((code, github.merged, github.created), (1, [], []))
+        self.assertIn('develop changed while the scrape ran', log)
+        # It landed between the check and the merge: the data is in develop, but main is not touched.
+        code, github, log = self.run_publish(merge_parents=['9' * 40, HEAD])
+        self.assertEqual((code, github.merged, github.created), (1, [7], []))
+        self.assertIn('promote by hand', log)
 
     def test_promotion_stops_when_its_checks_fail_or_develop_moved(self):
         for options in (dict(promotion_checks='fail'), dict(promotion_head='e' * 40)):

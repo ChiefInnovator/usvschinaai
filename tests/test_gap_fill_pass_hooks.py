@@ -218,8 +218,11 @@ class PassHookTests(unittest.TestCase):
         gf.validate_batch_response = lambda parsed, expected: {"HLE": {"benchmark": "HLE", "score": None}}
         saved = {}
         gf.save_cache = lambda cache: saved.update(cache)
-        gf.run_gap_filling_pass([Entry("M", "US", {"HLE": "—", "GPQA": "—"})], max_calls=1)
+        asked = []
+        gf.run_gap_filling_pass([Entry("M", "US", {"HLE": "—", "GPQA": "—"})], max_calls=1,
+                                on_batch=lambda model, benchmarks: asked.append((model, benchmarks)))
         self.assertEqual(list(saved["M"]), ["HLE"])
+        self.assertEqual(asked, [("M", ["HLE"])], "the backfill must not record GPQA as asked")
 
     def test_new_model_window_is_two_weeks(self):
         from datetime import datetime, timezone, timedelta
