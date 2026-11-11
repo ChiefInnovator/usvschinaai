@@ -805,6 +805,28 @@
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
     }
   },
+  "DeepSeek-V4.1-Flash-1017": {
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-11T03:29:41.731931+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Moonshot's CharXiv reasoning-question result without Python tools; max effort, averaged over four runs. Publication date unknown.",
+      "score": "77.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-11T03:29:41.731931+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Max effort; Claude Code with the complete PDF corpus rendered as page images without machine-readable text. Publication date unknown.",
+      "score": "62.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    }
+  },
   "Ember-1": {
     "DeepSWE": {
       "benchmark": "DeepSWE",

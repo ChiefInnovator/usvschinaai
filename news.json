@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-11-10T21:40:33.811093+00:00",
+  "lastUpdated": "2026-11-11T03:33:33.755888+00:00",
   "items": [
+    {
+      "id": "37dd0974f20190aa",
+      "headline": "Nvidia Email Altered US Probe Into China Chip Smuggling",
+      "url": "https://www.newser.com/story/399729/nvidia-email-altered-us-probe-into-china-chip-smuggling.html",
+      "source": "Newser",
+      "country": "CN",
+      "publishedAt": "2026-11-10 15:15:00",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "1f83a221b9a5c05d",
+      "headline": "Nvidia probes CEO Jensen Huang over affair with alleged Chinese spy",
+      "url": "https://phayul.com/2026/11/nvidia-probes-ceo-jensen-huang-over-affair-with-alleged-chinese-spy/",
+      "source": "Phayul",
+      "country": "CN",
+      "publishedAt": "2026-11-10 13:54:45",
+      "relevanceScore": 0.4
+    },
+    {
+      "id": "b490900d1d078f9b",
+      "headline": "FBI looks into Nvidia CEO’s alleged spy affair as report claims $7.5 billion in smuggled AI chips to China",
+      "url": "https://www.digitaltrends.com/computing/fbi-looks-into-nvidia-ceos-alleged-spy-affair-as-report-claims-7-5-billion-in-smuggled-chips-to-china/",
+      "source": "Digitaltrends",
+      "country": "CN",
+      "publishedAt": "2026-11-10 13:27:04",
+      "relevanceScore": 0.32
+    },
     {
       "id": "bfbf7905205db2a5",
       "headline": "Nvidia CEO Admits Affair Amid Chinese Espionage Probe At $4.5 Trillion AI Giant (Worthy News Investigation)",
