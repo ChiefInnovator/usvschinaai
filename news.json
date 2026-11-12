@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-11T03:33:33.755888+00:00",
+  "lastUpdated": "2026-11-12T03:34:22.537526+00:00",
   "items": [
+    {
+      "id": "95b4ffc2589b89e0",
+      "headline": "China Keeps Making End Runs Around America’s Chip Export Controls: REPORT",
+      "url": "https://ijr.com/journals/dcnf/china-keeps-making-end-runs-around-america-s-chip-export-controls-report-cc1d6181",
+      "source": "Ijr",
+      "country": "Both",
+      "publishedAt": "2026-11-11 14:54:48",
+      "relevanceScore": 0.4
+    },
     {
       "id": "37dd0974f20190aa",
       "headline": "Nvidia Email Altered US Probe Into China Chip Smuggling",
@@ -116,15 +125,6 @@
       "source": "The Guardian",
       "country": "Both",
       "publishedAt": "2026-10-29 15:23:48",
-      "relevanceScore": 0.24
-    },
-    {
-      "id": "f9ca808f9cbcc63c",
-      "headline": "NVIDIA GeForce RTX 5080 Prices Soar Past $2,000 At US Retailers, As Newegg’s Own Inventory Runs Dry",
-      "url": "https://wccftech.com/nvidia-geforce-rtx-5080-prices-soar-past-2000-at-us-retailers-as-neweggs-own-inventory-runs-dry/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-10-28 13:30:31",
       "relevanceScore": 0.24
     }
   ]

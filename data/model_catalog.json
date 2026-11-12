@@ -38866,6 +38866,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "cb536b0f59801c9fb3ca": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "20c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "6.6s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -103537,11 +103556,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "License": "Closed",
-          "Model": "GPT-5.5 Pro",
-          "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
-          "Multimodal": "Yes"
+          "Model": "GPT-5.5 Pro",
+          "Multimodal": "Yes",
+          "License": "Closed",
+          "KnowledgeCutoff": "Dec. 2025"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105659,11 +105678,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Model": "GPT-6 Luna",
-          "KnowledgeCutoff": "May 2026",
           "Country": "🇺🇸",
+          "Model": "GPT-6 Luna",
+          "Context": "1.1M",
           "Multimodal": "Yes",
-          "Context": "1.1M"
+          "KnowledgeCutoff": "May 2026"
         }
       },
       "benchmarks": {
@@ -122091,7 +122110,27 @@
     },
     "2695f11d72021d3a19e7": {
       "name": "Gemini 4 Carbon",
-      "profiles": {},
+      "profiles": {
+        "c6122a44ea7dc9182555": {
+          "model": "Gemini 4 Carbon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-carbon",
+          "origin": "US",
+          "description": "Gemini 4 Carbon by Google — released Oct 28, 2026. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-10-28",
+          "Model": "Gemini 4 Carbon",
+          "Country": "🇺🇸",
+          "Context": "-",
+          "Output$/M": "—",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "—"
+        }
+      },
       "benchmarks": {
         "agents-last-exam": {
           "e9fd426ab76c342c": {
@@ -122185,6 +122224,22 @@
             "benchmarkAvailableFrom": "2026-06-12",
             "modelAvailableFrom": "2026-11-11",
             "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-4-carbon_high."
+          }
+        },
+        "arc-agi-2": {
+          "d4808f267d535b15": {
+            "benchmark": "ARC-AGI-2",
+            "score": 94.2,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-12",
+            "retrievedAt": "2026-11-12",
+            "configuration": "Epoch AI evaluation of gemini-4-carbon_medium; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-12",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gemini-4-carbon_medium."
           }
         }
       }
