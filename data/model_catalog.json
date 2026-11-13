@@ -38885,6 +38885,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "433ddbe0c44de213e3b9": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "17c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "8.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -57452,6 +57471,25 @@
           "KnowledgeCutoff": "Apr. 2026",
           "Multimodal": "Yes",
           "Input$/M": "10"
+        },
+        "39a8d35806900e05a3bc": {
+          "model": "GPT-6 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6-astra",
+          "origin": "US",
+          "description": "GPT-6 Astra by OpenAI — released Sep 4, 2026; $10.00/M input, $1.00/M cached input, $50.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-04",
+          "Model": "GPT-6 Astra",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "50",
+          "Speed": "48c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "2.5s",
+          "KnowledgeCutoff": "Apr. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "10"
         }
       },
       "benchmarks": {
@@ -69719,6 +69757,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "8.5s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "7e08951f5dbc05b47a46": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "17c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "12.9s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -103556,11 +103613,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
+          "License": "Closed",
           "Country": "🇺🇸",
           "Model": "GPT-5.5 Pro",
-          "Multimodal": "Yes",
-          "License": "Closed",
-          "KnowledgeCutoff": "Dec. 2025"
+          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105678,11 +105735,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
+          "Context": "1.1M",
           "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
-          "Context": "1.1M",
-          "Multimodal": "Yes",
-          "KnowledgeCutoff": "May 2026"
+          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes"
         }
       },
       "benchmarks": {
@@ -122129,6 +122186,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "—"
+        },
+        "68a1758e231d25d7d080": {
+          "model": "Gemini 4 Carbon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-carbon",
+          "origin": "US",
+          "description": "Gemini 4 Carbon by Google — released Oct 28, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-10-28",
+          "Model": "Gemini 4 Carbon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -122972,6 +123048,146 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-11"
+          }
+        }
+      }
+    },
+    "3e931bf4acbf06b10939": {
+      "name": "SWE-2 Flash",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "28add074de806153": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 60.1,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/swe-2-flash",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        },
+        "terminal-bench-4.0": {
+          "3c48081f5dc17ad4": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 20.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/swe-2-flash",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        }
+      }
+    },
+    "7f8c4ec38ecb8b9d45ad": {
+      "name": "ERNIE 5.5 Flash Preview",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "581213921c77843f": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 29.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-5.5-flash-preview",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        },
+        "deepswe-1.1": {
+          "45df8d176ee67cb4": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 71.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-5.5-flash-preview",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c9be8a7da62b6d08": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 46.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-5.5-flash-preview",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        },
+        "browsecomp": {
+          "14d0a155ff0dd4d3": {
+            "benchmark": "BrowseComp",
+            "score": 87.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-5.5-flash-preview",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        },
+        "officeqa-pro": {
+          "4bea5151cb8a84c7": {
+            "benchmark": "OfficeQA Pro",
+            "score": 67.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/ernie-5.5-flash-preview",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-13"
+          }
+        }
+      }
+    },
+    "802d94dc0db160948b3d": {
+      "name": "GPT-6 Cyber",
+      "profiles": {},
+      "benchmarks": {
+        "gpqa-diamond": {
+          "76074917acfea637": {
+            "benchmark": "GPQA Diamond",
+            "score": 95.6,
+            "unit": "percent",
+            "source": "https://deploymentsafety.openai.com/gpt-6-cyber/gpt-6-cyber.pdf",
+            "availableFrom": "2026-11-13",
+            "retrievedAt": "2026-11-13",
+            "configuration": "Figure 11: pass@1, no tools; reasoning effort not specified. Publication date: November 5, 2026.",
+            "kind": "published",
+            "sourceType": "system_card",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-13"
           }
         }
       }

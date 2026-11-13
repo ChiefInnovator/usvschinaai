@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-11-12",
-  "modelsChecked": 303,
-  "sourcesChecked": 313,
-  "findings": 1863,
-  "accepted": 1,
+  "retrievedAt": "2026-11-13",
+  "modelsChecked": 306,
+  "sourcesChecked": 316,
+  "findings": 1868,
+  "accepted": 7,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -355,9 +355,10 @@
     {
       "source": "vals:terminal-bench-4",
       "component": "terminal-bench-4.0",
-      "rows": 63,
+      "rows": 64,
       "matched": 50,
       "unmatched": [
+        "google/gemini-4-hydrogen",
         "openai/gpt-6-sol",
         "meta/muse-ember",
         "tencent/hy4",
@@ -379,69 +380,69 @@
       "status": "ok",
       "findings": 68,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "artificial-analysis": {
       "status": "ok",
       "findings": 387,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "charxiv": {
       "status": "ok",
       "findings": 2,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "epoch": {
       "status": "ok",
       "findings": 193,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "llm-stats": {
       "status": "ok",
-      "findings": 926,
+      "findings": 931,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12",
-      "pages": 303,
+      "lastOk": "2026-11-13",
+      "pages": 306,
       "failedPages": 0
     },
     "toolathlon": {
       "status": "ok",
       "findings": 42,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "vals:gpqa": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "vals:lcb": {
       "status": "ok",
       "findings": 51,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "vals:mmlu_pro": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "vals:swebench": {
       "status": "ok",
       "findings": 46,
       "since": "2026-11-10",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     },
     "vals:terminal-bench-4": {
       "status": "ok",
       "findings": 50,
       "since": "2026-11-11",
-      "lastOk": "2026-11-12"
+      "lastOk": "2026-11-13"
     }
   }
 }

@@ -1204,10 +1204,10 @@
   "GPT-6 Cyber": {
     "GPQA Diamond": {
       "benchmark": "GPQA Diamond",
-      "cached_at": "2026-11-12T03:30:43.636003+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-13T03:30:43.418556+00:00",
+      "confidence": "high",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Pass@1, no tools; effort not specified. The system-card figure extraction and a secondary benchmark listing agree, but the figure could not be independently inspected as an image. Publication date of this individual result is unverified.",
+      "notes": "Figure 11: pass@1, no tools; reasoning effort not specified. Publication date: November 5, 2026.",
       "score": "95.6%",
       "source_type": "system_card",
       "source_url": "https://deploymentsafety.openai.com/gpt-6-cyber/gpt-6-cyber.pdf"
