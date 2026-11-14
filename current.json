@@ -368,11 +368,11 @@
             100.0
           ]
         },
-        "revision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079"
+        "revision": "2710dae784a0e5e0ffbeb192e2dc6e215831a1b03696d382df80718527ec75fb"
       }
     }
   ],
   "schemaVersion": 2,
   "modelCatalog": "data/model_catalog.json",
-  "scoringRevision": "61f413af04b5978876fc0d0b0d3a17bc3597db7457d6e165c5c72c2b87250079"
+  "scoringRevision": "2710dae784a0e5e0ffbeb192e2dc6e215831a1b03696d382df80718527ec75fb"
 }

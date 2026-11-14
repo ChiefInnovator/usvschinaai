@@ -8,7 +8,10 @@ Merges the data pull request into develop, then opens and merges the
 develop -> main promotion. Both are ordinary merge-commit pull requests; nothing
 is pushed to develop or main. The data pull request must be the exact commit
 this run pushed and may change only generated data files, so a later push to
-the branch, or anything that is not data, is never merged here. Each merge
+the branch, or anything that is not data, is never merged here. The one
+exception is Copilot's own fix: when the automatic review leaves a thread open,
+Copilot is asked once to address it, and commits it adds on top of the run's
+commit are accepted when they too change only generated data. Each merge
 requires that:
 
 - the required checks have passed on the exact head commit,
@@ -31,9 +34,20 @@ import time
 POLL_SECONDS = 20
 CHECK_TIMEOUT = 20 * 60
 REVIEW_TIMEOUT = 20 * 60
+FIX_TIMEOUT = 45 * 60
 # The account GitHub's automatic review posts as. A substring match would let
 # any account with a similar name satisfy the review gate.
 REVIEWER = 'copilot-pull-request-reviewer[bot]'
+# How a Copilot fix commit is recognised: authored by the account that asked,
+# committed and signed by GitHub on the agent's behalf, with this trailer. Any
+# other commit on the branch after the run's commit needs a person.
+FIXER_TRAILER = 'Co-authored-by: copilot-swe-agent[bot] <'
+# Posted with the write-capable token: Copilot acts only on a comment from an
+# account with write access. What a fix may touch is spelled out in AGENTS.md.
+FIX_REQUEST = ('@copilot Address every open review thread on this pull request by committing to this branch. '
+               'Follow "Review findings on daily data pull requests" in AGENTS.md: check each finding against '
+               'the cited source before changing anything, change only generated data, and regenerate and '
+               'verify the publication.')
 # The files a daily scrape generates. Code, workflows and pages are not data.
 GENERATED = re.compile(r'(models\.json|current\.json|news\.json|og-image\.png|ig-image\.png|sitemap\.xml|llms\.txt'
                        r'|data/[^/]+\.jsonl?|social/[^/]+\.(png|json))')
@@ -131,6 +145,60 @@ def open_threads(repo, pr):
         cursor = threads['pageInfo']['endCursor']
 
 
+@preconditions(commit='mapping', requester='nonempty')
+def copilot_commit(commit, requester):
+    detail = commit.get('commit') or {}
+    return ((commit.get('author') or {}).get('login') == requester
+            and (commit.get('committer') or {}).get('login') == 'web-flow'
+            and bool((detail.get('verification') or {}).get('verified'))
+            and FIXER_TRAILER in (detail.get('message') or ''))
+
+
+@preconditions(repo='nonempty', head='nonempty')
+def release_checks(repo, head):
+    """Start the workflow runs GitHub holds for approval on a Copilot push.
+
+    Called only after the push is known to be Copilot's and to change nothing
+    but generated data. A run that cannot be started leaves its check pending,
+    and the wait for checks then stops for a person.
+    """
+    _, out = gh(['api', f'repos/{repo}/actions/runs?head_sha={head}&per_page=100'])
+    for run in json.loads(out).get('workflow_runs') or []:
+        if run.get('conclusion') == 'action_required':
+            gh(['run', 'rerun', str(run['id']), '--repo', repo], check=False)
+
+
+@preconditions(repo='nonempty', pr='positive_int', head='nonempty', timeout='nonnegative')
+def copilot_fix(repo, pr, head, timeout):
+    """Ask Copilot to clear the open review threads; returns the head to merge.
+
+    Copilot commits its fix to the branch and the automatic review of that push
+    resolves the threads the fix addressed. Nothing here resolves a thread: one
+    that is still open when the time runs out needs a person. The branch may
+    only have moved forward from the run's commit, by Copilot's commits alone.
+    """
+    # Copilot authors its commits as the account that asked.
+    _, out = gh(['api', 'user'])
+    requester = json.loads(out)['login']
+    gh(['pr', 'comment', str(pr), '--repo', repo, '--body', FIX_REQUEST])
+    print(f'Review threads are open on #{pr}; asked Copilot to address them.')
+    deadline = time.monotonic() + timeout
+    while open_threads(repo, pr):
+        if time.monotonic() >= deadline:
+            raise NeedsPerson('Copilot did not clear the open review threads in time')
+        time.sleep(POLL_SECONDS)
+    fixed = pull_request(repo, pr)['headRefOid']
+    if fixed != head:
+        _, out = gh(['api', f'repos/{repo}/compare/{head}...{fixed}'])
+        compared = json.loads(out)
+        commits = compared.get('commits') or []
+        if compared.get('status') != 'ahead' or not commits or not all(
+                copilot_commit(commit, requester) for commit in commits):
+            raise NeedsPerson('the branch gained commits that are not Copilot fixes on top of this run')
+        print(f'Copilot fixed #{pr} at {fixed[:7]}.')
+    return fixed
+
+
 @preconditions(repo='nonempty', pr='json')
 def pull_request(repo, pr):
     _, out = gh(['pr', 'view', str(pr), '--repo', repo, '--json',
@@ -200,9 +268,20 @@ def publish(repo, branch, head, started_from):
     # Anything merged into develop during the run would ride along to main.
     if branch_tip(repo, 'develop') != started_from:
         raise NeedsPerson('develop changed while the scrape ran')
+    wait_for_checks(repo, data['number'], head, CHECK_TIMEOUT)
+    wait_for_review(repo, data['number'], head, REVIEW_TIMEOUT)
+    if open_threads(repo, data['number']):
+        data['headRefOid'] = copilot_fix(repo, data['number'], head, FIX_TIMEOUT)
+        other = sorted(path for path in changed_files(repo, data['number']) if not GENERATED.fullmatch(path))
+        if other:
+            raise NeedsPerson('the fix changes files that are not generated data: ' + ', '.join(other[:5]))
+        if data['headRefOid'] != head:
+            release_checks(repo, data['headRefOid'])
     develop = merge_when_clean(repo, data['number'], data['headRefOid'], 'develop', review=True,
                                base_tip=started_from)
     print(f"Merged data pull request #{data['number']} into develop at {develop[:7]}.")
+    # A merged feature branch is never left behind. Failing to delete it does not undo the merge.
+    gh(['api', '-X', 'DELETE', f"repos/{repo}/git/refs/heads/{data['headRefName']}"], check=False)
     try:
         promote(repo, data, develop, started_from)
     except NeedsPerson as reason:

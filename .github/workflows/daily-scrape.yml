@@ -282,7 +282,8 @@ jobs:
       - name: Publish daily data
         # Merges the data pull request and promotes develop to main, both as
         # merge-commit pull requests, when required checks pass and the
-        # automatic review leaves no open thread. Anything else fails this step:
+        # automatic review leaves no open thread. An open thread is handed to
+        # Copilot once to fix on the branch. Anything else fails this step:
         # the pull request stays open and the failure email asks for a manual merge.
         if: steps.changes.outputs.has_changes == 'true'
         env:
