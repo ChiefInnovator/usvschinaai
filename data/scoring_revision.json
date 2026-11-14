@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "scoringRevision": "6fbe4f41e08f61eea93aa2d16791a27b1cd49823c4218d83aa5368d3d69b3a2b",
+  "scoringRevision": "2710dae784a0e5e0ffbeb192e2dc6e215831a1b03696d382df80718527ec75fb",
   "sources": {
     "data/core_benchmarks.json": "77da5b02e0e542e34bb1f65ac0562402dc0cb35c188cf6de66860b1d50de2a17",
     "scripts/ai_models.py": "65da7a0a2085deddeb22b225b424a3e32ceb691fe1a3b1adfe170a6919ae51ac",
     "scripts/avg_iq_benchmarks.py": "a73bc4ad409c31ced0d33227cad6092daf4cf1553f6ff00b89b73ef7b53d0100",
     "scripts/backfill_gap_fill.py": "68c959101ee85041536346d131eb3007b42b225af6e70dcf8e41fd9589b33adb",
     "scripts/benchmark_names.py": "0502180d096b3d57f44260f50f3a91b05cc3f9279cd083377a1bb141d7a4db72",
-    "scripts/gap_fill_benchmarks.py": "cbb62a5040f6a6bd2697d1dddb896144a52b9a010c4d4ba2ea01661426f2f0d2",
+    "scripts/gap_fill_benchmarks.py": "85913f9a45fe895cb3ceedde295ea3939dba59d1ee705bb2da37f60fe0226c32",
     "scripts/generate_og_image.py": "929b68262713d9e66403392c37abccea89e1a5dc09ed8739945f8735a96b8f33",
     "scripts/ingest_benchmark_findings.py": "cc0a0d953be14fa90948a8c72ba60890d34e70683123163a41fdf6f70d58ad1c",
     "scripts/model_families.py": "ee3bacdfd735e80dc76102f0c92a00fe18b7bde4bb3b169ae8b7b6c23c25315a",

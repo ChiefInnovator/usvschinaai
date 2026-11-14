@@ -38,9 +38,10 @@ FIX_TIMEOUT = 45 * 60
 # The account GitHub's automatic review posts as. A substring match would let
 # any account with a similar name satisfy the review gate.
 REVIEWER = 'copilot-pull-request-reviewer[bot]'
-# The accounts Copilot's fix commits are authored by. Any other author on the
-# branch after the run's commit needs a person.
-FIXERS = frozenset({'Copilot', 'copilot-swe-agent[bot]'})
+# How a Copilot fix commit is recognised: GitHub commits and signs it on the
+# agent's behalf, authored by the account that asked, with this trailer. Any
+# other commit on the branch after the run's commit needs a person.
+FIXER_TRAILER = 'Co-authored-by: copilot-swe-agent[bot] <'
 # Posted with the write-capable token: Copilot acts only on a comment from an
 # account with write access. What a fix may touch is spelled out in AGENTS.md.
 FIX_REQUEST = ('@copilot Address every open review thread on this pull request by committing to this branch. '
@@ -144,6 +145,28 @@ def open_threads(repo, pr):
         cursor = threads['pageInfo']['endCursor']
 
 
+@preconditions(commit='mapping')
+def copilot_commit(commit):
+    detail = commit.get('commit') or {}
+    return ((commit.get('committer') or {}).get('login') == 'web-flow'
+            and bool((detail.get('verification') or {}).get('verified'))
+            and FIXER_TRAILER in (detail.get('message') or ''))
+
+
+@preconditions(repo='nonempty', head='nonempty')
+def release_checks(repo, head):
+    """Start the workflow runs GitHub holds for approval on a Copilot push.
+
+    Called only after the push is known to be Copilot's and to change nothing
+    but generated data. A run that cannot be started leaves its check pending,
+    and the wait for checks then stops for a person.
+    """
+    _, out = gh(['api', f'repos/{repo}/actions/runs?head_sha={head}&per_page=100'])
+    for run in json.loads(out).get('workflow_runs') or []:
+        if run.get('conclusion') == 'action_required':
+            gh(['run', 'rerun', str(run['id']), '--repo', repo], check=False)
+
+
 @preconditions(repo='nonempty', pr='positive_int', head='nonempty', timeout='nonnegative')
 def copilot_fix(repo, pr, head, timeout):
     """Ask Copilot to clear the open review threads; returns the head to merge.
@@ -164,8 +187,8 @@ def copilot_fix(repo, pr, head, timeout):
     if fixed != head:
         _, out = gh(['api', f'repos/{repo}/compare/{head}...{fixed}'])
         compared = json.loads(out)
-        authors = {(commit.get('author') or {}).get('login') for commit in compared.get('commits') or []}
-        if compared.get('status') != 'ahead' or not authors or not authors <= FIXERS:
+        commits = compared.get('commits') or []
+        if compared.get('status') != 'ahead' or not commits or not all(map(copilot_commit, commits)):
             raise NeedsPerson('the branch gained commits that are not Copilot fixes on top of this run')
         print(f'Copilot fixed #{pr} at {fixed[:7]}.')
     return fixed
@@ -247,6 +270,8 @@ def publish(repo, branch, head, started_from):
         other = sorted(path for path in changed_files(repo, data['number']) if not GENERATED.fullmatch(path))
         if other:
             raise NeedsPerson('the fix changes files that are not generated data: ' + ', '.join(other[:5]))
+        if data['headRefOid'] != head:
+            release_checks(repo, data['headRefOid'])
     develop = merge_when_clean(repo, data['number'], data['headRefOid'], 'develop', review=True,
                                base_tip=started_from)
     print(f"Merged data pull request #{data['number']} into develop at {develop[:7]}.")

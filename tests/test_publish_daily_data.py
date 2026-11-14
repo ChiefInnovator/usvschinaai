@@ -24,7 +24,7 @@ class FakeGitHub:
                                                    'data/ai_fill_history.jsonl', 'social/2026-11-10-1-x.png',
                                                    'social/plan.json', 'og-image.png', 'sitemap.xml', 'llms.txt'])
         self.options.update(options)
-        self.merged, self.created, self.views, self.asked, self.deleted = [], [], 0, [], []
+        self.merged, self.created, self.views, self.asked, self.deleted, self.released = [], [], 0, [], [], []
 
     def pull(self, number):
         if number == 7:
@@ -58,8 +58,18 @@ class FakeGitHub:
             self.deleted.append(args[3])
             return 0, ''
         if args[0] == 'api' and '/compare/' in args[1]:
-            return 0, json.dumps({'status': self.options.get('fix_status', 'ahead'), 'commits': [
-                {'author': {'login': login}} for login in self.options.get('fix_authors', ['Copilot'])]})
+            # As GitHub reports a Copilot commit: signed and committed by GitHub, with the agent's trailer.
+            copilot = {'committer': {'login': 'web-flow'}, 'commit': {
+                'verification': {'verified': True},
+                'message': 'Fix\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>'}}
+            return 0, json.dumps({'status': self.options.get('fix_status', 'ahead'),
+                                  'commits': self.options.get('fix_commits', [copilot])})
+        if args[0] == 'api' and '/actions/runs?head_sha=' in args[1]:
+            return 0, json.dumps({'workflow_runs': [{'id': 11, 'conclusion': 'action_required'},
+                                                    {'id': 12, 'conclusion': 'success'}]})
+        if args[:2] == ['run', 'rerun']:
+            self.released.append(args[2])
+            return 0, ''
         if args[0] == 'api' and args[1].endswith('/git/ref/heads/develop'):
             self.tips = getattr(self, 'tips', 0) + 1
             moved = self.options.get('develop_moves_after')
@@ -152,11 +162,16 @@ class PublishDailyDataTests(unittest.TestCase):
         code, github, log = self.run_publish(**fixed)
         self.assertEqual((code, github.merged, len(github.asked)), (0, [7, 8], 1))
         self.assertIn('Copilot fixed #7', log)
+        self.assertEqual(github.released, ['11'], 'only the runs held for approval are started')
         # Threads cleared with no commit: the run's own commit is merged.
         code, github, _ = self.run_publish(threads=1, threads_after_fix=0)
-        self.assertEqual((code, github.merged), (0, [7, 8]))
-        for refused, reason in ((dict(fix_authors=['Copilot', 'someone']), 'not Copilot fixes'),
-                                (dict(fix_authors=[]), 'not Copilot fixes'),
+        self.assertEqual((code, github.merged, github.released), (0, [7, 8], []))
+        signed = {'committer': {'login': 'web-flow'}, 'commit': {'verification': {'verified': True}, 'message': 'Edit'}}
+        pushed = {'committer': {'login': 'owner'}, 'commit': {
+            'verification': {'verified': False}, 'message': 'x\n\nCo-authored-by: copilot-swe-agent[bot] <a@b>'}}
+        for refused, reason in ((dict(fix_commits=[signed]), 'not Copilot fixes'),
+                                (dict(fix_commits=[pushed]), 'not Copilot fixes'),
+                                (dict(fix_commits=[]), 'not Copilot fixes'),
                                 (dict(fix_status='diverged'), 'not Copilot fixes'),
                                 (dict(fix_files=['models.json', 'scripts/scoring.py']), 'not generated data'),
                                 (dict(fix_reviewed='d' * 40), 'automatic review did not finish')):

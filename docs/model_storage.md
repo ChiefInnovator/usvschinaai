@@ -87,10 +87,20 @@ regenerates the publication. Its commits are accepted only on top of the run's
 commit and only when they change generated data. The review of that push
 resolves the threads the fix addressed; the step resolves none itself. The
 same checks, review and thread gates then apply to the new commit. A thread
-still open after 45 minutes fails the step as before. This needs the Copilot
-cloud agent enabled for the repository, with workflow runs on its pushes not
-waiting for approval; `.github/workflows/copilot-setup-steps.yml` prepares its
-environment.
+still open after 45 minutes fails the step as before.
+
+A Copilot commit is recognised by how GitHub records it: committed and signed
+by GitHub, with a `Co-authored-by: copilot-swe-agent[bot]` trailer. GitHub
+holds the workflow runs on such a push for approval. The step starts them
+itself, but only after confirming the push is Copilot's and changes nothing
+but generated data, so that approval setting can stay on.
+
+This needs the Copilot cloud agent enabled for the repository.
+`.github/workflows/copilot-setup-steps.yml` prepares its environment. The
+agent's firewall must allow `fonts.googleapis.com` and `fonts.gstatic.com`
+(repository Settings, Copilot, Internet access): the social slides load their
+fonts from there, and a blocked request renders them in fallback fonts without
+failing.
 
 A daily pull request can therefore still be open when
 the next scrape starts. Building that run on develop alone would omit the

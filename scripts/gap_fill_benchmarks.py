@@ -737,6 +737,7 @@ def _format_score(score: Any) -> str:
     return str(score)
 
 
+@preconditions(left='json', right='json')
 def _scores_equal(left: Any, right: Any) -> bool:
     """Compare scores numerically, allowing percent signs and equivalent formatting."""
     def decimal_score(score: Any) -> Optional[Decimal]:

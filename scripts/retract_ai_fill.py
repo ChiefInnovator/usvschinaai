@@ -22,6 +22,24 @@ from datetime import datetime, timezone
 
 import gap_fill_benchmarks as gap_fill
 import model_store
+from ingest_benchmark_findings import record_id
+
+
+@preconditions(record='mapping', model='nonempty', benchmark='nonempty', entry='mapping', source='text')
+def from_fill(record, model, benchmark, entry, source):
+    """Whether this evidence record is the one the cached fill produced.
+
+    The fill is stored under the ID the ingestion derives from its model,
+    component, score and source, and may also have been observed in a retained
+    snapshot. Other evidence for the same model and benchmark is left alone.
+    """
+    if record['model'] != model or record['benchmark'] != benchmark or record.get('source') != source:
+        return False
+    if not gap_fill._scores_equal(record.get('score'), entry['score']):
+        return False
+    stored = record_id({'model': model, 'component': record['component'], 'score': record['score'],
+                        'sourceUrl': source})
+    return record['id'] == stored or record.get('kind') == 'retained-observation'
 
 
 @preconditions(model='nonempty', benchmark='nonempty', reason='nonempty')
@@ -33,11 +51,11 @@ def retract(model, benchmark, reason):
         raise ValueError(f'No cached AI fill for {model!r} on {benchmark!r}')
     score, source = gap_fill._format_score(entry['score']), entry.get('source_url') or ''
     evidence = model_store.load_evidence()
-    kept = [record for record in evidence['results']
-            if not (record['model'] == model and record['benchmark'] == benchmark
-                    and record.get('source') == source
-                    and gap_fill._scores_equal(record.get('score'), entry['score']))]
+    kept = [record for record in evidence['results'] if not from_fill(record, model, benchmark, entry, source)]
     removed = len(evidence['results']) - len(kept)
+    if not removed:
+        # Nothing may claim a retraction while the score is still published.
+        raise ValueError(f'No evidence from the cached fill for {model!r} on {benchmark!r}; nothing was changed')
     evidence['results'] = kept
     model_store.save_evidence(evidence)
     now = datetime.now(timezone.utc).isoformat()
