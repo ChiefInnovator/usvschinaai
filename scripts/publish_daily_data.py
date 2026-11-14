@@ -38,8 +38,8 @@ FIX_TIMEOUT = 45 * 60
 # The account GitHub's automatic review posts as. A substring match would let
 # any account with a similar name satisfy the review gate.
 REVIEWER = 'copilot-pull-request-reviewer[bot]'
-# How a Copilot fix commit is recognised: GitHub commits and signs it on the
-# agent's behalf, authored by the account that asked, with this trailer. Any
+# How a Copilot fix commit is recognised: authored by the account that asked,
+# committed and signed by GitHub on the agent's behalf, with this trailer. Any
 # other commit on the branch after the run's commit needs a person.
 FIXER_TRAILER = 'Co-authored-by: copilot-swe-agent[bot] <'
 # Posted with the write-capable token: Copilot acts only on a comment from an
@@ -145,10 +145,11 @@ def open_threads(repo, pr):
         cursor = threads['pageInfo']['endCursor']
 
 
-@preconditions(commit='mapping')
-def copilot_commit(commit):
+@preconditions(commit='mapping', requester='nonempty')
+def copilot_commit(commit, requester):
     detail = commit.get('commit') or {}
-    return ((commit.get('committer') or {}).get('login') == 'web-flow'
+    return ((commit.get('author') or {}).get('login') == requester
+            and (commit.get('committer') or {}).get('login') == 'web-flow'
             and bool((detail.get('verification') or {}).get('verified'))
             and FIXER_TRAILER in (detail.get('message') or ''))
 
@@ -176,6 +177,9 @@ def copilot_fix(repo, pr, head, timeout):
     that is still open when the time runs out needs a person. The branch may
     only have moved forward from the run's commit, by Copilot's commits alone.
     """
+    # Copilot authors its commits as the account that asked.
+    _, out = gh(['api', 'user'])
+    requester = json.loads(out)['login']
     gh(['pr', 'comment', str(pr), '--repo', repo, '--body', FIX_REQUEST])
     print(f'Review threads are open on #{pr}; asked Copilot to address them.')
     deadline = time.monotonic() + timeout
@@ -188,7 +192,8 @@ def copilot_fix(repo, pr, head, timeout):
         _, out = gh(['api', f'repos/{repo}/compare/{head}...{fixed}'])
         compared = json.loads(out)
         commits = compared.get('commits') or []
-        if compared.get('status') != 'ahead' or not commits or not all(map(copilot_commit, commits)):
+        if compared.get('status') != 'ahead' or not commits or not all(
+                copilot_commit(commit, requester) for commit in commits):
             raise NeedsPerson('the branch gained commits that are not Copilot fixes on top of this run')
         print(f'Copilot fixed #{pr} at {fixed[:7]}.')
     return fixed

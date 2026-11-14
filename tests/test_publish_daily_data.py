@@ -51,6 +51,8 @@ class FakeGitHub:
         if args[0] == 'api' and '/files?' in args[1]:
             files = self.options.get('fix_files') if self.asked else None
             return 0, json.dumps([{'filename': name} for name in files or self.options['files']])
+        if args == ['api', 'user']:
+            return 0, json.dumps({'login': 'owner'})
         if args[:2] == ['pr', 'comment']:
             self.asked.append(args[args.index('--body') + 1])
             return 0, ''
@@ -59,7 +61,7 @@ class FakeGitHub:
             return 0, ''
         if args[0] == 'api' and '/compare/' in args[1]:
             # As GitHub reports a Copilot commit: signed and committed by GitHub, with the agent's trailer.
-            copilot = {'committer': {'login': 'web-flow'}, 'commit': {
+            copilot = {'author': {'login': 'owner'}, 'committer': {'login': 'web-flow'}, 'commit': {
                 'verification': {'verified': True},
                 'message': 'Fix\n\nCo-authored-by: copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>'}}
             return 0, json.dumps({'status': self.options.get('fix_status', 'ahead'),
@@ -166,11 +168,17 @@ class PublishDailyDataTests(unittest.TestCase):
         # Threads cleared with no commit: the run's own commit is merged.
         code, github, _ = self.run_publish(threads=1, threads_after_fix=0)
         self.assertEqual((code, github.merged, github.released), (0, [7, 8], []))
-        signed = {'committer': {'login': 'web-flow'}, 'commit': {'verification': {'verified': True}, 'message': 'Edit'}}
-        pushed = {'committer': {'login': 'owner'}, 'commit': {
-            'verification': {'verified': False}, 'message': 'x\n\nCo-authored-by: copilot-swe-agent[bot] <a@b>'}}
+        trailer = 'x\n\nCo-authored-by: copilot-swe-agent[bot] <a@b>'
+        signed = {'author': {'login': 'owner'}, 'committer': {'login': 'web-flow'},
+                  'commit': {'verification': {'verified': True}, 'message': 'Edit'}}
+        pushed = {'author': {'login': 'owner'}, 'committer': {'login': 'owner'},
+                  'commit': {'verification': {'verified': False}, 'message': trailer}}
+        # A web edit by someone else who added the trailer.
+        other = {'author': {'login': 'someone'}, 'committer': {'login': 'web-flow'},
+                 'commit': {'verification': {'verified': True}, 'message': trailer}}
         for refused, reason in ((dict(fix_commits=[signed]), 'not Copilot fixes'),
                                 (dict(fix_commits=[pushed]), 'not Copilot fixes'),
+                                (dict(fix_commits=[other]), 'not Copilot fixes'),
                                 (dict(fix_commits=[]), 'not Copilot fixes'),
                                 (dict(fix_status='diverged'), 'not Copilot fixes'),
                                 (dict(fix_files=['models.json', 'scripts/scoring.py']), 'not generated data'),

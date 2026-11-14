@@ -31,7 +31,8 @@ def from_fill(record, model, benchmark, entry, source):
 
     The fill is stored under the ID the ingestion derives from its model,
     component, score and source, and may also have been observed in a retained
-    snapshot. Other evidence for the same model and benchmark is left alone.
+    snapshot from the day it was cached. Other evidence for the same model and
+    benchmark, including an earlier observation of the same score, is left alone.
     """
     if record['model'] != model or record['benchmark'] != benchmark or record.get('source') != source:
         return False
@@ -39,7 +40,11 @@ def from_fill(record, model, benchmark, entry, source):
         return False
     stored = record_id({'model': model, 'component': record['component'], 'score': record['score'],
                         'sourceUrl': source})
-    return record['id'] == stored or record.get('kind') == 'retained-observation'
+    if record['id'] == stored:
+        return True
+    # A snapshot can only have observed the fill from the day it was cached.
+    return (record.get('kind') == 'retained-observation'
+            and (record.get('availableFrom') or '') >= (entry.get('cached_at') or '9999')[:10])
 
 
 @preconditions(model='nonempty', benchmark='nonempty', reason='nonempty')

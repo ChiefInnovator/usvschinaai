@@ -19,7 +19,10 @@ class RetractAiFillTests(unittest.TestCase):
             {'id': '4', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 70.0, 'source': URL},
             # The same fill as later observed in a retained snapshot.
             {'id': '5', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 77.0, 'source': URL,
-             'kind': 'retained-observation'}]}
+             'kind': 'retained-observation', 'availableFrom': '2026-11-12'},
+            # The same score observed before the fill existed is not the fill's.
+            {'id': '6', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 77.0, 'source': URL,
+             'kind': 'retained-observation', 'availableFrom': '2026-11-01'}]}
         self.saved, self.audit = saved, audit = {}, []
         with patch.object(retract.gap_fill, 'load_cache', lambda: cache), \
              patch.object(retract.gap_fill, 'save_cache', saved.update), \
@@ -30,10 +33,10 @@ class RetractAiFillTests(unittest.TestCase):
         return removed, saved, audit
 
     def test_only_the_cited_evidence_is_removed_and_the_answer_is_remembered(self):
-        removed, saved, audit = self.run_retract({'M': {'GPQA': {'score': '77.0%', 'source_url': URL,
-                                                                 'llm_model': 'stub'}}})
+        removed, saved, audit = self.run_retract({'M': {'GPQA': {'score': '77.0%', 'source_url': URL, 'llm_model': 'stub',
+                                                                 'cached_at': '2026-11-11T03:29:41+00:00'}}})
         self.assertEqual(removed, 2)
-        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['2', '3', '4'])
+        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['2', '3', '4', '6'])
         entry = saved['M']['GPQA']
         self.assertIsNone(entry['score'])
         self.assertEqual(entry['rejected'], {'score': '77.0%', 'source_url': URL,
@@ -47,9 +50,10 @@ class RetractAiFillTests(unittest.TestCase):
 
     def test_evidence_not_stored_under_the_fills_id_is_kept(self):
         # Same model, benchmark, score and source, but another record: not the fill's.
-        removed, saved, _ = self.run_retract({'M': {'GPQA': {'score': '77.0%', 'source_url': URL}}}, fill_id='other')
+        removed, saved, _ = self.run_retract({'M': {'GPQA': {'score': '77.0%', 'source_url': URL,
+                                                               'cached_at': '2026-11-11T03:29:41+00:00'}}}, fill_id='other')
         self.assertEqual(removed, 1)
-        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['other', '2', '3', '4'])
+        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['other', '2', '3', '4', '6'])
 
     def test_nothing_changes_when_no_evidence_came_from_the_fill(self):
         with self.assertRaises(ValueError):
