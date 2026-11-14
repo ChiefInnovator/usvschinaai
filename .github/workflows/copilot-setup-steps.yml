@@ -1,0 +1,45 @@
+name: Copilot Setup Steps
+
+# Prepares the environment the Copilot cloud agent works in, so it can
+# regenerate and verify the publication when it fixes a review finding.
+# Takes effect only from the default branch.
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - .github/workflows/copilot-setup-steps.yml
+
+jobs:
+  # The agent looks for a job with exactly this name.
+  copilot-setup-steps:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: 'pip'
+          cache-dependency-path: 'scripts/requirements.txt'
+
+      - name: Set up frontend build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install --upgrade -r scripts/requirements.txt
+
+      - name: Build pinned local frontend assets
+        run: |
+          npm ci --ignore-scripts --no-audit --no-fund
+          npm run build:assets
+
+      - name: Install Playwright browser
+        run: python -m playwright install --with-deps chromium
