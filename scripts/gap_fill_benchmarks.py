@@ -312,7 +312,9 @@ _SYSTEM_PROMPT = (
     "and other vendors' comparative release tables. Follow citations to the "
     "numeric result. NVIDIA or other evaluator reports may contain original "
     "model baselines: use only the exact original-model column, never a "
-    "quantized derivative's score. Check footnotes for fallback models and "
+    "quantized derivative's score. When the cited page belongs to another "
+    "vendor or another model, begin notes with the exact column or row label "
+    "the value was read from, and never describe it as the page owner's result. Check footnotes for fallback models and "
     "modified datasets. Humanity’s Last Exam is not Agents’ Last Exam. Do not substitute text-only, tool-enabled or revised HLE variants without matching the selected protocol. SWE-bench Verified is not SWE-bench Pro or Lite. Original Toolathlon is not Toolathlon-Verified; "
     "CharXiv-R means reasoning, not descriptive accuracy. If an image-only "
     "table cannot be read reliably, return null. Exhaust these source routes "
@@ -980,6 +982,7 @@ def run_gap_filling_pass(
             if entry is None:
                 print(f"  · {cand.benchmark}: omitted from response; will ask again")
                 continue
+            rejected = (cache.get(cand.model_name, {}).get(cand.benchmark) or {}).get("rejected")
             if entry["score"] is None:
                 print(f"  · {cand.benchmark}: null ({(entry.get('notes') or '')[:60]})")
                 if new_model:
@@ -989,7 +992,17 @@ def run_gap_filling_pass(
                     "score": None,
                     "cached_at": now.isoformat(),
                     "llm_model": model,
+                    **({"rejected": rejected} if rejected else {}),
                 }
+                continue
+
+            # A retracted fill (scripts/retract_ai_fill.py) is not accepted
+            # again from the same source with the same score.
+            if rejected and rejected.get("source_url") == entry.get("source_url") and (
+                    _format_score(rejected.get("score")).rstrip("%").strip()
+                    == _format_score(entry["score"]).rstrip("%").strip()):
+                print(f"  · {cand.benchmark}: previously retracted from this source; not accepted")
+                cache[cand.model_name][cand.benchmark]["cached_at"] = now.isoformat()
                 continue
 
             # Positive result: cache it so the next scrape can skip the call.

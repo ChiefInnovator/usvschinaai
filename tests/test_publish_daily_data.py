@@ -9,7 +9,7 @@ import publish_daily_data as publish
 
 REPO = 'owner/repo'
 BRANCH = 'feature/daily-scrape-1-1'
-HEAD, DEVELOP, MAIN, STARTED = 'a' * 40, 'b' * 40, 'c' * 40, 'f' * 40
+HEAD, DEVELOP, MAIN, STARTED, FIXED = 'a' * 40, 'b' * 40, 'c' * 40, 'f' * 40, '5' * 40
 
 
 class FakeGitHub:
@@ -24,11 +24,13 @@ class FakeGitHub:
                                                    'data/ai_fill_history.jsonl', 'social/2026-11-10-1-x.png',
                                                    'social/plan.json', 'og-image.png', 'sitemap.xml', 'llms.txt'])
         self.options.update(options)
-        self.merged, self.created, self.views = [], [], 0
+        self.merged, self.created, self.views, self.asked, self.deleted = [], [], 0, [], []
 
     def pull(self, number):
         if number == 7:
-            return dict(number=7, state='MERGED' if 7 in self.merged else 'OPEN', headRefOid=self.options['data_head'],
+            head = self.options.get('fix_head') if self.asked else None
+            return dict(number=7, state='MERGED' if 7 in self.merged else 'OPEN',
+                        headRefOid=head or self.options['data_head'],
                         baseRefName=self.options['base'], headRefName=BRANCH, isCrossRepository=False,
                         mergeCommit={'oid': DEVELOP} if 7 in self.merged else None)
         return dict(number=8, state='MERGED' if 8 in self.merged else 'OPEN',
@@ -47,7 +49,17 @@ class FakeGitHub:
             bucket = self.options['data_checks' if args[2] == '7' else 'promotion_checks']
             return 0, json.dumps([{'name': 'test', 'bucket': bucket}, {'name': 'verify_build', 'bucket': 'pass'}])
         if args[0] == 'api' and '/files?' in args[1]:
-            return 0, json.dumps([{'filename': name} for name in self.options['files']])
+            files = self.options.get('fix_files') if self.asked else None
+            return 0, json.dumps([{'filename': name} for name in files or self.options['files']])
+        if args[:2] == ['pr', 'comment']:
+            self.asked.append(args[args.index('--body') + 1])
+            return 0, ''
+        if args[:3] == ['api', '-X', 'DELETE']:
+            self.deleted.append(args[3])
+            return 0, ''
+        if args[0] == 'api' and '/compare/' in args[1]:
+            return 0, json.dumps({'status': self.options.get('fix_status', 'ahead'), 'commits': [
+                {'author': {'login': login}} for login in self.options.get('fix_authors', ['Copilot'])]})
         if args[0] == 'api' and args[1].endswith('/git/ref/heads/develop'):
             self.tips = getattr(self, 'tips', 0) + 1
             moved = self.options.get('develop_moves_after')
@@ -57,6 +69,8 @@ class FakeGitHub:
             return 0, json.dumps({'parents': [{'sha': sha} for sha in self.options['merge_parents']]})
         if args[0] == 'api' and 'graphql' not in args:
             return 0, json.dumps([
+                {'commit_id': self.options.get('fix_reviewed', FIXED), 'user': {'login': self.options['reviewer']},
+                 'state': 'COMMENTED', 'submitted_at': '2026-11-10T04:10:00Z'},
                 {'commit_id': self.options['review_head'], 'user': {'login': self.options['reviewer']},
                  'state': self.options['earlier_state'], 'submitted_at': '2026-11-10T03:40:00Z'},
                 {'commit_id': self.options['review_head'], 'user': {'login': self.options['reviewer']},
@@ -64,7 +78,9 @@ class FakeGitHub:
                 {'commit_id': HEAD, 'user': {'login': 'claude[bot]'}, 'state': 'APPROVED',
                  'submitted_at': '2026-11-10T03:50:00Z'}])
         if args[:2] == ['api', 'graphql']:
-            nodes = [{'isResolved': False}] * self.options['threads'] + [{'isResolved': True}]
+            # Copilot's fix, once asked for, leaves `threads_after_fix` threads open.
+            count = self.options.get('threads_after_fix', self.options['threads']) if self.asked else self.options['threads']
+            nodes = [{'isResolved': False}] * count + [{'isResolved': True}]
             return 0, json.dumps({'data': {'repository': {'pullRequest': {'reviewThreads': {
                 'nodes': nodes, 'pageInfo': {'hasNextPage': False, 'endCursor': None}}}}}})
         if args[:2] == ['pr', 'merge']:
@@ -86,6 +102,7 @@ class PublishDailyDataTests(unittest.TestCase):
         github = FakeGitHub(**options)
         with patch.object(publish, 'gh', github), patch.object(publish.time, 'sleep'), \
              patch.object(publish, 'CHECK_TIMEOUT', 0), patch.object(publish, 'REVIEW_TIMEOUT', 0), \
+             patch.object(publish, 'FIX_TIMEOUT', 0), \
              patch.object(sys, 'argv', ['publish', '--repo', REPO, '--branch', BRANCH, '--head', HEAD,
                                         '--develop', STARTED]), \
              patch('builtins.print') as out:
@@ -97,6 +114,7 @@ class PublishDailyDataTests(unittest.TestCase):
         self.assertEqual((code, github.merged), (0, [7, 8]))
         created = github.created[0]
         self.assertEqual((created[created.index('--base') + 1], created[created.index('--head') + 1]), ('main', 'develop'))
+        self.assertEqual((github.asked, github.deleted), ([], [f'repos/{REPO}/git/refs/heads/{BRANCH}']))
 
     def test_failed_or_pending_checks_leave_the_pull_request_open(self):
         for bucket in ('fail', 'pending', 'cancel'):
@@ -122,10 +140,29 @@ class PublishDailyDataTests(unittest.TestCase):
         code, github, _ = self.run_publish(earlier_state='CHANGES_REQUESTED', review_state='APPROVED')
         self.assertEqual((code, github.merged), (0, [7, 8]))
 
-    def test_open_review_thread_needs_a_person(self):
+    def test_open_review_thread_is_handed_to_copilot_once(self):
+        # Copilot is asked; a thread it leaves open still needs a person.
         code, github, log = self.run_publish(threads=1)
-        self.assertEqual((code, github.merged), (1, []))
-        self.assertIn('review thread is open', log)
+        self.assertEqual((code, github.merged, len(github.asked)), (1, [], 1))
+        self.assertTrue(github.asked[0].startswith('@copilot '))
+        self.assertIn('did not clear the open review threads', log)
+
+    def test_copilot_fix_is_merged_when_it_is_only_data_reviewed_and_clean(self):
+        fixed = dict(threads=2, threads_after_fix=0, fix_head=FIXED, merge_parents=[STARTED, FIXED])
+        code, github, log = self.run_publish(**fixed)
+        self.assertEqual((code, github.merged, len(github.asked)), (0, [7, 8], 1))
+        self.assertIn('Copilot fixed #7', log)
+        # Threads cleared with no commit: the run's own commit is merged.
+        code, github, _ = self.run_publish(threads=1, threads_after_fix=0)
+        self.assertEqual((code, github.merged), (0, [7, 8]))
+        for refused, reason in ((dict(fix_authors=['Copilot', 'someone']), 'not Copilot fixes'),
+                                (dict(fix_authors=[]), 'not Copilot fixes'),
+                                (dict(fix_status='diverged'), 'not Copilot fixes'),
+                                (dict(fix_files=['models.json', 'scripts/scoring.py']), 'not generated data'),
+                                (dict(fix_reviewed='d' * 40), 'automatic review did not finish')):
+            code, github, log = self.run_publish(**fixed, **refused)
+            self.assertEqual((code, github.merged), (1, []), refused)
+            self.assertIn(reason, log)
 
     def test_only_a_daily_data_pull_request_into_develop_is_published(self):
         code, github, _ = self.run_publish(base='main')
@@ -145,7 +182,7 @@ class PublishDailyDataTests(unittest.TestCase):
     def test_pull_request_and_base_are_read_again_just_before_merging(self):
         # Retargeted, closed or pushed to while the checks and review ran.
         for later in (dict(baseRefName='main'), dict(state='CLOSED'), dict(headRefOid='d' * 40)):
-            code, github, log = self.run_publish(stable_views=2, later=later)
+            code, github, log = self.run_publish(stable_views=3, later=later)
             self.assertEqual((code, github.merged), (1, []), later)
             self.assertIn('changed while its checks and review ran', log)
         # develop moved after the first check but before the merge.

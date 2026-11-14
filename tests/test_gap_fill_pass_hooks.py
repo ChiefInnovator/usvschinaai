@@ -150,6 +150,29 @@ class PassHookTests(unittest.TestCase):
         gf.run_gap_filling_pass(self._entries(), max_calls=5)
         self.assertIsNone(saved['M']['GPQA']['score'], "research found nothing; the stale lead is dropped")
 
+    def test_retracted_fill_is_not_accepted_again_from_the_same_source(self):
+        retracted = {'score': '77.0%', 'source_url': 'https://example.com/card', 'reason': 'wrong column'}
+        gf.load_cache = lambda: {'M': {'GPQA': {'score': None, 'cached_at': '2026-01-01T00:00:00+00:00',
+                                                'rejected': dict(retracted)}}}
+        saved, applied = {}, []
+        gf.save_cache = lambda cache: saved.update(cache)
+        saved_apply = gf._apply_fill
+        gf._apply_fill = lambda entries, cand, entry, model: applied.append((cand.benchmark, entry['source_url'])) or True
+        answer = lambda url: lambda parsed, expected: {b: {'benchmark': b, 'score': 77.0, 'source_url': url,
+                                                          'confidence': 'high'} for b in expected if b == 'GPQA'}
+        try:
+            gf.validate_batch_response = answer('https://example.com/card')
+            gf.run_gap_filling_pass([Entry("M", "US", {"HLE": "50%", "GPQA": "—"})], max_calls=5)
+            self.assertEqual(applied, [])
+            self.assertEqual((saved['M']['GPQA']['score'], saved['M']['GPQA']['rejected']), (None, retracted))
+            self.assertNotEqual(saved['M']['GPQA']['cached_at'], '2026-01-01T00:00:00+00:00')
+            # The same score from a different source is new evidence.
+            gf.validate_batch_response = answer('https://example.com/other')
+            gf.run_gap_filling_pass([Entry("M", "US", {"HLE": "50%", "GPQA": "—"})], max_calls=5)
+            self.assertEqual(applied, [('GPQA', 'https://example.com/other')])
+        finally:
+            gf._apply_fill = saved_apply
+
     def test_scraper_cli_budget_defaults_to_ten_and_accepts_zero(self):
         src = (Path(__file__).parent.parent / "scripts" / "scrape_models.py").read_text(encoding="utf-8")
         self.assertIn('getattr(args, "gap_fill_max_calls", 10)', src)
