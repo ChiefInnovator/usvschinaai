@@ -3,7 +3,7 @@
 > Independent comparison of frontier AI models from the United States and China, ranked by capability and cost efficiency.
 
 Website: https://usvschina.ai/
-Updated: 2026-11-10
+Updated: 2026-11-14
 
 ## Pages
 
