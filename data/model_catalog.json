@@ -103613,11 +103613,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "License": "Closed",
           "Country": "🇺🇸",
           "Model": "GPT-5.5 Pro",
           "KnowledgeCutoff": "Dec. 2025",
-          "Multimodal": "Yes"
+          "Multimodal": "Yes",
+          "License": "Closed"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105735,9 +105735,9 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Context": "1.1M",
           "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
+          "Context": "1.1M",
           "KnowledgeCutoff": "May 2026",
           "Multimodal": "Yes"
         }
@@ -119901,6 +119901,22 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-10-16",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "mmmu-pro": {
+          "96f892b499a179df": {
+            "benchmark": "MMMU-Pro",
+            "score": 88.3,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-argon-medium",
+            "availableFrom": "2026-11-14",
+            "retrievedAt": "2026-11-14",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Argon (Medium).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-10-16",
+            "notes": "AA record gemini-4-argon-medium; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
         }
       }

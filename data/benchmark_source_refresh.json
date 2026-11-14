@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-11-13",
+  "retrievedAt": "2026-11-14",
   "modelsChecked": 306,
   "sourcesChecked": 316,
-  "findings": 1868,
-  "accepted": 7,
+  "findings": 1869,
+  "accepted": 1,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -380,31 +380,31 @@
       "status": "ok",
       "findings": 68,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "artificial-analysis": {
       "status": "ok",
-      "findings": 387,
+      "findings": 388,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "charxiv": {
       "status": "ok",
       "findings": 2,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "epoch": {
       "status": "ok",
       "findings": 193,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "llm-stats": {
       "status": "ok",
       "findings": 931,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13",
+      "lastOk": "2026-11-14",
       "pages": 306,
       "failedPages": 0
     },
@@ -412,37 +412,37 @@
       "status": "ok",
       "findings": 42,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "vals:gpqa": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "vals:lcb": {
       "status": "ok",
       "findings": 51,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "vals:mmlu_pro": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "vals:swebench": {
       "status": "ok",
       "findings": 46,
       "since": "2026-11-10",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     },
     "vals:terminal-bench-4": {
       "status": "ok",
       "findings": 50,
       "since": "2026-11-11",
-      "lastOk": "2026-11-13"
+      "lastOk": "2026-11-14"
     }
   }
 }
