@@ -158,7 +158,7 @@ class PassHookTests(unittest.TestCase):
         gf.save_cache = lambda cache: saved.update(cache)
         saved_apply = gf._apply_fill
         gf._apply_fill = lambda entries, cand, entry, model: applied.append((cand.benchmark, entry['source_url'])) or True
-        answer = lambda url: lambda parsed, expected: {b: {'benchmark': b, 'score': 77.0, 'source_url': url,
+        answer = lambda url: lambda parsed, expected: {b: {'benchmark': b, 'score': 77, 'source_url': url,
                                                           'confidence': 'high'} for b in expected if b == 'GPQA'}
         try:
             gf.validate_batch_response = answer('https://example.com/card')

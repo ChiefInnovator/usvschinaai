@@ -34,7 +34,9 @@ def retract(model, benchmark, reason):
     score, source = gap_fill._format_score(entry['score']), entry.get('source_url') or ''
     evidence = model_store.load_evidence()
     kept = [record for record in evidence['results']
-            if not (record['model'] == model and record['benchmark'] == benchmark and record.get('source') == source)]
+            if not (record['model'] == model and record['benchmark'] == benchmark
+                    and record.get('source') == source
+                    and gap_fill._scores_equal(record.get('score'), entry['score']))]
     removed = len(evidence['results']) - len(kept)
     evidence['results'] = kept
     model_store.save_evidence(evidence)

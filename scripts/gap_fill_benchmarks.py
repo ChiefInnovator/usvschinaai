@@ -16,6 +16,7 @@ import re
 import time
 from dataclasses import dataclass
 from datetime import datetime, timezone, timedelta
+from decimal import Decimal, InvalidOperation
 from pathlib import Path
 from typing import Any, Dict, FrozenSet, List, Optional, Tuple
 
@@ -736,6 +737,22 @@ def _format_score(score: Any) -> str:
     return str(score)
 
 
+def _scores_equal(left: Any, right: Any) -> bool:
+    """Compare scores numerically, allowing percent signs and equivalent formatting."""
+    def decimal_score(score: Any) -> Optional[Decimal]:
+        value = _format_score(score).strip()
+        if value.endswith("%"):
+            value = value[:-1].strip()
+        try:
+            parsed = Decimal(value)
+        except InvalidOperation:
+            return None
+        return parsed if parsed.is_finite() else None
+
+    left_score, right_score = decimal_score(left), decimal_score(right)
+    return left_score is not None and left_score == right_score
+
+
 @preconditions(combined_entries='sequence', candidate='candidate', validated='mapping', llm_model='text')
 def _apply_fill(
     combined_entries: List[Any],
@@ -998,9 +1015,8 @@ def run_gap_filling_pass(
 
             # A retracted fill (scripts/retract_ai_fill.py) is not accepted
             # again from the same source with the same score.
-            if rejected and rejected.get("source_url") == entry.get("source_url") and (
-                    _format_score(rejected.get("score")).rstrip("%").strip()
-                    == _format_score(entry["score"]).rstrip("%").strip()):
+            if rejected and rejected.get("source_url") == entry.get("source_url") and _scores_equal(
+                    rejected.get("score"), entry["score"]):
                 print(f"  · {cand.benchmark}: previously retracted from this source; not accepted")
                 cache[cand.model_name][cand.benchmark]["cached_at"] = now.isoformat()
                 continue

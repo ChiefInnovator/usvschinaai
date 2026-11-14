@@ -14,7 +14,8 @@ class RetractAiFillTests(unittest.TestCase):
         evidence = {'results': [
             {'id': '1', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 77.0, 'source': URL},
             {'id': '2', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 70.0, 'source': 'https://example.com/own'},
-            {'id': '3', 'model': 'K', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 77.0, 'source': URL}]}
+            {'id': '3', 'model': 'K', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 77.0, 'source': URL},
+            {'id': '4', 'model': 'M', 'component': 'gpqa', 'benchmark': 'GPQA', 'score': 70.0, 'source': URL}]}
         saved, audit = {}, []
         with patch.object(retract.gap_fill, 'load_cache', lambda: cache), \
              patch.object(retract.gap_fill, 'save_cache', saved.update), \
@@ -28,7 +29,7 @@ class RetractAiFillTests(unittest.TestCase):
         removed, saved, audit = self.run_retract({'M': {'GPQA': {'score': '77.0%', 'source_url': URL,
                                                                  'llm_model': 'stub'}}})
         self.assertEqual(removed, 1)
-        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['2', '3'])
+        self.assertEqual([record['id'] for record in saved['evidence']['results']], ['2', '3', '4'])
         entry = saved['M']['GPQA']
         self.assertIsNone(entry['score'])
         self.assertEqual(entry['rejected'], {'score': '77.0%', 'source_url': URL,
