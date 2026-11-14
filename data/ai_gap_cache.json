@@ -805,6 +805,28 @@
       "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash"
     }
   },
+  "DeepSeek-V4.1-Flash-1017": {
+    "CharXiv-R": {
+      "benchmark": "CharXiv-R",
+      "cached_at": "2026-11-11T03:29:41.731931+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Moonshot's CharXiv reasoning-question result without Python tools; max effort, averaged over four runs. Publication date unknown.",
+      "score": "77.0%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    "OfficeQA Pro": {
+      "benchmark": "OfficeQA Pro",
+      "cached_at": "2026-11-11T03:29:41.731931+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Max effort; Claude Code with the complete PDF corpus rendered as page images without machine-readable text. Publication date unknown.",
+      "score": "62.4%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    }
+  },
   "Ember-1": {
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1177,6 +1199,18 @@
       "cached_at": "2026-10-18T03:36:12.929311+00:00",
       "llm_model": "gpt-5.6-terra",
       "score": null
+    }
+  },
+  "GPT-6 Cyber": {
+    "GPQA Diamond": {
+      "benchmark": "GPQA Diamond",
+      "cached_at": "2026-11-13T03:30:43.418556+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Figure 11: pass@1, no tools; reasoning effort not specified. Publication date: November 5, 2026.",
+      "score": "95.6%",
+      "source_type": "system_card",
+      "source_url": "https://deploymentsafety.openai.com/gpt-6-cyber/gpt-6-cyber.pdf"
     }
   },
   "GPT-6 Luna": {
