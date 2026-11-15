@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-14T03:33:17.968195+00:00",
+  "lastUpdated": "2026-11-15T03:37:35.542790+00:00",
   "items": [
+    {
+      "id": "327cd972f8439aae",
+      "headline": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
+      "url": "https://www.theverge.com/podcast/1032907/helen-toner-openai-cset-ai-safety-policy-interview",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-11-14 15:00:00",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "35c34d039333f896",
+      "headline": "What to know about the Nvidia and Jensen Huang fallout after a momentous week",
+      "url": "https://finance.yahoo.com/technology/article/nvidia-and-jensen-huang-fallout-heres-everything-we-know-after-a-momentous-week-110000323.html",
+      "source": "Yahoo! News",
+      "country": "Both",
+      "publishedAt": "2026-11-14 11:00:00",
+      "relevanceScore": 0.55
+    },
     {
       "id": "dba798a850286a54",
       "headline": "DeepSeek And Moonshot AI Models Appear To Carry Hidden NVIDIA Blackwell Fingerprints In Their Starting Weights,...",
@@ -108,15 +126,6 @@
       "country": "CN",
       "publishedAt": "2026-11-01 11:13:57",
       "relevanceScore": 0.6
-    },
-    {
-      "id": "0223b6c6a01926cf",
-      "headline": "Your electricity bill is skyrocketing — and techbros are to blame",
-      "url": "https://www.alternet.org/alternet-exclusives/ai-data-centers-increasing-electricity-bills/",
-      "source": "Alternet.org",
-      "country": "Both",
-      "publishedAt": "2026-10-31 11:02:41",
-      "relevanceScore": 0.77
     }
   ]
 }

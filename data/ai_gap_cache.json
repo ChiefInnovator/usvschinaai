@@ -742,13 +742,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "DeepSeek V4 Pro 0424, max effort; independent Artificial Analysis evaluation, benchmark-defined tools. Individual result publication date unknown.",
+      "notes": "Column: DeepSeek V4 Pro (Reasoning: Max); the comparative report was submitted August 5, 2026.",
       "score": "76.5%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://llmleaderboard.com/models/deepseek-v4-pro-0424"
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/html/2608.04505"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
@@ -769,6 +769,12 @@
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
       "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Terminal-Bench 4.0": {
+      "benchmark": "Terminal-Bench 4.0",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "llm_model": "gpt-6.1-terra",
       "score": null
     }
@@ -806,6 +812,12 @@
     }
   },
   "DeepSeek-V4.1-Flash-1017": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
       "cached_at": "2026-11-11T03:29:41.731931+00:00",
@@ -816,6 +828,30 @@
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
     },
+    "DeepSWE": {
+      "benchmark": "DeepSWE",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
       "cached_at": "2026-11-11T03:29:41.731931+00:00",
@@ -825,6 +861,18 @@
       "score": "62.4%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Toolathlon": {
+      "benchmark": "Toolathlon",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "Ember-1": {
@@ -858,10 +906,10 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Table 1; effort not reported. The paper describes search, page visits and Python; published October 20, 2026. A higher comparative result could not be verified from its source chart.",
+      "notes": "GLM-5.3 column, Table 1; effort and search configuration not specified. Published October 20, 2026.",
       "score": "76.2%",
       "source_type": "paper",
       "source_url": "https://arxiv.org/html/2610.28578v1"
@@ -894,13 +942,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "confidence": "high",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Table 1; strict prompt-level accuracy over 294 prompts; effort not reported. Published October 20, 2026.",
-      "score": "53.4%",
-      "source_type": "paper",
-      "source_url": "https://arxiv.org/html/2610.28578v1"
+      "notes": "FP8 baseline row for original GLM-5.3, not the NVFP4 derivative; max reasoning effort, SGLang. Publication date unknown.",
+      "score": "65.3%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/GLM-5.3-NVFP4"
     },
     "MMMU-Pro": {
       "benchmark": "MMMU-Pro",
@@ -910,16 +958,22 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Max effort; Claude Code with the complete PDF corpus supplied as page images without machine-readable text. A higher reported score lacked a verifiable full-corpus configuration; publication date unknown.",
-      "score": "58.6%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+      "score": null
     }
   },
   "GLM-5.3-Flash": {
+    "BrowseComp": {
+      "benchmark": "BrowseComp",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GLM-5.3-Flash column, BrowseComp row in NVIDIA’s comparative evaluation; NeMo Gym harness. Reasoning effort and individual result publication date are not specified.",
+      "score": "86.6%",
+      "source_type": "model_card",
+      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+    },
     "DeepSWE": {
       "benchmark": "DeepSWE",
       "cached_at": "2026-09-13T03:32:47.015043+00:00",
@@ -1045,6 +1099,12 @@
     "Terminal-Bench 2.1": {
       "benchmark": "Terminal-Bench 2.1",
       "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Terminal-Bench 4.0": {
+      "benchmark": "Terminal-Bench 4.0",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "llm_model": "gpt-6.1-terra",
       "score": null
     },
@@ -1344,8 +1404,8 @@
   "GPT-6.1 Sol": {
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "BrowseComp": {
@@ -1360,8 +1420,8 @@
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "DeepSWE": {
@@ -1396,20 +1456,20 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMMU-Pro": {
@@ -1424,14 +1484,14 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Terminal-Bench 2.1": {
@@ -1442,8 +1502,8 @@
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-10-25T03:40:24.180784+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -2593,6 +2653,12 @@
       "cached_at": "2026-11-10T21:30:58.533375+00:00",
       "llm_model": "gpt-6.1-terra",
       "score": null
+    },
+    "Terminal-Bench 4.0": {
+      "benchmark": "Terminal-Bench 4.0",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   },
   "Qwen3.8 Max": {
@@ -2610,13 +2676,9 @@
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Reasoning questions without Python; effort not specified. The source also reports 93.5% with Python, a different configuration. Publication date of the individual result is unknown.",
-      "score": "88.4%",
-      "source_type": "vendor_blog",
-      "source_url": "https://www.qwencloud.com/news/qwen-3-8-max"
+      "score": null
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -2638,13 +2700,13 @@
   "Qwen3.8-27B": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Full 1,266-task set; frozen Qwen actor with Codex CLI and trained REMORY memory, GPT-5.6-Sol judge, one run; effort unspecified. Published October 8, 2026.",
+      "notes": "Table 3, Qwen3.8-27B with trained residual memory: full 1,266-question set, Codex CLI harness, one run, GPT-5.6-Sol judge; reasoning effort not specified. The actor weights remain fixed, but the configuration adds a trained memory component. Result publication date not independently verified.",
       "score": "77.0%",
       "source_type": "paper",
-      "source_url": "https://arxiv.org/html/2610.11287v1"
+      "source_url": "https://arxiv.org/abs/2610.11287"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -2721,6 +2783,50 @@
       "score": "79.8%",
       "source_type": "model_card",
       "source_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-P48NVFP4-MoESQ/blob/main/README.md"
+    }
+  },
+  "Seed 2.1 Pro": {
+    "DeepSWE 1.1": {
+      "benchmark": "DeepSWE 1.1",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "FrontierMath — Tiers 1–3 v2": {
+      "benchmark": "FrontierMath — Tiers 1–3 v2",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "IFBench": {
+      "benchmark": "IFBench",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "LiveCodeBench v6": {
+      "benchmark": "LiveCodeBench v6",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "MMLU-Pro": {
+      "benchmark": "MMLU-Pro",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "SWE-bench Verified": {
+      "benchmark": "SWE-bench Verified",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
+    },
+    "Terminal-Bench 4.0": {
+      "benchmark": "Terminal-Bench 4.0",
+      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     }
   }
 }
