@@ -9,6 +9,7 @@ Updated: 2026-11-14
 
 - [Current leaderboard](https://usvschina.ai/): Model rankings and national scores.
 - [Historical archive](https://usvschina.ai/history.html): Dated snapshots recalculated under the current scoring algorithm.
+- [News](https://usvschina.ai/news.html): Latest collected headlines on the US and China AI race, newest first.
 - [Methodology](https://usvschina.ai/about.html): Scoring, evidence selection, pricing, and limitations.
 - [Privacy](https://usvschina.ai/privacy.html)
 - [Terms](https://usvschina.ai/terms.html)
