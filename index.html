@@ -149,7 +149,6 @@
         ::selection { background:#1d4ed8; color:white; }
         .text-slate-400,.text-slate-500,.text-slate-600 { color:#94a3b8; }
         header { margin-bottom:1.5rem!important; } #page-title {font-size:clamp(2rem,5vw,3.5rem);letter-spacing:-.03em;}
-        body>div>nav:first-child {margin-bottom:1.5rem;padding-top:0;padding-bottom:1rem;}
         #scoreboard {gap:1rem;margin-bottom:1.5rem;} .scoreboard-card {padding:1.25rem;border-width:1px;border-radius:16px;box-shadow:none;}
         #scoreboard .text-5xl {font-size:2.5rem;} #scoreboard .mt-6 {margin-top:1rem;}
         .benchmark-row {display:flex;align-items:flex-start;gap:.5rem;}
@@ -176,7 +175,7 @@
           #models-table-body > tr > td:nth-child(3),#models-table-body > tr > td:nth-child(4),#table-header th:nth-child(3),#table-header th:nth-child(4){display:none;}
           #models-table-body > tr > td:nth-child(2) a{font-size:.9rem;flex-wrap:wrap;word-break:break-word;}#models-table-body > tr > td:last-child span{font-size:1.1rem;}
           #models-table-body > tr > td:nth-child(2)>div>div{flex-wrap:wrap;}#leaderboardFlipContainer .overflow-x-auto{overflow:visible;}#leaderboardFlipContainer button{padding:.35rem;}
-          #intelligence-matrix,#last-30-days{padding:1rem;} nav .gap-8{gap:1rem;} .evidence-content table{table-layout:fixed;}.evidence-content th,.evidence-content td{padding:.2rem;word-break:break-word;}
+          #intelligence-matrix,#last-30-days{padding:1rem;} .evidence-content table{table-layout:fixed;}.evidence-content th,.evidence-content td{padding:.2rem;word-break:break-word;}
         }
         @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important;}}
     </style>
@@ -186,18 +185,13 @@
 
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
-        <nav class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
-            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
-                <span class="group-hover:text-blue-400 transition">US</span>
-                <span class="text-slate-400 mx-1 group-hover:text-slate-400 transition">vs</span>
-                <span class="group-hover:text-red-400 transition">CHINA</span>
-                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
-            </a>
-            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
-                <a href="index.html" class="text-white border-b-2 border-blue-500 pb-1">Leaderboard</a>
-                <a href="news.html" class="text-slate-400 hover:text-white transition">News</a>
-                <a href="history.html" class="text-slate-400 hover:text-white transition">Archives</a>
-                <a href="about.html" class="text-slate-400 hover:text-white transition">About</a>
+        <nav aria-label="Main navigation" class="site-nav">
+            <a class="site-brand" href="index.html"><span class="us">US</span> <span class="vs">vs</span> <span class="cn">CHINA</span> AI</a>
+            <div class="site-links">
+                <a href="index.html" aria-current="page">Leaderboard</a>
+                <a href="news.html">News</a>
+                <a href="history.html">Archives</a>
+                <a href="about.html">About</a>
             </div>
         </nav>
 
