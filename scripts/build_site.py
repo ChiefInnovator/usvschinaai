@@ -9,7 +9,7 @@ import subprocess
 from preconditions import preconditions
 
 ROOT = Path(__file__).resolve().parents[1]
-PAGES = ('index.html', 'history.html', 'about.html', 'privacy.html', 'terms.html', '404.html')
+PAGES = ('index.html', 'history.html', 'news.html', 'about.html', 'privacy.html', 'terms.html', '404.html')
 PUBLIC = ('site.webmanifest', 'favicon.svg', 'favicon.ico', 'apple-touch-icon.png',
           'og-image.png', 'ig-image.png', 'inventing-fire-mark.png', 'app-icon-1024.png', 'robots.txt', 'sitemap.xml', 'llms.txt', 'humans.txt',
           'sw.js', 'staticwebapp.config.json', 'news.json')

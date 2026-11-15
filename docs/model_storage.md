@@ -97,10 +97,8 @@ but generated data, so that approval setting can stay on.
 
 This needs the Copilot cloud agent enabled for the repository.
 `.github/workflows/copilot-setup-steps.yml` prepares its environment. The
-agent's firewall must allow `fonts.googleapis.com` and `fonts.gstatic.com`
-(repository Settings, Copilot, Internet access): the social slides load their
-fonts from there, and a blocked request renders them in fallback fonts without
-failing.
+social slides take their fonts from `scripts/social-templates/fonts/`, inlined
+at render time, so the agent's firewall needs no font host.
 
 A daily pull request can therefore still be open when
 the next scrape starts. Building that run on develop alone would omit the
