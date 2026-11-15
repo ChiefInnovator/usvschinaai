@@ -87,8 +87,8 @@
         :focus-visible { outline:3px solid #93c5fd; outline-offset:4px; } ::selection { background:#1e40af; color:white; }
         a { text-underline-offset:4px; } .text-slate-500,.text-slate-600 { color:#94a3b8; }
         .reading-copy { max-width:70ch; margin-inline:auto; } .reading-copy > div { margin-top:3rem; } .reading-copy .grid { display:block; } .reading-copy .grid > div + div { margin-top:1.5rem; }
-        h1 { text-wrap:balance; letter-spacing:-.03em!important; font-size:clamp(2.5rem,7vw,4rem)!important; } nav { flex-wrap:wrap; } footer > div:last-child { flex-wrap:wrap; justify-content:center; }
-        @media(max-width:600px) { nav > div { gap:1rem!important; font-size:.75rem!important; letter-spacing:0!important; } .reading-copy { padding-inline:.25rem; } }
+        h1 { text-wrap:balance; letter-spacing:-.03em!important; font-size:clamp(2.5rem,7vw,4rem)!important; } footer > div:last-child { flex-wrap:wrap; justify-content:center; }
+        @media(max-width:600px) { .reading-copy { padding-inline:.25rem; } }
     </style>
 </head>
 <body class="p-4 md:p-12 min-h-screen flex flex-col">
@@ -96,18 +96,13 @@
 
     <div class="max-w-6xl mx-auto w-full flex-grow">
         <!-- Navigation -->
-        <nav aria-label="Main navigation" class="flex flex-col md:flex-row justify-between items-center py-6 mb-12 border-b border-white/10 gap-4">
-            <a href="index.html" class="text-2xl font-black italic tracking-tighter transition group flex items-center leading-none">
-                <span class="group-hover:text-blue-400 transition">US</span>
-                <span class="text-slate-600 mx-1 group-hover:text-slate-400 transition">vs</span>
-                <span class="group-hover:text-red-400 transition">CHINA</span>
-                <span class="winner-gradient px-2 inline-flex items-center leading-none">AI</span>
-            </a>
-            <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
-                <a href="index.html" class="text-slate-500 hover:text-white transition">Leaderboard</a>
-                <a href="news.html" class="text-slate-500 hover:text-white transition">News</a>
-                <a href="history.html" class="text-slate-500 hover:text-white transition">Archives</a>
-                <a href="about.html" class="text-slate-500 hover:text-white transition">About</a>
+        <nav aria-label="Main navigation" class="site-nav">
+            <a class="site-brand" href="index.html"><span class="us">US</span> <span class="vs">vs</span> <span class="cn">CHINA</span> AI</a>
+            <div class="site-links">
+                <a href="index.html">Leaderboard</a>
+                <a href="news.html">News</a>
+                <a href="history.html">Archives</a>
+                <a href="about.html">About</a>
             </div>
         </nav>
 
