@@ -143,11 +143,6 @@
             font-weight: 600;
         }
 
-        .news-headlines {margin:1rem 0 2rem;}
-        .news-headlines h2 {font-size:1.125rem;font-weight:700;margin-bottom:.5rem;}
-        .news-headlines a {display:block;padding:.75rem 0;color:#e2e8f0;border-bottom:1px solid #334155;}
-        .news-headlines a:hover {color:#fff;text-decoration:underline;}
-        .news-headlines small {display:block;color:#cbd5e1;font-size:.875rem;margin-top:.25rem;}
 
 
         :focus-visible { outline: 2px solid #93c5fd; outline-offset: 4px; }
@@ -157,6 +152,11 @@
         body>div>nav:first-child {margin-bottom:1.5rem;padding-top:0;padding-bottom:1rem;}
         #scoreboard {gap:1rem;margin-bottom:1.5rem;} .scoreboard-card {padding:1.25rem;border-width:1px;border-radius:16px;box-shadow:none;}
         #scoreboard .text-5xl {font-size:2.5rem;} #scoreboard .mt-6 {margin-top:1rem;}
+        .benchmark-row {display:flex;align-items:flex-start;gap:.5rem;}
+        .benchmark-pills {display:flex;flex-wrap:nowrap;gap:.5rem;overflow:hidden;width:0;min-width:0;flex:1 1 0;}
+        .benchmark-pills > span {flex:none;}
+        #benchmarks-section.is-open .benchmark-pills {flex-wrap:wrap;overflow:visible;}
+        #benchmarks-section.is-open .benchmark-chevron {transform:rotate(180deg);}
         .evidence { margin-top:.5rem; font-size:.8rem;color:#cbd5e1;} .evidence summary {cursor:pointer;color:#93c5fd;}
         .evidence-content {overflow-wrap:anywhere;max-width:65ch;} .evidence-content table{width:100%;font-size:.75rem;}
         .evidence-content th,.evidence-content td{padding:.4rem;text-align:left;vertical-align:top;}
@@ -196,6 +196,7 @@
             <div class="flex gap-8 text-sm font-bold uppercase tracking-widest">
                 <a href="index.html" class="text-white border-b-2 border-blue-500 pb-1">Leaderboard</a>
                 <a href="history.html" class="text-slate-400 hover:text-white transition">Archives</a>
+                <a href="news.html" class="text-slate-400 hover:text-white transition">News</a>
                 <a href="about.html" class="text-slate-400 hover:text-white transition">About</a>
             </div>
         </nav>
@@ -326,18 +327,18 @@
                 </div>
                 
                 <!-- Benchmarks Included -->
-                <details id="benchmarks-section" class="p-6">
-                    <summary class="benchmark-summary cursor-pointer rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400">
-                        <span class="flex items-center justify-between gap-3">
-                            <span class="font-bold text-white text-sm md:text-lg">Benchmarks Included</span>
-                            <svg class="benchmark-chevron w-5 h-5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
-                        </span>
-                        <span id="benchmarks-preview" class="benchmark-preview block mt-3 text-sm text-slate-400 truncate" aria-hidden="true">Loading benchmarks…</span>
-                    </summary>
-                    <div id="benchmarks-container" class="flex flex-wrap gap-2 mt-4">
-                        <!-- Loaded from JSON -->
+                <div id="benchmarks-section" class="p-6">
+                    <button id="benchmarks-toggle" type="button" aria-expanded="false" aria-controls="benchmarks-container" class="flex w-full items-center justify-between gap-3 text-left rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-400">
+                        <span class="font-bold text-white text-sm md:text-lg">Benchmarks Included</span>
+                        <svg class="benchmark-chevron w-5 h-5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg>
+                    </button>
+                    <div class="benchmark-row mt-4">
+                        <div id="benchmarks-container" class="benchmark-pills">
+                            <!-- Loaded from JSON -->
+                        </div>
+                        <button id="benchmarks-more" type="button" hidden class="px-3 py-1.5 rounded-lg text-xs text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10 shrink-0"></button>
                     </div>
-                </details>
+                </div>
         </div>
 
             <!-- Share Buttons -->
@@ -364,7 +365,6 @@
                 </button>
             </div>
 <p id="share-status" role="status"></p><input id="share-link-fallback" aria-label="Copy this leaderboard link" readonly hidden>
-<div id="newsHeadlines" class="hidden mb-4" aria-label="Latest AI news headlines"></div>
         <!-- Intelligence vs Value Matrix -->
         <div id="intelligence-matrix" class="glass rounded-3xl p-8 mb-12 border border-white/5">
             <h3 class="text-2xl font-bold mb-2 flex items-center gap-2">
@@ -491,9 +491,10 @@
         <div>
             <p>&copy; 2026 US vs CHINA AI. All rights reserved.</p>
         </div>
-        <div class="flex gap-4">
+        <div class="flex flex-wrap justify-center gap-4">
             <a href="index.html" class="hover:text-white transition">Leaderboard</a>
             <a href="history.html" class="hover:text-white transition">Archives</a>
+            <a href="news.html" class="hover:text-white transition">News</a>
             <a href="about.html" class="hover:text-white transition">About</a>
             <a href="privacy.html" class="hover:text-white transition">Privacy</a>
             <a href="terms.html" class="hover:text-white transition">Terms</a>
@@ -825,17 +826,49 @@
             const benchmarksContainer = document.getElementById('benchmarks-container');
             if (benchmarksContainer) {
                 const included = siteSummary?.benchmarks.map(b => b.name) || benchmarkList;
-                const preview = document.getElementById('benchmarks-preview');
-                preview.textContent = included.join(' · ');
-                preview.title = included.join(' · ');
                 benchmarksContainer.innerHTML = included.map(b => {
                     const colorClass = getBenchmarkColor(b);
-                    return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200">${b}</span>`;
+                    return `<span class="px-3 py-1.5 ${colorClass} rounded-lg text-xs text-slate-200 whitespace-nowrap">${b}</span>`;
                 }).join('');
+                countHiddenBenchmarks();
             }
 
             injectStructuredData();
         }
+
+        // Collapsed, the pills stay on one line and the last pill says how many are cut off.
+        function countHiddenBenchmarks() {
+            AppContract.check("countHiddenBenchmarks", arguments, []);
+            const section = document.getElementById('benchmarks-section');
+            const pills = document.getElementById('benchmarks-container');
+            const more = document.getElementById('benchmarks-more');
+            if (!section || !pills || !more) return;
+            const open = section.classList.contains('is-open');
+            more.hidden = false;
+            more.textContent = '+0 more';
+            const edge = pills.getBoundingClientRect().right;
+            let hidden = 0;
+            for (const pill of pills.children) {
+                // A pill that does not fit whole is counted, not shown cut in half.
+                const cut = !open && pill.getBoundingClientRect().right > edge + 1;
+                pill.style.visibility = cut ? 'hidden' : '';
+                hidden += cut;
+            }
+            more.hidden = !hidden;
+            more.textContent = `+${hidden} more`;
+            more.setAttribute('aria-label', `Show ${hidden} more benchmarks`);
+        }
+
+        function toggleBenchmarks() {
+            AppContract.check("toggleBenchmarks", arguments, []);
+            const section = document.getElementById('benchmarks-section');
+            const open = section.classList.toggle('is-open');
+            document.getElementById('benchmarks-toggle').setAttribute('aria-expanded', String(open));
+            countHiddenBenchmarks();
+        }
+        document.getElementById('benchmarks-toggle').onclick = () => toggleBenchmarks();
+        document.getElementById('benchmarks-more').onclick = () => toggleBenchmarks();
+        window.addEventListener('resize', () => countHiddenBenchmarks());
 
         function injectStructuredData() {
             AppContract.check("injectStructuredData", arguments, []);
@@ -1446,86 +1479,5 @@
         });
     </script>
 
-    <!-- News Marquee Script -->
-    <script>
-    (function() {
-        function timeAgo(dateStr) {
-            AppContract.check("timeAgo", arguments, ["?json"]);
-            if (!dateStr) return '';
-            try {
-                var date = new Date(dateStr);
-                var now = new Date();
-                var diffMs = now - date;
-                var diffMin = Math.floor(diffMs / 60000);
-                if (diffMin < 1) return 'just now';
-                if (diffMin < 60) return diffMin + 'm ago';
-                var diffHr = Math.floor(diffMin / 60);
-                if (diffHr < 24) return diffHr + 'h ago';
-                var diffDay = Math.floor(diffHr / 24);
-                if (diffDay < 7) return diffDay + 'd ago';
-                return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-            } catch (e) {
-                return '';
-            }
-        }
-
-        function getCountryFlag(country) {
-            AppContract.check("getCountryFlag", arguments, ["?json"]);
-            if (country === 'CN') return '\u{1F1E8}\u{1F1F3}';
-            if (country === 'US') return '\u{1F1FA}\u{1F1F8}';
-            return '\u{1F30D}';
-        }
-
-        function escapeHtml(str) {
-            AppContract.check("escapeHtml", arguments, ["?json"]);
-            var div = document.createElement('div');
-            div.appendChild(document.createTextNode(str));
-            return div.innerHTML;
-        }
-
-        async function loadNewsHeadlines() {
-            AppContract.check("loadNewsHeadlines", arguments, []);
-            var container = document.getElementById('newsHeadlines');
-            if (!container) return;
-
-            try {
-                var response = await fetch('news.json');
-                if (!response.ok) return;
-                var data = await response.json();
-                var items = data && Array.isArray(data.items) ? data.items : [];
-                if (items.length === 0) return;
-
-                // Newest first; relevance only breaks ties. Sorting by relevance alone
-                // kept week-old headlines ahead of today's.
-                items.sort(function(a, b) {
-                    var newer = (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0);
-                    return newer || (b.relevanceScore || 0) - (a.relevanceScore || 0);
-                });
-                var links = items.map(function(item) {
-                    try {
-                        var url = new URL(item.url);
-                        if (!['http:', 'https:'].includes(url.protocol)) return '';
-                        var time = timeAgo(item.publishedAt);
-                        return '<li><a href="' + escapeHtml(url.href) + '" target="_blank" rel="noopener noreferrer">' +
-                            escapeHtml(item.headline) + '<small>' + escapeHtml(item.source) +
-                            (time ? ' · ' + escapeHtml(time) : '') + '</small></a></li>';
-                    } catch { return ''; }
-                }).join('');
-                container.innerHTML = '<section class="news-headlines" aria-labelledby="news-heading">' +
-                    '<h2 id="news-heading">Latest collected AI news</h2><ul>' + links + '</ul></section>';
-
-                container.classList.remove('hidden');
-            } catch (e) {
-                console.log('News headlines: could not load news.json', e);
-            }
-        }
-
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', loadNewsHeadlines);
-        } else {
-            loadNewsHeadlines();
-        }
-    })();
-    </script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "scoringRevision": "2710dae784a0e5e0ffbeb192e2dc6e215831a1b03696d382df80718527ec75fb",
+  "scoringRevision": "bbab35b41bf3f30f6e28d3ac2c17e46091ada4d1b4c14175f9e2257d972791f8",
   "sources": {
     "data/core_benchmarks.json": "77da5b02e0e542e34bb1f65ac0562402dc0cb35c188cf6de66860b1d50de2a17",
     "scripts/ai_models.py": "65da7a0a2085deddeb22b225b424a3e32ceb691fe1a3b1adfe170a6919ae51ac",
@@ -21,7 +21,7 @@
     "scripts/social_caption.py": "e088ab76caace3812588772513e84442589c02802a4c9ef0b83eed8bd83435ae",
     "scripts/social_formats.py": "607465048930aa6c8fe933cc0f54a2273c88d59dec03e3bc9873138e06a92f70",
     "scripts/social_publish.py": "7557baaa5d797993bd30f182dbcedc94de12c76e13554653338355da30ee49d6",
-    "scripts/social_render.py": "8463ea2a6e518a27ee9db2f98556864000476842c50b75626005b52f24c589c9",
+    "scripts/social_render.py": "395301f7825aa1124e224cfd4797ae5b3c3efde7bfd3fddc1349f50ec67afbc5",
     "scripts/validate_models.py": "2a32f9666f31db3cc8e13f2eba0f97bea5d19a431a0cdb001475d92007dd3bd9"
   }
 }

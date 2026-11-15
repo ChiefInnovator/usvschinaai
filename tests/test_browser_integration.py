@@ -33,7 +33,7 @@ class BrowserIntegrationTests(unittest.TestCase):
         cls.temp=tempfile.TemporaryDirectory();cls.root=Path(cls.temp.name)
         cls.addClassCleanup(cls.temp.cleanup)
         shutil.copyfile(ROOT/'inventing-fire-mark.png',cls.root/'inventing-fire-mark.png')
-        for name in ('index.html','history.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js','js/site-data.js'):
+        for name in ('index.html','history.html','news.html','about.html','privacy.html','terms.html','js/model-store.js','js/preconditions.js','js/site-data.js'):
             dest=cls.root/name;dest.parent.mkdir(parents=True,exist_ok=True)
             content=(ROOT/name).read_text()
             if name.endswith('.html'):
@@ -158,7 +158,7 @@ class BrowserIntegrationTests(unittest.TestCase):
                 self.assertEqual(point['y'],sum(score for score,c in ranked if c==country))
         rendered=self.page.evaluate('''() => {const c=Chart.getChart('trendChart');return c.data.datasets.map((d,i)=>c.getDatasetMeta(i).data.every(p=>Number.isFinite(p.x)&&Number.isFinite(p.y)));}''')
         self.assertEqual(rendered,[True,True]);self.assertGreater(len(self.page.locator('#trendChart').screenshot()),5000)
-        self.assertEqual(self.page.locator('#benchmarks-section').get_attribute('open'),None)
+        self.assertEqual(self.page.locator('#benchmarks-toggle').get_attribute('aria-expanded'),'false')
         self.page.get_by_text('Explore sections', exact=True).click()
         self.assertTrue(self.page.get_by_role('navigation',name='Page sections').get_by_role('link',name='Leaderboard').is_visible())
         self.assertTrue(self.page.locator('#matrixChart').is_visible());self.assertFalse(self.errors)
@@ -172,10 +172,20 @@ class BrowserIntegrationTests(unittest.TestCase):
         benchmarks=json.loads(self.valid['data/site_summary.json'])['benchmarks']
         self.assertTrue(any(b['weight'] > 0 for b in benchmarks))
         names=[b['name'] for b in benchmarks]
-        preview=self.page.locator('#benchmarks-preview')
-        self.assertEqual(preview.text_content(),' · '.join(names))
-        self.assertEqual(preview.get_attribute('title'),' · '.join(names))
-        self.assertEqual(self.page.locator('#benchmarks-container > span').all_text_contents(),names)
+        pills=self.page.locator('#benchmarks-container > span')
+        self.assertEqual(pills.all_text_contents(),names)
+        self.assertEqual(self.page.locator('#benchmarks-preview').count(),0)
+        # Collapsed: one line of pills, and the last pill counts the ones cut off.
+        tops=lambda: len(set(self.page.evaluate("[...document.querySelectorAll('#benchmarks-container > span')].map(p=>Math.round(p.getBoundingClientRect().top))")))
+        cut=self.page.evaluate("(()=>{const c=document.getElementById('benchmarks-container'),e=c.getBoundingClientRect().right;return [...c.children].filter(p=>p.getBoundingClientRect().right>e+1).length})()")
+        more=self.page.locator('#benchmarks-more')
+        self.assertEqual(tops(),1);self.assertGreater(cut,0)
+        self.assertEqual(more.text_content(),f'+{cut} more')
+        more.click()
+        self.assertEqual(self.page.locator('#benchmarks-toggle').get_attribute('aria-expanded'),'true')
+        self.assertGreater(tops(),1);self.assertTrue(more.is_hidden())
+        self.page.locator('#benchmarks-toggle').click()
+        self.assertEqual(tops(),1);self.assertEqual(more.text_content(),f'+{cut} more')
 
     def test_summary_failure_recovers_with_retry(self):
         self.failures['data/site_summary.json']=(503,'{}')
@@ -265,7 +275,7 @@ class BrowserIntegrationTests(unittest.TestCase):
 
     def test_public_page_actions_have_positive_and_negative_precondition_cases(self):
         import re
-        for filename in ('index.html','history.html','about.html','privacy.html','terms.html'):
+        for filename in ('index.html','history.html','news.html','about.html','privacy.html','terms.html'):
             with self.subTest(page=filename):
                 self.page.goto(self.url+'/'+filename)
                 source=(ROOT/filename).read_text()

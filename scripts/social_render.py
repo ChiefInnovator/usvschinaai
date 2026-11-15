@@ -11,11 +11,13 @@ filled from the `facts` dict.
 """
 from preconditions import preconditions
 import argparse
+import base64
 import html
 from model_store import load_data
 from avg_iq_benchmarks import load_config
 import json
 import sys
+import re
 from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List
@@ -67,10 +69,24 @@ def _leader_line(facts: Dict[str, Any]) -> str:
     return f"{who} by {facts['margin']:.0f}"
 
 
+@preconditions()
+def font_faces() -> str:
+    """The bundled font rules with each file inlined.
+
+    Slides are set as page content, which has no base URL to resolve a file
+    against, and rendering must not depend on a font host being reachable.
+    """
+    def inline(match):
+        data = base64.b64encode((TEMPLATES / match.group(1)).read_bytes()).decode('ascii')
+        return f'url(data:font/woff2;base64,{data})'
+    return re.sub(r'url\((fonts/[\w.-]+)\)', inline, (TEMPLATES / '_fonts.css').read_text())
+
+
 @preconditions(fmt='text', palette='text', facts='mapping', charts='?mapping')
 def fill(fmt: str, palette: str, facts: Dict[str, Any], charts: Dict[str, Any] = None) -> str:
     tpl = (TEMPLATES / f"{TEMPLATE_FOR[fmt]}.html").read_text()
     base = (TEMPLATES / "_base.css").read_text()
+    base = base.replace("{{font_faces}}", font_faces())
     for k, v in PALETTES[palette].items():
         base = base.replace("{{" + k + "}}", v)
     vals: Dict[str, str] = {"base_css": base, "date_long": e(_date_long(facts)), "leader_line": e(_leader_line(facts))}

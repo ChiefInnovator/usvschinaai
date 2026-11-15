@@ -1027,6 +1027,7 @@ def prepend_history(models_path: Path, new_entry: Dict[str, Any]):
 _DAILY_SITEMAP_URLS = {
     "https://usvschina.ai/",
     "https://usvschina.ai/history.html",
+    "https://usvschina.ai/news.html",
 }
 
 
@@ -1655,7 +1656,7 @@ def run_scraper(args):
                     update_index_meta_description(workspace_dir / "index.html", run_date=run_date)
                     update_page_years(
                         [workspace_dir / p for p in
-                         ("index.html", "history.html", "about.html", "privacy.html", "terms.html")],
+                         ("index.html", "history.html", "news.html", "about.html", "privacy.html", "terms.html")],
                         run_date=run_date,
                     )
                 except Exception as meta_err:

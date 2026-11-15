@@ -18,7 +18,7 @@ class SearchDiscoveryTests(unittest.TestCase):
         entries = ET.parse(ROOT / 'sitemap.xml').findall('s:url', ns)
         urls = [entry.findtext('s:loc', namespaces=ns) for entry in entries]
         expected = []
-        for name in ('index.html', 'history.html', 'about.html', 'privacy.html', 'terms.html'):
+        for name in ('index.html', 'history.html', 'news.html', 'about.html', 'privacy.html', 'terms.html'):
             html = (ROOT / name).read_text()
             expected.append(re.search(r'rel="canonical" href="([^"]+)"', html).group(1))
             self.assertNotIn('noindex', html)
@@ -46,7 +46,7 @@ class SearchDiscoveryTests(unittest.TestCase):
             ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
             for before, after in zip(original.findall('s:url', ns), ET.parse(sitemap).findall('s:url', ns)):
                 url = after.findtext('s:loc', namespaces=ns)
-                expected = '2027-01-02' if url in ('https://usvschina.ai/', 'https://usvschina.ai/history.html') else before.findtext('s:lastmod', namespaces=ns)
+                expected = '2027-01-02' if url in ('https://usvschina.ai/', 'https://usvschina.ai/history.html', 'https://usvschina.ai/news.html') else before.findtext('s:lastmod', namespaces=ns)
                 self.assertEqual(after.findtext('s:lastmod', namespaces=ns), expected)
             self.assertFalse(update_sitemap_lastmod(sitemap, '2026-01-01'))
             llms = Path(tmp) / 'llms.txt'
