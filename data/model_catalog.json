@@ -69851,6 +69851,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "3eb8d6f4120cae0ca386": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "15c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "20.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -103685,11 +103704,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes",
+          "License": "Closed",
           "Country": "🇺🇸",
           "Model": "GPT-5.5 Pro",
-          "Multimodal": "Yes",
-          "License": "Closed"
+          "KnowledgeCutoff": "Dec. 2025"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105807,11 +105826,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes",
+          "Context": "1.1M",
           "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
-          "Context": "1.1M",
-          "Multimodal": "Yes"
+          "KnowledgeCutoff": "May 2026"
         }
       },
       "benchmarks": {
@@ -122419,6 +122438,25 @@
           "description": "Claude Fable 5.2 by Anthropic — released Nov 9, 2026; $8.00/M input, $0.200/M cached input, $40.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-11-09",
           "Model": "Claude Fable 5.2\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "40",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "8"
+        },
+        "b0fbbda9dfdb63655314": {
+          "model": "Claude Fable 5.2",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-2",
+          "origin": "US",
+          "description": "Claude Fable 5.2 by Anthropic — released Nov 9, 2026; $8.00/M input, $0.200/M cached input, $40.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-09",
+          "Model": "Claude Fable 5.2",
           "Country": "🇺🇸",
           "Context": "1M",
           "Output$/M": "40",

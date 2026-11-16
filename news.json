@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-15T03:37:35.542790+00:00",
+  "lastUpdated": "2026-11-16T03:37:58.926020+00:00",
   "items": [
     {
       "id": "327cd972f8439aae",
@@ -116,15 +116,6 @@
       "source": "Gizmodo",
       "country": "US",
       "publishedAt": "2026-11-03 18:15:34",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "77ea26cc84c3135d",
-      "headline": "DeepSeek Super-Agent takes coding work from GitHub and team chats",
-      "url": "https://www.bundle.app/en/technology/deepseek-super-agent-takes-coding-work-from-github-and-team-chats-7B7EF140-4593-569A-838D-03FDD8BC3990",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-11-01 11:13:57",
       "relevanceScore": 0.6
     }
   ]
