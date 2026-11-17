@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-11-16T03:37:58.926020+00:00",
+  "lastUpdated": "2026-11-17T03:37:11.037224+00:00",
   "items": [
+    {
+      "id": "c3ed44104c1da714",
+      "headline": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
+      "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+      "source": "Tech Crunch",
+      "country": "CN",
+      "publishedAt": "2026-11-16 15:02:34",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "10b57055e490efa5",
+      "headline": "US Stock Market Today: Nasdaq Futures Slide as Nvidia Leads AI Stock Selloff Ahead of Earnings",
+      "url": "https://www.analyticsinsight.net/stocks/us-stock-market-today-nasdaq-futures-slide-as-nvidia-leads-ai-stock-selloff-ahead-of-earnings",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-11-16 15:00:00",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "eff502b96aca19aa",
+      "headline": "Jensen Huang Was Accomplice, Not Dupe As China Got $12 Billion In Nvidia Chips",
+      "url": "http://www.thelowdownblog.com/2026/11/jensen-huang-was-accomplice-not-dupe-as.html",
+      "source": "The Lowdown Blog",
+      "country": "CN",
+      "publishedAt": "2026-11-16 14:10:46",
+      "relevanceScore": 0.32
+    },
     {
       "id": "327cd972f8439aae",
       "headline": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",

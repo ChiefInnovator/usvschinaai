@@ -69870,6 +69870,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "43e3110b45829e182ca3": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "17c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "17.0s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -103704,10 +103723,10 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "Multimodal": "Yes",
-          "License": "Closed",
           "Country": "🇺🇸",
+          "License": "Closed",
           "Model": "GPT-5.5 Pro",
+          "Multimodal": "Yes",
           "KnowledgeCutoff": "Dec. 2025"
         },
         "ac70abc4f31af4e7aedb": {
@@ -105826,10 +105845,10 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Multimodal": "Yes",
           "Context": "1.1M",
           "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
+          "Multimodal": "Yes",
           "KnowledgeCutoff": "May 2026"
         }
       },
@@ -119810,6 +119829,25 @@
           "Multimodal": "Yes",
           "Context": "1.0M",
           "Country": "🇺🇸"
+        },
+        "99b99a43627696578d62": {
+          "model": "Gemini 4 Argon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-argon",
+          "origin": "US",
+          "description": "Gemini 4 Argon by Google — released Sep 30, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-30",
+          "Model": "Gemini 4 Argon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "30c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "28.2s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -122312,6 +122350,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "26fcae16abc02d9b8967": {
+          "model": "Gemini 4 Carbon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-carbon",
+          "origin": "US",
+          "description": "Gemini 4 Carbon by Google — released Oct 28, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-10-28",
+          "Model": "Gemini 4 Carbon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "28.2s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -123364,6 +123421,190 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-11-15",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "7d01efeccc3ecc9c931c": {
+      "name": "Gemini 4 Hydrogen",
+      "profiles": {},
+      "benchmarks": {
+        "terminal-bench-4.0": {
+          "812b842e22a08671": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 54.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-hydrogen-high",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Hydrogen (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "AA record gemini-4-hydrogen-high; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "765d51562418906c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 54.0,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-4-hydrogen; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "agents-last-exam": {
+          "6b2c9a987e4eac7d": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 71.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-4-hydrogen",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        }
+      }
+    },
+    "e9b6998ab575f10a29d1": {
+      "name": "Qwen4-Max",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "69acf51fc463083e": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 46.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "deepswe-1.1": {
+          "edac6ee57aeadf51": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 75.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c4f09f1f8957cd75": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 48.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          },
+          "b66b7878f154767d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 48.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID alibaba/qwen4-max; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "humanitys-last-exam": {
+          "d9f0e6625d18c59a": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 51.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        }
+      }
+    },
+    "9a7f6e62bc4092b328ea": {
+      "name": "Hy4 flash",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "7a3d97f9677a4d07": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 64.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "0f66abcb5b731063": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "mmmu-pro": {
+          "00a7714d2b8e5a76": {
+            "benchmark": "MMMU-Pro",
+            "score": 75.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
           }
         }
       }
