@@ -38938,6 +38938,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "8f277d59db97903afe8a": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "21c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "10.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -69886,6 +69905,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "17.0s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "e59f22b3c3868f49a152": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "24c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "15.4s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -103723,11 +103761,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "Country": "🇺🇸",
           "License": "Closed",
-          "Model": "GPT-5.5 Pro",
+          "Country": "🇺🇸",
+          "KnowledgeCutoff": "Dec. 2025",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "Dec. 2025"
+          "Model": "GPT-5.5 Pro"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105847,9 +105885,9 @@
           "Output$/M": "0.5",
           "Context": "1.1M",
           "Country": "🇺🇸",
-          "Model": "GPT-6 Luna",
+          "KnowledgeCutoff": "May 2026",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "May 2026"
+          "Model": "GPT-6 Luna"
         }
       },
       "benchmarks": {
@@ -123590,6 +123628,20 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-17"
+          },
+          "47140897534df515": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 15.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-18",
+            "retrievedAt": "2026-11-18",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID tencent/hy4-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-18",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
           }
         },
         "mmmu-pro": {

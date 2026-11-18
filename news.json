@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-17T03:37:11.037224+00:00",
+  "lastUpdated": "2026-11-18T03:36:19.270606+00:00",
   "items": [
+    {
+      "id": "9d950d85c42a195f",
+      "headline": "AI Is Giving Optical Computing Another Shot",
+      "url": "https://spectrum.ieee.org/optical-computing-ai",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-11-17 14:00:03",
+      "relevanceScore": 0.7
+    },
     {
       "id": "c3ed44104c1da714",
       "headline": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
@@ -126,24 +135,6 @@
       "country": "Both",
       "publishedAt": "2026-11-06 13:27:43",
       "relevanceScore": 0.54
-    },
-    {
-      "id": "22533435f8f4d466",
-      "headline": "NVIDIA Rises 3% Despite AI CEO’s Warning on Chinese Chip Competition; AMD Climbs 5%, Broadcom Gains 3%",
-      "url": "https://247wallst.com/investing/2026/11/03/nvidia-rises-3-despite-ai-ceos-warning-on-chinese-chip-competition-amd-climbs-5-broadcom-gains-3/",
-      "source": "24/7 Wall St",
-      "country": "CN",
-      "publishedAt": "2026-11-03 18:48:52",
-      "relevanceScore": 0.4
-    },
-    {
-      "id": "c79071bf0393f882",
-      "headline": "OpenAI Hires DOGE Alumni Who Hacked Into Anthropic to Strengthen Security",
-      "url": "https://gizmodo.com/openai-hires-doge-alumni-who-hacked-into-anthropic-to-strengthen-security-2000834432",
-      "source": "Gizmodo",
-      "country": "US",
-      "publishedAt": "2026-11-03 18:15:34",
-      "relevanceScore": 0.6
     }
   ]
 }

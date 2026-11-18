@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-11-17",
+  "retrievedAt": "2026-11-18",
   "modelsChecked": 310,
   "sourcesChecked": 320,
-  "findings": 1511,
-  "accepted": 11,
+  "findings": 1505,
+  "accepted": 1,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -355,9 +355,11 @@
     {
       "source": "vals:terminal-bench-4",
       "component": "terminal-bench-4.0",
-      "rows": 65,
-      "matched": 53,
+      "rows": 68,
+      "matched": 54,
       "unmatched": [
+        "openai/gpt-6.2-astra",
+        "openai/gpt-6.2-sol",
         "openai/gpt-6-sol",
         "tencent/hy4",
         "alibaba/qwen3.8-max-internal",
@@ -378,31 +380,31 @@
       "status": "ok",
       "findings": 68,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "artificial-analysis": {
       "status": "ok",
-      "findings": 17,
+      "findings": 10,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "charxiv": {
       "status": "ok",
       "findings": 2,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "epoch": {
       "status": "ok",
       "findings": 193,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "llm-stats": {
       "status": "ok",
       "findings": 941,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17",
+      "lastOk": "2026-11-18",
       "pages": 310,
       "failedPages": 0
     },
@@ -410,37 +412,37 @@
       "status": "ok",
       "findings": 42,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "vals:gpqa": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "vals:lcb": {
       "status": "ok",
       "findings": 51,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "vals:mmlu_pro": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "vals:swebench": {
       "status": "ok",
       "findings": 46,
       "since": "2026-11-10",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     },
     "vals:terminal-bench-4": {
       "status": "ok",
-      "findings": 53,
+      "findings": 54,
       "since": "2026-11-11",
-      "lastOk": "2026-11-17"
+      "lastOk": "2026-11-18"
     }
   }
 }
