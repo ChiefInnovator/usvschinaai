@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "generationId": "305271e1a7ed45f8204a9f7ec3146b5898152b52c3e4e17ce05fa256fba87aa7",
+  "generationId": "a3b4386d34a6c36ebf90f5b9977c04f71fb4b2a19ceaa1246fdb3dbbb4ff727f",
   "scoringRevision": "bbab35b41bf3f30f6e28d3ac2c17e46091ada4d1b4c14175f9e2257d972791f8",
   "artifacts": {
-    "current.json": "ae7296a4da3e51748135f1d95f54fa44ebd8f26470d14cd1cdf8b7a0dc6d4b27",
+    "current.json": "87b59e64a3324b6621897ae84c35e298f280dea3a3d663ee939846fddfc9af8c",
     "data/core_benchmarks.json": "77da5b02e0e542e34bb1f65ac0562402dc0cb35c188cf6de66860b1d50de2a17",
-    "data/historical_benchmark_gaps.json": "c9edc27832868b011167ae2a84a62346a8337aeae6ab43aebe7fb86c9305fb59",
-    "data/model_catalog.json": "520cbe4382022352000c643a18c29e096b456fc0576c4e016d21d333e31c70df",
+    "data/historical_benchmark_gaps.json": "0142f01c1ff71c21375dab7d9874d070230a86c30568eb543a3258a13b1b583b",
+    "data/model_catalog.json": "7d3ff950a51741be7a5e902af0111dd16993f628092ba013c4a1c1e294f3d439",
     "data/scoring_revision.json": "e7306c38d2e00caeeb4d3d63d774011370a4fcd2758970535c18edebd014b1ec",
-    "data/site_summary.json": "7cbb970c30fa1647374e2ccdd7f7984106e40adede9d9f60d30560ee75a9dd51",
+    "data/site_summary.json": "e4e93c7aae8b57ab0028c39ce1ea1064eb8421a9418abe027665ccda156f9b6a",
     "data/social_caption_cache.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
-    "ig-image.png": "9fdcb4e36e4f0c02181b0bbbc617f47607a5b9e7ae208b4ecd256edc332be6bb",
-    "models.json": "f1520d58be1bb421315bc35f350bf12fcf8d65926bffcd769a8944a8eef19a0d",
-    "og-image.png": "60f6eb3c6594c221e4a32242b11ed789ccbd5a0c21453060309432fb0c933358",
-    "social/2026-11-18-1-price_vs_power-newsprint.png": "a85b08dd8417cf1cc891ae6fb22d7d55a82303b6658e6c59cbea9dd33df803ce",
-    "social/2026-11-18-2-leaderboard-newsprint.png": "778103fb65d5488758ba3211383498f28b3690cf4714805cb8933c8addb09778",
-    "social/plan.json": "9f53bc70e18bcf283155e0af8616c1122e4be8f59c66e06a26571e2a2f728118"
+    "ig-image.png": "a9fd9d0e4a4f77b0b74cad9a411e62e3c6a4e53a386c9cca82843f1e19fbafe1",
+    "models.json": "2ec216711c5432c506c8b9c8bbdfe915d3b0124a1dfe6539d632164a1b0b645d",
+    "og-image.png": "208f278c9ed36da98f1d667d793d9f18d8d3e725d3305b1e1481c5c855aeabf4",
+    "social/2026-11-19-1-new_challenger-graphite.png": "66ee7df2e4a7f8a642c0ced687b4edc308d93aab43c2827867d4a569854cdc0a",
+    "social/2026-11-19-2-leaderboard-graphite.png": "88f06894f3910627f50c81b980a96a2dcbd2afcf8844d6eb5723b699014505cc",
+    "social/plan.json": "de8f434ebbc16e99238b5922f80b2551fcf070aece5b8ea9134d81d123cde838"
   }
 }
