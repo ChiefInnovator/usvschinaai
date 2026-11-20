@@ -1544,10 +1544,10 @@
   "GPT-6.2 Sol": {
     "ARC-AGI-2": {
       "benchmark": "ARC-AGI-2",
-      "cached_at": "2026-11-19T03:30:29.707060+00:00",
+      "cached_at": "2026-11-20T03:29:57.619968+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Semi-private evaluation; max, xhigh and high efforts tie; two tasks remain incomplete, with the full dataset denominator used. Result publication date is unverified.",
+      "notes": "Semi-private evaluation; high, xhigh and max efforts tie at the displayed precision. The operator reports partial coverage, with two v1/v2 tasks incomplete and the full dataset denominator used; result publication date unknown.",
       "score": "85.8%",
       "source_type": "official_leaderboard",
       "source_url": "https://arcprize.org/results/openai-gpt-6-2-sol"

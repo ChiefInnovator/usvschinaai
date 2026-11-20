@@ -1,9 +1,9 @@
 {
-  "retrievedAt": "2026-11-19",
-  "modelsChecked": 313,
-  "sourcesChecked": 323,
-  "findings": 1518,
-  "accepted": 14,
+  "retrievedAt": "2026-11-20",
+  "modelsChecked": 314,
+  "sourcesChecked": 324,
+  "findings": 1521,
+  "accepted": 3,
   "failures": [],
   "skippedConfigurations": [],
   "rejected": [],
@@ -379,69 +379,69 @@
       "status": "ok",
       "findings": 68,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "artificial-analysis": {
       "status": "ok",
       "findings": 13,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "charxiv": {
       "status": "ok",
       "findings": 2,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "epoch": {
       "status": "ok",
       "findings": 197,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "llm-stats": {
       "status": "ok",
-      "findings": 945,
+      "findings": 948,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19",
-      "pages": 313,
+      "lastOk": "2026-11-20",
+      "pages": 314,
       "failedPages": 0
     },
     "toolathlon": {
       "status": "ok",
       "findings": 42,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "vals:gpqa": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "vals:lcb": {
       "status": "ok",
       "findings": 51,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "vals:mmlu_pro": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "vals:swebench": {
       "status": "ok",
       "findings": 46,
       "since": "2026-11-10",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     },
     "vals:terminal-bench-4": {
       "status": "ok",
       "findings": 56,
       "since": "2026-11-11",
-      "lastOk": "2026-11-19"
+      "lastOk": "2026-11-20"
     }
   }
 }

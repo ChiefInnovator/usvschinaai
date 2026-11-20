@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-19T03:36:20.587061+00:00",
+  "lastUpdated": "2026-11-20T03:35:33.151829+00:00",
   "items": [
+    {
+      "id": "7e62e7de9e417dfd",
+      "headline": "Anthropic IPO, Nvidia Scandal Confirm AI's Future Is Not China",
+      "url": "http://www.thelowdownblog.com/2026/11/anthropic-ipo-nvidia-scandal-confirm.html",
+      "source": "The Lowdown Blog",
+      "country": "Both",
+      "publishedAt": "2026-11-19 15:19:32",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "5fe24f3bbee7e938",
+      "headline": "China seeks Nvidia chips for AI weapons despite US restrictions, report says",
+      "url": "https://completeaitraining.com/news/china-seeks-nvidia-chips-for-ai-weapons-despite-us/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-11-19 14:01:28",
+      "relevanceScore": 0.32
+    },
     {
       "id": "82d8b6b1f35b6cfc",
       "headline": "Nvidia Halts Shipments of US-Approved AI Chips to China",

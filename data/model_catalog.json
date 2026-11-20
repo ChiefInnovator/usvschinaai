@@ -38976,6 +38976,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "908ae1d8096c1607ba74": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "12c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "7.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -69962,6 +69981,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "14.3s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "3bd6b6f9882eddc6b9e9": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "20c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "10.4s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -103799,11 +103837,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "License": "Closed",
           "Country": "🇺🇸",
+          "Model": "GPT-5.5 Pro",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "Dec. 2025",
-          "Model": "GPT-5.5 Pro"
+          "License": "Closed",
+          "KnowledgeCutoff": "Dec. 2025"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105923,9 +105961,9 @@
           "Output$/M": "0.5",
           "Context": "1.1M",
           "Country": "🇺🇸",
+          "Model": "GPT-6 Luna",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "May 2026",
-          "Model": "GPT-6 Luna"
+          "KnowledgeCutoff": "May 2026"
         }
       },
       "benchmarks": {
@@ -123983,6 +124021,57 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-19"
+          }
+        }
+      }
+    },
+    "df07f3531183a07925ec": {
+      "name": "Aion 1.0 Instruct",
+      "profiles": {},
+      "benchmarks": {
+        "ifbench": {
+          "508177f4e80bb9c0": {
+            "benchmark": "IFBench",
+            "score": 32.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
+          }
+        },
+        "gpqa-diamond": {
+          "772303d295215fd3": {
+            "benchmark": "GPQA Diamond",
+            "score": 28.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
+          }
+        },
+        "mmlu-pro": {
+          "112bdea42fe37fdc": {
+            "benchmark": "MMLU-Pro",
+            "score": 33.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
           }
         }
       }
