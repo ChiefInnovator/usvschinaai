@@ -1,6 +1,105 @@
 {
-  "lastUpdated": "2026-11-15T03:37:35.542790+00:00",
+  "lastUpdated": "2026-11-21T03:34:38.930175+00:00",
   "items": [
+    {
+      "id": "f50934946f4e5a3f",
+      "headline": "Chip supply chain warns of broader disruption from new US export controls",
+      "url": "https://biztoc.com/x/a161b0ca953d3b29",
+      "source": "Biztoc",
+      "country": "Both",
+      "publishedAt": "2026-11-20 15:04:53",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "396dcf3fd83dae97",
+      "headline": "Anthropic IPO triggers AI selloff — washout or deeper unwind?",
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-triggers-ai-selloff--washout-or-deeper-unwind-93CH-5041498",
+      "source": "Investing Us",
+      "country": "US",
+      "publishedAt": "2026-11-20 12:14:49",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "4a923f829b327a76",
+      "headline": "US AI Chip Curbs Hit China Tech Stocks, Push Self-Reliance Drive",
+      "url": "https://www.analyticsinsight.net/news/us-ai-chip-curbs-hit-china-tech-stocks-push-self-reliance-drive",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-11-20 12:00:00",
+      "relevanceScore": 0.23
+    },
+    {
+      "id": "7e62e7de9e417dfd",
+      "headline": "Anthropic IPO, Nvidia Scandal Confirm AI's Future Is Not China",
+      "url": "http://www.thelowdownblog.com/2026/11/anthropic-ipo-nvidia-scandal-confirm.html",
+      "source": "The Lowdown Blog",
+      "country": "Both",
+      "publishedAt": "2026-11-19 15:19:32",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "5fe24f3bbee7e938",
+      "headline": "China seeks Nvidia chips for AI weapons despite US restrictions, report says",
+      "url": "https://completeaitraining.com/news/china-seeks-nvidia-chips-for-ai-weapons-despite-us/",
+      "source": "Complete Ai Training",
+      "country": "Both",
+      "publishedAt": "2026-11-19 14:01:28",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "82d8b6b1f35b6cfc",
+      "headline": "Nvidia Halts Shipments of US-Approved AI Chips to China",
+      "url": "https://www.newser.com/story/400241/nvidia-halts-shipments-of-us-approved-ai-chips-to-china.html",
+      "source": "Newser",
+      "country": "CN",
+      "publishedAt": "2026-11-18 15:30:00",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "363f16318c68ad63",
+      "headline": "Nvidia isn’t selling any more AI chips to China",
+      "url": "https://www.theverge.com/tech/1036445/nvidia-h200-ai-chips-china-stop-selling",
+      "source": "The Verge",
+      "country": "CN",
+      "publishedAt": "2026-11-18 13:01:05",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "9d950d85c42a195f",
+      "headline": "AI Is Giving Optical Computing Another Shot",
+      "url": "https://spectrum.ieee.org/optical-computing-ai",
+      "source": "Ieee Spectrum - Robotics",
+      "country": "Both",
+      "publishedAt": "2026-11-17 14:00:03",
+      "relevanceScore": 0.7
+    },
+    {
+      "id": "c3ed44104c1da714",
+      "headline": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
+      "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
+      "source": "Tech Crunch",
+      "country": "CN",
+      "publishedAt": "2026-11-16 15:02:34",
+      "relevanceScore": 0.24
+    },
+    {
+      "id": "10b57055e490efa5",
+      "headline": "US Stock Market Today: Nasdaq Futures Slide as Nvidia Leads AI Stock Selloff Ahead of Earnings",
+      "url": "https://www.analyticsinsight.net/stocks/us-stock-market-today-nasdaq-futures-slide-as-nvidia-leads-ai-stock-selloff-ahead-of-earnings",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-11-16 15:00:00",
+      "relevanceScore": 0.31
+    },
+    {
+      "id": "eff502b96aca19aa",
+      "headline": "Jensen Huang Was Accomplice, Not Dupe As China Got $12 Billion In Nvidia Chips",
+      "url": "http://www.thelowdownblog.com/2026/11/jensen-huang-was-accomplice-not-dupe-as.html",
+      "source": "The Lowdown Blog",
+      "country": "CN",
+      "publishedAt": "2026-11-16 14:10:46",
+      "relevanceScore": 0.32
+    },
     {
       "id": "327cd972f8439aae",
       "headline": "The OpenAI board member who fired Sam Altman says we still can’t trust AI CEOs",
@@ -81,51 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-11-09 14:47:45",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "424bf68d76affd46",
-      "headline": "What Alibaba left blank about Qwen4",
-      "url": "https://asiatimes.com/2026/11/what-alibaba-left-blank-about-qwen4/",
-      "source": "Asia Times",
-      "country": "CN",
-      "publishedAt": "2026-11-07 05:09:54",
-      "relevanceScore": 0.83
-    },
-    {
-      "id": "e7c07443b561298b",
-      "headline": "Trump official who wants data centers on public lands has tens of millions in AI",
-      "url": "https://www.rawstory.com/doug-bergum/",
-      "source": "Raw Story",
-      "country": "Both",
-      "publishedAt": "2026-11-06 13:27:43",
-      "relevanceScore": 0.54
-    },
-    {
-      "id": "22533435f8f4d466",
-      "headline": "NVIDIA Rises 3% Despite AI CEO’s Warning on Chinese Chip Competition; AMD Climbs 5%, Broadcom Gains 3%",
-      "url": "https://247wallst.com/investing/2026/11/03/nvidia-rises-3-despite-ai-ceos-warning-on-chinese-chip-competition-amd-climbs-5-broadcom-gains-3/",
-      "source": "24/7 Wall St",
-      "country": "CN",
-      "publishedAt": "2026-11-03 18:48:52",
-      "relevanceScore": 0.4
-    },
-    {
-      "id": "c79071bf0393f882",
-      "headline": "OpenAI Hires DOGE Alumni Who Hacked Into Anthropic to Strengthen Security",
-      "url": "https://gizmodo.com/openai-hires-doge-alumni-who-hacked-into-anthropic-to-strengthen-security-2000834432",
-      "source": "Gizmodo",
-      "country": "US",
-      "publishedAt": "2026-11-03 18:15:34",
-      "relevanceScore": 0.6
-    },
-    {
-      "id": "77ea26cc84c3135d",
-      "headline": "DeepSeek Super-Agent takes coding work from GitHub and team chats",
-      "url": "https://www.bundle.app/en/technology/deepseek-super-agent-takes-coding-work-from-github-and-team-chats-7B7EF140-4593-569A-838D-03FDD8BC3990",
-      "source": "Bundle",
-      "country": "CN",
-      "publishedAt": "2026-11-01 11:13:57",
-      "relevanceScore": 0.6
     }
   ]
 }
