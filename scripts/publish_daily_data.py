@@ -11,12 +11,14 @@ this run pushed and may change only generated data files, so a later push to
 the branch, or anything that is not data, is never merged here. The one
 exception is Copilot's own fix: when the automatic review leaves a thread open,
 Copilot is asked once to address it, and commits it adds on top of the run's
-commit are accepted when they too change only generated data. Each merge
-requires that:
+commit are accepted when they too change only generated data. Once Copilot has
+finished, a thread it answered as fixed or as a wrong finding is resolved here;
+any other thread needs a person. Each merge requires that:
 
 - the required checks have passed on the exact head commit,
 - for develop, the automatic review has finished on that commit,
-- no review thread is open,
+- no review thread is open, here or on a daily pull request whose data this
+  one carries,
 - develop is still the commit the run started from, so the promotion carries
   this run's data and nothing a person has not promoted.
 
@@ -47,13 +49,22 @@ FIXER_TRAILER = 'Co-authored-by: copilot-swe-agent[bot] <'
 FIX_REQUEST = ('@copilot Address every open review thread on this pull request by committing to this branch. '
                'Follow "Review findings on daily data pull requests" in AGENTS.md: check each finding against '
                'the cited source before changing anything, change only generated data, and regenerate and '
-               'verify the publication.')
+               'verify the publication. Reply on every thread, starting the reply with "Fixed:", '
+               '"No change needed:" or "Needs a person:".')
+# The app Copilot's fix runs as, and the account its thread replies come from.
+FIXER = 'copilot-swe-agent'
+# How a reply has to start for its thread to be resolved here. Anything else,
+# "Needs a person:" included, leaves the thread open.
+SETTLED = ('fixed:', 'no change needed:')
 # The files a daily scrape generates. Code, workflows and pages are not data.
 GENERATED = re.compile(r'(models\.json|current\.json|news\.json|og-image\.png|ig-image\.png|sitemap\.xml|llms\.txt'
                        r'|data/[^/]+\.jsonl?|social/[^/]+\.(png|json))')
 THREADS = '''query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
   repository(owner: $owner, name: $name) { pullRequest(number: $number) {
-    reviewThreads(first: 100, after: $cursor) { nodes { isResolved } pageInfo { hasNextPage endCursor } } } } }'''
+    reviewThreads(first: 100, after: $cursor) { nodes { id isResolved
+      comments(last: 1) { nodes { author { login __typename } createdAt body } } }
+      pageInfo { hasNextPage endCursor } } } } }'''
+RESOLVE = 'mutation($thread: ID!) { resolveReviewThread(input: {threadId: $thread}) { thread { isResolved } } }'
 
 
 class NeedsPerson(Exception):
@@ -126,9 +137,9 @@ def wait_for_review(repo, pr, head, timeout):
 
 @preconditions(repo='nonempty', pr='positive_int')
 def open_threads(repo, pr):
-    """Number of unresolved review threads."""
+    """The unresolved review threads, each with its latest comment."""
     owner, name = repo.split('/', 1)
-    count, cursor = 0, None
+    found, cursor = [], None
     while True:
         args = ['api', 'graphql', '-f', 'query=' + THREADS, '-F', f'owner={owner}', '-F', f'name={name}',
                 '-F', f'number={pr}']
@@ -139,9 +150,9 @@ def open_threads(repo, pr):
         if payload.get('errors'):
             raise NeedsPerson('review threads could not be read')
         threads = payload['data']['repository']['pullRequest']['reviewThreads']
-        count += sum(not node['isResolved'] for node in threads['nodes'])
+        found += [node for node in threads['nodes'] if not node['isResolved']]
         if not threads['pageInfo']['hasNextPage']:
-            return count
+            return found
         cursor = threads['pageInfo']['endCursor']
 
 
@@ -168,22 +179,71 @@ def release_checks(repo, head):
             gh(['run', 'rerun', str(run['id']), '--repo', repo], check=False)
 
 
+@preconditions(repo='nonempty', pr='positive_int', asked='nonempty')
+def fix_finished(repo, pr, asked):
+    """Whether Copilot has ended the work it was asked for after `asked`.
+
+    The automatic reviewer records the same kinds of event under its own app,
+    so only events from the fixer's app are read.
+    """
+    page = 1
+    while True:
+        _, out = gh(['api', f'repos/{repo}/issues/{pr}/timeline?per_page=100&page={page}'])
+        events = json.loads(out)
+        for event in events:
+            if ((event.get('performed_via_github_app') or {}).get('slug') != FIXER
+                    or (event.get('created_at') or '') <= asked):
+                continue
+            if event.get('event') == 'copilot_work_finished_failure':
+                raise NeedsPerson('Copilot could not finish addressing the review threads')
+            if event.get('event') == 'copilot_work_finished':
+                return True
+        if len(events) < 100:
+            return False
+        page += 1
+
+
+@preconditions(thread='mapping', asked='nonempty')
+def settled(thread, asked):
+    """Whether Copilot's fix answered this thread as fixed or as a wrong finding."""
+    last = ((thread.get('comments') or {}).get('nodes') or [{}])[-1] or {}
+    author = last.get('author') or {}
+    verdict = (last.get('body') or '').lstrip(' *_#>\n').casefold()
+    return (author.get('__typename') == 'Bot' and author.get('login') == FIXER
+            and (last.get('createdAt') or '') > asked and verdict.startswith(SETTLED))
+
+
 @preconditions(repo='nonempty', pr='positive_int', head='nonempty', timeout='nonnegative')
 def copilot_fix(repo, pr, head, timeout):
     """Ask Copilot to clear the open review threads; returns the head to merge.
 
-    Copilot commits its fix to the branch and the automatic review of that push
-    resolves the threads the fix addressed. Nothing here resolves a thread: one
-    that is still open when the time runs out needs a person. The branch may
-    only have moved forward from the run's commit, by Copilot's commits alone.
+    Copilot commits its fix to the branch and replies on each thread. When its
+    work has finished, the threads it answered as fixed or as a wrong finding
+    are resolved here. A thread it left for a person, did not answer, or had
+    not answered when the time ran out stays open and stops publication. The
+    branch may only have moved forward from the run's commit, by Copilot's
+    commits alone.
     """
     # Copilot authors its commits as the account that asked.
     _, out = gh(['api', 'user'])
     requester = json.loads(out)['login']
-    gh(['pr', 'comment', str(pr), '--repo', repo, '--body', FIX_REQUEST])
+    _, out = gh(['api', '-X', 'POST', f'repos/{repo}/issues/{pr}/comments', '-f', 'body=' + FIX_REQUEST])
+    asked = json.loads(out)['created_at']
     print(f'Review threads are open on #{pr}; asked Copilot to address them.')
     deadline = time.monotonic() + timeout
-    while open_threads(repo, pr):
+    while True:
+        # Read before the threads: Copilot replies before it reports the end.
+        finished = fix_finished(repo, pr, asked)
+        threads = open_threads(repo, pr)
+        if not threads:
+            break
+        if finished:
+            if not all(settled(thread, asked) for thread in threads):
+                raise NeedsPerson('Copilot left a review thread for a person')
+            for thread in threads:
+                gh(['api', 'graphql', '-f', 'query=' + RESOLVE, '-f', f"thread={thread['id']}"])
+            print(f'Copilot answered every open review thread on #{pr}; resolved {len(threads)}.')
+            break
         if time.monotonic() >= deadline:
             raise NeedsPerson('Copilot did not clear the open review threads in time')
         time.sleep(POLL_SECONDS)
@@ -252,6 +312,34 @@ def changed_files(repo, pr):
         page += 1
 
 
+@preconditions(repo='nonempty', pr='positive_int')
+def carried_pulls(repo, pr):
+    """Unmerged daily pull requests whose data this one carries.
+
+    A run that finds an unmerged daily pull request builds on it and closes it,
+    so that pull request's head is one of this one's commits until the data
+    reaches develop.
+    """
+    commits, page = set(), 1
+    while True:
+        _, out = gh(['api', f'repos/{repo}/pulls/{pr}/commits?per_page=100&page={page}'])
+        batch = json.loads(out)
+        commits.update(commit['sha'] for commit in batch)
+        if len(batch) < 100:
+            break
+        page += 1
+    carried, page = [], 1
+    while True:  # every page: a superseded pull request may be far down the list
+        _, out = gh(['api', f'repos/{repo}/pulls?state=all&base=develop&per_page=100&page={page}'])
+        batch = json.loads(out)
+        carried += [pull['number'] for pull in batch
+                    if pull['number'] != pr and not pull.get('merged_at')
+                    and pull['head']['ref'].startswith('feature/daily-scrape-') and pull['head']['sha'] in commits]
+        if len(batch) < 100:
+            return sorted(carried)
+        page += 1
+
+
 @preconditions(repo='nonempty', branch='nonempty', head='nonempty', started_from='nonempty')
 def publish(repo, branch, head, started_from):
     data = pull_request(repo, branch)
@@ -268,6 +356,13 @@ def publish(repo, branch, head, started_from):
     # Anything merged into develop during the run would ride along to main.
     if branch_tip(repo, 'develop') != started_from:
         raise NeedsPerson('develop changed while the scrape ran')
+    # This review sees the carried data again, but a finding left open on the
+    # pull request it first appeared in still has to be answered there.
+    for carried in carried_pulls(repo, data['number']):
+        if open_threads(repo, carried):
+            raise NeedsPerson(f'#{carried}, whose data this pull request carries, has an open review thread',
+                              f'Resolve the thread on #{carried} and the next run publishes, or review the open '
+                              'data pull request, then merge it and promote develop by hand.')
     wait_for_checks(repo, data['number'], head, CHECK_TIMEOUT)
     wait_for_review(repo, data['number'], head, REVIEW_TIMEOUT)
     if open_threads(repo, data['number']):

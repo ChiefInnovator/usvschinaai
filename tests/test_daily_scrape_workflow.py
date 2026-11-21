@@ -215,6 +215,40 @@ class CarryForwardStepTests(unittest.TestCase):
         self.assertEqual((self.head(), noted), (self.develop, False))
         self.assertIn("conflicts with develop", log)
 
+    def test_new_pull_request_closes_only_the_daily_pull_requests_it_carries(self):
+        _, carried = self.pending({"models.json": "day 1\nday 2\n"})
+        _, dropped = self.pending({"models.json": "elsewhere\n"}, "feature/daily-scrape-2-1")
+        self.git(self.work, "merge", "--quiet", carried)
+        self.commit({"models.json": "day 1\nday 2\nday 3\n"}, "Daily scrape run")
+        script = (run_block(step("Close the daily pull requests this one carries"))
+                  .replace("${{ steps.pr.outputs.branch }}", "feature/daily-scrape-3-1")
+                  .replace("${{ steps.pr.outputs.url }}", "https://example.org/pull/9"))
+        root = Path(self.tmp.name)
+        (root / "open").write_text(f"5 feature/daily-scrape-1-1 {carried}\n6 feature/daily-scrape-2-1 {dropped}\n"
+                                   f"9 feature/daily-scrape-3-1 {self.head()}\n")
+        bin_dir = root / "bin"
+        bin_dir.mkdir()
+        tool = bin_dir / "gh"
+        tool.write_text(f'#!/bin/sh\nif [ "$2" = list ]; then cat "{root}/open"; '
+                        f'else echo "$*" >> "{root}/closed"; exit "${{CLOSE_EXIT:-0}}"; fi\n')
+        tool.chmod(tool.stat().st_mode | stat.S_IEXEC)
+        for close_exit in ("0", "1"):
+            (root / "closed").write_text("")
+            env = {**self.env, "PATH": f"{bin_dir}:{os.environ['PATH']}", "GITHUB_REPOSITORY": "o/r",
+                   "CLOSE_EXIT": close_exit}
+            done = subprocess.run(["bash", "-e", "-c", script], cwd=self.work, env=env, capture_output=True, text=True)
+            # Failing to close a superseded pull request never holds back the data.
+            self.assertEqual(done.returncode, 0, done.stderr)
+            self.assertEqual((root / "closed").read_text().splitlines(), [
+                "pr close 5 --repo o/r --delete-branch --comment "
+                "Superseded by https://example.org/pull/9, which carries this data."])
+            self.assertEqual("::warning::" in done.stdout, close_exit == "1")
+        text = WORKFLOW.read_text(encoding="utf-8")
+        order = [text.index(f"- name: {n}") for n in
+                 ("Open data feature pull request", "Close the daily pull requests this one carries",
+                  "Publish daily data")]
+        self.assertEqual(order, sorted(order))
+
     def test_publish_guard_compares_the_develop_commit_the_run_started_from(self):
         body = run_block(step("Open data feature pull request"))
         self.assertIn('"${{ steps.base.outputs.develop_sha }}" != "$(git rev-parse FETCH_HEAD)"', body)
@@ -245,14 +279,17 @@ class AutoPublishStepTests(unittest.TestCase):
             done = subprocess.run(["bash", "-e", "-c", script], env=env, capture_output=True, text=True)
         return done.returncode, done.stdout
 
-    def test_publishes_only_from_a_fully_promoted_develop_not_built_on_pending_data(self):
-        code, log = self.publish("true")
-        self.assertEqual(code, 0)
-        self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1 "
-                      "--head def456 --develop abc123", log)
-        for promoted, pending in (("false", False), ("", False), ("true", True)):
-            code, log = self.publish(promoted, pending)
-            self.assertEqual(code, 1, (promoted, pending))
+    def test_publishes_only_from_a_fully_promoted_develop(self):
+        # Data carried from an unmerged daily pull request does not stop the
+        # publisher: it checks that pull request's review threads itself.
+        for pending in (False, True):
+            code, log = self.publish("true", pending)
+            self.assertEqual(code, 0, pending)
+            self.assertIn("published scripts/publish_daily_data.py --repo o/r --branch feature/daily-scrape-1-1 "
+                          "--head def456 --develop abc123", log)
+        for promoted in ("false", ""):
+            code, log = self.publish(promoted)
+            self.assertEqual(code, 1, promoted)
             self.assertIn("::error::", log)
             self.assertNotIn("published", log)
 
