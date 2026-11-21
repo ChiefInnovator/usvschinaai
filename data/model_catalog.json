@@ -38938,6 +38938,82 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "8f277d59db97903afe8a": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "21c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "10.0s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "05b4ca109e0d7fd77b31": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "6c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "7.9s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "908ae1d8096c1607ba74": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "12c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "7.3s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
+        },
+        "76024697e98bb6cd722d": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "12c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "7.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -69848,6 +69924,101 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "20.3s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "3eb8d6f4120cae0ca386": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "15c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "20.8s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "43e3110b45829e182ca3": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "17c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "17.0s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "e59f22b3c3868f49a152": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "24c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "15.4s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "fe1103dfb6d1bf5af182": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "20c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "14.3s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "3bd6b6f9882eddc6b9e9": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "20c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "10.4s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -103685,11 +103856,11 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
-          "Model": "GPT-5.5 Pro",
+          "License": "Closed",
+          "KnowledgeCutoff": "Dec. 2025",
           "Multimodal": "Yes",
-          "License": "Closed"
+          "Model": "GPT-5.5 Pro"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105807,11 +105978,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "KnowledgeCutoff": "May 2026",
           "Country": "🇺🇸",
-          "Model": "GPT-6 Luna",
+          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes",
           "Context": "1.1M",
-          "Multimodal": "Yes"
+          "Model": "GPT-6 Luna"
         }
       },
       "benchmarks": {
@@ -119791,6 +119962,25 @@
           "Multimodal": "Yes",
           "Context": "1.0M",
           "Country": "🇺🇸"
+        },
+        "99b99a43627696578d62": {
+          "model": "Gemini 4 Argon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-argon",
+          "origin": "US",
+          "description": "Gemini 4 Argon by Google — released Sep 30, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-30",
+          "Model": "Gemini 4 Argon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "30c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "28.2s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -122293,6 +122483,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "2"
+        },
+        "26fcae16abc02d9b8967": {
+          "model": "Gemini 4 Carbon",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-4-carbon",
+          "origin": "US",
+          "description": "Gemini 4 Carbon by Google — released Oct 28, 2026; $2.00/M input, $0.100/M cached input, $10.00/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-10-28",
+          "Model": "Gemini 4 Carbon",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "10",
+          "Speed": "11c/s",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "28.2s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "2"
         }
       },
       "benchmarks": {
@@ -122419,6 +122628,25 @@
           "description": "Claude Fable 5.2 by Anthropic — released Nov 9, 2026; $8.00/M input, $0.200/M cached input, $40.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-11-09",
           "Model": "Claude Fable 5.2\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1M",
+          "Output$/M": "40",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "Jun. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "8"
+        },
+        "b0fbbda9dfdb63655314": {
+          "model": "Claude Fable 5.2",
+          "organization": "Anthropic",
+          "link": "https://llm-stats.com/models/claude-fable-5-2",
+          "origin": "US",
+          "description": "Claude Fable 5.2 by Anthropic — released Nov 9, 2026; $8.00/M input, $0.200/M cached input, $40.00/M output; 1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-09",
+          "Model": "Claude Fable 5.2",
           "Country": "🇺🇸",
           "Context": "1M",
           "Output$/M": "40",
@@ -122569,6 +122797,25 @@
           "description": "Inkling 2 Small by Thinking Machines Lab — released Nov 5, 2026; $0.300/M input, $0.030/M cached input, $1.00/M output; 256K-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-11-05",
           "Model": "Inkling 2 Small\nNEW",
+          "Country": "🇺🇸",
+          "Context": "256k",
+          "Output$/M": "1",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "594",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.3"
+        },
+        "8bfb1968c1134058d378": {
+          "model": "Inkling 2 Small",
+          "organization": "Thinking Machines Lab",
+          "link": "https://llm-stats.com/models/inkling-2-small",
+          "origin": "US",
+          "description": "Inkling 2 Small by Thinking Machines Lab — released Nov 5, 2026; $0.300/M input, $0.030/M cached input, $1.00/M output; 256K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-05",
+          "Model": "Inkling 2 Small",
           "Country": "🇺🇸",
           "Context": "256k",
           "Output$/M": "1",
@@ -123326,6 +123573,587 @@
             "confidence": "high",
             "modelAvailableFrom": "2026-11-15",
             "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        }
+      }
+    },
+    "7d01efeccc3ecc9c931c": {
+      "name": "Gemini 4 Hydrogen",
+      "profiles": {},
+      "benchmarks": {
+        "terminal-bench-4.0": {
+          "812b842e22a08671": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 54.0,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-hydrogen-high",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Hydrogen (High).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "AA record gemini-4-hydrogen-high; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "765d51562418906c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 54.0,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID google/gemini-4-hydrogen; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "agents-last-exam": {
+          "6b2c9a987e4eac7d": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 71.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gemini-4-hydrogen",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "gpqa-diamond": {
+          "11b3d3e6310cd99e": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Epoch AI evaluation of gemini-4-hydrogen_xhigh; evaluation started 2026-11-13",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-4-hydrogen_xhigh."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "f133d3a859626e5b": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 88.1,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Epoch AI evaluation of gemini-4-hydrogen_xhigh; evaluation started 2026-11-13",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-4-hydrogen_xhigh."
+          }
+        }
+      }
+    },
+    "e9b6998ab575f10a29d1": {
+      "name": "Qwen4-Max",
+      "profiles": {},
+      "benchmarks": {
+        "agents-last-exam": {
+          "69acf51fc463083e": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 46.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "deepswe-1.1": {
+          "edac6ee57aeadf51": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 75.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "c4f09f1f8957cd75": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 48.5,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          },
+          "b66b7878f154767d": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 48.5,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID alibaba/qwen4-max; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-17",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "humanitys-last-exam": {
+          "d9f0e6625d18c59a": {
+            "benchmark": "Humanity’s Last Exam",
+            "score": 51.7,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/qwen4-max",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        }
+      }
+    },
+    "9a7f6e62bc4092b328ea": {
+      "name": "Hy4 flash",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "7a3d97f9677a4d07": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 64.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "terminal-bench-4.0": {
+          "0f66abcb5b731063": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 19.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          },
+          "47140897534df515": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 15.2,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-18",
+            "retrievedAt": "2026-11-18",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID tencent/hy4-flash; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-18",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "mmmu-pro": {
+          "00a7714d2b8e5a76": {
+            "benchmark": "MMMU-Pro",
+            "score": 75.8,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/hy4-flash",
+            "availableFrom": "2026-11-17",
+            "retrievedAt": "2026-11-17",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-17"
+          }
+        }
+      }
+    },
+    "54cda66d0263fd129045": {
+      "name": "Gemini 4 Neon",
+      "profiles": {},
+      "benchmarks": {
+        "terminal-bench-4.0": {
+          "57991bf4a98929b8": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 63.6,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gemini-4-neon",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Artificial Analysis independent evaluation of Gemini 4 Neon (Xhigh).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "AA record gemini-4-neon; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "gpqa-diamond": {
+          "7e58b69f918fdc30": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gemini-4-neon_xhigh; evaluation started 2026-11-19",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-4-neon_xhigh."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "c595070b0797d5b9": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 91.2,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gemini-4-neon_xhigh; evaluation started 2026-11-19",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-4-neon_xhigh."
+          }
+        }
+      }
+    },
+    "9b51522f4194e58f3a09": {
+      "name": "GPT-6.2 Astra",
+      "profiles": {
+        "0fe01e431f5158cd2d34": {
+          "model": "GPT-6.2 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6.2-astra",
+          "origin": "US",
+          "description": "GPT-6.2 Astra by OpenAI — released Nov 17, 2026; $8.00/M input, $0.400/M cached input, $40.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-17",
+          "Model": "GPT-6.2 Astra\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "40",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "8"
+        }
+      },
+      "benchmarks": {
+        "mmmu-pro": {
+          "1732eba8cae756c3": {
+            "benchmark": "MMMU-Pro",
+            "score": 89.5,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-2-astra",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.2 Astra (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "AA record gpt-6-2-astra; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          }
+        },
+        "terminal-bench-4.0": {
+          "e95ce6089efa241a": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 64.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-2-astra",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.2 Astra (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "AA record gpt-6-2-astra; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "b5ddc64e1e031375": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 63.1,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-6.2-astra; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "gpqa-diamond": {
+          "51eba9db0a77dbbd": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Epoch AI evaluation of gpt-6.2-astra_max; evaluation started 2026-10-27",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gpt-6.2-astra_max."
+          },
+          "34e48eca0d96f4bc": {
+            "benchmark": "GPQA Diamond",
+            "score": 97.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6.2-astra",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19"
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "086cebd75ceaacce": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 92.6,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Epoch AI evaluation of gpt-6.2-astra_max; evaluation started 2026-10-27",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gpt-6.2-astra_max."
+          }
+        },
+        "agents-last-exam": {
+          "74bb932a73c0b0a7": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 78.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6.2-astra",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19"
+          }
+        },
+        "arc-agi-2": {
+          "4e38e7c9d22db1cd": {
+            "benchmark": "ARC-AGI-2",
+            "score": 95.8,
+            "unit": "percent",
+            "source": "https://arcprize.org/results/openai-gpt-6-2-astra",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Semi-private evaluation; max and xhigh reasoning tie. The individual result's publication date was not independently verified.",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-19"
+          },
+          "1984aa955cb3e3b8": {
+            "benchmark": "ARC-AGI-2",
+            "score": 95.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gpt-6.2-astra_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6.2-astra_xhigh."
+          }
+        }
+      }
+    },
+    "1f72365f9929b6bd13da": {
+      "name": "GPT-6.2 Sol",
+      "profiles": {},
+      "benchmarks": {
+        "terminal-bench-4.0": {
+          "32fea3ed167a2d38": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 60.1,
+            "unit": "percent",
+            "source": "https://artificialanalysis.ai/models/gpt-6-2-sol",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Artificial Analysis independent evaluation of GPT-6.2 Sol (Max).",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "AA record gpt-6-2-sol; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
+          },
+          "6ecaf678ed23770c": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 60.6,
+            "unit": "percent",
+            "source": "https://www.vals.ai/benchmarks/terminal-bench-4",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Vals Terminal-Bench 4.0; version 4.0; overall accuracy; exact ID openai/gpt-6.2-sol; .",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "high",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Individual publication date unknown; page update date is not used to backdate results."
+          }
+        },
+        "agents-last-exam": {
+          "c02d11240c8a2559": {
+            "benchmark": "Agents’ Last Exam",
+            "score": 73.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6.2-sol",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19"
+          }
+        },
+        "gpqa-diamond": {
+          "90af29205c854135": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/gpt-6.2-sol",
+            "availableFrom": "2026-11-19",
+            "retrievedAt": "2026-11-19",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19"
+          }
+        },
+        "arc-agi-2": {
+          "9e7bd447bc9002ff": {
+            "benchmark": "ARC-AGI-2",
+            "score": 85.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gpt-6.2-sol_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6.2-sol_xhigh."
+          }
+        }
+      }
+    },
+    "df07f3531183a07925ec": {
+      "name": "Aion 1.0 Instruct",
+      "profiles": {},
+      "benchmarks": {
+        "ifbench": {
+          "508177f4e80bb9c0": {
+            "benchmark": "IFBench",
+            "score": 32.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
+          }
+        },
+        "gpqa-diamond": {
+          "772303d295215fd3": {
+            "benchmark": "GPQA Diamond",
+            "score": 28.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
+          }
+        },
+        "mmlu-pro": {
+          "112bdea42fe37fdc": {
+            "benchmark": "MMLU-Pro",
+            "score": 33.4,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/aion-1.0-instruct",
+            "availableFrom": "2026-11-20",
+            "retrievedAt": "2026-11-20",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-20"
           }
         }
       }
