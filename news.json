@@ -1,6 +1,33 @@
 {
-  "lastUpdated": "2026-11-20T03:35:33.151829+00:00",
+  "lastUpdated": "2026-11-21T03:34:38.930175+00:00",
   "items": [
+    {
+      "id": "f50934946f4e5a3f",
+      "headline": "Chip supply chain warns of broader disruption from new US export controls",
+      "url": "https://biztoc.com/x/a161b0ca953d3b29",
+      "source": "Biztoc",
+      "country": "Both",
+      "publishedAt": "2026-11-20 15:04:53",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "396dcf3fd83dae97",
+      "headline": "Anthropic IPO triggers AI selloff — washout or deeper unwind?",
+      "url": "https://www.investing.com/news/stock-market-news/anthropic-ipo-triggers-ai-selloff--washout-or-deeper-unwind-93CH-5041498",
+      "source": "Investing Us",
+      "country": "US",
+      "publishedAt": "2026-11-20 12:14:49",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "4a923f829b327a76",
+      "headline": "US AI Chip Curbs Hit China Tech Stocks, Push Self-Reliance Drive",
+      "url": "https://www.analyticsinsight.net/news/us-ai-chip-curbs-hit-china-tech-stocks-push-self-reliance-drive",
+      "source": "Analytics And Insight",
+      "country": "CN",
+      "publishedAt": "2026-11-20 12:00:00",
+      "relevanceScore": 0.23
+    },
     {
       "id": "7e62e7de9e417dfd",
       "headline": "Anthropic IPO, Nvidia Scandal Confirm AI's Future Is Not China",
@@ -153,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-11-09 14:47:45",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "424bf68d76affd46",
-      "headline": "What Alibaba left blank about Qwen4",
-      "url": "https://asiatimes.com/2026/11/what-alibaba-left-blank-about-qwen4/",
-      "source": "Asia Times",
-      "country": "CN",
-      "publishedAt": "2026-11-07 05:09:54",
-      "relevanceScore": 0.83
-    },
-    {
-      "id": "e7c07443b561298b",
-      "headline": "Trump official who wants data centers on public lands has tens of millions in AI",
-      "url": "https://www.rawstory.com/doug-bergum/",
-      "source": "Raw Story",
-      "country": "Both",
-      "publishedAt": "2026-11-06 13:27:43",
-      "relevanceScore": 0.54
     }
   ]
 }

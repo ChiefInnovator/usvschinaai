@@ -38995,6 +38995,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "76024697e98bb6cd722d": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "12c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "7.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -103838,10 +103857,10 @@
           "Input$/M": "—",
           "Output$/M": "—",
           "Country": "🇺🇸",
-          "Model": "GPT-5.5 Pro",
-          "Multimodal": "Yes",
           "License": "Closed",
-          "KnowledgeCutoff": "Dec. 2025"
+          "KnowledgeCutoff": "Dec. 2025",
+          "Multimodal": "Yes",
+          "Model": "GPT-5.5 Pro"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -105959,11 +105978,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Context": "1.1M",
           "Country": "🇺🇸",
-          "Model": "GPT-6 Luna",
+          "KnowledgeCutoff": "May 2026",
           "Multimodal": "Yes",
-          "KnowledgeCutoff": "May 2026"
+          "Context": "1.1M",
+          "Model": "GPT-6 Luna"
         }
       },
       "benchmarks": {
@@ -123808,6 +123827,39 @@
             "modelAvailableFrom": "2026-11-19",
             "notes": "AA record gemini-4-neon; highest verified result across effort settings for this exact model and benchmark. AA publishes no per-result evaluation date."
           }
+        },
+        "gpqa-diamond": {
+          "7e58b69f918fdc30": {
+            "benchmark": "GPQA Diamond",
+            "score": 96.3,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gemini-4-neon_xhigh; evaluation started 2026-11-19",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row gemini-4-neon_xhigh."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "c595070b0797d5b9": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 91.2,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gemini-4-neon_xhigh; evaluation started 2026-11-19",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row gemini-4-neon_xhigh."
+          }
         }
       }
     },
@@ -123955,6 +124007,20 @@
             "sourceType": "official_leaderboard",
             "confidence": "high",
             "modelAvailableFrom": "2026-11-19"
+          },
+          "1984aa955cb3e3b8": {
+            "benchmark": "ARC-AGI-2",
+            "score": 95.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gpt-6.2-astra_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-19",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6.2-astra_xhigh."
           }
         }
       }
@@ -124021,6 +124087,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-19"
+          }
+        },
+        "arc-agi-2": {
+          "9e7bd447bc9002ff": {
+            "benchmark": "ARC-AGI-2",
+            "score": 85.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-21",
+            "retrievedAt": "2026-11-21",
+            "configuration": "Epoch AI evaluation of gpt-6.2-sol_xhigh; Epoch publishes no evaluation date for this table",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-21",
+            "notes": "Epoch AI benchmark dump, arc_agi_2_external.csv, row gpt-6.2-sol_xhigh."
           }
         }
       }
