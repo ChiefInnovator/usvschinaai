@@ -17,11 +17,15 @@
   pull request is the exact commit the run pushed and changes only generated
   data, required checks pass, the automatic review is complete with no open
   thread, develop held nothing unpromoted before the run and did not move
-  during it, and the run was not built on an unmerged daily pull request.
+  during it, and no daily pull request whose data it carries has an open
+  review thread.
   Otherwise it stops and a person merges.
   When the automatic review leaves a thread open, the run asks Copilot once to
   fix it. Copilot's commits on top of the run's commit are published under the
-  same gates; a thread still open afterwards needs a person.
+  same gates. When Copilot has finished, the run resolves each thread it
+  answered with "Fixed:" or "No change needed:"; any other thread needs a person.
+  A run that finds an unmerged daily pull request builds on its data and closes
+  it as superseded, so one daily pull request is open at a time.
   Code changes and backfill pull requests are always merged and promoted by a
   person; do not extend automatic publication to them.
 
@@ -34,6 +38,15 @@ reviewing them and when asked to fix a review finding on one.
   the page reports the model in its own comparison column or row. Open the
   cited source and read that column before treating a model and source mismatch
   as a defect. Report it only when the value is not that model's.
+- These are how the data is built, not defects; do not report them. A source
+  identifier listed as unmatched in `data/benchmark_source_refresh.json` is a
+  model outside the roster. A model missing from a roster after a newer version
+  of it was listed was replaced by that version, even when the newer one scores
+  lower or misses the top ten (`scripts/model_families.py`). Labels and
+  headlines in `news.json` are the feed's own text.
+- Reply on every thread you were asked to address. Start the reply with
+  "Fixed:" when you changed the data, "No change needed:" when the finding is
+  wrong, or "Needs a person:" for anything else.
 - To fix a finding, open the cited source first. If the finding is wrong,
   change nothing and reply on the thread with what the source shows.
 - If the finding is right, retract the result with

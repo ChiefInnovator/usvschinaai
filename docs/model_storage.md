@@ -74,20 +74,30 @@ when the pull request is the exact commit the run pushed and changes only
 generated data files, the required checks pass on that commit, the automatic
 reviewer's latest review of it neither requests changes nor was dismissed and
 left no open thread, every develop commit was already on main before the run,
-develop did not move during it, and the run was not built on an unmerged daily
-pull request. Otherwise the step fails, the pull request stays open, and the
-failure email asks for a manual merge. Backfill pull requests and code changes
-are never published automatically.
+develop did not move during it, and no daily pull request whose data it carries
+has an open review thread. Otherwise the step fails, the pull request stays
+open, and the failure email asks for a manual merge. Backfill pull requests and
+code changes are never published automatically.
+
+A run that finds an unmerged daily pull request builds on its data, then closes
+it as superseded, so one daily pull request is open at a time and a stopped
+publication is retried the next night with that night's data. Every open pull
+request holds an Azure staging environment; when stopped runs stacked six of
+them in November 2026, the preview deploy failed on every pull request. The
+new pull request is reviewed as a whole, but a thread left open on a superseded
+one still stops publication: resolve it there, or merge by hand.
 
 When the automatic review leaves a thread open, the step asks Copilot once, in
 a pull request comment, to fix it. Copilot follows "Review findings on daily
 data pull requests" in `AGENTS.md`: it checks the finding against the cited
 source, retracts a wrong result with `scripts/retract_ai_fill.py` and
 regenerates the publication. Its commits are accepted only on top of the run's
-commit and only when they change generated data. The review of that push
-resolves the threads the fix addressed; the step resolves none itself. The
-same checks, review and thread gates then apply to the new commit. A thread
-still open after 45 minutes fails the step as before.
+commit and only when they change generated data. Copilot replies on every
+thread, starting with "Fixed:", "No change needed:" or "Needs a person:". When
+GitHub records the end of its work, the step resolves the threads whose latest
+comment is Copilot's "Fixed:" or "No change needed:" reply. Any other thread
+fails the step, as does work that is not finished after 45 minutes. The same
+checks, review and thread gates then apply to the new commit.
 
 A Copilot commit is recognised by how GitHub records it: committed and signed
 by GitHub, with a `Co-authored-by: copilot-swe-agent[bot]` trailer. GitHub
@@ -108,7 +118,7 @@ of these hold: the branch changes only generated data (JSON, JSONL, images,
 sitemap, `llms.txt`), it merges into develop without conflict, and
 `prepare_publication.py` verifies the result under develop's code. Otherwise it
 builds on develop alone and says why in a warning. The new pull request contains
-the earlier one, so merging it merges both.
+the earlier one, which is then closed as superseded.
 
 The health check follows the same model. It fails when no snapshot has been
 produced for 30 hours, counting develop and open daily pull requests, or when

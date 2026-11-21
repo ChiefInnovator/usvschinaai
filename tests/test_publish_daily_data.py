@@ -9,7 +9,11 @@ import publish_daily_data as publish
 
 REPO = 'owner/repo'
 BRANCH = 'feature/daily-scrape-1-1'
-HEAD, DEVELOP, MAIN, STARTED, FIXED = 'a' * 40, 'b' * 40, 'c' * 40, 'f' * 40, '5' * 40
+HEAD, DEVELOP, MAIN, STARTED, FIXED, CARRIED = 'a' * 40, 'b' * 40, 'c' * 40, 'f' * 40, '5' * 40, '6' * 40
+ASKED = '2026-11-10T03:46:00Z'
+FIXER = {'login': 'copilot-swe-agent', '__typename': 'Bot'}
+# The superseded daily pull request whose head is one of #7's commits.
+SUPERSEDED = {'number': 5, 'merged_at': None, 'head': {'ref': 'feature/daily-scrape-0-1', 'sha': CARRIED}}
 
 
 class FakeGitHub:
@@ -25,6 +29,7 @@ class FakeGitHub:
                                                    'social/plan.json', 'og-image.png', 'sitemap.xml', 'llms.txt'])
         self.options.update(options)
         self.merged, self.created, self.views, self.asked, self.deleted, self.released = [], [], 0, [], [], []
+        self.resolved = []
 
     def pull(self, number):
         if number == 7:
@@ -53,9 +58,28 @@ class FakeGitHub:
             return 0, json.dumps([{'filename': name} for name in files or self.options['files']])
         if args == ['api', 'user']:
             return 0, json.dumps({'login': 'owner'})
-        if args[:2] == ['pr', 'comment']:
-            self.asked.append(args[args.index('--body') + 1])
-            return 0, ''
+        if args[:3] == ['api', '-X', 'POST'] and args[3].endswith('/issues/7/comments'):
+            self.asked.append(args[5][len('body='):])
+            return 0, json.dumps({'created_at': ASKED})
+        if args[0] == 'api' and '/timeline?' in args[1]:
+            # The automatic reviewer's own work events, then what the fixer has reported so far.
+            reviewer = {'slug': 'copilot-pull-request-reviewer'}
+            events = [{'event': 'copilot_work_finished', 'created_at': '2026-11-10T03:47:00Z',
+                       'performed_via_github_app': reviewer},
+                      {'event': 'copilot_work_finished_failure', 'created_at': '2026-11-10T03:47:00Z',
+                       'performed_via_github_app': reviewer},
+                      {'event': 'copilot_work_finished', 'created_at': '2026-11-10T03:30:00Z',
+                       'performed_via_github_app': {'slug': 'copilot-swe-agent'}}]
+            if self.options.get('fix_event'):
+                events.append({'event': self.options['fix_event'], 'created_at': '2026-11-10T03:50:00Z',
+                               'performed_via_github_app': {'slug': self.options.get('fix_app', 'copilot-swe-agent')}})
+            return 0, json.dumps(events)
+        if args[0] == 'api' and '/pulls/7/commits?' in args[1]:
+            return 0, json.dumps([{'sha': sha} for sha in self.options.get('commits', [HEAD])])
+        if args[0] == 'api' and '/pulls?state=all&base=develop&' in args[1]:
+            # A full first page of other pull requests: the superseded one is on the second.
+            other = {'number': 3, 'merged_at': '2026-11-09T03:40:00Z', 'head': {'ref': 'feature/site', 'sha': 'e' * 40}}
+            return 0, json.dumps([other] * 100 if args[1].endswith('page=1') else self.options.get('pulls', []))
         if args[:3] == ['api', '-X', 'DELETE']:
             self.deleted.append(args[3])
             return 0, ''
@@ -89,10 +113,23 @@ class FakeGitHub:
                  'state': self.options['review_state'], 'submitted_at': '2026-11-10T03:45:00Z'},
                 {'commit_id': HEAD, 'user': {'login': 'claude[bot]'}, 'state': 'APPROVED',
                  'submitted_at': '2026-11-10T03:50:00Z'}])
+        if args[:2] == ['api', 'graphql'] and args[3].startswith('query=mutation'):
+            self.resolved.append(args[5][len('thread='):])
+            return 0, json.dumps({'data': {'resolveReviewThread': {'thread': {'isResolved': True}}}})
+        if args[:2] == ['api', 'graphql'] and 'number=5' in args:
+            nodes = [{'id': 'old', 'isResolved': False}] * self.options.get('carried_threads', 0)
+            return 0, json.dumps({'data': {'repository': {'pullRequest': {'reviewThreads': {
+                'nodes': nodes, 'pageInfo': {'hasNextPage': False, 'endCursor': None}}}}}})
         if args[:2] == ['api', 'graphql']:
             # Copilot's fix, once asked for, leaves `threads_after_fix` threads open.
             count = self.options.get('threads_after_fix', self.options['threads']) if self.asked else self.options['threads']
-            nodes = [{'isResolved': False}] * count + [{'isResolved': True}]
+            finding = {'author': {'login': 'copilot-pull-request-reviewer', '__typename': 'Bot'},
+                       'createdAt': '2026-11-10T03:45:00Z', 'body': 'Fixed: this value is wrong.'}
+            # `replies` are the latest comment on each thread once Copilot was asked.
+            replies = self.options.get('replies', []) if self.asked else []
+            nodes = [{'id': f'thread-{index}', 'isResolved': f'thread-{index}' in self.resolved, 'comments': {'nodes': [
+                dict({'author': FIXER, 'createdAt': '2026-11-10T03:49:00Z'}, **replies[index])
+                if index < len(replies) else finding]}} for index in range(count)] + [{'id': 'done', 'isResolved': True}]
             return 0, json.dumps({'data': {'repository': {'pullRequest': {'reviewThreads': {
                 'nodes': nodes, 'pageInfo': {'hasNextPage': False, 'endCursor': None}}}}}})
         if args[:2] == ['pr', 'merge']:
@@ -186,6 +223,57 @@ class PublishDailyDataTests(unittest.TestCase):
             code, github, log = self.run_publish(**fixed, **refused)
             self.assertEqual((code, github.merged), (1, []), refused)
             self.assertIn(reason, log)
+
+    def test_threads_copilot_answered_are_resolved_and_the_data_published(self):
+        # The November 16 stall: Copilot showed the finding wrong, changed nothing, and the thread stayed open.
+        answered = dict(threads=2, fix_event='copilot_work_finished', replies=[
+            {'body': 'No change needed: the source lists that model separately.'}, {'body': '**Fixed:** retracted.'}])
+        code, github, log = self.run_publish(**answered)
+        self.assertEqual((code, github.merged, github.resolved), (0, [7, 8], ['thread-0', 'thread-1']))
+        self.assertIn('resolved 2', log)
+        self.assertIn('"No change needed:"', github.asked[0])
+        # With a fix commit the same gates apply to the new head.
+        code, github, _ = self.run_publish(**answered, fix_head=FIXED, merge_parents=[STARTED, FIXED])
+        self.assertEqual((code, github.merged, github.released), (0, [7, 8], ['11']))
+
+    def test_thread_copilot_did_not_settle_needs_a_person(self):
+        settled = {'body': 'Fixed: retracted.'}
+        for reply in ({'body': 'Needs a person: the label is set in code.'}, {'body': 'I looked at this.'},
+                      {'body': 'Fixed: x', 'createdAt': '2026-11-10T03:40:00Z'},
+                      {'body': 'Fixed: x', 'author': {'login': 'copilot-swe-agent', '__typename': 'User'}},
+                      {'body': 'Fixed: x', 'author': {'login': 'someone', '__typename': 'Bot'}}):
+            code, github, log = self.run_publish(threads=2, fix_event='copilot_work_finished', replies=[settled, reply])
+            self.assertEqual((code, github.merged, github.resolved), (1, [], []), reply)
+            self.assertIn('left a review thread for a person', log)
+        # A thread Copilot never reached is not settled either.
+        code, github, log = self.run_publish(threads=2, fix_event='copilot_work_finished', replies=[settled])
+        self.assertEqual((code, github.merged, github.resolved), (1, [], []))
+        # Replies alone are not the end of the work: a commit may still follow.
+        code, github, log = self.run_publish(threads=1, replies=[settled])
+        self.assertEqual((code, github.merged, github.resolved), (1, [], []))
+        self.assertIn('did not clear the open review threads', log)
+        # Only the fixer's own events count, and its failure stops at once.
+        code, github, log = self.run_publish(threads=1, replies=[settled], fix_event='copilot_work_finished',
+                                             fix_app='copilot-pull-request-reviewer')
+        self.assertEqual((code, github.resolved), (1, []))
+        code, github, log = self.run_publish(threads=1, replies=[settled], fix_event='copilot_work_finished_failure')
+        self.assertEqual((code, github.merged, github.resolved), (1, [], []))
+        self.assertIn('could not finish', log)
+
+    def test_data_carried_from_a_superseded_pull_request_publishes_unless_its_thread_is_open(self):
+        carried = dict(commits=[CARRIED, HEAD], pulls=[SUPERSEDED])
+        code, github, _ = self.run_publish(**carried)
+        self.assertEqual((code, github.merged), (0, [7, 8]))
+        code, github, log = self.run_publish(**carried, carried_threads=1)
+        self.assertEqual((code, github.merged, github.asked), (1, [], []))
+        self.assertIn('#5, whose data this pull request carries, has an open review thread', log)
+        self.assertIn('Resolve the thread on #5', log)
+        # Merged, not a daily scrape, or not among this pull request's commits: not carried.
+        for other in (dict(SUPERSEDED, merged_at='2026-11-09T03:40:00Z'),
+                      dict(SUPERSEDED, head={'ref': 'feature/site', 'sha': CARRIED}),
+                      dict(SUPERSEDED, head={'ref': 'feature/daily-scrape-0-1', 'sha': 'd' * 40})):
+            code, github, _ = self.run_publish(commits=[CARRIED, HEAD], pulls=[other], carried_threads=1)
+            self.assertEqual((code, github.merged), (0, [7, 8]), other)
 
     def test_only_a_daily_data_pull_request_into_develop_is_published(self):
         code, github, _ = self.run_publish(base='main')
