@@ -113,7 +113,7 @@ jobs:
               merge --no-edit --quiet FETCH_HEAD || skip "it conflicts with develop"
           python scripts/prepare_publication.py > /dev/null 2>&1 || skip "its publication does not verify under develop's code"
           echo "Building on develop plus $PENDING."
-          echo "> Includes the unmerged data from \`$PENDING\`. Merging this pull request merges that one too." > "$RUNNER_TEMP/pending-note.md"
+          echo "> Includes the unmerged data from \`$PENDING\`, whose pull request this one supersedes." > "$RUNNER_TEMP/pending-note.md"
 
       - name: Decide AI research budget
         id: budget
@@ -236,7 +236,7 @@ jobs:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         if: steps.changes.outputs.has_changes == 'true'
         run: |
-          # Only this step, the token preflight and the publish step can access the write-capable token.
+          # Only this step, the token preflight, the superseding step and the publish step can access the write-capable token.
           gh auth setup-git
           git fetch origin develop
           if [ "${{ steps.base.outputs.develop_sha }}" != "$(git rev-parse FETCH_HEAD)" ]; then
@@ -273,28 +273,49 @@ jobs:
             cat "$RUNNER_TEMP/token-note.md" 2>/dev/null && echo
             cat "$RUNNER_TEMP/source-health.md"
           } > "$RUNNER_TEMP/pr-body.md"
-          gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
+          URL=$(gh pr create --repo "$GITHUB_REPOSITORY" --base develop --head "$BRANCH" \
             --title "Refresh data (daily-scrape)" \
-            --body-file "$RUNNER_TEMP/pr-body.md"
+            --body-file "$RUNNER_TEMP/pr-body.md")
+          echo "$URL"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
           echo "head=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
+      - name: Close the daily pull requests this one carries
+        # One daily pull request at a time. The new one holds the data of every
+        # open daily pull request it was built on, so those are closed. Each
+        # open pull request keeps an Azure staging environment; six stacked up
+        # in November 2026 and the preview deploy failed on every pull request.
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.PAT_TOKEN }}
+        run: |
+          gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open --json number,headRefName,headRefOid \
+            --jq '.[] | select(.headRefName | startswith("feature/daily-scrape-")) | "\(.number) \(.headRefName) \(.headRefOid)"' \
+            | while read -r NUMBER NAME OID; do
+                [ "$NAME" != "${{ steps.pr.outputs.branch }}" ] || continue
+                # Carried only when its whole branch is in this commit's history.
+                git merge-base --is-ancestor "$OID" HEAD 2>/dev/null || continue
+                gh pr close "$NUMBER" --repo "$GITHUB_REPOSITORY" --delete-branch \
+                  --comment "Superseded by ${{ steps.pr.outputs.url }}, which carries this data." \
+                  || echo "::warning::Could not close superseded daily pull request #$NUMBER."
+              done
 
       - name: Publish daily data
         # Merges the data pull request and promotes develop to main, both as
         # merge-commit pull requests, when required checks pass and the
         # automatic review leaves no open thread. An open thread is handed to
-        # Copilot once to fix on the branch. Anything else fails this step:
-        # the pull request stays open and the failure email asks for a manual merge.
+        # Copilot once; the threads it answers as fixed or as a wrong finding
+        # are resolved. Anything else fails this step: the pull request stays
+        # open, the failure email asks for a manual merge, and the next run
+        # carries the data forward and publishes it unless a review thread on
+        # this pull request is still open.
         if: steps.changes.outputs.has_changes == 'true'
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
           if [ "${{ steps.base.outputs.promoted }}" != "true" ]; then
             echo "::error::develop held changes not yet on main before this run. Merge the data pull request and promote develop by hand."
-            exit 1
-          fi
-          if [ -f "$RUNNER_TEMP/pending-note.md" ]; then
-            echo "::error::This run was built on an unmerged daily pull request. Review and merge the new pull request by hand."
             exit 1
           fi
           python scripts/publish_daily_data.py --repo "$GITHUB_REPOSITORY" \
