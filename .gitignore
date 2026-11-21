@@ -36,13 +36,13 @@ Thumbs.db
 # Editor directories and files
 .idea/
 # Ignore .vscode/ by default, but allow-list the shared config files so
-# launch.json, settings.json, tasks.json, and the extensions recommendation
-# list travel with the repo while personal workspace state stays local.
+# launch.json, tasks.json, and the extensions recommendation stay tracked.
+# settings.json is each person's own: it stays local, in any folder.
 .vscode/*
 !.vscode/launch.json
-!.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/extensions.json
+**/.vscode/settings.json
 *.swp
 *.swo
 *~
