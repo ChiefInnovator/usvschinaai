@@ -183,8 +183,8 @@ def release_checks(repo, head):
 def fix_finished(repo, pr, asked):
     """Whether Copilot has ended the work it was asked for after `asked`.
 
-    The automatic reviewer records the same events under its own app, so only
-    the fixer's count.
+    The automatic reviewer records the same kinds of event under its own app,
+    so only events from the fixer's app are read.
     """
     page = 1
     while True:
@@ -328,11 +328,16 @@ def carried_pulls(repo, pr):
         if len(batch) < 100:
             break
         page += 1
-    _, out = gh(['pr', 'list', '--repo', repo, '--base', 'develop', '--state', 'all', '--limit', '200',
-                 '--json', 'number,state,headRefName,headRefOid'])
-    return sorted(pull['number'] for pull in json.loads(out)
-                  if pull['number'] != pr and pull['state'] != 'MERGED'
-                  and pull['headRefName'].startswith('feature/daily-scrape-') and pull['headRefOid'] in commits)
+    carried, page = [], 1
+    while True:  # every page: a superseded pull request may be far down the list
+        _, out = gh(['api', f'repos/{repo}/pulls?state=all&base=develop&per_page=100&page={page}'])
+        batch = json.loads(out)
+        carried += [pull['number'] for pull in batch
+                    if pull['number'] != pr and not pull.get('merged_at')
+                    and pull['head']['ref'].startswith('feature/daily-scrape-') and pull['head']['sha'] in commits]
+        if len(batch) < 100:
+            return sorted(carried)
+        page += 1
 
 
 @preconditions(repo='nonempty', branch='nonempty', head='nonempty', started_from='nonempty')

@@ -13,7 +13,7 @@ HEAD, DEVELOP, MAIN, STARTED, FIXED, CARRIED = 'a' * 40, 'b' * 40, 'c' * 40, 'f'
 ASKED = '2026-11-10T03:46:00Z'
 FIXER = {'login': 'copilot-swe-agent', '__typename': 'Bot'}
 # The superseded daily pull request whose head is one of #7's commits.
-SUPERSEDED = {'number': 5, 'state': 'CLOSED', 'headRefName': 'feature/daily-scrape-0-1', 'headRefOid': CARRIED}
+SUPERSEDED = {'number': 5, 'merged_at': None, 'head': {'ref': 'feature/daily-scrape-0-1', 'sha': CARRIED}}
 
 
 class FakeGitHub:
@@ -76,8 +76,10 @@ class FakeGitHub:
             return 0, json.dumps(events)
         if args[0] == 'api' and '/pulls/7/commits?' in args[1]:
             return 0, json.dumps([{'sha': sha} for sha in self.options.get('commits', [HEAD])])
-        if args[:2] == ['pr', 'list']:
-            return 0, json.dumps(self.options.get('pulls', []))
+        if args[0] == 'api' and '/pulls?state=all&base=develop&' in args[1]:
+            # A full first page of other pull requests: the superseded one is on the second.
+            other = {'number': 3, 'merged_at': '2026-11-09T03:40:00Z', 'head': {'ref': 'feature/site', 'sha': 'e' * 40}}
+            return 0, json.dumps([other] * 100 if args[1].endswith('page=1') else self.options.get('pulls', []))
         if args[:3] == ['api', '-X', 'DELETE']:
             self.deleted.append(args[3])
             return 0, ''
@@ -267,8 +269,9 @@ class PublishDailyDataTests(unittest.TestCase):
         self.assertIn('#5, whose data this pull request carries, has an open review thread', log)
         self.assertIn('Resolve the thread on #5', log)
         # Merged, not a daily scrape, or not among this pull request's commits: not carried.
-        for other in (dict(SUPERSEDED, state='MERGED'), dict(SUPERSEDED, headRefName='feature/site'),
-                      dict(SUPERSEDED, headRefOid='d' * 40)):
+        for other in (dict(SUPERSEDED, merged_at='2026-11-09T03:40:00Z'),
+                      dict(SUPERSEDED, head={'ref': 'feature/site', 'sha': CARRIED}),
+                      dict(SUPERSEDED, head={'ref': 'feature/daily-scrape-0-1', 'sha': 'd' * 40})):
             code, github, _ = self.run_publish(commits=[CARRIED, HEAD], pulls=[other], carried_threads=1)
             self.assertEqual((code, github.merged), (0, [7, 8]), other)
 

@@ -290,7 +290,8 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.PAT_TOKEN }}
         run: |
-          gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open --json number,headRefName,headRefOid \
+          gh pr list --repo "$GITHUB_REPOSITORY" --base develop --state open --limit 1000 \
+            --json number,headRefName,headRefOid \
             --jq '.[] | select(.headRefName | startswith("feature/daily-scrape-")) | "\(.number) \(.headRefName) \(.headRefOid)"' \
             | while read -r NUMBER NAME OID; do
                 [ "$NAME" != "${{ steps.pr.outputs.branch }}" ] || continue
