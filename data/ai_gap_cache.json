@@ -424,14 +424,18 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
-      "score": null
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "Claude Opus 5.5 column, BrowseComp row; the paper reproduces a published result, but its original effort and harness are not independently established here.",
+      "score": "90.8%",
+      "source_type": "paper",
+      "source_url": "https://borowiecki.dev/pdf/2611.21072"
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "DeepSWE": {
@@ -476,20 +480,20 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMMU-Pro": {
@@ -500,14 +504,14 @@
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -742,13 +746,13 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Column: DeepSeek V4 Pro (Reasoning: Max); the comparative report was submitted August 5, 2026.",
+      "notes": "Column: DeepSeek V4 Pro (Reasoning: max). The comparative report attributes the score to a baseline leaderboard; Artificial Analysis reports an avg@5 configuration. Published in this report on August 5, 2026.",
       "score": "76.5%",
       "source_type": "paper",
-      "source_url": "https://arxiv.org/html/2608.04505"
+      "source_url": "https://arxiv.org/html/2608.04505v1"
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
@@ -906,13 +910,13 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "GLM-5.3 column, Table 1; effort and search configuration not specified. Published October 20, 2026.",
-      "score": "76.2%",
-      "source_type": "paper",
-      "source_url": "https://arxiv.org/html/2610.28578v1"
+      "notes": "GLM-5.3 column in LongCat's comparative table; LongCat measured the result, but the peer-model effort and evaluation configuration are not specified. Publication date unknown.",
+      "score": "81.0%",
+      "source_type": "vendor_blog",
+      "source_url": "https://longcat.ai/blog/longcat-2.5/"
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
@@ -966,13 +970,13 @@
   "GLM-5.3-Flash": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-15T03:29:15.813824+00:00",
-      "confidence": "medium",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "high",
       "llm_model": "gpt-6.1-terra",
-      "notes": "GLM-5.3-Flash column, BrowseComp row in NVIDIA’s comparative evaluation; NeMo Gym harness. Reasoning effort and individual result publication date are not specified.",
-      "score": "86.6%",
-      "source_type": "model_card",
-      "source_url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-3.5-Super-VL-120B-A12B-BF16"
+      "notes": "GLM-5.3-Flash column in the Sage S2.1 Flash technical report. In-house ReAct harness with search, visit and Python tools; up to 500 steps, 256K context and 64K output. Reasoning effort not specified. Verified in the November 17, 2026 revision.",
+      "score": "88.3%",
+      "source_type": "paper",
+      "source_url": "https://arxiv.org/html/2611.21072v2"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1286,15 +1290,23 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
-      "score": null
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPT-6 Luna column; evaluator configuration and reasoning effort are not specified for this result; publication date unknown.",
+      "score": "83.6%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
-      "score": null
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPT-6 Luna column; Charxiv RQ original configuration, without Python; reasoning effort and publication date unknown.",
+      "score": "81.8%",
+      "source_type": "model_card",
+      "source_url": "https://thinkingmachines.ai/model-card/inkling-2-small/"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1328,20 +1340,20 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMMU-Pro": {
@@ -1352,20 +1364,24 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
-      "score": null
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "medium",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "GPT-6 Luna (max) row; Mercor mini-swe-agent with 1,000 steps; reported October 7, 2026.",
+      "score": "76.1%",
+      "source_type": "third_party_leaderboard",
+      "source_url": "https://benchmarkregistry.org/benchmarks/swe-bench/verified-mercor-mini-swe-agent?result=09515a059f9719bf9e1169d9fff11aa98e9fbc8b746a0d3f0f24bf8d99a16b67&view=history"
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -1640,19 +1656,15 @@
     },
     "Agents’ Last Exam": {
       "benchmark": "Agents’ Last Exam",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "confidence": "medium",
-      "llm_model": "gpt-5.6-terra",
-      "notes": "Pass@1 on the 130 public BrowseComp tasks, using the Mercor APEX web-research harness; Gemini 3.8 Flash at high effort (519 evaluation samples). The leaderboard records the result date as 2026-10-03.",
-      "score": "83.1%",
-      "source_type": "third_party_leaderboard",
-      "source_url": "https://benchmarklist.com/benchmarks/browsecomp/"
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
+      "score": null
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -1676,20 +1688,20 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-10-18T03:36:12.929311+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -1706,14 +1718,14 @@
     },
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "CharXiv-R": {
       "benchmark": "CharXiv-R",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "DeepSWE": {
@@ -1748,20 +1760,20 @@
     },
     "IFBench": {
       "benchmark": "IFBench",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "LiveCodeBench v6": {
       "benchmark": "LiveCodeBench v6",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMLU-Pro": {
       "benchmark": "MMLU-Pro",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "MMMU-Pro": {
@@ -1772,14 +1784,14 @@
     },
     "OfficeQA Pro": {
       "benchmark": "OfficeQA Pro",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     },
     "Terminal-Bench 2.1": {
@@ -1794,8 +1806,8 @@
     },
     "Toolathlon": {
       "benchmark": "Toolathlon",
-      "cached_at": "2026-11-01T03:29:13.050830+00:00",
-      "llm_model": "gpt-5.6-terra",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "llm_model": "gpt-6.1-terra",
       "score": null
     }
   },
@@ -1809,6 +1821,18 @@
       "score": "45.9%",
       "source_type": "official_leaderboard",
       "source_url": "https://snorkel.ai/leaderboard/agents-last-exam/"
+    }
+  },
+  "Gemini 4 Hydrogen": {
+    "ARC-AGI-2": {
+      "benchmark": "ARC-AGI-2",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
+      "confidence": "high",
+      "llm_model": "gpt-6.1-terra",
+      "notes": "ARC Prize semi-private evaluation; xhigh reasoning. Individual result publication date not independently verified.",
+      "score": "92.5%",
+      "source_type": "official_leaderboard",
+      "source_url": "https://arcprize.org/results/google-gemini-4-hydrogen"
     }
   },
   "Grok 4.6": {
@@ -2724,13 +2748,13 @@
   "Qwen3.8-27B": {
     "BrowseComp": {
       "benchmark": "BrowseComp",
-      "cached_at": "2026-11-15T03:29:15.813824+00:00",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Table 3, Qwen3.8-27B with trained residual memory: full 1,266-question set, Codex CLI harness, one run, GPT-5.6-Sol judge; reasoning effort not specified. The actor weights remain fixed, but the configuration adds a trained memory component. Result publication date not independently verified.",
-      "score": "77.0%",
+      "notes": "Qwen3.8-27B, without residual memory: full 1,266-task set, one run, Codex CLI harness, GPT-5.6-Sol judge; reasoning effort not reported. Published October 8, 2026. The higher residual-memory result uses an additional trained network.",
+      "score": "74.0%",
       "source_type": "paper",
-      "source_url": "https://arxiv.org/abs/2610.11287"
+      "source_url": "https://arxiv.org/html/2610.11287v1"
     },
     "DeepSWE": {
       "benchmark": "DeepSWE",
@@ -2800,13 +2824,13 @@
     },
     "SWE-bench Verified": {
       "benchmark": "SWE-bench Verified",
-      "cached_at": "2026-11-10T21:30:58.533375+00:00",
+      "cached_at": "2026-11-22T03:29:33.298009+00:00",
       "confidence": "medium",
       "llm_model": "gpt-6.1-terra",
-      "notes": "Original BF16 model; thinking on, mini-swe-agent 2.4.6, 500 instances, one run, Apptainer grading; 16 reference patches did not pass in that setup. Publication date unknown.",
-      "score": "79.8%",
+      "notes": "BF16 base (354 GB) row; xhigh reasoning. The evaluator’s card does not detail the SWE-bench harness. Individual result publication date unknown.",
+      "score": "82.8%",
       "source_type": "model_card",
-      "source_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-P48NVFP4-MoESQ/blob/main/README.md"
+      "source_url": "https://huggingface.co/ISTA-DASLab/Qwen3.8-Flash-Next-GSQ-RCO-Coder-GGUF"
     }
   },
   "Seed 2.1 Pro": {
