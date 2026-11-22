@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-21T03:34:38.930175+00:00",
+  "lastUpdated": "2026-11-22T03:39:37.399475+00:00",
   "items": [
+    {
+      "id": "07dde3d5a95536d2",
+      "headline": "Can Anthropic afford to put safety first?",
+      "url": "https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure",
+      "source": "The Verge",
+      "country": "US",
+      "publishedAt": "2026-11-21 15:00:00",
+      "relevanceScore": 0.45
+    },
     {
       "id": "f50934946f4e5a3f",
       "headline": "Chip supply chain warns of broader disruption from new US export controls",
@@ -171,15 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-11-10 13:27:04",
       "relevanceScore": 0.32
-    },
-    {
-      "id": "bfbf7905205db2a5",
-      "headline": "Nvidia CEO Admits Affair Amid Chinese Espionage Probe At $4.5 Trillion AI Giant (Worthy News Investigation)",
-      "url": "https://www.worthynews.com/118844-nvidia-ceo-admits-affair-amid-chinese-espionage-probe-at-4-5-trillion-ai-giant-worthy-news-investigation",
-      "source": "Worthy Christian News",
-      "country": "CN",
-      "publishedAt": "2026-11-09 14:47:45",
-      "relevanceScore": 0.24
     }
   ]
 }
