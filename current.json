@@ -64,7 +64,7 @@
   ],
   "history": [
     {
-      "timestamp": "2026-11-22T03:38:44+00:00",
+      "timestamp": "2026-11-23T03:36:21+00:00",
       "teams": {
         "US": [
           {
@@ -161,7 +161,7 @@
         "CN": [
           {
             "modelId": "27c9865821933f9dafd1",
-            "profileId": "2e40c1f3f63bb0886532",
+            "profileId": "7c43305672fa799df219",
             "avgIq": 71.39,
             "value": 109.82,
             "unified": 762.82,

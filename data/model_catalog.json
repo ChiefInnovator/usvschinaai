@@ -39033,6 +39033,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "7c43305672fa799df219": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "19c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "6.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -103890,9 +103909,9 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
+          "License": "Closed",
           "Country": "🇺🇸",
           "Multimodal": "Yes",
-          "License": "Closed",
           "Model": "GPT-5.5 Pro",
           "KnowledgeCutoff": "Dec. 2025"
         },
@@ -106013,9 +106032,9 @@
           "Input$/M": "0.1",
           "Output$/M": "0.5",
           "Country": "🇺🇸",
+          "Context": "1.1M",
           "Multimodal": "Yes",
           "Model": "GPT-6 Luna",
-          "Context": "1.1M",
           "KnowledgeCutoff": "May 2026"
         }
       },
