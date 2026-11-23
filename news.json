@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-22T03:39:37.399475+00:00",
+  "lastUpdated": "2026-11-23T03:37:43.409158+00:00",
   "items": [
+    {
+      "id": "6843fd6a404f16da",
+      "headline": "Alice Huang Has Links to Nvidia Chips Smuggling Underworld: Report",
+      "url": "https://www.benzinga.com/news/26/11/63517174/alice-huang-has-links-to-nvidia-chips-smuggling-underworld-report",
+      "source": "Benzinga",
+      "country": "Both",
+      "publishedAt": "2026-11-22 15:30:07",
+      "relevanceScore": 0.32
+    },
+    {
+      "id": "b00935c4c3fa9882",
+      "headline": "3 Canadian Rare Earth Stocks With Revenue Growth Up To 68%",
+      "url": "https://biztoc.com/x/e92ea953338f5067",
+      "source": "Biztoc",
+      "country": "Both",
+      "publishedAt": "2026-11-22 05:04:45",
+      "relevanceScore": 0.23
+    },
     {
       "id": "07dde3d5a95536d2",
       "headline": "Can Anthropic afford to put safety first?",
@@ -162,24 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-11-10 15:15:00",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "1f83a221b9a5c05d",
-      "headline": "Nvidia probes CEO Jensen Huang over affair with alleged Chinese spy",
-      "url": "https://phayul.com/2026/11/nvidia-probes-ceo-jensen-huang-over-affair-with-alleged-chinese-spy/",
-      "source": "Phayul",
-      "country": "CN",
-      "publishedAt": "2026-11-10 13:54:45",
-      "relevanceScore": 0.4
-    },
-    {
-      "id": "b490900d1d078f9b",
-      "headline": "FBI looks into Nvidia CEO’s alleged spy affair as report claims $7.5 billion in smuggled AI chips to China",
-      "url": "https://www.digitaltrends.com/computing/fbi-looks-into-nvidia-ceos-alleged-spy-affair-as-report-claims-7-5-billion-in-smuggled-chips-to-china/",
-      "source": "Digitaltrends",
-      "country": "CN",
-      "publishedAt": "2026-11-10 13:27:04",
-      "relevanceScore": 0.32
     }
   ]
 }
