@@ -39052,6 +39052,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15"
+        },
+        "6f3c11c9c695670cf906": {
+          "model": "GLM-5.3-Flash",
+          "organization": "Zhipu AI",
+          "link": "https://llm-stats.com/models/glm-5.3-flash",
+          "origin": "CN",
+          "description": "GLM-5.3-Flash by Zhipu AI — released Aug 26, 2026; $0.150/M input, $0.030/M cached input, $0.500/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-08-26",
+          "Model": "GLM-5.3-Flash",
+          "Country": "🇨🇳",
+          "Context": "1.0M",
+          "Output$/M": "0.5",
+          "Speed": "20c/s",
+          "License": "Open",
+          "Parameters(B)": "320",
+          "Latency": "6.4s",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "0.15"
         }
       },
       "benchmarks": {
@@ -70072,6 +70091,25 @@
           "License": "Closed",
           "Parameters(B)": "-",
           "Latency": "10.4s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
+        },
+        "4f51340fc8f225a4d980": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "19c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "17.4s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
@@ -103910,10 +103948,10 @@
           "Input$/M": "—",
           "Output$/M": "—",
           "License": "Closed",
-          "Country": "🇺🇸",
+          "KnowledgeCutoff": "Dec. 2025",
           "Multimodal": "Yes",
           "Model": "GPT-5.5 Pro",
-          "KnowledgeCutoff": "Dec. 2025"
+          "Country": "🇺🇸"
         },
         "ac70abc4f31af4e7aedb": {
           "model": "GPT-5.5 Pro",
@@ -106031,11 +106069,11 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Country": "🇺🇸",
+          "KnowledgeCutoff": "May 2026",
           "Context": "1.1M",
           "Multimodal": "Yes",
           "Model": "GPT-6 Luna",
-          "KnowledgeCutoff": "May 2026"
+          "Country": "🇺🇸"
         }
       },
       "benchmarks": {
@@ -123731,7 +123769,27 @@
     },
     "e9b6998ab575f10a29d1": {
       "name": "Qwen4-Max",
-      "profiles": {},
+      "profiles": {
+        "c629554b80faece5c4ce": {
+          "model": "Qwen4-Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen4-max",
+          "origin": "CN",
+          "description": "",
+          "created": "2026-11-16",
+          "Model": "Qwen4-Max",
+          "Country": "🇨🇳",
+          "Context": "983.6k",
+          "Output$/M": "4.5",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.5"
+        }
+      },
       "benchmarks": {
         "agents-last-exam": {
           "69acf51fc463083e": {
@@ -123806,6 +123864,39 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-17"
+          }
+        },
+        "gpqa-diamond": {
+          "ba3f6f388244c8ee": {
+            "benchmark": "GPQA Diamond",
+            "score": 94.0,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Epoch AI evaluation of qwen4-max_xhigh; evaluation started 2026-11-20",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row qwen4-max_xhigh."
+          }
+        },
+        "frontiermath-1-3-v2": {
+          "8b2888180bc4fc6c": {
+            "benchmark": "FrontierMath — Tiers 1–3 v2",
+            "score": 78.6,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Epoch AI evaluation of qwen4-max_xhigh; evaluation started 2026-11-20",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-12",
+            "modelAvailableFrom": "2026-11-24",
+            "notes": "Epoch AI benchmark dump, frontiermath_tiers_1_3_v2.csv, row qwen4-max_xhigh."
           }
         }
       }
@@ -123957,6 +124048,25 @@
           "description": "GPT-6.2 Astra by OpenAI — released Nov 17, 2026; $8.00/M input, $0.400/M cached input, $40.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
           "created": "2026-11-17",
           "Model": "GPT-6.2 Astra\nNEW",
+          "Country": "🇺🇸",
+          "Context": "1.1M",
+          "Output$/M": "40",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "-",
+          "Latency": "–",
+          "KnowledgeCutoff": "May 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "8"
+        },
+        "1f3203531d20b87a1200": {
+          "model": "GPT-6.2 Astra",
+          "organization": "OpenAI",
+          "link": "https://llm-stats.com/models/gpt-6.2-astra",
+          "origin": "US",
+          "description": "GPT-6.2 Astra by OpenAI — released Nov 17, 2026; $8.00/M input, $0.400/M cached input, $40.00/M output; 1.1M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-17",
+          "Model": "GPT-6.2 Astra",
           "Country": "🇺🇸",
           "Context": "1.1M",
           "Output$/M": "40",
@@ -124237,6 +124347,103 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-20"
+          }
+        }
+      }
+    },
+    "cd50a525d47a0b732588": {
+      "name": "Inkling 2 Mini",
+      "profiles": {},
+      "benchmarks": {
+        "deepswe-1.1": {
+          "de520b94d05bc4f0": {
+            "benchmark": "DeepSWE 1.1",
+            "score": 48.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "benchmarkAvailableFrom": "2026-06-15",
+            "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "terminal-bench-4.0": {
+          "3d5ec3fab3e9bb92": {
+            "benchmark": "Terminal-Bench 4.0",
+            "score": 5.6,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "browsecomp": {
+          "8a3e4abc6318069e": {
+            "benchmark": "BrowseComp",
+            "score": 79.0,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "mmmu-pro": {
+          "d82a5d54d31e76b9": {
+            "benchmark": "MMMU-Pro",
+            "score": 74.9,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "arc-agi-2": {
+          "1a8b02e95e1cce2f": {
+            "benchmark": "ARC-AGI-2",
+            "score": 49.3,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "swe-bench-verified": {
+          "92ef6dcd687d277c": {
+            "benchmark": "SWE-bench Verified",
+            "score": 79.2,
+            "unit": "percent",
+            "source": "https://llm-stats.com/models/inkling-2-mini",
+            "availableFrom": "2026-11-24",
+            "retrievedAt": "2026-11-24",
+            "configuration": "Exact model detail-page benchmark identity and normalized percentage.",
+            "kind": "published",
+            "sourceType": "third_party_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-24"
           }
         }
       }
