@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-24T03:31:11.180216+00:00",
+  "lastUpdated": "2026-11-25T03:32:15.935400+00:00",
   "items": [
     {
       "id": "6843fd6a404f16da",
@@ -171,15 +171,6 @@
       "country": "Both",
       "publishedAt": "2026-11-11 14:54:48",
       "relevanceScore": 0.4
-    },
-    {
-      "id": "37dd0974f20190aa",
-      "headline": "Nvidia Email Altered US Probe Into China Chip Smuggling",
-      "url": "https://www.newser.com/story/399729/nvidia-email-altered-us-probe-into-china-chip-smuggling.html",
-      "source": "Newser",
-      "country": "CN",
-      "publishedAt": "2026-11-10 15:15:00",
-      "relevanceScore": 0.24
     }
   ]
 }
