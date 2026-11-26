@@ -2,17 +2,17 @@
   "format": "price_vs_power",
   "palette": "newsprint",
   "weight": 1,
-  "date": "2026-11-25",
-  "timestamp": "2026-11-25T03:31:05+00:00",
+  "date": "2026-11-26",
+  "timestamp": "2026-11-26T03:30:18+00:00",
   "slides": [
-    "2026-11-25-1-price_vs_power-newsprint.png",
-    "2026-11-25-2-leaderboard-newsprint.png"
+    "2026-11-26-1-price_vs_power-newsprint.png",
+    "2026-11-26-2-leaderboard-newsprint.png"
   ],
   "urls": [
-    "https://usvschina.ai/social/2026-11-25-1-price_vs_power-newsprint.png",
-    "https://usvschina.ai/social/2026-11-25-2-leaderboard-newsprint.png"
+    "https://usvschina.ai/social/2026-11-26-1-price_vs_power-newsprint.png",
+    "https://usvschina.ai/social/2026-11-26-2-leaderboard-newsprint.png"
   ],
   "caption": "Team USA leads by 2048\n\n• #1 overall: Claude Fable 5.2 at 900 Unified\n• Team USA 4958 vs Team China 2910\n• 6 US and 4 Chinese models in the top 10\n\nWhich lab would you bet on for the rest of 2026?\n\n#AI #ArtificialIntelligence #USvsChina #LLM #AIRace #TechNews",
   "caption_source": "deterministic",
-  "generated_at": "2026-11-25T03:31:05+00:00"
+  "generated_at": "2026-11-26T03:30:18+00:00"
 }
