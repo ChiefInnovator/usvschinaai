@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-25T03:32:15.935400+00:00",
+  "lastUpdated": "2026-11-26T03:31:43.864306+00:00",
   "items": [
+    {
+      "id": "e25c2595ded65250",
+      "headline": "US Stock Market: Nvidia, Dell & Anthropic Slide as AI Spending Fears Grow",
+      "url": "https://www.analyticsinsight.net/stocks/us-stock-market-nvidia-dell-anthropic-slide-as-ai-spending-fears-grow",
+      "source": "Analytics And Insight",
+      "country": "US",
+      "publishedAt": "2026-11-25 15:00:00",
+      "relevanceScore": 0.46
+    },
+    {
+      "id": "0346cfd25cde7fa0",
+      "headline": "Trump Backs Nvidia CEO Jensen Huang’s Return Amid Concerns Over China’s Access to US AI Technology",
+      "url": "https://www.hrnww.com/?p=34289",
+      "source": "Human Rights News Worldwide Hrnw News Agency",
+      "country": "Both",
+      "publishedAt": "2026-11-25 14:51:05",
+      "relevanceScore": 0.24
+    },
     {
       "id": "6843fd6a404f16da",
       "headline": "Alice Huang Has Links to Nvidia Chips Smuggling Underworld: Report",
@@ -162,15 +180,6 @@
       "country": "CN",
       "publishedAt": "2026-11-13 15:00:00",
       "relevanceScore": 0.24
-    },
-    {
-      "id": "95b4ffc2589b89e0",
-      "headline": "China Keeps Making End Runs Around America’s Chip Export Controls: REPORT",
-      "url": "https://ijr.com/journals/dcnf/china-keeps-making-end-runs-around-america-s-chip-export-controls-report-cc1d6181",
-      "source": "Ijr",
-      "country": "Both",
-      "publishedAt": "2026-11-11 14:54:48",
-      "relevanceScore": 0.4
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "scoringRevision": "bbab35b41bf3f30f6e28d3ac2c17e46091ada4d1b4c14175f9e2257d972791f8",
-  "generationId": "ed76a3bc519dd0396400e9592af9d55889cdf095090f502e9aa2adc67cf8ff8c",
-  "catalogFingerprint": "82bfd8118d05dff78cd89af3953e3ddbc0859425d5caea978c2619d331ba7838",
+  "generationId": "323e479ab244777f49b52dc87d053c2a394236a5ac756a9454fc7ae79debae62",
+  "catalogFingerprint": "cbc4157757b5f31c6662101f8b0aec833e043f693b7fc90bdb932ff15acafa35",
   "metadata": {
     "title": "US vs CHINA AI",
     "footerText": "Avg IQ: seventeen configured benchmark weights; missing results count as zero. Source: llm-stats and verified benchmark evidence.",
@@ -171,7 +171,7 @@
     }
   ],
   "current": {
-    "timestamp": "2026-11-25T03:31:05+00:00",
+    "timestamp": "2026-11-26T03:30:18+00:00",
     "scoring": {
       "version": 4,
       "avgIqWeights": {
@@ -313,11 +313,11 @@
           "Input$/M": "8",
           "modelId": "1880a0ee12458f6f57e9",
           "profileId": "b0fbbda9dfdb63655314",
-          "provisional": false,
-          "unified": 900.16,
-          "value": 1.69,
           "avgIq": 80.92,
-          "coverage": "7/17"
+          "coverage": "7/17",
+          "unified": 900.16,
+          "provisional": false,
+          "value": 1.69
         },
         {
           "model": "Gemini 4 Argon",
@@ -339,11 +339,11 @@
           "Input$/M": "2",
           "modelId": "a276059f28b67f49e058",
           "profileId": "99b99a43627696578d62",
-          "provisional": false,
-          "unified": 897.26,
-          "value": 6.72,
           "avgIq": 80.61,
-          "coverage": "9/17"
+          "coverage": "9/17",
+          "unified": 897.26,
+          "provisional": false,
+          "value": 6.72
         },
         {
           "model": "Claude Opus 5.5",
@@ -365,11 +365,11 @@
           "Input$/M": "4",
           "modelId": "bf6872882b4e0722ae12",
           "profileId": "16fafe8522df4fab32c0",
-          "provisional": false,
-          "unified": 860.83,
-          "value": 3.3,
           "avgIq": 79.25,
-          "coverage": "9/17"
+          "coverage": "9/17",
+          "unified": 860.83,
+          "provisional": false,
+          "value": 3.3
         },
         {
           "model": "Claude Sonnet 5.5",
@@ -391,11 +391,11 @@
           "Input$/M": "2",
           "modelId": "96e3cd24328c4bf62746",
           "profileId": "b8b03e694e8bafb8353a",
-          "provisional": false,
-          "unified": 823.81,
-          "value": 6.47,
           "avgIq": 77.63,
-          "coverage": "8/17"
+          "coverage": "8/17",
+          "unified": 823.81,
+          "provisional": false,
+          "value": 6.47
         },
         {
           "model": "Gemini 3.8 Flash",
@@ -408,20 +408,20 @@
           "Country": "🇺🇸",
           "Context": "1.0M",
           "Output$/M": "3.75",
-          "Speed": "30c/s",
+          "Speed": "29c/s",
           "License": "Closed",
           "Parameters(B)": "-",
-          "Latency": "17.7s",
+          "Latency": "17.3s",
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75",
           "modelId": "e43da5e7a8e3d9626107",
-          "profileId": "1df7fdc9721dda6c9d60",
-          "provisional": false,
-          "unified": 791.1,
-          "value": 16.87,
+          "profileId": "9405f4489829e53d9331",
           "avgIq": 75.92,
-          "coverage": "12/17"
+          "coverage": "12/17",
+          "unified": 791.1,
+          "provisional": false,
+          "value": 16.87
         },
         {
           "model": "GPT-6 Luna",
@@ -432,18 +432,18 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "Context": "1.1M",
           "KnowledgeCutoff": "May 2026",
           "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
+          "Context": "1.1M",
           "Multimodal": "Yes",
           "modelId": "822c760d6aa27b46cc0b",
           "profileId": "c462fc8255ec2f189c92",
-          "provisional": false,
-          "unified": 684.97,
-          "value": 113.47,
           "avgIq": 68.08,
-          "coverage": "9/17"
+          "coverage": "9/17",
+          "unified": 684.97,
+          "provisional": false,
+          "value": 113.47
         },
         {
           "model": "GPT-5.5 Pro",
@@ -454,18 +454,18 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "License": "Closed",
           "KnowledgeCutoff": "Dec. 2025",
           "Country": "🇺🇸",
+          "License": "Closed",
           "Model": "GPT-5.5 Pro",
           "Multimodal": "Yes",
           "modelId": "1fbd36e112c0244fe56a",
           "profileId": "5823d2bbfb6ba0a59e75",
-          "provisional": false,
-          "unified": 549.62,
-          "value": 0.0,
           "avgIq": 66.64,
-          "coverage": "5/17"
+          "coverage": "5/17",
+          "unified": 549.62,
+          "provisional": false,
+          "value": 0.0
         },
         {
           "model": "GPT-6.2 Astra",
@@ -487,11 +487,11 @@
           "Input$/M": "8",
           "modelId": "9b51522f4194e58f3a09",
           "profileId": "9b28fb6fbcf9cf2c89cf",
-          "provisional": false,
-          "unified": 544.96,
-          "value": 1.38,
           "avgIq": 66.45,
-          "coverage": "6/17"
+          "coverage": "6/17",
+          "unified": 544.96,
+          "provisional": false,
+          "value": 1.38
         },
         {
           "model": "Gemini 4 Carbon",
@@ -513,11 +513,11 @@
           "Input$/M": "2",
           "modelId": "2695f11d72021d3a19e7",
           "profileId": "26fcae16abc02d9b8967",
-          "provisional": false,
-          "unified": 519.08,
-          "value": 5.44,
           "avgIq": 65.25,
-          "coverage": "6/17"
+          "coverage": "6/17",
+          "unified": 519.08,
+          "provisional": false,
+          "value": 5.44
         },
         {
           "model": "Inkling 2 Small",
@@ -539,11 +539,11 @@
           "Input$/M": "0.3",
           "modelId": "055feb5d450668c49c20",
           "profileId": "8bfb1968c1134058d378",
-          "provisional": false,
-          "unified": 485.07,
-          "value": 47.94,
           "avgIq": 62.32,
-          "coverage": "9/17"
+          "coverage": "9/17",
+          "unified": 485.07,
+          "provisional": false,
+          "value": 47.94
         }
       ],
       "CN": [
@@ -558,20 +558,20 @@
           "Country": "🇨🇳",
           "Context": "1.0M",
           "Output$/M": "0.5",
-          "Speed": "20c/s",
+          "Speed": "29c/s",
           "License": "Open",
           "Parameters(B)": "320",
-          "Latency": "6.4s",
+          "Latency": "5.3s",
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "0.15",
           "modelId": "27c9865821933f9dafd1",
-          "profileId": "6f3c11c9c695670cf906",
-          "provisional": false,
-          "unified": 762.82,
-          "value": 109.82,
+          "profileId": "0564e334c28df9001ab0",
           "avgIq": 71.39,
-          "coverage": "17/17"
+          "coverage": "17/17",
+          "unified": 762.82,
+          "provisional": false,
+          "value": 109.82
         },
         {
           "model": "DeepSeek-V4.1-Flash-1017",
@@ -593,11 +593,11 @@
           "Input$/M": "0.3",
           "modelId": "5a14beb8aa3e7cb2f50a",
           "profileId": "68b0ab211dd098f34866",
-          "provisional": false,
-          "unified": 746.17,
-          "value": 48.62,
           "avgIq": 72.93,
-          "coverage": "10/17"
+          "coverage": "10/17",
+          "unified": 746.17,
+          "provisional": false,
+          "value": 48.62
         },
         {
           "model": "Kimi K3",
@@ -619,11 +619,11 @@
           "Input$/M": "2.85",
           "modelId": "d33cd77526f9f2073554",
           "profileId": "678cdfc0653f6056e075",
-          "provisional": false,
-          "unified": 740.11,
-          "value": 4.34,
           "avgIq": 74.3,
-          "coverage": "17/17"
+          "coverage": "17/17",
+          "unified": 740.11,
+          "provisional": false,
+          "value": 4.34
         },
         {
           "model": "DeepSeek-V4-Pro-0813",
@@ -645,11 +645,11 @@
           "Input$/M": "1.3",
           "modelId": "7cc8168d3be894837e46",
           "profileId": "a61a1b6a35d84a21c6ba",
-          "provisional": false,
-          "unified": 661.36,
-          "value": 18.1,
           "avgIq": 70.59,
-          "coverage": "14/17"
+          "coverage": "14/17",
+          "unified": 661.36,
+          "provisional": false,
+          "value": 18.1
         },
         {
           "model": "Qwen4-Max",
@@ -671,11 +671,11 @@
           "Input$/M": "1.5",
           "modelId": "e9b6998ab575f10a29d1",
           "profileId": "c629554b80faece5c4ce",
-          "provisional": false,
-          "unified": 420.93,
-          "value": 10.18,
           "avgIq": 61.08,
-          "coverage": "6/17"
+          "coverage": "6/17",
+          "unified": 420.93,
+          "provisional": false,
+          "value": 10.18
         },
         {
           "model": "GLM-5.3",
@@ -697,11 +697,11 @@
           "Input$/M": "1.2",
           "modelId": "8c1207eb630867042536",
           "profileId": "545915ab73ce3c75f2c4",
-          "provisional": false,
-          "unified": 417.42,
-          "value": 11.71,
           "avgIq": 60.88,
-          "coverage": "12/17"
+          "coverage": "12/17",
+          "unified": 417.42,
+          "provisional": false,
+          "value": 11.71
         },
         {
           "model": "DeepSeek-V4-Pro-Max",
@@ -723,11 +723,11 @@
           "Input$/M": "1.3",
           "modelId": "088f3a563d79d06df736",
           "profileId": "1a73d20d9bbed839c9ed",
-          "provisional": false,
-          "unified": 346.06,
-          "value": 14.83,
           "avgIq": 57.85,
-          "coverage": "12/17"
+          "coverage": "12/17",
+          "unified": 346.06,
+          "provisional": false,
+          "value": 14.83
         },
         {
           "model": "Qwen3.8-27B",
@@ -749,11 +749,11 @@
           "Input$/M": "0.4",
           "modelId": "175a962cb4b24bfdbde0",
           "profileId": "174b8a6ef33c99241f47",
-          "provisional": false,
-          "unified": 150.92,
-          "value": 14.68,
           "avgIq": 49.91,
-          "coverage": "12/17"
+          "coverage": "12/17",
+          "unified": 150.92,
+          "provisional": false,
+          "value": 14.68
         },
         {
           "model": "Seed 2.1 Pro",
@@ -775,11 +775,11 @@
           "Input$/M": "—",
           "modelId": "a3f431c0f97d8b58a9f9",
           "profileId": "82583a90551e55a2223c",
-          "provisional": false,
-          "unified": 139.06,
-          "value": 0.0,
           "avgIq": 49.91,
-          "coverage": "10/17"
+          "coverage": "10/17",
+          "unified": 139.06,
+          "provisional": false,
+          "value": 0.0
         },
         {
           "model": "Qwen3.8 Flash",
@@ -801,16 +801,34 @@
           "Input$/M": "0.15",
           "modelId": "b56379bf82f1c28fab2e",
           "profileId": "3ffa90ff3c9022e65417",
-          "provisional": false,
-          "unified": 62.42,
-          "value": 71.35,
           "avgIq": 44.24,
-          "coverage": "9/17"
+          "coverage": "9/17",
+          "unified": 62.42,
+          "provisional": false,
+          "value": 71.35
         }
       ]
     }
   },
   "history": [
+    {
+      "timestamp": "2026-11-26T03:30:18+00:00",
+      "scoringRevision": "bbab35b41bf3f30f6e28d3ac2c17e46091ada4d1b4c14175f9e2257d972791f8",
+      "scores": {
+        "US": {
+          "total": 4958.13,
+          "count": 6,
+          "avgIq": 77.06833333333333,
+          "avgValue": 24.753333333333334
+        },
+        "CN": {
+          "total": 2910.46,
+          "count": 4,
+          "avgIq": 72.30250000000001,
+          "avgValue": 45.22
+        }
+      }
+    },
     {
       "timestamp": "2026-11-25T03:31:05+00:00",
       "scoringRevision": "bbab35b41bf3f30f6e28d3ac2c17e46091ada4d1b4c14175f9e2257d972791f8",
