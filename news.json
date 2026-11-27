@@ -1,6 +1,24 @@
 {
-  "lastUpdated": "2026-11-26T03:31:43.864306+00:00",
+  "lastUpdated": "2026-11-27T03:32:25.565051+00:00",
   "items": [
+    {
+      "id": "78b63cc86410b07d",
+      "headline": "MIT Professor: Anthropic Staff Talks Openly About Overthrowing the U.S. Government, Ruling the World",
+      "url": "https://www.breitbart.com/tech/2026/11/26/mit-professor-anthropic-staff-talks-openly-about-overthrowing-the-u-s-government-ruling-the-world/",
+      "source": "Brietbart",
+      "country": "US",
+      "publishedAt": "2026-11-26 14:43:19",
+      "relevanceScore": 0.3
+    },
+    {
+      "id": "471b9d928506fb56",
+      "headline": "US Chip Curbs Can't Shake China's Appetite For Nvidia. Another Chinese Firm Is Buying 5,000 Blackwell GPUs.",
+      "url": "https://www.ibtimes.com/weimob-buying-5000-nvidia-blackwell-gpus-3810225",
+      "source": "International Business Times",
+      "country": "CN",
+      "publishedAt": "2026-11-26 12:37:05",
+      "relevanceScore": 0.31
+    },
     {
       "id": "e25c2595ded65250",
       "headline": "US Stock Market: Nvidia, Dell & Anthropic Slide as AI Spending Fears Grow",
@@ -162,24 +180,6 @@
       "country": "Both",
       "publishedAt": "2026-11-14 11:00:00",
       "relevanceScore": 0.55
-    },
-    {
-      "id": "dba798a850286a54",
-      "headline": "DeepSeek And Moonshot AI Models Appear To Carry Hidden NVIDIA Blackwell Fingerprints In Their Starting Weights,...",
-      "url": "https://wccftech.com/deepseek-and-moonshot-ai-models-appear-to-carry-hidden-nvidia-blackwell-fingerprints-in-their-starting-weights-pointing-to-training-clusters-of-3000-to-4500-gpus/",
-      "source": "Wccftech",
-      "country": "Both",
-      "publishedAt": "2026-11-13 15:09:02",
-      "relevanceScore": 1.0
-    },
-    {
-      "id": "9c863fc6f2ffd737",
-      "headline": "NVIDIA CEO Exit Puts USD 3 Billion China AI Projects at Risk",
-      "url": "https://www.analyticsinsight.net/news/nvidia-ceo-exit-puts-usd-3-billion-china-ai-projects-at-risk",
-      "source": "Analytics And Insight",
-      "country": "CN",
-      "publishedAt": "2026-11-13 15:00:00",
-      "relevanceScore": 0.24
     }
   ]
 }

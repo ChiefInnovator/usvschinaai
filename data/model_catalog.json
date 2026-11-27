@@ -70184,6 +70184,25 @@
           "KnowledgeCutoff": "Mar. 2026",
           "Multimodal": "Yes",
           "Input$/M": "0.75"
+        },
+        "38840e39bee7b065ade8": {
+          "model": "Gemini 3.8 Flash",
+          "organization": "Google",
+          "link": "https://llm-stats.com/models/gemini-3.8-flash",
+          "origin": "US",
+          "description": "Gemini 3.8 Flash by Google — released Sep 2, 2026; $0.750/M input and $3.75/M output; 1.0M-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-09-02",
+          "Model": "Gemini 3.8 Flash",
+          "Country": "🇺🇸",
+          "Context": "1.0M",
+          "Output$/M": "3.75",
+          "Speed": "29c/s",
+          "License": "Closed",
+          "Parameters(B)": "-",
+          "Latency": "17.2s",
+          "KnowledgeCutoff": "Mar. 2026",
+          "Multimodal": "Yes",
+          "Input$/M": "0.75"
         }
       },
       "benchmarks": {
@@ -104018,10 +104037,10 @@
           "created": "2026-04-23",
           "Input$/M": "—",
           "Output$/M": "—",
-          "KnowledgeCutoff": "Dec. 2025",
-          "Country": "🇺🇸",
-          "License": "Closed",
           "Model": "GPT-5.5 Pro",
+          "KnowledgeCutoff": "Dec. 2025",
+          "License": "Closed",
+          "Country": "🇺🇸",
           "Multimodal": "Yes"
         },
         "ac70abc4f31af4e7aedb": {
@@ -106140,10 +106159,10 @@
           "created": "2026-09-22",
           "Input$/M": "0.1",
           "Output$/M": "0.5",
-          "KnowledgeCutoff": "May 2026",
-          "Country": "🇺🇸",
           "Model": "GPT-6 Luna",
+          "KnowledgeCutoff": "May 2026",
           "Context": "1.1M",
+          "Country": "🇺🇸",
           "Multimodal": "Yes"
         }
       },
@@ -123873,6 +123892,25 @@
           "KnowledgeCutoff": "-",
           "Multimodal": "Yes",
           "Input$/M": "1.5"
+        },
+        "2243d581d66d0a139c0c": {
+          "model": "Qwen4-Max",
+          "organization": "Alibaba Cloud / Qwen Team",
+          "link": "https://llm-stats.com/models/qwen4-max",
+          "origin": "CN",
+          "description": "Qwen4-Max by Alibaba Cloud / Qwen Team — released Nov 16, 2026; $1.50/M input, $0.075/M cached input, $4.50/M output; 984K-token context. Compare provider pricing, TTFT and benchmarks.",
+          "created": "2026-11-16",
+          "Model": "Qwen4-Max",
+          "Country": "🇨🇳",
+          "Context": "983.6k",
+          "Output$/M": "4.5",
+          "Speed": "–",
+          "License": "",
+          "Parameters(B)": "2400",
+          "Latency": "–",
+          "KnowledgeCutoff": "-",
+          "Multimodal": "Yes",
+          "Input$/M": "1.5"
         }
       },
       "benchmarks": {
@@ -124564,6 +124602,22 @@
             "sourceType": "third_party_leaderboard",
             "confidence": "medium",
             "modelAvailableFrom": "2026-11-24"
+          }
+        },
+        "gpqa-diamond": {
+          "1f070904c1efe61a": {
+            "benchmark": "GPQA Diamond",
+            "score": 86.8,
+            "unit": "percent",
+            "source": "https://epoch.ai/data/benchmark_data.zip",
+            "availableFrom": "2026-11-27",
+            "retrievedAt": "2026-11-27",
+            "configuration": "Epoch AI evaluation of inkling-2-mini_xhigh; evaluation started 2026-11-25",
+            "kind": "published",
+            "sourceType": "official_leaderboard",
+            "confidence": "medium",
+            "modelAvailableFrom": "2026-11-27",
+            "notes": "Epoch AI benchmark dump, gpqa_diamond.csv, row inkling-2-mini_xhigh."
           }
         }
       }
