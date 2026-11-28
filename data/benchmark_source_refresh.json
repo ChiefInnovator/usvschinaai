@@ -1,17 +1,17 @@
 {
-  "retrievedAt": "2026-11-27",
+  "retrievedAt": "2026-11-28",
   "modelsChecked": 315,
   "sourcesChecked": 325,
   "findings": 1533,
   "accepted": 1,
   "failures": [
     {
-      "source": "llm-stats:Claude Opus 4.5",
+      "source": "llm-stats:Seed 2.0 Pro",
       "error": "HTTP Error 403: Forbidden"
     },
     {
-      "source": "llm-stats:DeepSeek R1 Distill Llama 70B",
-      "error": "HTTP Error 403: Forbidden"
+      "source": "llm-stats:Llama 3.2 3B Instruct",
+      "error": "HTTP Error 502: Bad Gateway"
     }
   ],
   "skippedConfigurations": [],
@@ -389,31 +389,31 @@
       "status": "ok",
       "findings": 68,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "artificial-analysis": {
       "status": "ok",
       "findings": 13,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "charxiv": {
       "status": "ok",
       "findings": 2,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "epoch": {
       "status": "ok",
-      "findings": 206,
+      "findings": 207,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "llm-stats": {
       "status": "ok",
-      "findings": 951,
+      "findings": 950,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27",
+      "lastOk": "2026-11-28",
       "pages": 315,
       "failedPages": 2,
       "error": "HTTP Error 403: Forbidden"
@@ -422,37 +422,37 @@
       "status": "ok",
       "findings": 42,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "vals:gpqa": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "vals:lcb": {
       "status": "ok",
       "findings": 51,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "vals:mmlu_pro": {
       "status": "ok",
       "findings": 49,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "vals:swebench": {
       "status": "ok",
       "findings": 46,
       "since": "2026-11-10",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     },
     "vals:terminal-bench-4": {
       "status": "ok",
       "findings": 56,
       "since": "2026-11-11",
-      "lastOk": "2026-11-27"
+      "lastOk": "2026-11-28"
     }
   }
 }
