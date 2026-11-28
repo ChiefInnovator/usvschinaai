@@ -1,6 +1,15 @@
 {
-  "lastUpdated": "2026-11-27T03:32:25.565051+00:00",
+  "lastUpdated": "2026-11-28T03:31:06.788253+00:00",
   "items": [
+    {
+      "id": "aab3b6ba38dd00c6",
+      "headline": "Who Should Decide Which AI Models America Restricts?",
+      "url": "https://www.geopoliticalmonitor.com/who-should-decide-which-ai-models-america-restricts/",
+      "source": "Geopolitical Monitor",
+      "country": "US",
+      "publishedAt": "2026-11-27 13:57:45",
+      "relevanceScore": 0.31
+    },
     {
       "id": "78b63cc86410b07d",
       "headline": "MIT Professor: Anthropic Staff Talks Openly About Overthrowing the U.S. Government, Ruling the World",
@@ -171,15 +180,6 @@
       "country": "US",
       "publishedAt": "2026-11-14 15:00:00",
       "relevanceScore": 0.3
-    },
-    {
-      "id": "35c34d039333f896",
-      "headline": "What to know about the Nvidia and Jensen Huang fallout after a momentous week",
-      "url": "https://finance.yahoo.com/technology/article/nvidia-and-jensen-huang-fallout-heres-everything-we-know-after-a-momentous-week-110000323.html",
-      "source": "Yahoo! News",
-      "country": "Both",
-      "publishedAt": "2026-11-14 11:00:00",
-      "relevanceScore": 0.55
     }
   ]
 }
